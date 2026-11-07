@@ -1,0 +1,42 @@
+[
+  {
+    "id": "homepage",
+    "originalName": "image(1).jpeg",
+    "path": "media/images/homepage-portrait.jpg",
+    "bytes": 486021,
+    "sha256": "c848f8613827ad1a38443e61ccfe4ca9ef78ea9a93111055c239ac389a763e55",
+    "transformation": "none"
+  },
+  {
+    "id": "yoga-montagna-lago",
+    "originalName": "IMG_5706.jpeg",
+    "path": "media/images/yoga-montagna-lago.jpg",
+    "bytes": 302584,
+    "sha256": "70a53ae7f2ea9bfcc0ced82ade0811e98e22e250f97d42fde7e1455676170c5f",
+    "transformation": "none"
+  },
+  {
+    "id": "yoga-pratica-studio",
+    "originalName": "IMG_5707.jpeg",
+    "path": "media/images/yoga-pratica-studio.jpg",
+    "bytes": 168269,
+    "sha256": "b614edef5ffd3f36f526db5330a31e9661d453601bbfe4d519afe5acde810336",
+    "transformation": "none"
+  },
+  {
+    "id": "yoga-in-vetta",
+    "originalName": "IMG_5708.jpeg",
+    "path": "media/images/yoga-in-vetta.jpg",
+    "bytes": 404058,
+    "sha256": "d604234c180a94dc5cf34dc3adeb18374c3db88b72402424585b4e0c9df38109",
+    "transformation": "none"
+  },
+  {
+    "id": "arrampicata-parete",
+    "originalName": "IMG_5705.jpeg",
+    "path": "media/images/arrampicata-parete.jpg",
+    "bytes": 326150,
+    "sha256": "2ad52b8d557d2f0555cdd102e9340f174030db194827483d9ec38e87f48a8863",
+    "transformation": "none"
+  }
+]

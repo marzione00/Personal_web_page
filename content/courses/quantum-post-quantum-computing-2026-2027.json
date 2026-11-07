@@ -1,0 +1,20 @@
+{
+  "id": "quantum-post-quantum-computing-2026-2027",
+  "title": "Quantum e post-quantum computing",
+  "university": "Università degli Studi di Milano",
+  "universityShort": "UniMI",
+  "department": "Dipartimento di Informatica «Giovanni Degli Antoni»",
+  "academicYear": "2026/2027",
+  "summary": "Sette moduli su fondamenti fisici, strumenti matematici, circuiti, algoritmi e protocolli quantistici. Le slide sono consultabili e scaricabili in formato PDF.",
+  "description": "Dopo la simulazione dei sistemi fisici e l’introduzione degli strumenti matematici, i materiali affrontano le porte e i circuiti quantistici. Seguono gli algoritmi di Deutsch–Jozsa, Bernstein–Vazirani, Simon, Shor e Grover, fino a BB84, codifica superdensa e correzione degli errori; un approfondimento considera i limiti operativi della distribuzione quantistica delle chiavi e il rapporto con la crittografia post-quantistica.",
+  "source": "https://www.unimi.it/it/corsi/insegnamenti-dei-corsi-di-laurea/2027/quantum-e-post-quantum-computing",
+  "verified": true,
+  "draft": false,
+  "provenance": "Anno accademico e attività confermati dall’autore; denominazione e responsabile riscontrati nella scheda UniMI 2026/2027. I sette moduli qui raccolti seguono l’organizzazione dei PDF forniti.",
+  "coordinator": "Danilo Bruschi",
+  "teacher": "Marzio De Corato",
+  "credits": "6 CFU",
+  "hours": "42 ore complessive dell’insegnamento",
+  "materialsLabel": "Moduli didattici",
+  "learningPath": "Fenomeni → Strumenti matematici → Circuiti → Algoritmi → Protocolli"
+}

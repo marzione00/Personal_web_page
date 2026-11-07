@@ -1,0 +1,250 @@
+{
+  "name": "Marzio De Corato",
+  "headline": "Fisica computazionale · Intelligenza artificiale spiegabile · Cybersecurity · Metodi quantitativi",
+  "intro": "Dalla fisica computazionale all’intelligenza artificiale spiegabile, Marzio De Corato studia modelli quantitativi e sicurezza informatica, con un interesse specifico per i problemi della spiegazione scientifica. Insegna Informatica all’Università degli Studi di Milano e Advanced Calculus and Stochastic Processes all’Università Cattolica del Sacro Cuore.",
+  "email": "marzio.decorato@unimi.it",
+  "github": "https://github.com/marzione00",
+  "linkedin": "https://www.linkedin.com/in/marzio-de-corato-2351a44b/",
+  "orcid": "https://orcid.org/0000-0003-1966-6657",
+  "cvPdf": "/media/docs/CV_Marzio_De_Corato_versione_web.pdf",
+  "interests": [
+    "Cybersecurity: analisi delle minacce, malware e ransomware",
+    "Intelligenza artificiale e Explainable AI (XAI)",
+    "Modelli statistici, analisi dei dati e metodi probabilistici",
+    "Calcolo quantistico e algoritmi",
+    "Modellistica matematica per la finanza",
+    "Architettura dei sistemi e progettazione didattica",
+    "Epistemologia: dati, modelli, spiegazione e conoscenza scientifica"
+  ],
+  "education": [
+    {
+      "year": "2022",
+      "date": "Settembre 2019 – ottobre 2022",
+      "degree": "M.Sc. in Data Science and Economics",
+      "institution": "Università degli Studi di Milano",
+      "detail": "Tesi: Epistemological foundations of data analysis: A combined study through statistics, computer science and physics. Votazione: 110/110 e lode."
+    },
+    {
+      "year": "2016",
+      "date": "Gennaio 2013 – dicembre 2016",
+      "degree": "Ph.D. in Physics and Nanoscience",
+      "institution": "Università degli Studi di Modena e Reggio Emilia",
+      "detail": "Tesi: Vibrational and optical fingerprints in graphene-based nanostructures."
+    },
+    {
+      "year": "2012",
+      "date": "Novembre 2009 – marzo 2012",
+      "degree": "M.Sc. in Physics",
+      "institution": "Università degli Studi di Milano-Bicocca",
+      "detail": "Tesi: Topological versus physical and chemical properties of carbon nanostructures. Votazione: 110/110 e lode."
+    },
+    {
+      "year": "2009",
+      "date": "Ottobre 2005 – luglio 2009",
+      "degree": "B.Sc. in Physics",
+      "institution": "Università degli Studi di Milano-Bicocca",
+      "detail": "Tesi: Dinamica e termodinamica delle schwarziti di carbonio."
+    }
+  ],
+  "experience": [
+    {
+      "date": "2025–2026",
+      "title": "Incaricato di ricerca (Postdoc)",
+      "institution": "Università degli Studi di Milano · Dipartimento di Informatica “Giovanni Degli Antoni”",
+      "detail": "Aprile 2025 – marzo 2026."
+    },
+    {
+      "date": "2023–2025",
+      "title": "Rappresentante dei postdoc",
+      "institution": "Università degli Studi di Milano · Dipartimento di Informatica",
+      "detail": "Settembre 2023 – 2025."
+    },
+    {
+      "date": "2022–2025",
+      "title": "Assegnista di ricerca (Assegno di ricerca B)",
+      "institution": "Università degli Studi di Milano · Dipartimento di Informatica",
+      "detail": "Ricerca in cybersecurity, machine learning e Big Data. Supervisore: Prof. Danilo Bruschi."
+    },
+    {
+      "date": "2024–2026",
+      "title": "Docente – progetto Uni.ON",
+      "institution": "Fondazione Don Gino Rigoldi · UniCredit Foundation",
+      "detail": "Matematica, fisica, chimica e biologia; a.a. 2024/25 e 2025/26."
+    },
+    {
+      "date": "2021–2022",
+      "title": "Junior Data Scientist – Data Science 4Citizens",
+      "institution": "Liceo Scientifico Respighi · Piacenza",
+      "detail": "Introduzione all’analisi di serie temporali climatiche con R."
+    },
+    {
+      "date": "2020–2021",
+      "title": "Data Science Assistant",
+      "institution": "Università degli Studi di Milano",
+      "detail": "Serie temporali COVID-19, valutazione delle previsioni e migrazione di codice MATLAB in Python."
+    },
+    {
+      "date": "2016–2019",
+      "title": "Engineer Sales",
+      "institution": "Hamamatsu Photonics Italia",
+      "detail": "Dispositivi optoelettronici."
+    },
+    {
+      "date": "2012–2013",
+      "title": "Research Fellow",
+      "institution": "CNR–NANO, Modena",
+      "detail": "Proprietà ottiche delle nanostrutture di carbonio."
+    }
+  ],
+  "teaching": [
+    {
+      "date": "Dal 2025/2026 · in corso",
+      "title": "Informatica — Matematica I e Informatica",
+      "institution": "Università degli Studi di Milano · Scienze Geologiche",
+      "detail": "Docenza a contratto in Scienze Geologiche; attività in corso anche nell’a.a. 2026/2027."
+    },
+    {
+      "date": "Dal 2024/2025 · in corso",
+      "title": "Advanced Calculus and Stochastic Processes",
+      "institution": "Università Cattolica del Sacro Cuore · Actuarial sciences, risk and data analysis",
+      "detail": "Docenza a contratto; attività in corso anche nell’a.a. 2026/2027."
+    },
+    {
+      "date": "A.A. 2026/2027",
+      "title": "Quantum e post-quantum computing",
+      "institution": "Università degli Studi di Milano · Dipartimento di Informatica «Giovanni Degli Antoni»",
+      "detail": "Attività didattica e materiali del corso. Responsabile dell’insegnamento: Danilo Bruschi."
+    },
+    {
+      "date": "2023–2025",
+      "title": "Attività di supporto alla didattica",
+      "institution": "Università degli Studi di Milano",
+      "detail": "Statistica, Matematica, Teoria statistica, Metodi matematici per la finanza."
+    },
+    {
+      "date": "2013",
+      "title": "Assistenza alla didattica in Fisica",
+      "institution": "Università degli Studi di Modena e Reggio Emilia",
+      "detail": "Fisica generale e Meccanica quantistica."
+    }
+  ],
+  "theses": [
+    {
+      "year": "2025",
+      "title": "Rilevamento di ransomware usando intelligenza artificiale spiegabile: analisi di caratteristiche di basso livello"
+    },
+    {
+      "year": "2025",
+      "title": "Malware detection tramite Explainable Artificial Intelligence: analisi delle feature di sistema low-level"
+    },
+    {
+      "year": "2025",
+      "title": "Dinamiche e invarianti linguistici nei testi: un’analisi dell’evoluzione semantica con Word2Vec, grafi e indici topologici"
+    },
+    {
+      "year": "2024",
+      "title": "Studio e analisi sul ruolo dell’intelligenza artificiale nella creazione e analisi dei malware"
+    },
+    {
+      "year": "2024",
+      "title": "Studi e analisi di tecniche IA generativa per malware detection"
+    }
+  ],
+  "talks": [
+    {
+      "year": "2026",
+      "title": "Estimating Shortcut Learning and Inductive Bias in Multi-View Behavioural Trace Classification",
+      "event": "ANNPR 2026 · Milano, ottobre 2026"
+    },
+    {
+      "year": "2026",
+      "title": "From Data to Insights — The Explainability–Predictability Trade-Off",
+      "event": "IFCS 2026 · Invited Talk, Milano, luglio 2026"
+    },
+    {
+      "year": "2025",
+      "title": "Detection via Library Calls using Markov Random Fields: A XAI-Driven Approach to Cybersecurity",
+      "event": "Statistics and Data Science Conference · Milano, aprile 2025"
+    },
+    {
+      "year": "2024",
+      "title": "Hazardous Asteroids Forecast via Markov Random Fields",
+      "event": "110° Congresso Nazionale della Società Italiana di Fisica · Bologna"
+    },
+    {
+      "year": "2023",
+      "title": "Interpretability of Machine Learning Algorithms: How These Techniques Can Correctly Guess the Physical Laws?",
+      "event": "Statistics and Data Science Conference · Invited talk, Pavia"
+    }
+  ],
+  "skills": [
+    "Analisi statistica",
+    "Machine learning",
+    "Econometria",
+    "Analisi bayesiana",
+    "Modellistica probabilistica",
+    "Text mining",
+    "Fisica dello stato solido",
+    "Calcoli ab initio",
+    "Cybersecurity"
+  ],
+  "programming": [
+    "Python",
+    "R",
+    "C++",
+    "Java",
+    "Fortran"
+  ],
+  "languages": [
+    "Italiano",
+    "Inglese"
+  ],
+  "project": "MUSA — Multilayered Urban Sustainability Action (PNRR – UE)",
+  "unimi": "https://www.unimi.it/it/ugov/person/marzio-decorato",
+  "cattolica": "https://docenti.unicatt.it/ppd2/it/docenti/107954/marzio-de-corato/didattica",
+  "air": "https://air.unimi.it/cris/rp/rp166833",
+  "biography": "Marzio De Corato insegna Informatica come docente a contratto all’Università degli Studi di Milano e Advanced Calculus and Stochastic Processes all’Università Cattolica del Sacro Cuore. La sua attività di ricerca, iniziata nella fisica computazionale delle nanostrutture, si è estesa alla statistica e all’intelligenza artificiale spiegabile, con particolare attenzione ai problemi della sicurezza informatica e ai fondamenti della conoscenza scientifica.\n\nHa conseguito la laurea triennale in Fisica nel 2009 e la magistrale, con lode, nel 2012, presso l’Università degli Studi di Milano-Bicocca. Nel 2016 ha ottenuto il dottorato in Physics and Nanosciences all’Università degli Studi di Modena e Reggio Emilia, discutendo una tesi sulle proprietà vibrazionali e ottiche delle nanostrutture di grafene. La successiva laurea magistrale in Data Science and Economics, conseguita con lode nel 2022 all’Università degli Studi di Milano, gli ha consentito di approfondire le questioni epistemologiche legate all’analisi dei dati, mettendo in relazione i metodi della statistica, dell’informatica e della fisica.\n\nNei primi anni si è occupato delle proprietà fisiche dei sistemi a base di carbonio, fra cui schwarziti, nanoframmenti e nanonastri di grafene. L’analisi della loro struttura e delle proprietà elettroniche, ottiche e vibrazionali ha richiesto strumenti di modellizzazione topologica e calcoli ab initio; a questa fase appartengono il periodo di ricerca presso CNR–NANO, fra il 2012 e il 2013, e contributi pubblicati su riviste quali Nano Letters, Journal of the American Chemical Society e Nanoscale.\n\nDall’analisi delle serie temporali e dalla valutazione delle previsioni statistiche è passato allo studio delle tracce prodotte dall’esecuzione dei programmi, affrontando la rilevazione di malware e ransomware mediante contatori hardware, entropia campionaria e modelli grafici probabilistici. Negli studi sull’intelligenza artificiale spiegabile esamina, fra l’altro, come le variabili osservate e le rappresentazioni dei dati condizionino le ragioni attribuite alle decisioni di un classificatore. Nel contributo presentato ad ANNPR 2026 affronta lo shortcut learning e i bias induttivi nella classificazione multi-view delle tracce comportamentali.\n\nL’attenzione ai fondamenti dell’analisi dei dati si ritrova negli studi sull’intelligenza artificiale spiegabile, dove è centrale la distinzione fra capacità predittiva e valore esplicativo di un modello. Per valutare che cosa possa essere effettivamente conosciuto attraverso un modello, considera essenziali l’esplicitazione delle ipotesi, l’esame dei dati disponibili e la possibilità di sottoporre le interpretazioni a verifiche indipendenti. A questo rapporto ha dedicato una relazione invitata alla conferenza IFCS 2026, concentrandosi sulle tensioni fra spiegabilità e capacità predittiva.\n\nAl Dipartimento di Informatica «Giovanni Degli Antoni» dell’Università degli Studi di Milano ha svolto un assegno di ricerca dal novembre 2022 al 2025 e un incarico di ricerca dall’aprile 2025 al marzo 2026; fra settembre 2023 e il 2025 ha inoltre rappresentato i ricercatori post-dottorato del Dipartimento. Il suo percorso professionale comprende esperienze nell’analisi delle serie temporali relative alla pandemia di COVID-19 e ai dati climatici, nell’ambito del progetto Data Science 4Citizens, oltre all’attività svolta presso Hamamatsu Photonics Italia, nel settore optoelettronico, dal 2016 al 2019.\n\nAll’Università degli Studi di Milano insegna Informatica nell’ambito di Matematica I e Informatica per Scienze Geologiche; all’Università Cattolica del Sacro Cuore tiene Advanced Calculus and Stochastic Processes. Nell’anno accademico 2026/2027 partecipa inoltre alle attività didattiche di Quantum e post-quantum computing presso il Dipartimento di Informatica dell’Università degli Studi di Milano. In precedenza ha collaborato agli insegnamenti di statistica, matematica, metodi matematici per la finanza, Fisica generale e Meccanica quantistica, oltre a partecipare al progetto formativo Uni.ON e a seguire, in qualità di correlatore, tesi su sicurezza informatica, intelligenza artificiale spiegabile e analisi del linguaggio.\n\nLa produzione scientifica comprende, accanto ai lavori sulla fisica delle nanostrutture, lo studio sulla rilevazione di ransomware pubblicato nel 2025 in Applied Stochastic Models in Business and Industry e contributi dedicati all’interpretabilità dei modelli. Ha inoltre partecipato ai volumi La Cybersecurity negli enti locali (2024) e L’Intelligenza Artificiale negli enti locali (2025), pubblicati da Milano University Press, e alle attività del progetto MUSA — Multilayered Urban Sustainability Action.",
+  "personalInterests": "Ha iniziato a praticare yoga con Giada Merli, che lo ha introdotto al Vinyasa Krama. Nel percorso successivo Alessandra Martin ha avuto un ruolo formativo decisivo; con lei, nel 2026, ha seguito anche un Teacher Training di 60 ore sul corpo yogico e sul sequenziamento delle pratiche.\n\nCon Alexandra Santos ha intrapreso lo studio dell’Ashtanga Vinyasa, che prosegue ancora oggi. Della sua guida apprezza la precisione e l’attenzione con cui gli ha fatto conoscere la bellezza di una disciplina fondata sulla ripetizione delle sequenze, sul respiro e sulla concentrazione. Continua inoltre a formarsi nel Vinyasa attraverso le lezioni di Camilla Vigorelli; a queste pratiche affianca lo Yin Yoga, nel quale le posture mantenute più a lungo propongono una diversa esperienza del tempo e delle sensazioni.\n\nL’Ashtanga rappresenta anche un’occasione per osservare le emozioni suscitate dalla pratica. La difficoltà di una posizione può provocare timore, impazienza o frustrazione; un movimento che diventa familiare può portare fiducia e soddisfazione. Attraverso il respiro e il ritorno alle medesime sequenze cerca di riconoscere il mutare di questi stati senza identificarvisi. La deidentificazione indica, nel significato che attribuisce a questo lavoro, l’esercizio di distinguere le emozioni che attraversano l’esperienza dall’immagine stabile che si tende a costruire di sé.\n\nHa imparato l’arrampicata indoor con Luca Pani. La scelta degli appigli, la distribuzione del peso e la valutazione di un passaggio richiedono di accordare l’intenzione alle possibilità concrete del movimento. Coltiva inoltre l’escursionismo in montagna, dove il percorso si misura con il terreno, le condizioni ambientali e il ritmo del cammino.\n\nIl confronto con le proprie aspettative, sia nelle sequenze sul tappetino sia davanti a una parete, alimenta il suo interesse per i problemi dell’osservazione e dell’interpretazione. La domanda su quanto il giudizio dipenda da ciò che si manifesta e quanto dagli schemi con cui lo si attende trova una corrispondenza, sul piano della riflessione, nelle questioni epistemologiche affrontate durante la formazione scientifica. Rimane distinta la pratica personale, nella quale quell’interrogativo riguarda l’esperienza vissuta, dall’indagine scientifica, che richiede ipotesi esplicite e riscontri condivisibili.",
+  "personalPhotos": [
+    {
+      "id": "yoga-montagna-lago",
+      "file": "/media/images/yoga-montagna-lago.jpg",
+      "sourceName": "IMG_5706.jpeg",
+      "category": "Yoga e montagna",
+      "caption": "Pratica in ambiente alpino",
+      "alt": "Una persona esegue una posizione di yoga su una roccia sopra un piccolo lago alpino, con montagne e nevai sullo sfondo."
+    },
+    {
+      "id": "yoga-pratica-studio",
+      "file": "/media/images/yoga-pratica-studio.jpg",
+      "sourceName": "IMG_5707.jpeg",
+      "category": "Yoga",
+      "caption": "Pratica in studio",
+      "alt": "Fotografia in bianco e nero di una persona che pratica yoga sul tappetino in una sala con specchi."
+    },
+    {
+      "id": "yoga-in-vetta",
+      "file": "/media/images/yoga-in-vetta.jpg",
+      "sourceName": "IMG_5708.jpeg",
+      "category": "Yoga e montagna",
+      "caption": "Yoga in quota",
+      "alt": "Una persona con una giacca rossa esegue una posizione di equilibrio su una cima montana, accanto a una croce di vetta."
+    },
+    {
+      "id": "arrampicata-parete",
+      "file": "/media/images/arrampicata-parete.jpg",
+      "sourceName": "IMG_5705.jpeg",
+      "category": "Arrampicata",
+      "caption": "Allenamento su parete",
+      "alt": "Una persona si arrampica su una parete artificiale con prese numerate, sostenendosi con mani e piedi."
+    }
+  ],
+  "homepagePhoto": {
+    "file": "/media/images/homepage-portrait.jpg",
+    "alt": "Fotografia in bianco e nero: pratica di yoga su una roccia, in un paesaggio montano.",
+    "caption": "Ritratto originale",
+    "width": 1274,
+    "height": 2048,
+    "sha256": "c848f8613827ad1a38443e61ccfe4ca9ef78ea9a93111055c239ac389a763e55"
+  }
+}

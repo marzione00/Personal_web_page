@@ -1,0 +1,22 @@
+{
+  "id": "quantum-2026-2027-modulo-03",
+  "title": "Circuiti quantistici: porte, reversibilità e algoritmi di Deutsch e Deutsch–Jozsa",
+  "course": "quantum-post-quantum-computing-2026-2027",
+  "order": 3,
+  "summary": "Lettura ed esecuzione dei circuiti, porte a uno e più qubit, composizione, fasi e interferenza. La logica reversibile conduce agli algoritmi di Deutsch e Deutsch–Jozsa, sviluppati attraverso esempi e verifiche.",
+  "files": [
+    "/media/docs/quantum-2026-2027/UniMI_Quantum_PostQuantum_2026-2027_M03_circuiti-quantistici-deutsch-jozsa.pdf"
+  ],
+  "body": "",
+  "topics": [
+    "Porte a un qubit e composizione",
+    "Fasi, interferenza e registri",
+    "CNOT, Toffoli e qubit ausiliari",
+    "Deutsch e Deutsch–Jozsa"
+  ],
+  "pages": 177,
+  "sizeBytes": 1090513,
+  "authors": "Marzio De Corato; Danilo Bruschi",
+  "license": "CC BY-NC-SA 4.0",
+  "draft": false
+}

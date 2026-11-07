@@ -1,0 +1,95 @@
+{
+  "course": "quantum-post-quantum-computing-2026-2027",
+  "date": "2026-11-07",
+  "files": [
+    {
+      "module": 1,
+      "original": "Modulo_01.pdf",
+      "filename": "UniMI_Quantum_PostQuantum_2026-2027_M01_fondamenti-fisici-e-simulazione.pdf",
+      "title": "Fondamenti fisici e simulazione dei sistemi quantistici",
+      "pages": 519,
+      "bytes": 3225552,
+      "sha256": "6e8195ac7d3489792b72cb64f7ed2aab12e58d10438f185367958e3a574a4dac",
+      "renamedFileSha256": "6e8195ac7d3489792b72cb64f7ed2aab12e58d10438f185367958e3a574a4dac"
+    },
+    {
+      "module": 2,
+      "original": "Modulo_02.pdf",
+      "filename": "UniMI_Quantum_PostQuantum_2026-2027_M02_fondamenti-matematici.pdf",
+      "title": "Fondamenti matematici: algebra lineare, probabilità e misura",
+      "pages": 514,
+      "bytes": 2872017,
+      "sha256": "0add98ef269557c2df45a568e35aaed3f2192780eae013fe1d0b33fa954fd70b",
+      "renamedFileSha256": "0add98ef269557c2df45a568e35aaed3f2192780eae013fe1d0b33fa954fd70b"
+    },
+    {
+      "module": 3,
+      "original": "Modulo_03_Circuiti_revisionato.pdf",
+      "filename": "UniMI_Quantum_PostQuantum_2026-2027_M03_circuiti-quantistici-deutsch-jozsa.pdf",
+      "title": "Circuiti quantistici: porte, reversibilità e algoritmi di Deutsch e Deutsch–Jozsa",
+      "pages": 177,
+      "bytes": 1090513,
+      "sha256": "fe92862c61fc686fcbb48c4b4cd5ba98d926510f3b679498fad11e163f5700c2",
+      "renamedFileSha256": "fe92862c61fc686fcbb48c4b4cd5ba98d926510f3b679498fad11e163f5700c2"
+    },
+    {
+      "module": 4,
+      "original": "Modulo_04_Bernstein_Vazirani_Simon.pdf",
+      "filename": "UniMI_Quantum_PostQuantum_2026-2027_M04_algoritmi-bernstein-vazirani-simon.pdf",
+      "title": "Algoritmi quantistici: Bernstein–Vazirani e Simon",
+      "pages": 179,
+      "bytes": 912165,
+      "sha256": "74434a59b39e81fac474189bdb7c672e3dcb9796406fcb0b7efb6b66e5fde0e9",
+      "renamedFileSha256": "74434a59b39e81fac474189bdb7c672e3dcb9796406fcb0b7efb6b66e5fde0e9"
+    },
+    {
+      "module": 5,
+      "original": "Modulo_05.pdf",
+      "filename": "UniMI_Quantum_PostQuantum_2026-2027_M05_shor-aritmetica-rsa-fourier.pdf",
+      "title": "Algoritmo di Shor: aritmetica modulare, RSA e trasformata di Fourier",
+      "pages": 208,
+      "bytes": 1559714,
+      "sha256": "a67f88b1b35a44d892e4037a11cb2f5f69927dc3ce712d5363f9d7f8188ca053",
+      "renamedFileSha256": "a67f88b1b35a44d892e4037a11cb2f5f69927dc3ce712d5363f9d7f8188ca053"
+    },
+    {
+      "module": 6,
+      "original": "Modulo_06.pdf",
+      "filename": "UniMI_Quantum_PostQuantum_2026-2027_M06_grover-amplificazione-ampiezza.pdf",
+      "title": "Algoritmo di Grover e amplificazione di ampiezza",
+      "pages": 253,
+      "bytes": 1165063,
+      "sha256": "2ae75a422e4a3fb74013f765375cb17fe1c364e38739f4d66b183d93038c5b6d",
+      "renamedFileSha256": "2ae75a422e4a3fb74013f765375cb17fe1c364e38739f4d66b183d93038c5b6d"
+    },
+    {
+      "module": 7,
+      "original": "Modulo_07.pdf",
+      "filename": "UniMI_Quantum_PostQuantum_2026-2027_M07_protocolli-qkd-codifica-errori.pdf",
+      "title": "Protocolli quantistici: BB84, QKD, codifica superdensa e correzione degli errori",
+      "pages": 100,
+      "bytes": 598780,
+      "sha256": "2286174d7bd022f26b5f8fe0c2f465906a5d0ba2c722ca197991dc2db2f81977",
+      "renamedFileSha256": "2286174d7bd022f26b5f8fe0c2f465906a5d0ba2c722ca197991dc2db2f81977"
+    }
+  ],
+  "note": "Sono stati modificati soltanto i nomi dei file. PDF, copertine, impaginazione e contenuti sono rimasti identici agli originali; i titoli editoriali figurano sul sito. Licenza esplicita CC BY-NC-SA 4.0 verificata sui primi quattro moduli; nessuna licenza aggiunta agli altri.",
+  "compatibilityCopies": [
+    {
+      "original": "Modulo_01.pdf",
+      "path": "media/docs/Modulo_01/Modulo_01.pdf",
+      "sha256": "6e8195ac7d3489792b72cb64f7ed2aab12e58d10438f185367958e3a574a4dac"
+    },
+    {
+      "original": "Modulo_02.pdf",
+      "path": "media/docs/Modulo_02/Modulo_02.pdf",
+      "sha256": "0add98ef269557c2df45a568e35aaed3f2192780eae013fe1d0b33fa954fd70b"
+    },
+    {
+      "original": "Modulo_03_Circuiti_revisionato.pdf",
+      "path": "media/docs/Modulo_03/Modulo_03.pdf",
+      "sha256": "fe92862c61fc686fcbb48c4b4cd5ba98d926510f3b679498fad11e163f5700c2"
+    }
+  ],
+  "crossDocumentNotes": "Copie identiche nelle cartelle Modulo_01, Modulo_02 e Modulo_03 conservano i percorsi relativi richiamati dai PDF. La destinazione stato-ricorrente richiamata nel Modulo 03 non esiste nella revisione fornita. I collegamenti GoToR dipendono dal visualizzatore; nel file HTML monofile i PDF sono oggetti Blob, perciò usare l’indice del sito per cambiare documento. Nessun PDF è stato modificato."
+}

@@ -1,0 +1,14 @@
+dist/
+preview/
+reports/
+anteprime/
+MDC_LAB_anteprima.html
+.env
+.env.*
+!.env.example
+node_modules/
+.DS_Store
+.overleaf-staging/
+*.pyc
+__pycache__/
+source-materials/private/

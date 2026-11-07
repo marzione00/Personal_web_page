@@ -1,0 +1,22 @@
+{
+  "id": "quantum-2026-2027-modulo-01",
+  "title": "Fondamenti fisici e simulazione dei sistemi quantistici",
+  "course": "quantum-post-quantum-computing-2026-2027",
+  "order": 1,
+  "summary": "Dalla simulazione classica e statistica a onde, interferenza, stati a due alternative e sistemi composti. Il modulo affronta la perdita di interferenza, l’informazione e l’irreversibilità, fino al passaggio dalla meccanica quantistica al calcolo.",
+  "files": [
+    "/media/docs/quantum-2026-2027/UniMI_Quantum_PostQuantum_2026-2027_M01_fondamenti-fisici-e-simulazione.pdf"
+  ],
+  "body": "",
+  "topics": [
+    "Simulazione classica e statistica",
+    "Onde, interferenza e misura",
+    "Qubit, sistemi composti e ambiente",
+    "Informazione e costruzione di un computer quantistico"
+  ],
+  "pages": 519,
+  "sizeBytes": 3225552,
+  "authors": "Marzio De Corato; Danilo Bruschi",
+  "license": "CC BY-NC-SA 4.0",
+  "draft": false
+}

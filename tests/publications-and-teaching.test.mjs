@@ -1,0 +1,30 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
+import os from 'node:os';
+import {createHash} from 'node:crypto';
+import {fileURLToPath} from 'node:url';
+import {loadContent} from '../src/content.mjs';
+import {renderPages} from '../src/render.mjs';
+import {validateMediaBuffer} from '../src/media.mjs';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const course='quantum-post-quantum-computing-2026-2027';
+const digest=b=>createHash('sha256').update(b).digest('hex');
+function fixture(fn){const dir=fs.mkdtempSync(path.join(os.tmpdir(),'mdc-v06-'));try{for(const f of ['content','public'])fs.cpSync(path.join(root,f),path.join(dir,f),{recursive:true});return fn(dir);}finally{fs.rmSync(dir,{recursive:true,force:true});}}
+function edit(dir,rel,fn){const f=path.join(dir,rel),v=JSON.parse(fs.readFileSync(f));fn(v);fs.writeFileSync(f,JSON.stringify(v));}
+test('Biography presents both ongoing contract teaching roles',()=>{const p=loadContent(root).profile;assert.match(p.biography,/insegna Informatica come docente a contratto/);assert.match(p.biography,/Università Cattolica/);assert.match(p.biography,/2026\/2027/);assert.match(p.biography,/epistemologic/);});
+test('Personal reflection distinguishes experience from scientific validation',()=>{const p=loadContent(root).profile.personalInterests;assert.match(p,/L’Ashtanga rappresenta anche un’occasione/);assert.match(p,/deidentificazione/);assert.match(p,/riscontri condivisibili/);assert.doesNotMatch(p,/dimostrato che lo yoga|cura l’ansia|guarisce/);});
+test('Quantum modules have consecutive order and the requested course',()=>{const d=loadContent(root),ls=d.lectures.filter(x=>x.course===course).sort((a,b)=>a.order-b.order);assert.deepEqual(ls.map(x=>x.order),[1,2,3,4,5,6,7]);assert.equal(ls.reduce((n,l)=>n+l.pages,0),1950);assert.ok(ls.every(l=>l.files.length===1&&!l.draft));});
+test('Original and renamed PDFs share the recorded checksum',()=>{const m=JSON.parse(fs.readFileSync(path.join(root,'docs/MATERIALI_MANIFEST.json')));assert.equal(m.files.length,7);for(const x of m.files){const b=fs.readFileSync(path.join(root,'public/media/docs/quantum-2026-2027',x.filename));assert.equal(b.length,x.bytes);assert.equal(digest(b),x.sha256);assert.equal(x.sha256,x.renamedFileSha256);assert.match(x.filename,/^UniMI_Quantum_PostQuantum_2026-2027_M0[1-7]_[a-z-]+\.pdf$/);}});
+test('Compatibility copies preserve original PDF bytes',()=>{const m=JSON.parse(fs.readFileSync(path.join(root,'docs/MATERIALI_MANIFEST.json')));for(const x of m.compatibilityCopies)assert.equal(digest(fs.readFileSync(path.join(root,'public',x.path))),x.sha256);});
+test('Course provides seven open buttons and seven download filenames',()=>{const html=renderPages(loadContent(root)).find(x=>x.file==='corso-'+course+'.html').body;assert.equal((html.match(/aria-label="Apri PDF:/g)||[]).length,7);assert.equal((html.match(/aria-label="Scarica PDF:/g)||[]).length,7);assert.equal((html.match(/class="lesson quantum-module"/g)||[]).length,7);assert.match(html,/Giovanni Degli Antoni/);assert.match(html,/Danilo Bruschi/);});
+test('Only explicitly licensed modules acquire the license metadata',()=>{const ls=loadContent(root).lectures.sort((a,b)=>a.order-b.order);for(const l of ls)assert.equal(Boolean(l.license),l.order<=4);});
+test('Sixteen publications have source-based summaries and one is explicit pending',()=>{const p=loadContent(root).publications;assert.equal(p.filter(x=>x.readingStatus==='reviewed').length,16);const pending=p.filter(x=>x.readingStatus==='pending');assert.equal(pending.length,1);assert.equal(pending[0].id,'pub-12');assert.ok(p.filter(x=>x.readingStatus==='reviewed').every(x=>x.plainSummary.length>80&&x.explanation.length>100&&x.readingUrl.startsWith('https://')));});
+test('Publication explanations are escaped as plain text',()=>{const d=loadContent(root);d.publications[0].plainSummary='<img src=x onerror=alert(1)>';d.publications[0].explanation='<script>alert(1)</script>';const h=renderPages(d).find(p=>p.file==='ricerca.html').body;assert.ok(h.includes('&lt;img'));assert.ok(h.includes('&lt;script&gt;'));assert.ok(!h.includes('<script>alert'));});
+test('Unsafe publication source URLs are rejected',()=>fixture(dir=>{edit(dir,'content/publications/pub-01.json',p=>p.readingUrl='javascript:alert(1)');assert.throws(()=>loadContent(dir));}));
+test('Invalid publication reading status is rejected',()=>fixture(dir=>{edit(dir,'content/publications/pub-01.json',p=>p.readingStatus='invented');assert.throws(()=>loadContent(dir));}));
+test('Invalid module page count is rejected',()=>fixture(dir=>{edit(dir,'content/lectures/quantum-2026-2027-modulo-01.json',p=>p.pages=-1);assert.throws(()=>loadContent(dir));}));
+test('Research links must reference an existing course',()=>fixture(dir=>{edit(dir,'content/research.json',p=>p.areas[0].courseLink='unknown-course');assert.throws(()=>loadContent(dir));}));
+test('PDF false-positive exception is bound to the exact reviewed bytes',()=>{const m=JSON.parse(fs.readFileSync(path.join(root,'docs/MATERIALI_MANIFEST.json'))).files[0];const b=fs.readFileSync(path.join(root,'public/media/docs/quantum-2026-2027',m.filename));assert.ok(validateMediaBuffer(m.filename,b));assert.throws(()=>validateMediaBuffer(m.filename,Buffer.concat([b,Buffer.from('\n')])),/indicatori attivi/);});
+test('No arbitrary PDF active code is admitted by the reviewed exception',()=>{assert.throws(()=>validateMediaBuffer('attack.pdf',Buffer.from('%PDF-1.7\n1 0 obj << /S /JavaScript /JS (app.alert(1)) >> endobj\n%%EOF')),/indicatori attivi/);});

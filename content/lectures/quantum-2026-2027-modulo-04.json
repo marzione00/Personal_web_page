@@ -1,0 +1,22 @@
+{
+  "id": "quantum-2026-2027-modulo-04",
+  "title": "Algoritmi quantistici: Bernstein–Vazirani e Simon",
+  "course": "quantum-post-quantum-computing-2026-2027",
+  "order": 4,
+  "summary": "Due problemi di ricostruzione di stringhe nascoste: i coefficienti di una parità binaria e la relazione XOR fra ingressi con la stessa uscita. Oracoli, interferenza e misura sono seguiti fino alla ricostruzione della risposta.",
+  "files": [
+    "/media/docs/quantum-2026-2027/UniMI_Quantum_PostQuantum_2026-2027_M04_algoritmi-bernstein-vazirani-simon.pdf"
+  ],
+  "body": "",
+  "topics": [
+    "Parità binarie e stringhe nascoste",
+    "Oracoli e marcatura di fase",
+    "Bernstein–Vazirani",
+    "Simon e vincoli binari"
+  ],
+  "pages": 179,
+  "sizeBytes": 912165,
+  "authors": "Marzio De Corato; Danilo Bruschi",
+  "license": "CC BY-NC-SA 4.0",
+  "draft": false
+}

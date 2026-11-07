@@ -1,0 +1,22 @@
+{
+  "name": "mdc-lab",
+  "version": "1.4.0",
+  "private": true,
+  "type": "module",
+  "description": "Sito accademico statico, senza dipendenze npm",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "preview:build": "node scripts/build.mjs --preview",
+    "test": "node --test tests/*.test.mjs",
+    "serve": "node scripts/serve.mjs",
+    "check": "node scripts/check-output.mjs",
+    "sync:editorial": "node scripts/sync-editorial.mjs",
+    "check:editorial": "node scripts/sync-editorial.mjs --check",
+    "build:release": "node scripts/build.mjs --release",
+    "preview:editorial": "node scripts/build.mjs --preview --drafts",
+    "verify:photos": "node scripts/verify-photos.mjs"
+  }
+}

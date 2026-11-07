@@ -1,0 +1,22 @@
+{
+  "id": "quantum-2026-2027-modulo-06",
+  "title": "Algoritmo di Grover e amplificazione di ampiezza",
+  "course": "quantum-post-quantum-computing-2026-2027",
+  "order": 6,
+  "summary": "La ricerca di candidati validi è sviluppata attraverso oracoli, riflessioni e rotazioni nello spazio degli stati. Gli esempi introducono più soluzioni, un numero di soluzioni ignoto e l’amplificazione di ampiezza, mantenendo espliciti costi e limiti.",
+  "files": [
+    "/media/docs/quantum-2026-2027/UniMI_Quantum_PostQuantum_2026-2027_M06_grover-amplificazione-ampiezza.pdf"
+  ],
+  "body": "",
+  "topics": [
+    "Ricerca, verificatori e interrogazioni",
+    "Oracolo, diffusore e rotazione di Grover",
+    "Più soluzioni e numero di soluzioni ignoto",
+    "Amplificazione di ampiezza e analisi delle risorse"
+  ],
+  "pages": 253,
+  "sizeBytes": 1165063,
+  "authors": "",
+  "license": "",
+  "draft": false
+}

@@ -1,0 +1,25 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {escapeHtml,safeExternal,safeMedia,safeId,safeEmail,markdown,inlineMarkdown} from '../src/safety.mjs';
+import {validateMediaBuffer} from '../src/media.mjs';
+
+test('HTML: escaped markup and attribute delimiters',()=>assert.equal(escapeHtml(`<script a="'">&`),'&lt;script a=&quot;&#39;&quot;&gt;&amp;'));
+test('HTTPS URLs remain links',()=>assert.equal(safeExternal('https://example.org/p?a=1&b=2'),'https://example.org/p?a=1&b=2'));
+for(const url of ['javascript:alert(1)','data:text/html,hello','http://example.org','//example.org','https://user:pass@example.org','https://example.org\\x','https://exam\nple.org','https://localhost','file:///etc/passwd'])test('Unsafe URL rejected: '+JSON.stringify(url),()=>assert.equal(safeExternal(url),null));
+test('Media paths accepted and normalised',()=>assert.equal(safeMedia('/media/docs/lezione-01.pdf'),'media/docs/lezione-01.pdf'));
+for(const media of ['/media/docs/../x.pdf','/media/images/photo.svg','/media/docs/file.html','/media/docs/file.zip','/media/docs/file.pptm','https://example.org/a.pdf','/media/docs/%2e%2e/x.pdf','/media//docs/a.pdf'])test('Unsafe media rejected: '+media,()=>assert.equal(safeMedia(media),null));
+test('Content IDs cannot traverse paths',()=>{assert.throws(()=>safeId('../x'));assert.throws(()=>safeId('x.html'));assert.equal(safeId('modelli-01'),'modelli-01');});
+test('Email cannot inject attributes',()=>{assert.throws(()=>safeEmail('x@y.it" onclick="alert(1)'));assert.equal(safeEmail('name@example.org'),'name@example.org');});
+test('Raw HTML rendered as text',()=>{const s=markdown('<script>alert(1)</script>\n\n<img src=x onerror=alert(1)>');assert.ok(!s.includes('<script'));assert.ok(!s.includes('<img '));assert.ok(s.includes('&lt;script&gt;'));});
+test('Markdown links cannot execute javascript',()=>assert.ok(!inlineMarkdown('[test](javascript:alert(1))').includes('<a ')));
+test('External images cannot track readers',()=>assert.ok(!inlineMarkdown('![test](https://example.org/a.png)').includes('<img')));
+test('Image alt is escaped',()=>{const s=inlineMarkdown('![" onerror="bad](/media/images/p.png)');assert.ok(s.includes('alt="&quot; onerror=&quot;bad"'));assert.ok(!s.includes('alt="" onerror='));});
+test('Markdown headings cannot add extra h1',()=>{assert.equal(markdown('# Titolo'),'<h2>Titolo</h2>');});
+test('Code fence contents are inert',()=>assert.equal(markdown('```\n<script>x</script>\n```'),'<pre><code>&lt;script&gt;x&lt;/script&gt;</code></pre>'));
+test('Normal Markdown renders',()=>{const s=markdown('## Test\n\n**Bold** e *corsivo*.\n\n- Uno\n- Due');assert.ok(s.includes('<h2>Test</h2>'));assert.ok(s.includes('<strong>Bold</strong>'));assert.ok(s.includes('<li>Due</li>'));});
+test('PDF signature check',()=>{assert.equal(validateMediaBuffer('x.pdf',Buffer.from('%PDF-1.7\n%%EOF')),true);assert.throws(()=>validateMediaBuffer('x.pdf',Buffer.from('<script>')));});
+for(const token of ['JavaScript','JS','Launch','EmbeddedFile','RichMedia'])test('PDF visible active token rejected: '+token,()=>assert.throws(()=>validateMediaBuffer('x.pdf',Buffer.from('%PDF-1.7 /'+token+' (x)'))));
+test('Empty and oversized files rejected',()=>{assert.throws(()=>validateMediaBuffer('x.pdf',Buffer.alloc(0)));assert.throws(()=>validateMediaBuffer('x.pdf',Buffer.alloc(25*1024*1024+1)));});
+test('Mismatched raster signatures rejected',()=>{for(const ext of ['png','jpg','webp'])assert.throws(()=>validateMediaBuffer('x.'+ext,Buffer.from('not an image')));});
+test('Unexpected file formats rejected',()=>assert.throws(()=>validateMediaBuffer('x.svg',Buffer.from('<svg/>'))));
+test('Renaming a file as Office does not bypass structure check',()=>{assert.throws(()=>validateMediaBuffer('x.pptx',Buffer.from('%PDF-1.7')));assert.throws(()=>validateMediaBuffer('x.docx',Buffer.from('not a zip')));});

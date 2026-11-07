@@ -1,0 +1,18 @@
+{
+  "category": "Capitoli",
+  "year": "2013",
+  "title": "Topological versus physical and chemical properties of negatively curved carbon surfaces",
+  "authors": "M. De Corato, M. Bernasconi, L. D’Alessio, O. Ori, M. V. Putz, G. Benedek",
+  "where": "Topological Modelling of Nanostructures and Extended Systems · Springer, pp. 105–136",
+  "tag": "TOPOLOGIA",
+  "href": "https://doi.org/10.1007/978-94-007-6413-2_4",
+  "id": "pub-13",
+  "source": "CV_UNICATT.pdf, pp. 4–6",
+  "plainTitle": "Modelli topologici e proprietà delle superfici carboniose",
+  "plainSummary": "Rappresentare gli atomi come nodi e i legami come connessioni permette di confrontare alcune proprietà fisiche con descrizioni matematiche più semplici.",
+  "explanation": "Il capitolo studia superfici di carbonio a curvatura negativa, le schwarziti, confrontando argomenti topologici e calcoli ab initio. Esamina in quali approssimazioni la struttura delle connessioni aiuti a descrivere gli spettri vibrazionali e come i difetti modifichino tali spettri. Per alcune schwarziti planari mette inoltre a confronto la stabilità calcolata con le indicazioni dell’indice di Wiener. La relazione fra modello di rete e descrizione fisica viene discussa insieme alle ipotesi che ne delimitano la validità.",
+  "readingBasis": "Abstract dell’editore Springer",
+  "readingUrl": "https://link.springer.com/chapter/10.1007/978-94-007-6413-2_4",
+  "readingStatus": "reviewed",
+  "readDate": "2026-11-07"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "quantum-2026-2027-modulo-05",
+  "title": "Algoritmo di Shor: aritmetica modulare, RSA e trasformata di Fourier",
+  "course": "quantum-post-quantum-computing-2026-2027",
+  "order": 5,
+  "summary": "Divisori, congruenze, inversi e potenze modulari preparano la costruzione di RSA. La ricerca quantistica del periodo e la trasformata di Fourier conducono al recupero del messaggio; un approfondimento finale collega il periodo alla fattorizzazione.",
+  "files": [
+    "/media/docs/quantum-2026-2027/UniMI_Quantum_PostQuantum_2026-2027_M05_shor-aritmetica-rsa-fourier.pdf"
+  ],
+  "body": "",
+  "topics": [
+    "Aritmetica modulare e algoritmo di Euclide",
+    "RSA e periodo del cifrato",
+    "Trasformata di Fourier e ricerca del periodo",
+    "Dalla misura alla decifrazione e alla fattorizzazione"
+  ],
+  "pages": 208,
+  "sizeBytes": 1559714,
+  "authors": "",
+  "license": "",
+  "draft": false
+}

@@ -1,0 +1,22 @@
+{
+  "id": "quantum-2026-2027-modulo-02",
+  "title": "Fondamenti matematici: algebra lineare, probabilità e misura",
+  "course": "quantum-post-quantum-computing-2026-2027",
+  "order": 2,
+  "summary": "Numeri complessi, vettori, matrici e prodotti tensoriali costruiscono il linguaggio del calcolo; probabilità, stati e misura collegano le trasformazioni matematiche agli esiti osservabili.",
+  "files": [
+    "/media/docs/quantum-2026-2027/UniMI_Quantum_PostQuantum_2026-2027_M02_fondamenti-matematici.pdf"
+  ],
+  "body": "",
+  "topics": [
+    "Vettori e trasformazioni lineari",
+    "Prodotto tensoriale e funzioni di matrici",
+    "Probabilità e dati",
+    "Stati quantistici e misura"
+  ],
+  "pages": 514,
+  "sizeBytes": 2872017,
+  "authors": "Marzio De Corato; Danilo Bruschi",
+  "license": "CC BY-NC-SA 4.0",
+  "draft": false
+}

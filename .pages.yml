@@ -1,0 +1,650 @@
+# Pannello configurato; collegamento al repository e collaudo autenticato ancora da eseguire.
+media:
+- name: docs
+  label: Documenti pubblici (max 25 MiB)
+  input: public/media/docs
+  output: /media/docs
+  rename: safe
+  extensions:
+  - pdf
+  - pptx
+  - docx
+- name: images
+  label: Immagini pubbliche
+  input: public/media/images
+  output: /media/images
+  rename: safe
+  extensions:
+  - png
+  - jpg
+  - jpeg
+  - webp
+content:
+- name: posts
+  label: Blog
+  type: collection
+  path: content/posts
+  format: json
+  filename:
+    template: '{fields.id}.json'
+    field: false
+  subfolders: false
+  view:
+    primary: title
+    fields:
+    - title
+    - id
+  fields:
+  - &id001
+    name: id
+    label: Identificativo (minuscole e trattini)
+    type: string
+    required: true
+    description: 'Esempio: lezione-01-modelli. Deve coincidere con il nome del file; non cambiarlo dopo la creazione.'
+  - name: title
+    label: Titolo
+    type: string
+    required: true
+  - name: date
+    label: Data
+    type: date
+    required: true
+    options:
+      format: yyyy-MM-dd
+      time: false
+  - name: category
+    label: Categoria
+    type: string
+    required: true
+  - name: tags
+    label: Tag
+    type: string
+    list: true
+  - name: excerpt
+    label: Sintesi
+    type: text
+    required: true
+  - name: draft
+    label: 'Bozza: esclusa dal sito pubblico'
+    type: boolean
+    default: true
+  - name: demo
+    label: 'Esempio dimostrativo: non pubblicare'
+    type: boolean
+    default: false
+  - name: sourceStatus
+    label: Revisione del contenuto (per articoli importati)
+    type: select
+    options:
+      values:
+      - awaiting-file
+      - needs-review
+      - approved
+    description: Prima della pubblicazione degli articoli importati selezionare approved; per i nuovi post ordinari il campo puo rimanere vuoto.
+  - name: cover
+    label: Copertina
+    type: image
+    options:
+      media: images
+  - name: coverAlt
+    label: Descrizione accessibile della copertina
+    type: string
+  - name: body
+    label: Testo
+    type: rich-text
+    required: true
+    options: &id002
+      format: markdown
+      media: images
+      extensions:
+      - png
+      - jpg
+      - jpeg
+      - webp
+      rename: safe
+    description: Paragrafi, titoli, grassetto, corsivo, elenchi puntati, citazioni, link HTTPS e codice. HTML, tabelle,
+      formule LaTeX ed embed non sono supportati in questa versione.
+- name: courses
+  label: Insegnamenti
+  type: collection
+  path: content/courses
+  format: json
+  filename:
+    template: '{fields.id}.json'
+    field: false
+  subfolders: false
+  view:
+    primary: title
+    fields:
+    - title
+    - id
+  fields:
+  - *id001
+  - name: title
+    label: Insegnamento
+    type: string
+    required: true
+  - name: university
+    label: Nome completo ateneo
+    type: string
+    required: true
+  - name: universityShort
+    label: Ateneo breve
+    type: select
+    required: true
+    options:
+      values:
+      - UniMI
+      - Cattolica
+  - name: academicYear
+    label: Anno accademico (2025/2026)
+    type: string
+    required: true
+  - name: summary
+    label: Descrizione
+    type: text
+    required: true
+  - name: source
+    label: Pagina istituzionale HTTPS
+    type: string
+    required: true
+  - name: provenance
+    label: Fonte e verifica
+    type: text
+  - name: verified
+    label: Dati confermati per questo anno
+    type: boolean
+    default: false
+  - name: draft
+    label: Bozza
+    type: boolean
+    default: true
+  - name: description
+    label: Presentazione estesa del percorso
+    type: text
+  - name: department
+    label: Dipartimento
+    type: string
+  - name: teacher
+    label: Docente e materiali
+    type: string
+  - name: coordinator
+    label: Responsabile dell’insegnamento
+    type: string
+  - name: credits
+    label: Crediti complessivi
+    type: string
+  - name: hours
+    label: Ore complessive dell’insegnamento
+    type: string
+  - name: materialsLabel
+    label: Etichetta raccolta (es. Moduli didattici)
+    type: string
+  - name: learningPath
+    label: Percorso sintetico
+    type: string
+- name: lectures
+  label: Lezioni e materiali
+  type: collection
+  path: content/lectures
+  format: json
+  filename:
+    template: '{fields.id}.json'
+    field: false
+  subfolders: false
+  view:
+    primary: title
+    fields:
+    - title
+    - id
+  fields:
+  - *id001
+  - name: title
+    label: Titolo lezione
+    type: string
+    required: true
+  - name: course
+    label: Insegnamento
+    type: reference
+    required: true
+    options:
+      collection: courses
+      search: title,academicYear,universityShort
+      value: '{fields.id}'
+      label: '{fields.title} · {fields.academicYear} · {fields.universityShort}'
+  - name: order
+    label: Numero / ordine
+    type: number
+    required: true
+    default: 1
+    options:
+      min: 1
+      step: 1
+  - name: summary
+    label: Descrizione breve
+    type: text
+  - name: files
+    label: PDF e presentazioni
+    type: file
+    required: true
+    options:
+      media: docs
+      multiple: true
+      extensions:
+      - pdf
+      - pptx
+      - docx
+      rename: safe
+  - name: body
+    label: Note alla lezione
+    type: rich-text
+    options: *id002
+    description: Paragrafi, titoli, grassetto, corsivo, elenchi puntati, citazioni, link HTTPS e codice. HTML, tabelle,
+      formule LaTeX ed embed non sono supportati in questa versione.
+  - name: draft
+    label: Bozza
+    type: boolean
+    default: true
+  - name: topics
+    label: Argomenti
+    type: string
+    list: true
+  - name: pages
+    label: Pagine effettive del PDF
+    type: number
+    options:
+      min: 1
+      step: 1
+  - name: sizeBytes
+    label: Dimensione file in byte
+    type: number
+    options:
+      min: 1
+      step: 1
+  - name: authors
+    label: Autori riportati nel documento
+    type: string
+  - name: license
+    label: Licenza riportata nel documento
+    type: string
+- name: publications
+  label: Pubblicazioni
+  type: collection
+  path: content/publications
+  format: json
+  filename:
+    template: '{fields.id}.json'
+    field: false
+  subfolders: false
+  view:
+    primary: title
+    fields:
+    - title
+    - id
+  fields:
+  - *id001
+  - name: title
+    label: Titolo
+    type: string
+    required: true
+  - name: authors
+    label: Autori
+    type: string
+    required: true
+  - name: year
+    label: Anno (quattro cifre)
+    type: string
+    required: true
+  - name: category
+    label: Categoria
+    type: select
+    required: true
+    options:
+      values:
+      - Libri
+      - Articoli
+      - Conferenze
+      - Capitoli
+  - name: where
+    label: Rivista, editore, volume, pagine
+    type: text
+    required: true
+  - name: tag
+    label: Tema
+    type: string
+  - name: href
+    label: DOI o URL HTTPS
+    type: string
+  - name: source
+    label: Fonte bibliografica
+    type: text
+  - name: readingStatus
+    label: Stato della lettura
+    type: select
+    required: true
+    default: pending
+    options:
+      values:
+      - reviewed
+      - pending
+  - name: plainTitle
+    label: Titolo divulgativo
+    type: string
+  - name: plainSummary
+    label: Introduzione accessibile
+    type: text
+  - name: explanation
+    label: Problema, metodo e contributo
+    type: text
+  - name: readingBasis
+    label: Tipo di fonte consultata
+    type: string
+    required: true
+  - name: readingUrl
+    label: Fonte consultata (HTTPS)
+    type: string
+    required: true
+  - name: readDate
+    label: Data della verifica
+    type: date
+    required: true
+    options:
+      format: yyyy-MM-dd
+      time: false
+  - name: bibliographicNote
+    label: Nota bibliografica
+    type: text
+- name: profile
+  label: Profilo e CV
+  type: file
+  path: content/profile.json
+  format: json
+  fields:
+  - name: name
+    label: Nome
+    type: string
+    required: true
+  - name: headline
+    label: Ambiti scientifici
+    type: string
+  - name: intro
+    label: Biografia breve
+    type: text
+    required: true
+  - name: biography
+    label: Biografia estesa (paragrafi separati da righe vuote)
+    type: text
+    required: true
+  - name: personalInterests
+    label: Interessi personali (paragrafi separati da righe vuote)
+    type: text
+    required: true
+  - name: email
+    label: Email pubblica
+    type: string
+    required: true
+  - name: github
+    label: GITHUB (URL HTTPS)
+    type: string
+    required: true
+  - name: linkedin
+    label: LINKEDIN (URL HTTPS)
+    type: string
+    required: true
+  - name: orcid
+    label: ORCID (URL HTTPS)
+    type: string
+    required: true
+  - name: unimi
+    label: UNIMI (URL HTTPS)
+    type: string
+    required: true
+  - name: cattolica
+    label: CATTOLICA (URL HTTPS)
+    type: string
+    required: true
+  - name: air
+    label: AIR (URL HTTPS)
+    type: string
+    required: true
+  - name: cvPdf
+    label: CV PDF
+    type: file
+    required: true
+    options:
+      media: docs
+      extensions:
+      - pdf
+  - name: interests
+    label: Interessi
+    type: string
+    list: true
+  - name: skills
+    label: Competenze
+    type: string
+    list: true
+  - name: programming
+    label: Linguaggi di programmazione
+    type: string
+    list: true
+  - name: languages
+    label: Lingue
+    type: string
+    list: true
+  - name: education
+    label: Formazione
+    type: object
+    list: true
+    fields:
+    - name: year
+      label: Anno
+      type: string
+      required: true
+    - name: date
+      label: Periodo
+      type: string
+      required: true
+    - name: degree
+      label: Titolo
+      type: string
+      required: true
+    - name: institution
+      label: Ateneo
+      type: string
+      required: true
+    - name: detail
+      label: Dettagli
+      type: string
+      required: true
+  - name: experience
+    label: Esperienza
+    type: object
+    list: true
+    fields:
+    - name: date
+      label: Periodo
+      type: string
+      required: true
+    - name: title
+      label: Ruolo
+      type: string
+      required: true
+    - name: institution
+      label: Istituzione
+      type: string
+      required: true
+    - name: detail
+      label: Dettagli
+      type: string
+      required: true
+  - name: teaching
+    label: Didattica nel CV
+    type: object
+    list: true
+    fields:
+    - name: date
+      label: Periodo
+      type: string
+      required: true
+    - name: title
+      label: Insegnamento o attività
+      type: string
+      required: true
+    - name: institution
+      label: Istituzione
+      type: string
+      required: true
+    - name: detail
+      label: Dettagli
+      type: string
+      required: true
+  - name: theses
+    label: Co-supervisione tesi
+    type: object
+    list: true
+    fields:
+    - name: year
+      label: Anno
+      type: string
+      required: true
+    - name: title
+      label: Titolo
+      type: string
+      required: true
+  - name: talks
+    label: Conferenze e interventi
+    type: object
+    list: true
+    fields:
+    - name: year
+      label: Anno
+      type: string
+      required: true
+    - name: title
+      label: Titolo
+      type: string
+      required: true
+    - name: event
+      label: Evento e data
+      type: string
+      required: true
+  - name: project
+    label: Progetto
+    type: text
+- name: research
+  label: Ricerca — temi e metodi
+  type: file
+  path: content/research.json
+  format: json
+  fields:
+  - name: title
+    label: Titolo sezione
+    type: string
+    required: true
+  - name: subtitle
+    label: Sottotitolo
+    type: text
+    required: true
+  - name: introduction
+    label: Introduzione
+    type: text
+    required: true
+  - name: areas
+    label: Temi di ricerca
+    type: object
+    list: true
+    fields:
+    - name: id
+      label: Identificativo del tema (minuscole e trattini)
+      type: string
+      required: true
+    - name: title
+      label: Titolo completo
+      type: string
+      required: true
+    - name: shortTitle
+      label: Titolo breve per gli indici
+      type: string
+      required: true
+    - name: group
+      label: Sezione editoriale
+      type: select
+      required: true
+      options:
+        values:
+          - ricerca
+          - trasversale
+          - approfondimenti
+    - name: scope
+      label: Inquadramento del tema
+      type: string
+      required: true
+    - name: summary
+      label: Sintesi della scheda
+      type: text
+      required: true
+    - name: question
+      label: Questione di riferimento
+      type: text
+      required: true
+    - name: overview
+      label: Presentazione del tema
+      type: text
+      required: true
+    - name: approach
+      label: Metodi e ambiti di applicazione
+      type: text
+      required: true
+    - name: methods
+      label: Parole chiave
+      type: string
+      list: true
+    - name: activities
+      label: Attività collegate
+      type: text
+      list: true
+    - name: publications
+      label: ID delle pubblicazioni collegate
+      type: string
+      list: true
+      description: Identificativi esistenti, per esempio pub-03. Il controllo di build verifica i riferimenti.
+    - name: courseLink
+      label: ID del corso collegato (facoltativo)
+      type: string
+  - name: connectionsTitle
+    label: Titolo collaborazioni
+    type: string
+    required: true
+  - name: connections
+    label: Tesi e contributi interdisciplinari
+    type: text
+    required: true
+- name: site
+  label: Impostazioni del sito
+  type: file
+  path: content/site.json
+  format: json
+  fields:
+  - name: name
+    label: Nome progetto
+    type: string
+    required: true
+  - name: tagline
+    label: Sottotitolo
+    type: string
+  - name: siteUrl
+    label: URL HTTPS completo, inclusa eventuale sottocartella
+    type: string
+  - name: published
+    label: 'Sito approvato: abilita indicizzazione'
+    type: boolean
+    default: false
+    description: Non pubblica da solo. Occorre anche abilitare il deployment nel repository.
+  - name: version
+    label: Versione
+    type: string
+    readonly: true
+  - name: language
+    label: Lingua
+    type: string
+    readonly: true
