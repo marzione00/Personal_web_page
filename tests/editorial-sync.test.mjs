@@ -11,13 +11,17 @@ test('biografia e ricerca non sono copie manuali divergenti dalle fonti JSON',()
  const p=spawnSync(process.execPath,['scripts/sync-editorial.mjs','--check'],{cwd:root,encoding:'utf8'});
  assert.equal(p.status,0,p.stderr);
 });
-test('il primo articolo è una bozza reale non pubblicata e senza testo inventato',()=>{
+test('il saggio Overleaf originale è pubblicato con tutti i riferimenti e le sette figure',()=>{
  const p=JSON.parse(fs.readFileSync(path.join(root,'content/posts/colpire-i-nervi-del-sistema.json'),'utf8'));
  assert.equal(p.id,'colpire-i-nervi-del-sistema');
- assert.equal(p.sourceStatus,'awaiting-file');
- assert.equal(p.draft,true);
- assert.match(p.body,/__MDC_IN_ATTESA_SOURCE__/);
- assert.equal(loadContent(root).posts.length,0);
+ assert.equal(p.sourceStatus,'approved');
+ assert.equal(p.draft,false);
+ assert.doesNotMatch(p.body,/__MDC_IN_ATTESA_SOURCE__|MDCFIGURE/);
+ assert.equal((p.body.match(/!\[Schema /g)||[]).length,7);
+ assert.equal((p.body.match(/^- \*\*\[\d+\]\*\*/gm)||[]).length,19);
+ assert.ok(p.body.length>28000);
+ assert.equal(loadContent(root).posts.length,1);
+ assert.ok(fs.existsSync(path.join(root,'public/media/docs/colpire-i-nervi-del-sistema.pdf')));
 });
 test('la guida futura chiarisce i materiali ancora mancanti',()=>{
  const t=fs.readFileSync(path.join(root,'docs/RIPRESA_E_MANUTENZIONE.md'),'utf8');

@@ -1,0 +1,16 @@
+{
+  "archive_sha256": "fae78ab6046b7ba215e6adc3b62d56566fc8a98bb47e2e3f93a3125bf96f01dc",
+  "pdf_sha256": "642594ed774d1d59c78635f3966a94d7e98d37c3ddc246e2eece5b68cc84c169",
+  "figure_sha256": {
+    "colpire-nervi-fig-01.png": "611cae55059342b5ba4f556bc8a649551d10e93198fd3b95759d6e7a00d7ce6c",
+    "colpire-nervi-fig-02.png": "5167bb9ff8f4199555f14bc198f6f5baf74bac59c8bdb880fcd95596d94ae170",
+    "colpire-nervi-fig-03.png": "f38b3091a45f9e3c795a71866ffb7307ee065e4091060ab2933d705f56a6a3ac",
+    "colpire-nervi-fig-04.png": "98dff65bc25690bb1eabfb45d645a0504210fceb2ac55801abb58152f82d4a75",
+    "colpire-nervi-fig-05.png": "e3b10992a3283f9bad3482d17127ecb7e0429b73db11b3bb58619d3867acef62",
+    "colpire-nervi-fig-06.png": "902819ff4744c5d6fbede19804f8e6740f35e15ae250f997730acf7cbd05cb5a",
+    "colpire-nervi-fig-07.png": "75f02033136906ea57d4bc7add180b4e60c5d671b9d939be02dfa81222334523"
+  },
+  "reference_count": 19,
+  "figure_count": 7,
+  "body_chars": 40174
+}

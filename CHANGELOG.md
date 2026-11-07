@@ -1,6 +1,13 @@
 # Changelog
 
-## 1.4 · 7 novembre 2026
+## v1.5
+- Pubblicato il saggio «Colpire i nervi del sistema» nel blog.
+- Convertiti i sette diagrammi TikZ originali e i 19 riferimenti bibliografici.
+- Compilato il PDF integrale dal sorgente Overleaf, con link nella pagina dell’articolo.
+- Aggiornata la modifica approvata a `personalInterests` riguardante Alessandra Martin.
+- Invariate le cinque fotografie originali, il curriculum e le altre geometrie del sito.
+
+## v1.4 — 7 novembre 2026
 
 - Foto originale effettivamente inclusa, identificata via SHA-256, mostrata integralmente senza filtri o ritagli. Ripristinate anche le quattro foto originali della biografia.
 - Nuovo layout editoriale: gerarchia tipografica serif/sans, ritratto principale, fascia geometrica, carte delle sezioni e intestazioni differenziate.

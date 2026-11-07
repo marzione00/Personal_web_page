@@ -18,7 +18,7 @@ La produzione scientifica comprende, accanto ai lavori sulla fisica delle nanost
 
 ## Interessi personali
 
-Ha iniziato a praticare yoga con Giada Merli, che lo ha introdotto al Vinyasa Krama. Nel percorso successivo Alessandra Martin ha avuto un ruolo formativo decisivo; con lei, nel 2026, ha seguito anche un Teacher Training di 60 ore sul corpo yogico e sul sequenziamento delle pratiche.
+Ha iniziato a praticare yoga con Giada Merli, che lo ha introdotto al Vinyasa Krama. Nel percorso successivo Alessandra Martin ha avuto e continua a ricoprire un ruolo formativo decisivo; con lei, nel 2026, ha seguito anche un Teacher Training di 60 ore sul corpo yogico e sul sequenziamento delle pratiche.
 
 Con Alexandra Santos ha intrapreso lo studio dell’Ashtanga Vinyasa, che prosegue ancora oggi. Della sua guida apprezza la precisione e l’attenzione con cui gli ha fatto conoscere la bellezza di una disciplina fondata sulla ripetizione delle sequenze, sul respiro e sulla concentrazione. Continua inoltre a formarsi nel Vinyasa attraverso le lezioni di Camilla Vigorelli; a queste pratiche affianca lo Yin Yoga, nel quale le posture mantenute più a lungo propongono una diversa esperienza del tempo e delle sensazioni.
 

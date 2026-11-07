@@ -1,4 +1,4 @@
-# Ripresa e manutenzione · MDC_LAB 1.4
+# Ripresa e manutenzione · MDC_LAB 1.5
 
 ## Decisioni da conservare
 
@@ -38,11 +38,11 @@ L’ultimo comando è facoltativo per gli aggiornamenti ordinari e richiede Play
 
 ## Consegna
 
-Il pacchetto sorgenti serve per GitHub. Il progetto completo aggiunge build, anteprima offline, schermate e rapporti. Il pacchetto statico contiene solamente la build. Le schermate nel pacchetto completo sono della versione 1.4; scartare quelle delle versioni 1.0–1.3 quando si valuta la nuova grafica.
+Il pacchetto sorgenti serve per GitHub. Il progetto completo aggiunge build, anteprima offline, schermate e rapporti. Il pacchetto statico contiene solamente la build. Le schermate nel pacchetto completo sono della versione 1.5; scartare quelle delle versioni 1.0–1.3 quando si valuta la nuova grafica.
 
 ## Questioni editoriali ancora aperte
 
-L’archivio Overleaf originale è ora effettivamente presente in `source-materials/Colpire_i_nervi_del_sistema_Overleaf.zip`. L’articolo non è ancora stato importato e rimane escluso dal pubblico. Il CV PDF è precedente agli ultimi aggiornamenti delle docenze; la versione web è quella da consultare per questi aggiornamenti. La scheda scientifica senza abstract consultabile conserva solo il riferimento e l’avvertenza. Nessun contenuto è stato inventato per colmare questi punti.
+L’archivio Overleaf originale è ora effettivamente presente in `source-materials/Colpire_i_nervi_del_sistema_Overleaf.zip`. L’articolo è ora pubblicato nel blog, con testo integrale, 19 riferimenti bibliografici, sette figure e PDF originale. Il CV PDF è precedente agli ultimi aggiornamenti delle docenze; la versione web è quella da consultare per questi aggiornamenti. La scheda scientifica senza abstract consultabile conserva solo il riferimento e l’avvertenza. Nessun contenuto è stato inventato per colmare questi punti.
 
 ## Pubblicazione e sicurezza
 

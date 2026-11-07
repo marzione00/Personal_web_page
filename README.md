@@ -1,4 +1,4 @@
-# MDC_LAB · 1.4
+# MDC_LAB · 1.5
 
 Sito personale di Marzio De Corato. Questa cartella è la base unica del progetto; non mescolare file di versioni precedenti.
 
@@ -53,3 +53,8 @@ Consegnare questa cartella, `docs/RIPRESA_E_MANUTENZIONE.md` e il changelog. I t
 ## Stato dei contenuti
 
 L’articolo “Colpire i nervi del sistema” resta una bozza: il suo archivio Overleaf originale è ora conservato in `source-materials/`, ma non è stato convertito o pubblicato in questa revisione grafica. Il CV PDF conserva la versione precedente agli aggiornamenti delle docenze, segnalata sul sito. Un riferimento scientifico rimane privo di abstract consultabile, come indicato nella sua scheda. Gli altri testi accademici sono stati mantenuti.
+
+
+## Primo articolo pubblicato
+
+`content/posts/colpire-i-nervi-del-sistema.json` contiene il testo integrale del saggio, 19 voci bibliografiche e 7 diagrammi originali di Overleaf. Il PDF è in `public/media/docs/colpire-i-nervi-del-sistema.pdf`. Vedere `docs/ARTICOLO_PRIMO_BLOG.md` per la provenienza.

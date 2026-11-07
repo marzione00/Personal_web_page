@@ -59,7 +59,7 @@ if(preview){
  document.addEventListener('click',e=>{const a=e.target.closest('a');if(!a)return;const href=a.getAttribute('href')||'';const [file,anchor]=href.split('#');if(!views.some(v=>v.dataset.view===file))return;e.preventDefault();document.querySelector('#search-dialog')?.close();if(location.hash==='#/'+href)show(file,anchor);else location.hash='/'+href;});
  window.addEventListener('hashchange',route);route();
 })();`;
- const pdfPaths=new Set([data.profile.cvPdf,...data.lectures.flatMap(l=>l.files)].map(s=>s.replace(/^\//,'')));
+ const pdfPaths=new Set([data.profile.cvPdf,...data.lectures.flatMap(l=>l.files),...data.posts.map(p=>p.pdf).filter(Boolean)].map(s=>s.replace(/^\//,'')));
  const embedded=Object.fromEntries([...pdfPaths].map(ref=>[ref,{name:path.basename(ref),base64:fs.readFileSync(path.join(root,'public',ref)).toString('base64')}]));
  const portable=`\n(() => {const files=${JSON.stringify(embedded)},urls=new Map();for(const a of document.querySelectorAll('a[href]')){const ref=a.getAttribute('href'),file=files[ref];if(!file)continue;if(!urls.has(ref)){const raw=atob(file.base64),bytes=new Uint8Array(raw.length);for(let i=0;i<raw.length;i++)bytes[i]=raw.charCodeAt(i);urls.set(ref,URL.createObjectURL(new Blob([bytes],{type:'application/pdf'})));}a.href=urls.get(ref);a.dataset.embeddedPdf=file.name;if(a.hasAttribute('download'))a.download=file.name;}})();`;
  const combined=js+extra+portable;

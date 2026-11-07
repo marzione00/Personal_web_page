@@ -11,8 +11,8 @@ const c=loadContent(root),pages=new Map(renderPages(c).map(p=>[p.file,p.body]));
 const get=id=>c.publications.find(p=>p.id===id);
 
 test('release version matches package and public content',()=>{
- assert.equal(c.site.version,'1.4');
- assert.equal(JSON.parse(fs.readFileSync(path.join(root,'package.json'))).version,'1.4.0');
+ assert.equal(c.site.version,'1.5');
+ assert.equal(JSON.parse(fs.readFileSync(path.join(root,'package.json'))).version,'1.5.0');
 });
 test('revised teaching lineage is grounded in the author updates',()=>{
  const text=c.profile.personalInterests;
@@ -65,5 +65,5 @@ test('all seven quantum PDF originals match the packaged manifest',()=>{
 test('blog demonstration remains unpublished',()=>{
  const x=c.posts.filter(x=>x.demo);
  assert.equal(x.length,0);
- assert.match(pages.get('blog.html'),/Nessun articolo pubblicato/);
+ assert.match(pages.get('blog.html'),/Colpire i nervi del sistema/);assert.ok(pages.has('articolo-colpire-i-nervi-del-sistema.html'));assert.match(pages.get('articolo-colpire-i-nervi-del-sistema.html'),/Riferimenti bibliografici/);
 });

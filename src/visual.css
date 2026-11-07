@@ -75,3 +75,15 @@
 @media print{.geometry,.geometry-ribbon,.hero-portrait:before,.hero-portrait:after{display:none}.hero-grid{display:block}.hero-portrait{max-width:55mm;margin:10mm 0}.hero-teaching{border-color:#aaa}.page-head-grid{display:block}.research-visual{display:none}.personal-gallery{display:grid}.personal-gallery-item img{height:auto;max-height:none;object-fit:contain;filter:none}}
 
 @media(max-width:400px){.personal-gallery{grid-template-columns:1fr}}
+
+/* Saggi documentati: figure TikZ originali, citazioni e collegamento al PDF. */
+.article-layout .prose img[src*="colpire-nervi-fig-"]{width:100%;height:auto;display:block;margin:18px auto 8px;padding:16px;background:#f9fbfa;border:1px solid #334b3e;border-radius:4px;box-sizing:border-box}
+.article-layout .prose p:has(>img[src*="colpire-nervi-fig-"]){margin:24px 0 6px;max-width:none}
+.article-layout .prose p:has(>img[src*="colpire-nervi-fig-"])+p{font-size:.86em;line-height:1.6;color:var(--muted);margin:0 0 28px}
+.article-layout .prose h2{margin-top:46px;margin-bottom:19px;scroll-margin-top:110px}
+.article-layout .prose h3{margin-top:34px;margin-bottom:14px}
+.article-layout .prose blockquote{margin:24px 0;padding:12px 22px;border-left:2px solid var(--green);background:var(--panel)}
+.article-layout .prose ul{padding-left:20px}
+.article-layout .prose li{margin:9px 0;overflow-wrap:anywhere}
+.article-pdf-link{color:var(--green);text-decoration:underline;text-underline-offset:4px;overflow-wrap:anywhere}
+@media(max-width:600px){.article-layout .prose img[src*="colpire-nervi-fig-"]{padding:5px}}

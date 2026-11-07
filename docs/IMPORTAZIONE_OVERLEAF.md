@@ -1,5 +1,7 @@
-# Articolo Overleaf
+# Articolo Overleaf — stato della conversione
 
-L’archivio originale è incluso in `source-materials/Colpire_i_nervi_del_sistema_Overleaf.zip`. Nella revisione grafica 1.4 il testo non è stato convertito o pubblicato. La scheda JSON resta `draft: true`, con stato `awaiting-file` conservato dall’importazione precedente. Prima di cambiare lo stato occorre importare e confrontare integralmente testo, note e bibliografia con il sorgente originale.
+L’articolo «Colpire i nervi del sistema» è stato convertito e incluso nel blog pubblico. Lo stato è `draft: false` e `sourceStatus: approved` in `content/posts/colpire-i-nervi-del-sistema.json`.
 
-Lo script `scripts/import-overleaf.py` è disponibile come ausilio, non come garanzia di conversione completa. Valutare manualmente tabelle, citazioni, note e comandi LaTeX prima di approvare. Non pubblicare il testo segnaposto. Le anteprime normali e la build pubblica escludono la scheda incompleta; l’anteprima editoriale può mostrarla.
+Per verificare le sezioni, le fonti, le sette figure e il PDF originale consultare `docs/ARTICOLO_PRIMO_BLOG.md` e `docs/ARTICOLO_PRIMO_BLOG_MANIFEST.json`.
+
+Il sorgente originale e i suoi comandi LaTeX non vengono eseguiti durante la build del sito: il testo web, le immagini PNG e il PDF sono stati preparati in anticipo e conservati come risorse statiche.
