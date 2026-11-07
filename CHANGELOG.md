@@ -1,6 +1,11 @@
+## v1.5.2 — Revisione del passaggio sullo yoga e la geometria
+
+- Aggiornata la formulazione di `personalInterests` per collegare l’osservazione delle emozioni alla bellezza delle forme geometriche incontrate negli studi universitari, esplorata attraverso il movimento del corpo.
+- Conservati fotografie originali, sette geometrie, materiali didattici e articolo del blog.
+
 # Changelog
 
-## v1.5.1 — aggiornamento biografia e consegna GitHub
+## v1.5.2 — aggiornamento biografia e consegna GitHub
 - Confermata nella biografia la formulazione: «Nel percorso successivo Alessandra Martin ha avuto e continua a ricoprire un ruolo formativo decisivo».
 - Allineato il README allo stato effettivo del blog: il primo articolo è pubblicabile e include PDF e figure.
 - Consolidato il pacchetto completo dei sorgenti con workflow GitHub Actions e materiali originali.

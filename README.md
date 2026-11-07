@@ -1,4 +1,4 @@
-# MDC_LAB · 1.5.1
+# MDC_LAB · 1.5.2
 
 Sito personale di Marzio De Corato. Questa cartella è la base unica del progetto; non mescolare file di versioni precedenti.
 

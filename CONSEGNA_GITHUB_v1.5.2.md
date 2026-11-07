@@ -1,4 +1,4 @@
-# Consegna GitHub — MDC_LAB 1.5.1
+# Consegna GitHub — MDC_LAB 1.5.2
 
 Archivio con struttura alla radice del repository. Dopo l’estrazione, caricare il **contenuto** di questa cartella in `marzione00/Personal_web_page`: `.github/`, `.pages.yml`, `src/`, `content/`, `public/`, `scripts/`, `tests/`, `docs/`, `tools/`, `package.json`, `README.md`. Non caricare la cartella contenitrice e non usare lo ZIP come unico file nel repository.
 

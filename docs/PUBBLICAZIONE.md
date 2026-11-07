@@ -1,4 +1,4 @@
-# Pubblicazione di MDC_LAB 1.5.1
+# Pubblicazione di MDC_LAB 1.5.2
 
 ## GitHub Pages
 

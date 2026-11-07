@@ -1,4 +1,4 @@
-# Ripresa e manutenzione · MDC_LAB 1.5.1
+# Ripresa e manutenzione · MDC_LAB 1.5.2
 
 ## Decisioni da conservare
 

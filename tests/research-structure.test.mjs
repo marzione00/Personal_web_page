@@ -33,7 +33,7 @@ test('selected editorial boilerplate is absent from public fields',()=>{
  assert.doesNotMatch(fields,/in questa prospettiva|a questi temi si aggiungono|costituisce un interesse|si accompagna|non solo|non soltanto|nel panorama|in questo contesto|trova spazio/i);
 });
 test('no stale presentation copy and no old release number in current data',()=>{
- assert.equal(content.site.version,'1.5.1');
+ assert.equal(content.site.version,'1.5.2');
  assert.doesNotMatch(html['didattica.html'],/I titoli delle schede e dei file sono stati uniformati/);
  assert.doesNotMatch(html['ricerca.html'],/A questi ambiti si accompagna/);
 });
