@@ -1,0 +1,22 @@
+{
+  "version": "1.4",
+  "preview": false,
+  "editorial": false,
+  "indexable": false,
+  "pages": 15,
+  "media": {
+    "files": 16,
+    "bytes": 20355744
+  },
+  "geometry": [
+    "gyroid",
+    "schwarz-p",
+    "schwarz-d",
+    "helicoid",
+    "sierpinski",
+    "torus",
+    "julia"
+  ],
+  "generatedAt": "2026-11-07T19:04:35.655Z",
+  "dependencies": 0
+}

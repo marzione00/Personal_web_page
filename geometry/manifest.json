@@ -1,0 +1,64 @@
+[
+  {
+    "id": "gyroid",
+    "file": "gyroid.svg",
+    "model": "sin(x)cos(y)+sin(y)cos(z)+sin(z)cos(x)=0; nodal approximation",
+    "triangles": 4647,
+    "labels": false,
+    "sha256": "1dbb0cbe6a1705e09fc38e710c17e7e238001edd4eb7801d258454a63b933bea",
+    "bytes": 576070
+  },
+  {
+    "id": "schwarz-p",
+    "file": "schwarz-p.svg",
+    "model": "cos(x)+cos(y)+cos(z)=0; nodal approximation",
+    "triangles": 3704,
+    "labels": false,
+    "sha256": "6f0578780dd1f1a755c59c1157c97f8b385434888a04f151e752c51cc806e35b",
+    "bytes": 458321
+  },
+  {
+    "id": "schwarz-d",
+    "file": "schwarz-d.svg",
+    "model": "cos(x)cos(y)cos(z)-sin(x)sin(y)sin(z)=0; nodal approximation",
+    "triangles": 4424,
+    "labels": false,
+    "sha256": "6a9eb871f07f46eaca387ddb5767615bab4cad690cbe292858d7d5982f0864b2",
+    "bytes": 548386
+  },
+  {
+    "id": "helicoid",
+    "file": "helicoid.svg",
+    "model": "x=u cos(v), y=u sin(v), z=0.35v",
+    "triangles": 3204,
+    "labels": false,
+    "sha256": "8a3943104f2de190dda0e0ed51ac227906090718e7825b4f47ad4232537c6241",
+    "bytes": 400400
+  },
+  {
+    "id": "sierpinski",
+    "file": "sierpinski.svg",
+    "model": "Sierpinski tetrahedron; four half-scale corner copies; depth 4",
+    "triangles": 1024,
+    "labels": false,
+    "sha256": "7cde8d4cbeb4f467921694ca219b2b9eca0d28ec1c39f1e6e3d88b2b157fc9b8",
+    "bytes": 127844
+  },
+  {
+    "id": "torus",
+    "file": "torus.svg",
+    "model": "Torus; R=1.8, r=0.60",
+    "triangles": 3900,
+    "labels": false,
+    "sha256": "ae32330ef1661edf98d5531e12e9e99d4e186c97afea6d472f1d1cfc42cf0b50",
+    "bytes": 486765
+  },
+  {
+    "id": "julia",
+    "file": "julia.webp",
+    "model": "z <- z^2 + c; c=-0.74543+0.11301i; 240 iterations; smooth escape-time colouring",
+    "labels": false,
+    "sha256": "95756eb51b74bd9e15c57e6f20b59fdcbb3f8f904cb2d5fbfcc7d3f778c40c48",
+    "bytes": 627356
+  }
+]
