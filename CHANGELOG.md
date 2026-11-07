@@ -1,5 +1,12 @@
 # Changelog
 
+## v1.5.1 — aggiornamento biografia e consegna GitHub
+- Confermata nella biografia la formulazione: «Nel percorso successivo Alessandra Martin ha avuto e continua a ricoprire un ruolo formativo decisivo».
+- Allineato il README allo stato effettivo del blog: il primo articolo è pubblicabile e include PDF e figure.
+- Consolidato il pacchetto completo dei sorgenti con workflow GitHub Actions e materiali originali.
+
+# Changelog
+
 ## v1.5
 - Pubblicato il saggio «Colpire i nervi del sistema» nel blog.
 - Convertiti i sette diagrammi TikZ originali e i 19 riferimenti bibliografici.
@@ -7,7 +14,7 @@
 - Aggiornata la modifica approvata a `personalInterests` riguardante Alessandra Martin.
 - Invariate le cinque fotografie originali, il curriculum e le altre geometrie del sito.
 
-## v1.4 — 7 novembre 2026
+1.4 · 7 novembre 2026
 
 - Foto originale effettivamente inclusa, identificata via SHA-256, mostrata integralmente senza filtri o ritagli. Ripristinate anche le quattro foto originali della biografia.
 - Nuovo layout editoriale: gerarchia tipografica serif/sans, ritratto principale, fascia geometrica, carte delle sezioni e intestazioni differenziate.

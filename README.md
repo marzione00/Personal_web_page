@@ -1,4 +1,4 @@
-# MDC_LAB · 1.5
+# MDC_LAB · 1.5.1
 
 Sito personale di Marzio De Corato. Questa cartella è la base unica del progetto; non mescolare file di versioni precedenti.
 
@@ -48,11 +48,11 @@ Le grafiche matematiche sono in `public/geometry/`; il generatore opzionale e le
 
 ## Per riprendere il lavoro
 
-Consegnare questa cartella, `docs/RIPRESA_E_MANUTENZIONE.md` e il changelog. I test correnti sono in `tests/`. Le anteprime del pacchetto completo provengono dalla build 1.4, non da mockup generativi.
+Consegnare questa cartella, `docs/RIPRESA_E_MANUTENZIONE.md` e il changelog. I test correnti sono in `tests/`. Le anteprime derivano dalla build del sito, non da mockup generativi.
 
 ## Stato dei contenuti
 
-L’articolo “Colpire i nervi del sistema” resta una bozza: il suo archivio Overleaf originale è ora conservato in `source-materials/`, ma non è stato convertito o pubblicato in questa revisione grafica. Il CV PDF conserva la versione precedente agli aggiornamenti delle docenze, segnalata sul sito. Un riferimento scientifico rimane privo di abstract consultabile, come indicato nella sua scheda. Gli altri testi accademici sono stati mantenuti.
+L’articolo “Colpire i nervi del sistema” è approvato per la pubblicazione: `content/posts/colpire-i-nervi-del-sistema.json` contiene il testo e `public/media/docs/colpire-i-nervi-del-sistema.pdf` conserva la versione PDF. I sette diagrammi originali sono in `public/media/images/`. Il CV PDF conserva la versione precedente agli aggiornamenti delle docenze, segnalata sul sito. Un riferimento scientifico rimane privo di abstract consultabile, come indicato nella sua scheda. Gli altri testi accademici sono stati mantenuti.
 
 
 ## Primo articolo pubblicato
