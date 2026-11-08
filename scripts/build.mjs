@@ -1,3 +1,4 @@
+import {loadAmbientFormulas} from '../src/ambient-content.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
@@ -13,8 +14,10 @@ if(editorial&&!preview)throw Error('Le bozze possono essere generate solo con --
 const out=path.join(root,preview?'preview':'dist');
 const datasets=Object.fromEntries(languages.map(language=>[language,loadContent(root,{preview:editorial,language})]));
 const media=validateMedia(root),data=datasets.it;
-const css=['site.css','visual.css'].map(f=>fs.readFileSync(path.join(root,'src',f),'utf8')).join('\n');
-const js=['i18n-client.js','app.js','sound.js','travel-gallery.js','geometry-loader.js','matrix-rain.js'].map(f=>fs.readFileSync(path.join(root,'src',f),'utf8')).join('\n');
+const css=['site.css','visual.css','ambient.css'].map(f=>fs.readFileSync(path.join(root,'src',f),'utf8')).join('\n');
+const formulaData=loadAmbientFormulas(root);
+const formulaScript='window.MDCFormulaCatalog='+JSON.stringify(formulaData).replace(/</g,'\\u003c').replace(/>/g,'\\u003e')+';';
+const js=formulaScript+'\n'+['i18n-client.js','app.js','effects.js','sound.js','travel-gallery.js','geometry-loader.js','matrix-rain.js','navigation.js'].map(f=>fs.readFileSync(path.join(root,'src',f),'utf8')).join('\n');
 const viewer=fs.readFileSync(path.join(root,'public/assets/geometry-viewer.js'),'utf8');
 const hash=x=>createHash('sha256').update(x).digest('base64');
 const runtime={src:'assets/geometry-viewer-'+createHash('sha256').update(viewer).digest('hex').slice(0,12)+'.js',integrity:'sha256-'+hash(viewer)};
@@ -61,18 +64,25 @@ if(preview){
  const sceneTable=Object.fromEntries(geometryManifest.map(g=>[g.id,fs.readFileSync(path.join(root,'public/geometry',g.scene)).toString('base64')]));
  const extra=`\n(() => {
  const views=Array.from(document.querySelectorAll('[data-view]'));
+ let firstRoute=true;
  function show(file,anchor=''){
   const view=views.find(v=>v.dataset.view===file);if(!view)return false;
+  const changed=views.some(v=>!v.hidden&&v!==view);
+  const update=()=>{
   views.forEach(v=>v.hidden=v!==view);
   document.querySelectorAll('#primary-nav a').forEach(a=>{if(a.getAttribute('href')===file)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
   document.querySelectorAll('[data-language]').forEach(a=>{a.dataset.page=file;a.href=(a.dataset.language==='en'?'MDC_LAB_preview_EN.html':'MDC_LAB_anteprima.html')+'#/'+file+(anchor?'#'+anchor:'');});
   document.querySelector('#primary-nav')?.classList.remove('is-open');document.querySelector('[data-menu]')?.setAttribute('aria-expanded','false');
   document.title=view.dataset.title+' — MDC_LAB';window.scrollTo(0,0);
-  if(anchor)view.querySelector('#'+CSS.escape(anchor))?.scrollIntoView();return true;
+  if(anchor)view.querySelector('#'+CSS.escape(anchor))?.scrollIntoView();
+
+  };
+  if(!firstRoute&&changed&&window.MDCPageTransition)window.MDCPageTransition.run(update);else update();
+  firstRoute=false;return true;
  }
  function route(){if(!location.hash.startsWith('#/'))return;const [file,anchor]=location.hash.slice(2).split('#');show(file||'index.html',anchor||'');}
  document.addEventListener('click',e=>{const a=e.target.closest('a');if(!a||a.hasAttribute('data-language'))return;const href=a.getAttribute('href')||'';const [file,anchor]=href.split('#');if(!views.some(v=>v.dataset.view===file))return;e.preventDefault();document.querySelector('#search-dialog')?.close();if(location.hash==='#/'+href)show(file,anchor);else location.hash='/'+href;});
- window.addEventListener('hashchange',route);route();
+ window.addEventListener('hashchange',route);route();firstRoute=false;
 })();`;
  const portable=`\n(() => {const files=${JSON.stringify(embedded)},urls=new Map();for(const a of document.querySelectorAll('a[href]')){const ref=a.getAttribute('href').replace(/^\\.\\.\\//,''),file=files[ref];if(!file)continue;if(!urls.has(ref)){const raw=atob(file.base64),bytes=new Uint8Array(raw.length);for(let i=0;i<raw.length;i++)bytes[i]=raw.charCodeAt(i);urls.set(ref,URL.createObjectURL(new Blob([bytes],{type:'application/pdf'})));}a.href=urls.get(ref);a.dataset.embeddedPdf=file.name;if(a.hasAttribute('download'))a.download=file.name;}})();`;
  const combined=viewer+'\nwindow.MDCEmbeddedScenes='+JSON.stringify(sceneTable)+';\n'+js+extra+portable;

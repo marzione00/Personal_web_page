@@ -1,5 +1,15 @@
 # Changelog MDC_LAB
 
+## v2.8 — Ambiente Matrix esteso, formule e navigazione
+- Cascate micro-numeriche su tutta la larghezza libera di entrambe le colonne laterali, determinate dalla larghezza effettiva dei contenuti.
+- Area centrale protetta: nessun disegno sopra testo, fotografia, modelli, link o album.
+- Catalogo di 120 relazioni in 12 famiglie con condizioni, fonti e titoli IT/EN, modificabile in Markdown; consultabile dal menu delle preferenze.
+- Nuovo sound design originale: impulsi digitali per il movimento, toni FM sui link e sweep di cambio schermata. Audio sempre opt-in e limitato in frequenza/volume.
+- Transizioni progressive tra schermate con View Transitions, barra superiore stabile, alternativa leggera quando l’API non è supportata e nessun ritardo artificiale alla navigazione.
+- Preferenze separate: cascata animata, statica o spenta; formule; transizioni. Rispetto del movimento ridotto e sospensione dietro finestre modali o schede nascoste.
+- Rimossa l’implementazione v2.7 a bande fisse e la regola che alterava il posizionamento della barra superiore.
+- Tutte le fotografie e le risorse scientifiche originali conservate; nessun cambiamento al repository online.
+
 ## v2.7 — Matrix microcode laterale
 - Implementate ai lati del sito cascate numeriche leggere in stile Matrix, con caratteri micro e densità coerente con la variante C scelta.
 - Inserite formule di fisica corrette che emergono in modo sporadico e discreto sul fondo, senza coprire i contenuti.
@@ -7,7 +17,6 @@
 - Rispetto del movimento ridotto e disattivazione automatica su viewport stretti per non appesantire mobile e lettura.
 - Nessuna modifica ai contenuti editoriali, alle fotografie originali, ai PDF o ai modelli 3D già presenti.
 
-# Changelog MDC_LAB
 
 ## v2.6 — Travel journals and photo albums (IT/EN)
 - Aggiunta la sezione Viaggi ed escursioni / Travels & Hikes in navigazione, ricerca, footer e homepage.

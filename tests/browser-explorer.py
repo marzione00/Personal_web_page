@@ -61,14 +61,14 @@ with sync_playwright() as pw:
  (OUT/'layout-checks.json').write_text(json.dumps(checks,ensure_ascii=False,indent=2))
  # Hover: load only after deliberate intent; follow pointer; stop outside.
  page=browser.new_page(viewport={'width':1440,'height':1000});req=[];errs=[];setup(page,req,errs);load(page,'index.html');a=page.locator('[data-geometry-open="markov-network"]');a.hover();page.wait_for_function('()=>Boolean(window.MDCGeometryDebug?.viewer?.model)',timeout=10000)
- check('hover: single active canvas',page.locator('canvas').count()==1)
+ check('hover: single active canvas',page.locator('canvas.geometry-canvas').count()==1)
  check('hover: one renderer request',len([r for r in req if 'viewer-' in r])==1)
  check('hover: one requested model',len([r for r in req if r.endswith('.bin')])==1)
  rect=a.bounding_box();before=page.evaluate('MDCGeometryDebug.viewer.angle.slice()');page.mouse.move(rect['x']+rect['width']*.80,rect['y']+rect['height']*.65);page.wait_for_timeout(500)
  check('hover: orientation follows pointer',page.evaluate('MDCGeometryDebug.viewer.angle')!=before)
- page.mouse.move(10,10);page.wait_for_timeout(120);check('hover: scene detaches when pointer leaves',page.locator('canvas').count()==0 and page.evaluate('MDCGeometryDebug.viewer.raf===0'))
+ page.mouse.move(10,10);page.wait_for_timeout(120);check('hover: scene detaches when pointer leaves',page.locator('canvas.geometry-canvas').count()==0 and page.evaluate('MDCGeometryDebug.viewer.raf===0'))
  # Modal with normal interaction.
- a.click();live(page);check('click: dialog opens',page.locator('#geometry-dialog').is_visible());check('click: single context reused',page.locator('canvas').count()==1)
+ a.click();live(page);check('click: dialog opens',page.locator('#geometry-dialog').is_visible());check('click: single context reused',page.locator('canvas.geometry-canvas').count()==1)
  n=page.evaluate('MDCGeometryDebug.viewer.angle[1]');page.locator('[data-geo-right]').click();check('rotate button changes actual camera',abs(page.evaluate('MDCGeometryDebug.viewer.angle[1]')-n)>.1)
  z=page.evaluate('MDCGeometryDebug.viewer.zoom');page.locator('[data-geo-in]').click();check('zoom button changes projection',page.evaluate('MDCGeometryDebug.viewer.zoom')>z)
  page.locator('[data-geo-reset]').click();check('reset restores zoom',page.evaluate('MDCGeometryDebug.viewer.zoom')==1)
@@ -89,7 +89,7 @@ with sync_playwright() as pw:
   check('bounded cache: '+g['id'],page.evaluate('MDCGeometryDebug.cacheSize')<=5)
   if g['id'] in ['gyroid','bloch-sphere','julia']:page.screenshot(path=str(P/f'visualizzatore-{g["id"]}-desktop.png'))
   page.keyboard.press('Escape');page.wait_for_function('()=>!document.querySelector("#geometry-dialog").open && !document.querySelector("#geometry-stage canvas")')
- check('atlas does not allocate multiple canvas contexts',page.locator('canvas').count()==0);errors.extend(errs);page.close()
+ check('atlas does not allocate multiple canvas contexts',page.locator('canvas.geometry-canvas').count()==0);errors.extend(errs);page.close()
  # Reduced motion blocks hover startup, not user-driven exploration.
  page=browser.new_page(viewport={'width':1440,'height':900},reduced_motion='reduce');req=[];errs=[];setup(page,req,errs);load(page,'index.html');page.locator('[data-geometry-open="gyroid"]').hover();page.wait_for_timeout(500)
  check('reduced motion prevents hover download',not any('.bin' in r or 'viewer-' in r for r in req))
@@ -113,7 +113,7 @@ with sync_playwright() as pw:
  check('no JS: all mathematical descriptions present',page.locator('.atlas-card details').count()==24);page.locator('.atlas-card details summary').first.click();check('no JS: details open natively',page.locator('.atlas-card details').first.get_attribute('open') is not None);ctx.close()
  # Offline monofile contains exact image and PDF bytes and an embedded scene fallback.
  page=browser.new_page(viewport={'width':1440,'height':1000},reduced_motion='reduce');offline=(R/'MDC_LAB_anteprima.html').read_text();page.set_content(offline,wait_until='load');page.locator('[data-view="index.html"] [data-geometry-open="gyroid"]').click();live(page)
- check('offline preview has working 3D without a server',page.locator('canvas').count()==1 and page.locator('#geometry-dialog [role=math]').count()==1);page.keyboard.press('Escape');page.evaluate('location.hash="/geometrie.html"');page.wait_for_timeout(100);check('offline atlas navigation',page.locator('[data-view="geometrie.html"]').is_visible());page.close()
+ check('offline preview has working 3D without a server',page.locator('canvas.geometry-canvas').count()==1 and page.locator('#geometry-dialog [role=math]').count()==1);page.keyboard.press('Escape');page.evaluate('location.hash="/geometrie.html"');page.wait_for_timeout(100);check('offline atlas navigation',page.locator('[data-view="geometrie.html"]').is_visible());page.close()
  browser.close()
 check('no runtime errors in normal paths',not errors,errors[:8])
 report={'version':'2.3','method':'Chromium, SwiftShader WebGL, virtual subdirectory origin and intercepted package resources. Test-only CSP origin/base adapted. Production CSP hashes validated separately; not a deployment or mobile-device GPU certification.','passed':sum(c['pass'] for c in checks),'failed':sum(not c['pass'] for c in checks),'checks':checks}

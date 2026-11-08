@@ -12,3 +12,5 @@ node_modules/
 *.pyc
 __pycache__/
 source-materials/private/
+
+MDC_LAB_preview_EN.html

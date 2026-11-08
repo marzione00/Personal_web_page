@@ -81,3 +81,12 @@ Vedere `docs/BILINGUE_IT_EN.md` per tutti i percorsi e per le voci del curriculu
 - Guida con esempi, caricamento da GitHub, pubblicazione delle bozze e privacy EXIF: `docs/VIAGGI_E_ALBUM.md`.
 
 Il sito genera automaticamente l'archivio e la galleria quando `draft: false` e le immagini sono presenti.
+
+
+## v2.8 — Formule dell’ambiente Matrix
+
+Modifica `content/markdown/formule-ambiente.md`: è un file unico per entrambe le lingue. Per ogni relazione conserva il titolo tecnico `## id` e le etichette `Famiglia:`, `Titolo:`, `Title:`, `Formula:`, `Condizioni:`, `Conditions:` e `Fonte:`. Titolo/Condizioni sono italiani, Title/Conditions inglesi; Formula e Fonte sono condivisi.
+
+Puoi cambiare i testi senza aprire JavaScript. Le famiglie ammesse sono indicate in `docs/AMBIENTE_MATRIX_v2.8.md`. Non usare equazioni prive di condizioni quando l’identità vale soltanto in un regime particolare. Il catalogo conserva i dettagli; lo sfondo mostra solo formule complete che trovano spazio nel margine.
+
+Le preferenze di animazione, formule e transizioni si controllano dall’icona dei cursori nel sito e non modificano i contenuti del repository. I parametri grafici e il sintetizzatore sono codice tecnico separato dai testi editoriali.

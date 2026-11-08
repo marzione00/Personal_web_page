@@ -1,6 +1,6 @@
 {
   "name": "mdc-lab",
-  "version": "2.7.0",
+  "version": "2.8.0",
   "private": true,
   "type": "module",
   "description": "Sito accademico statico, senza dipendenze npm",
@@ -19,6 +19,8 @@
     "preview:editorial": "node scripts/build.mjs --preview --drafts",
     "verify:photos": "node scripts/verify-photos.mjs",
     "test:browser": "python3 tests/browser-explorer.py",
-    "test:browser:travels": "python3 tests/browser-travels.py"
+    "test:browser:travels": "python3 tests/browser-travels.py",
+    "test:browser:ambient": "python3 tests/browser-ambient.py",
+    "test:browser:ambient:webgl": "python3 tests/browser-ambient-webgl.py"
   }
 }

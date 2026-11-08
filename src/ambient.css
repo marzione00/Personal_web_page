@@ -1,0 +1,34 @@
+/* Numerical atmosphere: the JS paints only the actual free side gutters. */
+.matrix-ambient{position:fixed;inset:0;width:100%;height:100%;z-index:3;pointer-events:none;user-select:none;contain:strict}
+.matrix-ambient[hidden]{display:none!important}
+.effects-dialog{width:min(560px,calc(100vw - 28px));padding:27px}
+.effects-dialog header,.formula-catalog-dialog header{position:sticky;top:-28px;background:var(--bg);padding:8px 0 16px;z-index:1}
+.effects-fields{display:grid;gap:23px;margin-top:20px}.effects-fields label{font-size:15px;color:var(--ink)}
+.effects-fields select,.formula-filter select{display:block;width:100%;min-height:44px;margin-top:10px;background:var(--panel);border:1px solid var(--line);color:var(--ink);font:15px var(--sans);padding:9px}
+.effects-check{display:flex;gap:13px;align-items:center;min-height:44px}.effects-check input{accent-color:var(--green);width:20px;height:20px}
+.formula-catalog-dialog{width:min(840px,calc(100vw - 28px));padding:27px}
+.formula-filter{display:block;margin:24px 0}.formula-catalog{display:grid;gap:0}.formula-catalog article{border-top:1px solid var(--line);padding:26px 0}
+.formula-catalog h3{font:400 25px/1.4 var(--serif);margin:8px 0 16px}.formula-catalog p{font-size:14px;line-height:1.8}.formula-catalog .catalog-math{font:16px/1.9 var(--mono);color:var(--green);white-space:normal;overflow-wrap:anywhere;background:var(--panel);padding:16px;margin-bottom:14px}
+.formula-catalog a{display:inline-block;margin-top:13px;font-size:13px;text-decoration:underline;text-underline-offset:4px}
+.effects-toggle[aria-expanded=true]{border-color:var(--green)}
+/* Static multipage navigation stays native. Supported browsers slide only the content pane. */
+@view-transition{navigation:auto}
+#main{view-transition-name:mdc-content}
+.header{view-transition-name:mdc-header}
+::view-transition-old(root),::view-transition-new(root){animation:none;mix-blend-mode:normal}
+::view-transition-group(mdc-header){animation:none}
+::view-transition-old(mdc-header){animation:none;opacity:0}
+::view-transition-new(mdc-header){animation:none;opacity:1}
+::view-transition-old(mdc-content){animation:mdc-screen-out .30s cubic-bezier(.4,0,.7,1) both;mix-blend-mode:normal}
+::view-transition-new(mdc-content){animation:mdc-screen-in .42s cubic-bezier(.18,.72,.22,1) both;mix-blend-mode:normal}
+@keyframes mdc-screen-out{from{opacity:1;transform:translateX(0)}to{opacity:0;transform:translateX(-12%)}}
+@keyframes mdc-screen-in{from{opacity:.12;transform:translateX(14%)}to{opacity:1;transform:translateX(0)}}
+.screen-scan{position:fixed;z-index:19;inset:0;pointer-events:none;opacity:0;background:linear-gradient(110deg,transparent 30%,rgba(175,231,198,.045) 49.8%,rgba(175,231,198,.16) 50%,transparent 50.2%);transform:translateX(-110%)}
+.screen-arriving .screen-scan{animation:mdc-scan .48s ease-out both}
+@keyframes mdc-scan{0%{opacity:0;transform:translateX(-70%)}30%{opacity:.7}100%{opacity:0;transform:translateX(70%)}}
+.reading-mode .screen-scan{background:linear-gradient(110deg,transparent 49%,rgba(23,107,66,.10) 50%,transparent 51%)}
+html[data-fx-motion=off]::view-transition-old(mdc-content),html[data-fx-motion=off]::view-transition-new(mdc-content){animation:none}
+@media(prefers-reduced-motion:reduce){@view-transition{navigation:none}::view-transition-old(*),::view-transition-new(*),::view-transition-group(*){animation:none!important}.screen-scan{display:none!important}}
+@media(max-width:1130px) and (min-width:821px){.nav{gap:13px}.header-inner{gap:13px}.header .brand-desc{display:none}.header-tools{gap:5px}.header-tools .icon-button{width:40px}}
+@media(max-width:460px){.header-inner{flex-wrap:wrap;row-gap:7px;padding-top:9px;padding-bottom:9px}.header-tools{width:100%;justify-content:flex-end;margin-left:0;gap:4px}.header-tools .icon-button{width:40px;min-width:40px;height:44px}.header-tools .language-switch{font-size:11px}.formula-catalog .catalog-math{font-size:13px}.effects-dialog,.formula-catalog-dialog{padding:20px}}
+@media print{.matrix-ambient,.screen-scan,.effects-toggle,.effects-dialog,.formula-catalog-dialog{display:none!important}}

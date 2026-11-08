@@ -155,21 +155,3 @@ a[href]:not(.button):not(.icon-button):not(.brand):not(.portal-card):not(.geomet
 @media(max-width:360px){.travel-gallery{grid-template-columns:1fr}.travel-card-image{max-height:310px}}
 @media(prefers-reduced-motion:reduce){.travel-card,.travel-gallery a{transition:none}}
 @media print{.home-travel-inner>.travel-contours,.travel-empty>.travel-contours,.travel-lightbox{display:none}.travel-list,.travel-gallery{grid-template-columns:repeat(2,1fr)}.travel-card{break-inside:avoid}.travel-diary-layout{grid-template-columns:1fr}.travel-diary-cover img{width:70%}}
-
-/* v2.7 — lateral matrix microcode rain, refined from variant C and kept deliberately subtle. */
-:root{--matrix-side-width:clamp(92px,9.2vw,136px)}
-body{isolation:isolate}
-.header,.header-note,main,.footer,.skip,dialog{position:relative;z-index:1}
-.matrix-rain-shell{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
-.matrix-rain-side{position:absolute;top:0;bottom:0;width:var(--matrix-side-width);opacity:.88}
-.matrix-rain-side.left{left:0;background:linear-gradient(90deg,rgba(7,14,11,.62),rgba(7,14,11,.14) 74%,transparent)}
-.matrix-rain-side.right{right:0;background:linear-gradient(270deg,rgba(7,14,11,.62),rgba(7,14,11,.14) 74%,transparent)}
-.matrix-rain-side{mask-image:linear-gradient(180deg,transparent 0,rgba(0,0,0,.78) 7%,#000 14%,#000 86%,rgba(0,0,0,.78) 93%,transparent 100%)}
-.matrix-rain-side canvas{display:block;width:100%;height:100%;filter:drop-shadow(0 0 8px rgba(149,229,183,.06))}
-.reading-mode .matrix-rain-side{opacity:.44}
-.reading-mode .matrix-rain-side.left{background:linear-gradient(90deg,rgba(224,233,221,.78),rgba(224,233,221,.28) 74%,transparent)}
-.reading-mode .matrix-rain-side.right{background:linear-gradient(270deg,rgba(224,233,221,.78),rgba(224,233,221,.28) 74%,transparent)}
-@media(max-width:1240px){:root{--matrix-side-width:clamp(84px,8vw,110px)}}
-@media(max-width:980px){.matrix-rain-shell{display:none}}
-@media(prefers-reduced-motion:reduce){.matrix-rain-side{opacity:.32}}
-@media print{.matrix-rain-shell{display:none!important}}

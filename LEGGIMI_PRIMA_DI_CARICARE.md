@@ -1,19 +1,21 @@
-# Caricamento MDC_LAB 2.6 — IT / EN, audio e viaggi
+# Caricare MDC_LAB v2.8
 
-1. Estrarre lo ZIP sorgenti e caricarne **il contenuto alla radice** di `marzione00/Personal_web_page`, sostituendo i file della versione precedente. Non caricare una cartella contenitrice o il solo ZIP.
-2. Includere `.github/`, `.pages.yml`, `src/`, `scripts/`, `content/`, `public/`, `tests/` e `package.json`. Questa è una revisione di codice e contenuti: non basta copiare la sola cartella inglese.
-3. GitHub Pages resta su **GitHub Actions**; conservare `SITE_URL=https://marzione00.github.io/Personal_web_page/` ed `ENABLE_DEPLOY=true`.
-4. Il commit su `main` avvia compilazione e pubblicazione. Il workflow genera le pagine italiane nella radice di `dist/` e quelle inglesi in `dist/en/`, condividendo immagini, PDF e scene.
-5. Dopo il successo del deploy verificare IT/EN, tema, pulsante audio e pagina **Viaggi / Travels**, la pagina Contatti con `marzio.decorato@outlook.it`, i PDF e una finestra 3D. Il suono è disattivato finché il visitatore non lo abilita con un clic. La lingua si cambia senza tornare alla homepage.
+1. Conserva una copia del repository attuale. Se hai modificato testi o aggiunto album dopo la v2.7, confronta quei file con il pacchetto prima di sostituirli: questa copia non legge automaticamente le modifiche online.
+2. Estrai `MDC_LAB_v2.8_GitHub_COMPLETO.zip`. Il suo contenuto è già organizzato per la **radice** di `marzione00/Personal_web_page`, senza cartella contenitrice. Non caricare lo ZIP come unico file.
+3. Includi anche `.github/`, `.pages.yml`, `src/`, `scripts/`, `content/`, `public/`, `tests/` e `package.json`. Per questa revisione serve l’aggiornamento completo del codice, non il solo Markdown delle formule.
+4. Mantieni GitHub Pages su GitHub Actions e le variabili `SITE_URL=https://marzione00.github.io/Personal_web_page/` e `ENABLE_DEPLOY=true`.
+5. Dopo il commit su `main`, controlla l’esito di Actions. Verifica IT/EN, tema, preferenze, audio, pagina Contatti, PDF, Viaggi e un modello 3D.
 
-## Successivi aggiornamenti
+## Controlli visivi dopo il deploy
 
-Per cambiare soltanto un testo, modificare il Markdown della lingua desiderata e caricarlo nello stesso percorso. Non occorre più ricaricare tutto il progetto. Aggiornare entrambe le versioni quando la frase deve cambiare in tutte e due: il sistema non inventa automaticamente la traduzione.
+Su uno schermo ampio le cascate devono occupare entrambi i margini liberi; il centro e la fotografia devono restare intatti. Con poco spazio laterale o su telefono le cascate si nascondono. L’icona dei cursori permette di fermare l’effetto o spegnerlo.
 
-Guida completa: `docs/BILINGUE_IT_EN.md`.
+L’audio parte solo dopo un’azione esplicita sul pulsante. Il browser può richiedere una nuova interazione dopo una navigazione: non tentare di aggirare le sue restrizioni. Le transizioni fra documenti dipendono dal supporto del browser; rimane sempre disponibile la normale navigazione.
 
-Non sono stati effettuati accessi o modifiche al repository remoto. La consegna è verificata localmente; deploy e CMS autenticato vanno controllati nel proprio account.
+## Testi successivi
 
-## Nuova sezione Viaggi (prima configurazione)
+Per una frase basta aggiornare il Markdown corretto nello stesso percorso. Italiano e inglese sono traduzioni editoriali indipendenti. Il catalogo delle formule è condiviso e bilingue: `content/markdown/formule-ambiente.md`.
 
-La cartella `content/markdown/viaggi/` è volutamente priva di racconti pubblicati. Dopo il deploy verifica `viaggi.html` e `en/viaggi.html`. Per creare il primo album copia `examples/NUOVO_VIAGGIO_ESEMPIO.md.txt` e carica le fotografie originali in `public/media/images/viaggi/<slug>/`, seguendo `docs/VIAGGI_E_ALBUM.md`. Non devi modificare HTML o JavaScript. Ricorda che le bozze caricate in un repository pubblico sono comunque accessibili nei sorgenti.
+Le bozze in un repository pubblico sono leggibili nei sorgenti. Controlla anche eventuali dati GPS nelle nuove fotografie prima del caricamento. Le cinque fotografie approvate non vengono modificate da questa release.
+
+Non sono stati effettuati cambiamenti al repository GitHub online. Leggere `docs/COLLAUDO_v2.8.md` per distinguere controlli locali e verifica sul sito pubblicato.

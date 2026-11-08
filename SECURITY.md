@@ -35,3 +35,10 @@ Le fonti tecniche e i riferimenti operativi delle precedenti versioni sono conse
 ## Interazione 3D
 
 WebGL è facoltativo e non richiede CDN, WebSocket o invii a server esterni. Un unico canvas, una cache di cinque modelli, limiti di dimensione e arresto delle animazioni riducono il consumo. Queste precauzioni non equivalgono a una certificazione del driver grafico o a un penetration test. La CSP della copia offline include esclusivamente le risorse incorporate autorizzate dai rispettivi hash e le immagini data URI.
+
+
+## Ambiente v2.8
+
+Cascate, formule e suoni sono generati in locale. La build valida le fonti del catalogo come URL HTTPS e tratta i testi come contenuto, mai come codice. Il catalogo inline è serializzato proteggendo i delimitatori HTML e rientra nell’hash CSP. La canvas non intercetta input. Le preferenze sono locali e opzionali; nessun tracking aggiuntivo.
+
+Le nuove transizioni non cambiano destinazioni, autorizzazioni o policy di accesso. L’eventuale indisponibilità dell’API lascia funzionante la normale navigazione. Il collaudo resta locale e non sostituisce un audit dell’hosting.

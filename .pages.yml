@@ -1,4 +1,4 @@
-# MDC_LAB v2.4 — tutti i testi visibili qui sono in Markdown.
+# MDC_LAB v2.8 — tutti i testi visibili qui sono in Markdown.
 # Questo pannello usa l'editor di file grezzi: conservare i titoli ## delle sezioni.
 media:
   - name: docs
@@ -20,6 +20,11 @@ media:
     rename: safe
     extensions: [png, jpg, jpeg, webp]
 content:
+  - name: formule-ambiente
+    label: Formule scientifiche — catalogo bilingue
+    type: file
+    path: content/markdown/formule-ambiente.md
+    format: raw
   - name: viaggi-intro
     label: Viaggi ed escursioni — introduzione
     type: file
