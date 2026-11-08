@@ -23,7 +23,7 @@ test('outdated didactics notice is gone and PDF modules remain',()=>{
  assert.equal((html['corso-quantum-post-quantum-computing-2026-2027.html'].match(/aria-label="Scarica PDF:/g)||[]).length,7);
 });
 test('CV introduction is separate from the long biography',()=>{
- assert.match(html['cv.html'],/Fisica computazionale · Intelligenza artificiale spiegabile/);
+ assert.match(html['cv.html'],/Cybersecurity · Explainable AI · Quantum Computing · Finanza quantitativa/);
  assert.ok(!html['cv.html'].includes('<p>'+content.profile.intro+'</p>'));
  assert.match(content.profile.personalInterests,/deidentificazione/);
 });
@@ -33,7 +33,7 @@ test('selected editorial boilerplate is absent from public fields',()=>{
  assert.doesNotMatch(fields,/in questa prospettiva|a questi temi si aggiungono|costituisce un interesse|si accompagna|non solo|non soltanto|nel panorama|in questo contesto|trova spazio/i);
 });
 test('no stale presentation copy and no old release number in current data',()=>{
- assert.equal(content.site.version,'1.5.2');
+ assert.equal(content.site.version,'2.1');
  assert.doesNotMatch(html['didattica.html'],/I titoli delle schede e dei file sono stati uniformati/);
  assert.doesNotMatch(html['ricerca.html'],/A questi ambiti si accompagna/);
 });

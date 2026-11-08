@@ -5,8 +5,94 @@ import {safeId,safeEmail,safeExternal,safeMedia} from './safety.mjs';
 function readJson(file){const value=JSON.parse(fs.readFileSync(file,'utf8'));return value;}
 function requireText(o,key,max=500){if(typeof o[key]!=='string'||!o[key].trim()||o[key].length>max)throw new Error(`Campo ${key} mancante o non valido`);}
 function collection(root,name){const dir=path.join(root,'content',name);return fs.readdirSync(dir).filter(f=>f.endsWith('.json')).sort().map(f=>{const x=readJson(path.join(dir,f));safeId(x.id);if(f!==x.id+'.json')throw new Error(`Il file ${f} deve corrispondere all’ID ${x.id}`);requireText(x,'title');return x;});}
+/** Narrative content is read from Markdown. JSON remains structured metadata only.
+ * All Markdown text is rendered escaped by the existing safe renderer. */
+const EDITABLE=Object.freeze({
+ profile:['intro','biography','personalInterests','headline'],
+ research:['title','subtitle','introduction','connectionsTitle','connections'],
+ areas:['title','shortTitle','scope','summary','question','overview','approach','methods','activities'],
+ courses:['title','summary'],
+ lectures:['title','summary','topics','body'],
+ publications:['title','authors','where','plainTitle','plainSummary','explanation','bibliographicNote'],
+ posts:['title','subtitle','excerpt','category']
+});
+function sectionsFromMarkdown(filename){
+ if(!fs.existsSync(filename))return null;
+ const source=fs.readFileSync(filename,'utf8').replace(/\r\n/g,'\n');
+ const found={};let current=null,buf=[];
+ const save=()=>{if(current!==null){if(Object.hasOwn(found,current))throw new Error('Sezione Markdown duplicata: '+current+' in '+filename);found[current]=buf.join('\n').trim();}};
+ for(const line of source.split('\n')){
+  const match=line.match(/^##\s+([A-Za-z][A-Za-z0-9_-]*)\s*$/);
+  if(match){save();current=match[1];buf=[];}
+  else if(current!==null)buf.push(line);
+ }
+ save();return found;
+}
+function applyMarkdownSections(root,area,id,object,fields){
+ const filename=path.join(root,'content/markdown',area,id+'.md');
+ const sections=sectionsFromMarkdown(filename);if(!sections)return;
+ for(const [key,val] of Object.entries(sections)){
+  if(!fields.includes(key))throw new Error('Sezione Markdown inattesa: '+key+' in '+filename);
+  if(!val){if(['methods','activities','topics'].includes(key))object[key]=[];continue;}
+  if(['methods','activities','topics'].includes(key)){
+   object[key]=val.split('\n').filter(x=>x.trim()).map(x=>x.replace(/^[-*]\s+/,'').trim());
+  } else object[key]=val;
+ }
+}
+function plainMarkdownFile(root,area,id){
+ const filename=path.join(root,'content/markdown',area,id+'.md');
+ return fs.existsSync(filename)?fs.readFileSync(filename,'utf8').replace(/\r\n/g,'\n').trim():null;
+}
+function loadEpigraphs(root){
+ const file=path.join(root,'content/markdown/epigrafi.md');
+ const blocks=sectionsFromMarkdown(file);
+ if(!blocks)throw new Error('Manca content/markdown/epigrafi.md');
+ const authors={platone:'Platone',wheeler:'John Archibald Wheeler',engel:'C. E. Engel'};
+ return ['platone','wheeler','engel'].map(id=>{
+  const block=blocks[id];if(!block)throw new Error('Manca epigrafe '+id);
+  const q=block.split('\n').filter(s=>/^>\s?/.test(s)).map(s=>s.replace(/^>\s?/,''));
+  const source=block.split('\n').find(s=>/^Fonte:\s*/.test(s));
+  if(!q.length||!source)throw new Error('Epigrafe priva di testo o fonte: '+id);
+  return{id,author:authors[id],quote:q.join(' ').trim(),source:source.replace(/^Fonte:\s*/, '').trim()};
+ });
+}
+function parseArticleFrontmatter(file){
+ const full=fs.readFileSync(file,'utf8').replace(/\r\n/g,'\n');
+ const match=full.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
+ if(!match)return null;
+ const meta={};
+ for(const line of match[1].split('\n')){
+  if(!line.trim()||line.trim().startsWith('#'))continue;
+  const m=line.match(/^([A-Za-z][A-Za-z0-9_-]*):\s*(.*)$/);if(!m)throw new Error('Metadato Markdown articolo non valido: '+file);
+  if(!['id','title','date','category','tags','excerpt','draft','subtitle','pdf','sourceStatus'].includes(m[1]))throw new Error('Metadato articolo sconosciuto: '+m[1]);
+  const value=m[2].replace(/^(["'])(.*)\1$/,'$2');
+  meta[m[1]]=value;
+ }
+ const id=path.basename(file,'.md');
+ if(meta.id&&meta.id!==id)throw new Error('ID articolo diverso dal nome Markdown: '+file);
+ safeId(id);
+ for(const x of ['title','date','category','excerpt'])if(!meta[x])throw new Error('Metadato mancante '+x+' per '+id);
+ if(!['true','false'].includes(meta.draft))throw new Error('Per il nuovo articolo specificare draft: true oppure false');
+ return{id,title:meta.title,date:meta.date,category:meta.category,excerpt:meta.excerpt,draft:meta.draft==='true',demo:false,tags:meta.tags?meta.tags.split(',').map(x=>x.trim()).filter(Boolean):[],sourceStatus:meta.sourceStatus||(meta.draft==='false'?'approved':'needs-review'),body:match[2].trim(),subtitle:meta.subtitle||'',...(meta.pdf?{pdf:meta.pdf}:{})};
+}
+function additionalMarkdownPosts(root,existing){
+ const dir=path.join(root,'content/markdown/posts');if(!fs.existsSync(dir))return[];
+ const ids=new Set(existing.map(x=>x.id));
+ return fs.readdirSync(dir).filter(f=>f.endsWith('.md')).filter(f=>!ids.has(path.basename(f,'.md'))).sort().map(f=>{
+  const item=parseArticleFrontmatter(path.join(dir,f));if(!item)throw new Error('Nuovo articolo senza intestazione ---: '+f);
+  return item;
+ });
+}
+
 export function loadContent(root,{preview=false}={}){
  const profile=readJson(path.join(root,'content/profile.json')),site=readJson(path.join(root,'content/site.json')),research=readJson(path.join(root,'content/research.json'));
+ applyMarkdownSections(root,'.','profilo',profile,EDITABLE.profile);
+ applyMarkdownSections(root,'.','ricerca',research,EDITABLE.research);
+ const home=sectionsFromMarkdown(path.join(root,'content/markdown/homepage.md'));
+ if(!home||['soprattitolo','settori','ricercaAttuale','formazione','praticaCorporea','titoloPercorso','etichettaEpigrafi','titoloEpigrafi'].some(k=>!home[k]))throw new Error('Homepage Markdown incompleta');
+ for(const key of Object.keys(home))if(!['soprattitolo','settori','ricercaAttuale','formazione','praticaCorporea','titoloPercorso','etichettaEpigrafi','titoloEpigrafi'].includes(key))throw new Error('Sezione homepage Markdown non prevista: '+key);
+ const epigraphs=loadEpigraphs(root);
+ for(const area of research.areas)applyMarkdownSections(root,'aree-ricerca',area.id,area,EDITABLE.areas);
  if(typeof site.published!=='boolean')throw new Error('Stato pubblicazione non valido');
  for(const key of ['education','experience','teaching','theses','talks','interests','skills','programming','languages'])if(!Array.isArray(profile[key]))throw new Error('Elenco profilo non valido: '+key);
  requireText(profile,'name');requireText(profile,'intro',5000);requireText(profile,'biography',12000);requireText(profile,'personalInterests',6000);safeEmail(profile.email);
@@ -23,6 +109,14 @@ export function loadContent(root,{preview=false}={}){
 
  for(const key of ['github','linkedin','orcid','unimi','cattolica','air'])if(!safeExternal(profile[key]))throw new Error('Link profilo non valido: '+key);
  const allCourses=collection(root,'courses'),allPosts=collection(root,'posts'),allLectures=collection(root,'lectures'),publications=collection(root,'publications');
+ for(const x of allCourses)applyMarkdownSections(root,'courses',x.id,x,EDITABLE.courses);
+ for(const x of allLectures)applyMarkdownSections(root,'lectures',x.id,x,EDITABLE.lectures);
+ for(const x of publications)applyMarkdownSections(root,'publications',x.id,x,EDITABLE.publications);
+ for(const x of allPosts){
+   applyMarkdownSections(root,'post-details',x.id,x,EDITABLE.posts);
+   const body=plainMarkdownFile(root,'posts',x.id);if(body!==null)x.body=body;
+ }
+ allPosts.push(...additionalMarkdownPosts(root,allPosts));
  for(const c of allCourses){requireText(c,'summary',5000);requireText(c,'university');requireText(c,'universityShort');if(!/^20\d{2}\/20\d{2}$/.test(c.academicYear))throw new Error('Anno accademico non valido');if(!safeExternal(c.source))throw new Error('Fonte corso non HTTPS');if(typeof c.verified!=='boolean'||typeof c.draft!=='boolean')throw new Error('Stato corso non valido');}
  for(const p of allPosts){if(typeof p.draft!=='boolean'||typeof p.demo!=='boolean')throw new Error('Stato articolo non valido');if(p.sourceStatus!==undefined && !['awaiting-file','needs-review','approved'].includes(p.sourceStatus))throw new Error('Stato importazione articolo non valido');if(!p.draft && p.sourceStatus && p.sourceStatus!=='approved')throw new Error('Articolo non approvato per la pubblicazione: '+p.id);if(!p.draft && p.body.includes('__MDC_IN_ATTESA_SOURCE__'))throw new Error('Articolo ancora privo del testo integrale: '+p.id);requireText(p,'body',200000);if(!/^\d{4}-\d{2}-\d{2}$/.test(p.date)||(isNaN(Date.parse(p.date))||new Date(p.date).toISOString().slice(0,10)!==p.date))throw new Error('Data articolo non valida');if(p.cover&&(!safeMedia(p.cover)||!/^\/?media\/images\/.*\.(png|jpe?g|webp)$/i.test(p.cover)))throw new Error('Copertina non valida');if(p.cover)requireText(p,'coverAlt',500);if(p.pdf&&(!safeMedia(p.pdf)||!p.pdf.toLowerCase().endsWith('.pdf')))throw new Error('PDF articolo non valido');if(!Array.isArray(p.tags))throw new Error('Tag articolo non validi');requireText(p,'excerpt',5000);requireText(p,'category',300);}
  for(const l of allLectures){if(typeof l.draft!=='boolean')throw new Error('Stato lezione non valido');if(!allCourses.some(c=>c.id===l.course))throw new Error('Corso inesistente: '+l.course);if(!Number.isInteger(l.order)||l.order<1)throw new Error('Ordine lezione non valido');if(!Array.isArray(l.files)||l.files.length>12||!l.files.every(f=>safeMedia(f)&&/^\/?media\/docs\//.test(f)))throw new Error('Allegati non validi');
@@ -59,5 +153,5 @@ export function loadContent(root,{preview=false}={}){
  if(!/^[a-f0-9]{64}$/.test(profile.homepagePhoto.sha256||''))throw new Error('Impronta foto originale assente');
  const photoBytes=fs.readFileSync(path.join(root,'public',safeMedia(profile.homepagePhoto.file)));
  if(createHash('sha256').update(photoBytes).digest('hex')!==profile.homepagePhoto.sha256)throw new Error('La fotografia non corrisponde al file originale approvato.');
- return{profile,site,research,courses,posts,lectures,publications:publications.sort((a,b)=>b.year.localeCompare(a.year)),preview};
+ return{profile,site,research,home,epigraphs,courses,posts,lectures,publications:publications.sort((a,b)=>b.year.localeCompare(a.year)),preview};
 }

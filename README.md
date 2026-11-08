@@ -1,60 +1,57 @@
-# MDC_LAB · 1.5.2
+# MDC_LAB v2.1 — Sito accademico e blog
 
-Sito personale di Marzio De Corato. Questa cartella è la base unica del progetto; non mescolare file di versioni precedenti.
+Sito personale di Marzio De Corato, basato su Node.js 22 e GitHub Pages, senza dipendenze npm per la generazione statica.
 
-## Cosa contiene
+**Punto di accesso per aggiornare i testi:** [`COME_MODIFICARE_I_TESTI.md`](COME_MODIFICARE_I_TESTI.md). Le modifiche a homepage, epigrafi, biografia, ricerca, articoli e descrizioni di lezioni si fanno esclusivamente in `content/markdown/`.
 
-Sorgenti del generatore statico Node.js, contenuti JSON, CSS, JavaScript, configurazione Pages CMS, workflow GitHub Pages, sette moduli didattici originali, curriculum PDF, cinque fotografie originali, sette geometrie, test e documentazione. La build ordinaria non richiede librerie npm, CDN o font remoti.
+## Novità v2.1
 
-La fotografia della homepage è il file originale approvato: nessun ritocco, ritaglio, filtro o ricodifica. I controlli SHA-256 impediscono una sostituzione accidentale. Anche le quattro fotografie della biografia sono originali. Non usare le immagini generate nelle vecchie anteprime.
+- Homepage aggiornata con i quattro ambiti scientifici correnti, il background in fisica computazionale e il rapporto fra geometria, yoga e arrampicata.
+- Tre epigrafi: Platone, Wheeler, Engel. Tutti i testi delle citazioni sono in `content/markdown/epigrafi.md`.
+- 43 file Markdown usati in build: prosa e spiegazioni scientifiche si aggiornano senza aprire file JS o JSON.
+- Nuovi post creati con un file Markdown con intestazione semplice (esempio in `examples/`).
+- Fotografie originali protette da verifica SHA-256; nessuna alterazione delle immagini, PDF didattici o geometrie.
 
-## Avvio locale
-
-Richiede Node.js 22 o superiore. Dalla radice del progetto:
+## Compilazione locale
 
 ```sh
+node --version # >= 22
 npm test
 npm run build
 npm run check
 npm run verify:photos
-npm run serve
-```
-
-Il server di sviluppo indica nel terminale il proprio indirizzo locale. Per cambiare cartella di destinazione consultare `scripts/serve.mjs`.
-
-## Anteprima senza installazioni
-
-Nel pacchetto completo aprire `MDC_LAB_anteprima.html`: contiene pagine, immagini e PDF incorporati. Funziona offline con JavaScript abilitato. Non caricare questo file al posto del sito multipagina.
-
-Per rigenerarlo:
-
-```sh
 npm run preview:build
 ```
 
-La normale anteprima rispecchia i contenuti pubblicabili. `npm run preview:editorial` comprende anche le bozze e serve solo alla revisione privata.
+Per una build di pubblicazione con URL completo:
 
-## Pubblicazione
+```sh
+SITE_URL=https://marzione00.github.io/Personal_web_page/ npm run build:release
+```
 
-Leggere `docs/PUBBLICAZIONE.md`. Il workflow usa GitHub Actions e pubblica esclusivamente `dist/`. Nessun account è già stato collegato o pubblicato.
+L'output multipagina è nella cartella `dist/`. L'anteprima offline è `MDC_LAB_anteprima.html` dopo `npm run preview:build`.
 
-Impostare le variabili repository `SITE_URL` (indirizzo HTTPS definitivo) ed `ENABLE_DEPLOY=true`. Il deploy si interrompe quando manca l’URL reale; non sono inseriti URL fittizi nei sorgenti. Una build locale senza URL è corretta per il collaudo, ma resta esclusa dall’indicizzazione.
+## GitHub Pages
 
-## Aggiornare i contenuti
+Il workflow è in `.github/workflows/validate-deploy.yml`. Imposta nell'interfaccia del repository:
 
-Modificare i file in `content/`, oppure utilizzare Pages CMS dopo aver autorizzato il repository. Gli aggiornamenti del testo non richiedono di toccare il layout. `docs/BIOGRAFIA.md` e `docs/RICERCA.md` sono copie di consultazione generate da `npm run sync:editorial`, non fonti separate.
+- `Settings → Pages → Build and deployment → GitHub Actions`;
+- `Settings → Secrets and variables → Actions → Variables`: `SITE_URL=https://marzione00.github.io/Personal_web_page/` e `ENABLE_DEPLOY=true`.
 
-Le grafiche matematiche sono in `public/geometry/`; il generatore opzionale e le sue dipendenze Python sono in `tools/`. Rigenerarle non è necessario per pubblicare il sito. Le foto non passano mai dal generatore grafico.
+Carica **i contenuti estratti dello ZIP** nella radice del repository `marzione00/Personal_web_page`, includendo la cartella nascosta `.github`. Il workflow di pubblicazione produce e pubblica `dist/`.
 
-## Per riprendere il lavoro
+## CMS
 
-Consegnare questa cartella, `docs/RIPRESA_E_MANUTENZIONE.md` e il changelog. I test correnti sono in `tests/`. Le anteprime derivano dalla build del sito, non da mockup generativi.
+`.pages.yml` espone direttamente i Markdown con editor raw; evita le vecchie schede JSON, che servono ancora per metadati, file PDF, anni accademici, DOI, collegamenti e identificativi. Il CMS richiede connessione a GitHub e collaudo autenticato.
 
-## Stato dei contenuti
+## Documentazione
 
-L’articolo “Colpire i nervi del sistema” è approvato per la pubblicazione: `content/posts/colpire-i-nervi-del-sistema.json` contiene il testo e `public/media/docs/colpire-i-nervi-del-sistema.pdf` conserva la versione PDF. I sette diagrammi originali sono in `public/media/images/`. Il CV PDF conserva la versione precedente agli aggiornamenti delle docenze, segnalata sul sito. Un riferimento scientifico rimane privo di abstract consultabile, come indicato nella sua scheda. Gli altri testi accademici sono stati mantenuti.
+- `docs/REVISIONE_HOME_v2.1.md`: controllo editoriale, quote e stratificazioni.
+- `COME_MODIFICARE_I_TESTI.md`: guida per aggiornare i file da GitHub senza programmare.
+- `docs/RIPRESA_E_MANUTENZIONE.md`: storico e riferimenti del progetto.
+- `SECURITY.md`: limiti dei controlli di sicurezza.
+- `CHANGELOG.md`: modifiche di versione.
 
+## Precisazioni
 
-## Primo articolo pubblicato
-
-`content/posts/colpire-i-nervi-del-sistema.json` contiene il testo integrale del saggio, 19 voci bibliografiche e 7 diagrammi originali di Overleaf. Il PDF è in `public/media/docs/colpire-i-nervi-del-sistema.pdf`. Vedere `docs/ARTICOLO_PRIMO_BLOG.md` per la provenienza.
+Il curriculum PDF esistente può essere antecedente agli aggiornamenti delle docenze; la biografia web include i dati più recenti confermati. L'articolo «Colpire i nervi del sistema» e i sette PDF del corso Quantum sono conservati; le cinque fotografie sono esattamente gli originali.

@@ -1,3 +1,5 @@
+> **NOVITÀ v2.1:** per aggiornare i contenuti pubblici si modificano i file Markdown in `content/markdown/`. Vedere `COME_MODIFICARE_I_TESTI.md` nella radice del repository. Non modificare `dist/` né i vecchi testi duplicati nei metadati JSON.
+
 # Pubblicazione di MDC_LAB 1.5.2
 
 ## GitHub Pages

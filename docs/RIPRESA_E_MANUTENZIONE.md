@@ -1,3 +1,6 @@
+> **NOTA DI CONTINUITÀ — v2.1 (8 novembre 2026)**  
+> Questo documento contiene anche riferimenti a versioni precedenti. Per l'editing attuale dei testi **non utilizzare più i JSON**: la fonte narrativa è `content/markdown/` come illustrato in `COME_MODIFICARE_I_TESTI.md` nella radice. I file JSON rimangono soprattutto per dati strutturati. Vedi `docs/REVISIONE_HOME_v2.1.md`.
+
 # Ripresa e manutenzione · MDC_LAB 1.5.2
 
 ## Decisioni da conservare

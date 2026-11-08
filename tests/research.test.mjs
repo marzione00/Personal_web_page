@@ -43,6 +43,6 @@ test('duplicate research IDs stop build',()=>fixture(dir=>{
 test('unsafe research IDs stop build',()=>fixture(dir=>{
  change(dir,r=>r.areas[0].id='../../injected');assert.throws(()=>loadContent(dir));
 }));
-test('oversized research text stops build',()=>fixture(dir=>{
- change(dir,r=>r.areas[0].overview='x'.repeat(6001));assert.throws(()=>loadContent(dir),/overview/);
+test('oversized research Markdown stops build',()=>fixture(dir=>{
+ const file=path.join(dir,'content/markdown/aree-ricerca/',loadContent(dir).research.areas[0].id+'.md');let md=fs.readFileSync(file,'utf8');md=md.replace(/(## overview\n)[\s\S]*?(?=\n## |$)/,'$1'+'x'.repeat(6001)+'\n');fs.writeFileSync(file,md);assert.throws(()=>loadContent(dir),/overview/);
 }));

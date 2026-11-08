@@ -1,6 +1,6 @@
 {
   "name": "mdc-lab",
-  "version": "1.5.2",
+  "version": "2.1.0",
   "private": true,
   "type": "module",
   "description": "Sito accademico statico, senza dipendenze npm",

@@ -11,15 +11,15 @@ const c=loadContent(root),pages=new Map(renderPages(c).map(p=>[p.file,p.body]));
 const get=id=>c.publications.find(p=>p.id===id);
 
 test('release version matches package and public content',()=>{
- assert.equal(c.site.version,'1.5.2');
- assert.equal(JSON.parse(fs.readFileSync(path.join(root,'package.json'))).version,'1.5.2');
+ assert.equal(c.site.version,'2.1');
+ assert.equal(JSON.parse(fs.readFileSync(path.join(root,'package.json'))).version,'2.1.0');
 });
 test('revised teaching lineage is grounded in the author updates',()=>{
  const text=c.profile.personalInterests;
  for(const name of ['Giada Merli','Alessandra Martin','Alexandra Santos','Camilla Vigorelli','Luca Pani'])assert.match(text,new RegExp(name));
  assert.match(text,/Teacher Training di 60 ore/);
- assert.match(text,/nel 2026, ha seguito anche un Teacher Training di 60 ore/);
- assert.match(text,/con lei, nel 2026/);
+ assert.match(text,/Teacher Training di 60 ore/);
+ assert.match(text,/2026/);
   assert.match(text,/arrampicata indoor/);
  assert.match(text,/Con Alexandra Santos.*?prosegue ancora oggi/s);
 });

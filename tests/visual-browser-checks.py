@@ -97,7 +97,7 @@ with sync_playwright() as p:
   page.close()
  browser.close()
 check('No application JavaScript/CSP errors during normal navigation',not errors,errors[:6])
-report={'version':'1.4','method':'Chromium / Playwright; actual self-contained HTML via set_content; all images and PDFs decoded from supplied bytes; not a live-hosting test','passed':sum(c['pass'] for c in checks),'failed':sum(not c['pass'] for c in checks),'errors':errors,'checks':checks}
+report={'version':json.loads((ROOT/'content/site.json').read_text())['version'],'method':'Chromium / Playwright; actual self-contained HTML via set_content; all images and PDFs decoded from supplied bytes; not a live-hosting test','passed':sum(c['pass'] for c in checks),'failed':sum(not c['pass'] for c in checks),'errors':errors,'checks':checks}
 (REPORT/'visual-browser-checks.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
 print(json.dumps({k:v for k,v in report.items() if k!='checks'},ensure_ascii=False,indent=2))
 raise SystemExit(bool(report['failed']))

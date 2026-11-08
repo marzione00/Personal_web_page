@@ -1,0 +1,18 @@
+---
+title: Titolo del nuovo articolo
+date: 2026-11-08
+category: Riflessioni
+tags: ricerca, tecnologia
+excerpt: Una sintesi autonoma, leggibile senza conoscere l'articolo.
+draft: true
+---
+
+## Introduzione
+
+Scrivi qui il testo del nuovo articolo in Markdown.
+
+## Approfondimento
+
+Puoi utilizzare paragrafi, **grassetto**, *corsivo*, elenchi e link HTTPS.
+
+Per rendere pubblico il testo, modifica `draft: false` dopo averlo riletto.

@@ -30,4 +30,4 @@ Il confronto con le proprie aspettative, sia nelle sequenze sul tappetino sia da
 
 ## Sintesi per la homepage
 
-Dalla fisica computazionale all’intelligenza artificiale spiegabile, Marzio De Corato studia modelli quantitativi e sicurezza informatica, con un interesse specifico per i problemi della spiegazione scientifica. Insegna Informatica all’Università degli Studi di Milano e Advanced Calculus and Stochastic Processes all’Università Cattolica del Sacro Cuore.
+Si occupa principalmente di cybersecurity, intelligenza artificiale spiegabile, quantum computing e finanza quantitativa. La sua formazione in fisica computazionale, dedicata alle nanostrutture di carbonio, orienta la riflessione sul rapporto fra modelli, osservazione e spiegazione scientifica.
