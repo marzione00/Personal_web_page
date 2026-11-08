@@ -1,4 +1,4 @@
-/* MANIFOLD visual system: photographs are originals; scientific views are progressive enhancements. */
+/* Topological Manifolds visual system: photographs are originals; scientific views are progressive enhancements. */
 :root{--bg:#09110e;--panel:#0d1813;--raised:#132119;--ink:#edf3ec;--body:#cad4ca;--muted:#a5b6ab;--line:#294235;--line-soft:#1e3027;--green:#afe7c6;--max:1200px;--serif:Georgia,'Times New Roman',serif}
 .header{background:rgba(9,17,14,.97)}.header-inner{min-height:84px}.brand-desc{letter-spacing:.12em}
 .label,.meta,.eyebrow{font-size:12px}.button{font-size:12px;min-height:44px}.icon-button{width:44px;height:44px}
@@ -73,7 +73,7 @@
 @media print{.language-switch{display:none}}
 
 
-/* MANIFOLD 2.5 — restrained electronic-link feedback, independent from sound. */
+/* Electronic-link feedback introduced in v2.5 and preserved in the current design. */
 :root{--hover-ink:#ceffe5;--hover-light:rgba(151,255,198,.34)}
 a[href]{transition:color .18s ease,text-shadow .18s ease,border-color .18s ease,background-color .18s ease}
 a[href]:not(.button):not(.icon-button):not(.brand):not(.portal-card):not(.geometry-open):not([data-language]):is(:hover,:focus-visible){color:var(--hover-ink);text-shadow:0 0 9px var(--hover-light)}

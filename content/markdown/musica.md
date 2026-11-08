@@ -4,7 +4,7 @@
 Local Coordinates
 
 ## sottotitolo
-Un ambiente sonoro originale per MANIFOLD · 4 minuti e 30 secondi.
+Un ambiente sonoro originale per Topological Manifolds · 4 minuti e 30 secondi.
 
 ## testo
 La composizione procede per accordi distesi, timbri d’archi sintetici e risonanze soffuse. Le parti gravi sostengono un movimento lento; nelle voci superiori emergono intervalli e piccoli motivi che si trasformano senza una pulsazione ritmica dominante.

@@ -54,7 +54,7 @@ test('geometry copy cannot introduce executable HTML',()=>{
 test('the home renders full Markdown quotations without editorial truncation',()=>{
  const home=pages.find(p=>p.file==='index.html').body;
  for(const q of data.epigraphs){assert.ok(q.quote.length>100);assert.ok(!q.quote.includes('[...]'));assert.ok(home.includes(q.quote.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#39;')));}
- assert.match(home,/immaterial source and explanation/);assert.match(home,/most passionate years of his life/);
+ assert.match(home,/spiegazione immateriali/);assert.match(home,/anni più appassionati della sua vita/);
 });
 test('progressive loader avoids content-to-code conversion and has bounded cache',()=>{
  const s=fs.readFileSync(path.join(root,'src/geometry-loader.js'),'utf8');assert.doesNotMatch(s,/innerHTML|\beval\s*\(|new Function/);assert.match(s,/cache.size>5/);assert.match(s,/prefers-reduced-motion/);assert.match(s,/visibilitychange/);assert.match(s,/IntersectionObserver/);

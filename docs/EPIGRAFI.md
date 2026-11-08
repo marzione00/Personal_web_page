@@ -1,7 +1,9 @@
-# Epigrafi: provenienza e fedeltà
+# Epigrafi: provenienza, traduzione, integrità
 
-In `content/markdown/epigrafi.md` sono trascritti integralmente i passaggi forniti dall’autore: Platone dalla fotografia della citazione (Timeo, traduzione Jowett); Wheeler ed Engel dai due brani presenti a pagina 1 del CV fornito. Le abbreviazioni introdotte nella versione precedente sono state eliminate.
+La homepage italiana riporta tre **traduzioni italiane integrali dei passi selezionati**: Platone dalla versione inglese di Benjamin Jowett mostrata dall’autore; Wheeler ed Engel dai brani inglesi presenti a pagina 1 del CV. Le traduzioni italiane sono **redazionali**, non vengono attribuite agli autori come testi originariamente scritti in italiano né presentate come edizioni storiche autorizzate.
 
-“Integrale” significa il passaggio selezionato dall’autore, non l’intera opera di origine. La trascrizione normalizza i ritorni a capo del PDF senza abbreviare le frasi. L’attribuzione usa C. E. Engel, correggendo la forma “Engels” del CV; non viene inventata una pagina di edizione non verificata. Non viene formulata una dichiarazione generale sul pubblico dominio.
+La homepage inglese conserva i passi inglesi approvati in `content/markdown/en/epigrafi.md`. Il sito italiano usa `content/markdown/epigrafi.md`. Le attribuzioni specificano la fonte di ciascun passo e l'origine della traduzione italiana.
 
-I test confrontano le tre stringhe complete caricate con quelle rese nell’HTML. Il testo non ha limiti di altezza, ellissi CSS o pulsanti che nascondano una parte del brano.
+“Integrale” significa **tutto il passo scelto**, non l'intera opera da cui proviene. I ritorni a capo del CV vengono normalizzati; non vengono aggiunte omissioni editoriali. C. E. Engel è la forma bibliografica adottata, mentre il CV riporta “Engels”. Non viene inventato un riferimento di pagina non verificato né dichiarato in blocco il pubblico dominio delle citazioni.
+
+Le citazioni sono testo normale, non disegni: adattabili su mobile, selezionabili e consultabili anche senza JavaScript. I test controllano le tre fonti e la differenza linguistica effettiva.

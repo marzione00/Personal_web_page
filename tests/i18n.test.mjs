@@ -16,8 +16,9 @@ test('English narrative, CV records and all geometry explanations are loaded fro
  assert.equal(en.geometry.items.length,it.geometry.items.length);for(const g of en.geometry.items){assert.ok(g.spiegazione.length>50);assert.ok(g.limiti.length>30);assert.equal(g.sceneSha256,it.geometry.byId[g.id].sceneSha256);}
  assert.match(en.profile.teaching[0].title,/Information|Informatics|Mathematics/);
 });
-test('English and Italian epigraph quotations are complete and byte-identical as text',()=>{
- for(const q of it.epigraphs){assert.equal(q.quote,en.epigraphs.find(x=>x.id===q.id).quote);assert.ok(q.quote.length>100);assert.ok(!q.quote.includes('[...]'));}
+test('Italian epigraphs are complete labelled translations; English sources retain originals',()=>{
+ const examples={platone:['principio sovrano','Mind, the ruling power'],wheeler:['ogni particella','every particle'],engel:['anni più appassionati','most passionate years']};
+ for(const q of it.epigraphs){const original=en.epigraphs.find(x=>x.id===q.id);assert.ok(original);assert.notEqual(q.quote,original.quote);assert.ok(q.quote.length>140);assert.ok(original.quote.length>100);assert.match(q.quote,new RegExp(examples[q.id][0]));assert.match(original.quote,new RegExp(examples[q.id][1]));assert.match(q.source,/traduzione italiana/i);assert.ok(!q.quote.includes('[...]'));}
 });
 test('English article preserves seven source figures and nineteen bibliography entries',()=>{
  const a=en.posts.find(p=>p.id==='colpire-i-nervi-del-sistema');const original=it.posts.find(p=>p.id===a.id);

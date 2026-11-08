@@ -12,7 +12,7 @@ with sync_playwright() as pw:
   pre='en/' if lang=='en' else ''
   page=b.new_page(viewport={'width':1440,'height':1000})
   errors,req=setup(page,pre+'index.html');page.wait_for_timeout(400)
-  check(lang+': brand',page.locator('.header .brand-word').inner_text()=='MANIFOLD')
+  check(lang+': brand',page.locator('.header .brand-word').inner_text()=='Topological Manifolds')
   check(lang+': no music request before consent',not any('.mp3' in u for u in req))
   check(lang+': no player allocated before consent',not page.evaluate('ManifoldMusic.loaded'))
   page.locator('[data-effects-open]').click()
@@ -50,16 +50,16 @@ with sync_playwright() as pw:
     p.close()
  # Portable preview: music keeps playing across same-document routes; bilingual link remains valid.
  p=b.new_page(viewport={'width':1440,'height':950});errors=[];p.on('pageerror',lambda e:errors.append(str(e)))
- p.set_content((R/'MANIFOLD_anteprima.html').read_text(),wait_until='load');p.locator('[data-effects-open]').click();p.locator('[data-music-play]').click()
+ p.set_content((R/'Topological_Manifolds_anteprima.html').read_text(),wait_until='load');p.locator('[data-effects-open]').click();p.locator('[data-music-play]').click()
  try:p.wait_for_function('()=>ManifoldMusic.playing && ManifoldMusic.position>.3',timeout=15000);ok=True
  except:ok=False
  check('offline original audio works without server',ok,errors)
  p.keyboard.press('Escape');pos=p.evaluate('ManifoldMusic.position');p.locator('#primary-nav a[href="ricerca.html"]').click();p.wait_for_timeout(700)
  check('offline soundtrack continues during transition',p.evaluate('ManifoldMusic.playing && ManifoldMusic.position')>pos)
  check('offline brand and page transition',p.locator('[data-view="ricerca.html"]').is_visible() and p.evaluate('MDCPageTransition.stats.offline')>=1)
- check('offline bilingual link keeps page',p.locator('[data-language="en"]').get_attribute('href')=='MANIFOLD_preview_EN.html#/ricerca.html')
+ check('offline bilingual link keeps page',p.locator('[data-language="en"]').get_attribute('href')=='Topological_Manifolds_preview_EN.html#/ricerca.html')
  check('offline runtime',not errors,errors);p.close();b.close()
-report={'version':'3.0','passed':sum(c['passed'] for c in checks),'failed':sum(not c['passed'] for c in checks),'checks':checks,'method':'Chromium virtual-origin fixture and offline preview. Genuine MP3 playback and Web Audio, not mocked. Real cross-document playback persistence on the deployed host was not exercised; the player code saves the position and requires explicit resume.'}
+report={'version':json.loads((R/'content/site.json').read_text())['version'],'passed':sum(c['passed'] for c in checks),'failed':sum(not c['passed'] for c in checks),'checks':checks,'method':'Chromium virtual-origin fixture and offline preview. Genuine MP3 playback and Web Audio, not mocked. Real cross-document playback persistence on the deployed host was not exercised; the player code saves the position and requires explicit resume.'}
 (OUT/'browser-manifold.json').write_text(json.dumps(report,ensure_ascii=False,indent=2))
 print({k:v for k,v in report.items() if k!='checks'},flush=True)
 raise SystemExit(bool(report['failed']))

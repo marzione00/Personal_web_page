@@ -1,16 +1,16 @@
 # Epigrafi — homepage
 
 ## platone
-> Mind, the ruling power, persuaded necessity to bring the greater part of created things to perfection, and thus and after this manner in the beginning, through necessity made subject to reason, this universe was created.
+> La mente, principio sovrano, persuase la necessità a condurre alla perfezione la maggior parte delle cose generate; così, all'origine, l'universo fu creato in questo modo, attraverso la necessità assoggettata alla ragione.
 
-Fonte: Platone, *Timaeus*, traduzione inglese di Benjamin Jowett
+Fonte: Platone, *Timeo* — traduzione italiana redazionale dalla versione inglese di Benjamin Jowett
 
 ## wheeler
-> It from bit. Otherwise put, every it—every particle, every field of force, even the space-time continuum itself—derives its function, its meaning, its very existence entirely—even if in some contexts indirectly—from the apparatus-elicited answers to yes-or-no questions, binary choices, bits. It from bit symbolizes the idea that every item of the physical world has at bottom—at a very deep bottom, in most instances—an immaterial source and explanation
+> It from bit. In altre parole, ogni cosa — ogni particella, ogni campo di forza, persino lo stesso continuo spazio-temporale — trae la propria funzione, il proprio significato e la propria stessa esistenza interamente — anche se, in alcuni contesti, indirettamente — dalle risposte ottenute mediante apparati a domande cui si può rispondere sì o no: scelte binarie, bit. It from bit esprime l'idea che ogni elemento del mondo fisico abbia, alla propria base — a un livello profondissimo, nella maggior parte dei casi —, un'origine e una spiegazione immateriali.
 
-Fonte: John Archibald Wheeler, *Information, Physics, Quantum: The Search for Links*
+Fonte: John Archibald Wheeler, *Information, Physics, Quantum: The Search for Links* — traduzione italiana redazionale
 
 ## engel
-> [Whymper] loved pitting his spirit against a formidable opponent - both physically and morally - to see who ended up winning. He then discovered that the mountains were harder than him, of a terrible hardness, and then he gave way. But, to arrive at this discovery, he had lived the most passionate years of his life
+> [Whymper] amava mettere alla prova il proprio spirito contro un avversario formidabile — sul piano fisico come su quello morale — per vedere chi avrebbe avuto la meglio. Scoprì allora che le montagne erano più dure di lui, di una durezza terribile, e infine cedette. Ma, per giungere a questa scoperta, aveva vissuto gli anni più appassionati della sua vita.
 
-Fonte: C. E. Engel, su Edward Whymper
+Fonte: C. E. Engel, su Edward Whymper — traduzione italiana redazionale del passo citato nel CV

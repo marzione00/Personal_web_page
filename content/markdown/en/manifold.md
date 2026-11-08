@@ -1,20 +1,20 @@
 # The name of the site
 
 ## titolo
-Why MANIFOLD
+Why Topological Manifolds
 
 ## sottotitolo
 Local coordinates, forms and paths to knowledge.
 
 ## richiamo
-MANIFOLD takes its name from mathematical manifolds: spaces described through local coordinates. It is the chosen reference for bringing together research, teaching, writing and personal journeys.
+Topological Manifolds refers to the many different spaces that can look locally like Euclidean space. The plural reflects the variety of mathematical forms studied in physics and topology, while the site brings together research, teaching, writing and personal exploration.
 
 ## testo
-A **manifold** is a mathematical space in which a neighbourhood of each point can be described by coordinates like a region of Euclidean space. The surface of a sphere and the surface of a torus are two-dimensional examples, although we usually represent them in three-dimensional space.
+A **topological manifold** is a Hausdorff, second-countable space in which each point has a neighbourhood homeomorphic to an open subset of Euclidean space of a fixed dimension. The surfaces of a sphere and a torus are two-dimensional examples, although they are commonly represented in three-dimensional space.
 
-These local descriptions are called *charts*. A set of charts covering the whole manifold forms an atlas. For a smooth manifold, transition maps on overlapping regions must be smooth, so that differential calculus remains consistent when moving between charts.
+These local descriptions are called *charts*; a collection of charts covering the manifold forms an atlas. The topological definition requires coordinate changes to be continuous with continuous inverses. Differentiability is an additional structure: smooth manifolds use compatible charts whose transition maps permit differential calculus.
 
-The name points to the relationship between an observed detail and the space to which it belongs. Research methods, teaching, writing and personal journeys retain their distinct character on this site while sharing a common place. The reference to geometry grows out of a scientific background and an interest in forms encountered both in models and in bodily experience.
+The plural in the name points to the relationship between local descriptions and different global structures. Research, teaching, writing and personal journeys retain their individual character here. Geometry is a reference rooted in scientific study and rediscovered in the bodily exploration of form.
 
 ## sfera
 The surface of a sphere has dimension two: two local coordinates suffice to identify a point. A single chart cannot cover the whole sphere; several descriptions are needed, as with maps of the Earth. A small coordinate region is highlighted in the illustration.

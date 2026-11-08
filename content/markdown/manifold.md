@@ -1,20 +1,20 @@
 # Il nome del sito
 
 ## titolo
-Perché MANIFOLD
+Perché Topological Manifolds
 
 ## sottotitolo
 Coordinate locali, forme e percorsi di conoscenza.
 
 ## richiamo
-MANIFOLD prende il nome dalle varietà matematiche: spazi che si lasciano descrivere attraverso coordinate locali. È il riferimento scelto per raccogliere ricerca, insegnamento, scrittura e itinerari personali.
+Topological Manifolds richiama la pluralità delle varietà topologiche: spazi differenti che, vicino a ciascun punto, si descrivono con coordinate euclidee. Il plurale rimanda alle molte forme studiate nella matematica e nella fisica, mentre il sito riunisce ricerca, insegnamento, scrittura ed esplorazione personale.
 
 ## testo
-In matematica, *manifold* si traduce con **varietà**. In un intorno di ogni punto, uno spazio di questo tipo può essere descritto mediante coordinate come una porzione di spazio euclideo. La superficie di una sfera e quella di un toro sono esempi bidimensionali, anche se abitualmente le rappresentiamo nello spazio tridimensionale.
+In matematica, una **varietà topologica** è uno spazio di Hausdorff e a base numerabile, in cui ogni punto possiede un intorno omeomorfo a un aperto di uno spazio euclideo di dimensione fissata. La superficie di una sfera e quella di un toro sono esempi bidimensionali, benché vengano comunemente rappresentate nello spazio tridimensionale.
 
-Le descrizioni locali sono chiamate *carte*. Un insieme di carte che copre l’intera varietà forma un atlante. Nel caso delle varietà differenziabili, i passaggi fra le coordinate delle regioni sovrapposte devono essere lisci: questa compatibilità permette di usare il calcolo differenziale passando da una carta all’altra.
+Le descrizioni locali sono chiamate *carte*; un insieme di carte che ricopre la varietà forma un atlante. La nozione topologica richiede che i cambiamenti di coordinate siano continui e invertibili. La differenziabilità, e quindi la possibilità di formulare il calcolo differenziale attraverso carte compatibili, è una struttura aggiuntiva: la parola *topological* nel nome richiama anzitutto le proprietà topologiche.
 
-Il nome richiama questo rapporto fra il dettaglio osservato e lo spazio al quale appartiene. Nel sito, i metodi della ricerca, l’esperienza dell’insegnamento, la scrittura e i percorsi personali conservano la propria specificità, pur trovando un luogo comune. Il riferimento alla geometria nasce dalla formazione scientifica e dall’interesse per le forme che si incontrano tanto nei modelli quanto nell’esperienza corporea.
+Il plurale del nome richiama il rapporto fra le descrizioni locali e le differenti strutture globali. Nel sito, ricerca, insegnamento, scrittura e percorsi personali conservano la propria specificità. La geometria è un riferimento nato dagli studi scientifici e ritrovato anche nell’esplorazione corporea delle forme.
 
 ## sfera
 La superficie della sfera ha dimensione due: per individuare un punto bastano due coordinate locali. Una singola carta non copre l’intera sfera; occorrono più descrizioni, come avviene con le carte della Terra. Nel disegno è evidenziata una piccola regione coordinata.

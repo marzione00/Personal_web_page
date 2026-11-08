@@ -1,27 +1,29 @@
-> Criteri, fonti e precisazioni si trovano in NOTE_EDITORIALI.md, MATERIALI_DIDATTICI.md e REVISIONE_CRITICA.md.
+# Provenienza dei contenuti — stato corrente v3.3
 
-# Provenienza dei contenuti
+## Base documentale
 
-La revisione parte dal pacchetto `MDC_LAB_v0.2.zip` consegnato nella conversazione e dai dati del CV `CV_UNICATT.pdf` fornito dall’utente. Non è una nuova verifica completa dei dati biografici su Internet.
+La formazione accademica, i titoli, gli incarichi e gli interessi iniziali derivano dal CV di sette pagine fornito dall’autore e dalle precedenti versioni del sito. Nel progetto storico compaiono riferimenti ai pacchetti `MDC_LAB` e a documenti con il nome precedente: sono citazioni della **provenienza**, non denominazioni pubbliche in uso. Non è stata svolta una nuova verifica completa di tutti i fatti biografici tramite fonti esterne.
 
-Il catalogo di 17 pubblicazioni e i dati del profilo sono migrati dalla v0.2. Il testo della homepage, i titoli delle sezioni e le sintesi editoriali sono una proposta redazionale, non citazioni dell’autore. Il motivo reticolare è grafica decorativa, non una visualizzazione di dati scientifici.
+Le attività 2026/2027 e la partecipazione al corso di Quantum e post-quantum computing sono riportate sulla base delle conferme dirette dell’autore. L’incarico di ricerca terminato nel marzo 2026 non è riscritto come incarico in corso. I dettagli degli insegnamenti restano consultabili nei materiali e nelle schede.
 
-I periodi degli incarichi restano quelli documentati: in particolare aprile 2025 – marzo 2026 non è riscritto come incarico in corso. La didattica documentata nel CV comprende UniMI 2025/2026 e Cattolica 2024/2025 e 2025/2026. Le docenze UniMI e Cattolica nel 2026/2027 e la partecipazione al corso Quantum e post-quantum computing risultano dalle conferme dirette dell’autore; le relative schede sono presenti nella build pubblica.
+## Documenti e media
 
-Il PDF incluso è `CV_Marzio_De_Corato_versione_web.pdf` della v0.2, copiato senza modifiche; non è il documento originale di sette pagine. La revisione attuale non ne certifica l’impaginazione o l’esattezza come documento finale firmato.
+Il PDF originale del CV di sette pagine è stato fornito dall'autore, ma **non è incluso nel pacchetto sorgenti**; dovrà essere collocato come `CV.pdf` nella radice prima della build. Il vecchio PDF redazionale della v0.2 è escluso dalla consegna. Il generatore copia senza alterazioni il documento fornito e fallisce se non è presente.
 
-I collegamenti ORCID, AIR, GitHub, LinkedIn e quelli istituzionali sono ripresi dai dati già presenti nel progetto/CV. Non è stata effettuata una verifica di tutti i contenuti esterni raggiungibili da questi link. Non vengono pubblicate automaticamente fotografie o indirizzi email personali aggiuntivi.
+Le cinque fotografie già approvate sono conservate senza modifiche dei byte; la grafica dei 24 modelli è illustrativa, distinta dai dati sperimentali. I sette PDF del corso, il PDF del saggio e i suoi diagrammi mantengono le rispettive versioni originali.
 
-Il blog contiene soltanto un esempio di layout chiaramente etichettato, escluso dalla build pubblica. Le pagine senza allegati sono contrassegnate come schede di insegnamento; la pagina del corso Quantum e post-quantum computing ospita sette PDF conferiti dall’autore. I contenuti dimostrativi del blog restano fuori dalla build pubblica. I profili del CMS sono configurazioni, non prova di un collegamento operativo all’account.
+## Testi e fonti
 
-## Revisione editoriale v0.5
+La homepage presenta gli ambiti scientifici attuali indicati dall'autore; biografia e interessi personali recepiscono le sue indicazioni su insegnamento, yoga, arrampicata ed epistemologia. L’interpretazione stilistica e i testi divulgativi sono redazionali, non citazioni virgolettate dell’autore.
 
-Base documentale: CV_UNICATT.pdf conferito dall’autore, sette pagine; dati e bibliografia già conservati nel progetto v0.4. Nessuna nuova ricerca sul web o verifica indipendente delle pubblicazioni è stata svolta in questa revisione.
+Il blog pubblico include **«Colpire i nervi del sistema»**, con testo web in italiano e versione inglese, immagini e riferimenti; i contenuti dimostrativi restano esclusi dalla pubblicazione. Il PDF originale del saggio non è stato riscritto sulla base delle successive modifiche della versione web. L’archivio viaggi è predisposto senza racconti inventati; nuovi contenuti richiedono foto e diari dell’autore.
 
-- Profilo e interessi scientifici: pagine 1–2; didattica: pagine 3–4; tesi: pagina 4.
-- Pubblicazioni: pagine 4–6; conferenze: pagine 6–7. Le descrizioni della ricerca presentano temi e metodi attestati da interessi, titoli e attività: non sono sintesi dei testi integrali degli articoli né valutazioni dei loro risultati.
-- Interessi personali: pagina 7, Yoga (Vinyasa Krama, Ashtanga Vinyasa, Yin Yoga), Hiking and Climbing. Le frasi su movimento, respiro, cammino e progressione sono descrizioni editoriali generali delle pratiche; non attribuiscono all’autore motivazioni psicologiche, benefici clinici, frequenze, qualifiche o imprese sportive. La formulazione personale può essere affinata dall’autore.
-- Calcolo quantistico e modellistica finanziaria: mantenuti come ambiti di interesse; non attribuiti risultati o progetti specifici aggiuntivi. Architettura dei sistemi: presentata come progettazione didattica.
-- Progetto MUSA: citato senza inferire ruolo, responsabilità o risultati specifici.
+Il catalogo delle 17 pubblicazioni usa metadati provenienti da CV e archivi consultati durante le versioni precedenti. Le sintesi divulgative derivano da abstract o sinossi dove disponibili, non da lettura integrale di tutti gli articoli. Una scheda priva di abstract rimane segnalata come incompleta. Vedere `NOTE_EDITORIALI.md` e `PUBBLICAZIONI_DIVULGATIVE.md`.
 
-La provenienza resta in questa documentazione interna, fuori dalla biografia e dalle descrizioni pubbliche. Il PDF preesistente non è stato modificato.
+## Citazioni e traduzioni
+
+I tre passaggi attribuiti a Platone, Wheeler ed Engel sono completi nell'estensione selezionata e sono presentati come traduzioni redazionali nella homepage italiana e in inglese nella versione EN. Le traduzioni web e i PDF originali restano distinguibili. Il nome pubblico **Topological Manifolds** è spiegato una sola volta, nella pagina dedicata, con un richiamo conciso dalla homepage.
+
+## Limiti
+
+Nessuna revisione di sicurezza equivale a immunità da tutti gli attacchi; non sono stati certificati i servizi esterni, le credenziali del CMS o la pubblicazione GitHub. Le bozze presenti in un repository pubblico non diventano private perché escluse dalla build.

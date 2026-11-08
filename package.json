@@ -1,9 +1,9 @@
 {
-  "name": "manifold-personal-site",
-  "version": "3.1.0",
+  "name": "topological-manifolds-personal-site",
+  "version": "3.3.0",
   "private": true,
   "type": "module",
-  "description": "MANIFOLD — Marzio De Corato. Ricerca, didattica, scrittura e viaggi.",
+  "description": "Topological Manifolds — Marzio De Corato. Ricerca, didattica, scrittura e viaggi.",
   "engines": {
     "node": ">=22"
   },

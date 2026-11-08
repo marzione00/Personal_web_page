@@ -1,4 +1,4 @@
-# MDC_LAB 2.4 — due lingue, un progetto
+# Topological Manifolds — Italiano e inglese
 
 ## Uso del sito
 
@@ -58,21 +58,21 @@ Per il saggio già presente, titolo e riassunto sono nel file `post-details` ing
 
 Sono tradotti presentazione, biografia, cronologie, testi didattici, descrizioni delle pubblicazioni, saggio, interfaccia, ricerca locale e spiegazioni dei 24 modelli. I titoli bibliografici dei lavori restano quelli originali; gli autori, i DOI e le informazioni editoriali non sono inventati né modificati per la traduzione. Le tre epigrafi sono identiche ai passi approvati, già in inglese; cambia soltanto l'attribuzione quando necessario.
 
-Le fotografie, i PDF delle lezioni, il PDF del saggio, il PDF del curriculum e i diagrammi originali rimangono byte per byte invariati. I loro testi interni non vengono tradotti. Nell'inglese del sito, i corsi e il saggio lo dichiarano; i diagrammi hanno descrizioni e didascalie inglesi esterne all'immagine. La vecchia nota sul CV PDF antecedente agli aggiornamenti delle docenze rimane anche in inglese.
+Le fotografie, i PDF delle lezioni, il PDF del saggio, il PDF del curriculum e i diagrammi originali rimangono byte per byte invariati. I loro testi interni non vengono tradotti. Nell'inglese del sito, i corsi e il saggio lo dichiarano; i diagrammi hanno descrizioni e didascalie inglesi esterne all'immagine. Il PDF originale del CV viene importato senza alterazioni dal file CV.pdf, che deve essere aggiunto prima della pubblicazione. La pagina profilo rimane aggiornata nei rispettivi Markdown.
 
 La traduzione del saggio conserva argomenti e riferimenti della fonte. Non costituisce una nuova verifica delle affermazioni storiche o delle fonti citate.
 
 ## Due anteprime offline
 
 Nel pacchetto completo tenere insieme:
-- `MANIFOLD_anteprima.html` — italiano;
-- `MANIFOLD_preview_EN.html` — inglese.
+- `Topological_Manifold_anteprima.html` — italiano;
+- `Topological_Manifold_preview_EN.html` — inglese.
 
 Sono due file autosufficienti per la consultazione (immagini, modelli e PDF incorporati). Il selettore rimanda al file corrispondente e alla stessa pagina interna. Per il cambio lingua offline entrambi devono restare nella stessa cartella. Non pubblicare questi file al posto di `dist/`.
 
 ## Note tecniche
 
-La build genera 17 pagine per lingua al momento della consegna. `public/` viene copiato una sola volta: inglese e italiano condividono foto, documenti, scene e viewer. Il viewer è richiesto solo all'interazione. Le pagine hanno `lang`, URL canonici e collegamenti `hreflang` quando viene fornito `SITE_URL`. Il selettore funziona come normale collegamento anche senza JavaScript; l'ancora corrente viene preservata dal piccolo script di controllo.
+La build genera pagine equivalenti nelle due lingue; il conteggio è variabile quando vengono aggiunti diari e articoli. `public/` viene copiato una sola volta: inglese e italiano condividono foto, documenti, scene e viewer. Il viewer è richiesto solo all'interazione. Le pagine hanno `lang`, URL canonici e collegamenti `hreflang` quando viene fornito `SITE_URL`. Il selettore funziona come normale collegamento anche senza JavaScript; l'ancora corrente viene preservata dal piccolo script di controllo.
 
 `src/i18n.mjs` applica durante la build il catalogo chiuso dell'interfaccia ai template condivisi: non sostituisce sottostringhe arbitrarie nella prosa e non traduce JavaScript o formule. Il client localizza soltanto messaggi dinamici del visualizzatore e conteggi dei risultati.
 

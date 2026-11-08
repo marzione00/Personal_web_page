@@ -73,7 +73,7 @@ with sync_playwright() as pw:
   page.locator('[data-formulas-open]').click();check(lang+' localised formula',page.locator('[data-formula-record]').first.locator('h3').inner_text()==('Newton’s second law' if lang=='en' else 'Seconda legge di Newton'));page.keyboard.press('Escape');check(lang+' audio runtime',not errors,errors);page.close()
  print('offline transitions',flush=True)
  page=b.new_page(viewport={'width':1440,'height':900});errors=[];page.on('pageerror',lambda e:errors.append(str(e)))
- page.set_content((R/'MANIFOLD_anteprima.html').read_text(),wait_until='load');page.wait_for_timeout(200)
+ page.set_content((R/'Topological_Manifolds_anteprima.html').read_text(),wait_until='load');page.wait_for_timeout(200)
  page.locator('[data-sound-toggle]').click();page.wait_for_timeout(140)
  page.locator('#primary-nav a[href="ricerca.html"]').click();page.wait_for_timeout(900)
  check('offline navigation has its own sound',page.evaluate('MDCSound.counts.page')==1)

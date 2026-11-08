@@ -1,4 +1,4 @@
-/* MANIFOLD — opt-in, low-level electronic accents. Smooth sinusoidal FM, no arcade steps.
+/* Topological Manifolds — opt-in, low-level electronic accents. Smooth sinusoidal FM, no arcade steps.
  * A single context for UI events; lower event density, at most three brief voices.
  */
 (() => {

@@ -1,12 +1,12 @@
 # Criteri editoriali e fonti
 
-Data della revisione: 7 novembre 2026.
+Criteri raccolti durante le revisioni del 7–8 novembre 2026; stato del sito aggiornato nella v3.3.
 
 ## Profilo e docenze
 
 Le docenze a contratto di Informatica in UniMI e di Advanced Calculus and Stochastic Processes in Cattolica sono presentate al presente sulla base della conferma diretta dell’autore in questa conversazione. Le annualità pregresse restano nell’archivio; sono presenti le schede 2026/2027. L’attività in Quantum e post-quantum computing è inserita per l’anno accademico 2026/2027, secondo l’indicazione dell’autore. La pagina istituzionale distingue il responsabile dell’insegnamento, Danilo Bruschi, dal contributo didattico dell’autore. L’incarico di ricerca aprile 2025–marzo 2026 conserva le date originali.
 
-Il CV PDF preesistente è rimasto invariato: è la rielaborazione della v0.2, non il CV originale allegato di sette pagine. Il profilo HTML contiene gli aggiornamenti delle docenze, segnalati accanto al pulsante del PDF.
+Il CV originale di sette pagine è stato fornito dall’autore e dovrà essere aggiunto come `CV.pdf` nella radice del repository prima della pubblicazione. La vecchia rielaborazione PDF della v0.2 non viene distribuita né presentata come curriculum aggiornato. La pagina Profilo mantiene le attività didattiche riportate nei Markdown; non viene dedotto che il PDF originale contenga tutte le informazioni aggiunte in seguito.
 
 ## Yoga, montagna ed epistemologia
 
@@ -40,8 +40,8 @@ Per *Topological study of schwarzitic junctions in 1D lattices* la citazione in 
 
 Sono stati corretti i ruoli editoriali del volume sull’IA negli enti locali (a cura di) e uniformata la forma del cognome De Corato. I risultati quantitativi non presenti negli abstract non sono stati aggiunti.
 
-## Gerarchia editoriale v0.7
+## Gerarchia editoriale corrente
 
 La pagina Ricerca distingue quattro linee sostenute da lavori e attività documentate, una questione epistemologica trasversale e due interessi legati anche all’insegnamento. La distinzione ha scopo redazionale e non costituisce una valutazione della rilevanza scientifica degli ambiti.
 
-La biografia contiene le informazioni principali; per date dettagliate e singoli titoli sono disponibili le cronologie, i corsi e la bibliografia. I testi presenti in `docs/` sono copie di lettura, mentre la build legge `content/`.
+La biografia contiene le informazioni principali; per date dettagliate e singoli titoli sono disponibili le cronologie, i corsi e la bibliografia. Le spiegazioni pubbliche e la biografia sono tratte dai Markdown in `content/markdown/` (e dalle traduzioni `en/`); i file in `docs/` sono documentazione, mentre i metadati strutturati restano in `content/*.json` e nelle raccolte. Lo storico è in `docs/storico/`.

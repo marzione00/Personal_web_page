@@ -1,8 +1,8 @@
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import path from 'node:path';import {fileURLToPath} from 'node:url';import {createHash} from 'node:crypto';import vm from 'node:vm';
 import {loadContent} from '../src/content.mjs';import {renderPages,shellHtml} from '../src/render.mjs';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..'),read=p=>fs.readFileSync(path.join(root,p),'utf8');
-test('MANIFOLD is the only public brand in both languages',()=>{
- for(const language of ['it','en']){const d=loadContent(root,{language});assert.equal(d.site.name,'MANIFOLD');for(const p of renderPages(d)){const h=shellHtml({data:d,page:p,css:'',js:'',csp:"default-src 'none'"});assert.match(h,/<span class="brand-word">MANIFOLD<\/span>/);assert.doesNotMatch(h,/MDC_LAB|MDC LAB|MDC<span>_<\/span>LAB/);}}
+test('Topological Manifolds is the public brand in both languages',()=>{
+ for(const language of ['it','en']){const d=loadContent(root,{language});assert.equal(d.site.name,'Topological Manifolds');for(const p of renderPages(d)){const h=shellHtml({data:d,page:p,css:'',js:'',csp:"default-src 'none'"});assert.match(h,/<span class="brand-word">Topological Manifolds<\/span>/);assert.doesNotMatch(h,/MDC_LAB|MDC LAB|MDC<span>_<\/span>LAB/);}}
 });
 test('name, license and music have corresponding editable Markdown in IT/EN',()=>{
  for(const language of ['it','en']){const d=loadContent(root,{language}),pages=renderPages(d);for(const id of ['manifold','licenza','musica']){assert.ok(fs.existsSync(path.join(root,'content/markdown',language==='en'?'en':'',id+'.md')));assert.ok(pages.some(p=>p.file===id+'.html'));}}

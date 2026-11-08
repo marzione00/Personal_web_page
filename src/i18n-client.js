@@ -8,7 +8,7 @@
   try{localStorage.setItem('mdc-language',a.dataset.language);}catch{/* Storage is optional. */}
   if(document.body.dataset.portable==='true'){
    const route=location.hash.startsWith('#/')?location.hash.slice(2):'index.html';
-   a.href=(a.dataset.language==='en'?'MANIFOLD_preview_EN.html':'MANIFOLD_anteprima.html')+'#/'+route;
+   a.href=(a.dataset.language==='en'?'Topological_Manifolds_preview_EN.html':'Topological_Manifolds_anteprima.html')+'#/'+route;
   } else if(location.hash&&!location.hash.startsWith('#/')){
    const url=new URL(a.href,location.href);url.hash=location.hash;a.href=url.href;
   }

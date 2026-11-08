@@ -1,4 +1,4 @@
-# Visualizzatore leggero — MDC_LAB 2.3
+# Visualizzatore leggero — Topological Manifolds
 
 ## Comportamento
 

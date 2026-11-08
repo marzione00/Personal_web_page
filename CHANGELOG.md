@@ -1,4 +1,19 @@
-# Changelog MANIFOLD
+# Changelog Topological Manifolds
+
+## v3.3 — Denominazione plurale e consolidamento editoriale
+- Identità pubblica **Topological Manifolds** in italiano e inglese, con titoli, menu, ricerca, footer e preview coerenti.
+- Spiegazione del plurale nella pagina `manifold.html`, senza ripetere la biografia; esempi matematici preesistenti conservati.
+- Corrette le denominazioni residue nell'interfaccia e nella documentazione corrente; note di collaudo precedenti archiviate in `docs/storico/`.
+- Aggiornato il procedimento corrente di pubblicazione e collaudo; invariati URL del repository e delle pagine.
+- Nessuna modifica ai testi scientifici approvati, fotografie originali, PDF didattici e geometrie. Il campo ID3 dell’album musicale è stato aggiornato senza alterare il flusso audio.
+
+## v3.2 — Identità pubblica e citazioni italiane
+- Identità pubblica rinominata **Topological Manifold** su tutte le pagine italiane e inglesi.
+- La pagina sul nome chiarisce la nozione di varietà topologica e la distinzione dalla struttura differenziabile, mantenendo gli esempi geometrici originali.
+- Le tre epigrafi italiane sono traduzioni integrali e attribuite dei passaggi del curriculum; i testi inglesi restano originali nella versione EN.
+- Nessuna modifica a foto, modelli, PDF didattici, saggio o musica. Le pagine e gli URL esistenti restano invariati.
+
+## Versioni precedenti — storico
 
 ## v3.1 — Revisione editoriale e hardening
 - Introduzione IT/EN più graduale, citazione e sezioni successive conservate.

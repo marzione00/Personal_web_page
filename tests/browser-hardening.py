@@ -62,5 +62,5 @@ with sync_playwright() as pw:
    page.wait_for_timeout(1800);check(mode+': no live model',page.locator('#geometry-stage.is-live').count()==0);check(mode+': explanation retained',page.locator('#geometry-dialog .geometry-explanation').is_visible())
   check(mode+': no unhandled exception',not errs,errs);page.close()
  browser.close()
-report={'version':'3.1','passed':sum(x['pass'] for x in checks),'failed':sum(not x['pass'] for x in checks),'scope':'Local Chromium/SwiftShader virtual-origin fixtures; CV download links tested with old PDF ONLY in isolated test copy; original replacement PDF unavailable. Test-only SHA256 bridge supplies crypto.subtle on opaque fixture origin. Not a hosting/account audit.','checks':checks}
+report={'version':json.loads((R/'content/site.json').read_text())['version'],'passed':sum(x['pass'] for x in checks),'failed':sum(not x['pass'] for x in checks),'scope':'Local Chromium/SwiftShader virtual-origin fixtures; CV links exercised with a substitute PDF ONLY in an isolated test copy; this is not the author’s CV and is not distributed. Test-only SHA256 bridge supplies crypto.subtle on opaque fixture origin. Not a hosting/account audit.','checks':checks}
 (O/'browser-hardening.json').write_text(json.dumps(report,ensure_ascii=False,indent=2));print(report['passed'],report['failed'],flush=True);raise SystemExit(bool(report['failed']))

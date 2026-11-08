@@ -4,7 +4,7 @@
 Local Coordinates
 
 ## sottotitolo
-An original sound environment for MANIFOLD · 4 minutes 30 seconds.
+An original sound environment for Topological Manifolds · 4 minutes 30 seconds.
 
 ## testo
 The composition unfolds through sustained chords, synthetic string-like tones and soft resonances. Low voices support a slow movement; upper voices introduce intervals and small motifs that transform without a dominant rhythmic pulse.

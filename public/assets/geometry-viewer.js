@@ -1,4 +1,4 @@
-/* MDC_LAB geometry renderer — local, dependency-free, loaded only on interaction.
+/* Topological Manifolds geometry renderer — local, dependency-free, loaded only on interaction.
  * One WebGL context, one canvas, bounded CPU/GPU resources. No remote requests.
  */
 (() => {

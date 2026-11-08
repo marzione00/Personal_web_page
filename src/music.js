@@ -1,4 +1,4 @@
-/* MANIFOLD — optional soundtrack, requested only by an explicit Play action.
+/* Topological Manifolds — optional soundtrack, requested only by an explicit Play action.
  * Original file shared by IT/EN. No autoplay; session position survives document navigation.
  */
 (() => {

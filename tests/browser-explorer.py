@@ -50,7 +50,7 @@ with sync_playwright() as pw:
     vals=page.locator('.hero-portrait img').evaluate('''e=>{let r=e.getBoundingClientRect(),s=getComputedStyle(e);return{nw:e.naturalWidth,nh:e.naturalHeight,fit:s.objectFit,filter:s.filter,ratio:(r.width-2)/(r.height-2)}}''')
     check(f'{width}: original photograph aspect ratio',vals['nw']==1274 and vals['nh']==2048 and vals['fit']=='contain' and vals['filter']=='none' and abs(vals['ratio']-1274/2048)<.001,vals)
     if width<590:check(f'{width}: mobile actions before portrait',page.locator('.hero .actions').bounding_box()['y']<page.locator('.hero-portrait').bounding_box()['y'])
-    q=page.locator('.epigraph-card blockquote').all_inner_texts();check(f'{width}: full epigraphs',len(q)==3 and 'immaterial source and explanation' in q[1] and 'most passionate years of his life' in q[2] and '[...]' not in ''.join(q))
+    q=page.locator('.epigraph-card blockquote').all_inner_texts();check(f'{width}: full epigraphs',len(q)==3 and 'spiegazione immateriali' in q[1] and 'anni più appassionati della sua vita' in q[2] and '[...]' not in ''.join(q))
    if width in [390,1440] and name in ['index.html','didattica.html','ricerca.html','geometrie.html','cv.html','blog.html','articolo-colpire-i-nervi-del-sistema.html','corso-quantum-post-quantum-computing-2026-2027.html']:
     stem={'index.html':'home','geometrie.html':'atlante','cv.html':'profilo','corso-quantum-post-quantum-computing-2026-2027.html':'quantum','articolo-colpire-i-nervi-del-sistema.html':'articolo'}.get(name,name[:-5]);suffix='mobile' if width==390 else 'desktop'
     page.screenshot(path=str(P/f'{stem}-{suffix}.png'))
@@ -112,11 +112,11 @@ with sync_playwright() as pw:
  ctx=browser.new_context(java_script_enabled=False,viewport={'width':390,'height':844});page=ctx.new_page();req=[];errs=[];setup(page,req,errs);load(page,'geometrie.html')
  check('no JS: all mathematical descriptions present',page.locator('.atlas-card details').count()==24);page.locator('.atlas-card details summary').first.click();check('no JS: details open natively',page.locator('.atlas-card details').first.get_attribute('open') is not None);ctx.close()
  # Offline monofile contains exact image and PDF bytes and an embedded scene fallback.
- page=browser.new_page(viewport={'width':1440,'height':1000},reduced_motion='reduce');offline=(R/'MANIFOLD_anteprima.html').read_text();page.set_content(offline,wait_until='load');page.locator('[data-view="index.html"] [data-geometry-open="gyroid"]').click();live(page)
+ page=browser.new_page(viewport={'width':1440,'height':1000},reduced_motion='reduce');offline=(R/'Topological_Manifolds_anteprima.html').read_text();page.set_content(offline,wait_until='load');page.locator('[data-view="index.html"] [data-geometry-open="gyroid"]').click();live(page)
  check('offline preview has working 3D without a server',page.locator('canvas.geometry-canvas').count()==1 and page.locator('#geometry-dialog [role=math]').count()==1);page.keyboard.press('Escape');page.evaluate('location.hash="/geometrie.html"');page.wait_for_timeout(100);check('offline atlas navigation',page.locator('[data-view="geometrie.html"]').is_visible());page.close()
  browser.close()
 check('no runtime errors in normal paths',not errors,errors[:8])
-report={'version':'2.3','method':'Chromium, SwiftShader WebGL, virtual subdirectory origin and intercepted package resources. Test-only CSP origin/base adapted. Production CSP hashes validated separately; not a deployment or mobile-device GPU certification.','passed':sum(c['pass'] for c in checks),'failed':sum(not c['pass'] for c in checks),'checks':checks}
+report={'version':json.loads((R/'content/site.json').read_text())['version'],'method':'Chromium, SwiftShader WebGL, virtual subdirectory origin and intercepted package resources. Test-only CSP origin/base adapted. Production CSP hashes validated separately; not a deployment or mobile-device GPU certification.','passed':sum(c['pass'] for c in checks),'failed':sum(not c['pass'] for c in checks),'checks':checks}
 (OUT/'browser-checks.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
 print(json.dumps({k:v for k,v in report.items() if k!='checks'},indent=2))
 raise SystemExit(bool(report['failed']))

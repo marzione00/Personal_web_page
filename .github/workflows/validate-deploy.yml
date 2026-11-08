@@ -8,7 +8,7 @@ on:
 permissions:
   contents: read
 concurrency:
-  group: mdc-lab-${{ github.workflow }}-${{ github.ref }}
+  group: topological-manifolds-${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: false
 jobs:
   build:

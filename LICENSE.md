@@ -1,4 +1,4 @@
-# MANIFOLD — content licence
+# Topological Manifolds — content licence
 
 Unless an item states otherwise, original editorial texts and original photographs by Marzio De Corato are offered under Creative Commons Attribution–NonCommercial–NoDerivatives 4.0 International (CC BY-NC-ND 4.0), to the extent of the rights held by the author.
 

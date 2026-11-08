@@ -51,8 +51,8 @@ Italiano: Vai al contenuto
 English: Skip to content
 
 ## label013
-Italiano: MANIFOLD, pagina iniziale
-English: MANIFOLD, home page
+Italiano: Topological Manifolds, pagina iniziale
+English: Topological Manifolds, home page
 
 ## label014
 Italiano: Navigazione principale
@@ -99,8 +99,8 @@ Italiano: Collegamenti di approfondimento
 English: Further links
 
 ## label025
-Italiano: Esplora MANIFOLD
-English: Explore MANIFOLD
+Italiano: Esplora Topological Manifolds
+English: Explore Topological Manifolds
 
 ## label026
 Italiano: Chiudi ricerca
@@ -643,8 +643,8 @@ Italiano: SETTORE PUBBLICO
 English: PUBLIC SECTOR
 
 ## label161
-Italiano: Il quaderno editoriale di MANIFOLD: appunti, riflessioni e approfondimenti.
-English: MANIFOLD’s journal: notes, reflections and explorations.
+Italiano: Il quaderno editoriale di Topological Manifolds: appunti, riflessioni e approfondimenti.
+English: The Topological Manifolds journal: notes, reflections and explorations.
 
 ## label162
 Italiano: Saggi, note di lettura e riflessioni su temi scientifici e culturali.
@@ -939,7 +939,7 @@ Italiano: Trova un insegnamento, una pubblicazione o una sezione. La ricerca avv
 English: Find a course, publication or section. Search runs in your browser without sending your queries to an external service.
 
 ## label235
-Italiano: Cerca in MANIFOLD…
+Italiano: Cerca in Topological Manifolds…
 English: Search the laboratory…
 
 ## label236
@@ -1051,8 +1051,8 @@ Italiano: Disattiva le animazioni al passaggio del puntatore
 English: Disable animations on hover
 
 ## label263
-Italiano: MANIFOLD: ricerca, didattica e scrittura di Marzio De Corato.
-English: MANIFOLD: research, teaching and writing by Marzio De Corato.
+Italiano: Topological Manifolds: ricerca, didattica e scrittura di Marzio De Corato.
+English: Topological Manifolds: research, teaching and writing by Marzio De Corato.
 
 
 ## label264

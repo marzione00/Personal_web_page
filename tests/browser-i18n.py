@@ -44,7 +44,7 @@ with sync_playwright() as pw:
    check(key+' controls',p.locator('.language-switch').is_visible() and p.locator('[data-reading]').is_visible())
    check(key+' errors',not err,err[:2])
    if name.endswith('index.html'):
-    q=p.locator('.epigraph-card blockquote').all_inner_texts();check(key+' full quotations',len(q)==3 and 'immaterial source and explanation' in q[1] and 'most passionate years of his life' in q[2])
+    q=p.locator('.epigraph-card blockquote').all_inner_texts();check(key+' full quotations',len(q)==3 and ((lang=='it' and 'spiegazione immateriali' in q[1] and 'anni più appassionati della sua vita' in q[2]) or (lang=='en' and 'immaterial source and explanation' in q[1] and 'most passionate years of his life' in q[2])))
     v=p.locator('.hero-portrait img').evaluate('''e=>{let r=e.getBoundingClientRect(),s=getComputedStyle(e);return{w:e.naturalWidth,h:e.naturalHeight,fit:s.objectFit,filter:s.filter,ratio:(r.width-2)/(r.height-2)}}''')
     check(key+' original photo',v['w']==1274 and v['h']==2048 and v['fit']=='contain' and v['filter']=='none' and abs(v['ratio']-1274/2048)<.001)
    selected={'en/index.html':'homepage-en','index.html':'homepage-it','en/didattica.html':'teaching-en','en/ricerca.html':'research-en','en/cv.html':'profile-en','en/blog.html':'blog-en','en/articolo-colpire-i-nervi-del-sistema.html':'article-en','en/corso-quantum-post-quantum-computing-2026-2027.html':'quantum-en'}
@@ -77,12 +77,12 @@ with sync_playwright() as pw:
   check(lang+' switch page and anchor',p.evaluate('chosenLanguageURL')==expected,p.evaluate('chosenLanguageURL'))
   check(lang+' store preference',p.evaluate('testStore["mdc-language"]')==target)
   p.locator('[data-reading]').click();check(lang+' theme stored',p.evaluate('typeof testStore["mdc-reading"]==="string"'));p.close()
- p=b.new_page(viewport={'width':1440,'height':1000},reduced_motion='reduce');req=[];err=[];setup(p,req,err);p.set_content(fixture('MANIFOLD_preview_EN.html',True),wait_until='load');decode(p)
+ p=b.new_page(viewport={'width':1440,'height':1000},reduced_motion='reduce');req=[];err=[];setup(p,req,err);p.set_content(fixture('Topological_Manifolds_preview_EN.html',True),wait_until='load');decode(p)
  check('offline lang',p.locator('html').get_attribute('lang')=='en')
  p.locator('#primary-nav a[href="cv.html"]').click();p.wait_for_function('()=>!document.querySelector(\'[data-view="cv.html"]\').hidden')
  check('offline EN profile',p.locator('[data-view="cv.html"] h1').inner_text().startswith('Profile'))
  p.evaluate('''()=>document.addEventListener('click',e=>{let a=e.target.closest('[data-language]');if(a){window.chosenLanguageURL=a.href;e.preventDefault();}})''')
- p.locator('[data-language="it"]').click();check('offline matching IT page',p.evaluate('chosenLanguageURL').endswith('MANIFOLD_anteprima.html#/cv.html'))
+ p.locator('[data-language="it"]').click();check('offline matching IT page',p.evaluate('chosenLanguageURL').endswith('Topological_Manifolds_anteprima.html#/cv.html'))
  p.locator('#primary-nav a[href="index.html"]').click();p.locator('[data-view="index.html"] [data-geometry-open="gyroid"]').click();live(p)
  check('offline model without requests',not any('.bin' in x or 'viewer-' in x for x in req));check('offline no errors',not err,err[:3]);p.close()
  ctx=b.new_context(java_script_enabled=False);p=ctx.new_page();req=[];err=[];setup(p,req,err);p.set_content(fixture('en/index.html'),wait_until='load');check('noJS English and switch',p.locator('h1').count()==1 and p.locator('[data-language="it"]').get_attribute('href')=='../index.html');ctx.close();b.close()

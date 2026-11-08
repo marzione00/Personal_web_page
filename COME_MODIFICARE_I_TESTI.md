@@ -1,4 +1,4 @@
-# MANIFOLD v3.1 — aggiornare i contenuti
+# Topological Manifolds v3.3 — aggiornare i contenuti
 
 ## CV originale
 Per questa consegna aggiungi il tuo PDF come `CV.pdf` nella radice del repository. L'importatore incluso lo copia senza ricodificarlo e aggiorna il collegamento IT/EN. In futuro sostituisci quel PDF e conferma il commit.
@@ -101,7 +101,7 @@ Puoi cambiare i testi senza aprire JavaScript. Le famiglie ammesse sono indicate
 
 Le preferenze di animazione, formule e transizioni si controllano dall’icona dei cursori nel sito e non modificano i contenuti del repository. I parametri grafici e il sintetizzatore sono codice tecnico separato dai testi editoriali.
 
-## MANIFOLD — nuovi contenuti
+## Topological Manifolds — nuovi contenuti
 
 - `content/markdown/manifold.md` e `en/manifold.md`: significato del nome ed esempi.
 - `content/markdown/licenza.md` e `en/licenza.md`: ambito della licenza. Modificarli con attenzione: non cambiano i termini ufficiali CC.

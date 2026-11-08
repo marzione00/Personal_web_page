@@ -18,11 +18,11 @@ export function musicControls(data){
 }
 export function identityHome(data){
  const en=data.language==='en',s=data.identity.manifold;
- return `<section class="section identity-note"><div class="shell identity-note-grid"><div><span class="label">MANIFOLD</span><h2>${en?'The name':'Il nome'}</h2></div><div><p>${e(s.richiamo)}</p><a class="text-link" href="manifold.html">${en?'Meaning and geometric examples':'Significato ed esempi geometrici'} ↗</a></div></div></section>`;
+ return `<section class="section identity-note"><div class="shell identity-note-grid"><div><span class="label">Topological Manifolds</span><h2>${en?'The name':'Il nome'}</h2></div><div><p>${e(s.richiamo)}</p><a class="text-link" href="manifold.html">${en?'Meaning and geometric examples':'Significato ed esempi geometrici'} ↗</a></div></div></section>`;
 }
 export function identityPages(data){
  const en=data.language==='en',d=data.identity;
- const head=s=>`<div class="page-head"><div class="shell"><nav class="breadcrumb" aria-label="${en?'Breadcrumb':'Percorso'}"><a href="index.html">MANIFOLD</a><span aria-hidden="true">/</span><span>${e(s.titolo)}</span></nav><h1>${e(s.titolo)}<span class="dot">.</span></h1><p class="lead">${e(s.sottotitolo)}</p></div></div>`;
+ const head=s=>`<div class="page-head"><div class="shell"><nav class="breadcrumb" aria-label="${en?'Breadcrumb':'Percorso'}"><a href="index.html">Topological Manifolds</a><span aria-hidden="true">/</span><span>${e(s.titolo)}</span></nav><h1>${e(s.titolo)}<span class="dot">.</span></h1><p class="lead">${e(s.sottotitolo)}</p></div></div>`;
  const figures=[['sfera','sphere',en?'Sphere':'Sfera'],['toro','torus',en?'Torus':'Toro'],['mobius','mobius',en?'Möbius strip':'Nastro di Möbius']];
  const m=d.manifold;
  const manifold=`${head(m)}<div class="shell page-body"><div class="prose identity-prose">${markdown(m.testo)}</div><div class="manifold-examples">${figures.map(([key,id,title])=>`<figure class="manifold-example"><img src="media/images/manifold-${id}.webp" alt="${e(title)} — ${en?'surface with a highlighted local region':'superficie con una regione locale evidenziata'}" width="800" height="640" loading="lazy" decoding="async"><figcaption><h2>${title}</h2><p>${e(m[key])}</p></figcaption></figure>`).join('')}</div><p class="small muted identity-limits">${e(m.nota)}</p><div class="actions"><a class="button" href="geometrie.html">${en?'Explore the interactive atlas':'Esplora l’atlante interattivo'} ↗</a></div><div class="identity-sources prose"><h2>${en?'Further reading':'Per approfondire'}</h2>${markdown(m.fonti)}</div></div>`;

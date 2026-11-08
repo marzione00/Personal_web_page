@@ -79,9 +79,9 @@ if(preview){
   const update=()=>{
   views.forEach(v=>v.hidden=v!==view);
   document.querySelectorAll('#primary-nav a').forEach(a=>{if(a.getAttribute('href')===file)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
-  document.querySelectorAll('[data-language]').forEach(a=>{a.dataset.page=file;a.href=(a.dataset.language==='en'?'MANIFOLD_preview_EN.html':'MANIFOLD_anteprima.html')+'#/'+file+(anchor?'#'+anchor:'');});
+  document.querySelectorAll('[data-language]').forEach(a=>{a.dataset.page=file;a.href=(a.dataset.language==='en'?'Topological_Manifolds_preview_EN.html':'Topological_Manifolds_anteprima.html')+'#/'+file+(anchor?'#'+anchor:'');});
   document.querySelector('#primary-nav')?.classList.remove('is-open');document.querySelector('[data-menu]')?.setAttribute('aria-expanded','false');
-  document.title=view.dataset.title+' — MANIFOLD';window.scrollTo(0,0);
+  document.title=view.dataset.title+' — Topological Manifolds';window.scrollTo(0,0);
   if(anchor)view.querySelector('#'+CSS.escape(anchor))?.scrollIntoView();
 
   };
@@ -107,7 +107,7 @@ if(preview){
    return `<img${before}src="data:${mime};base64,${fs.readFileSync(path.join(root,'public',ref)).toString('base64')}" data-original-src="${ref}"${after}>`;
   });
   standalone=standalone.replace(/<noscript>[\s\S]*?<\/noscript>/,`<noscript><p class="noscript">${language==='en'?'This offline preview requires JavaScript to navigate and open embedded PDFs. The multipage site also works without JavaScript.':'Questa anteprima offline richiede JavaScript per navigare e aprire i PDF incorporati. Il sito multipagina funziona anche senza JavaScript.'}</p></noscript>`);
-  fs.writeFileSync(path.join(root,language==='en'?'MANIFOLD_preview_EN.html':'MANIFOLD_anteprima.html'),standalone);
+  fs.writeFileSync(path.join(root,language==='en'?'Topological_Manifolds_preview_EN.html':'Topological_Manifolds_anteprima.html'),standalone);
  }
 }
 console.log(`Build ${data.site.version}: ${pageSets.it.length+pageSets.en.length} pagine IT/EN, ${media.files} media condivisi, ${geometryManifest.length} modelli condivisi. Indicizzazione: ${indexable?'attiva':'disattiva'}.`);

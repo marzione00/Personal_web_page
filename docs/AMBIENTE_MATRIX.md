@@ -1,4 +1,4 @@
-# Ambiente Matrix — v3.0
+# Ambiente Matrix — sistema corrente di Topological Manifolds
 
 ## Spazio e gerarchia
 
@@ -34,7 +34,7 @@ Il ciclo RAF è annullato quando la scheda è nascosta, un dialogo è aperto, il
 
 ## Audio
 
-Suoni elettronici discreti e colonna sonora sono indipendenti e attivati solo su richiesta. Le regole correnti sono documentate in `MANIFOLD_v3.0.md` e `MUSICA_RIPRODUCIBILE.md`.
+Suoni elettronici discreti e colonna sonora sono indipendenti e attivati soltanto su richiesta. I dettagli correnti sono in `MUSICA_RIPRODUCIBILE.md` e in `src/sound.js`; `storico/MANIFOLD_v3.0.md` documenta la versione precedente.
 
 ## Navigazione
 
@@ -51,6 +51,6 @@ Controlli IT/EN, focus e dialoghi nativi, Esc, filtro di famiglia, persistenza o
 `src/ambient-content.mjs`, `src/effects-ui.mjs`, `src/effects.js`, `src/matrix-rain.js`, `src/navigation.js`, `src/ambient.css`, `src/sound.js`; integrazione in `src/render.mjs` e `scripts/build.mjs`. La precedente implementazione Matrix è sostituita, non concatenata. Nessuna variazione alle immagini originali.
 
 
-## Revisione corrente
+## Direzione della cascata
 
-Le scie scendono dall’alto verso il basso, con testa luminosa sul bordo inferiore. Gli effetti sonori usano oscillatori sinusoidali con lieve modulazione; le impostazioni di base descritte sopra sono integrate dal documento `MANIFOLD_v3.0.md`, che è il riferimento corrente per suoni e musica.
+Le scie scendono dall’alto verso il basso, con testa luminosa sul bordo inferiore. La preferenza di movimento ridotto è prioritaria; il catalogo matematico resta disponibile anche senza animazione.

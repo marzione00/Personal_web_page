@@ -1,4 +1,4 @@
-# Sicurezza — MANIFOLD 3.1
+# Sicurezza — Topological Manifolds 3.3
 
 ## Perimetro e limiti
 
@@ -36,4 +36,4 @@ Il nuovo CV non è stato sottoposto a verifica binaria: i suoi byte non erano di
 - GitHub Actions, secure use: https://docs.github.com/en/actions/reference/security/secure-use
 - MDN, frame-ancestors: https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors
 
-Consultati l'8 novembre 2026. Risultati e limiti dei test della consegna: `docs/COLLAUDO_v3.1.md`.
+Consultati l'8 novembre 2026. Risultati e limiti dei test della consegna: `docs/COLLAUDO_v3.3.md`.

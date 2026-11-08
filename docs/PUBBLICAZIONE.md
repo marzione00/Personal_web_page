@@ -1,30 +1,39 @@
-# Nota per la release 3.1
-Prima dei passaggi sotto, aggiungi il PDF originale come `CV.pdf` nella radice. La procedura corrente completa è `../LEGGIMI_PRIMA_DI_CARICARE.md`. Le indicazioni numerate con versioni precedenti sono storiche.
+# Pubblicare Topological Manifolds — procedura corrente (v3.3)
 
-> **NOVITÀ v2.1:** per aggiornare i contenuti pubblici si modificano i file Markdown in `content/markdown/`. Vedere `COME_MODIFICARE_I_TESTI.md` nella radice del repository. Non modificare `dist/` né i vecchi testi duplicati nei metadati JSON.
+Questa è la guida operativa della versione corrente. Le note delle precedenti release si trovano in `docs/storico/`. La pubblicazione GitHub non è stata eseguita in questa sessione.
 
-# Pubblicazione di MDC_LAB 1.5.2
+## Prima del caricamento
+
+1. Conserva una copia del repository attuale e confronta eventuali Markdown, articoli o album personali modificati dopo la versione precedente.
+2. Scarica il **CV originale** fornito dall'autore e aggiungilo come `CV.pdf` nella radice del repository. Questo archivio non contiene un sostituto. Senza il documento il workflow interrompe la pubblicazione.
+3. Estrai lo ZIP dei sorgenti e carica **il suo contenuto** (non la cartella contenitrice) nella radice di `marzione00/Personal_web_page`. Includi la directory nascosta `.github`.
 
 ## GitHub Pages
 
-1. Estrarre il pacchetto sorgenti e caricare i suoi contenuti nella radice di un repository GitHub: `package.json`, `content/`, `src/`, `public/` e `.github/` devono trovarsi allo stesso livello. Non caricare solamente lo ZIP.
-2. Nel repository, aprire **Settings → Pages** e scegliere **GitHub Actions** come origine. Non scegliere `/dist` come cartella di una branch: la cartella `dist` viene prodotta e caricata dal workflow.
-3. In **Settings → Secrets and variables → Actions → Variables**, creare `SITE_URL` con l’URL HTTPS reale del sito e `ENABLE_DEPLOY` con valore `true`. Non sono password. Per un repository di progetto, includere anche il nome del repository nel percorso; per un dominio proprio usare quel dominio.
-4. Eseguire il workflow **Validate and publish static site** dalla scheda Actions, oppure eseguire un commit su `main`. I test devono riuscire prima del deploy.
-5. Verificare il sito pubblicato: foto e geometrie, menu mobile, ricerca, filtri, sette PDF delle lezioni, PDF del saggio, collegamenti. Verificare HTTPS, dominio ed eventuali permessi del CMS. La pubblicazione su account reali non è stata eseguita nel collaudo locale.
+- `Settings → Pages → Build and deployment → Source`: scegliere **GitHub Actions**.
+- `Settings → Secrets and variables → Actions → Variables`: `SITE_URL=https://marzione00.github.io/Personal_web_page/` e `ENABLE_DEPLOY=true`.
+- Eseguire il workflow **Validate and publish static site** su `main` o effettuare il commit su `main`.
+- Controllare i job di build e deploy: non dichiarare il sito aggiornato fino alla conclusione del workflow.
 
-La build locale senza `SITE_URL` non emette un URL canonico falso e imposta `noindex`. Il workflow di pubblicazione usa `--release`, che richiede l’URL reale, crea sitemap e canonical e abilita l’indicizzazione.
+La build crea la cartella `dist/`, che viene pubblicata automaticamente dal workflow. **Non caricare `dist/` manualmente come sorgente** e non sostituire GitHub Actions con Jekyll/Static HTML.
 
-## Un hosting statico diverso
+## Controllo successivo alla pubblicazione
 
-Impostare `SITE_URL`, eseguire `npm run build:release` e pubblicare solamente il contenuto di `dist/`. Il file `_headers` è utilizzabile da hosting compatibili; GitHub Pages non lo applica. I file personali originali restano invariati.
+Visitare il sito italiano e inglese e verificare i titoli **Topological Manifolds**, la pagina `manifold.html`, gli accessi al CV, le citazioni, i PDF del corso Quantum, gli articoli, gli album e i comandi audio. Controllare anche mobile, modalità chiara, formule e visualizzatore 3D. Verificare HTTPS, impostazioni dell'account e permessi del CMS separatamente. Il sito resta statico e non dispone di moduli di autenticazione propri.
 
-## Pages CMS
+## Test locali
 
-La configurazione `.pages.yml` è inclusa. Autorizzare l’app sul solo repository interessato, quindi provare una modifica reversibile a una bozza. La configurazione è predisposta, ma il flusso autenticato non è stato collaudato nel proprio account.
+Con Node.js 22+ e dopo aver aggiunto il CV originale:
 
-## Prima del lancio
+```sh
+npm run security:audit
+npm run import:cv
+npm test
+SITE_URL=https://marzione00.github.io/Personal_web_page/ npm run build:release
+npm run check
+npm run verify:photos
+```
 
-Controllare i contenuti approvati e i diritti sui materiali, attivare la protezione dell’account e della branch principale, verificare i download e conservare una copia locale. Gli allegati pubblici sono accessibili a chiunque. Non inserire password, token o dati riservati nei file.
+Gli aggiornamenti **editoriali** rimangono in `content/markdown/` e `content/markdown/en/`: modificare il Markdown e confermare un commit. Le bozze sono escluse dalla build pubblica, ma in un repository pubblico i loro sorgenti rimangono leggibili. Non inserire chiavi, token o informazioni private.
 
-Riferimento operativo ufficiale consultato per la procedura: https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages
+Il file `_headers` viene ignorato da GitHub Pages; non equivale ad avere configurato gli header HTTP sul servizio. Verificare questa limitazione in `SECURITY.md`.

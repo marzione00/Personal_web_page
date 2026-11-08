@@ -1,4 +1,4 @@
-# MANIFOLD v3.1 — testi, CV originale e sicurezza
+# Topological Manifolds v3.3 — testi, CV originale e sicurezza
 
 ## Un file da aggiungere prima della pubblicazione
 
@@ -8,7 +8,9 @@ Carica il tuo PDF originale come **`CV.pdf` nella radice del repository**, accan
 
 ## Novità
 
-L'introduzione del saggio è stata riscritta in italiano e inglese: citazione iniziale conservata, esempi concreti e passaggio graduale all'analisi. Le sezioni successive, le figure e il PDF originale del saggio restano invariati. Il titolo delle citazioni della homepage è «Conoscenza, realtà, esperienza» / «Knowledge, reality, experience».
+La v3.3 adotta la denominazione pubblica al plurale **Topological Manifolds**. Le tre epigrafi della homepage conservano le traduzioni italiane integrali introdotte nella v3.2 e i passi inglesi nella versione EN. I testi restano modificabili nei Markdown.
+
+L'introduzione del saggio è stata riscritta in italiano e inglese: citazione iniziale conservata, esempi concreti e passaggio graduale all'analisi. Le sezioni successive, le figure e il PDF originale del saggio restano invariati. Il titolo delle citazioni della homepage resta «Conoscenza, realtà, esperienza» / «Knowledge, reality, experience». La spiegazione di *Topological Manifolds* è circoscritta alla pagina sul nome, con esempi di varietà topologiche.
 
 Il sito include apertura e download separati del CV. CSP, integrità dei modelli, confini dei file pubblicabili, controlli allegati e workflow sono stati rafforzati; leggere `SECURITY.md` per limiti e configurazioni esterne necessarie. Nessuna promessa di immunità totale.
 
@@ -38,5 +40,5 @@ Non sono state applicate modifiche al repository remoto. Preserva eventuali tuoi
 
 ## Guide correnti
 
-`LEGGIMI_PRIMA_DI_CARICARE.md`, `COME_MODIFICARE_I_TESTI.md`, `SECURITY.md`, `docs/COLLAUDO_v3.1.md`, `docs/REVISIONE_EDITORIALE_v3.1.md`.
+`LEGGIMI_PRIMA_DI_CARICARE.md`, `COME_MODIFICARE_I_TESTI.md`, `SECURITY.md`, `docs/COLLAUDO_v3.3.md`, `docs/CONTROLLO_STRATIFICAZIONI_v3.3.md`, `docs/IDENTITA.md`, `docs/REVISIONE_EDITORIALE_v3.1.md`.
 I documenti numerati con versioni precedenti descrivono lo storico, non l'esito della release corrente.

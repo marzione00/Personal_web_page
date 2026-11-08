@@ -1,5 +1,5 @@
-/* MANIFOLD: a single identity layer, with editorial pages kept separate from the biography. */
-.brand-word{letter-spacing:.09em;font-size:16px;font-weight:600}
+/* Topological Manifolds: a single identity layer; editorial pages separate from biography. */
+.brand-word{letter-spacing:.025em;font-size:clamp(12px,1.1vw,15px);font-weight:600;white-space:nowrap}
 .footer-links{max-width:680px;justify-content:flex-end;gap:14px 22px}
 .footer-bottom{align-items:flex-start;flex-wrap:wrap}.footer-license{line-height:1.8;text-align:right}
 .footer-license a{text-decoration:underline;text-underline-offset:3px}
@@ -25,3 +25,8 @@ button[data-music-play][aria-pressed=true]{border-color:var(--green);color:var(-
 @media(max-width:1100px) and (min-width:821px){.header-inner{flex-wrap:wrap;gap:8px 16px;padding-block:12px}.nav{order:3;width:100%;justify-content:center;margin:0}.nav a{padding:9px 0}.header-tools{margin-left:auto}.nav a:not([aria-current=page])::after,.nav a[aria-current=page]::after{bottom:3px}}
 @media(max-width:820px){.identity-note-grid{grid-template-columns:1fr;gap:20px}.manifold-examples{grid-template-columns:1fr}.manifold-example{display:grid;grid-template-columns:1fr 1fr;align-items:center}.manifold-example figcaption{padding:24px}.footer-links{justify-content:flex-start}.footer-license{text-align:left}}
 @media(max-width:590px){.manifold-example{display:block}.identity-note p{font-size:16px}.identity-note h2{font-size:32px}.music-actions .button{padding:10px 12px}.music-actions output{margin-left:0}.brand-word{font-size:15px}.manifold-example img{max-height:250px}.manifold-example figcaption{padding:0 22px 24px}}
+
+/* Compact brand typography, retained for the plural identity. */
+@media(max-width:1180px) and (min-width:821px){.brand-word{font-size:13px}.brand{gap:8px}}
+@media(max-width:590px){.brand-word{font-size:12px;letter-spacing:0}.brand{gap:7px}.brand-desc{font-size:9px}}
+@media(max-width:360px){.brand-word{font-size:11px}}
