@@ -73,7 +73,7 @@ with sync_playwright() as pw:
   page.locator('[data-formulas-open]').click();check(lang+' localised formula',page.locator('[data-formula-record]').first.locator('h3').inner_text()==('Newton’s second law' if lang=='en' else 'Seconda legge di Newton'));page.keyboard.press('Escape');check(lang+' audio runtime',not errors,errors);page.close()
  print('offline transitions',flush=True)
  page=b.new_page(viewport={'width':1440,'height':900});errors=[];page.on('pageerror',lambda e:errors.append(str(e)))
- page.set_content((R/'MDC_LAB_anteprima.html').read_text(),wait_until='load');page.wait_for_timeout(200)
+ page.set_content((R/'MANIFOLD_anteprima.html').read_text(),wait_until='load');page.wait_for_timeout(200)
  page.locator('[data-sound-toggle]').click();page.wait_for_timeout(140)
  page.locator('#primary-nav a[href="ricerca.html"]').click();page.wait_for_timeout(900)
  check('offline navigation has its own sound',page.evaluate('MDCSound.counts.page')==1)
@@ -84,6 +84,6 @@ with sync_playwright() as pw:
  page.emulate_media(reduced_motion='reduce');page.wait_for_timeout(150);check('reduced motion disables both',page.evaluate('!MDCEffects.transitions&&!MDCMatrixDebug.active'));check('offline runtime',not errors,errors);page.close()
  ctx=b.new_context(java_script_enabled=False,viewport={'width':390,'height':844});page=ctx.new_page();errors,req=setup(page)
  check('no-JS navigation preserved',page.locator('#primary-nav a').count()==6);check('no-JS hides unused controls',page.locator('[data-effects-open]').is_hidden());ctx.close();b.close()
-report={'version':'2.8','passed':sum(x['passed'] for x in checks),'failed':sum(not x['passed'] for x in checks),'checks':checks,'method':'Chromium virtual-origin fixtures. Real Web Audio and same-document transitions. Cross-document animation awaits deployed-host verification.'}
+report={'version':json.loads((R/'package.json').read_text())['version'],'passed':sum(x['passed'] for x in checks),'failed':sum(not x['passed'] for x in checks),'checks':checks,'method':'Chromium virtual-origin fixtures. Real Web Audio and same-document transitions. Cross-document animation awaits deployed-host verification.'}
 (OUT/'browser-ambient.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n');print({k:v for k,v in report.items() if k!='checks'})
 raise SystemExit(bool(report['failed']))

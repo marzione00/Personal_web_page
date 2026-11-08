@@ -24,6 +24,7 @@
  formulas.addEventListener('change',()=>{state.formulas=formulas.checked;put('mdc-formulas',state.formulas?'on':'off');notify();});
  transitions.addEventListener('change',()=>{state.transitions=transitions.checked;put('mdc-transitions',state.transitions?'on':'off');notify();});
  open.addEventListener('click',()=>dialog.showModal());
+ document.querySelectorAll('[data-music-open]').forEach(b=>b.addEventListener('click',()=>{if(!dialog.open)dialog.showModal();dialog.querySelector('[data-music-play]')?.focus();}));
  dialog.querySelector('[data-effects-close]').addEventListener('click',()=>dialog.close());
  dialog.addEventListener('close',()=>{if(!catalog?.open)open.focus({preventScroll:true});});
  for(const d of [dialog,catalog]){if(!d)continue;d.addEventListener('click',ev=>{if(ev.target===d){const r=d.getBoundingClientRect();if(ev.clientX<r.left||ev.clientX>r.right||ev.clientY<r.top||ev.clientY>r.bottom)d.close();}});}

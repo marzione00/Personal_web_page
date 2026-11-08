@@ -14,10 +14,10 @@ if(editorial&&!preview)throw Error('Le bozze possono essere generate solo con --
 const out=path.join(root,preview?'preview':'dist');
 const datasets=Object.fromEntries(languages.map(language=>[language,loadContent(root,{preview:editorial,language})]));
 const media=validateMedia(root),data=datasets.it;
-const css=['site.css','visual.css','ambient.css'].map(f=>fs.readFileSync(path.join(root,'src',f),'utf8')).join('\n');
+const css=['site.css','visual.css','ambient.css','identity.css'].map(f=>fs.readFileSync(path.join(root,'src',f),'utf8')).join('\n');
 const formulaData=loadAmbientFormulas(root);
 const formulaScript='window.MDCFormulaCatalog='+JSON.stringify(formulaData).replace(/</g,'\\u003c').replace(/>/g,'\\u003e')+';';
-const js=formulaScript+'\n'+['i18n-client.js','app.js','effects.js','sound.js','travel-gallery.js','geometry-loader.js','matrix-rain.js','navigation.js'].map(f=>fs.readFileSync(path.join(root,'src',f),'utf8')).join('\n');
+const js=formulaScript+'\n'+['i18n-client.js','app.js','effects.js','sound.js','music.js','travel-gallery.js','geometry-loader.js','matrix-rain.js','navigation.js'].map(f=>fs.readFileSync(path.join(root,'src',f),'utf8')).join('\n');
 const viewer=fs.readFileSync(path.join(root,'public/assets/geometry-viewer.js'),'utf8');
 const hash=x=>createHash('sha256').update(x).digest('base64');
 const runtime={src:'assets/geometry-viewer-'+createHash('sha256').update(viewer).digest('hex').slice(0,12)+'.js',integrity:'sha256-'+hash(viewer)};
@@ -30,7 +30,11 @@ for(const g of geometryManifest){
  if(scene.subarray(0,4).toString()!=='MDC3'||scene.length>300000||createHash('sha256').update(scene).digest('hex')!==g.sceneSha256)throw Error('Scena non valida: '+g.id);
  if(g.file.endsWith('.svg')&&/<(?:script|text|foreignObject|image|use)\b|\son\w+\s*=|(?:href|style)\s*=/i.test(bytes.toString('utf8')))throw Error('SVG non decorativo o non sicuro: '+g.file);
 }
-export const policy=(script,embedded=false)=>`default-src 'none'; script-src 'self' 'sha256-${hash(script)}'; style-src 'sha256-${hash(css)}'; img-src 'self'${embedded?' data:':''}; font-src 'none'; connect-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'; media-src 'none'`;
+export const policy=(script,embedded=false)=>`default-src 'none'; script-src 'self' 'sha256-${hash(script)}'; style-src 'sha256-${hash(css)}'; img-src 'self'${embedded?' data:':''}; font-src 'none'; connect-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'; media-src 'self'${embedded?' data: blob:':''}`;
+const music=JSON.parse(fs.readFileSync(path.join(root,'content/music-manifest.json'),'utf8'));
+if(music.file!=='audio/local-coordinates.mp3')throw Error('Percorso musica non autorizzato');
+const musicBytes=fs.readFileSync(path.join(root,'public',music.file));
+if(musicBytes.length>8*1024*1024||musicBytes.length<100000||musicBytes.subarray(0,3).toString()!=='ID3'||createHash('sha256').update(musicBytes).digest('hex')!==music.sha256||music.durationSeconds<240)throw Error('Colonna sonora non conforme al manifest');
 const csp=policy(js),pageSets=Object.fromEntries(languages.map(l=>[l,renderPages(datasets[l])]));
 if(pageSets.it.map(p=>p.file).join('|')!==pageSets.en.map(p=>p.file).join('|'))throw Error('Le lingue devono avere percorsi equivalenti.');
 let siteUrl=(process.env.SITE_URL||data.site.siteUrl||'').trim();
@@ -71,9 +75,9 @@ if(preview){
   const update=()=>{
   views.forEach(v=>v.hidden=v!==view);
   document.querySelectorAll('#primary-nav a').forEach(a=>{if(a.getAttribute('href')===file)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
-  document.querySelectorAll('[data-language]').forEach(a=>{a.dataset.page=file;a.href=(a.dataset.language==='en'?'MDC_LAB_preview_EN.html':'MDC_LAB_anteprima.html')+'#/'+file+(anchor?'#'+anchor:'');});
+  document.querySelectorAll('[data-language]').forEach(a=>{a.dataset.page=file;a.href=(a.dataset.language==='en'?'MANIFOLD_preview_EN.html':'MANIFOLD_anteprima.html')+'#/'+file+(anchor?'#'+anchor:'');});
   document.querySelector('#primary-nav')?.classList.remove('is-open');document.querySelector('[data-menu]')?.setAttribute('aria-expanded','false');
-  document.title=view.dataset.title+' — MDC_LAB';window.scrollTo(0,0);
+  document.title=view.dataset.title+' — MANIFOLD';window.scrollTo(0,0);
   if(anchor)view.querySelector('#'+CSS.escape(anchor))?.scrollIntoView();
 
   };
@@ -85,7 +89,8 @@ if(preview){
  window.addEventListener('hashchange',route);route();firstRoute=false;
 })();`;
  const portable=`\n(() => {const files=${JSON.stringify(embedded)},urls=new Map();for(const a of document.querySelectorAll('a[href]')){const ref=a.getAttribute('href').replace(/^\\.\\.\\//,''),file=files[ref];if(!file)continue;if(!urls.has(ref)){const raw=atob(file.base64),bytes=new Uint8Array(raw.length);for(let i=0;i<raw.length;i++)bytes[i]=raw.charCodeAt(i);urls.set(ref,URL.createObjectURL(new Blob([bytes],{type:'application/pdf'})));}a.href=urls.get(ref);a.dataset.embeddedPdf=file.name;if(a.hasAttribute('download'))a.download=file.name;}})();`;
- const combined=viewer+'\nwindow.MDCEmbeddedScenes='+JSON.stringify(sceneTable)+';\n'+js+extra+portable;
+ const soundtrack=fs.readFileSync(path.join(root,'public/audio/local-coordinates.mp3')).toString('base64');
+ const combined='window.ManifoldEmbeddedMusic='+JSON.stringify(soundtrack)+';\n'+viewer+'\nwindow.MDCEmbeddedScenes='+JSON.stringify(sceneTable)+';\n'+js+extra+portable;
  for(const language of languages){
   const pages=pageSets[language],d=datasets[language];
   const one={...pages[0],body:pages.map((p,i)=>`<section data-view="${p.file}" data-title="${escapeHtml(p.title)}"${i?' hidden':''}>${p.body}</section>`).join('')};
@@ -98,7 +103,7 @@ if(preview){
    return `<img${before}src="data:${mime};base64,${fs.readFileSync(path.join(root,'public',ref)).toString('base64')}" data-original-src="${ref}"${after}>`;
   });
   standalone=standalone.replace(/<noscript>[\s\S]*?<\/noscript>/,`<noscript><p class="noscript">${language==='en'?'This offline preview requires JavaScript to navigate and open embedded PDFs. The multipage site also works without JavaScript.':'Questa anteprima offline richiede JavaScript per navigare e aprire i PDF incorporati. Il sito multipagina funziona anche senza JavaScript.'}</p></noscript>`);
-  fs.writeFileSync(path.join(root,language==='en'?'MDC_LAB_preview_EN.html':'MDC_LAB_anteprima.html'),standalone);
+  fs.writeFileSync(path.join(root,language==='en'?'MANIFOLD_preview_EN.html':'MANIFOLD_anteprima.html'),standalone);
  }
 }
 console.log(`Build ${data.site.version}: ${pageSets.it.length+pageSets.en.length} pagine IT/EN, ${media.files} media condivisi, ${geometryManifest.length} modelli condivisi. Indicizzazione: ${indexable?'attiva':'disattiva'}.`);

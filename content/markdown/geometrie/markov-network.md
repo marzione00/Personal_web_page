@@ -17,4 +17,4 @@ I nodi rappresentano variabili e gli archi le interazioni ammesse dal modello. L
 La formula è quella di un modello di Ising su un grafo. Z normalizza le probabilità; hᵢ e Jᵢⱼ regolano i termini locali e le interazioni. Le posizioni dei nodi sono sintetiche: distanze e colori non rappresentano misure né risultati di un classificatore.
 
 ## fonti
-[Lavori di MDC_LAB su modelli grafici](ricerca.html#tema-ia-spiegabile)
+[Lavori di MANIFOLD su modelli grafici](ricerca.html#tema-ia-spiegabile)

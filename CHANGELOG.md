@@ -1,4 +1,15 @@
-# Changelog MDC_LAB
+# Changelog MANIFOLD
+
+## v3.0 — Nome, licenza, ambiente sonoro
+- Identità pubblica MANIFOLD, con URL esistenti invariati.
+- Spiegazione del nome in Markdown IT/EN, tre esempi geometrici e richiamo autonomo in homepage.
+- Pioggia discendente: direzione positiva dei flussi e teste luminose davanti alle scie.
+- Effetti elettronici più morbidi, senza onde quadre, salti di altezza o raffiche di rumore.
+- Colonna sonora originale sintetica di 4:30, opt-in, volume e loop indipendenti; punto di ascolto salvato nella sessione.
+- Licenza CC BY-NC-ND 4.0 con ambito ed esclusioni; nessuna rilicenza dei materiali di terzi o del codice.
+- Sorgenti, build, controlli e anteprime aggiornati; nessun intervento sul repository online.
+
+## Revisioni precedenti (storico)
 
 ## v2.8 — Ambiente Matrix esteso, formule e navigazione
 - Cascate micro-numeriche su tutta la larghezza libera di entrambe le colonne laterali, determinate dalla larghezza effettiva dei contenuti.

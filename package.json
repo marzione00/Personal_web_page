@@ -1,9 +1,9 @@
 {
-  "name": "mdc-lab",
-  "version": "2.8.0",
+  "name": "manifold-personal-site",
+  "version": "3.0.0",
   "private": true,
   "type": "module",
-  "description": "Sito accademico statico, senza dipendenze npm",
+  "description": "MANIFOLD — Marzio De Corato. Ricerca, didattica, scrittura e viaggi.",
   "engines": {
     "node": ">=22"
   },

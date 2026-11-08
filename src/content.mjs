@@ -1,3 +1,4 @@
+import {loadIdentityPages} from './identity.mjs';
 import {loadTravels, readTravelIndex} from './travel.mjs';
 import {localiseData} from './i18n.mjs';
 import fs from 'node:fs';
@@ -160,5 +161,5 @@ export function loadContent(root,{preview=false,language='it'}={}){
  const photoBytes=fs.readFileSync(path.join(root,'public',safeMedia(profile.homepagePhoto.file)));
  if(createHash('sha256').update(photoBytes).digest('hex')!==profile.homepagePhoto.sha256)throw new Error('La fotografia non corrisponde al file originale approvato.');
  for(const post of posts)if(post.geometria&&!geometry.byId[post.geometria])throw Error('Geometria articolo inesistente: '+post.geometria);
- return localiseData(root,{geometry,profile,site,research,home,epigraphs,courses,posts,lectures,publications:publications.sort((a,b)=>b.year.localeCompare(a.year)),travels,travelIndex,preview},language);
+ return localiseData(root,{identity:loadIdentityPages(root,language),geometry,profile,site,research,home,epigraphs,courses,posts,lectures,publications:publications.sort((a,b)=>b.year.localeCompare(a.year)),travels,travelIndex,preview},language);
 }

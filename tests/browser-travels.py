@@ -60,7 +60,7 @@ with sync_playwright() as engine:
  # Build temporary published album with two untouched copies of existing user-provided images.
  with tempfile.TemporaryDirectory(prefix='mdc-travel-browser-') as td:
   dest=Path(td)/'mdc'
-  shutil.copytree(ROOT,dest,ignore=shutil.ignore_patterns('dist','preview','reports','anteprime','node_modules','MDC_LAB_anteprima.html','MDC_LAB_preview_EN.html'))
+  shutil.copytree(ROOT,dest,ignore=shutil.ignore_patterns('dist','preview','reports','anteprime','node_modules','MANIFOLD_anteprima.html','MANIFOLD_preview_EN.html'))
   image_dir=dest/'public/media/images/viaggi/escursione-esempio'
   image_dir.mkdir(parents=True,exist_ok=True)
   shutil.copyfile(dest/'public/media/images/yoga-in-vetta.jpg',image_dir/'foto-01.jpg')

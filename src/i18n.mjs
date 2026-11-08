@@ -119,7 +119,7 @@ export function localiseHtml(html,data){
 }
 export function prefixResources(html,language){
  if(language!=='en')return html;
- return html.replace(/(?<![\w-])(href|src)="((?:media|geometry|assets)\/[^"<>]+)"/g,(_,key,ref)=>`${key}="../${ref}"`);
+ return html.replace(/(?<![\w-])(href|src)="((?:media|geometry|assets|audio)\/[^"<>]+)"/g,(_,key,ref)=>`${key}="../${ref}"`);
 }
 export function languageSwitch(data,page){
  const lang=data.language||'it',file=page.file;

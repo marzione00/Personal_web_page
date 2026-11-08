@@ -1,0 +1,4 @@
+numpy
+scipy
+soundfile
+# FFmpeg (system executable) is required to encode the WAV as FLAC/MP3.

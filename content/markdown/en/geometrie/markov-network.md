@@ -19,4 +19,4 @@ Nodes represent variables and edges represent the interactions permitted by the 
 The formula describes an Ising model on a graph. Z normalises the probabilities; hᵢ and Jᵢⱼ control local terms and interactions. Node positions are synthetic: distances and colours do not represent measurements or classifier results.
 
 ## fonti
-[MDC_LAB work on graphical models](ricerca.html#tema-ia-spiegabile)
+[MANIFOLD work on graphical models](ricerca.html#tema-ia-spiegabile)

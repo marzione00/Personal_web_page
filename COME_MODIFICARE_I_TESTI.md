@@ -1,4 +1,4 @@
-# MDC_LAB — aggiornare il sito senza programmare
+# MANIFOLD — aggiornare il sito senza programmare
 
 **La fonte dei testi è `content/markdown/`.** Non modificare `src/`, `dist/`, `preview/`, i file JavaScript o le copie `docs/BIOGRAFIA.md` per correggere un testo pubblico.
 
@@ -63,7 +63,7 @@ Per un articolo nuovo puoi aggiungere `geometry: program-flow` nell’intestazio
 Per cambiare una frase o una fonte non occorre rigenerare i modelli. Le fotografie approvate restano fuori da qualsiasi generatore grafico.
 
 
-## Italiano e inglese — v2.4
+## Italiano e inglese
 
 I file italiani conservano i percorsi riportati sopra. Ogni traduzione ha lo stesso nome nella sottocartella `content/markdown/en/`. Esempio: `content/markdown/homepage.md` e `content/markdown/en/homepage.md`. Le modifiche restano indipendenti: aggiornare entrambe le lingue quando necessario. Non tradurre i titoli tecnici `## nomeCampo`.
 
@@ -72,7 +72,7 @@ Per aggiungere una traduzione a un nuovo articolo, usare lo stesso nome file sot
 Vedere `docs/BILINGUE_IT_EN.md` per tutti i percorsi e per le voci del curriculum.
 
 
-## Viaggi ed escursioni — nuovo archivio v2.6
+## Viaggi ed escursioni
 
 - Testo introduttivo: `content/markdown/viaggi.md` e `content/markdown/en/viaggi.md`.
 - Un diario + album: **un solo file** `content/markdown/viaggi/<slug>.md`; eventuale traduzione in `content/markdown/en/viaggi/<slug>.md`.
@@ -83,10 +83,18 @@ Vedere `docs/BILINGUE_IT_EN.md` per tutti i percorsi e per le voci del curriculu
 Il sito genera automaticamente l'archivio e la galleria quando `draft: false` e le immagini sono presenti.
 
 
-## v2.8 — Formule dell’ambiente Matrix
+## Formule dell’ambiente Matrix
 
 Modifica `content/markdown/formule-ambiente.md`: è un file unico per entrambe le lingue. Per ogni relazione conserva il titolo tecnico `## id` e le etichette `Famiglia:`, `Titolo:`, `Title:`, `Formula:`, `Condizioni:`, `Conditions:` e `Fonte:`. Titolo/Condizioni sono italiani, Title/Conditions inglesi; Formula e Fonte sono condivisi.
 
-Puoi cambiare i testi senza aprire JavaScript. Le famiglie ammesse sono indicate in `docs/AMBIENTE_MATRIX_v2.8.md`. Non usare equazioni prive di condizioni quando l’identità vale soltanto in un regime particolare. Il catalogo conserva i dettagli; lo sfondo mostra solo formule complete che trovano spazio nel margine.
+Puoi cambiare i testi senza aprire JavaScript. Le famiglie ammesse sono indicate in `docs/AMBIENTE_MATRIX.md`. Non usare equazioni prive di condizioni quando l’identità vale soltanto in un regime particolare. Il catalogo conserva i dettagli; lo sfondo mostra solo formule complete che trovano spazio nel margine.
 
 Le preferenze di animazione, formule e transizioni si controllano dall’icona dei cursori nel sito e non modificano i contenuti del repository. I parametri grafici e il sintetizzatore sono codice tecnico separato dai testi editoriali.
+
+## MANIFOLD — nuovi contenuti
+
+- `content/markdown/manifold.md` e `en/manifold.md`: significato del nome ed esempi.
+- `content/markdown/licenza.md` e `en/licenza.md`: ambito della licenza. Modificarli con attenzione: non cambiano i termini ufficiali CC.
+- `content/markdown/musica.md` e `en/musica.md`: presentazione del brano e ascolto.
+
+L’MP3 è in `public/audio/`; il manifest ne verifica l’integrità. La modifica di una spiegazione non cambia la composizione o le figure. Le preferenze audio e la direzione delle cascate non richiedono interventi quando si aggiorna un testo.

@@ -35,7 +35,7 @@ test('sound module is opt-in, rate-limited, generates oscillators without extern
  assert.match(s,/read\(\)==='on'/);
  assert.match(s,/toggle\.addEventListener\('click'/);
  assert.match(s,/new AudioClass\(\)/);
- assert.match(s,/if\(now-lastChirp<230\)return/);
+ assert.match(s,/if\(now-lastChirp<360\)return/);
  assert.match(s,/createOscillator\(/);
  assert.match(s,/pointerover/);assert.match(s,/focusin/);
  assert.doesNotMatch(s,/fetch\(|\.mp3|\.wav|Audio\(/);

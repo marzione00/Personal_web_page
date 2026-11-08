@@ -65,8 +65,8 @@ La traduzione del saggio conserva argomenti e riferimenti della fonte. Non costi
 ## Due anteprime offline
 
 Nel pacchetto completo tenere insieme:
-- `MDC_LAB_anteprima.html` — italiano;
-- `MDC_LAB_preview_EN.html` — inglese.
+- `MANIFOLD_anteprima.html` — italiano;
+- `MANIFOLD_preview_EN.html` — inglese.
 
 Sono due file autosufficienti per la consultazione (immagini, modelli e PDF incorporati). Il selettore rimanda al file corrispondente e alla stessa pagina interna. Per il cambio lingua offline entrambi devono restare nella stessa cartella. Non pubblicare questi file al posto di `dist/`.
 

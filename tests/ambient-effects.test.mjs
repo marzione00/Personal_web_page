@@ -47,7 +47,7 @@ test('all new browser modules are syntactically valid plain scripts',()=>{
  for(const f of ['effects.js','matrix-rain.js','navigation.js','sound.js'])assert.doesNotThrow(()=>new vm.Script(read('src/'+f)));
 });
 test('sound is user-activated, frequency-modulated and bounded, not external or continuous media',()=>{
- const s=read('src/sound.js');assert.match(s,/read\(\)==='on'/);assert.match(s,/modGain\.connect\(osc\.frequency\)/);assert.match(s,/voices\.size>=4/);assert.match(s,/distance<85/);assert.match(s,/now-lastMove<190/);assert.match(s,/silence\(\)/);assert.doesNotMatch(s,/fetch\(|\.mp3|\.wav/);
+ const s=read('src/sound.js');assert.match(s,/read\(\)==='on'/);assert.match(s,/modGain\.connect\(osc\.frequency\)/);assert.match(s,/voices\.size>=3/);assert.match(s,/distance<180/);assert.match(s,/now-lastMove<520/);assert.match(s,/silence\(\)/);assert.doesNotMatch(s,/fetch\(|\.mp3|\.wav/);
 });
 test('screen transitions do not hijack normal links or delay navigation',()=>{
  const s=read('src/navigation.js');assert.doesNotMatch(s,/preventDefault\(|setTimeout\(|location\.(?:assign|replace)/);

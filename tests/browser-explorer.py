@@ -112,7 +112,7 @@ with sync_playwright() as pw:
  ctx=browser.new_context(java_script_enabled=False,viewport={'width':390,'height':844});page=ctx.new_page();req=[];errs=[];setup(page,req,errs);load(page,'geometrie.html')
  check('no JS: all mathematical descriptions present',page.locator('.atlas-card details').count()==24);page.locator('.atlas-card details summary').first.click();check('no JS: details open natively',page.locator('.atlas-card details').first.get_attribute('open') is not None);ctx.close()
  # Offline monofile contains exact image and PDF bytes and an embedded scene fallback.
- page=browser.new_page(viewport={'width':1440,'height':1000},reduced_motion='reduce');offline=(R/'MDC_LAB_anteprima.html').read_text();page.set_content(offline,wait_until='load');page.locator('[data-view="index.html"] [data-geometry-open="gyroid"]').click();live(page)
+ page=browser.new_page(viewport={'width':1440,'height':1000},reduced_motion='reduce');offline=(R/'MANIFOLD_anteprima.html').read_text();page.set_content(offline,wait_until='load');page.locator('[data-view="index.html"] [data-geometry-open="gyroid"]').click();live(page)
  check('offline preview has working 3D without a server',page.locator('canvas.geometry-canvas').count()==1 and page.locator('#geometry-dialog [role=math]').count()==1);page.keyboard.press('Escape');page.evaluate('location.hash="/geometrie.html"');page.wait_for_timeout(100);check('offline atlas navigation',page.locator('[data-view="geometrie.html"]').is_visible());page.close()
  browser.close()
 check('no runtime errors in normal paths',not errors,errors[:8])

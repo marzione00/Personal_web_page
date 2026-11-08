@@ -1,4 +1,4 @@
-# MDC_LAB v2.8 — tutti i testi visibili qui sono in Markdown.
+# MANIFOLD v3.0 — tutti i testi visibili qui sono in Markdown.
 # Questo pannello usa l'editor di file grezzi: conservare i titoli ## delle sezioni.
 media:
   - name: docs
@@ -20,6 +20,36 @@ media:
     rename: safe
     extensions: [png, jpg, jpeg, webp]
 content:
+  - name: it-manifold
+    label: "IT — manifold"
+    type: file
+    path: content/markdown/manifold.md
+    format: raw
+  - name: it-licenza
+    label: "IT — licenza"
+    type: file
+    path: content/markdown/licenza.md
+    format: raw
+  - name: it-musica
+    label: "IT — musica"
+    type: file
+    path: content/markdown/musica.md
+    format: raw
+  - name: en-manifold
+    label: "EN — manifold"
+    type: file
+    path: content/markdown/en/manifold.md
+    format: raw
+  - name: en-licenza
+    label: "EN — licenza"
+    type: file
+    path: content/markdown/en/licenza.md
+    format: raw
+  - name: en-musica
+    label: "EN — musica"
+    type: file
+    path: content/markdown/en/musica.md
+    format: raw
   - name: formule-ambiente
     label: Formule scientifiche — catalogo bilingue
     type: file

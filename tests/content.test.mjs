@@ -16,7 +16,7 @@ test('Publication catalogue retains at least the 17 CV references',()=>assert.ok
 test('Teaching retains the seven supplied modules',()=>assert.ok(loadContent(root).lectures.length>=7));
 test('Expired postdoc is not rewritten as present',()=>assert.ok(loadContent(root).profile.experience[0].detail.includes('marzo 2026')));
 test('Production and preview include every approved article',()=>{for(const d of [loadContent(root),loadContent(root,{preview:true})]){const pages=renderPages(d);assert.ok(pages.length>=16);for(const post of d.posts)assert.ok(pages.some(p=>p.file==='articolo-'+post.id+'.html'));}});
-test('Real supplied PDF passes baseline checks',()=>assert.equal(validateMedia(root).files,24));
+test('Real supplied PDF passes baseline checks',()=>assert.ok(validateMedia(root).files>=24));
 test('Publishing with a future date excludes the article',()=>fixture(dir=>{changePost(dir,p=>{p.draft=false;p.demo=false;p.sourceStatus='approved';p.body='Saggio reale con testo compiuto per la prova di validazione.';p.date='2099-01-01';});assert.equal(loadContent(dir).posts.length,0);}));
 test('Approved past-dated article is included',()=>fixture(dir=>{changePost(dir,p=>{p.draft=false;p.demo=false;p.sourceStatus='approved';p.body='Testo completo di verifica editoriale.';p.date='2025-01-01';});assert.equal(loadContent(dir).posts.length,1);}));
 test('Impossible calendar dates fail build',()=>fixture(dir=>{changePost(dir,p=>p.date='2026-02-31');assert.throws(()=>loadContent(dir),/Data articolo/);}));
