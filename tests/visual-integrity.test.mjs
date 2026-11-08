@@ -30,8 +30,8 @@ test('photo presentation contains no filters or clipping',()=>{
 });
 test('heterogeneous geometry assets are complete and not repeated under different names',()=>{
  const manifest=JSON.parse(fs.readFileSync(path.join(root,'public/geometry/manifest.json')));
- assert.equal(manifest.length,24);
- assert.equal(new Set(manifest.map(g=>g.sha256)).size,24);
+ assert.equal(manifest.length,7);
+ assert.equal(new Set(manifest.map(g=>g.sha256)).size,7);
  for(const g of manifest){assert.equal(digest(fs.readFileSync(path.join(root,'public/geometry',g.file))),g.sha256);assert.equal(g.labels,false);}
  for(const id of ['gyroid','schwarz-p','schwarz-d','julia','sierpinski','helicoid','torus'])assert.ok(manifest.some(g=>g.id===id));
 });
@@ -50,5 +50,5 @@ test('old decorative labels and photo placeholders are absent in rendered public
 test('distinct mathematical geometry reaches real pages, not only source functions',()=>{
  const text=pages.map(p=>p.body).join('\n');
  for(const id of ['gyroid','schwarz-p','schwarz-d','julia','sierpinski','helicoid','torus'])assert.ok(text.includes(`data-geometry="${id}"`));
- for(const file of ['index.html','didattica.html','ricerca.html','cv.html','blog.html','geometrie.html'])assert.ok(pages.find(p=>p.file===file).body.includes('data-geometry='),file);
+ for(const p of pages)assert.ok(p.body.includes('data-geometry='),p.file);
 });

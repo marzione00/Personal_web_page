@@ -3,7 +3,7 @@
   document.body.classList.add('js');
   const $=(selector,root=document)=>root.querySelector(selector);
   const $$=(selector,root=document)=>Array.from(root.querySelectorAll(selector));
-  // Core UI: no innerHTML, eval or content-to-code conversion. The separate geometry loader fetches local assets on demand.
+  // No innerHTML, eval, dynamic imports, remote requests or content-to-code conversion.
   const readPref=(key)=>{try{return localStorage.getItem(key);}catch{return null;}};
   const writePref=(key,value)=>{try{localStorage.setItem(key,value);}catch{ /* Optional preference only */ }};
   const reading=$('[data-reading]');
@@ -18,13 +18,13 @@
     const list=document.getElementById(panel.dataset.target);
     if(!list)return;
     const inputs=$$('input,select',panel),items=$$('[data-item]',list),count=$('[data-count]',panel),empty=$('[data-empty]',list);
-    const norm=value=>String(value||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase(document.documentElement.lang||'it');
+    const norm=value=>String(value||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase('it');
     function update(){let visible=0;
       items.forEach(item=>{
         const show=inputs.every(input=>{if(!input.value)return true;if(input.type==='search')return norm(item.textContent).includes(norm(input.value));return item.dataset[input.name]===input.value;});
         item.hidden=!show;if(show)visible++;
       });
-      if(count)count.textContent=`${visible} ${document.documentElement.lang==='en'?(visible===1?'result':'results'):(visible===1?'risultato':'risultati')}`;
+      if(count)count.textContent=`${visible} ${visible===1?'risultato':'risultati'}`;
       if(empty)empty.hidden=visible!==0;
     }
     inputs.forEach(input=>input.addEventListener(input.type==='search'?'input':'change',update));

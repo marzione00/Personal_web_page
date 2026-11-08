@@ -11,7 +11,8 @@ const c=loadContent(root),pages=new Map(renderPages(c).map(p=>[p.file,p.body]));
 const get=id=>c.publications.find(p=>p.id===id);
 
 test('release version matches package and public content',()=>{
- assert.equal(JSON.parse(fs.readFileSync(path.join(root,'package.json'))).version,c.site.version+'.0');
+ assert.equal(c.site.version,'2.1');
+ assert.equal(JSON.parse(fs.readFileSync(path.join(root,'package.json'))).version,'2.1.0');
 });
 test('revised teaching lineage is grounded in the author updates',()=>{
  const text=c.profile.personalInterests;

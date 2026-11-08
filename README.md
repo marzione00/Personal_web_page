@@ -1,70 +1,57 @@
-# MDC_LAB v2.6 — Ricerca, didattica, scrittura e viaggi
+# MDC_LAB v2.1 — Sito accademico e blog
 
-Sito personale di Marzio De Corato: sorgenti statici Node.js 22+, senza dipendenze npm. Sito bilingue con selettore **IT / EN**, modalità chiara/scura ed effetti sonori elettronici **opzionali** accanto ai comandi della barra superiore.
+Sito personale di Marzio De Corato, basato su Node.js 22 e GitHub Pages, senza dipendenze npm per la generazione statica.
 
-## Interazioni e contatti
+**Punto di accesso per aggiornare i testi:** [`COME_MODIFICARE_I_TESTI.md`](COME_MODIFICARE_I_TESTI.md). Le modifiche a homepage, epigrafi, biografia, ricerca, articoli e descrizioni di lezioni si fanno esclusivamente in `content/markdown/`.
 
-I collegamenti reagiscono al passaggio del puntatore e al focus da tastiera con un colore verde più luminoso e una transizione di circa 180 ms. Il pulsante audio nella barra superiore è **spento per impostazione predefinita**: dopo un clic esplicito abilita un breve chirp sintetizzato con Web Audio API. La preferenza viene conservata localmente quando il browser lo consente, senza inviare dati, e può essere disattivata in qualsiasi momento. Nessun file audio o servizio esterno. Per le limitazioni dei browser si veda `docs/EFFETTI_E_AUDIO_v2.5.md`.
+## Novità v2.1
 
-**Indirizzo pubblico di contatto:** `marzio.decorato@outlook.it`, in entrambe le lingue. Non è stato modificato il curriculum PDF storico.
+- Homepage aggiornata con i quattro ambiti scientifici correnti, il background in fisica computazionale e il rapporto fra geometria, yoga e arrampicata.
+- Tre epigrafi: Platone, Wheeler, Engel. Tutti i testi delle citazioni sono in `content/markdown/epigrafi.md`.
+- 43 file Markdown usati in build: prosa e spiegazioni scientifiche si aggiornano senza aprire file JS o JSON.
+- Nuovi post creati con un file Markdown con intestazione semplice (esempio in `examples/`).
+- Fotografie originali protette da verifica SHA-256; nessuna alterazione delle immagini, PDF didattici o geometrie.
 
-## Aggiornare un testo
-
-**Italiano:** `content/markdown/`.
-**English:** `content/markdown/en/`, stessi nomi di file e stessi titoli tecnici.
-
-Cambiare il Markdown e confermare il commit: GitHub Actions ricompila entrambe le lingue. Le traduzioni sono file editoriali indipendenti, non traduzioni automatiche ad ogni modifica. Leggere `COME_MODIFICARE_I_TESTI.md` e `docs/BILINGUE_IT_EN.md`.
-
-## Sito pubblicato
-
-- Italiano: `https://marzione00.github.io/Personal_web_page/`
-- English: `https://marzione00.github.io/Personal_web_page/en/`
-
-Sono indirizzi previsti, non attestazioni di pubblicazione avvenuta in questa sessione. Il link IT/EN mantiene la pagina e, con JavaScript, la sezione corrente. Foto, PDF e modelli 3D sono condivisi, non duplicati.
-
-## Compilazione
+## Compilazione locale
 
 ```sh
+node --version # >= 22
 npm test
 npm run build
 npm run check
 npm run verify:photos
 npm run preview:build
-npm run test:browser:travels # richiede Python, Playwright e Chromium
 ```
 
-Rilascio con URL definitivo:
+Per una build di pubblicazione con URL completo:
 
 ```sh
 SITE_URL=https://marzione00.github.io/Personal_web_page/ npm run build:release
 ```
 
-Il workflow `.github/workflows/validate-deploy.yml` pubblica `dist/`. Le variabili restano `SITE_URL` ed `ENABLE_DEPLOY=true`. Non serve un secondo repository o un secondo deploy.
+L'output multipagina è nella cartella `dist/`. L'anteprima offline è `MDC_LAB_anteprima.html` dopo `npm run preview:build`.
 
-## Conservazione degli originali
+## GitHub Pages
 
-Le cinque fotografie, i sette PDF didattici, il PDF del saggio e i diagrammi originali sono invariati. I PDF conservano la lingua originale. Le tre epigrafi sono integrali e identiche alle trascrizioni approvate. La traduzione inglese è nei testi web, non nei file sorgente originali.
+Il workflow è in `.github/workflows/validate-deploy.yml`. Imposta nell'interfaccia del repository:
 
-## Anteprime
+- `Settings → Pages → Build and deployment → GitHub Actions`;
+- `Settings → Secrets and variables → Actions → Variables`: `SITE_URL=https://marzione00.github.io/Personal_web_page/` e `ENABLE_DEPLOY=true`.
 
-`npm run preview:build` genera `MDC_LAB_anteprima.html` e `MDC_LAB_preview_EN.html`. Tenerli nella stessa cartella per cambiare lingua nell'anteprima offline. Gli ZIP sorgenti non includono le copie generate; il pacchetto completo le conserva insieme alle schermate e ai log.
+Carica **i contenuti estratti dello ZIP** nella radice del repository `marzione00/Personal_web_page`, includendo la cartella nascosta `.github`. Il workflow di pubblicazione produce e pubblica `dist/`.
 
-## Documenti
+## CMS
 
-- `LEGGIMI_PRIMA_DI_CARICARE.md`: migrazione sul repository esistente.
-- `docs/BILINGUE_IT_EN.md`: gestione bilingue, nuovi articoli e dettagli tecnici.
-- `docs/EFFETTI_E_AUDIO_v2.5.md`: interazioni, audio opzionale e limiti.
-- `docs/COLLAUDO_v2.6.md`: collaudo della nuova sezione Viaggi e della release.
-- `docs/VIAGGI_E_ALBUM.md`: come caricare album e diari in Markdown, in italiano e inglese.
-- `docs/COLLAUDO_v2.4.md`: collaudo della versione precedente.
-- `docs/GEOMETRIE.md`: visualizzazioni e metodi.
-- `SECURITY.md`: perimetro dei controlli di sicurezza.
-- `CHANGELOG.md`: modifiche della release.
+`.pages.yml` espone direttamente i Markdown con editor raw; evita le vecchie schede JSON, che servono ancora per metadati, file PDF, anni accademici, DOI, collegamenti e identificativi. Il CMS richiede connessione a GitHub e collaudo autenticato.
 
-La configurazione Pages CMS espone anche i file inglesi, ma richiede autorizzazione e prova sul repository reale. Il PDF del CV rimane la precedente versione segnalata nelle pagine web; non è stato rigenerato con questa revisione.
+## Documentazione
 
-## Novità v2.6 — Viaggi ed escursioni
+- `docs/REVISIONE_HOME_v2.1.md`: controllo editoriale, quote e stratificazioni.
+- `COME_MODIFICARE_I_TESTI.md`: guida per aggiornare i file da GitHub senza programmare.
+- `docs/RIPRESA_E_MANUTENZIONE.md`: storico e riferimenti del progetto.
+- `SECURITY.md`: limiti dei controlli di sicurezza.
+- `CHANGELOG.md`: modifiche di versione.
 
-La navigazione include **Viaggi ed escursioni / Travels & Hikes**: archivio diari, album originali, date e località, pagina autonoma per ogni viaggio, galleria fotografica ingrandibile e filtro non appena ci sono più di un diario pubblicato. Non sono stati inseriti racconti o luoghi inventati.
+## Precisazioni
 
-**I contenuti si aggiornano con un solo Markdown per viaggio** in `content/markdown/viaggi/`, con traduzione facoltativa in `content/markdown/en/viaggi/`. Le foto originali vanno in `public/media/images/viaggi/<nome-del-viaggio>/`. Consulta `docs/VIAGGI_E_ALBUM.md` per il procedimento, le bozze e l'uso da GitHub. Gli altri testi restano modificabili nei Markdown esistenti.
+Il curriculum PDF esistente può essere antecedente agli aggiornamenti delle docenze; la biografia web include i dati più recenti confermati. L'articolo «Colpire i nervi del sistema» e i sette PDF del corso Quantum sono conservati; le cinque fotografie sono esattamente gli originali.
