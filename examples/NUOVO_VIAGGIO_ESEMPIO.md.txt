@@ -1,0 +1,19 @@
+---
+title: Inserisci il titolo del viaggio
+date: 2026-11-08
+kind: Escursione
+place: Indica la località (puoi essere generico)
+excerpt: Un breve testo di presentazione, che appare nella scheda dell'archivio.
+draft: true
+---
+
+Racconta il viaggio, l'itinerario, le osservazioni e le impressioni. Puoi usare paragrafi e titoli Markdown.
+
+## Il percorso
+
+Scrivi qui il diario e le tue annotazioni.
+
+## Album
+
+![Descrizione della prima fotografia](media/images/viaggi/nome-del-file/foto-01.jpg)
+![Descrizione della seconda fotografia](media/images/viaggi/nome-del-file/foto-02.jpg)

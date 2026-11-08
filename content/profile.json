@@ -2,7 +2,7 @@
   "name": "Marzio De Corato",
   "headline": "Fisica computazionale · Intelligenza artificiale spiegabile · Cybersecurity · Metodi quantitativi",
   "intro": "Dalla fisica computazionale all’intelligenza artificiale spiegabile, Marzio De Corato studia modelli quantitativi e sicurezza informatica, con un interesse specifico per i problemi della spiegazione scientifica. Insegna Informatica all’Università degli Studi di Milano e Advanced Calculus and Stochastic Processes all’Università Cattolica del Sacro Cuore.",
-  "email": "marzio.decorato@unimi.it",
+  "email": "marzio.decorato@outlook.it",
   "github": "https://github.com/marzione00",
   "linkedin": "https://www.linkedin.com/in/marzio-de-corato-2351a44b/",
   "orcid": "https://orcid.org/0000-0003-1966-6657",
@@ -212,7 +212,9 @@
       "sourceName": "IMG_5706.jpeg",
       "category": "Yoga e montagna",
       "caption": "Pratica in ambiente alpino",
-      "alt": "Una persona esegue una posizione di yoga su una roccia sopra un piccolo lago alpino, con montagne e nevai sullo sfondo."
+      "alt": "Una persona esegue una posizione di yoga su una roccia sopra un piccolo lago alpino, con montagne e nevai sullo sfondo.",
+      "width": 1320,
+      "height": 1626
     },
     {
       "id": "yoga-pratica-studio",
@@ -220,7 +222,9 @@
       "sourceName": "IMG_5707.jpeg",
       "category": "Yoga",
       "caption": "Pratica in studio",
-      "alt": "Fotografia in bianco e nero di una persona che pratica yoga sul tappetino in una sala con specchi."
+      "alt": "Fotografia in bianco e nero di una persona che pratica yoga sul tappetino in una sala con specchi.",
+      "width": 1302,
+      "height": 1373
     },
     {
       "id": "yoga-in-vetta",
@@ -228,7 +232,9 @@
       "sourceName": "IMG_5708.jpeg",
       "category": "Yoga e montagna",
       "caption": "Yoga in quota",
-      "alt": "Una persona con una giacca rossa esegue una posizione di equilibrio su una cima montana, accanto a una croce di vetta."
+      "alt": "Una persona con una giacca rossa esegue una posizione di equilibrio su una cima montana, accanto a una croce di vetta.",
+      "width": 1536,
+      "height": 2048
     },
     {
       "id": "arrampicata-parete",
@@ -236,7 +242,9 @@
       "sourceName": "IMG_5705.jpeg",
       "category": "Arrampicata",
       "caption": "Allenamento su parete",
-      "alt": "Una persona si arrampica su una parete artificiale con prese numerate, sostenendosi con mani e piedi."
+      "alt": "Una persona si arrampica su una parete artificiale con prese numerate, sostenendosi con mani e piedi.",
+      "width": 1320,
+      "height": 1685
     }
   ],
   "homepagePhoto": {

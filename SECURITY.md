@@ -1,4 +1,4 @@
-# Sicurezza · MDC_LAB 1.4
+# Sicurezza · MDC_LAB 2.3
 
 Il sito è statico. La revisione è stata verificata localmente; non è stato svolto un penetration test, né configurato l’account dell’autore. Nessuna garanzia di invulnerabilità.
 
@@ -6,11 +6,11 @@ Il sito è statico. La revisione è stata verificata localmente; non è stato sv
 
 I JSON vengono validati prima del rendering; i testi sono sottoposti a escaping. Il Markdown ammesso è limitato e non esegue HTML o MDX. Sono accettati percorsi locali vincolati e collegamenti HTTPS. La build rifiuta riferimenti a file assenti e stati editoriali incoerenti.
 
-La CSP autorizza script e stili tramite hash SHA-256. Non vengono usati `unsafe-inline`, `unsafe-eval`, tracker, font remoti o librerie CDN. L’applicazione pubblica non ha login, database, modulo di caricamento o backend propri. La parte amministrativa rimane esterna (GitHub/Pages CMS).
+La CSP autorizza script inline e stili tramite hash SHA-256; il solo renderer differito è un file sullo stesso sito, con nome content-hashed e SRI. `script-src` e `connect-src` consentono il medesimo origin per caricare renderer e mesh locali. Non vengono usati `unsafe-inline`, `unsafe-eval`, tracker, font remoti o librerie CDN. L’applicazione pubblica non ha login, database, modulo di caricamento o backend propri. La parte amministrativa rimane esterna (GitHub/Pages CMS).
 
 La versione multipagina carica le immagini dallo stesso sito; la versione monofile ammette `data:` **solo in `img-src`**, per incorporare immagini originali e grafiche. I PDF portabili sono Blob locali, aperti fuori da iframe. La verifica base64/SHA-256 confronta il contenuto incorporato con gli originali; questa verifica non è una scansione antivirus.
 
-I controlli sulle foto verificano il file originale approvato; quelli sulle geometrie verificano gli hash del manifest e rifiutano testo SVG, script, risorse remote e handler. I file SVG decorativi sono generati dal codice e sono separati dagli allegati caricabili dal CMS; non è stata aperta la possibilità di caricare SVG arbitrari negli articoli.
+I controlli sulle foto verificano il file originale approvato; quelli sulle geometrie verificano gli hash del manifest e rifiutano testo SVG, script, risorse remote e handler. Le geometrie correnti usano anteprime WebP e mesh binarie MDC3 con firma, dimensione e SHA-256 controllati. Il caricatore rifiuta percorsi esterni; il decoder verifica conteggi, dimensioni e indici. Le formule sono testo escappato e non codice eseguibile. Non è aperta la possibilità di caricare SVG arbitrari negli articoli.
 
 ## Allegati
 
@@ -31,3 +31,7 @@ Il workflow conserva i riferimenti alle azioni tramite commit completi, evita di
 Autenticazione e permessi Pages CMS, protezione della branch, configurazione GitHub e dominio, deployment, comportamento su browser diversi da Chromium, tecnologie assistive, backup/ripristino, disponibilità e protezioni del provider. Non sono stati configurati WAF, DDoS protection o rate limiting.
 
 Le fonti tecniche e i riferimenti operativi delle precedenti versioni sono conservati nella documentazione storica ove presenti. La guida corrente per pubblicare è `docs/PUBBLICAZIONE.md`.
+
+## Interazione 3D
+
+WebGL è facoltativo e non richiede CDN, WebSocket o invii a server esterni. Un unico canvas, una cache di cinque modelli, limiti di dimensione e arresto delle animazioni riducono il consumo. Queste precauzioni non equivalgono a una certificazione del driver grafico o a un penetration test. La CSP della copia offline include esclusivamente le risorse incorporate autorizzate dai rispettivi hash e le immagini data URI.

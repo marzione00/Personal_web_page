@@ -9,7 +9,8 @@ Apri su GitHub il file Markdown desiderato, clicca sulla matita, modifica il tes
 | Che cosa vuoi modificare | File Markdown |
 |---|---|
 | Settori scientifici e tre paragrafi della Home | `content/markdown/homepage.md` |
-| Le tre epigrafi (estratto e fonte) | `content/markdown/epigrafi.md` |
+| Le tre epigrafi (testo integrale e fonte) | `content/markdown/epigrafi.md` |
+| Formule, spiegazioni e fonti di una geometria | `content/markdown/geometrie/<id>.md` |
 | Biografia, insegnanti, yoga e presentazione breve | `content/markdown/profilo.md` |
 | Presentazione generale della ricerca | `content/markdown/ricerca.md` |
 | Singolo tema di ricerca | `content/markdown/aree-ricerca/<id>.md` |
@@ -52,3 +53,31 @@ Repository: `marzione00/Personal_web_page`.
 - Workflow incluso: `.github/workflows/validate-deploy.yml`.
 
 Per leggere una singola modifica online, attendi il risultato del workflow nella scheda Actions e poi ricarica il sito.
+
+## Geometrie interattive
+
+Ogni modello ha un Markdown in `content/markdown/geometrie/`. Conserva le sezioni `## titolo`, `## tema`, `## formula`, `## spiegazione`, `## limiti`, `## fonti`; modifica il testo sottostante. La build genera sia la finestra sia la scheda nell’atlante. Le formule sono testo matematico Unicode leggibile: non richiedono MathJax o JavaScript. Mantieni coerente la formula con il modello; cambiare la formula non modifica la mesh.
+
+Per un articolo nuovo puoi aggiungere `geometry: program-flow` nell’intestazione del Markdown, scegliendo uno degli ID di `docs/GEOMETRIE.md`. Per l’articolo già presente usa `## geometria` in `content/markdown/post-details/colpire-i-nervi-del-sistema.md`. Il campo è facoltativo: senza una scelta esplicita il post non riceve una figura arbitraria. Non assegnare lo stesso soggetto a più articoli della stessa pagina di archivio.
+
+Per cambiare una frase o una fonte non occorre rigenerare i modelli. Le fotografie approvate restano fuori da qualsiasi generatore grafico.
+
+
+## Italiano e inglese — v2.4
+
+I file italiani conservano i percorsi riportati sopra. Ogni traduzione ha lo stesso nome nella sottocartella `content/markdown/en/`. Esempio: `content/markdown/homepage.md` e `content/markdown/en/homepage.md`. Le modifiche restano indipendenti: aggiornare entrambe le lingue quando necessario. Non tradurre i titoli tecnici `## nomeCampo`.
+
+Per aggiungere una traduzione a un nuovo articolo, usare lo stesso nome file sotto `en/posts/` con titolo, categoria ed estratto inglesi nell’intestazione. La data e lo stato bozza provengono dall’originale italiano. Una traduzione mancante viene dichiarata ai lettori, senza bloccare la pubblicazione dell’articolo italiano.
+
+Vedere `docs/BILINGUE_IT_EN.md` per tutti i percorsi e per le voci del curriculum.
+
+
+## Viaggi ed escursioni — nuovo archivio v2.6
+
+- Testo introduttivo: `content/markdown/viaggi.md` e `content/markdown/en/viaggi.md`.
+- Un diario + album: **un solo file** `content/markdown/viaggi/<slug>.md`; eventuale traduzione in `content/markdown/en/viaggi/<slug>.md`.
+- Fotografie originali: `public/media/images/viaggi/<slug>/`.
+- Modello da copiare: `examples/NUOVO_VIAGGIO_ESEMPIO.md.txt`.
+- Guida con esempi, caricamento da GitHub, pubblicazione delle bozze e privacy EXIF: `docs/VIAGGI_E_ALBUM.md`.
+
+Il sito genera automaticamente l'archivio e la galleria quando `draft: false` e le immagini sono presenti.
