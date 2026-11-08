@@ -1,23 +1,1773 @@
 {
-  "version": "2.1.0",
-  "releaseDate": "2026-11-08",
-  "project": "MDC_LAB",
-  "sourceOfText": "content/markdown/",
-  "editableMarkdownFiles": 43,
-  "validatedOriginalPhotos": {
-    "public/media/images/arrampicata-parete.jpg": "2ad52b8d557d2f0555cdd102e9340f174030db194827483d9ec38e87f48a8863",
-    "public/media/images/homepage-portrait.jpg": "c848f8613827ad1a38443e61ccfe4ca9ef78ea9a93111055c239ac389a763e55",
-    "public/media/images/yoga-in-vetta.jpg": "d604234c180a94dc5cf34dc3adeb18374c3db88b72402424585b4e0c9df38109",
-    "public/media/images/yoga-montagna-lago.jpg": "70a53ae7f2ea9bfcc0ced82ade0811e98e22e250f97d42fde7e1455676170c5f",
-    "public/media/images/yoga-pratica-studio.jpg": "b614edef5ffd3f36f526db5330a31e9661d453601bbfe4d519afe5acde810336"
+  "version": "2.6.0",
+  "languages": [
+    "it",
+    "en"
+  ],
+  "pages": 36,
+  "public_travel_diaries": 0,
+  "geometric_models": 24,
+  "tests": {
+    "node": 157,
+    "browser_travel": 9,
+    "local_links": 2998,
+    "original_photos_verified": 5
   },
-  "workflow": ".github/workflows/validate-deploy.yml",
-  "preview": "MDC_LAB_anteprima.html",
-  "releaseSite": "dist/",
-  "publicUrl": "https://marzione00.github.io/Personal_web_page/",
-  "notes": [
-    "Le fotografie originali non sono state modificate.",
-    "Le epigrafi sono riportate come estratti attribuiti.",
-    "La versione online non è stata modificata da questa consegna."
+  "source_files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 80,
+      "sha256": "16a4888b912c22082d69c951de0f6a27e72d9f2836aec52c779ceb49def9c537"
+    },
+    {
+      "path": ".github/dependabot.yml",
+      "bytes": 144,
+      "sha256": "5e54c7e473646e7b15345ac8dc7749922495be1cac57135cdf3cde5e4d20911f"
+    },
+    {
+      "path": ".github/workflows/validate-deploy.yml",
+      "bytes": 2045,
+      "sha256": "3b833376e95cc8fcc85baf56e2a069a6e42d0b1d8a233966bb45e9f7a2b8c4fb"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 172,
+      "sha256": "c3efb3c0e3e93022bf0cd4e496d63248359501105551d5b3f4d895c0c1145227"
+    },
+    {
+      "path": ".nvmrc",
+      "bytes": 3,
+      "sha256": "f14b4987904bcb5814e4459a057ed4d20f58a633152288a761214dcd28780b56"
+    },
+    {
+      "path": ".pages.yml",
+      "bytes": 4803,
+      "sha256": "e83e58cc6b64ba116bcacd5efe1bc93a96e6d7642ee0d93a13dd2fae1f957f61"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 2944,
+      "sha256": "89c883dade38944c8838982646a54600b0a69443e9fb99d333105991566f3201"
+    },
+    {
+      "path": "COME_MODIFICARE_I_TESTI.md",
+      "bytes": 6144,
+      "sha256": "8d32aa0a6cfa8c15979b2954546eb0261323702b963d5bac887be0c6de2ceff8"
+    },
+    {
+      "path": "FOTO_ORIGINALE_IMPORTANTE.md",
+      "bytes": 696,
+      "sha256": "88e2c4406b7a0292910ce07e628be083db5c82fd10a854a98a729aaba1cff3f2"
+    },
+    {
+      "path": "LEGGIMI_PRIMA_DI_CARICARE.md",
+      "bytes": 2134,
+      "sha256": "30f6da85aa193fdb8e6e4b1651f2e44a25c2535a2983a3db87ced527bcaeebcd"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4443,
+      "sha256": "c99c8fd7268f5c1af2b624fd0697f410ea60c25fb344e13975e546811ff3ff11"
+    },
+    {
+      "path": "SECURITY.md",
+      "bytes": 4419,
+      "sha256": "a8f40fb7c07d91551dcfe92df95f5b16f3ad1737044cc3d2ff2b6279934bc738"
+    },
+    {
+      "path": "content/courses/advanced-calculus-2024-2025.json",
+      "bytes": 552,
+      "sha256": "6f1115a9a0879f5877de0c3fd4c089ca8a0777a683b0877a3b0b22cd1d8abae6"
+    },
+    {
+      "path": "content/courses/advanced-calculus-2025-2026.json",
+      "bytes": 552,
+      "sha256": "1d0f9e94bca30cd5424d3bec26af72e4b3b0627df880a92896897959732ff4f1"
+    },
+    {
+      "path": "content/courses/advanced-calculus-2026-2027.json",
+      "bytes": 555,
+      "sha256": "533651696980f82c4aad2fc778d99ecebb6ea3bf7d1c945756abb59fc115b148"
+    },
+    {
+      "path": "content/courses/matematica-i-informatica-2025-26.json",
+      "bytes": 512,
+      "sha256": "4afa448f3ce87c674f6e64ebee73279c1e0954a720ea2912f3a35bcdb8da5e39"
+    },
+    {
+      "path": "content/courses/matematica-i-informatica-2026-27.json",
+      "bytes": 485,
+      "sha256": "7971f087b1c174352597e80f79924fb4604e0fc6d8e65df170972b1caccbf163"
+    },
+    {
+      "path": "content/courses/quantum-post-quantum-computing-2026-2027.json",
+      "bytes": 1570,
+      "sha256": "7fc3e7037287153bb81892bcee958bd75c2095c953d8a0cf9e6429d4b1c3089a"
+    },
+    {
+      "path": "content/lectures/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "content/lectures/quantum-2026-2027-modulo-01.json",
+      "bytes": 930,
+      "sha256": "14ae4aa33478c4547b53106d95a4098b8d83854d1000fe8270de8ed21a9a6174"
+    },
+    {
+      "path": "content/lectures/quantum-2026-2027-modulo-02.json",
+      "bytes": 835,
+      "sha256": "48931b53d6d7d2f09f68c791fee9dd0ecb1f8f3587e1149464bc081adc4c7d6e"
+    },
+    {
+      "path": "content/lectures/quantum-2026-2027-modulo-03.json",
+      "bytes": 893,
+      "sha256": "76ce6547f8c7757a065791fcacc389c4acdce2afd3767acace2874ec6a68300e"
+    },
+    {
+      "path": "content/lectures/quantum-2026-2027-modulo-04.json",
+      "bytes": 861,
+      "sha256": "acb6c1b011c8f49980e75347222063e07d98d2832ea70b433f04ea277e929712"
+    },
+    {
+      "path": "content/lectures/quantum-2026-2027-modulo-05.json",
+      "bytes": 906,
+      "sha256": "a5dd36457b381645bb561a74e88d77e4908b2304ab3539a2eeda9e5c402254a8"
+    },
+    {
+      "path": "content/lectures/quantum-2026-2027-modulo-06.json",
+      "bytes": 902,
+      "sha256": "ee83e4db63139e7ee774c2e114d19c7347625099091131a7ef87a4072fcff368"
+    },
+    {
+      "path": "content/lectures/quantum-2026-2027-modulo-07.json",
+      "bytes": 892,
+      "sha256": "3dd55dc02b521c7ffff5604c60071f2064ee2a362ae60c19dd6be4e1e1b9163d"
+    },
+    {
+      "path": "content/markdown/aree-ricerca/architettura-sistemi.md",
+      "bytes": 1225,
+      "sha256": "8a71f3ff98af4137e8b2b1167ac01d0f6eb84c0d33c4b3be2b73c1e21a8c83da"
+    },
+    {
+      "path": "content/markdown/aree-ricerca/calcolo-quantistico.md",
+      "bytes": 1253,
+      "sha256": "fcf9b246f3e717058266b4f6d4a718b32e9ab85d761a7d4fc76f7b0024c2b5b1"
+    },
+    {
+      "path": "content/markdown/aree-ricerca/cybersecurity.md",
+      "bytes": 1713,
+      "sha256": "0f21ce806877a2fc82ed40c3d2da2d516c925879dc66bade3e06166d3b28967d"
+    },
+    {
+      "path": "content/markdown/aree-ricerca/epistemologia.md",
+      "bytes": 1368,
+      "sha256": "1126471e964554be16f2d44d866df4b96a3700650636cdbb109a4e6040c335bc"
+    },
+    {
+      "path": "content/markdown/aree-ricerca/fisica-nanostrutture.md",
+      "bytes": 1566,
+      "sha256": "f59145a720f87a039393321503eab2213223119bbdacb46be58129f79b1c2ec2"
+    },
+    {
+      "path": "content/markdown/aree-ricerca/ia-spiegabile.md",
+      "bytes": 1717,
+      "sha256": "65a10733b10d3c6060c7c85152758894a72e561c7e1d1f5170dc73ca4b130dcd"
+    },
+    {
+      "path": "content/markdown/aree-ricerca/metodi-quantitativi.md",
+      "bytes": 1813,
+      "sha256": "9e0a1f6e486f49631e97a08436a10befede10be8828c5a0bd11876cf48f02104"
+    },
+    {
+      "path": "content/markdown/courses/advanced-calculus-2024-2025.md",
+      "bytes": 299,
+      "sha256": "2339125c83cb25b468a8d7731d921542753d81e6112169d511eff1556518c4be"
+    },
+    {
+      "path": "content/markdown/courses/advanced-calculus-2025-2026.md",
+      "bytes": 299,
+      "sha256": "ddf580a318216aa24c03707032bb1eaf9bde29fdee8bd86ea950560218b54673"
+    },
+    {
+      "path": "content/markdown/courses/advanced-calculus-2026-2027.md",
+      "bytes": 284,
+      "sha256": "7397bcb9daa84c53fe4f512fde342d95b7000b3a8dbb102b1115d292ff9f5462"
+    },
+    {
+      "path": "content/markdown/courses/matematica-i-informatica-2025-26.md",
+      "bytes": 292,
+      "sha256": "7293ba74821c49bddee73b1b9e24f546d5225b4afc09d4aeb6b16a343f5ef548"
+    },
+    {
+      "path": "content/markdown/courses/matematica-i-informatica-2026-27.md",
+      "bytes": 255,
+      "sha256": "0ef1ac6a5632f0f5d57f440af6fe14a8dcd2f2edc90590ebf2ae5c721ec587a1"
+    },
+    {
+      "path": "content/markdown/courses/quantum-post-quantum-computing-2026-2027.md",
+      "bytes": 350,
+      "sha256": "d5a6b13d9ae4b6f52eaf3e98c588d92d1a36f2778b52649337687390372da7de"
+    },
+    {
+      "path": "content/markdown/en/aree-ricerca/architettura-sistemi.md",
+      "bytes": 1091,
+      "sha256": "8413dba113c2811248b63df8e586d12deb0d8773ad1ef6b70ce387d8c79c7041"
+    },
+    {
+      "path": "content/markdown/en/aree-ricerca/calcolo-quantistico.md",
+      "bytes": 1148,
+      "sha256": "7e7ba8fdbed5ba9c2abcc70f28f198116ac3a0c3ba0d8d6a41f406b50f20517c"
+    },
+    {
+      "path": "content/markdown/en/aree-ricerca/cybersecurity.md",
+      "bytes": 1461,
+      "sha256": "ecdf25e426bff640d8d50223b26e04292362759cf272abbf2453f3286984f16c"
+    },
+    {
+      "path": "content/markdown/en/aree-ricerca/epistemologia.md",
+      "bytes": 1280,
+      "sha256": "c9859e3ceac9f09e692f4e979b961850ecea53c33334e70552156c7d66cdee7f"
+    },
+    {
+      "path": "content/markdown/en/aree-ricerca/fisica-nanostrutture.md",
+      "bytes": 1455,
+      "sha256": "ec3fecf6f79f2e4584491acb4a83777c009e061aa92cbe0013c980f0b0006dd1"
+    },
+    {
+      "path": "content/markdown/en/aree-ricerca/ia-spiegabile.md",
+      "bytes": 1637,
+      "sha256": "ac8f37eafce842b0e7aabdf53498a14a1c43c3cb6f44b2ad750b0011673e911c"
+    },
+    {
+      "path": "content/markdown/en/aree-ricerca/metodi-quantitativi.md",
+      "bytes": 1593,
+      "sha256": "2cc57319356de0f2eb60d3e290f5d518d63493d3f10aed95430a6c386b7a8a3f"
+    },
+    {
+      "path": "content/markdown/en/courses/advanced-calculus-2024-2025.md",
+      "bytes": 331,
+      "sha256": "4f258b097cd476945c8069c2575b4cda0aedd8745532cc0c3c183c58e25f3cb9"
+    },
+    {
+      "path": "content/markdown/en/courses/advanced-calculus-2025-2026.md",
+      "bytes": 331,
+      "sha256": "f85d42d55c9165237afdba20d2ba930ef7363753894e21f8cb9888fc4220dcfe"
+    },
+    {
+      "path": "content/markdown/en/courses/advanced-calculus-2026-2027.md",
+      "bytes": 329,
+      "sha256": "e74a50eaeb4554e6c1c12b26db73a90808ce4b97c9f834d6855153d79be034b5"
+    },
+    {
+      "path": "content/markdown/en/courses/matematica-i-informatica-2025-26.md",
+      "bytes": 334,
+      "sha256": "94bb06f1b204caf9bceb3b12cd1f19c795ec482d7f4d964570c316b455284734"
+    },
+    {
+      "path": "content/markdown/en/courses/matematica-i-informatica-2026-27.md",
+      "bytes": 302,
+      "sha256": "be8accc17aaa6eb59d2847a3583b806a72d13ad882e12b35647c47576c1e31b0"
+    },
+    {
+      "path": "content/markdown/en/courses/quantum-post-quantum-computing-2026-2027.md",
+      "bytes": 1074,
+      "sha256": "2c583eb1a6c22b2643c1f22748ee0a862156d1392099dd2adaf2a04c553ada9e"
+    },
+    {
+      "path": "content/markdown/en/epigrafi.md",
+      "bytes": 1260,
+      "sha256": "16effcf501ca487fb4f8d31ba645e84f1266fff39a1266fb82c7d413f0dcfec4"
+    },
+    {
+      "path": "content/markdown/en/geometrie/bloch-sphere.md",
+      "bytes": 808,
+      "sha256": "f7a6b6be0eb96f843ad7bbc8658a1c5e5b5a047465b93247d788276d42d59613"
+    },
+    {
+      "path": "content/markdown/en/geometrie/catenoid.md",
+      "bytes": 663,
+      "sha256": "dabe0baf87fc9e22f96ef33559df7805b2208dcac38e09b3228cd3ac5ad7be93"
+    },
+    {
+      "path": "content/markdown/en/geometrie/covariance.md",
+      "bytes": 819,
+      "sha256": "012b558a94e49990c85510ebcdb8075800c1c89afe0d486e07e0aa03191f3ccd"
+    },
+    {
+      "path": "content/markdown/en/geometrie/decision-surface.md",
+      "bytes": 753,
+      "sha256": "a7fa29d988ffd4f52ef3f3dc031e4cca6ada30f772886a4f548d574a575ad8c4"
+    },
+    {
+      "path": "content/markdown/en/geometrie/entropy-trace.md",
+      "bytes": 907,
+      "sha256": "d13b8dbcf383fbc5b4f5b700b430fe4122ea69d88fa690cd0358c4312666d0f8"
+    },
+    {
+      "path": "content/markdown/en/geometrie/gaussian-density.md",
+      "bytes": 757,
+      "sha256": "76d8cf465bfa7a660828697cb30de7cf76b7244fea903ed5b62d174deb8e3fc7"
+    },
+    {
+      "path": "content/markdown/en/geometrie/graphene-ribbon.md",
+      "bytes": 744,
+      "sha256": "4456afd1cad68eda580bceb4e29d690d1890175523df4ca3bfadcce3ae021c35"
+    },
+    {
+      "path": "content/markdown/en/geometrie/gyroid.md",
+      "bytes": 700,
+      "sha256": "d6afce7d875fb7b1bd844f7abf6ed28b561d060a715b2a20881d0747ffa52a68"
+    },
+    {
+      "path": "content/markdown/en/geometrie/helicoid.md",
+      "bytes": 637,
+      "sha256": "89d53e375ae0d187a77949be5dea786c6bda10193f2fb88d56cda50b26ad2125"
+    },
+    {
+      "path": "content/markdown/en/geometrie/interference.md",
+      "bytes": 833,
+      "sha256": "8f7f6a5848bd9d6d23a054857d1bda5788c4f1fabf5602a665b6b19467bcb02b"
+    },
+    {
+      "path": "content/markdown/en/geometrie/julia.md",
+      "bytes": 725,
+      "sha256": "8ff172846892a2e7e91e0f12a236275ad11286a275200156f2f709f5eecdbc9b"
+    },
+    {
+      "path": "content/markdown/en/geometrie/lattice.md",
+      "bytes": 830,
+      "sha256": "3e7d86a50370efcae1d18d4d3d8e13d7abf9262feba37d0d5ff2c6ce0b5cc366"
+    },
+    {
+      "path": "content/markdown/en/geometrie/markov-network.md",
+      "bytes": 839,
+      "sha256": "60f56131d650df790d60f21bb961082700174cafff97b4cf1fd55ddcba23c81a"
+    },
+    {
+      "path": "content/markdown/en/geometrie/menger.md",
+      "bytes": 657,
+      "sha256": "dc3bb602813cd724f7c65202126e49ad0f8f15266ecc4c3b36da67f5c3f6c794"
+    },
+    {
+      "path": "content/markdown/en/geometrie/mobius.md",
+      "bytes": 790,
+      "sha256": "d3effb7aff029d94737d5be4d2ee67506a72a226e9266c85bc68876d068da962"
+    },
+    {
+      "path": "content/markdown/en/geometrie/program-flow.md",
+      "bytes": 760,
+      "sha256": "9856309987962f67b5f3b2c73b40b7d52ca0e6c68cda95687257f17b0656c4f8"
+    },
+    {
+      "path": "content/markdown/en/geometrie/quantum-circuit.md",
+      "bytes": 859,
+      "sha256": "1e250bd10bfa2a6ca19dc401297a7b0a04589d917fe0197e80857d5bd21a20cc"
+    },
+    {
+      "path": "content/markdown/en/geometrie/schwarz-d.md",
+      "bytes": 738,
+      "sha256": "bc3977f31c71d66b0832c8e02b97402d4d721402022f8e3247151ddd9e13da78"
+    },
+    {
+      "path": "content/markdown/en/geometrie/schwarz-network.md",
+      "bytes": 912,
+      "sha256": "26348b028e4894a5c0f85d8d1d58e9b991c5aac481d6cb3d783939f257e95284"
+    },
+    {
+      "path": "content/markdown/en/geometrie/schwarz-p.md",
+      "bytes": 734,
+      "sha256": "c9afbdb6fa79508b47a7e612f7fd1e5a33716e202f6f31900f65cf65ac757196"
+    },
+    {
+      "path": "content/markdown/en/geometrie/sierpinski.md",
+      "bytes": 685,
+      "sha256": "fc8a2d60c4d1e5a72f351bacb39e69b487cbbe663f94eb9f04cbaba86d547831"
+    },
+    {
+      "path": "content/markdown/en/geometrie/stochastic-paths.md",
+      "bytes": 869,
+      "sha256": "e57dee94d11ccf40de51af31c1e6c76c860aa224236de6c4f99f5e9d64600c53"
+    },
+    {
+      "path": "content/markdown/en/geometrie/torus.md",
+      "bytes": 655,
+      "sha256": "dd6f23df7b323552f1d35a14ab60150b1f6f86bd573fd06a17216273c64309d2"
+    },
+    {
+      "path": "content/markdown/en/geometrie/vibrational-mode.md",
+      "bytes": 766,
+      "sha256": "7580e59352d1aeedabdc26f7b82c45dc731dcaa48165933b35028e3bcfe10f12"
+    },
+    {
+      "path": "content/markdown/en/homepage.md",
+      "bytes": 1199,
+      "sha256": "ebc5d1461e620934c5163484fd8210118581745874f63090181da8c196abf326"
+    },
+    {
+      "path": "content/markdown/en/interfaccia.md",
+      "bytes": 26392,
+      "sha256": "17740a1868219bfd7ebdc9c3bc288d8d7238eee8d1b93d13a6f04dd98f7853e3"
+    },
+    {
+      "path": "content/markdown/en/lectures/quantum-2026-2027-modulo-01.md",
+      "bytes": 616,
+      "sha256": "dda83259897109b664aa1b8a5de5b3db8e3c0b77320c0d5ea09da7bf879d9a05"
+    },
+    {
+      "path": "content/markdown/en/lectures/quantum-2026-2027-modulo-02.md",
+      "bytes": 515,
+      "sha256": "b125a1de2e7aae1d33a9df5e653ae14c7a15eed06ce897df112f0a7c2580bed2"
+    },
+    {
+      "path": "content/markdown/en/lectures/quantum-2026-2027-modulo-03.md",
+      "bytes": 559,
+      "sha256": "f4dd0b97a773ba40d0a4d460c7b65e8688a30784a86fb4fa82eb58d494de999b"
+    },
+    {
+      "path": "content/markdown/en/lectures/quantum-2026-2027-modulo-04.md",
+      "bytes": 521,
+      "sha256": "8008db691fb0354e869aa5ee177dc2650fc05dfe96d6ed3382d16dc0bda2b525"
+    },
+    {
+      "path": "content/markdown/en/lectures/quantum-2026-2027-modulo-05.md",
+      "bytes": 583,
+      "sha256": "02ac588e0ed77e6a383dd86725e8565e917b7dd2438b5d719acc7f464648aeef"
+    },
+    {
+      "path": "content/markdown/en/lectures/quantum-2026-2027-modulo-06.md",
+      "bytes": 586,
+      "sha256": "96b4db53dc82791a36143fe1581261acd476601f723cd1769c659d31e65d1c3d"
+    },
+    {
+      "path": "content/markdown/en/lectures/quantum-2026-2027-modulo-07.md",
+      "bytes": 554,
+      "sha256": "3f16eec2ab3ec75c965ed918c0f0cf30741b2306439335d786a1f98ec34afaaf"
+    },
+    {
+      "path": "content/markdown/en/post-details/colpire-i-nervi-del-sistema.md",
+      "bytes": 385,
+      "sha256": "e0051af153d83d74202c633c267d11eb2ea16b3b984f7d77465744f623775066"
+    },
+    {
+      "path": "content/markdown/en/posts/colpire-i-nervi-del-sistema.md",
+      "bytes": 35485,
+      "sha256": "ac93f17a6a78f11c568ec8eee83e1376bab99e851807e15b0834d8ce2de44625"
+    },
+    {
+      "path": "content/markdown/en/profilo-dati.md",
+      "bytes": 6835,
+      "sha256": "9476443b71e3b79c32fa98a404bfad703e9b3983e0ea4f9e57024840b2c79ec7"
+    },
+    {
+      "path": "content/markdown/en/profilo.md",
+      "bytes": 7002,
+      "sha256": "f84f794eb688f2265f23911a9975683f2faf6502180e47520161730a0b8788fb"
+    },
+    {
+      "path": "content/markdown/en/publications/pub-01.md",
+      "bytes": 1100,
+      "sha256": "44e06a0ea920f6dd9f7b14b818fd003d174f22fefc60f10a608716e3bd96493e"
+    },
+    {
+      "path": "content/markdown/en/publications/pub-02.md",
+      "bytes": 942,
+      "sha256": "eb098966ebd7b2b53ad4bbe671c946a831296d424dda5e3ccb138a33db831dff"
+    },
+    {
+      "path": "content/markdown/en/publications/pub-03.md",
+      "bytes": 1188,
+      "sha256": "99e2a939ecd24a345211b674f7be93e5094ab4cd1f5b6cfd6ab011099e87b9ef"
+    },
+    {
+      "path": "content/markdown/en/publications/pub-04.md",
+      "bytes": 1016,
+      "sha256": "fd71c9d9f929d03b1fd4a654d209358455785bccc8ff9fd8a05a2f3fa8261f90"
+    },
+    {
+      "path": "content/markdown/en/publications/pub-05.md",
+      "bytes": 1004,
+      "sha256": "ae7ef7911db44233afcf698a5ec683106ed80b37c373380cf35518304fdb80db"
+    },
+    {
+      "path": "content/markdown/en/publications/pub-06.md",
+      "bytes": 940,
+      "sha256": "49f7e20fa1d1edcb37ebcd34745162dfc4e77c200bd1d60f87db76d56542b64b"
+    },
+    {
+      "path": "content/markdown/en/publications/pub-07.md",
+      "bytes": 1016,
+      "sha256": "72ffa9f9a55fae105f73b4d5ebfe3897198587902cc96ba0a9faa4fc7a1452be"
+    },
+    {
+      "path": "content/markdown/en/publications/pub-08.md",
+      "bytes": 1178,
+      "sha256": "582418db797637e1d3830097aded6663d6675fd5f1ca74b05efa7ce126b78b5c"
+    },
+    {
+      "path": "content/markdown/en/publications/pub-09.md",
+      "bytes": 1453,
+      "sha256": "aa6cfc488a42c4de44aa2861181df9c38634be05c0d8956ece0302d82c3cd6bd"
+    },
+    {
+      "path": "content/markdown/en/publications/pub-10.md",
+      "bytes": 1085,
+      "sha256": "77d0db4c5e2241a791d0a920f5b8264832899c2046cad96ba5768cd0acf5b82a"
+    },
+    {
+      "path": "content/markdown/en/publications/pub-11.md",
+      "bytes": 1107,
+      "sha256": "d6e6bc2482f332ef1b970fb9501d448128b7ccb49a1fce2ef663741de3f29b69"
+    },
+    {
+      "path": "content/markdown/en/publications/pub-12.md",
+      "bytes": 572,
+      "sha256": "984b833b17c3229c3746a14d9ed080a1d69adeaca1c6f2dfa5dab2eb2628a338"
+    },
+    {
+      "path": "content/markdown/en/publications/pub-13.md",
+      "bytes": 1129,
+      "sha256": "18a442898de8d0927e6d96ea62f1b1d0d7c5adacf7c74d22017345f501142312"
+    },
+    {
+      "path": "content/markdown/en/publications/pub-14.md",
+      "bytes": 974,
+      "sha256": "6f397b63931853f4a30ada751d94e85eb2be669df7c77a6dcd621e141b42b958"
+    },
+    {
+      "path": "content/markdown/en/publications/pub-15.md",
+      "bytes": 1001,
+      "sha256": "00cda1abc8e48e8f6343fa796213241241c1b0bcd90b617f3983a53446e8e26b"
+    },
+    {
+      "path": "content/markdown/en/publications/pub-16.md",
+      "bytes": 1090,
+      "sha256": "75f1aa5ea2e4ab7f3467ccc0f20543bc56c8cc0a7a7c8c749e1cf485335e6e9b"
+    },
+    {
+      "path": "content/markdown/en/publications/pub-17.md",
+      "bytes": 967,
+      "sha256": "ce814b8f26c9acc0dda7e293c55f28d2c9e8f31e0a602136be26b876655a6251"
+    },
+    {
+      "path": "content/markdown/en/ricerca.md",
+      "bytes": 1313,
+      "sha256": "28edbe0be97c7e29e7ed04fef39fd03c3a97291a285ce6da59962973aadc5f4e"
+    },
+    {
+      "path": "content/markdown/en/viaggi/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "content/markdown/en/viaggi.md",
+      "bytes": 450,
+      "sha256": "b95fe2f160170386493d00fc5777c7e70864ebdd8ffae4478b72b7921a518ad7"
+    },
+    {
+      "path": "content/markdown/epigrafi.md",
+      "bytes": 1260,
+      "sha256": "1d4aeea128e215d4fde7d88127f63193359cb01b5764a0275b4a4d686050da78"
+    },
+    {
+      "path": "content/markdown/geometrie/bloch-sphere.md",
+      "bytes": 774,
+      "sha256": "c740075b5a5ca1fdc8e081882d2e38f1bb3a820bcbd3b4c59928b98fa4e8b959"
+    },
+    {
+      "path": "content/markdown/geometrie/catenoid.md",
+      "bytes": 632,
+      "sha256": "53ede6ad261091c9babcacaaacd79d80c11f53d7d3202aa9c8f9027783bad9eb"
+    },
+    {
+      "path": "content/markdown/geometrie/covariance.md",
+      "bytes": 784,
+      "sha256": "797a570ca71b9fb6a6f70c8037a1e0a71fbac87346e9404a641cf91fd90459b1"
+    },
+    {
+      "path": "content/markdown/geometrie/decision-surface.md",
+      "bytes": 741,
+      "sha256": "fc1f3cde59f2858cdc81cdcb610d78490db481acddd1c51125f1e6d7e297683d"
+    },
+    {
+      "path": "content/markdown/geometrie/entropy-trace.md",
+      "bytes": 900,
+      "sha256": "e25e7e84a8c076abb07ecbbd476ab29028f2f7fbc5baf4f2fffaea6fec548c5f"
+    },
+    {
+      "path": "content/markdown/geometrie/gaussian-density.md",
+      "bytes": 706,
+      "sha256": "20e38666d01f5beabffd0bea555f32baa666f22614b0e2eb9302cd3fa07cfdd1"
+    },
+    {
+      "path": "content/markdown/geometrie/graphene-ribbon.md",
+      "bytes": 729,
+      "sha256": "faf352e15e4e30b6ee1075980e3bc05a08c4ee9952e0514cc7f4310d82461e7e"
+    },
+    {
+      "path": "content/markdown/geometrie/gyroid.md",
+      "bytes": 646,
+      "sha256": "8881d5b9dbf1ea4417c9cdcd83372479cbe8eb1775cf77c23fc0734810b333c9"
+    },
+    {
+      "path": "content/markdown/geometrie/helicoid.md",
+      "bytes": 579,
+      "sha256": "2f137b9e43409c524394e1825bce65f59a241bd96652725bdd07e6eda483fe85"
+    },
+    {
+      "path": "content/markdown/geometrie/interference.md",
+      "bytes": 823,
+      "sha256": "24b47e59c490fe4fc57d271c0417b58a6c010a3a71d45daa35b40f3e1fb5afde"
+    },
+    {
+      "path": "content/markdown/geometrie/julia.md",
+      "bytes": 685,
+      "sha256": "4a5600251d17b2524862a1f061fe056c9f0d695fc6234ec2bc1986e9c5b41163"
+    },
+    {
+      "path": "content/markdown/geometrie/lattice.md",
+      "bytes": 783,
+      "sha256": "0855fc93ae2bfa81ca8bc3edcb2796e4a0719a78827a00080bd1f952530c75eb"
+    },
+    {
+      "path": "content/markdown/geometrie/markov-network.md",
+      "bytes": 835,
+      "sha256": "327b511e05930ce8ecf37990d99a92eb4473eb8c5329819e1e935b02012bef9d"
+    },
+    {
+      "path": "content/markdown/geometrie/menger.md",
+      "bytes": 644,
+      "sha256": "da63957b262f98228bbe9b8483438c1d577f3c381984a1d4fa5442d7b25b264f"
+    },
+    {
+      "path": "content/markdown/geometrie/mobius.md",
+      "bytes": 745,
+      "sha256": "9d2779e7192929f5a279efe34449eb3ffa92af1f9d457fe5d1c6d2818980f915"
+    },
+    {
+      "path": "content/markdown/geometrie/program-flow.md",
+      "bytes": 736,
+      "sha256": "b4c8e26364336c2020e3bc703ab7aa8f805f7cad3cc540678017ae6d196852ed"
+    },
+    {
+      "path": "content/markdown/geometrie/quantum-circuit.md",
+      "bytes": 848,
+      "sha256": "44a8f3456379cea05188840b0ab9a57258baf86cc76d94fd9e545af97d5f0277"
+    },
+    {
+      "path": "content/markdown/geometrie/schwarz-d.md",
+      "bytes": 727,
+      "sha256": "d0ad978c2184f2cbcdd3e5698de41f4210d87b26af8a5494463024724efb537f"
+    },
+    {
+      "path": "content/markdown/geometrie/schwarz-network.md",
+      "bytes": 868,
+      "sha256": "5c4a8c2abe34eecc6e32f2218eafe352729a5dbaea93f99b583393dfb44cb9ec"
+    },
+    {
+      "path": "content/markdown/geometrie/schwarz-p.md",
+      "bytes": 676,
+      "sha256": "c5938b94976684a40212eae3e9853052a817a8cdf08a524124d8bf8e6f286134"
+    },
+    {
+      "path": "content/markdown/geometrie/sierpinski.md",
+      "bytes": 664,
+      "sha256": "9da4ccabd7e2ac47c3f28dacac54d508b5eedfc2503b0b4aea95713a2b64e35a"
+    },
+    {
+      "path": "content/markdown/geometrie/stochastic-paths.md",
+      "bytes": 819,
+      "sha256": "de1e7a6b71b524d9976bbd4a2644ceeed0741161092e6f7d45ee21b24593734d"
+    },
+    {
+      "path": "content/markdown/geometrie/torus.md",
+      "bytes": 609,
+      "sha256": "da0f33a1be4efa32ce9b37d0fba26c9eaa532a62e3b07fef8858bee50a7e0371"
+    },
+    {
+      "path": "content/markdown/geometrie/vibrational-mode.md",
+      "bytes": 718,
+      "sha256": "b8c52fe013881d166ab851ad5f7d8097b69657df58cb24d5867bf06858cbd8c3"
+    },
+    {
+      "path": "content/markdown/homepage.md",
+      "bytes": 1301,
+      "sha256": "1a0f479c24b3f147fd0d25d793e370221a174d20b3a9d3ef0cab910e6e14ad30"
+    },
+    {
+      "path": "content/markdown/lectures/quantum-2026-2027-modulo-01.md",
+      "bytes": 632,
+      "sha256": "8ffc0d4fb33b52f282b6518fe6777a62cf50817847055e265b35b85e0c45460b"
+    },
+    {
+      "path": "content/markdown/lectures/quantum-2026-2027-modulo-02.md",
+      "bytes": 547,
+      "sha256": "32a924eaa90ffff566d335fa09a35b138713471262e66afbaa73560f8587801b"
+    },
+    {
+      "path": "content/markdown/lectures/quantum-2026-2027-modulo-03.md",
+      "bytes": 592,
+      "sha256": "8d5239b44c4bb1a91b2ab3613f03de80d97b3c3738e9dba3886cc79f24ac6fd3"
+    },
+    {
+      "path": "content/markdown/lectures/quantum-2026-2027-modulo-04.md",
+      "bytes": 561,
+      "sha256": "94ecd3a1962bd51f41ce467bf2f56df7e81e186467c965cc9ed10b9e56fbd366"
+    },
+    {
+      "path": "content/markdown/lectures/quantum-2026-2027-modulo-05.md",
+      "bytes": 659,
+      "sha256": "7b82b31dff6752c213963209da651678b11f2306ef00e64999240ffa1cc60b76"
+    },
+    {
+      "path": "content/markdown/lectures/quantum-2026-2027-modulo-06.md",
+      "bytes": 652,
+      "sha256": "8b0e8b125f75b692afa5f0b6deb49a6b9dcadc68082d89248c265140e550bb0d"
+    },
+    {
+      "path": "content/markdown/lectures/quantum-2026-2027-modulo-07.md",
+      "bytes": 643,
+      "sha256": "c13efa02b9dd326a7fa9ae877811c73bed409e329f274c3455e294c7ff30991a"
+    },
+    {
+      "path": "content/markdown/post-details/colpire-i-nervi-del-sistema.md",
+      "bytes": 476,
+      "sha256": "96f1fe6b6c8992b46cb35a8e3ef81b548e8931be9792e6e376d8b8ac57186d09"
+    },
+    {
+      "path": "content/markdown/posts/colpire-i-nervi-del-sistema.md",
+      "bytes": 40473,
+      "sha256": "b7fce7112dd5abb7f663850abac2953f8626ece252de159be826f64a1d24d272"
+    },
+    {
+      "path": "content/markdown/profilo.md",
+      "bytes": 7901,
+      "sha256": "c6d42566cf3bd708798ce317595a5f31fc7a46acb1b320fb07f07ad1f7f2775c"
+    },
+    {
+      "path": "content/markdown/publications/pub-01.md",
+      "bytes": 1156,
+      "sha256": "b5cbdaa1ab7c82cb578f2d9a19d5fab2c234fa345ba10f702a626b84fb32adf4"
+    },
+    {
+      "path": "content/markdown/publications/pub-02.md",
+      "bytes": 991,
+      "sha256": "f17fd52408f5d4e5efc5b8cee180523fd8cf8a7575268e1ac350fc8f065bbbe4"
+    },
+    {
+      "path": "content/markdown/publications/pub-03.md",
+      "bytes": 1282,
+      "sha256": "8cb95196218b21873afaf95a79a5ce96d0e71558df9567b27caf3836b81a6d35"
+    },
+    {
+      "path": "content/markdown/publications/pub-04.md",
+      "bytes": 1113,
+      "sha256": "18810986d11da52c5f9cfc5b33cdc6387349cd6966c0e24bf6bc0a1c8ef2bd3c"
+    },
+    {
+      "path": "content/markdown/publications/pub-05.md",
+      "bytes": 1117,
+      "sha256": "aee5d5fbdd8c3fc3509b9448901bb0b39adc7d4f2e4f3ed46d7ecad5ead02b45"
+    },
+    {
+      "path": "content/markdown/publications/pub-06.md",
+      "bytes": 1075,
+      "sha256": "83caf8c3dde49e453d22f7dabb56c741d071591c8c348ac3dcc37bfd66ff2364"
+    },
+    {
+      "path": "content/markdown/publications/pub-07.md",
+      "bytes": 1162,
+      "sha256": "d9ae043281612e354303b4ddaedd89ce708f668a7597d9054b24d004d6634bda"
+    },
+    {
+      "path": "content/markdown/publications/pub-08.md",
+      "bytes": 1270,
+      "sha256": "29ad81b329a042623d4e28662493e8fa4569c167379766f4535863bd7216b116"
+    },
+    {
+      "path": "content/markdown/publications/pub-09.md",
+      "bytes": 1575,
+      "sha256": "fc01ee187162f7f77b1a7784c7a2499347e08a7cabf7c5edf5e2297dbed75a2c"
+    },
+    {
+      "path": "content/markdown/publications/pub-10.md",
+      "bytes": 1208,
+      "sha256": "1fb44b887d756100052bfea1946a635934ac0474cd009af82b169760cd2cf244"
+    },
+    {
+      "path": "content/markdown/publications/pub-11.md",
+      "bytes": 1171,
+      "sha256": "b8d643022108bc4da85608084cc5a125d7db0b1376f18aac20bc4de82086b8d3"
+    },
+    {
+      "path": "content/markdown/publications/pub-12.md",
+      "bytes": 611,
+      "sha256": "7ce15a63da67785d524a369f5207d8abbbab9bedb4c9622e2b94008fa571eb69"
+    },
+    {
+      "path": "content/markdown/publications/pub-13.md",
+      "bytes": 1183,
+      "sha256": "94982ebb18555dfc8df1a3f48e1d12b5bc28d2607a7f1e1d49221ae573b576a8"
+    },
+    {
+      "path": "content/markdown/publications/pub-14.md",
+      "bytes": 1078,
+      "sha256": "a91387f0652c286edc579e2871db6c0cd342bc1ed132cc628b0ee3ff627bd450"
+    },
+    {
+      "path": "content/markdown/publications/pub-15.md",
+      "bytes": 1088,
+      "sha256": "763cc88a473d13fd670096628429d0446c420e3fb88ac49db1fba8e349e80f27"
+    },
+    {
+      "path": "content/markdown/publications/pub-16.md",
+      "bytes": 1170,
+      "sha256": "854fed122f248caea02f51465418e585eb89af10778ae208cb2e2ea77009cbc0"
+    },
+    {
+      "path": "content/markdown/publications/pub-17.md",
+      "bytes": 1051,
+      "sha256": "12e0300f4be8bf0e0528d313da436ed3af46d14799c033ed2c134ddf0dc149db"
+    },
+    {
+      "path": "content/markdown/ricerca.md",
+      "bytes": 1502,
+      "sha256": "5c919ae36d5592dcfc961305a56d5b35f998d40067ef23e16851694de559de72"
+    },
+    {
+      "path": "content/markdown/viaggi/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "content/markdown/viaggi.md",
+      "bytes": 500,
+      "sha256": "9841383d86c19ca65d44dc44345752b1a15b634f2d7d2aaa2349f3d0d74410b2"
+    },
+    {
+      "path": "content/photo-manifest.json",
+      "bytes": 1289,
+      "sha256": "c7841c8a507303b3992ef039278c59e9f1a80ce57db89e60f047c7c8954980e6"
+    },
+    {
+      "path": "content/posts/colpire-i-nervi-del-sistema.json",
+      "bytes": 41270,
+      "sha256": "6765b24ad60a466f152f1dece47e4140d8642d90cc22525ccc938f22dd7785b3"
+    },
+    {
+      "path": "content/profile.json",
+      "bytes": 17640,
+      "sha256": "50dd3fe8e83d90115574d769b8e3f80a8b11d22ed28e573b17ea5be5e54e6615"
+    },
+    {
+      "path": "content/publications/pub-01.json",
+      "bytes": 1440,
+      "sha256": "631ab49a06e7664dd6856ae77ef53fb226612fac4039a191617647e36e2f1d9e"
+    },
+    {
+      "path": "content/publications/pub-02.json",
+      "bytes": 1267,
+      "sha256": "7e4fe35eae7d1fcd1ac6d2daf6d93ea2e9ff35b98a3885caf047b8407dee7b99"
+    },
+    {
+      "path": "content/publications/pub-03.json",
+      "bytes": 1594,
+      "sha256": "81d9d9445c233aab41f513e700ec5f42437d6b69e4b506739958c61e0d8c3b08"
+    },
+    {
+      "path": "content/publications/pub-04.json",
+      "bytes": 1392,
+      "sha256": "fe3b5e8084c67d3d57dafcaae2bf435cd76c13051a16da9a8ab94be96b23e1fa"
+    },
+    {
+      "path": "content/publications/pub-05.json",
+      "bytes": 1425,
+      "sha256": "91c944e2596e03630c9edfc1e88b2a02c8b0c76c22204ebeb8f452b5f00efe8e"
+    },
+    {
+      "path": "content/publications/pub-06.json",
+      "bytes": 1384,
+      "sha256": "9398a44cbb47e18b623b536ee47e1da2bebf35c77a960a363e57ad368b2874c6"
+    },
+    {
+      "path": "content/publications/pub-07.json",
+      "bytes": 1467,
+      "sha256": "db0c0bd7d43a2f6a596874a301dde381dea8d82aca341f6455dc3311d1e91e88"
+    },
+    {
+      "path": "content/publications/pub-08.json",
+      "bytes": 1622,
+      "sha256": "495f0234a033f2f79b15613f70c45141b6af0c2c39ebb12516b8ea4f72373280"
+    },
+    {
+      "path": "content/publications/pub-09.json",
+      "bytes": 1929,
+      "sha256": "67087afa046e8a36c822db60923aed4cf0d7904002f9910ec76a38a66b0a0f14"
+    },
+    {
+      "path": "content/publications/pub-10.json",
+      "bytes": 1500,
+      "sha256": "4316a487dc6dd29eda1ae25a5802ceb86d727693f5bff0281bf36ea780fe7dce"
+    },
+    {
+      "path": "content/publications/pub-11.json",
+      "bytes": 1464,
+      "sha256": "361957ad90c221e67e6795f556b060bf7d2d7cfc96b9baeaa6fbfbd23bdaf51f"
+    },
+    {
+      "path": "content/publications/pub-12.json",
+      "bytes": 911,
+      "sha256": "1bf2054d45cf192233d586318fe44530813ffa2ef6c2d13ae20ac25124d36fbb"
+    },
+    {
+      "path": "content/publications/pub-13.json",
+      "bytes": 1480,
+      "sha256": "d914461576e36b42846d5d24ab04371f2b52c9c1c0ff17e4292a7b31c19a0c4f"
+    },
+    {
+      "path": "content/publications/pub-14.json",
+      "bytes": 1379,
+      "sha256": "5a3405da097271189a90e481d075b3a3b7480d4ed210adae50c9b041e78a302c"
+    },
+    {
+      "path": "content/publications/pub-15.json",
+      "bytes": 1385,
+      "sha256": "7e082073c8f24a961bea1d1525b989fc1d6acf0eb1b3e8830c92768805c161f4"
+    },
+    {
+      "path": "content/publications/pub-16.json",
+      "bytes": 1467,
+      "sha256": "8f7e43e1f386053e13048315704d5d10c3588568184c2acd01c5bdfaf1eabc10"
+    },
+    {
+      "path": "content/publications/pub-17.json",
+      "bytes": 1347,
+      "sha256": "2f3a394893f78f12aecb6d705a4056c85971aca894150e86f52e9f3ad7532d87"
+    },
+    {
+      "path": "content/research.json",
+      "bytes": 13182,
+      "sha256": "f7dbca2094af69fb3bae16098f70d39cde734871a79ef25b010f20108060e078"
+    },
+    {
+      "path": "content/site.json",
+      "bytes": 144,
+      "sha256": "26a3d3aff8be9213ebf7f57739a4e9d972681195862c808d860f7141ebbeb8b9"
+    },
+    {
+      "path": "docs/ARTICOLO_PRIMO_BLOG.md",
+      "bytes": 879,
+      "sha256": "d22ba2f24da4879f98eba8de1886cfc12c2a032a066c592c8ff0e598b588cc29"
+    },
+    {
+      "path": "docs/ARTICOLO_PRIMO_BLOG_MANIFEST.json",
+      "bytes": 969,
+      "sha256": "decbb57ebcb83ef8f64f1a1d1243127d02150dc20a98e935609a8266883575e9"
+    },
+    {
+      "path": "docs/BILINGUE_IT_EN.md",
+      "bytes": 6125,
+      "sha256": "3ce8fb8ea8a2601f5251972284ff0c68458bd55253ebf31a3e136e86a44a7d9a"
+    },
+    {
+      "path": "docs/BIOGRAFIA.md",
+      "bytes": 7737,
+      "sha256": "87e7f522940d0be8e65c86da3d90477ff97eee05e91136040b83029d6f7e7078"
+    },
+    {
+      "path": "docs/COLLAUDO_v2.3.md",
+      "bytes": 2381,
+      "sha256": "d167d0415883686a5acf53f34a2f602825da9702aea52cc64553664a1425e507"
+    },
+    {
+      "path": "docs/COLLAUDO_v2.4.md",
+      "bytes": 3831,
+      "sha256": "afeaec4874d4aa1ea038d738e48b0df3f752ecff968426b6baa0a34d02b81862"
+    },
+    {
+      "path": "docs/COLLAUDO_v2.5.md",
+      "bytes": 2449,
+      "sha256": "022c1b85962a208f1c9efe6af03ae20a6a80959344f569d3ee4e6807488b542d"
+    },
+    {
+      "path": "docs/COLLAUDO_v2.6.md",
+      "bytes": 2429,
+      "sha256": "f85f2fe3b3e43e616c2fe73e0f6232574c9efb0f0d41ec8f5822d43c9259f838"
+    },
+    {
+      "path": "docs/EDITORIA.md",
+      "bytes": 840,
+      "sha256": "30dc2f27cd0fc46a98151903531eae51759ef3cc82a41e4460198713ce6a74af"
+    },
+    {
+      "path": "docs/EFFETTI_E_AUDIO_v2.5.md",
+      "bytes": 2642,
+      "sha256": "bbfbb3bd3211d58e4f104c2d73bee809f75428572cea1f4645821fa93b3ec100"
+    },
+    {
+      "path": "docs/EPIGRAFI.md",
+      "bytes": 906,
+      "sha256": "4de64dfe2d0b2e160bd614f7f7646e9585b20e521e0a71e8367faa60fc4be7a6"
+    },
+    {
+      "path": "docs/FOTOGRAFIE_PERSONALI.md",
+      "bytes": 1042,
+      "sha256": "9b9c2ede830404aa160325f45b5318806896be82f5e78b62926c3d36fdd82f5c"
+    },
+    {
+      "path": "docs/GEOMETRIE.md",
+      "bytes": 5130,
+      "sha256": "be3374cd362d3a10267f7a1c0c029167fde3800eb911e9a96ecf70cdb9d26b43"
+    },
+    {
+      "path": "docs/IMPORTAZIONE_OVERLEAF.md",
+      "bytes": 610,
+      "sha256": "d02b2cc8f886f9a46b2001d7400aca537e892a6b11af84f61b4cf8b52d447210"
+    },
+    {
+      "path": "docs/INTERAZIONE_3D.md",
+      "bytes": 2788,
+      "sha256": "679be2b1120154d7191975c7e9078eccb6479a3578bf39f1545ad018e191465b"
+    },
+    {
+      "path": "docs/MATERIALI_DIDATTICI.md",
+      "bytes": 3427,
+      "sha256": "9106ad5432287634aa708371dbd880518f0807432494aae450ed0d5c74a6ef2b"
+    },
+    {
+      "path": "docs/MATERIALI_MANIFEST.json",
+      "bytes": 4730,
+      "sha256": "3fced281dc5375a5a9f7067899d5100525cb930733bce7041c4f1471afc79776"
+    },
+    {
+      "path": "docs/NOTE_EDITORIALI.md",
+      "bytes": 5693,
+      "sha256": "322e0333fa5914106eeba8c16e50154531429c90c19c69cc98994b69bbd837b2"
+    },
+    {
+      "path": "docs/PROVENIENZA.md",
+      "bytes": 3522,
+      "sha256": "14af349eaf217552a384494287cca6a5c2122a92c81c1e288396bdcf62e5fdd5"
+    },
+    {
+      "path": "docs/PUBBLICAZIONE.md",
+      "bytes": 2699,
+      "sha256": "771f2afe810242e9a7b71dc236797577efe98ff26149f76e8d27382df2e01ec0"
+    },
+    {
+      "path": "docs/PUBBLICAZIONI_DIVULGATIVE.md",
+      "bytes": 18018,
+      "sha256": "9625bf997180111c0190b9308f1c88d45333fa31fc3116568fd474715257cdc2"
+    },
+    {
+      "path": "docs/RICERCA.md",
+      "bytes": 9005,
+      "sha256": "69fe11f69eefe82a49a3fbce656758d7975f222ccd621715535a9bb53c28a781"
+    },
+    {
+      "path": "docs/RIPRESA_E_MANUTENZIONE.md",
+      "bytes": 1674,
+      "sha256": "52a18fe211885a1d742f98714e4746dabf3c9208effca53adc4e7bd7447e0dc1"
+    },
+    {
+      "path": "docs/TRAVEL_ALBUMS_EN.md",
+      "bytes": 1602,
+      "sha256": "4098d145b9af31553cdef2cbac6c57200af62ccf5a7e7327cab523a9c7e58eb9"
+    },
+    {
+      "path": "docs/VIAGGI_E_ALBUM.md",
+      "bytes": 4433,
+      "sha256": "ea443c0ad174ae9961d12051cea1cad5ab21174023d0702b59fb553cef4a3ee8"
+    },
+    {
+      "path": "docs/storico/COLLAUDO_v1.4.md",
+      "bytes": 2393,
+      "sha256": "f745b300402c5c598a6a83a66d67236bc50ee6b6279e71595b37e8811f92a684"
+    },
+    {
+      "path": "docs/storico/CONTROLLO_EDITORIALE_v0.12.md",
+      "bytes": 3605,
+      "sha256": "ad8ff3b76fa7cf6dab0a728f3ef56449ec163cef3f678e5063ee4bd155880464"
+    },
+    {
+      "path": "docs/storico/PRE_v2.3_ARCHITETTURA.md",
+      "bytes": 1440,
+      "sha256": "57451697e6500970e15a85d696e482a021c59bb867a7175477a9b06783c89836"
+    },
+    {
+      "path": "docs/storico/PRE_v2.3_COLLAUDO.md",
+      "bytes": 1463,
+      "sha256": "582731d17a155f5c1be8e9f0c538bd704a9b242baa8d86650988e0f18fbd1a9e"
+    },
+    {
+      "path": "docs/storico/PRE_v2.3_COLLAUDO_v2.1.md",
+      "bytes": 2686,
+      "sha256": "b2f68eeacc45fce8c12713c2f3f190f48bd0e841482080343a4fd0f6aa682902"
+    },
+    {
+      "path": "docs/storico/PRE_v2.3_REVISIONE_HOME_v2.1.md",
+      "bytes": 1973,
+      "sha256": "2c476e6288436d1ac8ea53153394af755eb9ac322f89df71b9cf6cedce5fa5da"
+    },
+    {
+      "path": "docs/storico/REVISIONE_BIOGRAFICA_v0.11.md",
+      "bytes": 1743,
+      "sha256": "c37624ac5fbb492a918c1d9b823067c11cc942efd55768a4a87c05687bf929e1"
+    },
+    {
+      "path": "docs/storico/REVISIONE_CRITICA.md",
+      "bytes": 4714,
+      "sha256": "6e3e09c322405ded5847b62b13f138776345fd2e27e4a9f43e7a5b7462f32fa3"
+    },
+    {
+      "path": "docs/storico/REVISIONE_PERSONALE_v0.8.md",
+      "bytes": 1802,
+      "sha256": "92dca53bb35d0b70c11ee4da9acc37aabcaa5d1bd410a800ab252f896712fe24"
+    },
+    {
+      "path": "docs/storico/REVISIONE_RESTO_v0.9.md",
+      "bytes": 6326,
+      "sha256": "1fa94e46bab9b0647d2183f93821122bec2166606f841a1f608fdcf7376938ad"
+    },
+    {
+      "path": "examples/NEW_TRAVEL_DIARY_EN.md.txt",
+      "bytes": 514,
+      "sha256": "428e00e30c737b504f9e78ccea868f4fce19942f3b2d46ced0ca8ec26cf3b25d"
+    },
+    {
+      "path": "examples/NUOVO_ARTICOLO_ESEMPIO.md.txt",
+      "bytes": 430,
+      "sha256": "48bb8f4bad3bc892c77a16d93d10e95cbc8628ac9fd318d8d22f9186e1819aa9"
+    },
+    {
+      "path": "examples/NUOVO_VIAGGIO_ESEMPIO.md.txt",
+      "bytes": 577,
+      "sha256": "77c57c85ba921e417dc6a9413a1780ccaa2afd8686ed93971a695c843a5d4ccf"
+    },
+    {
+      "path": "package.json",
+      "bytes": 860,
+      "sha256": "3389e5f0aa90ec3ec4c93931a505173106546fd2c518e69aa2a2f15222ab8a92"
+    },
+    {
+      "path": "public/assets/geometry-viewer.js",
+      "bytes": 8149,
+      "sha256": "db16fc8280b9d5e86f560f3f0f8a09dae2127f8d539adea2eb423004b52f0d31"
+    },
+    {
+      "path": "public/geometry/bloch-sphere.webp",
+      "bytes": 91818,
+      "sha256": "a36092dea8ad514b1802aa45437c50c417737caead65cd1511dc31fefd9c3b15"
+    },
+    {
+      "path": "public/geometry/catenoid.webp",
+      "bytes": 12400,
+      "sha256": "194a14ba3adf28a404466b09cb98c427a5c29441bc682aad851183a39f3d3bc4"
+    },
+    {
+      "path": "public/geometry/covariance.webp",
+      "bytes": 11536,
+      "sha256": "0a8a5391c6b3b0fe70e15348b35be33cae3412ec126241aaab237aee4a9b85ea"
+    },
+    {
+      "path": "public/geometry/decision-surface.webp",
+      "bytes": 9390,
+      "sha256": "d4be2f4019973055fecc2b0c22a7f4537aa6b4e39378a4145ec9557d73beaeb6"
+    },
+    {
+      "path": "public/geometry/entropy-trace.webp",
+      "bytes": 43332,
+      "sha256": "40b3aaaadf7670927f639436dc3e5bfdae56ce1ab7a8be52cfec5faabcea39db"
+    },
+    {
+      "path": "public/geometry/gaussian-density.webp",
+      "bytes": 9404,
+      "sha256": "6e5aacf115f627ebed8fb36d761968604ee0131a9b9eb762d79a0fe5e70df8f0"
+    },
+    {
+      "path": "public/geometry/graphene-ribbon.webp",
+      "bytes": 27140,
+      "sha256": "41c2016279a144206dd5444b24fc9c9378dbbf5a1b6affa953c90ca1de6b90cb"
+    },
+    {
+      "path": "public/geometry/gyroid.webp",
+      "bytes": 20138,
+      "sha256": "8dd792c00250a20c0d57478b1baa7768b9a5fdd43920894631fdde2d4f77ddd3"
+    },
+    {
+      "path": "public/geometry/helicoid.webp",
+      "bytes": 14400,
+      "sha256": "2ce3722bdf51f03e1853ad2decb5b1b41d3897a308a06eb5c0f1e1f9ac92cbb1"
+    },
+    {
+      "path": "public/geometry/interference.webp",
+      "bytes": 13942,
+      "sha256": "22610f9216e052dedd8c8f0a1ef25aadfec7e32e36c8fffb1616d061c624d06f"
+    },
+    {
+      "path": "public/geometry/julia.webp",
+      "bytes": 32774,
+      "sha256": "056c618c5898783fe49a9d86efaa53c510bf1d57000f561552db196032696b95"
+    },
+    {
+      "path": "public/geometry/lattice.webp",
+      "bytes": 38932,
+      "sha256": "f3b057d0d38aa89c6880fbce02dc116644aa65ff59ecf99909c8c8c9d160f133"
+    },
+    {
+      "path": "public/geometry/manifest.json",
+      "bytes": 12203,
+      "sha256": "a3e5de3271749f1fcc719104db3d92b0579e4b53949f28e33360d93b501c5a40"
+    },
+    {
+      "path": "public/geometry/markov-network.webp",
+      "bytes": 19668,
+      "sha256": "379d76c306031d6e800ef2ef4a1e68ba11708529e1569b838f74326e8d486b5c"
+    },
+    {
+      "path": "public/geometry/menger.webp",
+      "bytes": 17870,
+      "sha256": "9ff63103c7969fed93aac1ff1388865ca07264378d6d79263cc0b147dbc98eab"
+    },
+    {
+      "path": "public/geometry/mobius.webp",
+      "bytes": 11326,
+      "sha256": "4948b5ef664dd36cb37a61b38695fb76f7660d59b81b9ca4e9382344bff039f9"
+    },
+    {
+      "path": "public/geometry/program-flow.webp",
+      "bytes": 25468,
+      "sha256": "38d1778817b0e2c990f618e6bfc211066fd73579302c537c11796bed064fe268"
+    },
+    {
+      "path": "public/geometry/quantum-circuit.webp",
+      "bytes": 15348,
+      "sha256": "9b3fc13229d60441ea9e49ab623b35f156638bede21b377a35ef2ef0ac46ce98"
+    },
+    {
+      "path": "public/geometry/scenes/bloch-sphere.bin",
+      "bytes": 190824,
+      "sha256": "e8fb1177238d64a8085c3f7a059b269900e0480067b5254daca887d3073b8de1"
+    },
+    {
+      "path": "public/geometry/scenes/catenoid.bin",
+      "bytes": 51672,
+      "sha256": "74c58b59fde25c99b6e8110b6d19ef8e019483f24dc13933ac919e92d46cf4e5"
+    },
+    {
+      "path": "public/geometry/scenes/covariance.bin",
+      "bytes": 64932,
+      "sha256": "0d6fce299b840fdb56d15021d1777ffcc9d56246201362261aeb2d0caacd7879"
+    },
+    {
+      "path": "public/geometry/scenes/decision-surface.bin",
+      "bytes": 46812,
+      "sha256": "152faa8c581c12f77506e8ac73ac39c0c60bbfefbb5928afb4b02151dae46c40"
+    },
+    {
+      "path": "public/geometry/scenes/entropy-trace.bin",
+      "bytes": 38952,
+      "sha256": "be755f545faa28a39cb2167db3d5a95623493a063079078ba1d0e890879ef54e"
+    },
+    {
+      "path": "public/geometry/scenes/gaussian-density.bin",
+      "bytes": 54240,
+      "sha256": "7293fa0e6a7a51010370367637c19d715af2d5838ce6575a367d1f6b87d58890"
+    },
+    {
+      "path": "public/geometry/scenes/graphene-ribbon.bin",
+      "bytes": 73032,
+      "sha256": "435a3b324fb2392e155728ed21a16a27f39daf30169fe1cbf3c193c2aa4ebc27"
+    },
+    {
+      "path": "public/geometry/scenes/gyroid.bin",
+      "bytes": 120006,
+      "sha256": "2ab2852fa5a7817b15c0c8729f1ca4a8def896a740445823f02924b4a2ab1eb9"
+    },
+    {
+      "path": "public/geometry/scenes/helicoid.bin",
+      "bytes": 45012,
+      "sha256": "02af9756576e6c68195cc36e5b2060bec6f28b159682f91e4d23d48bb2ca8ce1"
+    },
+    {
+      "path": "public/geometry/scenes/interference.bin",
+      "bytes": 62052,
+      "sha256": "cbcc0665e4ffad083af1b1fb99d78b60eb7a4e0381d0acce06b681b68136e58f"
+    },
+    {
+      "path": "public/geometry/scenes/julia.bin",
+      "bytes": 72,
+      "sha256": "84df171491f83a76cf27117aa24f04bf97cc758ca5cb9751554626768cdf8267"
+    },
+    {
+      "path": "public/geometry/scenes/lattice.bin",
+      "bytes": 60864,
+      "sha256": "f59d2abf3477ae1e0a2c53668014b497d80fd3d230f87f4a42266737fc7064a1"
+    },
+    {
+      "path": "public/geometry/scenes/markov-network.bin",
+      "bytes": 39984,
+      "sha256": "780da1c7c147046ca986b84872c3d594214cd538acbee600446a4f7b47ae842a"
+    },
+    {
+      "path": "public/geometry/scenes/menger.bin",
+      "bytes": 115224,
+      "sha256": "68b93130fde84bf5097f062fab44147e1fe7ac911de70e55949711ea3af869cb"
+    },
+    {
+      "path": "public/geometry/scenes/mobius.bin",
+      "bytes": 40596,
+      "sha256": "19611f4414cfa07b750dc64a277abe4bcdfe63de94e4fc76133e20d32506aa9f"
+    },
+    {
+      "path": "public/geometry/scenes/program-flow.bin",
+      "bytes": 30264,
+      "sha256": "5c1e637d2d4ed7f8b388636f3201bf9d1f5555e89ab7ffa3fa7aa75e925f67c7"
+    },
+    {
+      "path": "public/geometry/scenes/quantum-circuit.bin",
+      "bytes": 7584,
+      "sha256": "b119303617c881db789bfb392ef321d1483384a6686d077028f2c95f24ec23c6"
+    },
+    {
+      "path": "public/geometry/scenes/schwarz-d.bin",
+      "bytes": 107886,
+      "sha256": "238734905bc50f8dae209b3c4588ebf37d2050a1bda82e3005375a1d18478367"
+    },
+    {
+      "path": "public/geometry/scenes/schwarz-network.bin",
+      "bytes": 137076,
+      "sha256": "75a2f91e2b04b074c879239ef6bdb2bf93eab70939341e1be3c6cf0950c1be31"
+    },
+    {
+      "path": "public/geometry/scenes/schwarz-p.bin",
+      "bytes": 91872,
+      "sha256": "5818ce1158e1fd0d853b14b3df8a1c60e5b7f6cc1d87c9a22359fe09ab19c8c1"
+    },
+    {
+      "path": "public/geometry/scenes/sierpinski.bin",
+      "bytes": 8472,
+      "sha256": "818874fb96ff4792760b40b6f3404453e5f8298e36af8da0dfbd8c9ec2d418cd"
+    },
+    {
+      "path": "public/geometry/scenes/stochastic-paths.bin",
+      "bytes": 150360,
+      "sha256": "977d46c6c3fc0674de3649f85ecae3928abc8fae1b79398c04af45376a937a5a"
+    },
+    {
+      "path": "public/geometry/scenes/torus.bin",
+      "bytes": 51672,
+      "sha256": "675be87b20d197f333acc7ed493983b480b17050a7447e514b64ac8c3b949ae1"
+    },
+    {
+      "path": "public/geometry/scenes/vibrational-mode.bin",
+      "bytes": 73032,
+      "sha256": "cf44a6f910befbb59b94e60b8cde8f3481d32ec0a929278548ddea8c8f9b9c88"
+    },
+    {
+      "path": "public/geometry/schwarz-d.webp",
+      "bytes": 19662,
+      "sha256": "096b56baca6732dc46d07ca4cb531e016e5422fb7dce08bc3577be405854c487"
+    },
+    {
+      "path": "public/geometry/schwarz-network.webp",
+      "bytes": 93906,
+      "sha256": "1b3853a583950c403ff09e20c36bb279806fbde3dd109e887f10a54a2c92c6a0"
+    },
+    {
+      "path": "public/geometry/schwarz-p.webp",
+      "bytes": 18960,
+      "sha256": "8b026e8e5461e9ef7347188d54c90020ada4f8e5fb45078b992eb6eccc70c34e"
+    },
+    {
+      "path": "public/geometry/sierpinski.webp",
+      "bytes": 20984,
+      "sha256": "48e4aa1fa864cebf2bf9fc2e1e4119b6a9edf895a1fdbbccf3978699a9eebb4d"
+    },
+    {
+      "path": "public/geometry/stochastic-paths.webp",
+      "bytes": 46632,
+      "sha256": "1457500eb46aa1898ee27802ad5ef0a236f5fb47cd401abf62e647d77eeefa99"
+    },
+    {
+      "path": "public/geometry/torus.webp",
+      "bytes": 15164,
+      "sha256": "78bf612b8f94a13ff9b2a42cb50b676f5a60a96ddce057f5959bc7853589d79c"
+    },
+    {
+      "path": "public/geometry/vibrational-mode.webp",
+      "bytes": 28758,
+      "sha256": "d108bdb064d3c9ba9455c30c7dcff3012dc81d86b102d0857811d16b86d8869b"
+    },
+    {
+      "path": "public/media/docs/CV_Marzio_De_Corato_versione_web.pdf",
+      "bytes": 56776,
+      "sha256": "b35e0d762349293ab0b0a657bbf48167026aaf96302be143ec6d64718205fd68"
+    },
+    {
+      "path": "public/media/docs/Modulo_01/Modulo_01.pdf",
+      "bytes": 3225552,
+      "sha256": "6e8195ac7d3489792b72cb64f7ed2aab12e58d10438f185367958e3a574a4dac"
+    },
+    {
+      "path": "public/media/docs/Modulo_02/Modulo_02.pdf",
+      "bytes": 2872017,
+      "sha256": "0add98ef269557c2df45a568e35aaed3f2192780eae013fe1d0b33fa954fd70b"
+    },
+    {
+      "path": "public/media/docs/Modulo_03/Modulo_03.pdf",
+      "bytes": 1090513,
+      "sha256": "fe92862c61fc686fcbb48c4b4cd5ba98d926510f3b679498fad11e163f5700c2"
+    },
+    {
+      "path": "public/media/docs/colpire-i-nervi-del-sistema.pdf",
+      "bytes": 233277,
+      "sha256": "642594ed774d1d59c78635f3966a94d7e98d37c3ddc246e2eece5b68cc84c169"
+    },
+    {
+      "path": "public/media/docs/quantum-2026-2027/UniMI_Quantum_PostQuantum_2026-2027_M01_fondamenti-fisici-e-simulazione.pdf",
+      "bytes": 3225552,
+      "sha256": "6e8195ac7d3489792b72cb64f7ed2aab12e58d10438f185367958e3a574a4dac"
+    },
+    {
+      "path": "public/media/docs/quantum-2026-2027/UniMI_Quantum_PostQuantum_2026-2027_M02_fondamenti-matematici.pdf",
+      "bytes": 2872017,
+      "sha256": "0add98ef269557c2df45a568e35aaed3f2192780eae013fe1d0b33fa954fd70b"
+    },
+    {
+      "path": "public/media/docs/quantum-2026-2027/UniMI_Quantum_PostQuantum_2026-2027_M03_circuiti-quantistici-deutsch-jozsa.pdf",
+      "bytes": 1090513,
+      "sha256": "fe92862c61fc686fcbb48c4b4cd5ba98d926510f3b679498fad11e163f5700c2"
+    },
+    {
+      "path": "public/media/docs/quantum-2026-2027/UniMI_Quantum_PostQuantum_2026-2027_M04_algoritmi-bernstein-vazirani-simon.pdf",
+      "bytes": 912165,
+      "sha256": "74434a59b39e81fac474189bdb7c672e3dcb9796406fcb0b7efb6b66e5fde0e9"
+    },
+    {
+      "path": "public/media/docs/quantum-2026-2027/UniMI_Quantum_PostQuantum_2026-2027_M05_shor-aritmetica-rsa-fourier.pdf",
+      "bytes": 1559714,
+      "sha256": "a67f88b1b35a44d892e4037a11cb2f5f69927dc3ce712d5363f9d7f8188ca053"
+    },
+    {
+      "path": "public/media/docs/quantum-2026-2027/UniMI_Quantum_PostQuantum_2026-2027_M06_grover-amplificazione-ampiezza.pdf",
+      "bytes": 1165063,
+      "sha256": "2ae75a422e4a3fb74013f765375cb17fe1c364e38739f4d66b183d93038c5b6d"
+    },
+    {
+      "path": "public/media/docs/quantum-2026-2027/UniMI_Quantum_PostQuantum_2026-2027_M07_protocolli-qkd-codifica-errori.pdf",
+      "bytes": 598780,
+      "sha256": "2286174d7bd022f26b5f8fe0c2f465906a5d0ba2c722ca197991dc2db2f81977"
+    },
+    {
+      "path": "public/media/images/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "public/media/images/arrampicata-parete.jpg",
+      "bytes": 326150,
+      "sha256": "2ad52b8d557d2f0555cdd102e9340f174030db194827483d9ec38e87f48a8863"
+    },
+    {
+      "path": "public/media/images/colpire-nervi-fig-01.png",
+      "bytes": 57356,
+      "sha256": "611cae55059342b5ba4f556bc8a649551d10e93198fd3b95759d6e7a00d7ce6c"
+    },
+    {
+      "path": "public/media/images/colpire-nervi-fig-02.png",
+      "bytes": 46968,
+      "sha256": "5167bb9ff8f4199555f14bc198f6f5baf74bac59c8bdb880fcd95596d94ae170"
+    },
+    {
+      "path": "public/media/images/colpire-nervi-fig-03.png",
+      "bytes": 55691,
+      "sha256": "f38b3091a45f9e3c795a71866ffb7307ee065e4091060ab2933d705f56a6a3ac"
+    },
+    {
+      "path": "public/media/images/colpire-nervi-fig-04.png",
+      "bytes": 53246,
+      "sha256": "98dff65bc25690bb1eabfb45d645a0504210fceb2ac55801abb58152f82d4a75"
+    },
+    {
+      "path": "public/media/images/colpire-nervi-fig-05.png",
+      "bytes": 47779,
+      "sha256": "e3b10992a3283f9bad3482d17127ecb7e0429b73db11b3bb58619d3867acef62"
+    },
+    {
+      "path": "public/media/images/colpire-nervi-fig-06.png",
+      "bytes": 29493,
+      "sha256": "902819ff4744c5d6fbede19804f8e6740f35e15ae250f997730acf7cbd05cb5a"
+    },
+    {
+      "path": "public/media/images/colpire-nervi-fig-07.png",
+      "bytes": 51131,
+      "sha256": "75f02033136906ea57d4bc7add180b4e60c5d671b9d939be02dfa81222334523"
+    },
+    {
+      "path": "public/media/images/homepage-portrait.jpg",
+      "bytes": 486021,
+      "sha256": "c848f8613827ad1a38443e61ccfe4ca9ef78ea9a93111055c239ac389a763e55"
+    },
+    {
+      "path": "public/media/images/viaggi/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "public/media/images/yoga-in-vetta.jpg",
+      "bytes": 404058,
+      "sha256": "d604234c180a94dc5cf34dc3adeb18374c3db88b72402424585b4e0c9df38109"
+    },
+    {
+      "path": "public/media/images/yoga-montagna-lago.jpg",
+      "bytes": 302584,
+      "sha256": "70a53ae7f2ea9bfcc0ced82ade0811e98e22e250f97d42fde7e1455676170c5f"
+    },
+    {
+      "path": "public/media/images/yoga-pratica-studio.jpg",
+      "bytes": 168269,
+      "sha256": "b614edef5ffd3f36f526db5330a31e9661d453601bbfe4d519afe5acde810336"
+    },
+    {
+      "path": "scripts/build.mjs",
+      "bytes": 10205,
+      "sha256": "2e3c16ef5f2a2a2d0fb2e55c1550571118fd36e46e291682afaf5de8c3d5cea1"
+    },
+    {
+      "path": "scripts/check-output.mjs",
+      "bytes": 2605,
+      "sha256": "ad3927fc52242e2a4a2084f37c8b6fe7832ff09510f6f82d8db7bbf7bfd8614e"
+    },
+    {
+      "path": "scripts/import-overleaf.py",
+      "bytes": 8098,
+      "sha256": "77c40e34a4ddab574f11c9bcc4acb0bf5d4e23372427f2da0d73f0eb3bbd307b"
+    },
+    {
+      "path": "scripts/import-personal-photos.py",
+      "bytes": 1700,
+      "sha256": "0ff71189f6eddc9ec8fb72cd9dbd6c2fed0eec5f0f9c096bd0406a334c8d3172"
+    },
+    {
+      "path": "scripts/serve.mjs",
+      "bytes": 2022,
+      "sha256": "08327341877cf32474465b5ddbfcd93dde3029c4f99f440107977aa0384c4884"
+    },
+    {
+      "path": "scripts/sync-editorial.mjs",
+      "bytes": 1270,
+      "sha256": "94ee43291894e806dd042a525ab56dd34b0458faff0f21c1d16edaedf1e52c79"
+    },
+    {
+      "path": "scripts/verify-photos.mjs",
+      "bytes": 881,
+      "sha256": "3b26dcec67b979ada757156c708fad6d17b692fcde30c83a6f2f7cb98b4bd925"
+    },
+    {
+      "path": "source-materials/Colpire_i_nervi_del_sistema_Overleaf.zip",
+      "bytes": 23406,
+      "sha256": "fae78ab6046b7ba215e6adc3b62d56566fc8a98bb47e2e3f93a3125bf96f01dc"
+    },
+    {
+      "path": "source-materials/README.md",
+      "bytes": 458,
+      "sha256": "e578c4599c1f22345ff358e4bd0dd5a5a6eeaa437da49f05f9639bf8b63b5d67"
+    },
+    {
+      "path": "src/app.js",
+      "bytes": 3755,
+      "sha256": "7b572a9370c4799884af6f483e274c49c39bc8a8f279038555e93fe4e3e09469"
+    },
+    {
+      "path": "src/content.mjs",
+      "bytes": 15689,
+      "sha256": "657f558011f4849a30bf22ea128ab124b17b2ab75e58fecce57d8918f66e4c0c"
+    },
+    {
+      "path": "src/geometry-loader.js",
+      "bytes": 10408,
+      "sha256": "c19912f959d68c4b9287dd41dd86af887cbc152a838d98d5e7c84e9f71b9fe5d"
+    },
+    {
+      "path": "src/geometry.mjs",
+      "bytes": 5475,
+      "sha256": "63fdc109e11e0f8c07d6c7bba45566abd14d151eb7b41294fa86cb0c13cbfd37"
+    },
+    {
+      "path": "src/i18n-client.js",
+      "bytes": 2649,
+      "sha256": "9fb416374bd2244b8a28bff2526c7ee6c7d08d9aff48e3445738a090fb324911"
+    },
+    {
+      "path": "src/i18n.mjs",
+      "bytes": 10513,
+      "sha256": "2cb671f05aad3d983758642195515d64a74947f313717658676d8af7b45d9215"
+    },
+    {
+      "path": "src/media.mjs",
+      "bytes": 4494,
+      "sha256": "67fba8c4585631ac96b7c6722d88710572c261abe09e862e378e2618b7de3668"
+    },
+    {
+      "path": "src/render.mjs",
+      "bytes": 46513,
+      "sha256": "c0b0c1af75ec3186e034b0c599149e467da103d9fb6126a7a275603b4e6fe1fd"
+    },
+    {
+      "path": "src/safety.mjs",
+      "bytes": 3714,
+      "sha256": "a82be0a1eb05be9852e5991203d4b6672da478cc8a1506eb467f188f51a1e4bb"
+    },
+    {
+      "path": "src/site.css",
+      "bytes": 33959,
+      "sha256": "1226208f11832acd6aea396ace997fb2a95b05c4b402c824a1a20ccd28273c08"
+    },
+    {
+      "path": "src/sound.js",
+      "bytes": 3825,
+      "sha256": "dec7432161b8cf2b06ef1114d80c17058222ccf555ce1a90c76fbf23b122fe8b"
+    },
+    {
+      "path": "src/travel-gallery.js",
+      "bytes": 2263,
+      "sha256": "458ced416a12afbb698c02d44b0703bfb7617ef541cf91f55fe5c1ce9d9f9321"
+    },
+    {
+      "path": "src/travel.mjs",
+      "bytes": 6359,
+      "sha256": "d7b715d31be20ed626e602900dd10419e51d1737fcee8a8961dea1f99657c19d"
+    },
+    {
+      "path": "src/visual.css",
+      "bytes": 28876,
+      "sha256": "4a8683ae477549341c0c8655198e069805fea7dc03086e58df7d1b53e4306beb"
+    },
+    {
+      "path": "tests/article-release.test.mjs",
+      "bytes": 1716,
+      "sha256": "4b7c3193bfe8e31de1346007ff1d7095945402919d3d41672a75186af2ddb4b3"
+    },
+    {
+      "path": "tests/biography-revision-v011.test.mjs",
+      "bytes": 1538,
+      "sha256": "edc4e2cc4bdecafa337643e0f871fb3cdd8c805d838790d26ac98b1f37799163"
+    },
+    {
+      "path": "tests/biography.test.mjs",
+      "bytes": 2005,
+      "sha256": "907df593c131e2aa5de31c2350f2e4b0ca800daad3e51d4357848f0ce5ae1d2f"
+    },
+    {
+      "path": "tests/browser-explorer.py",
+      "bytes": 14251,
+      "sha256": "d4e12ca730efe6e0ea9bfee8236dfc35e20aee2c0f4a4b72e9c5141be7d87957"
+    },
+    {
+      "path": "tests/browser-i18n.py",
+      "bytes": 9760,
+      "sha256": "5c3047add77755088b30adaf6dd426f1b9144e016fa289d867369879f34211c1"
+    },
+    {
+      "path": "tests/browser-travels.py",
+      "bytes": 7230,
+      "sha256": "1731f8ddccec4c457a93a2b3fc5c0c921cee12fed914ac2f4190cb353409849a"
+    },
+    {
+      "path": "tests/content.test.mjs",
+      "bytes": 4623,
+      "sha256": "5a67aaa99d745009ea0324deec8318200f8ef71cbcfc7ec311926d757b2cfd8b"
+    },
+    {
+      "path": "tests/editorial-integrity.test.mjs",
+      "bytes": 3968,
+      "sha256": "7a4a492f4c37094bf813623e52256ddbab7ec4bcdc85988aace5e6cc2d8b8a0d"
+    },
+    {
+      "path": "tests/editorial-sync.test.mjs",
+      "bytes": 1796,
+      "sha256": "4a30d600b48f08a59b3b875d9a0d309eb654a66792e2109c42dfabd706e17da4"
+    },
+    {
+      "path": "tests/geometry-explorer.test.mjs",
+      "bytes": 5305,
+      "sha256": "a007ff6504e7a221dd98937b97ac8552b17c463e48092c402e395edba41da3e8"
+    },
+    {
+      "path": "tests/i18n.test.mjs",
+      "bytes": 6612,
+      "sha256": "c4ec23367d89c33c661609de3b097b9f7245dcd8e72c81a16046372b4ca16203"
+    },
+    {
+      "path": "tests/markdown-workflow.test.mjs",
+      "bytes": 3747,
+      "sha256": "06e13fae0aeac7720f7e13ddaad5da6d7f2bae82e8e14da54d4bd569affeead4"
+    },
+    {
+      "path": "tests/personal-interests.test.mjs",
+      "bytes": 1773,
+      "sha256": "f29be1bea6e692d6e58f7a1940b05d7f724c1c44e6e889f63f6148da02ae71f2"
+    },
+    {
+      "path": "tests/personal-photos.test.mjs",
+      "bytes": 1516,
+      "sha256": "ffbffb29921d8e8838ceb54fd5f11b83129ea462baa3ea558fa36d7e4e656c83"
+    },
+    {
+      "path": "tests/publications-and-teaching.test.mjs",
+      "bytes": 6062,
+      "sha256": "e481ec61745b41b834030548b0263968c1b5216ccb3af7fcfb8a01945f7fc7f1"
+    },
+    {
+      "path": "tests/research-structure.test.mjs",
+      "bytes": 3120,
+      "sha256": "e079c7e1b15f25e4a186592b41a2d871afab2066c438b7cbdfaeba38369743ef"
+    },
+    {
+      "path": "tests/research.test.mjs",
+      "bytes": 3552,
+      "sha256": "2810dcf17bd8e35fd12ba39a542d9de5bcd42da6add30a609f22da4d1131b408"
+    },
+    {
+      "path": "tests/security.test.mjs",
+      "bytes": 3871,
+      "sha256": "b8700cbeb77fd650fcc0f29e9e9c704d76fe3ded4ed956959e2918cad5930afd"
+    },
+    {
+      "path": "tests/sound-and-contact.test.mjs",
+      "bytes": 2490,
+      "sha256": "ce0815272819cac28fd24fa7920f06fb8bc7f71864a071f9b788a59dad25a8b0"
+    },
+    {
+      "path": "tests/travels.test.mjs",
+      "bytes": 5480,
+      "sha256": "eec05a9e9adb9cca9bf8218fd4b5478c06aee6a474d9a75cfc48f02fa884c458"
+    },
+    {
+      "path": "tests/visual-browser-checks.py",
+      "bytes": 207,
+      "sha256": "5a1b12a087818d8965979e74b7dcc0494072b70d76d3d98c7e1e261b71094823"
+    },
+    {
+      "path": "tests/visual-integrity.test.mjs",
+      "bytes": 3555,
+      "sha256": "262285a55c8d57b0255c535e22e33cf30495f4b17dc57b484b9002b062c19483"
+    },
+    {
+      "path": "tools/generate-explorer.py",
+      "bytes": 14127,
+      "sha256": "455ac277e64dce794522326542215ad32d4a278de35e1e244837febe96888db3"
+    },
+    {
+      "path": "tools/render-geometry-previews.py",
+      "bytes": 2427,
+      "sha256": "09e8a13633f51961f49c045e6a5a8f3a8e0b2cefab0d3ade632fef453c06aa79"
+    },
+    {
+      "path": "tools/requirements-geometry.txt",
+      "bytes": 71,
+      "sha256": "b9e65ec9f703019d310ee6dc112b9f751373f960948764fe3951ede2c011a036"
+    }
   ]
 }

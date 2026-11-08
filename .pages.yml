@@ -1,4 +1,4 @@
-# MDC_LAB v2.1 — tutti i testi visibili qui sono in Markdown.
+# MDC_LAB v2.4 — tutti i testi visibili qui sono in Markdown.
 # Questo pannello usa l'editor di file grezzi: conservare i titoli ## delle sezioni.
 media:
   - name: docs
@@ -13,7 +13,35 @@ media:
     output: /media/images
     rename: safe
     extensions: [png, jpg, jpeg, webp]
+  - name: travel-images
+    label: Fotografie dei viaggi
+    input: public/media/images/viaggi
+    output: /media/images/viaggi
+    rename: safe
+    extensions: [png, jpg, jpeg, webp]
 content:
+  - name: viaggi-intro
+    label: Viaggi ed escursioni — introduzione
+    type: file
+    path: content/markdown/viaggi.md
+    format: raw
+  - name: viaggi-diari
+    label: Viaggi — album e diari
+    type: collection
+    path: content/markdown/viaggi
+    format: raw
+    subfolders: false
+  - name: en-viaggi-intro
+    label: "English — Travels introduction"
+    type: file
+    path: content/markdown/en/viaggi.md
+    format: raw
+  - name: en-viaggi-diari
+    label: "English — Travel diaries"
+    type: collection
+    path: content/markdown/en/viaggi
+    format: raw
+    subfolders: false
   - name: home
     label: Homepage — presentazione
     type: file
@@ -68,5 +96,97 @@ content:
     label: Blog — titoli e sintesi
     type: collection
     path: content/markdown/post-details
+    format: raw
+    subfolders: false
+
+  - name: geometrie
+    label: Forme — formule e spiegazioni
+    type: collection
+    path: content/markdown/geometrie
+    format: raw
+    subfolders: false
+
+  - name: en-home
+    label: "English — Homepage"
+    type: file
+    path: content/markdown/en/homepage.md
+    format: raw
+
+  - name: en-epigrafi
+    label: "English — Epigraphs"
+    type: file
+    path: content/markdown/en/epigrafi.md
+    format: raw
+
+  - name: en-profilo
+    label: "English — Biography"
+    type: file
+    path: content/markdown/en/profilo.md
+    format: raw
+
+  - name: en-ricerca
+    label: "English — Research"
+    type: file
+    path: content/markdown/en/ricerca.md
+    format: raw
+
+  - name: en-profilo-dati
+    label: "English — CV records"
+    type: file
+    path: content/markdown/en/profilo-dati.md
+    format: raw
+
+  - name: en-interfaccia
+    label: "English — Interface labels"
+    type: file
+    path: content/markdown/en/interfaccia.md
+    format: raw
+
+  - name: en-aree-ricerca
+    label: "English — Research topics"
+    type: collection
+    path: content/markdown/en/aree-ricerca
+    format: raw
+    subfolders: false
+
+  - name: en-publications
+    label: "English — Publications"
+    type: collection
+    path: content/markdown/en/publications
+    format: raw
+    subfolders: false
+
+  - name: en-courses
+    label: "English — Courses"
+    type: collection
+    path: content/markdown/en/courses
+    format: raw
+    subfolders: false
+
+  - name: en-lectures
+    label: "English — Lessons"
+    type: collection
+    path: content/markdown/en/lectures
+    format: raw
+    subfolders: false
+
+  - name: en-posts
+    label: "English — Articles"
+    type: collection
+    path: content/markdown/en/posts
+    format: raw
+    subfolders: false
+
+  - name: en-post-details
+    label: "English — Article titles and excerpts"
+    type: collection
+    path: content/markdown/en/post-details
+    format: raw
+    subfolders: false
+
+  - name: en-geometrie
+    label: "English — 3D model explanations"
+    type: collection
+    path: content/markdown/en/geometrie
     format: raw
     subfolders: false

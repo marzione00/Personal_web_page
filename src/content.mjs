@@ -1,4 +1,7 @@
+import {loadTravels, readTravelIndex} from './travel.mjs';
+import {localiseData} from './i18n.mjs';
 import fs from 'node:fs';
+import {loadGeometry} from './geometry.mjs';
 import {createHash} from 'node:crypto';
 import path from 'node:path';
 import {safeId,safeEmail,safeExternal,safeMedia} from './safety.mjs';
@@ -14,7 +17,7 @@ const EDITABLE=Object.freeze({
  courses:['title','summary'],
  lectures:['title','summary','topics','body'],
  publications:['title','authors','where','plainTitle','plainSummary','explanation','bibliographicNote'],
- posts:['title','subtitle','excerpt','category']
+ posts:['title','subtitle','excerpt','category','geometria']
 });
 function sectionsFromMarkdown(filename){
  if(!fs.existsSync(filename))return null;
@@ -64,7 +67,7 @@ function parseArticleFrontmatter(file){
  for(const line of match[1].split('\n')){
   if(!line.trim()||line.trim().startsWith('#'))continue;
   const m=line.match(/^([A-Za-z][A-Za-z0-9_-]*):\s*(.*)$/);if(!m)throw new Error('Metadato Markdown articolo non valido: '+file);
-  if(!['id','title','date','category','tags','excerpt','draft','subtitle','pdf','sourceStatus'].includes(m[1]))throw new Error('Metadato articolo sconosciuto: '+m[1]);
+  if(!['id','title','date','category','tags','excerpt','draft','subtitle','pdf','sourceStatus','geometry'].includes(m[1]))throw new Error('Metadato articolo sconosciuto: '+m[1]);
   const value=m[2].replace(/^(["'])(.*)\1$/,'$2');
   meta[m[1]]=value;
  }
@@ -73,7 +76,7 @@ function parseArticleFrontmatter(file){
  safeId(id);
  for(const x of ['title','date','category','excerpt'])if(!meta[x])throw new Error('Metadato mancante '+x+' per '+id);
  if(!['true','false'].includes(meta.draft))throw new Error('Per il nuovo articolo specificare draft: true oppure false');
- return{id,title:meta.title,date:meta.date,category:meta.category,excerpt:meta.excerpt,draft:meta.draft==='true',demo:false,tags:meta.tags?meta.tags.split(',').map(x=>x.trim()).filter(Boolean):[],sourceStatus:meta.sourceStatus||(meta.draft==='false'?'approved':'needs-review'),body:match[2].trim(),subtitle:meta.subtitle||'',...(meta.pdf?{pdf:meta.pdf}:{})};
+ return{id,title:meta.title,date:meta.date,category:meta.category,excerpt:meta.excerpt,draft:meta.draft==='true',demo:false,tags:meta.tags?meta.tags.split(',').map(x=>x.trim()).filter(Boolean):[],sourceStatus:meta.sourceStatus||(meta.draft==='false'?'approved':'needs-review'),body:match[2].trim(),geometria:meta.geometry||'',subtitle:meta.subtitle||'',...(meta.pdf?{pdf:meta.pdf}:{})};
 }
 function additionalMarkdownPosts(root,existing){
  const dir=path.join(root,'content/markdown/posts');if(!fs.existsSync(dir))return[];
@@ -84,14 +87,17 @@ function additionalMarkdownPosts(root,existing){
  });
 }
 
-export function loadContent(root,{preview=false}={}){
+export function loadContent(root,{preview=false,language='it'}={}){
  const profile=readJson(path.join(root,'content/profile.json')),site=readJson(path.join(root,'content/site.json')),research=readJson(path.join(root,'content/research.json'));
+ const travels=loadTravels(root,{preview,language});
+ const travelIndex=readTravelIndex(root,language);
  applyMarkdownSections(root,'.','profilo',profile,EDITABLE.profile);
  applyMarkdownSections(root,'.','ricerca',research,EDITABLE.research);
  const home=sectionsFromMarkdown(path.join(root,'content/markdown/homepage.md'));
  if(!home||['soprattitolo','settori','ricercaAttuale','formazione','praticaCorporea','titoloPercorso','etichettaEpigrafi','titoloEpigrafi'].some(k=>!home[k]))throw new Error('Homepage Markdown incompleta');
  for(const key of Object.keys(home))if(!['soprattitolo','settori','ricercaAttuale','formazione','praticaCorporea','titoloPercorso','etichettaEpigrafi','titoloEpigrafi'].includes(key))throw new Error('Sezione homepage Markdown non prevista: '+key);
  const epigraphs=loadEpigraphs(root);
+ const geometry=loadGeometry(root);
  for(const area of research.areas)applyMarkdownSections(root,'aree-ricerca',area.id,area,EDITABLE.areas);
  if(typeof site.published!=='boolean')throw new Error('Stato pubblicazione non valido');
  for(const key of ['education','experience','teaching','theses','talks','interests','skills','programming','languages'])if(!Array.isArray(profile[key]))throw new Error('Elenco profilo non valido: '+key);
@@ -153,5 +159,6 @@ export function loadContent(root,{preview=false}={}){
  if(!/^[a-f0-9]{64}$/.test(profile.homepagePhoto.sha256||''))throw new Error('Impronta foto originale assente');
  const photoBytes=fs.readFileSync(path.join(root,'public',safeMedia(profile.homepagePhoto.file)));
  if(createHash('sha256').update(photoBytes).digest('hex')!==profile.homepagePhoto.sha256)throw new Error('La fotografia non corrisponde al file originale approvato.');
- return{profile,site,research,home,epigraphs,courses,posts,lectures,publications:publications.sort((a,b)=>b.year.localeCompare(a.year)),preview};
+ for(const post of posts)if(post.geometria&&!geometry.byId[post.geometria])throw Error('Geometria articolo inesistente: '+post.geometria);
+ return localiseData(root,{geometry,profile,site,research,home,epigraphs,courses,posts,lectures,publications:publications.sort((a,b)=>b.year.localeCompare(a.year)),travels,travelIndex,preview},language);
 }

@@ -1,0 +1,19 @@
+---
+title: Add the title of the journey
+date: 2026-11-08
+kind: Hike
+place: Add a place or broad area
+excerpt: A short introduction for the journey listing.
+draft: true
+---
+
+Write your diary here. Keep the same file name and image paths as the Italian version.
+
+## The route
+
+Describe the walk, impressions and observations.
+
+## Album
+
+![Accessible caption for the first photo](media/images/viaggi/nome-del-file/foto-01.jpg)
+![Accessible caption for the second photo](media/images/viaggi/nome-del-file/foto-02.jpg)

@@ -1,6 +1,6 @@
 {
   "name": "mdc-lab",
-  "version": "2.1.0",
+  "version": "2.7.0",
   "private": true,
   "type": "module",
   "description": "Sito accademico statico, senza dipendenze npm",
@@ -17,6 +17,8 @@
     "check:editorial": "node scripts/sync-editorial.mjs --check",
     "build:release": "node scripts/build.mjs --release",
     "preview:editorial": "node scripts/build.mjs --preview --drafts",
-    "verify:photos": "node scripts/verify-photos.mjs"
+    "verify:photos": "node scripts/verify-photos.mjs",
+    "test:browser": "python3 tests/browser-explorer.py",
+    "test:browser:travels": "python3 tests/browser-travels.py"
   }
 }
