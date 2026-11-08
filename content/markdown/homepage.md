@@ -22,4 +22,4 @@ Dalla fisica computazionale all’esperienza corporea
 Riferimenti culturali
 
 ## titoloEpigrafi
-Tre epigrafi
+Conoscenza, realtà, esperienza

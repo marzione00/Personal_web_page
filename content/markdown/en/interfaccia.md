@@ -739,12 +739,12 @@ Italiano: Apri CV in PDF
 English: Open CV PDF
 
 ## label185
-Italiano: PDF precedente agli aggiornamenti delle docenze.
-English: Original PDF, predating the teaching updates.
+Italiano: Curriculum PDF fornito dall’autore.
+English: CV PDF supplied by the author.
 
 ## label186
-Italiano: Per le attività correnti consultare questa pagina.
-English: Consult this page for current activities.
+Italiano: Documento originale scaricabile.
+English: Original document available to download.
 
 ## label187
 Italiano: Indice del profilo
@@ -819,8 +819,8 @@ Italiano: Interventi scientifici
 English: Scientific talks
 
 ## label205
-Italiano: Sono riportati alcuni degli interventi scientifici; il PDF disponibile corrisponde a una versione precedente del curriculum.
-English: Selected scientific talks are listed here; the available PDF corresponds to an earlier version of the CV.
+Italiano: Una selezione degli interventi scientifici.
+English: A selection of scientific talks.
 
 ## label206
 Italiano: Metodi e competenze
@@ -911,8 +911,8 @@ Italiano: Curriculum PDF
 English: CV PDF
 
 ## label228
-Italiano: Una versione precedente del curriculum, scaricabile in PDF. Gli incarichi didattici in corso sono riportati nella pagina Profilo & CV.
-English: An earlier version of the CV, available as a PDF. Current teaching appointments are listed on the Profile & CV page.
+Italiano: Il curriculum fornito dall’autore, disponibile nel suo formato PDF originale.
+English: The CV supplied by the author, available in its original PDF format.
 
 ## label229
 Italiano: Apri il curriculum

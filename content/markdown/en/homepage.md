@@ -24,4 +24,4 @@ From computational physics to bodily experience
 Cultural references
 
 ## titoloEpigrafi
-Three epigraphs
+Knowledge, reality, experience

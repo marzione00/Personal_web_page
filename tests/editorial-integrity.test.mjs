@@ -41,9 +41,10 @@ test('official archive bibliographies are differentiated from conference year',(
  assert.match(get('pub-09').bibliographicNote,/ANNPR nell.ottobre 2026/);
  assert.match(pages.get('ricerca.html'),/Nota bibliografica: l.archivio BOA/);
 });
-test('resource page warns the existing CV PDF predates current teaching',()=>{
- assert.match(pages.get('risorse.html'),/versione precedente del curriculum/);
- assert.match(pages.get('cv.html'),/PDF precedente agli aggiornamenti delle docenze/);
+test('CV exposes the author PDF and a separate download',()=>{
+ assert.match(pages.get('risorse.html'),/formato PDF originale/);
+ assert.match(pages.get('cv.html'),/download="Marzio_De_Corato_CV.pdf"/);
+ assert.doesNotMatch(pages.get('cv.html'),/PDF precedente agli aggiornamenti/);
 });
 test('course without attached slides does not advertise a download',()=>{
  assert.match(pages.get('didattica.html'),/SCHEDA SENZA ALLEGATI/);

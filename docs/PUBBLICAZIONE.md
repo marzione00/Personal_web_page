@@ -1,3 +1,6 @@
+# Nota per la release 3.1
+Prima dei passaggi sotto, aggiungi il PDF originale come `CV.pdf` nella radice. La procedura corrente completa è `../LEGGIMI_PRIMA_DI_CARICARE.md`. Le indicazioni numerate con versioni precedenti sono storiche.
+
 > **NOVITÀ v2.1:** per aggiornare i contenuti pubblici si modificano i file Markdown in `content/markdown/`. Vedere `COME_MODIFICARE_I_TESTI.md` nella radice del repository. Non modificare `dist/` né i vecchi testi duplicati nei metadati JSON.
 
 # Pubblicazione di MDC_LAB 1.5.2

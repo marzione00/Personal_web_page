@@ -2,6 +2,7 @@
 (() => {
  'use strict';
  const tr=window.MDCTranslate||((x)=>x),resourceBase=document.body.dataset.resourceBase||'';
+ if(!['','../'].includes(resourceBase))return;
  const dialog=document.querySelector('#geometry-dialog');if(!dialog)return;
  const stage=dialog.querySelector('#geometry-stage'),detail=dialog.querySelector('[data-geo-detail]'),status=dialog.querySelector('[data-geo-status]'),fallback=dialog.querySelector('[data-geo-fallback]');
  const reduced=matchMedia('(prefers-reduced-motion: reduce)'),fine=matchMedia('(hover: hover) and (pointer: fine)');
@@ -16,22 +17,24 @@
  function getLibrary(){
   if(window.MDCGeometry)return Promise.resolve(window.MDCGeometry);
   if(libraryPromise)return libraryPromise;
-  libraryPromise=new Promise((resolve,reject)=>{const s=document.createElement('script');s.src=resourceBase+(dialog.dataset.viewerSrc||'assets/geometry-viewer.js');if(dialog.dataset.viewerIntegrity){s.integrity=dialog.dataset.viewerIntegrity;s.crossOrigin='anonymous';}s.async=true;s.onload=()=>window.MDCGeometry?resolve(window.MDCGeometry):reject(Error(tr("Visualizzatore non disponibile.")));s.onerror=()=>{libraryPromise=null;s.remove();reject(Error(tr("Caricamento del visualizzatore non riuscito.")));};document.head.append(s);});return libraryPromise;
+  libraryPromise=new Promise((resolve,reject)=>{if(!/^assets\/geometry-viewer-[a-f0-9]{12}\.js$/.test(dialog.dataset.viewerSrc||'')||!/^sha256-[A-Za-z0-9+/]{43}=$/.test(dialog.dataset.viewerIntegrity||'')){reject(Error(tr('Visualizzatore non disponibile.')));return;}const s=document.createElement('script');s.src=resourceBase+(dialog.dataset.viewerSrc||'assets/geometry-viewer.js');if(dialog.dataset.viewerIntegrity){s.integrity=dialog.dataset.viewerIntegrity;s.crossOrigin='anonymous';}s.async=true;s.onload=()=>window.MDCGeometry?resolve(window.MDCGeometry):reject(Error(tr("Visualizzatore non disponibile.")));s.onerror=()=>{libraryPromise=null;s.remove();reject(Error(tr("Caricamento del visualizzatore non riuscito.")));};document.head.append(s);});return libraryPromise;
  }
- async function getScene(id,source){
-  if(!/^[a-z]+(?:-[a-z]+)*$/.test(id)||source!==`geometry/scenes/${id}.bin`)throw Error(tr("Percorso modello non valido."));
-  if(cache.has(id)){const b=cache.get(id);cache.delete(id);cache.set(id,b);return b;}
-  if(pending.has(id))return pending.get(id);
-  const task=(async()=>{
-   let buffer;
-   if(window.MDCEmbeddedScenes?.[id]){const raw=atob(window.MDCEmbeddedScenes[id]);buffer=Uint8Array.from(raw,c=>c.charCodeAt(0)).buffer;}
-   else {const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),12000);try{const r=await fetch(resourceBase+source,{credentials:'same-origin',signal:controller.signal});if(!r.ok)throw Error(tr("Modello non disponibile."));buffer=await r.arrayBuffer();}finally{clearTimeout(timeout);}}
-   if(buffer.byteLength>1500000)throw Error(tr("Modello troppo grande."));cache.set(id,buffer);while(cache.size>5)cache.delete(cache.keys().next().value);return buffer;
-  })();pending.set(id,task);try{return await task;}finally{pending.delete(id);}
+ async function getScene(id,source,digest){
+  if(!/^[a-z]+(?:-[a-z]+)*$/.test(id)||source!==`geometry/scenes/${id}.bin`||!/^[a-f0-9]{64}$/.test(digest||''))throw Error(tr("Percorso modello non valido."));
+  const key=id+':'+digest,limit=300000;
+  if(cache.has(key)){const b=cache.get(key);cache.delete(key);cache.set(key,b);return b;}if(pending.has(key))return pending.get(key);if(pending.size>=4)throw Error(tr("Modello non disponibile."));
+  const task=(async()=>{let buffer;
+   if(window.MDCEmbeddedScenes?.[id]){const encoded=window.MDCEmbeddedScenes[id];if(typeof encoded!=='string'||encoded.length>Math.ceil(limit/3)*4)throw Error(tr("Modello troppo grande."));const raw=atob(encoded);buffer=Uint8Array.from(raw,c=>c.charCodeAt(0)).buffer;}
+   else{const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),12000);try{const response=await fetch(resourceBase+source,{credentials:'omit',redirect:'error',signal:controller.signal});if(!response.ok)throw Error(tr("Modello non disponibile."));const length=response.headers.get('content-length');if(length&&(!/^\d+$/.test(length)||Number(length)>limit))throw Error(tr("Modello troppo grande."));if(!response.body?.getReader)throw Error(tr("Modello non disponibile."));const reader=response.body.getReader(),chunks=[];let total=0;
+     try{while(true){const {done,value}=await reader.read();if(done)break;total+=value.byteLength;if(total>limit){controller.abort();throw Error(tr("Modello troppo grande."));}chunks.push(value);}}finally{reader.releaseLock();}
+     const bytes=new Uint8Array(total);let offset=0;for(const chunk of chunks){bytes.set(chunk,offset);offset+=chunk.byteLength;}buffer=bytes.buffer;
+    }finally{clearTimeout(timeout);}}
+   if(buffer.byteLength<24||buffer.byteLength>limit||!globalThis.crypto?.subtle)throw Error(tr("Modello non disponibile."));const hash=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',buffer)),b=>b.toString(16).padStart(2,'0')).join('');if(hash!==digest)throw Error(tr("Modello non valido."));cache.set(key,buffer);while(cache.size>5)cache.delete(cache.keys().next().value);return buffer;
+  })();pending.set(key,task);try{return await task;}finally{pending.delete(key);}
  }
  async function activate(a,host,token){
   const id=a.dataset.geometryOpen;
-  const [lib,buffer]=await Promise.all([getLibrary(),getScene(id,a.dataset.scene)]);
+  const [lib,buffer]=await Promise.all([getLibrary(),getScene(id,a.dataset.scene,a.dataset.sceneSha256)]);
   if(token!==generation)return;
   if(!viewer||!viewer.alive){viewer?.dispose();viewer=new lib.Viewer();viewer.onlost=()=>{status.textContent=tr("Il contesto 3D è stato interrotto. Immagine, formula e spiegazione restano disponibili.");dialog.querySelector('[data-geo-spin]').setAttribute('aria-pressed','false');};window.MDCGeometryDebug={get viewer(){return viewer;},get cacheSize(){return cache.size;}};}
   viewer.attach(host);viewer.load(buffer);activeId=id;owner=a;
@@ -46,7 +49,8 @@
  document.addEventListener('pointermove',e=>{if(modal||!owner||!viewer?.model||!motionAllowed())return;const r=owner.getBoundingClientRect();const x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;viewer.move(viewer.model.camera[0]+y*.75,viewer.model.camera[1]+x*1.3);});
  function open(a){
   if(typeof dialog.showModal!=='function')return false;
-  stopHover();modal=true;opener=a;const id=a.dataset.geometryOpen;
+  const id=a.dataset.geometryOpen;if(!/^[a-z]+(?:-[a-z]+)*$/.test(id||''))return false;
+  stopHover();modal=true;opener=a;
   const scope=a.closest('[data-view]')||document;
   const template=scope.querySelector(`template[data-geometry-info="${id}"]`)||document.querySelector(`template[data-geometry-info="${id}"]`);if(!template){modal=false;return false;}
   detail.replaceChildren(template.content.cloneNode(true));const title=detail.querySelector('[data-geo-info-title]')?.textContent||tr("Esplora il modello");dialog.querySelector('#geometry-title').textContent=title;

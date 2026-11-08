@@ -1,6 +1,6 @@
 {
   "name": "manifold-personal-site",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "private": true,
   "type": "module",
   "description": "MANIFOLD — Marzio De Corato. Ricerca, didattica, scrittura e viaggi.",
@@ -21,6 +21,12 @@
     "test:browser": "python3 tests/browser-explorer.py",
     "test:browser:travels": "python3 tests/browser-travels.py",
     "test:browser:ambient": "python3 tests/browser-ambient.py",
-    "test:browser:ambient:webgl": "python3 tests/browser-ambient-webgl.py"
+    "test:browser:ambient:webgl": "python3 tests/browser-ambient-webgl.py",
+    "security:audit": "node scripts/security-audit.mjs",
+    "import:cv": "node scripts/import-cv.mjs",
+    "prebuild": "node scripts/import-cv.mjs",
+    "prebuild:release": "node scripts/import-cv.mjs",
+    "prepreview:build": "node scripts/import-cv.mjs",
+    "prepreview:editorial": "node scripts/import-cv.mjs"
   }
 }

@@ -1,5 +1,12 @@
 # Changelog MANIFOLD
 
+## v3.1 — Revisione editoriale e hardening
+- Introduzione IT/EN più graduale, citazione e sezioni successive conservate.
+- Titolo: Conoscenza, realtà, esperienza / Knowledge, reality, experience.
+- Importazione byte-identica del CV originale con download separato; richiede di aggiungere CV.pdf alla radice, perché il nuovo allegato non è incluso.
+- CSP hash-only, verifica runtime delle scene, streaming limitato e confini dei file pubblicabili.
+- Controlli PDF/Office, workflow e server di prova rafforzati; nessuna garanzia di immunità totale.
+
 ## v3.0 — Nome, licenza, ambiente sonoro
 - Identità pubblica MANIFOLD, con URL esistenti invariati.
 - Spiegazione del nome in Markdown IT/EN, tre esempi geometrici e richiamo autonomo in homepage.

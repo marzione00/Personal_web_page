@@ -7,7 +7,7 @@ Striking the Nerves of the System
 Cyberattacks, false alarms and the strategy of disorganisation, from Liddell Hart to John Boyd
 
 ## excerpt
-The line foregrounds the relationship between information and conduct, on which an increasing share of contemporary society’s functioning depends.
+An altered command, a false alarm: how a signal can set resources and decisions in motion, disrupting an entire system. An exploration through Liddell Hart and John Boyd.
 
 ## category
 Essays

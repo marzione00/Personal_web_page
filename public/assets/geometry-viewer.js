@@ -21,6 +21,7 @@
   if(!(buffer instanceof ArrayBuffer)||buffer.byteLength<24||buffer.byteLength>1500000)throw Error('Modello non valido.');
   const d=new DataView(buffer);if(d.getUint32(0,true)!==0x3343444d)throw Error('Formato modello non riconosciuto.');
   const n=d.getUint32(4,true),ni=d.getUint32(8,true),flags=d.getUint32(12,true);
+  if(flags>3||![d.getFloat32(16,true),d.getFloat32(20,true)].every(x=>Number.isFinite(x)&&Math.abs(x)<=100))throw Error('Parametri modello non validi.');
   if(n<3||n>60000||ni<3||ni%3||ni>180000)throw Error('Limiti del modello superati.');
   let posEnd=24+n*6,colEnd=posEnd+n*3,ixStart=colEnd+(colEnd%2);
   if(ixStart+ni*2!==buffer.byteLength)throw Error('Modello incompleto.');
@@ -33,6 +34,7 @@
    for(const j of [a,b,c])for(let k=0;k<3;k++)norm[j+k]+=nn[k];
   }
   for(let i=0;i<norm.length;i+=3){let l=Math.hypot(norm[i],norm[i+1],norm[i+2])||1;norm[i]/=l;norm[i+1]/=l;norm[i+2]/=l;}
+  if(!Number.isFinite(radius)||radius<1e-6)throw Error('Modello degenere.');
   return{p,norm,ix,co,fractal:(flags&2)?1:0,unlit:flags&1,camera:[d.getFloat32(16,true),d.getFloat32(20,true)],radius};
  }
  class Viewer{

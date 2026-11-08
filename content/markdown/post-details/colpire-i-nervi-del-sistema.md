@@ -9,7 +9,7 @@ Colpire i nervi del sistema
 Cyberattacchi, falsi allarmi e strategia della disorganizzazione da Liddell Hart a John Boyd
 
 ## excerpt
-La battuta porta in primo piano il rapporto fra informazione e condotta, dal quale dipende una parte crescente del funzionamento delle società contemporanee.
+Un comando alterato, un falso allarme: come un segnale può mettere in moto risorse e decisioni, fino a disorganizzare un sistema. Un percorso attraverso Liddell Hart e John Boyd.
 
 ## category
 Saggi

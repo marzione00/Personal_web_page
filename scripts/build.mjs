@@ -1,3 +1,4 @@
+import {validateSourceBoundary,validatePublicBoundary} from '../src/security.mjs';
 import {loadAmbientFormulas} from '../src/ambient-content.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -12,6 +13,7 @@ const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const preview=process.argv.includes('--preview'),release=process.argv.includes('--release'),editorial=process.argv.includes('--drafts');
 if(editorial&&!preview)throw Error('Le bozze possono essere generate solo con --preview.');
 const out=path.join(root,preview?'preview':'dist');
+validateSourceBoundary(root);validatePublicBoundary(root);
 const datasets=Object.fromEntries(languages.map(language=>[language,loadContent(root,{preview:editorial,language})]));
 const media=validateMedia(root),data=datasets.it;
 const css=['site.css','visual.css','ambient.css','identity.css'].map(f=>fs.readFileSync(path.join(root,'src',f),'utf8')).join('\n');
@@ -30,7 +32,7 @@ for(const g of geometryManifest){
  if(scene.subarray(0,4).toString()!=='MDC3'||scene.length>300000||createHash('sha256').update(scene).digest('hex')!==g.sceneSha256)throw Error('Scena non valida: '+g.id);
  if(g.file.endsWith('.svg')&&/<(?:script|text|foreignObject|image|use)\b|\son\w+\s*=|(?:href|style)\s*=/i.test(bytes.toString('utf8')))throw Error('SVG non decorativo o non sicuro: '+g.file);
 }
-export const policy=(script,embedded=false)=>`default-src 'none'; script-src 'self' 'sha256-${hash(script)}'; style-src 'sha256-${hash(css)}'; img-src 'self'${embedded?' data:':''}; font-src 'none'; connect-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'; media-src 'self'${embedded?' data: blob:':''}`;
+export const policy=(script,embedded=false)=>`default-src 'none'; script-src 'sha256-${hash(script)}' 'sha256-${hash(viewer)}'; script-src-attr 'none'; style-src 'sha256-${hash(css)}'; img-src 'self'${embedded?' data:':''}; style-src-attr 'none'; font-src 'none'; worker-src 'none'; manifest-src 'none'; connect-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'; media-src 'self'${embedded?' data: blob:':''}`;
 const music=JSON.parse(fs.readFileSync(path.join(root,'content/music-manifest.json'),'utf8'));
 if(music.file!=='audio/local-coordinates.mp3')throw Error('Percorso musica non autorizzato');
 const musicBytes=fs.readFileSync(path.join(root,'public',music.file));
@@ -55,7 +57,9 @@ for(const language of languages){
  }
 }
 fs.writeFileSync(path.join(out,'.nojekyll'),'');
-fs.writeFileSync(path.join(out,'_headers'),`# Hosting that supports _headers only. GitHub Pages does NOT read this file.\n/*\n  Content-Security-Policy: ${csp}; frame-ancestors 'none'\n  X-Content-Type-Options: nosniff\n  X-Frame-Options: DENY\n  Referrer-Policy: no-referrer\n  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()\n`);
+fs.mkdirSync(path.join(out,'.well-known'),{recursive:true});
+fs.writeFileSync(path.join(out,'.well-known/security.txt'),'Contact: mailto:marzio.decorato@outlook.it\nExpires: 2027-05-08T00:00:00Z\nPreferred-Languages: it, en\n');
+fs.writeFileSync(path.join(out,'_headers'),`# Hosting that supports _headers only. GitHub Pages does NOT read this file.\n/*\n  Content-Security-Policy: ${csp}; frame-ancestors 'none'\n  X-Content-Type-Options: nosniff\n  X-Frame-Options: DENY\n  Referrer-Policy: no-referrer\n  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), serial=(), bluetooth=(), display-capture=()\n`);
 fs.writeFileSync(path.join(out,'robots.txt'),indexable?`User-agent: *\nAllow: /\nSitemap: ${siteUrl}sitemap.xml\n`:'User-agent: *\nDisallow: /\n');
 if(indexable){
  const urls=languages.flatMap(l=>pageSets[l].filter(p=>p.file!=='404.html').map(p=>`<url><loc>${escapeHtml(new URL(pagePath(l,p.file),siteUrl).href)}</loc></url>`));

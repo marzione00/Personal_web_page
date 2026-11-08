@@ -14,7 +14,7 @@ export function loadGeometry(root){
 const expandIcon='<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.3"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9zM4 7.5l8 4.5 8-4.5M12 12v9"/></svg>';
 export function geometryMarkup(data,key,extra=''){
  const g=data.geometry.byId[key];if(!g)throw Error('Geometria non configurata: '+key);
- return `<div class="geometry ${e(extra)}" data-geometry="${g.id}"><a class="geometry-open" data-geometry-open="${g.id}" data-scene="geometry/${e(g.scene)}" href="geometrie.html#${g.id}" aria-label="Esplora ${e(g.titolo)}: modello, formula e spiegazione"><img src="geometry/${e(g.file)}" alt="${e(g.titolo)}" width="800" height="640" loading="lazy" decoding="async"><span class="geometry-affordance" aria-hidden="true">${expandIcon}</span></a></div>`;
+ return `<div class="geometry ${e(extra)}" data-geometry="${g.id}"><a class="geometry-open" data-geometry-open="${g.id}" data-scene="geometry/${e(g.scene)}" data-scene-sha256="${e(g.sceneSha256)}" href="geometrie.html#${g.id}" aria-label="Esplora ${e(g.titolo)}: modello, formula e spiegazione"><img src="geometry/${e(g.file)}" alt="${e(g.titolo)}" width="800" height="640" loading="lazy" decoding="async"><span class="geometry-affordance" aria-hidden="true">${expandIcon}</span></a></div>`;
 }
 function sourceLinks(source){
  return source.split('\n').map(line=>{const m=line.match(/^\[([^\]]+)\]\(([^)]+)\)$/);if(!m)return`<p>${e(line)}</p>`;

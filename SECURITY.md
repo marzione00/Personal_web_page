@@ -1,47 +1,39 @@
-# Sicurezza · MANIFOLD 3.0
+# Sicurezza — MANIFOLD 3.1
 
-Il sito è statico. La revisione è stata verificata localmente; non è stato svolto un penetration test, né configurato l’account dell’autore. Nessuna garanzia di invulnerabilità.
+## Perimetro e limiti
 
-## Controlli presenti
+Questa revisione rafforza il generatore statico, il JavaScript del browser, il caricamento delle risorse e il workflow fornito. Non è una certificazione di invulnerabilità, un penetration test del sito online o una verifica di tutti gli attacchi conosciuti. Nessuna modifica è stata eseguita su account GitHub, DNS, hosting o CMS autenticato.
 
-I JSON vengono validati prima del rendering; i testi sono sottoposti a escaping. Il Markdown ammesso è limitato e non esegue HTML o MDX. Sono accettati percorsi locali vincolati e collegamenti HTTPS. La build rifiuta riferimenti a file assenti e stati editoriali incoerenti.
+Il sito non ha backend applicativo, login pubblico, database o modulo di upload per i visitatori. SQL injection, esecuzione di comandi su un server applicativo e CSRF su account del sito non corrispondono a funzioni presenti in questo frontend; questo non esclude vulnerabilità del provider, del browser o degli strumenti amministrativi.
 
-La CSP autorizza script inline e stili tramite hash SHA-256; il solo renderer differito è un file sullo stesso sito, con nome content-hashed e SRI. `script-src` e `connect-src` consentono il medesimo origin per caricare renderer e mesh locali. Non vengono usati `unsafe-inline`, `unsafe-eval`, tracker, font remoti o librerie CDN. L’applicazione pubblica non ha login, database, modulo di caricamento o backend propri. La parte amministrativa rimane esterna (GitHub/Pages CMS).
+## Protezioni applicate
 
-La versione multipagina carica immagini e MP3 dallo stesso sito. La versione monofile ammette immagini `data:` e audio incorporato `data:`/`blob:` nei rispettivi ambiti della CSP. Il file musicale viene decodificato e avviato soltanto dopo il comando esplicito del lettore. I PDF portabili sono Blob locali, aperti fuori da iframe. La verifica base64/SHA-256 confronta il contenuto incorporato con gli originali; questa verifica non è una scansione antivirus.
+- Markdown limitato ed escaping dei contenuti: niente HTML/MDX eseguibile, embed arbitrari o protocolli attivi nei link. Conservati i controlli esistenti.
+- CSP: gli script sono autorizzati con hash SHA-256 espliciti. Rimossa l'autorizzazione generica `script-src 'self'`; il renderer differito richiede anche SRI. Vietati handler inline, eval, plugin, worker, form e frame nel sito.
+- Scene 3D: percorsi vincolati, hash SHA-256 verificato nel browser prima della decodifica, massimo 300.000 byte letto in streaming, quattro richieste pendenti e cinque modelli in cache. Rifiutati redirect e camera non finita/flag sconosciuti. Il decoder conserva limiti su vertici, triangoli e indici. Senza WebCrypto su un contesto sicuro il 3D resta in fallback statico.
+- Build: allowlist dei file pubblicabili, rifiuto di symlink e file non regolari, limiti di dimensione/profondità/numero. Nessun HTML o JavaScript arbitrario può essere aggiunto alla cartella degli allegati e copiato automaticamente nella distribuzione.
+- PDF: controllo base di firma/dimensione e indicatori attivi, inclusi nomi PDF con escape esadecimali. Sono euristiche, NON una scansione antivirus completa. Rimane l'eccezione SHA-256 già documentata per un falso positivo nel Modulo 01; non autorizza altri file.
+- Office: controlli sulla struttura ZIP, nomi duplicati, dimensioni espanse e XML; rifiuto di macro, DTD, entità e relazioni esterne. Alcuni documenti legittimi con relazioni esterne richiedono revisione invece di essere pubblicati automaticamente.
+- Workflow: azioni già fissate a SHA completi, credenziali checkout non persistite, token di lettura per build e privilegi Pages/OIDC solo nel job deploy. Upload e deploy sono ora limitati a `main` e mai a pull request. CODEOWNERS richiede configurazione di regole per diventare vincolante.
+- Server di prova: solo loopback, controllo realpath contro symlink, limiti delle richieste e MIME corretti. Non è un server di produzione.
 
-I controlli sulle foto verificano il file originale approvato; quelli sulle geometrie verificano gli hash del manifest e rifiutano testo SVG, script, risorse remote e handler. Le geometrie correnti usano anteprime WebP e mesh binarie MDC3 con firma, dimensione e SHA-256 controllati. Il caricatore rifiuta percorsi esterni; il decoder verifica conteggi, dimensioni e indici. Le formule sono testo escappato e non codice eseguibile. Non è aperta la possibilità di caricare SVG arbitrari negli articoli.
+Un soggetto capace di modificare contemporaneamente codice e manifest nel repository può cambiare anche questi controlli. L'integrità non sostituisce la protezione dell'account e la revisione dei commit. Le dipendenze transitive delle GitHub Actions non sono state bloccate con un lockfile in questa revisione.
 
-## Allegati
+## Cosa resta da configurare o verificare fuori dal pacchetto
 
-Sono mantenuti i controlli di formato, firma, dimensione, percorsi, symlink e indicatori di contenuti attivi ereditati dal progetto. Il limite per singolo file è 25 MiB. Non sono controlli antivirus completi: oggetti PDF compressi o offuscati possono sfuggire alla ricerca di token.
+Passkey/2FA e recupero dell'account, autorizzazioni dei collaboratori e del CMS, protezioni della branch, revisioni dei cambi critici, gestione del dominio, HTTPS, backup e ripristino. Aggiornare Node, browser e azioni quando disponibili correzioni pertinenti.
 
-Il Modulo 01 conserva l’eccezione SHA-256 già presente per un falso positivo dentro un flusso compresso. L’eccezione dipende dai byte esatti e non autorizza altri documenti. In questa revisione grafica non è stata ripetuta una revisione specialistica degli oggetti PDF: sono stati verificati i checksum dei sette file e delle copie incorporate.
+Il file `_headers` è preparato per hosting che lo interpretano: GitHub Pages non applica quel file. La CSP nel markup è attiva, ma `frame-ancestors` richiede un header HTTP e non funziona in un meta tag. La protezione anti-framing, HSTS, Permissions-Policy e gli altri header effettivi devono essere verificati sulla risposta dell'hosting, non dedotti dai sorgenti. Non sono stati configurati WAF, rate limiting o mitigazioni DDoS del provider.
 
-Se il repository è pubblico, un file respinto dalla build potrebbe comunque essere visibile nella cronologia Git. Non usare il repository come quarantena e non caricare documenti riservati o non autorizzati.
+I controlli degli allegati non escludono vulnerabilità dei lettori PDF, dei decoder di immagini o dei driver GPU. Prima di caricare nuovi documenti usare strumenti aggiornati e una scansione antivirus appropriata. Su un repository pubblico anche file respinti dalla build e bozze possono restare nella cronologia Git.
 
-## Workflow e hosting
+Il nuovo CV non è stato sottoposto a verifica binaria: i suoi byte non erano disponibili nel container. L'importatore eseguirà controlli di base e copia byte-identica quando il proprietario aggiungerà `CV.pdf`; non equivale a una certificazione di sicurezza del documento.
 
-Il workflow conserva i riferimenti alle azioni tramite commit completi, evita di persistere le credenziali del checkout e separa il job di build dal job con permessi Pages/OIDC. Richiede `ENABLE_DEPLOY=true` per distribuire e un `SITE_URL` reale per la build di rilascio. Questo interruttore previene errori ordinari; non protegge dall’accesso ostile al repository.
+## Riferimenti primari
 
-`_headers` è valido solo su hosting che lo supportano; **GitHub Pages non lo applica**. La presenza del file non implica che gli header HTTP siano attivi. Verificare HTTPS, framing, header, dominio e cache sul sito effettivo. Il server locale in `scripts/serve.mjs` è esclusivamente per lo sviluppo e ascolta su 127.0.0.1.
+- OWASP Content Security Policy Cheat Sheet: https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html
+- OWASP File Upload Cheat Sheet: https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html
+- GitHub Actions, secure use: https://docs.github.com/en/actions/reference/security/secure-use
+- MDN, frame-ancestors: https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors
 
-## Verifiche ancora esterne al collaudo locale
-
-Autenticazione e permessi Pages CMS, protezione della branch, configurazione GitHub e dominio, deployment, comportamento su browser diversi da Chromium, tecnologie assistive, backup/ripristino, disponibilità e protezioni del provider. Non sono stati configurati WAF, DDoS protection o rate limiting.
-
-Le fonti tecniche e i riferimenti operativi delle precedenti versioni sono conservati nella documentazione storica ove presenti. La guida corrente per pubblicare è `docs/PUBBLICAZIONE.md`.
-
-## Interazione 3D
-
-WebGL è facoltativo e non richiede CDN, WebSocket o invii a server esterni. Un unico canvas, una cache di cinque modelli, limiti di dimensione e arresto delle animazioni riducono il consumo. Queste precauzioni non equivalgono a una certificazione del driver grafico o a un penetration test. La CSP della copia offline include le risorse incorporate autorizzate dai rispettivi hash, le immagini data URI e l’audio locale data/blob. Nessuna origine audio esterna è autorizzata.
-
-
-## Ambiente, audio e transizioni
-
-Cascate, formule e suoni sono generati in locale. La build valida le fonti del catalogo come URL HTTPS e tratta i testi come contenuto, mai come codice. Il catalogo inline è serializzato proteggendo i delimitatori HTML e rientra nell’hash CSP. La canvas non intercetta input. Le preferenze sono locali e opzionali; nessun tracking aggiuntivo.
-
-Le nuove transizioni non cambiano destinazioni, autorizzazioni o policy di accesso. L’eventuale indisponibilità dell’API lascia funzionante la normale navigazione. Il collaudo resta locale e non sostituisce un audit dell’hosting.
-
-
-La musica usa un MP3 locale con dimensione e checksum verificati in build. Il player non introduce autoplay e conserva posizione e preferenze soltanto nel browser; gli errori di storage non interrompono la pagina. Non viene eseguito codice proveniente dai metadati audio. I controlli di integrità non sono una valutazione legale dei diritti sui materiali: l’ambito della licenza è dichiarato separatamente in `LICENSE.md`.
+Consultati l'8 novembre 2026. Risultati e limiti dei test della consegna: `docs/COLLAUDO_v3.1.md`.

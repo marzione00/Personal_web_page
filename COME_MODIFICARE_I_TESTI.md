@@ -1,4 +1,14 @@
-# MANIFOLD — aggiornare il sito senza programmare
+# MANIFOLD v3.1 — aggiornare i contenuti
+
+## CV originale
+Per questa consegna aggiungi il tuo PDF come `CV.pdf` nella radice del repository. L'importatore incluso lo copia senza ricodificarlo e aggiorna il collegamento IT/EN. In futuro sostituisci quel PDF e conferma il commit.
+
+## Testi modificati in questa release
+- Apertura articolo: `content/markdown/posts/colpire-i-nervi-del-sistema.md`, e versione inglese sotto `content/markdown/en/posts/`.
+- Estratto: `content/markdown/post-details/colpire-i-nervi-del-sistema.md`, e corrispondente inglese.
+- Titolo citazioni: `## titoloEpigrafi` nei due `homepage.md`.
+- Citazioni complete: i due `epigrafi.md`, invariati.
+
 
 **La fonte dei testi è `content/markdown/`.** Non modificare `src/`, `dist/`, `preview/`, i file JavaScript o le copie `docs/BIOGRAFIA.md` per correggere un testo pubblico.
 
