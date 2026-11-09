@@ -13,3 +13,9 @@ L'archivio contiene tutti i sorgenti e i materiali del portale aggiornato. La bu
 I controlli eseguiti sono documentati in `docs/REVISIONE_COMPLETA_v3.8.md` e `docs/COLLAUDO_QUANTUM_LAB.md`; il manifest della consegna è `RELEASE_MANIFEST.json`.
 
 Verifica inoltre ricerca per “Bloch”, pagine dei sette temi di ricerca, mappa degli argomenti nei moduli, ripresa dello studio, tre esperimenti e pausa degli effetti visivi. Il rapporto sulle stratificazioni è in `docs/CONTROLLO_STRATIFICAZIONI_v3.8.md`.
+
+## Correzione dell’errore di installazione Chromium
+
+Se la v3.8 è già caricata, per applicare questa correzione basta sostituire `.github/workflows/validate-deploy.yml` con il file di questo archivio e creare un nuovo commit su `main`. Il nuovo workflow seleziona Ubuntu 24.04 e Python 3.12. I test del browser rimangono obbligatori prima della pubblicazione.
+
+Il pulsante **Re-run jobs** della vecchia esecuzione riusa la vecchia configurazione: attendere la nuova esecuzione avviata dal commit che contiene la correzione.

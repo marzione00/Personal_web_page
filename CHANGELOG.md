@@ -1,3 +1,10 @@
+# Correzione CI della v3.8 — 9 novembre 2026
+
+- Runner fissato a Ubuntu 24.04, evitando il passaggio automatico di `ubuntu-latest` a Ubuntu 26.04, incompatibile con il Playwright 1.56.0 utilizzato nel pacchetto.
+- Python 3.12 selezionato esplicitamente tramite `actions/setup-python` vincolata al commit completo della v6.0.0.
+- Conservati Playwright 1.56.0, controlli browser obbligatori e condizioni di pubblicazione.
+- Verifiche e istruzioni di applicazione in `docs/CORREZIONE_CI_v3.8.md`.
+
 # Aggiornamento 3.8 — 9 novembre 2026
 
 - Homepage compatta e sette temi di ricerca con pagine dedicate, mantenendo le ancore precedenti.

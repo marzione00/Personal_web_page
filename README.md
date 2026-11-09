@@ -1,5 +1,7 @@
 # Topological Manifolds v3.8 — Navigazione, studio ed esperimenti
 
+**Correzione CI del 9 novembre 2026:** il workflow usa Ubuntu 24.04 e Python 3.12 per Playwright 1.56.0. Vedi `docs/CORREZIONE_CI_v3.8.md`.
+
 Pacchetto sorgenti completo per `marzione00/Personal_web_page`, basato sulla consegna v3.6 e sul commit originario `8964fc96b08671089cfb5d3561acb311bb994599`. I testi italiani adottano una prosa ipotattica, nella quale periodi ampi e subordinate esplicitano le relazioni fra formazione, ricerca, insegnamento e interessi personali; la prima persona accompagna le pagine autobiografiche, mentre le sezioni scientifiche conservano un registro espositivo. La versione inglese è aggiornata in parallelo.
 
 La revisione comprende presentazioni, biografia breve e completa espandibile, sette aree di ricerca, sedici sintesi di pubblicazioni, sei corsi, Quantum Lab, blog, viaggi, risorse e contatti. Le 24 geometrie ricevono istruzioni di osservazione in entrambe le lingue. Le citazioni integrali sono accompagnate da note personali e raccolte in passaggi espandibili. L’ingresso cinematografico, le schede delle sezioni e il visualizzatore immersivo della v3.6 restano disponibili.
