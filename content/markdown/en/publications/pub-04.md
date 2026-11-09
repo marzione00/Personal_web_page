@@ -15,7 +15,7 @@ Nanoscale 12(38), 19681–19688
 Reading the shape of graphene edges through vibrations
 
 ## plainSummary
-Atomic vibrations can provide a signature of the edge structure of a graphene nanoribbon.
+The study examines atomic vibrations in graphene nanoribbons, through which a signature of edge structure can be obtained and the shape of the nanostructure related to its vibrational properties.
 
 ## explanation
 The study combines electron energy-loss spectroscopy measurements with theoretical calculations. This comparison associates certain signals with vibrations of carbon–hydrogen bonds at the edges, distinguishing features of their structure. Ribbon ends also produce specific signals whose intensity can indicate average length. The relationship between spectrum and structure therefore provides a tool for characterising materials that are difficult to describe at atomic scale through visible geometry alone.

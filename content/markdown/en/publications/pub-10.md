@@ -15,7 +15,7 @@ M. De Corato, S. Salini, A. Ferrara and C. Vello
 Asteroids as a test case for interpretable AI
 
 ## plainSummary
-When physics already describes a phenomenon, we can check whether an algorithm uses meaningful relationships to make its predictions.
+Asteroid classification provides a setting in which physical descriptions of the phenomenon make it possible to examine whether the relationships used by an algorithm to make predictions are consistent with the knowledge used to interpret the data.
 
 ## explanation
 The contribution uses CNEOS data on asteroid hazard classification to compare Markov random fields, Random Forests and Support Vector Machines. Physical knowledge of the problem makes it possible to examine both classification quality and interpretability. The results described in the abstract identify graphical models as a solution combining readable explanations with accuracy appropriate to the case studied. The subject is classification within the dataset considered; this record is not an impact forecast.

@@ -15,7 +15,7 @@ Topological Modelling of Nanostructures and Extended Systems · Springer, pp. 26
 Aggiungere informazione chimica alla mappa dei legami
 
 ## plainSummary
-Una rete molecolare può descrivere chi è collegato a chi; questo studio vi aggiunge informazioni sulla reattività degli atomi e dei legami.
+Alla descrizione di una rete molecolare attraverso i collegamenti fra gli atomi, lo studio aggiunge informazioni sulla reattività degli atomi e dei legami, così che la rappresentazione della connettività possa includere aspetti della caratterizzazione chimica.
 
 ## explanation
 La topologia “colorata” assegna alle parti della struttura proprietà derivate dall’elettronegatività e dalla durezza chimica, che descrivono aspetti della risposta elettronica della molecola. Il capitolo sviluppa questi indici entro la teoria del funzionale della densità concettuale e li applica a idrocarburi aromatici policiclici. Il confronto fra descrizione topologica e quantità energetiche serve a studiare le relazioni fra struttura e reattività. Il termine “colore” indica qui l’informazione chimica attribuita alla rete.

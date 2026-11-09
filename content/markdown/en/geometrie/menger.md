@@ -20,3 +20,9 @@ Two levels are displayed, corresponding to 400 cubes. Properties of the infinite
 
 ## fonti
 [Recursive construction included in the project](geometrie.html#menger)
+
+## osservazione
+Look through one of the cube’s openings and slowly change viewpoint, observing how the larger cavities reveal smaller openings and how this organisation repeats across the two represented construction levels.
+
+## lettura
+The set is the union of twenty copies scaled to one third; its self-similar dimension is logarithm of twenty divided by logarithm of three.

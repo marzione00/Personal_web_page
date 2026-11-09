@@ -15,7 +15,7 @@ Diamond and Related Nanostructures · Springer, pp. 75–89
 Computational design of new cage-like carbon structures
 
 ## plainSummary
-The chapter proposes two possible crystalline arrangements of carbon and studies their structure and properties theoretically.
+The chapter proposes two possible crystalline arrangements of carbon and studies their structure and properties theoretically, using computational design to examine new cage configurations.
 
 ## explanation
 The two proposed forms are C28 clathrates and differ in how the structure repeats within the crystal: one is body-centred orthorhombic and the other simple cubic. Electronic properties and certain vibrations are calculated in detail for the former. The authors also discuss how units resembling small diamond fragments could assemble into the latter. These are hypothetical structures investigated with theoretical tools, illustrating a method for interpreting complex crystal lattices.

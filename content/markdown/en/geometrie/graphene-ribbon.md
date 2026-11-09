@@ -21,3 +21,9 @@ The coordinates describe an ideal lattice in nearest-neighbour distance units; t
 
 ## fonti
 [Publications on nanostructures](ricerca.html#bibliografia)
+
+## osservazione
+Follow a row of hexagonal cells towards the ribbon’s edge, observing where the finite structure interrupts the network and how rotation helps distinguish the arrangement of nodes from overlaps in their projection onto the screen.
+
+## lettura
+Each position is the sum of integer multiples of two basis vectors and the offset of sublattice A or B; vector components are given in the formula.

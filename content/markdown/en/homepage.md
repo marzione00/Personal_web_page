@@ -9,19 +9,19 @@ Research · Teaching · Writing
 Cybersecurity · Explainable AI · Quantum Computing · Quantitative Finance
 
 ## ricercaAttuale
-His scientific work focuses primarily on cybersecurity, artificial intelligence, with particular attention to XAI, quantum computing and quantitative finance.
+My work in cybersecurity and explainable artificial intelligence continues an inquiry into data, models and knowledge that began during my studies in computational physics and informs my research and teaching, alongside my interests in quantum computing and quantitative finance.
 
 ## formazione
-His scientific background is in computational physics, studying the electronic, optical and vibrational properties of carbon nanostructures, with particular emphasis on the relationships between geometry, topology and the physical properties of materials.
+Computational physics led me to study the electronic, optical and vibrational properties of carbon nanostructures, whose bonds and surface geometry provide a way to examine how a material’s structure relates to the behaviour revealed by calculations and experimental observations.
 
 ## praticaCorporea
-In yoga and climbing, he finds another way to explore the forms and geometric relationships encountered during his scientific studies. Through postures, balances and trajectories of movement, mathematical abstraction meets bodily experience, giving rise to a personal enquiry into form, space and perception that connects with his interest in epistemology.
+Through yoga and climbing, I encounter some of the geometric relationships I studied in physics as I explore the distribution of weight, balance and movement, while the distance between an imagined gesture and one I can perform prompts a personal reflection on how expectations shape perception and judgement.
 
 ## titoloPercorso
-From computational physics to bodily experience
+Geometry, observation and experience
 
 ## etichettaEpigrafi
-Cultural references
+Readings and references
 
 ## titoloEpigrafi
 Knowledge, reality, experience

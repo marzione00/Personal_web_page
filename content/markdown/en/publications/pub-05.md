@@ -15,7 +15,7 @@ Journal of the American Chemical Society 140(25), 7803–7809
 Changing graphene’s response by changing its shape
 
 ## plainSummary
-Controlled distortion of a nanoribbon can change the energy needed to excite its electrons, affecting its optical properties.
+The work studies how controlled deformation of a graphene nanoribbon can change the energy required to excite its electrons, relating changes in shape to the resulting variations in optical properties.
 
 ## explanation
 The authors compare nanoribbons with the same aromatic core but different side-chain positions. The steric bulk of these groups changes the structural distortion and, consequently, the bandgap: the energy separation between the electronic states under consideration. Theoretical predictions are compared with absorption and photoluminescence excitation measurements. The work shows how shape control, together with chemical composition, can tune the response of these systems.

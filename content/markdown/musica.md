@@ -7,14 +7,14 @@ Local Coordinates
 Un ambiente sonoro originale per Topological Manifolds · 4 minuti e 30 secondi.
 
 ## testo
-La composizione procede per accordi distesi, timbri d’archi sintetici e risonanze soffuse. Le parti gravi sostengono un movimento lento; nelle voci superiori emergono intervalli e piccoli motivi che si trasformano senza una pulsazione ritmica dominante.
+La composizione si sviluppa attraverso accordi distesi e timbri d’archi sintetici, nei quali le parti gravi sostengono un movimento lento mentre, nelle voci superiori, intervalli e piccoli motivi si trasformano gradualmente, lasciando che siano la densità e la durata delle risonanze a suggerire il trascorrere del tempo.
 
-Il brano è stato composto e sintetizzato per questo sito con assistenza di IA. Non contiene campionamenti musicali esterni né riproduce temi della colonna sonora di Matrix. I timbri sono sintetici: non si tratta di una registrazione orchestrale.
+Il brano è stato composto e sintetizzato per questo sito con assistenza di IA, utilizzando esclusivamente timbri sintetici originali, senza campionamenti musicali esterni né riproduzioni dei temi della colonna sonora di Matrix.
 
 ## ascolto
-La musica è facoltativa e indipendente dai suoni dell’interfaccia. Il file viene richiesto soltanto dopo l’avvio esplicito. Dalle preferenze puoi regolare il volume, mettere in pausa e decidere se ripetere il brano.
+Puoi avviare la musica dal lettore e regolarne il volume, interromperla o scegliere di ripetere il brano, mantenendo il controllo dei suoni dell’interfaccia attraverso il comando separato; il file audio viene caricato soltanto quando scegli di ascoltarlo.
 
-Nell’anteprima a pagina unica la riproduzione continua mentre cambi schermata. Nel sito multipagina il caricamento di un nuovo documento interrompe l’audio: il punto di ascolto viene conservato nella sessione e puoi riprenderlo dal lettore. Questa scelta mantiene il sito statico, senza imporre un’applicazione più complessa.
+Nell’anteprima a pagina unica l’ascolto prosegue durante il passaggio fra le sezioni, mentre nel sito multipagina il caricamento di un nuovo documento interrompe la riproduzione, conservando nella sessione la posizione dalla quale puoi riprenderla.
 
 ## percorso
 0:00–1:00 · Apertura: pedale grave e armonici.

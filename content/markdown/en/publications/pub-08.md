@@ -15,7 +15,7 @@ International Journal of Chemical Modeling 4(2–3), 9–17
 Describing carbon networks by counting connections
 
 ## plainSummary
-The arrangement of bonds between atoms can be summarised by mathematical indices that help compare different carbon structures.
+The arrangement of bonds between atoms is described through mathematical indices that summarise aspects of connectivity, allowing different carbon structures to be compared through quantities computed on the graph.
 
 ## explanation
 The study derives formulae for two topological indices, the eccentric connectivity index and the Wiener index, in lattices made of nanotubes connected through schwarzitic junctions. It also examines the indices as the number of units becomes very large. The Wiener index offers theoretical indications of the lattices’ relative stability: the connection network thus becomes a compact way to reason about structural differences.

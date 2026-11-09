@@ -48,19 +48,20 @@ with sync_playwright() as pw:
    check(f'{width}/{name}: no JS/CSP errors',not errs,errs[:2]);errors.extend(errs)
    if name=='index.html':
     vals=page.locator('.hero-portrait img').evaluate('''e=>{let r=e.getBoundingClientRect(),s=getComputedStyle(e);return{nw:e.naturalWidth,nh:e.naturalHeight,fit:s.objectFit,filter:s.filter,ratio:(r.width-2)/(r.height-2)}}''')
-    check(f'{width}: original photograph aspect ratio',vals['nw']==1274 and vals['nh']==2048 and vals['fit']=='contain' and vals['filter']=='none' and abs(vals['ratio']-1274/2048)<.001,vals)
+    check(f'{width}: original photograph aspect ratio',vals['nw'] in [480,768,1274] and abs(vals['nw']/vals['nh']-1274/2048)<.002 and vals['fit']=='contain' and vals['filter']=='none' and abs(vals['ratio']-1274/2048)<.001,vals)
     if width<590:check(f'{width}: mobile actions before portrait',page.locator('.hero .actions').bounding_box()['y']<page.locator('.hero-portrait').bounding_box()['y'])
+   if name=='manifold.html':
     q=page.locator('.epigraph-card blockquote').all_inner_texts();check(f'{width}: full epigraphs',len(q)==3 and 'spiegazione immateriali' in q[1] and 'anni più appassionati della sua vita' in q[2] and '[...]' not in ''.join(q))
    if width in [390,1440] and name in ['index.html','didattica.html','ricerca.html','geometrie.html','cv.html','blog.html','articolo-colpire-i-nervi-del-sistema.html','corso-quantum-post-quantum-computing-2026-2027.html']:
     stem={'index.html':'home','geometrie.html':'atlante','cv.html':'profilo','corso-quantum-post-quantum-computing-2026-2027.html':'quantum','articolo-colpire-i-nervi-del-sistema.html':'articolo'}.get(name,name[:-5]);suffix='mobile' if width==390 else 'desktop'
     page.screenshot(path=str(P/f'{stem}-{suffix}.png'))
     if name=='index.html':
-     page.screenshot(path=str(P/f'home-{suffix}-completa.png'),full_page=True);page.locator('.home-fields').screenshot(path=str(P/f'aree-{suffix}.png'));page.locator('.epigraphs').screenshot(path=str(P/f'epigrafi-{suffix}.png'))
+     page.screenshot(path=str(P/f'home-{suffix}-completa.png'),full_page=True);page.locator('.home-reading').screenshot(path=str(P/f'aree-{suffix}.png'))
      page.locator('[data-reading]').click();check(f'{width}: light reading mode',page.locator('body').evaluate('e=>e.classList.contains("reading-mode")'));page.evaluate('scrollTo(0,0)');page.screenshot(path=str(P/f'home-{suffix}-chiara.png'))
    page.close()
  (OUT/'layout-checks.json').write_text(json.dumps(checks,ensure_ascii=False,indent=2))
  # Hover: load only after deliberate intent; follow pointer; stop outside.
- page=browser.new_page(viewport={'width':1440,'height':1000});req=[];errs=[];setup(page,req,errs);load(page,'index.html');a=page.locator('[data-geometry-open="markov-network"]');a.hover();page.wait_for_function('()=>Boolean(window.MDCGeometryDebug?.viewer?.model)',timeout=10000)
+ page=browser.new_page(viewport={'width':1440,'height':1000});req=[];errs=[];setup(page,req,errs);load(page,'geometrie.html');a=page.locator('[data-geometry-open="markov-network"]');a.hover();page.wait_for_function('()=>Boolean(window.MDCGeometryDebug?.viewer?.model)',timeout=10000)
  check('hover: single active canvas',page.locator('canvas.geometry-canvas').count()==1)
  check('hover: one renderer request',len([r for r in req if 'viewer-' in r])==1)
  check('hover: one requested model',len([r for r in req if r.endswith('.bin')])==1)
@@ -91,7 +92,7 @@ with sync_playwright() as pw:
   page.keyboard.press('Escape');page.wait_for_function('()=>!document.querySelector("#geometry-dialog").open && !document.querySelector("#geometry-stage canvas")')
  check('atlas does not allocate multiple canvas contexts',page.locator('canvas.geometry-canvas').count()==0);errors.extend(errs);page.close()
  # Reduced motion blocks hover startup, not user-driven exploration.
- page=browser.new_page(viewport={'width':1440,'height':900},reduced_motion='reduce');req=[];errs=[];setup(page,req,errs);load(page,'index.html');page.locator('[data-geometry-open="gyroid"]').hover();page.wait_for_timeout(500)
+ page=browser.new_page(viewport={'width':1440,'height':900},reduced_motion='reduce');req=[];errs=[];setup(page,req,errs);load(page,'geometrie.html');page.locator('[data-geometry-open="gyroid"]').hover();page.wait_for_timeout(500)
  check('reduced motion prevents hover download',not any('.bin' in r or 'viewer-' in r for r in req))
  page.locator('[data-geometry-open="gyroid"]').click();live(page);page.locator('[data-geo-spin]').click();check('reduced motion blocks autoplay',page.evaluate('!MDCGeometryDebug.viewer.auto'));errors.extend(errs);page.close()
  # Touch + small dialog.
@@ -106,13 +107,13 @@ with sync_playwright() as pw:
  page.locator('[data-geo-right]').click();check('mobile accessible camera controls',page.evaluate('MDCGeometryDebug.viewer.angle')!=ang)
  errors.extend(errs);page.close()
  # WebGL unavailable: content and static image are retained.
- page=browser.new_page(viewport={'width':390,'height':844});req=[];errs=[];setup(page,req,errs);load(page,'index.html');page.evaluate("HTMLCanvasElement.prototype.getContext=function(){return null}");page.locator('[data-geometry-open="gyroid"]').click();page.wait_for_timeout(700)
+ page=browser.new_page(viewport={'width':390,'height':844});req=[];errs=[];setup(page,req,errs);load(page,'geometrie.html');page.evaluate("HTMLCanvasElement.prototype.getContext=function(){return null}");page.locator('[data-geometry-open="gyroid"]').click();page.wait_for_timeout(700)
  check('WebGL fallback preserves text',page.locator('#geometry-dialog .geometry-explanation').is_visible());check('WebGL fallback preserves preview',page.locator('[data-geo-fallback]').evaluate('(e)=>e.complete&&e.naturalWidth>0'));check('WebGL failure reported', 'non è disponibile' in page.locator('[data-geo-status]').inner_text());errors.extend(errs);page.close()
  # No JavaScript: content, formula details and normal links still exist.
  ctx=browser.new_context(java_script_enabled=False,viewport={'width':390,'height':844});page=ctx.new_page();req=[];errs=[];setup(page,req,errs);load(page,'geometrie.html')
  check('no JS: all mathematical descriptions present',page.locator('.atlas-card details').count()==24);page.locator('.atlas-card details summary').first.click();check('no JS: details open natively',page.locator('.atlas-card details').first.get_attribute('open') is not None);ctx.close()
  # Offline monofile contains exact image and PDF bytes and an embedded scene fallback.
- page=browser.new_page(viewport={'width':1440,'height':1000},reduced_motion='reduce');offline=(R/'Topological_Manifolds_anteprima.html').read_text();page.set_content(offline,wait_until='load');page.locator('[data-view="index.html"] [data-geometry-open="gyroid"]').click();live(page)
+ page=browser.new_page(viewport={'width':1440,'height':1000},reduced_motion='reduce');offline=(R/'Topological_Manifolds_anteprima.html').read_text();page.set_content(offline,wait_until='load');page.locator('#primary-nav a[href="geometrie.html"]').click();page.locator('[data-view="geometrie.html"] [data-geometry-open="gyroid"]').click();live(page)
  check('offline preview has working 3D without a server',page.locator('canvas.geometry-canvas').count()==1 and page.locator('#geometry-dialog [role=math]').count()==1);page.keyboard.press('Escape');page.evaluate('location.hash="/geometrie.html"');page.wait_for_timeout(100);check('offline atlas navigation',page.locator('[data-view="geometrie.html"]').is_visible());page.close()
  browser.close()
 check('no runtime errors in normal paths',not errors,errors[:8])

@@ -339,8 +339,8 @@ Italiano: Insegnamenti e materiali didattici pubblici, organizzati per ateneo e 
 English: Public courses and teaching materials, organised by university and academic year.
 
 ## label085
-Italiano: Insegnamenti, lezioni e materiali. Tutto consultabile liberamente, senza account o registrazione.
-English: Courses, lectures and materials. Everything is freely available, with no account or registration required.
+Italiano: Puoi cercare un insegnamento per ateneo e anno accademico, consultandone la scheda per raggiungere i materiali disponibili e i riferimenti istituzionali, mentre nei moduli di calcolo quantistico i collegamenti a Quantum Lab permettono di affiancare gli esperimenti interattivi allo studio delle slide.
+English: You can find a course by university and academic year, using its entry to reach the available materials and institutional references, while links to Quantum Lab in the quantum computing modules connect the slides with interactive experiments.
 
 ## label086
 Italiano: Cerca un insegnamento…
@@ -419,8 +419,8 @@ Italiano: Materiali in preparazione
 English: Materials in preparation
 
 ## label105
-Italiano: Le slide, le dispense e gli esercizi appariranno qui dopo il caricamento.
-English: Slides, handouts and exercises will appear here after they are uploaded.
+Italiano: La scheda conserva i riferimenti dell’insegnamento; gli allegati saranno consultabili in questa sezione quando verranno pubblicati.
+English: This entry retains the course references; attachments will be available in this section when they are published.
 
 ## label106
 Italiano: Archivio aperto
@@ -487,8 +487,8 @@ Italiano: Quantum e post-quantum computing
 English: Quantum and Post-Quantum Computing
 
 ## label122
-Italiano: La sfera di Bloch introduce lo stato di un qubit. Il reticolo richiama invece una famiglia di costruzioni crittografiche post-quantistiche: apri i modelli per leggere formule e limiti delle rappresentazioni.
-English: The Bloch sphere introduces the state of a qubit. The lattice instead evokes a family of post-quantum cryptographic constructions: open the models to read their formulae and representational limits.
+Italiano: La sfera di Bloch permette di osservare la rappresentazione dello stato di un qubit, mentre il reticolo introduce una geometria collegata allo studio di alcune costruzioni crittografiche post-quantistiche, le cui differenze puoi approfondire aprendo le schede e confrontando formule e limiti dei due modelli.
+English: The Bloch sphere lets you examine the representation of a qubit state, while the lattice introduces a geometry related to some post-quantum cryptographic constructions; opening the entries allows you to compare the formulas and limitations of the two models.
 
 ## label123
 Italiano: Temi e metodi di ricerca di Marzio De Corato: Explainable AI, cybersecurity, fisica computazionale, metodi quantitativi e calcolo quantistico.
@@ -647,8 +647,8 @@ Italiano: Il quaderno editoriale di Topological Manifolds: appunti, riflessioni 
 English: The Topological Manifolds journal: notes, reflections and explorations.
 
 ## label162
-Italiano: Saggi, note di lettura e riflessioni su temi scientifici e culturali.
-English: Essays, reading notes and reflections on scientific and cultural topics.
+Italiano: Raccolgo qui saggi e letture attraverso i quali approfondisco il rapporto fra informazione, conoscenza e decisioni, seguendo gli interrogativi che emergono quando i problemi scientifici incontrano le loro implicazioni storiche e culturali.
+English: Here I bring together essays and readings through which I explore information, knowledge and decisions, following the questions that arise when scientific problems meet their historical and cultural implications.
 
 ## label163
 Italiano: Saggi
@@ -675,8 +675,8 @@ Italiano: Nessun articolo pubblicato
 English: No published articles
 
 ## label169
-Italiano: Qui compariranno i contributi dopo la loro approvazione.
-English: Contributions will appear here after approval.
+Italiano: La raccolta si aprirà con la pubblicazione del primo contributo.
+English: The collection will open with the publication of its first contribution.
 
 ## label170
 Italiano: In preparazione
@@ -839,8 +839,8 @@ Italiano: Email istituzionale e profili professionali di Marzio De Corato.
 English: Institutional email and professional profiles of Marzio De Corato.
 
 ## label210
-Italiano: Per comunicazioni accademiche, confronto scientifico e richieste relative alla didattica.
-English: For academic correspondence, scientific discussion and teaching-related enquiries.
+Italiano: Puoi scrivermi per questioni relative agli insegnamenti, per discutere un lavoro di ricerca o per condividere osservazioni sui materiali pubblicati, indicando il corso o il tema cui desideri riferirti.
+English: You can write to me about teaching, to discuss research or to share comments on the published materials, indicating the course or subject you wish to refer to.
 
 ## label211
 Italiano: Contatto accademico
@@ -871,8 +871,8 @@ Italiano: Accessi ai materiali didattici, al curriculum e agli archivi della ric
 English: Access to teaching materials, the CV and research repositories.
 
 ## label218
-Italiano: Materiali didattici, archivi della ricerca e riferimenti per approfondire.
-English: Teaching materials, research repositories and further references.
+Italiano: Questa pagina riunisce i collegamenti attraverso i quali puoi raggiungere i materiali dei corsi, risalire alle pubblicazioni nell’archivio istituzionale e consultare il curriculum, mantenendo a portata di mano i riferimenti utili durante la lettura del sito.
+English: This page brings together links to course materials, publications in the institutional repository and my curriculum, keeping the references useful while reading the site close at hand.
 
 ## label219
 Italiano: Per studiare
@@ -887,8 +887,8 @@ Italiano: Codice
 English: Code
 
 ## label222
-Italiano: I sette moduli di Quantum e post-quantum computing sono disponibili in PDF.
-English: The seven Quantum and Post-Quantum Computing modules are available as PDFs.
+Italiano: I sette moduli di Quantum e post-quantum computing raccolgono i PDF del corso, ai quali sono affiancati collegamenti alle attività di Quantum Lab che permettono di riprendere gli argomenti attraverso le simulazioni.
+English: The seven Quantum and Post-Quantum Computing modules contain the course PDFs alongside links to Quantum Lab activities through which you can revisit the topics in simulations.
 
 ## label223
 Italiano: Vai ai sette moduli
@@ -899,8 +899,8 @@ Italiano: Archivio della ricerca
 English: Research repository
 
 ## label225
-Italiano: Accesso al profilo AIR dell’Università degli Studi di Milano.
-English: Access to the University of Milan’s AIR research profile.
+Italiano: Il profilo AIR dell’Università degli Studi di Milano consente di risalire ai riferimenti delle pubblicazioni, che nel sito sono accompagnati da schede introduttive sui problemi e sui metodi affrontati.
+English: The AIR profile at the University of Milan provides publication references, which this site accompanies with introductory entries on the problems and methods addressed.
 
 ## label226
 Italiano: Apri AIR
@@ -911,8 +911,8 @@ Italiano: Curriculum PDF
 English: CV PDF
 
 ## label228
-Italiano: Il curriculum fornito dall’autore, disponibile nel suo formato PDF originale.
-English: The CV supplied by the author, available in its original PDF format.
+Italiano: Il curriculum in PDF riunisce formazione, esperienze professionali e attività accademiche, offrendo un documento da consultare o conservare insieme al profilo presentato nel sito.
+English: The PDF curriculum brings together education, professional experience and academic activities in a document you can consult or retain alongside the profile presented on this site.
 
 ## label229
 Italiano: Apri il curriculum
@@ -923,8 +923,8 @@ Italiano: Profilo GitHub
 English: GitHub profile
 
 ## label231
-Italiano: Accesso al profilo personale su GitHub.
-English: Access to the personal GitHub profile.
+Italiano: Il profilo GitHub permette di consultare le repository pubbliche e di seguire il codice dei progetti disponibili, mantenendo il riferimento alle rispettive descrizioni e istruzioni d’uso.
+English: The GitHub profile provides access to public repositories and the code of available projects, together with their descriptions and instructions.
 
 ## label232
 Italiano: Vai al profilo
@@ -983,8 +983,8 @@ Italiano: Geometria e frattali
 English: Geometry and fractals
 
 ## label246
-Italiano: Le figure del sito raccolte per argomento. Passa il puntatore per orientarle, oppure apri una scheda per esplorare il modello e leggerne formula, significato e limiti. I testi restano disponibili anche senza 3D.
-English: The website’s figures, grouped by topic. Move the pointer to orient them, or open an entry to explore the model and read its formula, meaning and limitations. Texts remain available without 3D.
+Italiano: Le figure sono raccolte per argomento affinché, passando da una superficie a un grafo o a una rappresentazione probabilistica, tu possa confrontare il modo in cui la geometria rende leggibili relazioni differenti; aprendo ciascuna scheda trovi una traccia di osservazione, la formula e i limiti entro i quali interpretare il modello.
+English: The figures are grouped by subject so that, moving from a surface to a graph or a probabilistic representation, you can compare how geometry makes different relationships visible; each entry provides an observation guide, a formula and the limitations within which the model should be interpreted.
 
 ## label247
 Italiano: Formula, descrizione e fonti
@@ -1072,12 +1072,12 @@ Italiano: Email di contatto e profili professionali di Marzio De Corato.
 English: Contact email and professional profiles of Marzio De Corato.
 
 ## label268
-Italiano: Indirizzo email di contatto.
-English: Contact email address.
+Italiano: Per le richieste didattiche, indica nell’oggetto il nome dell’insegnamento e l’anno accademico, così che possa individuare i materiali ai quali fai riferimento.
+English: For teaching enquiries, include the course name and academic year in the subject line so that I can identify the materials you are referring to.
 
 ## label269
-Italiano: Puoi scrivere a questo indirizzo; il sito non prevede un modulo di invio.
-English: Write to this address; the website does not use a contact form.
+Italiano: Se scrivi a proposito di una pubblicazione o di una pagina del sito, aggiungi il titolo o il collegamento insieme alle osservazioni che desideri discutere.
+English: If you are writing about a publication or a page on this site, include its title or link alongside the observations you wish to discuss.
 
 ## travels-label
 Italiano: Viaggi
@@ -1090,3 +1090,115 @@ English: Travels & Hikes
 ## footer-travels
 Italiano: Sito personale dedicato alla didattica, alla ricerca, alla scrittura e ai viaggi.
 English: Personal website for teaching, research, writing and journeys.
+
+## cinemaV36_0
+Italiano: Visualizzazione
+English: Display style
+
+## cinemaV36_1
+Italiano: Luminosa
+English: Luminous
+
+## cinemaV36_2
+Italiano: Superficie
+English: Surface
+
+## cinemaV36_3
+Italiano: Reticolo
+English: Wireframe
+
+## cinemaV36_4
+Italiano: Vista immersiva
+English: Immersive view
+
+## cinemaV36_5
+Italiano: Argomenti dell’atlante
+English: Atlas subjects
+
+## geometryV36_0
+Italiano: Attiva le animazioni automatiche
+English: Enable automatic animations
+
+## geometryV36_1
+Italiano: Disattiva le animazioni automatiche
+English: Disable automatic animations
+
+## geometryV36_2
+Italiano: Ferma rotazione
+English: Stop rotation
+
+## editorialV37_1
+Italiano: Osserva la figura
+English: Observe the figure
+
+## editorialV37_2
+Italiano: Leggi il percorso completo
+English: Read the full background
+
+## editorialV37_3
+Italiano: Leggi il passo
+English: Read the passage
+
+## revision38_0
+Italiano: Ruota verso l’alto
+English: Rotate upward
+
+## revision38_1
+Italiano: Ruota verso il basso
+English: Rotate downward
+
+## revision38_2
+Italiano: Frontale
+English: Front
+
+## revision38_3
+Italiano: Laterale
+English: Side
+
+## revision38_4
+Italiano: Dall’alto
+English: Top
+
+## revision38_5
+Italiano: Lettura della formula
+English: Formula in words
+
+## revision38_6
+Italiano: Apri l’esperimento interattivo
+English: Open the interactive experiment
+
+## revision38_7
+Italiano: Trascina o usa le frecce per orientare; + e − regolano lo zoom. Per lo zoom con la rotella tieni premuto Ctrl o ⌘. Esc chiude la finestra.
+English: Drag or use the arrow keys to orient the model; + and − control zoom. Hold Ctrl or ⌘ to zoom with the wheel. Esc closes the dialog.
+
+## revision38_8
+Italiano: Il sistema richiede movimento ridotto. Usa i controlli di orientamento.
+English: Your system requests reduced motion. Use the orientation controls.
+
+## revision38_9
+Italiano: Risparmio dati attivo. Usa i controlli di orientamento.
+English: Data saving is enabled. Use the orientation controls.
+
+## revision38_10
+Italiano: Gli effetti sono in pausa. Usa i controlli di orientamento.
+English: Visual effects are paused. Use the orientation controls.
+
+## revision38_11
+Italiano: Le animazioni automatiche sono disattivate nelle preferenze del modello.
+English: Automatic animations are disabled in the model preferences.
+
+## revision38_geo_0
+Italiano: Inclina verso l’alto
+English: Tilt upward
+
+## revision38_geo_1
+Italiano: Inclina verso il basso
+English: Tilt downward
+
+## revision38_geo_2
+Italiano: Lettura della relazione
+English: Relation in words
+
+## revision38_geo_3
+Italiano: Apri l’esperimento
+English: Open the experiment

@@ -17,3 +17,9 @@ Una retta ruota mentre avanza lungo un asse, generando una superficie rigata. La
 
 ## fonti
 [Parametrizzazione riproducibile inclusa nel progetto](geometrie.html#helicoid)
+
+## osservazione
+Seguendo il bordo della superficie mentre la ruoti, osserva come l’avanzamento lungo l’asse si accompagni a un cambiamento di orientamento, quindi confronta questa continuità con i segmenti rettilinei attraverso i quali viene costruita la forma.
+
+## lettura
+Le prime due coordinate sono u coseno v e u seno v, mentre la quota è zero virgola ventitré v, così che la rotazione accompagna una traslazione verticale.

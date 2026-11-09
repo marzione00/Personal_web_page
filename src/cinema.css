@@ -1,0 +1,29 @@
+/* Finite entry and section selection; no independent ambient animation loops. */
+.entry-sequence{position:fixed;inset:0;width:100%;height:100%;max-width:none;max-height:none;margin:0;padding:24px;border:0;border-radius:0;overflow:hidden;background:#07110df5;color:#e9f1e9;text-align:center;isolation:isolate}
+.entry-sequence::backdrop{background:#07110d}.entry-sequence[open]{display:grid;place-content:center;animation:entry-exit .32s 1.88s ease-in both}
+.entry-sequence:before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at center,#3ee19014,transparent 62%),linear-gradient(transparent 49.7%,#b7ffdd60 50%,transparent 50.3%);animation:entry-aperture 1.8s cubic-bezier(.18,.7,.25,1) both;z-index:-1}
+.entry-orbit{position:absolute;inset:5% 0 0;display:grid;place-items:center;color:#8ae8b6;opacity:.24;pointer-events:none;z-index:-1;animation:entry-orbit 2.1s ease-out both}
+.entry-orbit .orbit-mark{width:min(86vw,850px);height:min(86vh,850px)}
+.entry-copy{animation:entry-copy 1.3s cubic-bezier(.18,.7,.25,1) both}.entry-copy .label{font-size:11px;letter-spacing:.18em;color:#9ce8bc}
+.entry-copy h2{font:400 clamp(42px,7vw,96px)/.98 var(--serif);letter-spacing:-.045em;margin:26px 0}.entry-copy h2 em{font-weight:400;color:#b5f4cf}.entry-author{font:12px var(--mono);letter-spacing:.08em;color:#b9d2c3}
+.entry-skip{position:absolute;right:max(24px,5vw);bottom:max(28px,6vh);min-height:44px;padding:12px 18px;border:1px solid #496957;background:#09150d;color:#d4f8e2;font:12px var(--mono);cursor:pointer}
+.entry-replay{display:inline-flex;align-items:center;gap:14px;min-height:44px;background:none;color:var(--green);border:0;border-bottom:1px solid var(--line);padding:10px 0;font:11px var(--mono);margin-top:12px;cursor:pointer}.entry-replay:disabled{opacity:.45;cursor:default}
+@keyframes entry-aperture{0%{transform:scaleY(.005);opacity:0}20%{opacity:.8}75%,100%{transform:scaleY(1);opacity:1}}
+@keyframes entry-orbit{from{opacity:.18;transform:scale(.72) rotate(-12deg)}to{opacity:.24;transform:scale(1.03) rotate(0)}}
+@keyframes entry-copy{from{opacity:1;transform:translateY(14px) scale(.96)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes entry-exit{to{opacity:0;transform:scale(1.025)}}
+.portal-card{position:relative;isolation:isolate;overflow:hidden}
+.portal-art{display:block;height:165px;position:relative;overflow:hidden;border-bottom:1px solid var(--line-soft);color:var(--green);background:radial-gradient(ellipse at 55% 90%,#2c794435,transparent 70%)}
+.portal-art .orbit-mark{position:absolute;width:230px;height:202px;right:6px;top:-20px;opacity:.62;transform:rotate(-12deg);transition:transform .7s cubic-bezier(.2,.8,.2,1),opacity .5s}
+.portal-number{position:absolute;top:23px;left:26px;font:11px var(--mono);letter-spacing:.15em;color:var(--muted)}
+.portal-card:hover .orbit-mark,.portal-card:focus-visible .orbit-mark{transform:rotate(0) scale(1.12);opacity:1}
+.portal-card:after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,transparent 30%,#baffd812 47%,transparent 64%);transform:translateX(-120%);transition:transform .8s ease;z-index:0}
+.portal-card:is(:hover,:focus-visible):after{transform:translateX(120%)}
+.home-entry .portal-card{display:flex;flex-direction:column;transition:border-color .25s,background .25s,transform .25s,box-shadow .25s}.home-entry .portal-card:is(:hover,:focus-visible){transform:translateY(-5px)}
+.home-entry .portal-copy{position:relative;z-index:1}.home-entry .portal-card h3{font-size:34px}.home-entry .portal-link{margin-top:auto}
+@media(max-width:590px){.portal-art{height:142px}.portal-art .orbit-mark{right:3%;top:-32px}.entry-copy .label{max-width:26ch;line-height:1.9;margin:auto}.entry-skip{right:24px;bottom:26px}.entry-copy h2{font-size:clamp(40px,11vw,64px)}}
+@media(prefers-reduced-motion:reduce){.entry-sequence[open],.entry-sequence:before,.entry-orbit,.entry-copy{animation:none}.portal-art .orbit-mark,.portal-card,.portal-card:after{transition:none!important}.portal-card:after{display:none}}
+html[data-fx-motion=off] .portal-art .orbit-mark,html[data-fx-motion=off] .portal-card,html[data-fx-motion=off] .portal-card:after{transition:none!important;transform:none!important}
+@media print{.entry-sequence,.entry-replay,.portal-art{display:none!important}}
+
+html[data-effects-paused=true] .orbit-mark,html[data-effects-paused=true] .portal-art{animation-play-state:paused!important}

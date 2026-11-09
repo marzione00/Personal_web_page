@@ -1,3 +1,62 @@
+# Aggiornamento 3.8 — 9 novembre 2026
+
+- Homepage compatta e sette temi di ricerca con pagine dedicate, mantenendo le ancore precedenti.
+- Ricerca locale condivisa, sinonimi, 91 destinazioni PDF, 24 geometrie e tre esperimenti indicizzati.
+- Didattica suddivisa per materiali e annualità, tracce di studio, preparazione suggerita, quindici rimandi fra slide e laboratorio, ripresa locale.
+- Esperimenti parametrici su Bloch, onde e soglia; controlli 3D alto/basso e viste predefinite, zoom con modificatore.
+- Pausa globale degli effetti visivi, qualità adattiva, immagini responsive, letture verbali delle formule.
+- Indice dell’articolo, riferimenti copiabili, stampa completa, metadati per annualità, dati strutturati e feed RSS IT/EN.
+- 246 test Node superati; 58 pagine, 2.548 collegamenti locali e 112 immagini controllati. Verifica Chromium desktop e viewport mobili, con limiti descritti nel rapporto corrente.
+- Controllo di stili e componenti obsoleti, singoli proprietari dei livelli, integrità dei materiali e confronto completo con la v3.7.
+
+# Aggiornamento 3.7 — 9 novembre 2026
+
+- Revisione di 123 file Markdown IT/EN, con periodi articolati e subordinate nei testi italiani.
+- Prima persona nelle pagine autobiografiche; presentazione breve del profilo seguita dal percorso completo espandibile.
+- Sette introduzioni alle aree di ricerca, sedici sintesi di pubblicazioni e sei presentazioni dei corsi riscritte, conservando metadati e risultati documentati.
+- Nuove indicazioni di osservazione per tutte le 24 geometrie, tradotte in inglese.
+- Note personali alle tre citazioni, il cui testo integrale rimane consultabile mediante un comando espandibile.
+- Presentazioni di didattica, Quantum Lab, blog, viaggi, risorse, contatti e musica aggiornate; testo integrale del saggio e dichiarazione sull’assistenza IA per la musica conservati.
+- 237 test superati; 42 pagine, 3.814 collegamenti locali e 124 riferimenti a immagini verificati.
+- Controllo dei testi su Chromium desktop e viste da 320, 390 e 768 px; tutti i 92 file pubblici della v3.6 conservati byte per byte.
+
+# Aggiornamento 3.6 — 9 novembre 2026
+
+- Ingresso di 2,2 secondi con geometria luminosa, salto immediato e riproduzione su richiesta; una sola volta per sessione.
+- Schede Didattica, Ricerca e Quantum Lab con tre motivi geometrici, reazioni al passaggio e accesso da tastiera.
+- Transizioni verticali ampliate senza ritardo artificiale dei collegamenti.
+- 24 geometrie ingrandite nella homepage, nei corsi, nella ricerca e nell’atlante; indice per cinque famiglie.
+- Visualizzatore con Luminosa / Superficie / Reticolo, rotazione automatica controllabile e vista immersiva.
+- Proiezione Canvas 2D interattiva quando WebGL non è disponibile; un solo visualizzatore attivo, frequenza e dimensioni limitate.
+- CSS delle geometrie riunito in `src/geometry.css`, eliminando le vecchie definizioni da `visual.css`.
+- Traduzioni dinamiche IT/EN corrette; preferenze, movimento ridotto e chiusura dei dialoghi verificati.
+- 237 test automatici superati; 42 pagine, 3.814 collegamenti e 124 riferimenti a immagini verificati.
+- Collaudo browser a 320 / 390 / 768 / 1024 px e desktop. WebGL indisponibile nel browser di prova: collaudato il percorso Canvas 2D. Nessun test su dispositivi mobili fisici, Safari o Firefox.
+
+# Aggiornamento 3.5 — 9 novembre 2026
+
+- Homepage: percorsi Didattica, Ricerca e Quantum Lab, poi pubblicazioni selezionate e ultimo articolo.
+- Quindici attività di Quantum Lab associate ai sette moduli PDF; indirizzi verificati nel catalogo pubblico.
+- Sintesi scientifiche già approvate rese visibili; riferimenti bibliografici integrali in dettagli espandibili.
+- Intensità Leggera / Normale / Cinematografica, formule contestuali e attenuazione durante la lettura.
+- CSS e JavaScript condivisi con hash nel nome e integrità verificata; anteprima autonoma ancora incorporata.
+- Dodici immagini per condivisioni IT/EN e metadati Open Graph / Twitter.
+- Intestazione unificata: rimosse definizioni contrastanti da quattro fogli CSS; selettore lingua separato dai comandi.
+- Scala esplicita degli strati; finestre native sopra gli effetti; pulsanti di chiusura non comprimibili.
+- 228 test automatici, build IT/EN e controlli responsivi Chromium superati. Originali conservati byte per byte.
+
+# Aggiornamento 3.4 — 9 novembre 2026
+
+- Variante Matrix «Formule» estesa all’intera schermata, anche sotto i 1.000 px.
+- Tre piani di simboli scientifici con dimensioni e velocità diverse; texture riutilizzate.
+- Equazioni complete dal catalogo esistente, visibili subito anche nella modalità statica.
+- Testi e controlli sopra lo sfondo; protezione del contrasto nelle aree di lettura.
+- Transizioni verticali di 540 ms e impulso decorativo finito, senza ritardi imposti alla navigazione nativa.
+- Densità mobile adattata, massimo 20 fps mobile / 24 fps desktop, canvas entro 6 milioni di pixel.
+- Comandi mobili più leggibili a 320 px; stato Animate / Statiche / Disattivate conservato.
+- Test di regressione per mobile, copertura centrale, pausa, riduzione movimento e memoria raster.
+- Integrazione Quantum Lab, CV, foto, documenti, audio e geometrie conservati.
+
 # Changelog Topological Manifolds
 
 ## v3.3 — Denominazione plurale e consolidamento editoriale

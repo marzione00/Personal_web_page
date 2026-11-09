@@ -1,0 +1,37 @@
+{
+  "version": "3.8",
+  "budgets": [
+    {
+      "file": "index.html",
+      "bytes": 26008,
+      "gzip": 7269,
+      "limit": 12000
+    },
+    {
+      "file": "en/index.html",
+      "bytes": 25511,
+      "gzip": 7030,
+      "limit": 12000
+    },
+    {
+      "file": "assets/site-011a1a1a6b27.js",
+      "bytes": 118349,
+      "gzip": 34672,
+      "limit": 42000
+    },
+    {
+      "file": "assets/site-8ea185ccb072.css",
+      "bytes": 90008,
+      "gzip": 18846,
+      "limit": 26000
+    }
+  ],
+  "checks": [
+    "single bundle registration",
+    "one header owner",
+    "bounded layers with native modal top layer",
+    "obsolete home selectors removed",
+    "single modal instances",
+    "24 versioned model URLs"
+  ]
+}

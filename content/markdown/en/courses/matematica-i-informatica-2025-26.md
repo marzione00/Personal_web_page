@@ -6,7 +6,7 @@
 Mathematics I and Information Technology
 
 ## summary
-Computer Science for the Geological Sciences degree programme. Archive of adjunct teaching in the 2025/2026 academic year.
+This entry concerns the Computer Science component of Mathematics I and Information Technology for Geological Sciences in 2025/2026, with links to the University of Milan’s institutional information about the course.
 
 ## university
 University of Milan

@@ -18,7 +18,7 @@ Detecting malware and ransomware from the signals produced by program execution.
 Which execution traces can identify malicious behaviour?
 
 ## overview
-The presence of malware and ransomware is investigated using information collected during program execution, including hardware counters and system or library function calls. The aim is to identify measurable differences in behaviour that can subsequently be tested on new data.
+Information collected during program execution, including hardware counters and calls to system functions or libraries, describes software behaviour through measurable features on which malware and ransomware detection methods can be built and evaluated, examining whether observed differences persist when new data are considered.
 
 ## approach
 In the 2025 work on ransomware detection, sample entropy describes the temporal evolution of signals, while graphical models allow dependencies between the selected features to be examined. Other activities have investigated library calls and the interpretability of classification methods. The co-supervised theses address low-level feature analysis and the relationship between generative AI and malicious software.

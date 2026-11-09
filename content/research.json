@@ -1,7 +1,7 @@
 {
   "title": "Linee di ricerca",
-  "subtitle": "Problemi affrontati, metodi e lavori scientifici: dalle nanostrutture alla sicurezza informatica.",
-  "introduction": "I lavori sulle nanostrutture di carbonio esaminano il rapporto fra geometria, topologia e proprietà fisiche, attraverso metodi computazionali e confronti con osservazioni spettroscopiche. Nelle ricerche successive l’analisi si è spostata verso le tracce generate dall’esecuzione dei programmi, per studiare il rilevamento di ransomware e l’interpretabilità dei classificatori.\n\nLa scelta delle variabili, le ipotesi incorporate nei modelli e la stabilità delle spiegazioni costituiscono questioni metodologiche comuni a questi ambiti. Accanto ai risultati pubblicati, l’attività comprende interessi di approfondimento nel calcolo quantistico e nella progettazione didattica dei sistemi informatici.",
+  "subtitle": "Dalle tracce del software alle proprietà delle nanostrutture, studi che interrogano il rapporto fra dati osservati, rappresentazioni e spiegazioni.",
+  "introduction": "Riconoscere un comportamento malevolo nelle tracce di un programma, comprendere quali variabili orientino la risposta di un classificatore e collegare la geometria di una nanostruttura alle sue proprietà fisiche sono problemi che, pur appartenendo ad ambiti differenti, richiedono di esaminare come vengono costruiti i dati e quali ipotesi consentano di interpretarli.\n\nLe schede raccolgono gli studi sulla sicurezza informatica, sull’intelligenza artificiale spiegabile e sulla fisica computazionale, ai quali si affiancano le esperienze nell’analisi delle serie temporali e nei metodi quantitativi, mentre il calcolo quantistico e l’architettura dei sistemi sono presentati attraverso gli interessi scientifici e le attività didattiche che ne accompagnano l’approfondimento.",
   "areas": [
     {
       "id": "ia-spiegabile",
@@ -10,7 +10,7 @@
       "scope": "Modelli e interpretabilità",
       "summary": "Interpretabilità e stabilità delle spiegazioni prodotte dai modelli di apprendimento automatico.",
       "question": "Come valutare gli indizi su cui si fonda una classificazione?",
-      "overview": "L’accuratezza di un classificatore viene esaminata insieme alle variabili che influenzano la sua risposta. A questo scopo sono stati considerati modelli grafici probabilistici e tecniche di interpretazione, per confrontare le relazioni apprese con quelle attese dal fenomeno studiato. Nei contributi più recenti l’attenzione riguarda anche le scorciatoie statistiche (*shortcut learning*) e la stabilità delle spiegazioni quando cambiano la rappresentazione dei dati o il modello.",
+      "overview": "L’accuratezza di un classificatore acquista significato insieme all’esame delle variabili che ne orientano la risposta, per cui i modelli grafici probabilistici e le tecniche di interpretazione vengono impiegati per confrontare le relazioni apprese con quelle attese dal fenomeno e per studiare la stabilità delle spiegazioni quando cambiano il modello o la rappresentazione dei dati.",
       "approach": "I campi aleatori di Markov e gli altri modelli impiegati nei lavori sulla cybersecurity e sulla classificazione di asteroidi consentono di studiare dipendenze fra variabili. Il confronto fra viste differenti delle tracce comportamentali, discusso ad ANNPR 2026, affronta un problema complementare: stabilire in quali condizioni un classificatore sfrutti regolarità legate al processo osservato oppure alla particolare codifica dei dati. Il rapporto fra capacità predittiva e spiegabilità è stato discusso anche a IFCS 2026.",
       "methods": [
         "Modelli grafici probabilistici",
@@ -36,7 +36,7 @@
       "scope": "Applicazioni alla sicurezza",
       "summary": "Rilevamento di malware e ransomware a partire dai segnali prodotti dall’esecuzione dei programmi.",
       "question": "Quali tracce di esecuzione permettono di riconoscere un comportamento malevolo?",
-      "overview": "Per studiare la presenza di malware e ransomware vengono analizzate informazioni raccolte durante l’esecuzione dei programmi, fra cui contatori hardware e chiamate a funzioni di sistema o librerie. L’obiettivo è individuare differenze di comportamento che possano essere misurate e successivamente controllate su nuovi dati.",
+      "overview": "Le informazioni raccolte durante l’esecuzione di un programma, fra cui contatori hardware e chiamate a funzioni di sistema o librerie, permettono di descriverne il comportamento attraverso caratteristiche misurabili, sulle quali si costruiscono e si verificano metodi di rilevamento di malware e ransomware, esaminando quanto le differenze osservate si mantengano quando vengono considerati nuovi dati.",
       "approach": "Nel lavoro del 2025 sulla rilevazione di ransomware, l’entropia campionaria viene utilizzata per descrivere l’andamento temporale dei segnali, mentre i modelli grafici permettono di esaminare le dipendenze fra le caratteristiche considerate. Altre attività hanno studiato le chiamate alle librerie e l’interpretabilità dei metodi di classificazione. Le tesi correlate affrontano l’analisi delle caratteristiche di basso livello e il rapporto fra intelligenza artificiale generativa e software malevolo.",
       "methods": [
         "Entropia campionaria",
@@ -61,7 +61,7 @@
       "scope": "Percorso di ricerca in fisica",
       "summary": "Proprietà vibrazionali e ottiche del grafene, studiate in relazione alla geometria e ai legami atomici.",
       "question": "Quali proprietà di una nanostruttura dipendono dalla sua geometria e dalla disposizione dei legami?",
-      "overview": "Le ricerche di fisica teorica riguardano nanonastri e nanoframmenti di grafene, schwarziti e altre strutture di carbonio nelle quali la configurazione dei legami condiziona il comportamento elettronico, ottico e vibrazionale. I sistemi a curvatura negativa sono stati studiati anche mediante descrizioni topologiche.",
+      "overview": "Nanonastri e nanoframmenti di grafene, schwarziti e altre strutture di carbonio consentono di studiare come la configurazione dei legami condizioni il comportamento elettronico, ottico e vibrazionale di un sistema, mentre le descrizioni topologiche delle reti a curvatura negativa forniscono strumenti con cui mettere in relazione l’organizzazione della struttura e le proprietà fisiche considerate.",
       "approach": "I calcoli ab initio sono stati confrontati con risultati spettroscopici per individuare le firme Raman e vibrazionali associate ai bordi dei nanonastri. Altri lavori esaminano la variazione del bandgap con la distorsione strutturale, le proprietà ottiche di nanoframmenti accoppiati e gli indici matematici con cui confrontare reti di carbonio.",
       "methods": [
         "Calcoli ab initio",
@@ -90,7 +90,7 @@
       "scope": "Analisi dei dati e interesse applicativo",
       "summary": "Serie temporali, valutazione delle previsioni e metodi statistici applicati a dati complessi.",
       "question": "Come valutare una previsione quando i dati cambiano nel tempo?",
-      "overview": "Nel lavoro sulle serie temporali sono state affrontate la verifica dei metodi previsivi e la traduzione di procedure numeriche fra linguaggi di programmazione. Un progetto universitario ha riguardato dati relativi alla pandemia di COVID-19; il percorso Data Science 4Citizens ha invece utilizzato serie climatiche per l’insegnamento di tecniche di analisi dei dati.",
+      "overview": "L’analisi delle serie temporali comprende la verifica dei metodi previsivi e la traduzione di procedure numeriche fra linguaggi di programmazione, attraverso esperienze che hanno riguardato i dati della pandemia di COVID-19 e, nel percorso Data Science 4Citizens, serie climatiche utilizzate per l’insegnamento delle tecniche di analisi dei dati.",
       "approach": "L’esperienza comprende modelli statistici e strumenti di calcolo in Python e R. La formazione in Data Science and Economics, insieme alla didattica dei metodi matematici per la finanza, si collega all’interesse per la modellizzazione probabilistica dei mercati e per la valutazione del rischio. Tali temi costituiscono un ambito applicativo, mentre la produzione bibliografica principale riguarda la cybersecurity e la fisica delle nanostrutture.",
       "methods": [
         "Serie temporali",
@@ -113,7 +113,7 @@
       "scope": "Questione trasversale",
       "summary": "Il significato delle previsioni, le ipotesi dei modelli e i criteri per discutere una spiegazione.",
       "question": "Che cosa autorizza a considerare una previsione una spiegazione?",
-      "overview": "Una previsione corretta può dipendere da regolarità del campione, da una relazione fisica conosciuta oppure da caratteristiche introdotte dalla raccolta dei dati. Distinguere queste possibilità richiede di esaminare ipotesi, procedure di misura e limiti delle rappresentazioni, secondo il problema affrontato nella tesi magistrale sui fondamenti epistemologici dell’analisi dei dati.",
+      "overview": "Poiché una previsione corretta può dipendere da regolarità del campione, da relazioni fisiche conosciute o da caratteristiche introdotte durante la raccolta dei dati, valutarne il significato richiede di esaminare le ipotesi e le procedure di misura attraverso cui il fenomeno è stato rappresentato, secondo una domanda approfondita nella tesi magistrale sui fondamenti epistemologici dell’analisi dei dati.",
       "approach": "La verifica riguarda la costruzione dei campioni, la robustezza delle relazioni apprese e il confronto con ipotesi formulate indipendentemente dai dati impiegati per addestrare un modello. La questione è stata discussa anche nei lavori sul rapporto fra interpretabilità degli algoritmi e leggi fisiche, e nelle analisi delle spiegazioni prodotte da classificatori differenti.",
       "methods": [
         "Fondamenti dell’analisi dei dati",
@@ -135,7 +135,7 @@
       "scope": "Interessi scientifici e didattica",
       "summary": "Algoritmi quantistici, risorse computazionali e conseguenze per la crittografia.",
       "question": "Quali problemi presentano un vantaggio nel modello di calcolo quantistico?",
-      "overview": "Il calcolo quantistico è un ambito di studio che comprende algoritmi, complessità e applicazioni alla crittografia. Nell’insegnamento di Quantum e post-quantum computing (UniMI, 2026/2027) i materiali introducono qubit, circuiti e interferenza, per poi affrontare Deutsch–Jozsa, Bernstein–Vazirani, Simon, Shor, Grover e i protocolli di comunicazione quantistica.",
+      "overview": "Lo studio del calcolo quantistico comprende algoritmi, complessità e applicazioni alla crittografia, che nei materiali dell’insegnamento di Quantum e post-quantum computing dell’Università degli Studi di Milano, per l’anno accademico 2026/2027, vengono affrontati a partire da qubit, circuiti e interferenza, fino agli algoritmi di Deutsch–Jozsa, Bernstein–Vazirani, Simon, Shor e Grover e ai protocolli di comunicazione quantistica.",
       "approach": "L’interesse per l’ottimizzazione e per le applicazioni all’apprendimento automatico si collega alla didattica degli algoritmi quantistici. I sette moduli disponibili affrontano i fondamenti matematici, gli schemi circuitali e le conseguenze computazionali degli algoritmi studiati.",
       "methods": [
         "Algoritmi e circuiti",
@@ -154,7 +154,7 @@
       "scope": "Progettazione didattica",
       "summary": "Materiali ed esercitazioni per descrivere come interagiscono hardware, software e infrastrutture.",
       "question": "Come spiegare in modo verificabile il funzionamento dei sistemi di calcolo?",
-      "overview": "La progettazione di contenuti per l’architettura dei sistemi riguarda moduli teorici ed esercitazioni con cui studiare le componenti di un calcolatore, le infrastrutture computazionali e le loro interazioni. È un interesse formativo collegato alla docenza di Informatica.",
+      "overview": "La preparazione di materiali per l’architettura dei sistemi si sviluppa attraverso moduli teorici ed esercitazioni con cui descrivere le componenti di un calcolatore e le infrastrutture computazionali, ponendo al centro le relazioni fra hardware e software che, nel contesto della docenza di Informatica, consentono di ricostruire il funzionamento di un sistema.",
       "approach": "I moduli didattici affiancano alla descrizione delle componenti esercizi sulle loro relazioni, in modo da collegare l’organizzazione dell’hardware al comportamento del software e delle infrastrutture. L’attività riguarda la progettazione e la preparazione di materiali per l’insegnamento dell’informatica.",
       "methods": [
         "Architettura dei calcolatori",
@@ -168,5 +168,5 @@
     }
   ],
   "connectionsTitle": "Tesi e contributi interdisciplinari",
-  "connections": "Le tesi di cui è stato correlatore hanno affrontato la rilevazione di malware e ransomware, l’interpretabilità dei classificatori e l’evoluzione semantica dei testi mediante Word2Vec e grafi. I volumi sulla cybersecurity e sull’intelligenza artificiale negli enti locali esaminano l’adozione delle tecnologie nelle amministrazioni pubbliche; fra le attività progettuali figura inoltre MUSA — Multilayered Urban Sustainability Action."
+  "connections": "Le tesi di cui sono stato correlatore hanno affrontato la rilevazione di malware e ransomware, l’interpretabilità dei classificatori e l’evoluzione semantica dei testi mediante Word2Vec e grafi, mentre nei volumi dedicati alla cybersecurity e all’intelligenza artificiale negli enti locali, e nelle attività del progetto MUSA — Multilayered Urban Sustainability Action, il confronto con altre competenze si è esteso alle condizioni nelle quali le tecnologie vengono adottate e interpretate."
 }

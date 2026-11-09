@@ -6,15 +6,15 @@
 Linee di ricerca
 
 ## subtitle
-Problemi affrontati, metodi e lavori scientifici: dalle nanostrutture alla sicurezza informatica.
+Dalle tracce del software alle proprietà delle nanostrutture, studi che interrogano il rapporto fra dati osservati, rappresentazioni e spiegazioni.
 
 ## introduction
-I lavori sulle nanostrutture di carbonio esaminano il rapporto fra geometria, topologia e proprietà fisiche, attraverso metodi computazionali e confronti con osservazioni spettroscopiche. Nelle ricerche successive l’analisi si è spostata verso le tracce generate dall’esecuzione dei programmi, per studiare il rilevamento di ransomware e l’interpretabilità dei classificatori.
+Riconoscere un comportamento malevolo nelle tracce di un programma, comprendere quali variabili orientino la risposta di un classificatore e collegare la geometria di una nanostruttura alle sue proprietà fisiche sono problemi che, pur appartenendo ad ambiti differenti, richiedono di esaminare come vengono costruiti i dati e quali ipotesi consentano di interpretarli.
 
-La scelta delle variabili, le ipotesi incorporate nei modelli e la stabilità delle spiegazioni costituiscono questioni metodologiche comuni a questi ambiti. Accanto ai risultati pubblicati, l’attività comprende interessi di approfondimento nel calcolo quantistico e nella progettazione didattica dei sistemi informatici.
+Le schede raccolgono gli studi sulla sicurezza informatica, sull’intelligenza artificiale spiegabile e sulla fisica computazionale, ai quali si affiancano le esperienze nell’analisi delle serie temporali e nei metodi quantitativi, mentre il calcolo quantistico e l’architettura dei sistemi sono presentati attraverso gli interessi scientifici e le attività didattiche che ne accompagnano l’approfondimento.
 
 ## connectionsTitle
 Tesi e contributi interdisciplinari
 
 ## connections
-Le tesi di cui è stato correlatore hanno affrontato la rilevazione di malware e ransomware, l’interpretabilità dei classificatori e l’evoluzione semantica dei testi mediante Word2Vec e grafi. I volumi sulla cybersecurity e sull’intelligenza artificiale negli enti locali esaminano l’adozione delle tecnologie nelle amministrazioni pubbliche; fra le attività progettuali figura inoltre MUSA — Multilayered Urban Sustainability Action.
+Le tesi di cui sono stato correlatore hanno affrontato la rilevazione di malware e ransomware, l’interpretabilità dei classificatori e l’evoluzione semantica dei testi mediante Word2Vec e grafi, mentre nei volumi dedicati alla cybersecurity e all’intelligenza artificiale negli enti locali, e nelle attività del progetto MUSA — Multilayered Urban Sustainability Action, il confronto con altre competenze si è esteso alle condizioni nelle quali le tecnologie vengono adottate e interpretate.

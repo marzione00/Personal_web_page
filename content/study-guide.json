@@ -1,0 +1,586 @@
+{
+  "schemaVersion": 1,
+  "modules": [
+    {
+      "id": "quantum-2026-2027-modulo-01",
+      "pdf": "/media/docs/quantum-2026-2027/UniMI_Quantum_PostQuantum_2026-2027_M01_fondamenti-fisici-e-simulazione.pdf",
+      "language": "it",
+      "pages": 519,
+      "sha256": "6e8195ac7d3489792b72cb64f7ed2aab12e58d10438f185367958e3a574a4dac",
+      "verification": "PDF bookmarks and destination page text",
+      "chapters": [
+        {
+          "title": "Parte I – La simulazione classica",
+          "page": 13,
+          "pageHeading": "Quantum e post-quantum computing / MODULO 01 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+        },
+        {
+          "title": "Parte II – La simulazione statistica",
+          "page": 54,
+          "pageHeading": "Quantum e post-quantum computing / MODULO 01 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+        },
+        {
+          "title": "Parte III – Onde e interferenza",
+          "page": 96,
+          "pageHeading": "Quantum e post-quantum computing / MODULO 01 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+        },
+        {
+          "title": "Parte IV – L'interferenza di particelle singole",
+          "page": 129,
+          "pageHeading": "Quantum e post-quantum computing / MODULO 01 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+        },
+        {
+          "title": "Parte V – Stati a due alternative",
+          "page": 169,
+          "pageHeading": "Quantum e post-quantum computing / MODULO 01 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+        },
+        {
+          "title": "Parte VI – Il calcolo quantistico",
+          "page": 226,
+          "pageHeading": "Quantum e post-quantum computing / MODULO 01 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+        },
+        {
+          "title": "Parte VII – Due qubit e stati congiunti",
+          "page": 250,
+          "pageHeading": "Quantum e post-quantum computing / MODULO 01 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+        },
+        {
+          "title": "Parte VIII – Ambiente e perdita di interferenza",
+          "page": 281,
+          "pageHeading": "Quantum e post-quantum computing / MODULO 01 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+        },
+        {
+          "title": "Parte IX – Informazione e irreversibilità",
+          "page": 304,
+          "pageHeading": "Quantum e post-quantum computing / MODULO 01 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+        },
+        {
+          "title": "Sintesi",
+          "page": 312,
+          "pageHeading": "Quantum e post-quantum computing / MODULO 01 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+        },
+        {
+          "title": "Parte X – Come si costruisce un computer quantistico",
+          "page": 329,
+          "pageHeading": "Quantum e post-quantum computing / MODULO 01 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+        },
+        {
+          "title": "Parte XI – Dalla meccanica quantistica al calcolo quantistico",
+          "page": 495,
+          "pageHeading": "Quantum e post-quantum computing / MODULO 01 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+        }
+      ],
+      "goal": {
+        "it": "Seguendo il passaggio dalle simulazioni alle onde e agli stati a due alternative, prova a riconoscere dove la fase relativa modifica le probabilità osservate e in quali condizioni l’interazione con l’ambiente attenua l’interferenza.",
+        "en": "Following the progression from simulations to waves and two-alternative states, identify where relative phase changes observed probabilities and how interaction with the environment suppresses interference."
+      },
+      "preparation": {
+        "it": "Per iniziare sono utili grafici di funzioni, proporzioni e probabilità elementare; il modulo successivo permette di riprendere gli strumenti algebrici.",
+        "en": "Function graphs, ratios and elementary probability are useful starting points; the next module revisits the algebraic tools."
+      }
+    },
+    {
+      "id": "quantum-2026-2027-modulo-02",
+      "pdf": "/media/docs/quantum-2026-2027/UniMI_Quantum_PostQuantum_2026-2027_M02_fondamenti-matematici.pdf",
+      "language": "it",
+      "pages": 514,
+      "sha256": "0add98ef269557c2df45a568e35aaed3f2192780eae013fe1d0b33fa954fd70b",
+      "verification": "PDF bookmarks and destination page text",
+      "chapters": [
+        {
+          "title": "Numeri complessi",
+          "page": 11,
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+        },
+        {
+          "title": "Vettori, basi e coordinate",
+          "page": 33,
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+        },
+        {
+          "title": "Prodotto interno e ortogonalità",
+          "page": 45,
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+        },
+        {
+          "title": "Matrici e trasformazioni lineari",
+          "page": 76,
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+        },
+        {
+          "title": "Aggiunto, hermitiane e unitarie",
+          "page": 89,
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+        },
+        {
+          "title": "Autovalori e autovettori",
+          "page": 101,
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+        },
+        {
+          "title": "Diagonalizzazione e spettro",
+          "page": 113,
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+        },
+        {
+          "title": "Cambio di base e commutatori",
+          "page": 138,
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+        },
+        {
+          "title": "Nucleo, immagine e rango",
+          "page": 160,
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+        },
+        {
+          "title": "Prodotto tensoriale",
+          "page": 167,
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+        },
+        {
+          "title": "Funzioni di matrici",
+          "page": 180,
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+        },
+        {
+          "title": "Un problema di algebra completo",
+          "page": 203,
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+        },
+        {
+          "title": "Esiti ed eventi",
+          "page": 217,
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+        },
+        {
+          "title": "Variabili aleatorie discrete",
+          "page": 223,
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+        },
+        {
+          "title": "Valore atteso",
+          "page": 229,
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+        },
+        {
+          "title": "Varianza e dispersione",
+          "page": 235,
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+        },
+        {
+          "title": "Prove ripetute e binomiale",
+          "page": 242,
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+        },
+        {
+          "title": "Frequenze e precisione",
+          "page": 253,
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+        },
+        {
+          "title": "Condizionamento e Bayes",
+          "page": 264,
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+        },
+        {
+          "title": "Distribuzioni congiunte",
+          "page": 271,
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+        },
+        {
+          "title": "Dal vettore al ket",
+          "page": 319,
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+        },
+        {
+          "title": "Bra e prodotto interno",
+          "page": 331,
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+        },
+        {
+          "title": "Prodotto diadico e proiettori",
+          "page": 345,
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+        },
+        {
+          "title": "Operatori e trasformazioni del qubit",
+          "page": 354,
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+        },
+        {
+          "title": "Autostati e decomposizione spettrale",
+          "page": 389,
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+        },
+        {
+          "title": "Regola di Born",
+          "page": 396,
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+        },
+        {
+          "title": "Misura e aggiornamento dello stato",
+          "page": 410,
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+        },
+        {
+          "title": "Valori medi e dispersioni quantistiche",
+          "page": 424,
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+        },
+        {
+          "title": "Osservabili incompatibili",
+          "page": 433,
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+        },
+        {
+          "title": "Sistemi composti",
+          "page": 449,
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+        },
+        {
+          "title": "Un esperimento calcolato dall’inizio alla fine",
+          "page": 488,
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+        }
+      ],
+      "goal": {
+        "it": "Dopo aver lavorato con numeri complessi, vettori e operatori, ricostruisci una misura proiettiva precisando la base scelta, le probabilità degli esiti e l’aggiornamento dello stato che segue ciascun risultato.",
+        "en": "After working with complex numbers, vectors and operators, reconstruct a projective measurement, specifying its basis, outcome probabilities and state update."
+      },
+      "preparation": {
+        "it": "Puoi affiancare il primo modulo alla revisione di algebra lineare e probabilità contenuta nelle prime sezioni di queste slide.",
+        "en": "The first module can be read alongside the linear algebra and probability review in the opening sections of these slides."
+      }
+    },
+    {
+      "id": "quantum-2026-2027-modulo-03",
+      "pdf": "/media/docs/quantum-2026-2027/UniMI_Quantum_PostQuantum_2026-2027_M03_circuiti-quantistici-deutsch-jozsa.pdf",
+      "language": "it",
+      "pages": 177,
+      "sha256": "fe92862c61fc686fcbb48c4b4cd5ba98d926510f3b679498fad11e163f5700c2",
+      "verification": "PDF bookmarks and destination page text",
+      "chapters": [
+        {
+          "title": "1. Lettura ed esecuzione",
+          "page": 3,
+          "pageHeading": "MODULO 03 / / / CIRCUITI QUANTISTICI / 1. Lettura ed esecuzione"
+        },
+        {
+          "title": "2. Porte a un qubit",
+          "page": 11,
+          "pageHeading": "MODULO 03 / / / CIRCUITI QUANTISTICI / 2. Porte a un qubit"
+        },
+        {
+          "title": "3. Composizione e inversione",
+          "page": 26,
+          "pageHeading": "MODULO 03 / / / CIRCUITI QUANTISTICI / 3. Composizione e inversione"
+        },
+        {
+          "title": "4. Fasi e interferenza",
+          "page": 36,
+          "pageHeading": "MODULO 03 / / / CIRCUITI QUANTISTICI / 4. Fasi e interferenza"
+        },
+        {
+          "title": "5. Registri di due qubit",
+          "page": 47,
+          "pageHeading": "MODULO 03 / / / CIRCUITI QUANTISTICI / 5. Registri di due qubit"
+        },
+        {
+          "title": "6. CNOT, Toffoli e ausiliari",
+          "page": 59,
+          "pageHeading": "MODULO 03 / / / CIRCUITI QUANTISTICI / 6. CNOT, Toffoli e ausiliari"
+        },
+        {
+          "title": "7. Deutsch: derivazione commentata",
+          "page": 94,
+          "pageHeading": "MODULO 03 / / / CIRCUITI QUANTISTICI / 7. Deutsch: derivazione commentata"
+        },
+        {
+          "title": "8. Interpretazione e prosecuzione",
+          "page": 115,
+          "pageHeading": "MODULO 03 / / / CIRCUITI QUANTISTICI / 8. Interpretazione e prosecuzione"
+        },
+        {
+          "title": "9. Deutsch–Jozsa su più bit",
+          "page": 119,
+          "pageHeading": "MODULO 03 / / / CIRCUITI QUANTISTICI / 9. Deutsch–Jozsa su più bit"
+        },
+        {
+          "title": "A. Verifiche e dimostrazioni",
+          "page": 148,
+          "pageHeading": "MODULO 03 / / / CIRCUITI QUANTISTICI / A. Verifiche e dimostrazioni"
+        },
+        {
+          "title": "B. Preparazioni alternative",
+          "page": 155,
+          "pageHeading": "MODULO 03 / / / CIRCUITI QUANTISTICI / B. Preparazioni alternative"
+        },
+        {
+          "title": "C. AND, fase e ripristino",
+          "page": 171,
+          "pageHeading": "MODULO 03 / / / CIRCUITI QUANTISTICI / C. AND, fase e ripristino"
+        },
+        {
+          "title": "Riferimenti",
+          "page": 177,
+          "pageHeading": "MODULO 03 / / / CIRCUITI QUANTISTICI / Riferimenti"
+        }
+      ],
+      "goal": {
+        "it": "Leggendo un circuito da sinistra a destra, segui lo stato del registro attraverso le porte e confronta il ruolo delle fasi nella derivazione di Deutsch con quello assunto nella generalizzazione di Deutsch–Jozsa.",
+        "en": "Read a circuit from left to right, following the register through its gates and comparing the role of phases in Deutsch’s derivation and its Deutsch–Jozsa generalisation."
+      },
+      "preparation": {
+        "it": "Riprendi dal secondo modulo prodotti tensoriali, operatori unitari, regola di Born e cambi di base.",
+        "en": "Revisit tensor products, unitary operators, the Born rule and changes of basis in module two."
+      }
+    },
+    {
+      "id": "quantum-2026-2027-modulo-04",
+      "pdf": "/media/docs/quantum-2026-2027/UniMI_Quantum_PostQuantum_2026-2027_M04_algoritmi-bernstein-vazirani-simon.pdf",
+      "language": "it",
+      "pages": 179,
+      "sha256": "74434a59b39e81fac474189bdb7c672e3dcb9796406fcb0b7efb6b66e5fde0e9",
+      "verification": "PDF bookmarks and destination page text",
+      "chapters": [
+        {
+          "title": "Bernstein–Vazirani",
+          "page": 3,
+          "pageHeading": "MODULO 04 / / / ALGORITMI QUANTISTICI / Bernstein–Vazirani"
+        },
+        {
+          "title": "Simon",
+          "page": 60,
+          "pageHeading": "MODULO 04 / / / ALGORITMI QUANTISTICI / Simon"
+        },
+        {
+          "title": "Simon: quante prove servono",
+          "page": 134,
+          "pageHeading": "MODULO 04 / / / ALGORITMI QUANTISTICI / Simon / Numero di esecuzioni"
+        },
+        {
+          "title": "Simon: confronto classico e risorse",
+          "page": 147,
+          "pageHeading": "MODULO 04 / / / ALGORITMI QUANTISTICI / Simon / Confronto classico"
+        },
+        {
+          "title": "Confronto dei procedimenti",
+          "page": 156,
+          "pageHeading": "MODULO 04 / / / ALGORITMI QUANTISTICI / Confronto dei procedimenti"
+        },
+        {
+          "title": "Appendice",
+          "page": 159,
+          "pageHeading": "MODULO 04 / / / ALGORITMI QUANTISTICI / Appendice"
+        }
+      ],
+      "goal": {
+        "it": "Confronta Bernstein–Vazirani e Simon attraverso la struttura dell’oracolo e le informazioni ricavate dalle misure, tenendo distinti il numero di interrogazioni e il lavoro classico richiesto per interpretare gli esiti.",
+        "en": "Compare Bernstein–Vazirani and Simon through their oracles and measurement information, distinguishing query counts from the classical work needed to interpret outcomes."
+      },
+      "preparation": {
+        "it": "Sono utili la lettura dei circuiti del terzo modulo e il calcolo con bit, prodotto scalare binario ed equazioni lineari.",
+        "en": "Circuit reading from module three, bit arithmetic, binary inner products and linear equations are useful preparation."
+      }
+    },
+    {
+      "id": "quantum-2026-2027-modulo-05",
+      "pdf": "/media/docs/quantum-2026-2027/UniMI_Quantum_PostQuantum_2026-2027_M05_shor-aritmetica-rsa-fourier.pdf",
+      "language": "it",
+      "pages": 208,
+      "sha256": "a67f88b1b35a44d892e4037a11cb2f5f69927dc3ce712d5363f9d7f8188ca053",
+      "verification": "PDF bookmarks and destination page text",
+      "chapters": [
+        {
+          "title": "01 Il problema di Shor",
+          "page": 4,
+          "pageHeading": "CAPITOLO 01 / Il problema / di Shor / Il precedente di Simon"
+        },
+        {
+          "title": "02 Divisori e coprimalità",
+          "page": 15,
+          "pageHeading": "CAPITOLO 02 / Divisori / e coprimalità / Il massimo comun divisore"
+        },
+        {
+          "title": "03 Congruenze e inversi",
+          "page": 34,
+          "pageHeading": "CAPITOLO 03 / Congruenze / e inversi / Il calcolo con i resti"
+        },
+        {
+          "title": "04 Potenze e ordine",
+          "page": 57,
+          "pageHeading": "CAPITOLO 04 / Potenze / e ordine / Le ripetizioni delle"
+        },
+        {
+          "title": "05 La costruzione di RSA",
+          "page": 82,
+          "pageHeading": "CAPITOLO 05 / La costruzione / di RSA / Chiavi, cifratura e correttezza"
+        },
+        {
+          "title": "06 Il periodo del cifrato",
+          "page": 115,
+          "pageHeading": "CAPITOLO 06 / Il periodo / del cifrato / Il recupero del messaggio"
+        },
+        {
+          "title": "07 La difficoltà della ricerca",
+          "page": 128,
+          "pageHeading": "CAPITOLO 07 / La difficoltà / della ricerca / Valutare una potenza e determinare il"
+        },
+        {
+          "title": "08 La rappresentazione di Fourier",
+          "page": 137,
+          "pageHeading": "CAPITOLO 08 / La rappresentazione / di Fourier / Oscillazioni, campioni e frequenze"
+        },
+        {
+          "title": "09 La ricerca quantistica del periodo",
+          "page": 152,
+          "pageHeading": "CAPITOLO 09 / La ricerca / quantistica / del periodo"
+        },
+        {
+          "title": "10 Dalla misura al messaggio",
+          "page": 169,
+          "pageHeading": "CAPITOLO 10 / Dalla misura / al messaggio / Approssimazioni razionali"
+        },
+        {
+          "title": "11 La realizzazione del circuito",
+          "page": 185,
+          "pageHeading": "CAPITOLO 11 / La realizzazione / del circuito / Porte, aritmetica reversibile e misura"
+        },
+        {
+          "title": "A Il periodo e i fattori (facoltativo)",
+          "page": 201,
+          "pageHeading": "APPROFONDIMENTI FACOLTATIVI / Il periodo / e i fattori / Un’altra applicazione della ricerca"
+        },
+        {
+          "title": "Riferimenti bibliografici",
+          "page": 207,
+          "pageHeading": "Indicazioni di lettura / N. David Mermin, Quantum Computer Science: An Introduction, Cambridge University Press, / 2007, capitolo 3, «Breaking RSA Encryption». Le pagine indicate sono quelle stampate nel / volume, non il contatore del lettore PDF."
+        }
+      ],
+      "goal": {
+        "it": "Segui la catena che collega aritmetica modulare, ricerca del periodo e recupero dell’informazione, distinguendo la trasformata di Fourier dalle elaborazioni classiche con cui si interpretano le misure.",
+        "en": "Follow the chain linking modular arithmetic, period finding and information recovery, distinguishing the Fourier transform from classical measurement processing."
+      },
+      "preparation": {
+        "it": "Riprendi circuiti quantistici e numeri complessi; divisibilità, congruenze e ordine vengono sviluppati nelle sezioni iniziali del modulo.",
+        "en": "Revisit quantum circuits and complex numbers; divisibility, congruences and order are developed in the opening sections."
+      }
+    },
+    {
+      "id": "quantum-2026-2027-modulo-06",
+      "pdf": "/media/docs/quantum-2026-2027/UniMI_Quantum_PostQuantum_2026-2027_M06_grover-amplificazione-ampiezza.pdf",
+      "language": "it",
+      "pages": 253,
+      "sha256": "2ae75a422e4a3fb74013f765375cb17fe1c364e38739f4d66b183d93038c5b6d",
+      "verification": "PDF bookmarks and destination page text",
+      "chapters": [
+        {
+          "title": "Il problema della ricerca",
+          "page": 4,
+          "pageHeading": "CAPITOLO 01 / Il problema / della ricerca / Candidati, verificatori"
+        },
+        {
+          "title": "Stati e probabilità",
+          "page": 21,
+          "pageHeading": "CAPITOLO 02 / Stati / e probabilità / La preparazione dei registri"
+        },
+        {
+          "title": "Oracoli reversibili",
+          "page": 42,
+          "pageHeading": "CAPITOLO 03 / Oracoli / reversibili / Il valore della funzione"
+        },
+        {
+          "title": "Quattro candidati",
+          "page": 61,
+          "pageHeading": "CAPITOLO 04 / Quattro / candidati / Un esempio completo"
+        },
+        {
+          "title": "Otto candidati",
+          "page": 78,
+          "pageHeading": "CAPITOLO 05 / Otto / candidati / Il calcolo delle ampiezze"
+        },
+        {
+          "title": "Riflessioni e sottospazi",
+          "page": 97,
+          "pageHeading": "CAPITOLO 06 / Riflessioni / e sottospazi / Proiezioni, ortogonalità"
+        },
+        {
+          "title": "La rotazione di Grover",
+          "page": 123,
+          "pageHeading": "CAPITOLO 07 / La rotazione / di Grover / Il piano degli stati"
+        },
+        {
+          "title": "Circuiti e ausiliari",
+          "page": 146,
+          "pageHeading": "CAPITOLO 08 / Circuiti / e ausiliari / La costruzione dell’oracolo"
+        },
+        {
+          "title": "Più soluzioni",
+          "page": 175,
+          "pageHeading": "CAPITOLO 09 / Più / soluzioni / La probabilità complessiva"
+        },
+        {
+          "title": "Il numero di soluzioni ignoto",
+          "page": 192,
+          "pageHeading": "CAPITOLO 10 / Il numero di / soluzioni ignoto / Conteggi casuali, verifiche"
+        },
+        {
+          "title": "Amplificazione di ampiezza",
+          "page": 210,
+          "pageHeading": "CAPITOLO 11 / Amplificazione / di ampiezza / La ricerca con una"
+        },
+        {
+          "title": "Costo e uso dell’algoritmo",
+          "page": 230,
+          "pageHeading": "CAPITOLO 12 / Costo e uso / dell’algoritmo / Risorse, limiti"
+        }
+      ],
+      "goal": {
+        "it": "Interpreta le iterazioni di Grover come rotazioni nel sottospazio pertinente e verifica come il numero di soluzioni condizioni il momento in cui interrompere l’amplificazione.",
+        "en": "Interpret Grover iterations as rotations in the relevant subspace and examine how the number of solutions determines when amplification should stop."
+      },
+      "preparation": {
+        "it": "Riprendi normalizzazione degli stati, oracoli reversibili e riflessioni; i primi esempi con quattro e otto candidati accompagnano la costruzione geometrica.",
+        "en": "Revisit state normalisation, reversible oracles and reflections; four- and eight-candidate examples introduce the geometric construction."
+      }
+    },
+    {
+      "id": "quantum-2026-2027-modulo-07",
+      "pdf": "/media/docs/quantum-2026-2027/UniMI_Quantum_PostQuantum_2026-2027_M07_protocolli-qkd-codifica-errori.pdf",
+      "language": "it",
+      "pages": 100,
+      "sha256": "2286174d7bd022f26b5f8fe0c2f465906a5d0ba2c722ca197991dc2db2f81977",
+      "verification": "PDF bookmarks and destination page text",
+      "chapters": [
+        {
+          "title": "BB84 e distribuzione delle chiavi",
+          "page": 10,
+          "pageHeading": "CAPITOLO 01 / BB84 e distribuzione / delle chiavi / Preparazione, misura e confronto delle basi"
+        },
+        {
+          "title": "La QKD nelle comunicazioni protette",
+          "page": 29,
+          "pageHeading": "CAPITOLO 02 / La QKD nelle / comunicazioni protette / Autenticazione, protezione dei dati"
+        },
+        {
+          "title": "Codifica superdensa",
+          "page": 46,
+          "pageHeading": "CAPITOLO 03 / Codifica / superdensa / Due bit per qubit trasmesso"
+        },
+        {
+          "title": "Correzione degli errori quantistici",
+          "page": 57,
+          "pageHeading": "CAPITOLO 04 / Correzione degli / errori quantistici / Ridondanza, sindromi e recupero"
+        }
+      ],
+      "goal": {
+        "it": "Confronta distribuzione quantistica delle chiavi, codifica superdensa e correzione degli errori precisando, per ciascun protocollo, quali risorse vengono condivise e che cosa è possibile dedurre dalle misure.",
+        "en": "Compare quantum key distribution, superdense coding and error correction, specifying shared resources and what can be inferred from measurements."
+      },
+      "preparation": {
+        "it": "Sono utili stati congiunti, basi di misura e circuiti controllati, trattati nei primi tre moduli.",
+        "en": "Joint states, measurement bases and controlled circuits from the first three modules are useful preparation."
+      }
+    }
+  ]
+}

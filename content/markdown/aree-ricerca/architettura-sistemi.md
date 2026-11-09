@@ -18,7 +18,7 @@ Materiali ed esercitazioni per descrivere come interagiscono hardware, software 
 Come spiegare in modo verificabile il funzionamento dei sistemi di calcolo?
 
 ## overview
-La progettazione di contenuti per l’architettura dei sistemi riguarda moduli teorici ed esercitazioni con cui studiare le componenti di un calcolatore, le infrastrutture computazionali e le loro interazioni. È un interesse formativo collegato alla docenza di Informatica.
+La preparazione di materiali per l’architettura dei sistemi si sviluppa attraverso moduli teorici ed esercitazioni con cui descrivere le componenti di un calcolatore e le infrastrutture computazionali, ponendo al centro le relazioni fra hardware e software che, nel contesto della docenza di Informatica, consentono di ricostruire il funzionamento di un sistema.
 
 ## approach
 I moduli didattici affiancano alla descrizione delle componenti esercizi sulle loro relazioni, in modo da collegare l’organizzazione dell’hardware al comportamento del software e delle infrastrutture. L’attività riguarda la progettazione e la preparazione di materiali per l’insegnamento dell’informatica.

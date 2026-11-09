@@ -17,3 +17,9 @@ La superficie separa lo spazio in due regioni connesse attraverso aperture perio
 
 ## fonti
 [Schwarziti e superfici periodiche — ricerca originale](https://pmc.ncbi.nlm.nih.gov/articles/PMC6126744/)
+
+## osservazione
+Ruota la superficie fino a guardare attraverso le aperture e osserva come la ripetizione dei passaggi organizzi le regioni dello spazio, confrontando la simmetria della figura con le parti che vengono interrotte dal bordo del dominio rappresentato.
+
+## lettura
+La somma dei coseni delle tre coordinate x, y e z è uguale a zero.

@@ -9,11 +9,11 @@
  const stats={native:0,offline:0,fallback:0};
  const scan=document.createElement('div');scan.className='screen-scan';scan.setAttribute('aria-hidden','true');document.body.append(scan);
  function clear(){fallbackAnimation?.cancel();fallbackAnimation=null;root.classList.remove('screen-arriving');}
- function sweep(){root.classList.remove('screen-arriving');requestAnimationFrame(()=>root.classList.add('screen-arriving'));}
+ function sweep(){root.classList.remove('screen-arriving');window.dispatchEvent(new Event('mdc:page-transition'));requestAnimationFrame(()=>{if(fx.transitions&&!document.hidden)root.classList.add('screen-arriving');});}
  scan.addEventListener('animationend',()=>root.classList.remove('screen-arriving'));
  function fallback(){
   if(!fx.transitions||document.hidden)return;stats.fallback++;
-  fallbackAnimation=main.animate([{opacity:.45,transform:'translateX(28px)'},{opacity:1,transform:'translateX(0)'}],{duration:280,easing:'cubic-bezier(.2,.7,.2,1)'});
+  fallbackAnimation=main.animate?.([{opacity:.2,clipPath:'inset(0 0 40% 0)',transform:'translateY(18px)'},{opacity:1,clipPath:'inset(0)',transform:'translateY(0)'}],{duration:540,easing:'cubic-bezier(.2,.7,.2,1)'});
   sweep();
  }
  function run(update){

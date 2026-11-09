@@ -15,7 +15,7 @@ Artificial Neural Networks in Pattern Recognition, Lecture Notes in Computer Sci
 Stabilità delle spiegazioni nella classificazione delle tracce di software
 
 ## plainSummary
-Modelli che classificano bene gli stessi programmi possono basarsi su indizi differenti. Il lavoro studia quanto siano stabili le loro spiegazioni.
+Poiché modelli capaci di classificare correttamente gli stessi programmi possono affidarsi a indizi differenti, il lavoro esamina la stabilità delle spiegazioni nella classificazione delle tracce comportamentali, considerando il ruolo delle rappresentazioni e delle regolarità apprese dai classificatori.
 
 ## explanation
 Su un insieme di dati per il riconoscimento del ransomware vengono confrontate diverse descrizioni dell’esecuzione: chiamate di sistema, librerie e percorsi, segnali dei contatori hardware e loro combinazioni. Gli indici Information Concordance e Selector Adjusted Information Concordance misurano l’accordo fra le spiegazioni, considerando anche gli effetti della selezione delle variabili. Nel confronto svolto, le chiamate di sistema offrono spiegazioni più stabili fra modelli; altre rappresentazioni risentono maggiormente delle scelte di elaborazione. Il risultato riguarda il benchmark studiato e invita a valutare insieme accuratezza e stabilità delle ragioni della previsione.

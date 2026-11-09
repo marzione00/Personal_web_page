@@ -13,8 +13,8 @@ test('Research groups scientific lines by evidence and activity',()=>{
  assert.equal(a.filter(x=>x.group==='trasversale').length,1);
  assert.equal(a.filter(x=>x.group==='approfondimenti').length,2);
  assert.match(html['ricerca.html'],/Linee di ricerca documentate/);
- assert.match(html['ricerca.html'],/Questioni trasversali/);
- assert.match(html['ricerca.html'],/Interessi e insegnamento/);
+ assert.match(html['ricerca.html'],/Questione trasversale/);
+ assert.match(html['ricerca.html'],/Interessi di studio e didattica/);
  assert.equal((html['ricerca.html'].match(/id="tema-/g)||[]).length,7);
 });
 test('outdated didactics notice is gone and PDF modules remain',()=>{
@@ -24,7 +24,8 @@ test('outdated didactics notice is gone and PDF modules remain',()=>{
 });
 test('CV introduction is separate from the long biography',()=>{
  assert.match(html['cv.html'],/Cybersecurity · Explainable AI · Quantum Computing · Finanza quantitativa/);
- assert.ok(!html['cv.html'].includes('<p>'+content.profile.intro+'</p>'));
+ assert.ok(html['cv.html'].includes('<p>'+content.profile.intro+'</p>'));
+ assert.match(html['cv.html'],/class="bio-full"><summary>Leggi il percorso completo/);
  assert.match(content.profile.personalInterests,/deidentificazione/);
 });
 test('selected editorial boilerplate is absent from public fields',()=>{

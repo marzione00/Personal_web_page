@@ -1,56 +1,42 @@
-# Ambiente Matrix — sistema corrente di Topological Manifolds
+# Atmosfera Matrix scientifica — v3.6
 
-## Spazio e gerarchia
+La variante scelta è «Formule». Un solo canvas decorativo occupa l’intero viewport: non esiste più il corridoio centrale vuoto, né lo spegnimento sotto i 1.000 pixel. La pagina rimane un sito statico multipagina con collegamenti HTML normali.
 
-Un solo canvas 2D visibile, con `aria-hidden`, `pointer-events:none` e due regioni di disegno. La larghezza deriva da `main .shell`: 16 px di rispetto separano il contenuto dai margini. Nessun effetto attraversa l’area centrale. La pioggia resta ai lati anche scorrendo sezioni con fondi opachi, senza modificare il layout o la fotografia.
+## Aspetto e leggibilità
 
-Le cascate hanno cifre da 6,5–7 CSS px e una trama densa, non file di simboli grandi. Le strisce sono precalcolate su una texture locale e fatte scorrere a velocità differenti. È un modello decorativo, non un flusso di dati reali.
+Tre livelli con caratteri di 10, 15 e 21 pixel (10, 13 e 18 su mobile) scorrono dall’alto verso il basso con velocità diverse. I simboli matematici hanno teste più luminose e scie graduali. Le texture sono create una volta per dimensione, tema o cambio del tipo di simboli e riutilizzate nei fotogrammi.
 
-## Formule
+Il canvas è dietro al contenuto, non riceve eventi e non viene letto dalle tecnologie assistive. Titoli, testi, fotografie e pulsanti restano davanti. Le zone con paragrafi e sottotitoli hanno un fondo attenuato, senza mascherare tutta la fascia centrale. La modalità chiara adatta il colore dei simboli; la stampa esclude tutti gli effetti.
 
-Catalogo di 120 relazioni in dodici famiglie: mechanics, electromagnetism, quantum, quantum-information, statistical, solid-state, probability, information, learning, algorithms, cryptography, quantitative. Ogni record contiene titolo e condizioni bilingui e un riferimento di studio. La famiglia quantitative comprende metodi quantitativi e costruzioni geometriche.
+Le equazioni provengono dalle 120 voci già verificate in `content/markdown/formule-ambiente.md`. Vengono selezionate soltanto espressioni complete che entrano nel viewport. Le famiglie sono selezionate per contesto: quantistica/informazione quantistica/crittografia nel corso Quantum; metodi quantitativi e geometria nell’atlante; apprendimento/informazione/fisica statistica/materia nella ricerca; probabilità/metodi quantitativi in Calculus. La homepage usa tutte le famiglie. Il catalogo accessibile conserva sempre tutte le condizioni, spiegazioni e fonti. Le equazioni decorative non rappresentano calcoli in corso o risultati della ricerca dell’autore.
 
-La selezione mescola le famiglie, con un mazzo senza ripetizione immediata; sono scelte solo formule che entrano completamente nella colonna. Il primo passaggio può comparire dopo circa 3,2 s, i successivi a intervalli di 10–17 s di animazione attiva; ogni formula svanisce lentamente in circa 9 s. Al massimo una per lato. Le espressioni lunghe restano consultabili nel catalogo, senza abbreviazioni imposte per ragioni di spazio.
+## Preferenze e prestazioni
 
-Il menu Preferenze apre un catalogo leggibile, filtrabile per famiglia, con formule, condizioni e fonti. I riferimenti sono materiale didattico esterno, non attestazioni di risultati del proprietario del sito. Il modulo non scarica quei riferimenti: si aprono soltanto con un clic esplicito.
+Il pannello Aspetto, suoni e musica offre Animate, Statiche e Disattivate, oltre alle intensità Leggera, Normale e Cinematografica. La preferenza di attenuazione abbassa l’opacità al 38% quando il corpo di un articolo o diario entra nell’area di lettura; è disattivabile. La casella Simboli e formule scientifiche commuta fra la variante scientifica e caratteri numerici senza equazioni. Le preferenze sono salvate nel browser, con un comportamento di riserva quando l’archiviazione non è disponibile.
 
-Attenzioni mantenute: evoluzione esponenziale per Hamiltoniana indipendente dal tempo; q misurato dal punto di Dirac; matrice dinamica normalizzata alle masse; relazioni di ensemble specificate; definizioni di entropia e base del logaritmo; RSA scolastico distinto da uno schema sicuro; LWE con riferimento FIPS 203; moto browniano geometrico come modello; superfici nodali distinte da superfici minime esatte.
+Il ciclo si interrompe con movimento ridotto, tab nascosta, dialogo aperto, modalità statica o spenta. In modalità statica e con movimento ridotto rimane visibile una composizione completa, comprese le formule; non si tratta di un canvas vuoto. Nessuna richiesta di rete è necessaria per lo sfondo.
 
-## Fonti e documentazione tecnica
+Sotto 700 pixel si riducono densità e risoluzione: 20 fps massimi, contro 24 su desktop. Il canvas principale non supera 6 milioni di pixel. Non è una certificazione delle prestazioni su tutti i dispositivi: sono comunque disponibili pausa e spegnimento.
 
-Ogni formula porta la sua fonte nel Markdown. I principali riferimenti di studio sono le lezioni di David Tong (Cambridge), IBM Quantum, Dive into Deep Learning, NIST/SEMATECH, MIT OpenCourseWare, Handbook of Applied Cryptography e la documentazione SHAP. Non sono riprodotti lunghi estratti di quelle opere: sono trascritte relazioni matematiche e condizioni nella notazione scelta per il sito.
+## Primo ingresso
 
-Riferimenti tecnici:
-- https://developer.chrome.com/docs/web-platform/view-transitions/cross-document
-- https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Best_practices
-- https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide
-- https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions
+La homepage presenta un dialogo a tutta schermata con una geometria orbitale, titolo e apertura luminosa. Si chiude dopo 2,2 secondi; il pulsante Entra nel sito e il tasto Esc lo chiudono subito. Una chiave di sessione ne evita la ripetizione. Link con ancora, movimento ridotto, cascata statica/spenta e transizioni disabilitate saltano l’introduzione. È riproducibile con Rivedi l’ingresso e disattivabile da Aspetto. Non è una barra di caricamento e non attende risorse remote.
 
-## Budget e sospensione
+## Cambio pagina
 
-Massimo 24 aggiornamenti al secondo, DPR massimo 1,5 e area raster limitata a circa 6 milioni di pixel. Il limite al numero di colonne cresce con lo spazio ma resta controllato (circa 180 complessive). Non vengono richiesti file multimediali o librerie di animazione.
+Le View Transitions native mantengono stabile l’intestazione. Il testo uscente si dissolve in 140 ms; quello entrante compare nei successivi 540 ms, con rivelazione verticale e un lieve avvicinamento. Una scansione verticale e un impulso di simboli di 720 ms accompagnano il passaggio. Il vecchio scorrimento orizzontale, che poteva sovrapporre i testi, è stato sostituito.
 
-Il ciclo RAF è annullato quando la scheda è nascosta, un dialogo è aperto, il visitatore sceglie una resa statica/spenta o è attiva la preferenza di movimento ridotto. Sotto 1000 CSS px e senza margini utilizzabili il canvas non viene disegnato; l’interfaccia e il catalogo restano accessibili. Queste soglie sono scelte progettuali, non certificazioni prestazionali.
+La navigazione multipagina non viene intercettata o ritardata. Nei browser senza View Transitions resta un ingresso breve del contenuto; senza JavaScript rimangono i normali collegamenti. L’anteprima autonoma usa la stessa transizione tramite il suo router locale. PDF, link esterni, download e ancore non vengono trasformati in cambi pagina animati.
 
-## Audio
+## File e verifica
 
-Suoni elettronici discreti e colonna sonora sono indipendenti e attivati soltanto su richiesta. I dettagli correnti sono in `MUSICA_RIPRODUCIBILE.md` e in `src/sound.js`; `storico/MANIFOLD_v3.0.md` documenta la versione precedente.
+- `src/matrix-rain.js`: composizione, formule, ciclo e impulso.
+- `src/ambient.css`: livelli, leggibilità, transizioni e dialoghi.
+- `src/header.css`: unica definizione dell’intestazione e scala dei livelli.
+- `src/cinema.mjs`, `src/cinema.js`, `src/cinema.css`: ingresso finito e schede geometriche.
+- `src/navigation.js`: attivazione delle transizioni senza bloccare i link.
+- `src/effects.js` e `src/effects-ui.mjs`: preferenze e catalogo IT/EN.
+- `tests/matrix-fullscreen.test.mjs`: regressioni del comportamento.
+- `docs/COLLAUDO_v3.6.md`: risultati e limiti della verifica di questa consegna.
 
-## Navigazione
-
-Il sito resta multipagina statico. Gli eventi di navigazione non vengono annullati e non viene introdotto un timeout prima di cambiare URL. Con View Transitions cross-document disponibile, il contenuto esce a sinistra ed entra da destra; la barra superiore ha un gruppo stabile. Durate: 300/420 ms. Una scansione tenue di 480 ms accompagna l’ingresso. Nessun effetto di lampeggio rapido.
-
-Nei browser senza supporto si usa un ingresso locale leggero di 280 ms dopo una navigazione interna riconosciuta, oppure la normale navigazione quando la preferenza è spenta. Link a PDF, download, siti esterni, ancore e mail non vengono intercettati. L’anteprima monofile usa `document.startViewTransition` sul cambio della sezione visibile.
-
-## Preferenze e accessibilità
-
-Controlli IT/EN, focus e dialoghi nativi, Esc, filtro di famiglia, persistenza opzionale locale. La preferenza di movimento ridotto ha priorità sulle transizioni e sull’avanzamento della pioggia. Lo sfondo non intercetta clic, non altera l’ordine di lettura e non produce annunci continui per i lettori di schermo. Formule e spiegazioni sono disponibili nel catalogo testuale anche se l’animazione è spenta.
-
-## File interessati
-
-`src/ambient-content.mjs`, `src/effects-ui.mjs`, `src/effects.js`, `src/matrix-rain.js`, `src/navigation.js`, `src/ambient.css`, `src/sound.js`; integrazione in `src/render.mjs` e `scripts/build.mjs`. La precedente implementazione Matrix è sostituita, non concatenata. Nessuna variazione alle immagini originali.
-
-
-## Direzione della cascata
-
-Le scie scendono dall’alto verso il basso, con testa luminosa sul bordo inferiore. La preferenza di movimento ridotto è prioritaria; il catalogo matematico resta disponibile anche senza animazione.
+I documenti in `docs/storico/` descrivono le versioni precedenti con le sole cascate laterali.

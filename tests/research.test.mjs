@@ -24,13 +24,13 @@ test('research distinguishes quantum interest and teaching design from completed
 });
 test('research themes and personal interests are searchable',()=>{
  const entries=searchEntries(loadContent(root));
- assert.ok(entries.some(e=>e.url==='ricerca.html#tema-calcolo-quantistico'));
+ assert.ok(entries.some(e=>e.url==='tema-calcolo-quantistico.html'));
  assert.ok(entries.some(e=>e.url==='cv.html#interessi-personali'));
 });
 test('research plain text cannot inject HTML',()=>{
  const data=loadContent(root);data.research.areas[0].overview='<script>window.evil=true</script>';
  data.research.areas[0].question='<img src=x onerror=alert(1)>';
- const html=renderPages(data).find(x=>x.file==='ricerca.html').body;
+ const html=renderPages(data).find(x=>x.file==='tema-'+data.research.areas[0].id+'.html').body;
  assert.ok(html.includes('&lt;script&gt;'));assert.ok(!html.includes('<script>window'));
  assert.ok(html.includes('&lt;img'));assert.ok(!html.includes('<img src=x'));
 });

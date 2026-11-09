@@ -41,8 +41,8 @@ test('sound module is opt-in, rate-limited, generates oscillators without extern
  assert.doesNotMatch(s,/fetch\(|\.mp3|\.wav|Audio\(/);
 });
 test('link-hover visual treatment is reversible, with reduced-motion and light-theme fallbacks',()=>{
- const c=source('visual.css');
- assert.match(c,/\.nav a:not\(\[aria-current=page\]\)::after/);
+ const c=source('visual.css')+source('header.css');
+ assert.match(c,/\.nav a::after/);
  assert.match(c,/\.18s ease/);
  assert.match(c,/\.reading-mode\{--hover-ink:/);
  assert.match(c,/@media\(prefers-reduced-motion:reduce\)/);

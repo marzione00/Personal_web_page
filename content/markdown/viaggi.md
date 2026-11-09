@@ -4,10 +4,10 @@
 Viaggi ed escursioni
 
 ## introduzione
-Un archivio personale di cammini, luoghi e incontri. I diari e gli album fotografici verranno pubblicati qui, ciascuno con il proprio racconto e le proprie immagini.
+Ai cammini, ai luoghi e agli incontri che accompagnano i miei viaggi dedico questa raccolta, nella quale ogni diario sarà affiancato da fotografie originali, affinché il racconto possa conservare, insieme all’itinerario, le circostanze e le impressioni attraverso cui un luogo entra nell’esperienza personale.
 
 ## nessunViaggio
-Non ci sono ancora diari pubblicati. La sezione è pronta ad accogliere itinerari, escursioni e album fotografici.
+La raccolta si aprirà con la pubblicazione del primo diario.
 
 ## nota
-Fotografie originali e testi personali. Ogni diario viene pubblicato soltanto dopo essere stato completato e approvato.
+I racconti e gli album fotografici seguiranno i singoli itinerari, permettendo di ritrovare nello stesso luogo le immagini e le esperienze cui si riferiscono.

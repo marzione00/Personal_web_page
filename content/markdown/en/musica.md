@@ -7,14 +7,14 @@ Local Coordinates
 An original sound environment for Topological Manifolds · 4 minutes 30 seconds.
 
 ## testo
-The composition unfolds through sustained chords, synthetic string-like tones and soft resonances. Low voices support a slow movement; upper voices introduce intervals and small motifs that transform without a dominant rhythmic pulse.
+The composition develops through sustained chords and synthetic string timbres, in which the lower parts support a slow movement while intervals and small motifs gradually change in the upper voices, allowing the density and duration of the resonances to suggest the passage of time.
 
-The piece was composed and synthesised for this site with AI assistance. It contains no external musical samples and does not reproduce themes from the Matrix score. Its timbres are synthetic; this is not an orchestral recording.
+The piece was composed and synthesised for this website with AI assistance, using original synthetic timbres throughout, without external musical samples or reproductions of themes from the Matrix soundtrack.
 
 ## ascolto
-Music is optional and independent of interface sound effects. The file is requested only after an explicit start. Preferences let you adjust the volume, pause and choose whether to repeat the piece.
+You can start the music from the player, adjust its volume, pause it or choose to repeat the piece, while retaining separate control of the interface sounds; the audio file loads only when you choose to listen.
 
-In the single-page offline preview, playback continues while you change views. On the multipage website, loading a new document interrupts audio: the listening position is retained for the session and can be resumed from the player. This keeps the website static without introducing a more complex application.
+In the single-page preview, playback continues as you move between sections, while on the multipage website a new document interrupts playback, retaining the position in the session so that you can resume from there.
 
 ## percorso
 0:00–1:00 · Opening: low pedal and harmonics.

@@ -1,0 +1,142 @@
+{
+  "version": "3.6",
+  "packageVersion": "3.6.0",
+  "brand": "Topological Manifolds",
+  "date": "2026-11-09",
+  "baseRepository": "https://github.com/marzione00/Personal_web_page",
+  "baseCommit": "8964fc96b08671089cfb5d3561acb311bb994599",
+  "basedOnPackage": "v3.5 + Quantum Lab",
+  "integration": "Quantum Lab / teaching-apps 1.0.0",
+  "activityLinks": 15,
+  "courseModules": 7,
+  "quantumLabVerifiedCommit": "275b07805da69af75ba6c2f64ea0ba99ae4144ea",
+  "matrixVariant": "Formule — full viewport; contextual families; three intensities; reading dimming",
+  "matrixLayers": 3,
+  "ambientFormulas": 120,
+  "opening": {
+    "durationMs": 2200,
+    "oncePerSession": true,
+    "skippable": true,
+    "replay": true,
+    "reducedMotionSkipped": true
+  },
+  "geometryViewer": {
+    "modes": [
+      "glow",
+      "surface",
+      "wire"
+    ],
+    "immersive": true,
+    "autoRotationWithPause": true,
+    "renderers": [
+      "WebGL",
+      "Canvas 2D fallback"
+    ],
+    "maximumCanvasDimensions": [
+      1400,
+      1100
+    ],
+    "softwareMinimumFrameIntervalMs": 67,
+    "maximumActiveViewers": 1,
+    "zoomRange": [
+      0.65,
+      2.4
+    ]
+  },
+  "sourceZipLayout": "repository root, no containing folder",
+  "unitTests": {
+    "passed": 237,
+    "failed": 0
+  },
+  "releaseBuild": true,
+  "previewBuild": true,
+  "publishedPages": 42,
+  "localLinks": 3814,
+  "imageReferences": 124,
+  "socialCards": 12,
+  "sharedCssBundle": true,
+  "sharedJsBundle": true,
+  "originalPhotographsIdentical": 5,
+  "existing3DModels": 24,
+  "new3DModels": 0,
+  "modelBinariesAndPreviewsIdentical": true,
+  "cvOriginalIncluded": true,
+  "cvBytes": 670385,
+  "cvSha256": "24e063b275dc3cbf8a2598c04d22f10d3254723e53652ce56130af7a42726177",
+  "publicAssetsUnchangedByteForByte": 91,
+  "modifiedPublicAssets": [
+    "public/assets/geometry-viewer.js"
+  ],
+  "totalPublicAssets": 92,
+  "sourceFilesMissingFromPreviousPackage": 0,
+  "sourceFiles": 458,
+  "addedSourceFiles": [
+    "docs/COLLAUDO_v3.6.md",
+    "docs/ESPERIENZA_v3.6.md",
+    "docs/anteprima-geometrie-v3.6.jpg",
+    "docs/anteprima-ingresso-v3.6.jpg",
+    "docs/anteprima-sezioni-v3.6.jpg",
+    "docs/storico/ESPERIENZA_v3.5_RELEASE_MANIFEST.json",
+    "src/cinema.css",
+    "src/cinema.js",
+    "src/cinema.mjs",
+    "src/geometry.css",
+    "tests/cinema-v36.test.mjs"
+  ],
+  "modifiedSourceFiles": [
+    "CHANGELOG.md",
+    "LEGGIMI_PRIMA_DI_CARICARE.md",
+    "README.md",
+    "RELEASE_MANIFEST.json",
+    "content/markdown/en/interfaccia.md",
+    "content/site.json",
+    "docs/AMBIENTE_MATRIX.md",
+    "package.json",
+    "public/assets/geometry-viewer.js",
+    "scripts/build.mjs",
+    "src/ambient.css",
+    "src/effects-ui.mjs",
+    "src/effects.js",
+    "src/experience.mjs",
+    "src/geometry-loader.js",
+    "src/geometry.mjs",
+    "src/i18n-client.js",
+    "src/navigation.js",
+    "src/render.mjs",
+    "src/visual.css",
+    "tests/geometry-explorer.test.mjs",
+    "tests/identity-v33.test.mjs"
+  ],
+  "browserValidation": {
+    "engine": "Chromium",
+    "desktop": true,
+    "responsiveWidths": [
+      320,
+      390,
+      768,
+      1024
+    ],
+    "actualViewportWidthsWithScrollbar": [
+      305,
+      375,
+      753,
+      1009
+    ],
+    "horizontalOverflowAtRest": false,
+    "modalCloseButtonPixels": 44,
+    "openingReplayAndSkip": true,
+    "openingPreference": true,
+    "immersiveAndStyles": true,
+    "dynamicEnglishControls": true,
+    "juliaSoftwareTexture": true,
+    "portableNavigationAndGeometry": true,
+    "WebGLAvailable": false,
+    "softwareRenderingObserved": true,
+    "physicalMobileDevices": false,
+    "SafariAndFirefox": false,
+    "report": "docs/COLLAUDO_v3.6.md"
+  },
+  "remoteDeployment": false,
+  "sistemiLabIncluded": false,
+  "historicalManifest": "docs/storico/ESPERIENZA_v3.5_RELEASE_MANIFEST.json"
+}

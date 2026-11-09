@@ -20,3 +20,9 @@ The fractal is planar. The viewer allows its plane to be oriented in space witho
 
 ## fonti
 [Deterministic algorithm included in the project](geometrie.html#julia)
+
+## osservazione
+Zoom in to observe colour changes along the boundaries and compare nearby regions with different escape times, remembering that zoom enlarges a representation computed with a finite number of iterations and the available resolution.
+
+## lettura
+At each iteration, square complex number z and add c, equal to minus zero point seven four five four three plus zero point one one three zero one times the imaginary unit.

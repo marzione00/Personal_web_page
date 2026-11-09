@@ -15,7 +15,7 @@ Topological Modelling of Nanostructures and Extended Systems · Springer, pp. 22
 La topologia dei nanonastri di carbonio con torsione di Möbius
 
 ## plainSummary
-Un nastro chiuso nella forma di Möbius modifica le connessioni della struttura: gli indici topologici permettono di quantificare questa differenza.
+La chiusura di un nanonastro nella forma di Möbius modifica le connessioni della struttura, che il lavoro descrive mediante indici topologici attraverso i quali quantificare le differenze introdotte dalla torsione e confrontarne l’organizzazione.
 
 ## explanation
 Il capitolo confronta modelli di nanonastri di carbonio con chiusura ordinaria e con una chiusura di tipo Möbius. Calcola invarianti topologici e ne studia il comportamento al crescere del sistema, esaminando compattezza e collegamenti fra parti lontane della rete. Queste quantità sono discusse in relazione alla stabilità delle strutture considerate. Il lavoro riguarda l’analisi matematica dei modelli, nella quale la torsione cambia la topologia del reticolo.

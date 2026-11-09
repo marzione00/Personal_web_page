@@ -18,7 +18,7 @@ Quantum algorithms, computational resources and implications for cryptography.
 Which problems offer an advantage in the quantum model of computation?
 
 ## overview
-Quantum computing is an area of study encompassing algorithms, complexity and applications to cryptography. In Quantum and Post-Quantum Computing (UniMI, 2026/2027), the teaching materials introduce qubits, circuits and interference before addressing Deutsch–Jozsa, Bernstein–Vazirani, Simon, Shor, Grover and quantum communication protocols.
+The study of quantum computing encompasses algorithms, complexity and applications to cryptography, which the University of Milan’s 2026/2027 Quantum and Post-Quantum Computing materials approach through qubits, circuits and interference, leading to the Deutsch–Jozsa, Bernstein–Vazirani, Simon, Shor and Grover algorithms and quantum communication protocols.
 
 ## approach
 Interest in optimisation and applications to machine learning connects with teaching quantum algorithms. The seven available modules cover mathematical foundations, circuit designs and the computational consequences of the algorithms studied.
@@ -29,4 +29,3 @@ Interest in optimisation and applications to machine learning connects with teac
 - Post-quantum cryptography
 
 ## activities
-

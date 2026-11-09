@@ -7,19 +7,19 @@ Ricerca · Didattica · Scrittura
 Cybersecurity · Explainable AI · Quantum Computing · Finanza quantitativa
 
 ## ricercaAttuale
-La sua attività scientifica si concentra principalmente sulla sicurezza informatica, sull’intelligenza artificiale, con particolare attenzione alla XAI, sul quantum computing e sulla finanza quantitativa.
+Mi occupo di sicurezza informatica e intelligenza artificiale spiegabile, attraverso le quali proseguo un’indagine sul rapporto fra dati, modelli e conoscenza che ha preso forma durante gli studi di fisica computazionale e che accompagna, insieme agli interessi per il calcolo quantistico e la finanza quantitativa, la mia attività di ricerca e di insegnamento.
 
 ## formazione
-Il suo percorso scientifico si fonda su una formazione in fisica computazionale, dedicata allo studio delle proprietà elettroniche, ottiche e vibrazionali delle nanostrutture di carbonio, con particolare riguardo alle relazioni fra geometria, topologia e proprietà fisiche dei materiali.
+La fisica computazionale mi ha portato a studiare le proprietà elettroniche, ottiche e vibrazionali delle nanostrutture di carbonio, nelle quali la disposizione dei legami e la geometria delle superfici consentono di interrogare il rapporto fra la struttura di un materiale e il comportamento che emerge dai calcoli e dalle osservazioni sperimentali.
 
 ## praticaCorporea
-Nello yoga e nell’arrampicata ritrova una diversa possibilità di esplorare le forme e le relazioni geometriche conosciute durante gli studi scientifici. Attraverso le posture, gli equilibri e le traiettorie del movimento, l’astrazione matematica incontra l’esperienza corporea, dando luogo a un’indagine personale sul rapporto fra forma, spazio e percezione, che si intreccia con il suo interesse per l’epistemologia.
+Nello yoga e nell’arrampicata ritrovo, attraverso la distribuzione del peso, gli equilibri e le traiettorie del movimento, alcune delle relazioni geometriche incontrate negli studi, mentre la distanza fra il gesto immaginato e quello che riesco a compiere alimenta una riflessione personale su come le aspettative orientino la percezione e il giudizio.
 
 ## titoloPercorso
-Dalla fisica computazionale all’esperienza corporea
+Geometria, osservazione ed esperienza
 
 ## etichettaEpigrafi
-Riferimenti culturali
+Letture e riferimenti
 
 ## titoloEpigrafi
 Conoscenza, realtà, esperienza

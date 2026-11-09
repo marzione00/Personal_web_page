@@ -19,3 +19,9 @@ Le coordinate descrivono un reticolo ideale in unità della distanza tra primi v
 
 ## fonti
 [Pubblicazioni sulle nanostrutture](ricerca.html#bibliografia)
+
+## osservazione
+Segui una fila di celle esagonali fino al bordo del nastro, osservando come la rete venga interrotta dal limite della struttura e come la rotazione permetta di distinguere la disposizione dei nodi dalle sovrapposizioni che compaiono nella proiezione sullo schermo.
+
+## lettura
+Ogni posizione è la somma di multipli interi dei due vettori di base e dello spostamento del sottoreticolo A oppure B; le componenti dei vettori sono riportate nella formula.

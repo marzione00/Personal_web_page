@@ -15,7 +15,7 @@ The Mathematics and Topology of Fullerenes · Springer, pp. 217–247
 La geometria delle schwarziti e le proprietà del carbonio poroso
 
 ## plainSummary
-Il capitolo ricostruisce il legame fra reti di carbonio a curvatura negativa, condizioni di crescita e proprietà fisiche.
+Il capitolo ricostruisce il rapporto fra le reti di carbonio a curvatura negativa, le condizioni nelle quali possono crescere e le loro proprietà fisiche, esaminando come la geometria delle schwarziti contribuisca alla descrizione del carbonio poroso.
 
 ## explanation
 La rassegna considera le schwarziti disordinate, simili a reti spugnose, e le strutture periodiche, mettendo in relazione topologia, stabilità e possibilità di formazione. Discute inoltre proprietà elettroniche, interazioni fra elettroni e vibrazioni e simulazioni della dinamica atomica nelle quali si segue l’evoluzione della rete. Il contributo fornisce una lettura d’insieme della fisica di queste strutture nel quadro degli studi disponibili all’epoca della pubblicazione.

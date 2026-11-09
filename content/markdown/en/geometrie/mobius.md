@@ -21,3 +21,9 @@ The formula parametrises a Möbius strip. The connection with bodily movement is
 
 ## fonti
 [Reproducible parametrisation included in the project](geometrie.html#mobius)
+
+## osservazione
+Choose a section of the edge and follow it while rotating the strip, paying attention to the twist through which the surface changes orientation in space and to the continuity revealed as hidden parts come into view.
+
+## lettura
+Parameter u makes a full turn while v ranges from minus one to one; the width, scaled by zero point three five, makes a half turn around the central circle.

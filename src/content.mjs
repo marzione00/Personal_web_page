@@ -1,3 +1,5 @@
+import {loadPaths} from './paths.mjs';
+import {loadStudyPaths} from './experience.mjs';
 import {loadIdentityPages} from './identity.mjs';
 import {loadTravels, readTravelIndex} from './travel.mjs';
 import {localiseData} from './i18n.mjs';
@@ -15,7 +17,7 @@ const EDITABLE=Object.freeze({
  profile:['intro','biography','personalInterests','headline'],
  research:['title','subtitle','introduction','connectionsTitle','connections'],
  areas:['title','shortTitle','scope','summary','question','overview','approach','methods','activities'],
- courses:['title','summary'],
+ courses:['title','summary','description','learningPath'],
  lectures:['title','summary','topics','body'],
  publications:['title','authors','where','plainTitle','plainSummary','explanation','bibliographicNote'],
  posts:['title','subtitle','excerpt','category','geometria']
@@ -57,7 +59,8 @@ function loadEpigraphs(root){
   const q=block.split('\n').filter(s=>/^>\s?/.test(s)).map(s=>s.replace(/^>\s?/,''));
   const source=block.split('\n').find(s=>/^Fonte:\s*/.test(s));
   if(!q.length||!source)throw new Error('Epigrafe priva di testo o fonte: '+id);
-  return{id,author:authors[id],quote:q.join(' ').trim(),source:source.replace(/^Fonte:\s*/, '').trim()};
+  const note=block.split('\n').find(s=>/^Nota: /.test(s))?.slice(6)||'';
+  return{id,author:authors[id],quote:q.join(' ').trim(),source:source.replace(/^Fonte:\s*/, '').trim(),note};
  });
 }
 function parseArticleFrontmatter(file){
@@ -161,5 +164,5 @@ export function loadContent(root,{preview=false,language='it'}={}){
  const photoBytes=fs.readFileSync(path.join(root,'public',safeMedia(profile.homepagePhoto.file)));
  if(createHash('sha256').update(photoBytes).digest('hex')!==profile.homepagePhoto.sha256)throw new Error('La fotografia non corrisponde al file originale approvato.');
  for(const post of posts)if(post.geometria&&!geometry.byId[post.geometria])throw Error('Geometria articolo inesistente: '+post.geometria);
- return localiseData(root,{identity:loadIdentityPages(root,language),geometry,profile,site,research,home,epigraphs,courses,posts,lectures,publications:publications.sort((a,b)=>b.year.localeCompare(a.year)),travels,travelIndex,preview},language);
+ return localiseData(root,{...loadPaths(root),studyPaths:loadStudyPaths(root),identity:loadIdentityPages(root,language),geometry,profile,site,research,home,epigraphs,courses,posts,lectures,publications:publications.sort((a,b)=>b.year.localeCompare(a.year)),travels,travelIndex,preview},language);
 }

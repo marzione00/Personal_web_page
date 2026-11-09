@@ -1,0 +1,1 @@
+Attraverso le simulazioni di Quantum Lab puoi affiancare allo studio dei sette moduli un’esplorazione dei fenomeni, dei circuiti e dei protocolli, osservando come le rappresentazioni e i risultati cambino al variare dei parametri disponibili e tornando ai materiali del corso per interpretare ciò che hai osservato.

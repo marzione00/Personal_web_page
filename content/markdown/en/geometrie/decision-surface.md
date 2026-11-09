@@ -20,3 +20,9 @@ This is an analytical example, not a model trained on data. The displayed height
 
 ## fonti
 [Research on interpretability](ricerca.html)
+
+## osservazione
+Follow the highlighted curve as you change viewpoint, observing how it crosses a surface whose height varies with both coordinates, so that you can distinguish the value associated with each pair of variables from the threshold separating the classes.
+
+## lettura
+Probability is one divided by one plus the exponential of the negative of one point two x minus zero point five y plus zero point four five x y; the displayed boundary corresponds to probability one half.

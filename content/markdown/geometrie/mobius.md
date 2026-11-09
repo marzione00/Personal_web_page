@@ -19,3 +19,9 @@ La formula parametrizza un nastro di Möbius. Il richiamo al movimento corporeo 
 
 ## fonti
 [Parametrizzazione riproducibile inclusa nel progetto](geometrie.html#mobius)
+
+## osservazione
+Scegli un tratto del bordo e seguilo mentre ruoti il nastro, prestando attenzione alla torsione attraverso cui la superficie cambia orientamento nello spazio e alla continuità che puoi ricostruire quando le parti nascoste tornano visibili.
+
+## lettura
+Il parametro u percorre un giro completo, mentre v varia fra meno uno e uno; la larghezza, scalata di zero virgola trentacinque, ruota di mezzo giro attorno alla circonferenza centrale.

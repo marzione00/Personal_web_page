@@ -18,3 +18,9 @@ Sono visualizzati due livelli, corrispondenti a 400 cubi. Le proprietà del limi
 
 ## fonti
 [Costruzione ricorsiva inclusa nel progetto](geometrie.html#menger)
+
+## osservazione
+Guarda il cubo attraverso una delle aperture e cambia lentamente punto di vista, osservando come le cavità maggiori lascino riconoscere aperture più piccole e come questa organizzazione si ripeta nei due livelli di costruzione rappresentati.
+
+## lettura
+L’insieme è l’unione di venti copie ridotte a un terzo della scala; la dimensione autosimilare è logaritmo di venti diviso logaritmo di tre.

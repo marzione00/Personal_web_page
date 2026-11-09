@@ -1,0 +1,26 @@
+{
+  "sourceSha256": "c848f8613827ad1a38443e61ccfe4ca9ef78ea9a93111055c239ac389a763e55",
+  "images": [
+    {
+      "file": "media/images/derived/homepage-480.webp",
+      "width": 480,
+      "height": 772,
+      "bytes": 75390,
+      "sha256": "a9c77cccdf84cf4f5217a8ebf54dff825f656dfbe63661310f6e40eec0647121"
+    },
+    {
+      "file": "media/images/derived/homepage-768.webp",
+      "width": 768,
+      "height": 1235,
+      "bytes": 148962,
+      "sha256": "08f5538ad457a5436561bcc3b28e46d1042552362712fe1782a562fc546e7cd3"
+    },
+    {
+      "file": "media/images/derived/homepage-1274.webp",
+      "width": 1274,
+      "height": 2048,
+      "bytes": 273770,
+      "sha256": "0de2db322000dcd05711cc680f79965e062440ec3d272c30ce80e218c9dcedac"
+    }
+  ]
+}

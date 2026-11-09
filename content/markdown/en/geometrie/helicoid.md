@@ -19,3 +19,9 @@ This is a finite portion of a parametric helicoid. Rotating the viewer moves the
 
 ## fonti
 [Reproducible parametrisation included in the project](geometrie.html#helicoid)
+
+## osservazione
+Follow the surface’s edge as you rotate it, observing how movement along the axis accompanies a change in orientation, then compare this continuity with the straight segments from which the shape is constructed.
+
+## lettura
+The first two coordinates are u cosine v and u sine v, while height is zero point two three v, coupling rotation with vertical translation.

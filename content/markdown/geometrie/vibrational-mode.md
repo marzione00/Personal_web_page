@@ -17,3 +17,9 @@ Il campo è sintetico. Non è un modo normale calcolato dalla matrice dinamica, 
 
 ## fonti
 [Pubblicazioni sulle proprietà vibrazionali](ricerca.html#bibliografia)
+
+## osservazione
+Confronta il nastro deformato con la sua disposizione reticolare, osservando come gli spostamenti fuori dal piano cambino l’aspetto della superficie mentre i collegamenti fra i nodi restano riconoscibili, quindi usa la vista laterale per seguire l’andamento della deformazione.
+
+## lettura
+Lo spostamento lungo z è uno virgola uno per il seno di zero virgola sette x, moltiplicato per il coseno di zero virgola quarantadue y.

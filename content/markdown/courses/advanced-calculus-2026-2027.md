@@ -6,4 +6,4 @@
 Advanced Calculus and Stochastic Processes
 
 ## summary
-Docenza a contratto in Advanced Calculus and Stochastic Processes, attiva nell’a.a. 2026/2027.
+La scheda di Advanced Calculus and Stochastic Processes per l’anno accademico 2026/2027 raccoglie i riferimenti dell’insegnamento presso l’Università Cattolica del Sacro Cuore, attraverso i quali è possibile risalire alla pagina istituzionale e distinguere le informazioni del corso da quelle delle altre annualità.

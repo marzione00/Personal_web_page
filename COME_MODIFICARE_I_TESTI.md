@@ -1,14 +1,15 @@
-# Topological Manifolds v3.3 — aggiornare i contenuti
+# Topological Manifolds v3.7 — aggiornare i contenuti
 
 ## CV originale
-Per questa consegna aggiungi il tuo PDF come `CV.pdf` nella radice del repository. L'importatore incluso lo copia senza ricodificarlo e aggiorna il collegamento IT/EN. In futuro sostituisci quel PDF e conferma il commit.
+Il PDF originale è già incluso come `CV.pdf` nella radice del repository. L'importatore incluso lo copia senza ricodificarlo e aggiorna il collegamento IT/EN. In futuro sostituisci quel PDF e conferma il commit.
 
-## Testi modificati in questa release
-- Apertura articolo: `content/markdown/posts/colpire-i-nervi-del-sistema.md`, e versione inglese sotto `content/markdown/en/posts/`.
-- Estratto: `content/markdown/post-details/colpire-i-nervi-del-sistema.md`, e corrispondente inglese.
-- Titolo citazioni: `## titoloEpigrafi` nei due `homepage.md`.
-- Citazioni complete: i due `epigrafi.md`, invariati.
+## Testi modificati nella v3.7
 
+Home, profilo, ricerca, aree scientifiche, sintesi di pubblicazioni, corsi, Quantum Lab, estratto del blog, viaggi e musica sono aggiornati nei rispettivi Markdown italiani e inglesi. Le 24 geometrie hanno un nuovo campo `## osservazione`; le epigrafi conservano il testo integrale e aggiungono una riga `Nota:`.
+
+## Registro editoriale
+
+Per i testi italiani usa periodi ampi, nei quali le subordinate chiariscano circostanze, cause, conseguenze e relazioni fra le idee. Separa i nuclei del discorso in paragrafi. La prima persona appartiene al racconto autobiografico e alle riflessioni personali; la descrizione scientifica richiede precisione sui risultati e sui limiti. Evita le formule stereotipate indicate dall’autore, comprese «non… ma…», «non solo/non soltanto», «il punto della questione» e «prologo». Mantieni brevi i titoli e i comandi. Le citazioni sono trascrizioni integrali; le negazioni necessarie a esprimere un limite tecnico vanno conservate.
 
 **La fonte dei testi è `content/markdown/`.** Non modificare `src/`, `dist/`, `preview/`, i file JavaScript o le copie `docs/BIOGRAFIA.md` per correggere un testo pubblico.
 
@@ -19,8 +20,8 @@ Apri su GitHub il file Markdown desiderato, clicca sulla matita, modifica il tes
 | Che cosa vuoi modificare | File Markdown |
 |---|---|
 | Settori scientifici e tre paragrafi della Home | `content/markdown/homepage.md` |
-| Le tre epigrafi (testo integrale e fonte) | `content/markdown/epigrafi.md` |
-| Formule, spiegazioni e fonti di una geometria | `content/markdown/geometrie/<id>.md` |
+| Le tre epigrafi (testo integrale, fonte e nota) | `content/markdown/epigrafi.md` |
+| Osservazione, formule, spiegazioni e fonti di una geometria | `content/markdown/geometrie/<id>.md` |
 | Biografia, insegnanti, yoga e presentazione breve | `content/markdown/profilo.md` |
 | Presentazione generale della ricerca | `content/markdown/ricerca.md` |
 | Singolo tema di ricerca | `content/markdown/aree-ricerca/<id>.md` |
@@ -66,7 +67,7 @@ Per leggere una singola modifica online, attendi il risultato del workflow nella
 
 ## Geometrie interattive
 
-Ogni modello ha un Markdown in `content/markdown/geometrie/`. Conserva le sezioni `## titolo`, `## tema`, `## formula`, `## spiegazione`, `## limiti`, `## fonti`; modifica il testo sottostante. La build genera sia la finestra sia la scheda nell’atlante. Le formule sono testo matematico Unicode leggibile: non richiedono MathJax o JavaScript. Mantieni coerente la formula con il modello; cambiare la formula non modifica la mesh.
+Ogni modello ha un Markdown in `content/markdown/geometrie/`. Conserva le sezioni `## titolo`, `## tema`, `## osservazione`, `## formula`, `## spiegazione`, `## limiti`, `## fonti`; modifica il testo sottostante. La build genera sia la finestra sia la scheda nell’atlante. Le formule sono testo matematico Unicode leggibile: non richiedono MathJax o JavaScript. Mantieni coerente la formula con il modello; cambiare la formula non modifica la mesh.
 
 Per un articolo nuovo puoi aggiungere `geometry: program-flow` nell’intestazione del Markdown, scegliendo uno degli ID di `docs/GEOMETRIE.md`. Per l’articolo già presente usa `## geometria` in `content/markdown/post-details/colpire-i-nervi-del-sistema.md`. Il campo è facoltativo: senza una scelta esplicita il post non riceve una figura arbitraria. Non assegnare lo stesso soggetto a più articoli della stessa pagina di archivio.
 
@@ -108,3 +109,24 @@ Le preferenze di animazione, formule e transizioni si controllano dall’icona d
 - `content/markdown/musica.md` e `en/musica.md`: presentazione del brano e ascolto.
 
 L’MP3 è in `public/audio/`; il manifest ne verifica l’integrità. La modifica di una spiegazione non cambia la composizione o le figure. Le preferenze audio e la direzione delle cascate non richiedono interventi quando si aggiorna un testo.
+
+## Biografia, citazioni e corso quantistico
+
+Nel profilo, `## intro` appare subito nella sezione Biografia; `## biography` fornisce il testo del percorso completo espandibile. I paragrafi devono essere separati da una riga vuota.
+
+In `epigrafi.md`, conserva la citazione nelle righe che iniziano con `>` e la fonte dopo `Fonte:`; scrivi il commento personale dopo `Nota:`, fuori dalle righe citate. Il commento rimane visibile mentre il lettore sceglie se aprire il passo integrale.
+
+Nel Markdown del corso quantistico, `## description` descrive il percorso e `## learningPath` introduce la relazione fra dispense e attività. I collegamenti ai sette moduli e alle quindici attività restano metadati separati. Aggiorna anche i file omologhi sotto `content/markdown/en/`.
+
+Le etichette e le brevi introduzioni dell’interfaccia sono definite in `src/render.mjs` e `src/experience.mjs`, con traduzioni in `content/markdown/en/interfaccia.md`; questi file richiedono un intervento sul generatore. Per sincronizzare le copie editoriali di consultazione esegui `npm run sync:editorial`, quindi `npm run check:editorial`.
+
+## Campi e percorsi della v3.8
+
+- `content/editorial-selection.json`: pubblicazioni in evidenza e motivazione IT/EN; riusa gli identificativi esistenti.
+- `content/study-guide.json`: destinazioni dei segnalibri originali, pagine PDF, tracce di studio e preparazione suggerita IT/EN. Dopo una sostituzione dei PDF, verificare nuovamente pagine, titoli e SHA-256.
+- `content/study-paths.json`: attività del laboratorio e pagina di partenza nelle slide.
+- `content/ui.json`: nuove etichette con chiavi stabili IT/EN; il catalogo storico `interfaccia.md` resta per l’interfaccia precedente.
+- `lettura` nei Markdown delle geometrie: lettura verbale della relazione, separata dalla formula scientifica originale.
+- Le sette schede di ricerca sono generate dagli stessi Markdown delle aree: evitare copie del testo in altre cartelle.
+
+Le traduzioni dei campi presenti nel corrispondente Markdown italiano sono richieste dal generatore; un articolo nuovo senza versione inglese conserva l’avviso esplicito già previsto. Eseguire `npm run sync:editorial` quando si cambiano biografia o ricerca.

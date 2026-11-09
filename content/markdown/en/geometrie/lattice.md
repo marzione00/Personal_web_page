@@ -19,3 +19,9 @@ The model has three dimensions and finitely many points. It does not represent t
 
 ## fonti
 [NIST — ML-KEM](https://www.nist.gov/publications/module-lattice-based-key-encapsulation-mechanism-standard)
+
+## osservazione
+Identify the three highlighted vectors and follow the points arranged along their directions, rotating the figure to see how integer combinations of the same vectors describe the lattice even when the projection makes some elements overlap.
+
+## lettura
+The lattice is the set of all combinations of the three basis vectors with integer coefficients.

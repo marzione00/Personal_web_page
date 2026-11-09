@@ -1,0 +1,163 @@
+{
+  "schemaVersion": 1,
+  "verifiedRepository": "https://github.com/marzione00/QuantumLab_Public",
+  "verifiedCommit": "275b07805da69af75ba6c2f64ea0ba99ae4144ea",
+  "verifiedDate": "2026-11-09",
+  "modules": [
+    {
+      "module": 1,
+      "activities": [
+        {
+          "slug": "onde",
+          "title": {
+            "it": "Sovrapposizione e fase relativa",
+            "en": "Superposition and relative phase"
+          },
+          "page": 96
+        },
+        {
+          "slug": "fenditure",
+          "title": {
+            "it": "Dai singoli arrivi alla distribuzione",
+            "en": "From individual arrivals to a distribution"
+          },
+          "page": 129
+        }
+      ]
+    },
+    {
+      "module": 2,
+      "activities": [
+        {
+          "slug": "complessi",
+          "title": {
+            "it": "Componenti, modulo e fase",
+            "en": "Components, magnitude and phase"
+          },
+          "page": 11
+        },
+        {
+          "slug": "born",
+          "title": {
+            "it": "Calcolare una misura proiettiva",
+            "en": "Calculate a projective measurement"
+          },
+          "page": 396
+        }
+      ]
+    },
+    {
+      "module": 3,
+      "activities": [
+        {
+          "slug": "fase-guidata",
+          "title": {
+            "it": "Quando una fase diventa osservabile",
+            "en": "When a phase becomes observable"
+          },
+          "page": 36
+        },
+        {
+          "slug": "deutsch-jozsa",
+          "title": {
+            "it": "Deutsch–Jozsa",
+            "en": "Deutsch–Jozsa"
+          },
+          "page": 119
+        }
+      ]
+    },
+    {
+      "module": 4,
+      "activities": [
+        {
+          "slug": "bernstein-vazirani",
+          "title": {
+            "it": "Bernstein–Vazirani",
+            "en": "Bernstein–Vazirani"
+          },
+          "page": 3
+        },
+        {
+          "slug": "simon",
+          "title": {
+            "it": "Simon e le equazioni binarie",
+            "en": "Simon and binary equations"
+          },
+          "page": 60
+        }
+      ]
+    },
+    {
+      "module": 5,
+      "activities": [
+        {
+          "slug": "rsa-messaggio",
+          "title": {
+            "it": "Dal periodo del cifrato al messaggio",
+            "en": "From ciphertext periodicity to the message"
+          },
+          "page": 115
+        },
+        {
+          "slug": "shor-15",
+          "title": {
+            "it": "Shor: fattorizzare 15",
+            "en": "Shor: factoring 15"
+          },
+          "page": 4
+        }
+      ]
+    },
+    {
+      "module": 6,
+      "activities": [
+        {
+          "slug": "grover-guidato",
+          "title": {
+            "it": "Perché fermarsi al momento giusto",
+            "en": "Why stopping at the right time matters"
+          },
+          "page": 123
+        },
+        {
+          "slug": "amplificazione",
+          "title": {
+            "it": "Amplificare una preparazione assegnata",
+            "en": "Amplify a given state preparation"
+          },
+          "page": 210
+        }
+      ]
+    },
+    {
+      "module": 7,
+      "activities": [
+        {
+          "slug": "bb84",
+          "title": {
+            "it": "Dai segnali a una chiave candidata",
+            "en": "From signals to a candidate key"
+          },
+          "page": 10
+        },
+        {
+          "slug": "superdensa",
+          "title": {
+            "it": "Codifica superdensa",
+            "en": "Superdense coding"
+          },
+          "page": 46
+        },
+        {
+          "slug": "correzione",
+          "title": {
+            "it": "Leggere una sindrome",
+            "en": "Read an error syndrome"
+          },
+          "page": 57
+        }
+      ]
+    }
+  ]
+}

@@ -16,10 +16,6 @@ export function musicControls(data){
  const en=data.language==='en';
  return `<section class="music-panel" aria-labelledby="music-panel-title"><span class="label">${en?'Original soundtrack · 4:30':'Colonna sonora originale · 4:30'}</span><h3 id="music-panel-title">Local Coordinates</h3><div class="music-actions"><button type="button" class="button" data-music-play aria-pressed="false">${en?'Play':'Ascolta'}</button><button type="button" class="button" data-music-reset>${en?'Restart':'Ricomincia'}</button><output data-music-time aria-label="${en?'Playback position':'Posizione di ascolto'}">0:00 / 4:30</output></div><label class="music-volume">${en?'Music volume':'Volume musica'}<input type="range" min="0" max="60" step="1" value="18" data-music-volume aria-label="${en?'Music volume':'Volume musica'}"><output data-music-volume-value>18%</output></label><label class="effects-check"><input type="checkbox" data-music-loop checked>${en?'Repeat the piece':'Ripeti il brano'}</label><p data-music-status role="status" class="small muted">${en?'The audio loads only when you press Play.':'L’audio si carica soltanto premendo Ascolta.'}</p><a class="text-link" href="musica.html">${en?'About the composition':'La composizione'} ↗</a></section>`;
 }
-export function identityHome(data){
- const en=data.language==='en',s=data.identity.manifold;
- return `<section class="section identity-note"><div class="shell identity-note-grid"><div><span class="label">Topological Manifolds</span><h2>${en?'The name':'Il nome'}</h2></div><div><p>${e(s.richiamo)}</p><a class="text-link" href="manifold.html">${en?'Meaning and geometric examples':'Significato ed esempi geometrici'} ↗</a></div></div></section>`;
-}
 export function identityPages(data){
  const en=data.language==='en',d=data.identity;
  const head=s=>`<div class="page-head"><div class="shell"><nav class="breadcrumb" aria-label="${en?'Breadcrumb':'Percorso'}"><a href="index.html">Topological Manifolds</a><span aria-hidden="true">/</span><span>${e(s.titolo)}</span></nav><h1>${e(s.titolo)}<span class="dot">.</span></h1><p class="lead">${e(s.sottotitolo)}</p></div></div>`;

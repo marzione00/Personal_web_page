@@ -20,3 +20,9 @@ The series is a synthetic sum of sinusoids. The first formula generates the curv
 
 ## fonti
 [Richman and Moorman, 2000](https://pubmed.ncbi.nlm.nih.gov/10843903/)
+
+## osservazione
+Follow the curve and compare stretches that return close to one another with those that diverge, keeping in mind that each point combines three values from the same time series, separated by a fixed delay.
+
+## lettura
+The vector at time t collects three series values separated by six samples; sample entropy is the negative natural logarithm of the ratio A over B, defined for embedding dimension m and tolerance r.

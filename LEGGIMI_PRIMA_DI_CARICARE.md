@@ -1,16 +1,15 @@
-# Topological Manifolds v3.3 — aggiornamento
+# Pacchetto GitHub completo — Topological Manifolds v3.8 — Revisione completa
 
-**Nuovo nome al plurale.** È la sola denominazione visibile in italiano e inglese; i tre passi della homepage conservano le traduzioni redazionali italiane e i testi inglesi già approvati. Il repository e gli URL non cambiano.
+1. Conserva una copia della repository attuale. Questo ZIP parte dal commit `8964fc96b08671089cfb5d3561acb311bb994599`; eventuali modifiche successive vanno confrontate prima di sostituire i file.
+2. Estrai lo ZIP. Nella radice trovi subito `package.json`, `README.md`, `CV.pdf`, `src/`, `content/`, `public/` e `.github/`.
+3. Copia il contenuto estratto nella radice di `marzione00/Personal_web_page`, includendo i file e le cartelle nascosti. Non caricare una cartella contenitrice né il solo ZIP.
+4. Il CV originale della repository è già incluso. Non occorre aggiungere un altro PDF. Il workflow verifica la copia pubblica byte per byte.
+5. Mantieni **Settings → Pages → Source: GitHub Actions**, `SITE_URL=https://marzione00.github.io/Personal_web_page/` ed `ENABLE_DEPLOY=true`.
+6. Controlla i testi italiani e inglesi, il comando **Approfondisci il percorso**, i passi citati espandibili e la guida **Osserva la figura** nelle schede geometriche. Verifica anche l’ingresso iniziale e il pulsante Rivedi l’ingresso, le schede delle sezioni, le tre visualizzazioni delle geometrie e Vista immersiva / Mostra spiegazione. Aspetto consente di disabilitare l’ingresso; il movimento ridotto lo esclude automaticamente.
+7. Dopo il commit e il completamento del workflow verifica la cascata a tutta schermata su desktop e mobile, i controlli **Aspetto → intensità / animazione / attenuazione in lettura**, **Didattica → Quantum Lab**, l'apertura del laboratorio, il ritorno alla Didattica e la ricerca in entrambe le lingue.
 
-1. Conserva una copia del repository e integra le eventuali tue modifiche editoriali successive alla v3.2.
-2. Estrai lo ZIP e caricane il contenuto nella radice del repository, inclusa `.github`.
-3. **Aggiungi il PDF originale del tuo CV come `CV.pdf` nella stessa radice**, accanto a `package.json`. Il PDF non è nello ZIP: il trasferimento dell'allegato non è riuscito. Non è stata inserita una ricostruzione.
-4. Conferma il commit su `main`. Il workflow verifica i file, importa il CV byte per byte, esegue test/build e pubblica se `ENABLE_DEPLOY=true`.
-5. Dopo il deploy prova Apri/Scarica CV in entrambe le lingue, l'apertura dell'articolo, il titolo delle citazioni e un modello 3D.
+L'archivio contiene tutti i sorgenti e i materiali del portale aggiornato. La build viene generata da GitHub Actions. Quantum Lab mantiene la propria repository; SistemiLab resta escluso. Nessuna modifica è stata pubblicata automaticamente durante la preparazione dello ZIP.
 
-La copia pubblica sarà `public/media/docs/CV_Marzio_De_Corato.pdf`; il vecchio CV ricostruito viene escluso. Senza originale, il workflow si arresta invece di pubblicare un documento sbagliato. Puoi usare anche `CV(1).pdf`, ma non lasciare due PDF diversi nella radice.
+I controlli eseguiti sono documentati in `docs/REVISIONE_COMPLETA_v3.8.md` e `docs/COLLAUDO_QUANTUM_LAB.md`; il manifest della consegna è `RELEASE_MANIFEST.json`.
 
-Le variabili di pubblicazione, il nome del repository e gli URL non cambiano. I testi continuano a essere modificabili nei Markdown. Il PDF originale del saggio conserva la precedente apertura, mentre l'introduzione riveduta è nel testo web.
-
-Leggi `SECURITY.md`: CODEOWNERS, 2FA/passkey, regole branch, HTTPS e header effettivi richiedono impostazioni sul servizio, non sono attivati semplicemente caricando lo ZIP.
-
+Verifica inoltre ricerca per “Bloch”, pagine dei sette temi di ricerca, mappa degli argomenti nei moduli, ripresa dello studio, tre esperimenti e pausa degli effetti visivi. Il rapporto sulle stratificazioni è in `docs/CONTROLLO_STRATIFICAZIONI_v3.8.md`.

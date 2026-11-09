@@ -18,3 +18,9 @@ Il frattale è piano. Il visualizzatore consente di orientarne il piano nello sp
 
 ## fonti
 [Algoritmo deterministico incluso nel progetto](geometrie.html#julia)
+
+## osservazione
+Avvicina il disegno per osservare le variazioni di colore lungo i bordi e confronta regioni vicine nelle quali il tempo di fuga cambia, ricordando che lo zoom ingrandisce la rappresentazione calcolata con un numero finito di iterazioni e con la risoluzione disponibile.
+
+## lettura
+A ogni iterazione si eleva al quadrato il numero complesso z e si aggiunge c, che vale meno zero virgola sette quattro cinque quattro tre più zero virgola uno uno tre zero uno per l’unità immaginaria.

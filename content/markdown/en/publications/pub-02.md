@@ -15,7 +15,7 @@ Milano University Press · ISBN 979-125-510-185-7
 Cybersecurity in Lombardy’s municipalities
 
 ## plainSummary
-The research describes how prepared local administrations are to address cyber threats and identifies needs for support and training.
+The study examines how prepared Lombardy’s municipalities are to face cyber threats, identifying support and training needs that affect the conditions in which local administrations can address security problems.
 
 ## explanation
 The research, conducted within the MEIEC centre in collaboration with AnciLab, examines cybersecurity in Lombardy’s municipalities. The volume’s synopsis describes widespread awareness of the importance of security, alongside a need to strengthen practical protection capabilities, including against common attacks. The contribution helps explain the gap between concern about the issue and operational readiness, providing a basis for supporting local authorities.

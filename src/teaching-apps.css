@@ -1,0 +1,56 @@
+/* Linked laboratories. Namespaced: no changes to course, photo or general dialog rules. */
+.tm-apps{margin-top:44px;padding-top:36px;border-top:1px solid var(--line-soft)}
+.tm-apps .section-head{margin-bottom:24px}
+.tm-apps-intro{max-width:65ch;color:var(--muted);font-size:14px;margin-top:13px}
+.tm-app-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,350px),1fr));gap:20px}
+.tm-app-card{border:1px solid var(--line);background:var(--panel);padding:27px;display:flex;flex-direction:column;min-width:0;scroll-margin-top:120px;transition:border-color .18s}
+.tm-app-card:hover,.tm-app-card:focus-within{border-color:var(--green)}
+.tm-app-card-top{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:17px}
+.tm-app-card-top .label{margin:0;font-size:10px}
+.tm-app-mark{font:18px/1 var(--mono);color:var(--green);border:1px solid var(--line);padding:9px 10px}
+.tm-app-card h3{font-size:28px;line-height:1.25;margin:0 0 13px;overflow-wrap:anywhere}
+.tm-app-card p{font-size:14px;line-height:1.85;max-width:75ch;color:var(--body)}
+.tm-app-card .tm-app-language{font:11px/1.7 var(--mono);color:var(--muted);margin-top:14px}
+.tm-app-card-actions{display:flex;flex-wrap:wrap;align-items:center;gap:18px;margin-top:auto;padding-top:25px}
+.tm-app-card .tm-app-card-note{margin-top:17px;font-size:12px;color:var(--muted)}
+.tm-app-card-draft{border-style:dashed}
+.tm-app-draft-label{font:11px/1.6 var(--mono);color:var(--muted);padding:12px 0}
+.tm-launch{width:min(660px,calc(100% - 32px));max-width:660px;max-height:calc(100dvh - 32px);padding:0;border:1px solid var(--line);margin:auto;background:var(--panel);color:var(--ink);border-radius:4px;box-shadow:0 24px 100px #0008;overflow:auto;overscroll-behavior:contain}
+.tm-launch:not([open]){display:none}
+.tm-launch::backdrop{background:rgba(2,7,5,.76);backdrop-filter:blur(5px)}
+.tm-launch-window{position:relative;isolation:isolate;overflow:hidden;transition:transform .18s ease,opacity .18s ease;transform-origin:center}
+.tm-launch-chrome{display:flex;align-items:center;gap:16px;border-bottom:1px solid var(--line);padding:9px 13px;font:10px/1.5 var(--mono);color:var(--muted);background:var(--raised)}
+.tm-launch-lights{display:flex;gap:6px;flex-shrink:0}
+.tm-launch-lights i{width:6px;height:6px;border:1px solid var(--green);border-radius:50%;display:block;opacity:.45}
+.tm-launch-lights i:last-child{background:var(--green);opacity:.9}
+.tm-launch-chrome>span:nth-child(2){min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.tm-launch-cancel{width:42px;height:42px;flex-shrink:0;margin-left:auto;display:grid;place-items:center;font:24px/1 var(--mono);color:var(--body);border:1px solid var(--line);border-radius:2px;background:transparent}
+.tm-launch-cancel:hover{border-color:var(--green);color:var(--green)}
+.tm-launch-content{padding:27px 48px 23px 30px;position:relative;overflow:hidden}
+.tm-launch-content>.label{font-size:9px;letter-spacing:.16em;margin-bottom:10px}
+.tm-launch-content h2{font-size:30px;line-height:1.25;letter-spacing:-.025em;overflow-wrap:anywhere;position:relative}
+.tm-launch-content #tm-launch-status{font:12px/1.7 var(--mono);color:var(--muted);margin:10px 0 23px}
+.tm-launch-code{font:13px/1.85 var(--mono);min-height:101px;border-left:1px solid var(--line);padding:10px 0 10px 16px;color:var(--green);position:relative;overflow-wrap:anywhere}
+.tm-launch-code>div{min-height:25px}
+.tm-launch-prompt{color:var(--muted)}
+.tm-launch-cursor{opacity:.65}
+.tm-launch-progress{height:1px;background:var(--line);overflow:hidden;margin-top:20px}
+.tm-launch-progress>span{height:100%;display:block;background:var(--green);transform:scaleX(0);transform-origin:left}
+.tm-launch-content .tm-launch-destination{display:flex;flex-direction:column;gap:3px;font:10px/1.65 var(--mono);color:var(--muted);margin-top:15px;overflow-wrap:anywhere}
+.tm-launch-destination>span:first-child{text-transform:uppercase;font-size:9px;letter-spacing:.08em}
+.tm-launch-footer{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:16px 25px;border-top:1px solid var(--line);font:10px/1.5 var(--mono);color:var(--muted);background:var(--panel)}
+.tm-launch-footer .button{min-height:44px;gap:16px;padding:11px 16px;font-size:11px}
+.tm-launch-rain{position:absolute;inset:0 8px 0 auto;width:35px;overflow:hidden;pointer-events:none;opacity:.13;color:var(--green);font:9px/1.45 var(--mono);display:flex;gap:3px;mask-image:linear-gradient(transparent,#000 20%,#000 70%,transparent)}
+.tm-launch-rain span{transform:translateY(-120px)}
+.tm-launch.is-running .tm-launch-window{animation:tm-terminal-open .2s ease-out both}
+.tm-launch.is-running .tm-launch-progress>span{animation:tm-launch-progress 1.4s linear forwards}
+.tm-launch.is-running .tm-launch-rain span{animation:tm-code-fall 1.65s linear both}
+.tm-launch.is-running .tm-launch-rain span:nth-child(2){animation-delay:-.5s}
+.tm-launch.is-running .tm-launch-rain span:nth-child(3){animation-delay:-1s}
+.tm-launch.is-opening .tm-launch-window{animation:none;transform:translateY(-4px) scale(1.015);opacity:.75}
+@keyframes tm-terminal-open{from{opacity:0;transform:translateY(9px) scale(.975)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes tm-launch-progress{to{transform:scaleX(1)}}
+@keyframes tm-code-fall{to{transform:translateY(360px)}}
+@media(max-width:590px){.tm-app-card{padding:22px}.tm-app-card h3{font-size:26px}.tm-app-card-actions{gap:18px}.tm-launch-content{padding:22px 46px 22px 23px}.tm-launch-content h2{font-size:26px}.tm-launch-code{font-size:12px}.tm-launch-chrome{gap:10px}.tm-launch-lights{display:none}.tm-launch-footer{padding:14px 18px;gap:8px}.tm-launch-footer>span{font-size:9px}}
+@media(prefers-reduced-motion:reduce){.tm-app-card,.tm-launch-window{transition:none}.tm-launch.is-running .tm-launch-window,.tm-launch.is-running .tm-launch-progress>span,.tm-launch.is-running .tm-launch-rain span{animation:none}.tm-launch.is-opening .tm-launch-window{transform:none;opacity:1}}
+@media print{.tm-launch{display:none!important}.tm-app-card{break-inside:avoid;box-shadow:none}.tm-app-card-draft{display:none}}

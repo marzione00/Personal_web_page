@@ -1,0 +1,1 @@
+Through Quantum Lab’s simulations, you can accompany the seven course modules with an exploration of phenomena, circuits and protocols, observing how representations and results change as you adjust the available parameters and returning to the course materials to interpret what you have seen.

@@ -6,7 +6,7 @@
 Advanced Calculus and Stochastic Processes
 
 ## summary
-Adjunct teaching in Advanced Calculus and Stochastic Processes, active in the 2026/2027 academic year.
+The Advanced Calculus and Stochastic Processes entry for 2026/2027 brings together the course references at Università Cattolica del Sacro Cuore, providing access to the institutional page and keeping the information for this academic year distinct from other editions.
 
 ## university
 Università Cattolica del Sacro Cuore

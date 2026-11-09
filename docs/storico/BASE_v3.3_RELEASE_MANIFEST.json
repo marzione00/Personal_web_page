@@ -1,0 +1,40 @@
+{
+  "version": "3.3",
+  "brand": "Topological Manifolds",
+  "date": "2026-11-08",
+  "base": "Topological Manifold v3.2",
+  "unitTests": 192,
+  "browserChecks": 73,
+  "publishedPages": 42,
+  "localLinks": 3722,
+  "imageReferences": 124,
+  "originalPhotographsIdentical": 5,
+  "existing3DModels": 24,
+  "newStaticManifoldExamples": 3,
+  "ambientFormulas": 120,
+  "music": {
+    "title": "Local Coordinates",
+    "durationSeconds": 270,
+    "encodedDurationSeconds": 270.027755,
+    "file": "audio/local-coordinates.mp3",
+    "sha256": "5641429e9064d61a950cc25cee5eb2d84d23e0743dc0974cecaa98923369c731",
+    "bytes": 5407862,
+    "channels": 2,
+    "sampleRate": 44100,
+    "license": "CC BY-NC-ND 4.0 to the extent applicable; see licenza.html",
+    "provenance": "Original AI-assisted procedural synthesis, no external samples. Generator and score included.",
+    "album": "Topological Manifolds"
+  },
+  "remoteDeployment": false,
+  "sourceZipLayout": "repository root, no containing folder",
+  "browserLimitations": "Local Chromium fixtures; real deployed cross-document navigation and persistence not exercised.",
+  "browserResponsiveChecks": 20,
+  "cvOriginalIncluded": false,
+  "cvOriginalRequiredAtRoot": "CV.pdf",
+  "deliveryNote": "Authentic CV is not bundled. QA used an isolated replacement PDF that is excluded from release files; no original CV verification is claimed.",
+  "publicAssetsUnchangedByteForByte": 77,
+  "publicAssetsChanged": [
+    "public/audio/local-coordinates.mp3 (ID3 album name only; same compressed audio stream)",
+    "public/assets/geometry-viewer.js (source comment only; SRI regenerated)"
+  ]
+}

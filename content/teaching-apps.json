@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "apps": [
+    {
+      "id": "quantum-lab",
+      "title": "Quantum Lab",
+      "url": "https://marzione00.github.io/QuantumLab_Public/",
+      "repository": "https://github.com/marzione00/QuantumLab_Public/",
+      "interfaceLanguage": "it",
+      "enabled": true,
+      "launch": "terminal"
+    },
+    {
+      "id": "nuovo-laboratorio",
+      "title": "Nuovo laboratorio",
+      "url": "",
+      "repository": "",
+      "interfaceLanguage": "it",
+      "enabled": false,
+      "launch": "terminal"
+    }
+  ]
+}

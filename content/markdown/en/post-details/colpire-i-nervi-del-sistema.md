@@ -7,7 +7,7 @@ Striking the Nerves of the System
 Cyberattacks, false alarms and the strategy of disorganisation, from Liddell Hart to John Boyd
 
 ## excerpt
-An altered command, a false alarm: how a signal can set resources and decisions in motion, disrupting an entire system. An exploration through Liddell Hart and John Boyd.
+Starting from altered commands and false alarms, the essay follows the checks, decisions and shifts of resources that a signal can provoke, drawing on Liddell Hart and John Boyd to examine how disrupted information affects an organisation’s freedom of action and cohesion.
 
 ## category
 Essays

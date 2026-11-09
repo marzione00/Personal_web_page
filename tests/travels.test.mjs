@@ -27,16 +27,16 @@ function fixture(fn){
   return fn(dir);
  } finally {fs.rmSync(dir,{recursive:true,force:true});}
 }
-test('Travel section exists in both languages with an honest empty state and main navigation',()=>{
+test('Travel section has an honest empty state and remains reachable from the profile',()=>{
  assert.equal(loadTravels(root).length,0);
  assert.equal(readTravelIndex(root).titolo,'Viaggi ed escursioni');
  assert.equal(readTravelIndex(root,'en').titolo,'Travels & Hikes');
  const it=loadContent(root),en=loadContent(root,{language:'en'});
- assert.match(page(it,'viaggi.html'),/Non ci sono ancora diari pubblicati/);
- assert.match(page(en,'viaggi.html'),/No travel diaries have been published yet/);
- const home=page(it,'index.html');
- assert.match(home,/href="viaggi\.html"/);
- assert.match(home,/Viaggi ed escursioni/);
+ assert.match(page(it,'viaggi.html'),/pubblicazione del primo diario/);
+ assert.match(page(en,'viaggi.html'),/publication of its first diary/);
+ const profile=page(it,'cv.html');
+ assert.match(profile,/href="viaggi\.html"/);
+ assert.doesNotMatch(page(it,'index.html'),/href="viaggi\.html"/);
 });
 test('Draft diary can reference photos not yet uploaded, but cannot leak into public pages',()=>fixture(dir=>{
  writeTrip(dir,{draft:'true'});

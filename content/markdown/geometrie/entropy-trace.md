@@ -18,3 +18,9 @@ La serie è una somma sintetica di sinusoidi. La prima formula genera la curva; 
 
 ## fonti
 [Richman e Moorman, 2000](https://pubmed.ncbi.nlm.nih.gov/10843903/)
+
+## osservazione
+Percorri con lo sguardo la curva e confronta i tratti che tornano vicini con quelli che si allontanano, ricordando che ciascun punto riunisce tre valori della medesima serie temporale, fra i quali è stato mantenuto un ritardo fisso.
+
+## lettura
+Il vettore al tempo t raccoglie tre valori della serie separati da sei campioni; l’entropia campionaria è l’opposto del logaritmo naturale del rapporto fra A e B, definiti per dimensione m e tolleranza r.

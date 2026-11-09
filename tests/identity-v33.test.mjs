@@ -10,12 +10,12 @@ const read=file=>fs.readFileSync(path.join(root,file),'utf8');
 const brand='Topological Manifolds';
 const stale=/Topological Manifold(?!s)|\bMDC_LAB\b|\bMDC LAB\b/;
 
-test('v3.3 uses one plural public name and keeps existing page addresses',()=>{
+test('current release uses one plural public name and keeps existing page addresses',()=>{
  const site=JSON.parse(read('content/site.json'));
  const pkg=JSON.parse(read('package.json'));
  assert.equal(site.name,brand);
- assert.equal(site.version,'3.3');
- assert.equal(pkg.version,'3.3.0');
+ assert.equal(site.version,'3.8');
+ assert.equal(pkg.version,'3.8.0');
  assert.equal(pkg.name,'topological-manifolds-personal-site');
  for(const lang of ['it','en']){
   const data=loadContent(root,{language:lang});

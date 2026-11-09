@@ -6,7 +6,7 @@
 Advanced Calculus and Stochastic Processes
 
 ## summary
-Adjunct teaching in Actuarial Sciences, Risk and Data Analysis. Archive for the 2024/2025 academic year.
+The Advanced Calculus and Stochastic Processes entry for 2024/2025 brings together the course references at Università Cattolica del Sacro Cuore, providing access to the institutional page and keeping the information for this academic year distinct from other editions.
 
 ## university
 Università Cattolica del Sacro Cuore

@@ -18,7 +18,7 @@ The meaning of predictions, model assumptions and criteria for discussing an exp
 What warrants treating a prediction as an explanation?
 
 ## overview
-A correct prediction may depend on regularities in a sample, a known physical relationship or features introduced by data collection. Distinguishing these possibilities requires examining assumptions, measurement procedures and the limits of representations, as addressed in his master's thesis on the epistemological foundations of data analysis.
+Because a correct prediction may depend on sample regularities, known physical relationships or features introduced during data collection, assessing its meaning requires examining the assumptions and measurement procedures through which the phenomenon was represented, following a question explored in the master’s thesis on the epistemological foundations of data analysis.
 
 ## approach
 Evaluation concerns sample construction, the robustness of learned relationships and comparison with hypotheses formulated independently of the data used to train a model. This question has also been discussed in work on the relationship between algorithm interpretability and physical laws, and in analyses of explanations produced by different classifiers.
@@ -30,4 +30,3 @@ Evaluation concerns sample construction, the robustness of learned relationships
 - Interpretability and verification
 
 ## activities
-

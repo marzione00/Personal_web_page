@@ -15,7 +15,7 @@ The Journal of Physical Chemistry C 118(40), 23219–23225
 Optical properties of bilayer graphene nanoflakes
 
 ## plainSummary
-Two small, stacked fragments can absorb light differently from isolated fragments: their alignment and edge chemistry also matter.
+The work compares the optical properties of small stacked graphene fragments with those of isolated fragments, examining how layer alignment and edge chemistry contribute to differences in light absorption.
 
 ## explanation
 The theoretical work compares pairs of identical nanoflakes at different relative displacements, as well as pairs differing in size or chemical groups. The calculations predict a redshift and broadening of the lowest excitations, extending the absorption range without strongly increasing intensity. Appropriately functionalised combinations also exhibit excitations involving charge transfer between fragments. These modelling results help explain the role of interlayer interactions.

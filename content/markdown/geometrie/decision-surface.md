@@ -18,3 +18,9 @@ La superficie associa a due variabili un valore compreso fra zero e uno. La curv
 
 ## fonti
 [Ricerca sull’interpretabilità](ricerca.html)
+
+## osservazione
+Segui la curva evidenziata mentre cambi punto di vista, osservando come attraversi una superficie la cui altezza varia con le due coordinate, così da distinguere il valore associato a ciascuna coppia di variabili dalla soglia utilizzata per separare le classi.
+
+## lettura
+La probabilità è uno diviso per uno più l’esponenziale dell’opposto di uno virgola due x meno zero virgola cinque y più zero virgola quarantacinque x y; il confine rappresentato corrisponde a probabilità un mezzo.

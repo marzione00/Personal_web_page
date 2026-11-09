@@ -20,3 +20,9 @@ This is a parametric portion of a catenoid, discretised for display. The constru
 
 ## fonti
 [Reproducible parametrisation included in the project](geometrie.html#catenoid)
+
+## osservazione
+Rotate the surface to view it from the side, follow its narrowing towards the central neck and observe how both ends widen, comparing the profile with the lines that travel around the figure.
+
+## lettura
+At height zero point eight v, the circular section has radius zero point eight times the hyperbolic cosine of v; angle u runs around the circle.

@@ -15,7 +15,7 @@ Artificial Neural Networks in Pattern Recognition, Lecture Notes in Computer Sci
 Stability of explanations in software-trace classification
 
 ## plainSummary
-Models that successfully classify the same programs may rely on different evidence. This work investigates how stable their explanations are.
+Because models that correctly classify the same programs may rely on different cues, the work examines the stability of explanations in behavioural-trace classification, considering data representations and the regularities learned by classifiers.
 
 ## explanation
 A ransomware-recognition dataset is used to compare different descriptions of execution: system calls, libraries and paths, hardware-counter signals and combinations of these views. Information Concordance and Selector Adjusted Information Concordance measure agreement between explanations, also accounting for feature-selection effects. In this comparison, system calls yield more stable explanations across models; other representations are more sensitive to processing choices. The finding concerns the benchmark studied and encourages joint evaluation of accuracy and the stability of the reasons underlying predictions.

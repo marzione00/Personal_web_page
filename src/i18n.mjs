@@ -14,6 +14,8 @@ export function sections(file){
 }
 function apply(file,object,fields,listFields=[]){
  const values=sections(file);if(values===null)throw Error('Missing English translation: '+file);
+ const source=sections(file.replace(path.sep+'en'+path.sep,path.sep));
+ if(source)for(const key of Object.keys(source).filter(k=>fields.includes(k)))if(!Object.hasOwn(values,key)||(!values[key].trim()&&source[key].trim()))throw Error('Missing English field: '+key+' in '+file);
  for(const [key,value] of Object.entries(values)){
   if(!fields.includes(key))throw Error('Unexpected translation field: '+key+' in '+file);
   if(value.length>200000)throw Error('Translation too long: '+file);
@@ -40,7 +42,7 @@ export function localiseData(root,data,language='it'){
  apply(path.join(base,'profilo.md'),data.profile,['intro','biography','personalInterests','headline']);
  apply(path.join(base,'ricerca.md'),data.research,['title','subtitle','introduction','connectionsTitle','connections']);
  for(const area of data.research.areas)apply(path.join(base,'aree-ricerca',area.id+'.md'),area,['title','shortTitle','scope','summary','question','overview','approach','methods','activities'],['methods','activities']);
- for(const g of data.geometry.items)apply(path.join(base,'geometrie',g.id+'.md'),g,['titolo','tema','formula','spiegazione','limiti','fonti']);
+ for(const g of data.geometry.items)apply(path.join(base,'geometrie',g.id+'.md'),g,['titolo','tema','formula','spiegazione','limiti','fonti','osservazione','lettura']);
  for(const c of data.courses)apply(path.join(base,'courses',c.id+'.md'),c,['title','summary','university','department','description','credits','hours','materialsLabel','learningPath']);
  for(const l of data.lectures)apply(path.join(base,'lectures',l.id+'.md'),l,['title','summary','topics','body'],['topics']);
  const category={Libri:'Books',Articoli:'Articles',Conferenze:'Conference contributions',Capitoli:'Book chapters'};
@@ -74,7 +76,7 @@ export function localiseData(root,data,language='it'){
  const approved=new Set(data.profile.availablePersonalPhotos.map(p=>p.id));
  data.profile.availablePersonalPhotos=data.profile.personalPhotos.filter(p=>approved.has(p.id));
  const epigraphs=sections(path.join(base,'epigrafi.md'));if(!epigraphs)throw Error('Missing English epigraphs');
- for(const q of data.epigraphs){const lines=epigraphs[q.id]?.split('\n');if(!lines)throw Error('Missing English epigraph');q.quote=lines.filter(x=>/^>\s?/.test(x)).map(x=>x.replace(/^>\s?/, '')).join(' ').trim();q.source=lines.find(x=>/^Fonte: /.test(x))?.slice(7)||'';if(q.id==='platone')q.author='Plato';}
+ for(const q of data.epigraphs){const lines=epigraphs[q.id]?.split('\n');if(!lines)throw Error('Missing English epigraph');q.quote=lines.filter(x=>/^>\s?/.test(x)).map(x=>x.replace(/^>\s?/, '')).join(' ').trim();q.source=lines.find(x=>/^Fonte: /.test(x))?.slice(7)||'';q.note=lines.find(x=>/^Nota: /.test(x))?.slice(6)||'';if(q.id==='platone')q.author='Plato';}
  return data;
 }
 // A closed catalogue translates interface text nodes, never arbitrary substrings in prose.
@@ -119,7 +121,7 @@ export function localiseHtml(html,data){
 }
 export function prefixResources(html,language){
  if(language!=='en')return html;
- return html.replace(/(?<![\w-])(href|src)="((?:media|geometry|assets|audio)\/[^"<>]+)"/g,(_,key,ref)=>`${key}="../${ref}"`);
+ return html.replace(/srcset="([^"]+)"/g,(_,value)=>'srcset="'+value.split(',').map(part=>part.trim().replace(/^media\//,'../media/')).join(', ')+'"').replace(/(?<![\w-])(href|src)="((?:media|geometry|assets|audio)\/[^"<>]+)"/g,(_,key,ref)=>`${key}="../${ref}"`);
 }
 export function languageSwitch(data,page){
  const lang=data.language||'it',file=page.file;

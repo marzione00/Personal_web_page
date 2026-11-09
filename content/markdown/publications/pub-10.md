@@ -15,7 +15,7 @@ M. De Corato, S. Salini, A. Ferrara e C. Vello
 Gli asteroidi come banco di prova per un’IA interpretabile
 
 ## plainSummary
-Quando il fenomeno studiato è già descritto dalla fisica, si può controllare se un algoritmo usa relazioni sensate per formulare le proprie previsioni.
+La classificazione degli asteroidi offre un contesto nel quale, essendo disponibili descrizioni fisiche del fenomeno, è possibile esaminare se le relazioni utilizzate da un algoritmo per formulare le proprie previsioni siano coerenti con le conoscenze attraverso cui quei dati vengono interpretati.
 
 ## explanation
 Il contributo utilizza dati CNEOS sulla classificazione della pericolosità degli asteroidi per confrontare campi aleatori di Markov, Random Forest e Support Vector Machines. La conoscenza fisica del problema permette di esaminare sia la qualità delle classificazioni sia la loro interpretabilità. I risultati descritti nell’abstract indicano nei modelli grafici una soluzione capace di coniugare una spiegazione leggibile e un’accuratezza adeguata al caso studiato. L’oggetto è la classificazione nel dataset considerato; la scheda non costituisce una previsione di impatti.

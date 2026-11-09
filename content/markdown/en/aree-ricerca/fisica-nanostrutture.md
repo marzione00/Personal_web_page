@@ -18,7 +18,7 @@ Vibrational and optical properties of graphene, studied in relation to geometry 
 Which properties of a nanostructure depend on its geometry and bond arrangement?
 
 ## overview
-The theoretical physics research concerns graphene nanoribbons and nanoflakes, schwarzites and other carbon structures whose bond configuration affects their electronic, optical and vibrational behaviour. Negatively curved systems have also been studied through topological descriptions.
+Graphene nanoribbons and nanoflakes, schwarzites and other carbon structures allow the study of how bond configurations affect a system’s electronic, optical and vibrational behaviour, while topological descriptions of negatively curved networks provide tools for relating structural organisation to the physical properties under consideration.
 
 ## approach
 Ab initio calculations have been compared with spectroscopic results to identify Raman and vibrational signatures associated with nanoribbon edges. Other work examines how structural distortion changes the bandgap, the optical properties of coupled nanoflakes and the mathematical indices used to compare carbon networks.

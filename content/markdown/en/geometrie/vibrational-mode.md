@@ -19,3 +19,9 @@ The field is synthetic. It is not a normal mode calculated from a dynamical matr
 
 ## fonti
 [Publications on vibrational properties](ricerca.html#bibliografia)
+
+## osservazione
+Compare the deformed ribbon with its lattice arrangement, observing how out-of-plane displacements change the surface’s appearance while the connections between nodes remain recognisable, then use a side view to follow the deformation.
+
+## lettura
+Displacement along z equals one point one times the sine of zero point seven x times the cosine of zero point four two y.

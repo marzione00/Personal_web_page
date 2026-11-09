@@ -14,7 +14,7 @@ test('the licence preserves third-party documents, quotes and software scope',()
  for(const language of ['it','en']){const d=loadContent(root,{language}),h=renderPages(d).find(p=>p.file==='licenza.html').body;assert.match(h,/CC BY-NC-ND 4\.0/);assert.match(h,/creativecommons\.org\/licenses\/by-nc-nd\/4\.0/);assert.match(h,/PDF/);assert.match(h,/software/);assert.match(h,/Local Coordinates/);}
 });
 test('rain texture has bright leading heads with trailing characters above, positive downward translation',()=>{
- const s=read('src/matrix-rain.js');assert.match(s,/behind=period-1-step/);assert.match(s,/s\.t=\(s\.t\+s\.speed\*dt\)/);assert.match(s,/speed:rand\(13,32\)/);assert.match(s,/get direction\(\)\{return 'down';\}/);
+ const s=read('src/matrix-rain.js');assert.match(s,/y=textureHeight-\(row\+1\)\*gap/);assert.match(s,/s\.t=\(s\.t\+s\.speed\*dt\*acceleration\*intensity\(\)\.speed\)/);assert.match(s,/speed:rand\(speed\*\.65,speed\*1\.3\)/);assert.match(s,/get direction\(\)\{return 'down';\}/);
 });
 test('UI sound uses smooth sinusoidal FM without stepped pitches, square waves or noise buffers',()=>{
  const s=read('src/sound.js');assert.match(s,/osc\.type='sine'/);assert.match(s,/voices\.size>=3/);assert.match(s,/distance<180/);assert.match(s,/now-lastMove<520/);assert.doesNotMatch(s,/type='square'|type='triangle'|createBufferSource\(/);assert.match(s,/\.065/);

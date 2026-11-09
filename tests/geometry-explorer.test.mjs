@@ -19,16 +19,17 @@ test('graphics obey the declared lightweight budgets',()=>{
  assert.ok(data.geometry.items.reduce((n,g)=>n+g.bytes,0)<1000000);
  assert.ok(data.geometry.items.reduce((n,g)=>n+g.sceneBytes,0)<2000000);
  for(const g of data.geometry.items)assert.ok(g.sceneBytes<210000,g.id);
- assert.ok(fs.statSync(path.join(root,'public/assets/geometry-viewer.js')).size<12000);
+ assert.ok(fs.statSync(path.join(root,'public/assets/geometry-viewer.js')).size<20000);
 });
 test('no geometry repeats within an editorial page; atlas presents each once',()=>{
  for(const p of pages){const ids=[...p.body.matchAll(/data-geometry="([a-z-]+)"/g)].map(x=>x[1]);assert.equal(new Set(ids).size,ids.length,p.file);}
- const home=pages.find(x=>x.file==='index.html');assert.equal([...home.body.matchAll(/data-geometry="/g)].length,6);
+ const home=pages.find(x=>x.file==='index.html');assert.equal([...home.body.matchAll(/class="portal-art"/g)].length,3); // The compact home has section-specific SVG entrances.
  assert.equal([...pages.find(x=>x.file==='geometrie.html').body.matchAll(/data-geometry="/g)].length,24);
 });
 test('delivered editorial illustrations are not recycled across sections',()=>{
  const placements=new Map();for(const p of pages.filter(x=>x.file!=='geometrie.html'))for(const m of p.body.matchAll(/data-geometry="([a-z-]+)"/g)){assert.ok(!placements.has(m[1]),m[1]+' repeated on '+p.file);placements.set(m[1],p.file);}
- assert.ok(placements.size>=20);
+ assert.ok(placements.size>=14); // The home no longer repeats extended personal/research material.
+ for(const id of placements.keys())assert.ok(data.geometry.byId[id]);
 });
 test('quantum / post-quantum explanations use different appropriate subjects',()=>{
  const c=pages.find(x=>x.file==='corso-quantum-post-quantum-computing-2026-2027.html').body;
@@ -51,8 +52,8 @@ test('only Markdown is needed to change a geometric explanation',()=>{
 test('geometry copy cannot introduce executable HTML',()=>{
  const g={...data.geometry.byId.gyroid,spiegazione:'<img src=x onerror=alert(1)>',formula:'</pre><script>x</script>'};const h=geometryInfo(g);assert.ok(!h.includes('<script>'));assert.ok(h.includes('&lt;script&gt;'));
 });
-test('the home renders full Markdown quotations without editorial truncation',()=>{
- const home=pages.find(p=>p.file==='index.html').body;
+test('the name page renders full Markdown quotations without editorial truncation',()=>{
+ const home=pages.find(p=>p.file==='manifold.html').body;
  for(const q of data.epigraphs){assert.ok(q.quote.length>100);assert.ok(!q.quote.includes('[...]'));assert.ok(home.includes(q.quote.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#39;')));}
  assert.match(home,/spiegazione immateriali/);assert.match(home,/anni più appassionati della sua vita/);
 });

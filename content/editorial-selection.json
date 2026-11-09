@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "publications": [
+    {
+      "id": "pub-09",
+      "reason": {
+        "it": "Un lavoro sulle rappresentazioni delle tracce e sui segnali che possono orientare una classificazione.",
+        "en": "A study of trace representations and the signals that may influence classification."
+      }
+    },
+    {
+      "id": "pub-03",
+      "reason": {
+        "it": "Il rapporto fra rilevamento del ransomware, regolarità delle tracce e interpretabilità dei modelli.",
+        "en": "The relationship between ransomware detection, trace regularity and model interpretability."
+      }
+    }
+  ]
+}

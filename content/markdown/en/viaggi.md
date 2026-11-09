@@ -4,10 +4,10 @@
 Travels & Hikes
 
 ## introduzione
-A personal collection of journeys, walks, places and encounters. Diaries and photo albums will appear here, each with its own story and images.
+This collection is dedicated to the walks, places and encounters that accompany my travels, with each diary intended to bring together an itinerary and original photographs so that the account can retain the circumstances and impressions through which a place becomes part of personal experience.
 
 ## nessunViaggio
-No travel diaries have been published yet. This section is ready for journeys, hikes and photo albums.
+The collection will open with the publication of its first diary.
 
 ## nota
-Original photographs and personal writing. Every diary is published only when it has been completed and approved.
+The accounts and photographic albums will follow individual itineraries, keeping the images alongside the experiences to which they refer.

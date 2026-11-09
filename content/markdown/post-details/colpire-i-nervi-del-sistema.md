@@ -9,7 +9,7 @@ Colpire i nervi del sistema
 Cyberattacchi, falsi allarmi e strategia della disorganizzazione da Liddell Hart a John Boyd
 
 ## excerpt
-Un comando alterato, un falso allarme: come un segnale può mettere in moto risorse e decisioni, fino a disorganizzare un sistema. Un percorso attraverso Liddell Hart e John Boyd.
+Muovendo da comandi alterati e falsi allarmi, il saggio segue le verifiche, le decisioni e gli spostamenti di risorse che un segnale può provocare, per interrogare, attraverso Liddell Hart e John Boyd, il rapporto fra perturbazione dell’informazione, libertà d’azione e coesione di un’organizzazione.
 
 ## category
 Saggi

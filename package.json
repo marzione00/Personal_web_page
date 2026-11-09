@@ -1,6 +1,6 @@
 {
   "name": "topological-manifolds-personal-site",
-  "version": "3.3.0",
+  "version": "3.8.0",
   "private": true,
   "type": "module",
   "description": "Topological Manifolds — Marzio De Corato. Ricerca, didattica, scrittura e viaggi.",
@@ -18,7 +18,7 @@
     "build:release": "node scripts/build.mjs --release",
     "preview:editorial": "node scripts/build.mjs --preview --drafts",
     "verify:photos": "node scripts/verify-photos.mjs",
-    "test:browser": "python3 tests/browser-explorer.py",
+    "test:browser": "python3 tests/browser-revision.py",
     "test:browser:travels": "python3 tests/browser-travels.py",
     "test:browser:ambient": "python3 tests/browser-ambient.py",
     "test:browser:ambient:webgl": "python3 tests/browser-ambient-webgl.py",
@@ -27,6 +27,9 @@
     "prebuild": "node scripts/import-cv.mjs",
     "prebuild:release": "node scripts/import-cv.mjs",
     "prepreview:build": "node scripts/import-cv.mjs",
-    "prepreview:editorial": "node scripts/import-cv.mjs"
+    "prepreview:editorial": "node scripts/import-cv.mjs",
+    "check:release": "node scripts/audit-release.mjs",
+    "check:external": "node scripts/check-external-links.mjs",
+    "test:browser:revision": "python3 tests/browser-revision.py"
   }
 }

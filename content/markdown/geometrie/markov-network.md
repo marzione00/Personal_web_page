@@ -18,3 +18,9 @@ La formula è quella di un modello di Ising su un grafo. Z normalizza le probabi
 
 ## fonti
 [Lavori di Marzio De Corato su modelli grafici](ricerca.html#tema-ia-spiegabile)
+
+## osservazione
+Individua i gruppi di nodi e segui gli archi che li collegano, ruotando il grafo affinché le connessioni sovrapposte nella proiezione diventino distinguibili e tu possa confrontare i legami interni a un gruppo con quelli che raggiungono gruppi differenti.
+
+## lettura
+La probabilità della configurazione s è l’esponenziale della somma dei termini locali h per s e delle interazioni J per le coppie di stati, diviso per la costante di normalizzazione Z; ciascuno stato vale meno uno o più uno.

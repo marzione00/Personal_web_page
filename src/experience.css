@@ -1,0 +1,13 @@
+/* Content additions only; header ownership is in header.css. */
+.home-entry .portal-card{background:var(--panel);padding:0;border:1px solid var(--line);height:100%;min-width:0;transition:border-color .2s,background .2s}
+.home-entry .portal-card:hover{border-color:var(--green);background:var(--raised)}
+.home-entry .portal-card h3{font:28px/1.25 var(--serif);margin:12px 0}.home-entry .portal-card p{font-size:15px;line-height:1.8}
+.home-entry .portal-link{display:block;margin-top:22px;color:var(--green);font:12px var(--mono)}
+.study-bridge{border-left:2px solid var(--green);padding:16px 20px;margin-top:22px;background:var(--panel);max-width:74ch}
+.study-bridge p{font-size:14px;line-height:1.8}.study-bridge ul{list-style:none;padding:0;margin:12px 0}.study-bridge li+li{margin-top:10px}.study-bridge .text-link{font-size:12px;min-height:44px;overflow-wrap:anywhere}
+.publication-contribution{max-width:76ch;margin:14px 0 18px}.publication-contribution{font-size:15px;line-height:1.85;color:var(--body)}
+.publication-bibliographic{margin:16px 0;color:var(--muted);max-width:80ch}.publication-bibliographic summary{cursor:pointer;color:var(--green);padding:12px 0;font:12px var(--mono)}
+.publication-bibliographic p{font-size:13px;line-height:1.8;margin:10px 0}.publication-original-title{font-style:italic}
+.matrix-ambient{transition:opacity .65s ease}body[data-reading-focus=true] .matrix-ambient{opacity:.38}
+@media(max-width:590px){.study-bridge{padding:14px}.home-entry .portal-copy{padding:22px}}
+@media(prefers-reduced-motion:reduce){.matrix-ambient,.home-entry .portal-card{transition:none}}

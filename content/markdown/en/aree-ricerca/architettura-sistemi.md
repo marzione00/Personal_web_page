@@ -18,7 +18,7 @@ Materials and exercises explaining how hardware, software and infrastructure int
 How can the operation of computing systems be explained in a verifiable way?
 
 ## overview
-Content design for systems architecture involves theoretical modules and exercises for studying computer components, computational infrastructure and their interactions. It is an educational interest connected with teaching Computer Science.
+Preparing materials on systems architecture involves theoretical modules and exercises describing computer components and computational infrastructure, focusing on the relationships between hardware and software through which Computer Science teaching can explain how a system operates.
 
 ## approach
 The teaching modules pair descriptions of components with exercises on their relationships, connecting hardware organisation with software and infrastructure behaviour. This work concerns the design and preparation of computer-science teaching materials.
@@ -30,4 +30,3 @@ The teaching modules pair descriptions of components with exercises on their rel
 - Modules and practical exercises
 
 ## activities
-

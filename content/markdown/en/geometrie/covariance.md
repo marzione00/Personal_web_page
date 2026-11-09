@@ -20,3 +20,9 @@ The displayed level corresponds to a Mahalanobis distance of one. It does not au
 
 ## fonti
 [SciPy — covariance and multivariate density](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.multivariate_normal.html)
+
+## osservazione
+Compare the directions in which the ellipsoid extends furthest with those in which it narrows, rotating it to see how the same shape has different widths and how the highlighted sections help reveal this variation in dispersion.
+
+## lettura
+The surface contains points whose quadratic form of deviation from the mean, using inverse covariance, equals one; covariance is matrix T times its transpose.

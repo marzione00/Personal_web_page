@@ -18,7 +18,7 @@ Interpretabilità e stabilità delle spiegazioni prodotte dai modelli di apprend
 Come valutare gli indizi su cui si fonda una classificazione?
 
 ## overview
-L’accuratezza di un classificatore viene esaminata insieme alle variabili che influenzano la sua risposta. A questo scopo sono stati considerati modelli grafici probabilistici e tecniche di interpretazione, per confrontare le relazioni apprese con quelle attese dal fenomeno studiato. Nei contributi più recenti l’attenzione riguarda anche le scorciatoie statistiche (*shortcut learning*) e la stabilità delle spiegazioni quando cambiano la rappresentazione dei dati o il modello.
+L’accuratezza di un classificatore acquista significato insieme all’esame delle variabili che ne orientano la risposta, per cui i modelli grafici probabilistici e le tecniche di interpretazione vengono impiegati per confrontare le relazioni apprese con quelle attese dal fenomeno e per studiare la stabilità delle spiegazioni quando cambiano il modello o la rappresentazione dei dati.
 
 ## approach
 I campi aleatori di Markov e gli altri modelli impiegati nei lavori sulla cybersecurity e sulla classificazione di asteroidi consentono di studiare dipendenze fra variabili. Il confronto fra viste differenti delle tracce comportamentali, discusso ad ANNPR 2026, affronta un problema complementare: stabilire in quali condizioni un classificatore sfrutti regolarità legate al processo osservato oppure alla particolare codifica dei dati. Il rapporto fra capacità predittiva e spiegabilità è stato discusso anche a IFCS 2026.

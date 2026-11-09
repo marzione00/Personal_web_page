@@ -18,7 +18,7 @@ Interpretability and stability of the explanations produced by machine-learning 
 How can we evaluate the evidence on which a classification is based?
 
 ## overview
-A classifier's accuracy is examined alongside the variables that influence its response. Probabilistic graphical models and interpretation techniques have been considered for this purpose, comparing learned relationships with those expected from the phenomenon under study. Recent contributions also address statistical shortcuts (*shortcut learning*) and the stability of explanations when the data representation or model changes.
+A classifier’s accuracy gains meaning alongside an examination of the variables influencing its response, so probabilistic graphical models and interpretation techniques are used to compare learned relationships with those expected from the phenomenon and to study the stability of explanations when the model or data representation changes.
 
 ## approach
 Markov random fields and the other models used in the work on cybersecurity and asteroid classification allow dependencies between variables to be studied. The comparison of different views of behavioural traces, discussed at ANNPR 2026, addresses a complementary problem: determining the conditions under which a classifier exploits regularities associated with the observed process or with a particular encoding of the data. The relationship between predictive performance and explainability was also discussed at IFCS 2026.

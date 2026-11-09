@@ -26,8 +26,8 @@ test('formula catalogue keeps physically important conditions rather than decora
  assert.match(find('cryptography-04').conditions,/non è uno schema sicuro/);
  assert.match(find('information-04').conditions,/Supporto/);
 });
-test('background has real content-derived gutters, bounded raster size and a frame-rate limit',()=>{
- const s=read('src/matrix-rain.js');assert.match(s,/getBoundingClientRect/);assert.match(s,/6000000/);assert.match(s,/1000\/24/);assert.match(s,/ctx\.rect\(r\.x,0,r\.w,H\)/);assert.doesNotMatch(s,/\.innerHTML|eval\(|fetch\(/);
+test('background covers the viewport with a bounded raster size and frame-rate limit',()=>{
+ const s=read('src/matrix-rain.js');assert.match(s,/W=document.documentElement.clientWidth/);assert.match(s,/6000000/);assert.match(s,/1000\/\(\(mobile\?20:24\)\*adaptive\)/);assert.doesNotMatch(s,/W>=1000|rightStart|protected corridor/);assert.doesNotMatch(s,/\.innerHTML|eval\(|fetch\(/);
  assert.doesNotMatch(read('src/visual.css'),/matrix-side-width|matrix-rain-shell/);
 });
 test('ambient pausing, visibility and reduced motion actually gate RAF scheduling',()=>{

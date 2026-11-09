@@ -18,7 +18,7 @@ Rilevamento di malware e ransomware a partire dai segnali prodotti dall’esecuz
 Quali tracce di esecuzione permettono di riconoscere un comportamento malevolo?
 
 ## overview
-Per studiare la presenza di malware e ransomware vengono analizzate informazioni raccolte durante l’esecuzione dei programmi, fra cui contatori hardware e chiamate a funzioni di sistema o librerie. L’obiettivo è individuare differenze di comportamento che possano essere misurate e successivamente controllate su nuovi dati.
+Le informazioni raccolte durante l’esecuzione di un programma, fra cui contatori hardware e chiamate a funzioni di sistema o librerie, permettono di descriverne il comportamento attraverso caratteristiche misurabili, sulle quali si costruiscono e si verificano metodi di rilevamento di malware e ransomware, esaminando quanto le differenze osservate si mantengano quando vengono considerati nuovi dati.
 
 ## approach
 Nel lavoro del 2025 sulla rilevazione di ransomware, l’entropia campionaria viene utilizzata per descrivere l’andamento temporale dei segnali, mentre i modelli grafici permettono di esaminare le dipendenze fra le caratteristiche considerate. Altre attività hanno studiato le chiamate alle librerie e l’interpretabilità dei metodi di classificazione. Le tesi correlate affrontano l’analisi delle caratteristiche di basso livello e il rapporto fra intelligenza artificiale generativa e software malevolo.

@@ -15,7 +15,7 @@ Nano Letters 16(6), 3442–3447
 La firma Raman dei nanonastri di grafene
 
 ## plainSummary
-Dalla luce diffusa da un materiale si possono ricavare informazioni sulla larghezza dei nanonastri, sui bordi e sui gruppi chimici che vi sono legati.
+Attraverso la luce diffusa dai nanonastri di grafene, il lavoro esamina le informazioni che possono essere ricavate sulla loro larghezza, sulla struttura dei bordi e sui gruppi chimici che vi sono legati, collegando queste caratteristiche alla firma Raman del materiale.
 
 ## explanation
 La spettroscopia Raman è confrontata con calcoli ab initio per capire quali caratteristiche dei nanonastri corrispondano ai segnali misurati. Il lavoro esamina l’effetto della larghezza, della geometria dei bordi e della loro funzionalizzazione chimica. Alcune vibrazioni a bassa frequenza risultano particolarmente sensibili ai bordi; viene inoltre studiato come cambia una delle bande dello spettro al variare dell’eccitazione. Queste corrispondenze contribuiscono a riconoscere la struttura dei nanonastri attraverso una misura spettroscopica.

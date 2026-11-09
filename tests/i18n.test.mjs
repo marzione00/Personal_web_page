@@ -12,8 +12,8 @@ test('IT/EN contain corresponding paths with stable anchors and original assets'
 });
 test('English narrative, CV records and all geometry explanations are loaded from Markdown',()=>{
  assert.match(en.home.ricercaAttuale,/cybersecurity/);assert.match(en.profile.personalInterests,/Alessandra Martin/);
- assert.match(en.profile.personalInterests,/2026/);assert.match(en.profile.personalInterests,/indoor climbing/);
- assert.equal(en.geometry.items.length,it.geometry.items.length);for(const g of en.geometry.items){assert.ok(g.spiegazione.length>50);assert.ok(g.limiti.length>30);assert.equal(g.sceneSha256,it.geometry.byId[g.id].sceneSha256);}
+ assert.match(en.profile.personalInterests,/2026/);assert.match(en.profile.personalInterests,/indoor climbing/i);
+ assert.equal(en.geometry.items.length,it.geometry.items.length);for(const g of en.geometry.items){assert.ok(g.spiegazione.length>50);assert.ok(g.limiti.length>30);assert.ok(g.osservazione.length>100);assert.notEqual(g.osservazione,it.geometry.byId[g.id].osservazione);assert.equal(g.sceneSha256,it.geometry.byId[g.id].sceneSha256);}
  assert.match(en.profile.teaching[0].title,/Information|Informatics|Mathematics/);
 });
 test('Italian epigraphs are complete labelled translations; English sources retain originals',()=>{

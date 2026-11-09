@@ -18,7 +18,7 @@ Time series, forecast evaluation and statistical methods for complex data.
 How can a forecast be evaluated when data change over time?
 
 ## overview
-The time-series work has addressed the evaluation of forecasting methods and the translation of numerical procedures between programming languages. A university project concerned COVID-19 data; the Data Science 4Citizens programme used climate time series to teach data-analysis techniques.
+Time-series analysis includes the evaluation of forecasting methods and the translation of numerical procedures between programming languages, through experience involving COVID-19 data and, in Data Science 4Citizens, climate series used to teach data-analysis techniques.
 
 ## approach
 This experience includes statistical models and computational tools in Python and R. His training in Data Science and Economics, together with teaching in mathematical methods for finance, connects with his interest in probabilistic market modelling and risk assessment. These subjects form an applied area of interest, while the main publication record concerns cybersecurity and nanostructure physics.

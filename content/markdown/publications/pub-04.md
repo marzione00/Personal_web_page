@@ -15,7 +15,7 @@ Nanoscale 12(38), 19681–19688
 Leggere la forma dei bordi del grafene attraverso le vibrazioni
 
 ## plainSummary
-Le vibrazioni degli atomi possono fornire una firma della struttura dei bordi di un nanonastro di grafene.
+Lo studio esamina le vibrazioni degli atomi nei nanonastri di grafene, attraverso le quali è possibile ricavare una firma della struttura dei bordi e mettere in relazione la forma della nanostruttura con le sue proprietà vibrazionali.
 
 ## explanation
 Lo studio combina misure di spettroscopia a perdita di energia degli elettroni con calcoli teorici. Il confronto permette di associare alcuni segnali alle vibrazioni dei legami carbonio–idrogeno sui bordi, distinguendo caratteristiche della loro struttura. Anche le estremità del nastro lasciano segnali specifici, la cui intensità può dare indicazioni sulla lunghezza media. La relazione fra spettro e struttura offre quindi uno strumento per caratterizzare materiali che, su scala atomica, sono difficili da descrivere mediante la sola geometria visibile.

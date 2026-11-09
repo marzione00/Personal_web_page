@@ -1,0 +1,210 @@
+{
+  "nav.home": {
+    "it": "Home",
+    "en": "Home"
+  },
+  "nav.teaching": {
+    "it": "Didattica",
+    "en": "Teaching"
+  },
+  "nav.research": {
+    "it": "Ricerca",
+    "en": "Research"
+  },
+  "nav.blog": {
+    "it": "Blog",
+    "en": "Blog"
+  },
+  "nav.profile": {
+    "it": "Profilo & CV",
+    "en": "Profile & CV"
+  },
+  "nav.atlas": {
+    "it": "Atlante",
+    "en": "Atlas"
+  },
+  "nav.travels": {
+    "it": "Viaggi",
+    "en": "Travels"
+  },
+  "profile.expand": {
+    "it": "Leggi il percorso completo",
+    "en": "Read the full biography"
+  },
+  "course.materials": {
+    "it": "Apri i materiali",
+    "en": "Open materials"
+  },
+  "course.reference": {
+    "it": "Consulta la scheda",
+    "en": "View course details"
+  },
+  "course.available": {
+    "it": "Materiali disponibili",
+    "en": "Available materials"
+  },
+  "course.current": {
+    "it": "Insegnamenti dell’anno corrente",
+    "en": "Current academic year"
+  },
+  "course.archive": {
+    "it": "Archivio degli insegnamenti",
+    "en": "Course archive"
+  },
+  "course.references": {
+    "it": "Riferimenti dell’insegnamento",
+    "en": "Course references"
+  },
+  "course.noFiles": {
+    "it": "La scheda raccoglie i riferimenti istituzionali del corso, attraverso i quali consultare programma, calendario e modalità d’esame.",
+    "en": "This entry collects the course’s institutional references, where you can consult its syllabus, schedule and examination arrangements."
+  },
+  "study.map": {
+    "it": "Mappa degli argomenti",
+    "en": "Topic map"
+  },
+  "study.page": {
+    "it": "Pagina PDF",
+    "en": "PDF page"
+  },
+  "study.note": {
+    "it": "Le destinazioni seguono i segnalibri dei documenti originali; il numero indica la pagina fisica del PDF, che può differire dalla numerazione stampata nelle slide.",
+    "en": "Destinations follow bookmarks in the original documents; the number refers to the physical PDF page, which may differ from the printed slide number."
+  },
+  "study.language": {
+    "it": "Materiale in italiano · titoli originali delle sezioni",
+    "en": "Material in Italian · original section titles"
+  },
+  "study.resume": {
+    "it": "Riprendi lo studio",
+    "en": "Resume studying"
+  },
+  "study.forget": {
+    "it": "Cancella il punto di ripresa",
+    "en": "Clear saved position"
+  },
+  "study.saved": {
+    "it": "Il punto di ripresa viene conservato soltanto in questo browser.",
+    "en": "Your last study destination is saved only in this browser."
+  },
+  "article.index": {
+    "it": "Indice del saggio",
+    "en": "Essay contents"
+  },
+  "article.print": {
+    "it": "Stampa il testo completo",
+    "en": "Print the full text"
+  },
+  "article.current": {
+    "it": "Sezione corrente",
+    "en": "Current section"
+  },
+  "research.open": {
+    "it": "Approfondisci il tema",
+    "en": "Explore this topic"
+  },
+  "research.back": {
+    "it": "Tutti i temi di ricerca",
+    "en": "All research topics"
+  },
+  "research.related": {
+    "it": "Lavori collegati",
+    "en": "Related publications"
+  },
+  "research.cite": {
+    "it": "Copia il riferimento",
+    "en": "Copy citation"
+  },
+  "research.copied": {
+    "it": "Riferimento copiato",
+    "en": "Citation copied"
+  },
+  "research.bibliography": {
+    "it": "Bibliografia",
+    "en": "Bibliography"
+  },
+  "home.selected": {
+    "it": "Una lettura dalla ricerca",
+    "en": "A selected research reading"
+  },
+  "home.personal": {
+    "it": "Letture, forme ed esperienza",
+    "en": "Readings, forms and experience"
+  },
+  "home.personalCopy": {
+    "it": "Il percorso personale e le letture che accompagnano il lavoro scientifico trovano spazio nelle pagine del profilo e del nome, mentre l’atlante raccoglie le figure attraverso le quali esplorare le relazioni geometriche richiamate nei testi.",
+    "en": "The profile and the page about the site’s name bring together the personal journey and readings that accompany the scientific work, while the atlas collects figures through which to explore the geometric relationships discussed in the texts."
+  },
+  "home.name": {
+    "it": "Il nome e le letture",
+    "en": "The name and the readings"
+  },
+  "home.atlas": {
+    "it": "Esplora le forme",
+    "en": "Explore the forms"
+  },
+  "home.journal": {
+    "it": "Diari in preparazione",
+    "en": "Diaries in preparation"
+  },
+  "search.models": {
+    "it": "Geometria",
+    "en": "Geometry"
+  },
+  "search.topic": {
+    "it": "Argomento della dispensa",
+    "en": "Slide topic"
+  },
+  "search.description": {
+    "it": "Un corso, una figura, un argomento…",
+    "en": "A course, a figure, a topic…"
+  },
+  "search.empty": {
+    "it": "Nessun risultato. Prova un altro termine.",
+    "en": "No results. Try another term."
+  },
+  "effects.pause": {
+    "it": "Ferma tutti gli effetti",
+    "en": "Pause all effects"
+  },
+  "effects.resume": {
+    "it": "Riprendi gli effetti",
+    "en": "Resume effects"
+  },
+  "effects.auto": {
+    "it": "Qualità automatica",
+    "en": "Automatic quality"
+  },
+  "effects.fixed": {
+    "it": "Qualità costante",
+    "en": "Fixed quality"
+  },
+  "effects.quality": {
+    "it": "Qualità della cascata",
+    "en": "Cascade quality"
+  },
+  "geometry.experiment": {
+    "it": "Apri l’esperimento",
+    "en": "Open the experiment"
+  },
+  "geometry.verbal": {
+    "it": "Lettura della relazione",
+    "en": "Reading the relation"
+  },
+  "experiments.title": {
+    "it": "Variazioni e misure",
+    "en": "Variations and measurements"
+  },
+  "experiments.intro": {
+    "it": "Modificando i parametri puoi osservare come cambino le rappresentazioni e confrontare i valori ottenuti con le relazioni che le definiscono, mentre le note di ciascun esperimento ne delimitano il significato.",
+    "en": "Change the parameters to observe how the representations vary and compare the resulting values with their defining relations; each experiment’s notes describe the limits of its interpretation."
+  },
+  "print.all": {
+    "it": "Stampa completa",
+    "en": "Complete print view"
+  },
+  "rss.label": {
+    "it": "Segui il blog tramite RSS",
+    "en": "Follow the blog via RSS"
+  }
+}

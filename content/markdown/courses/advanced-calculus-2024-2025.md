@@ -6,4 +6,4 @@
 Advanced Calculus and Stochastic Processes
 
 ## summary
-Docenza a contratto nel percorso di Actuarial sciences, risk and data analysis. Archivio dell’a.a. 2024/2025.
+La scheda di Advanced Calculus and Stochastic Processes per l’anno accademico 2024/2025 raccoglie i riferimenti dell’insegnamento presso l’Università Cattolica del Sacro Cuore, attraverso i quali è possibile risalire alla pagina istituzionale e distinguere le informazioni del corso da quelle delle altre annualità.

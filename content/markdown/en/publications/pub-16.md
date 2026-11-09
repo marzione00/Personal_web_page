@@ -15,7 +15,7 @@ Topological Modelling of Nanostructures and Extended Systems · Springer, pp. 26
 Adding chemical information to a bond map
 
 ## plainSummary
-A molecular network describes which parts are connected; this study adds information about the reactivity of atoms and bonds.
+The study adds information about the reactivity of atoms and bonds to a molecular network’s description of atomic connections, allowing the representation of connectivity to include aspects of chemical characterisation.
 
 ## explanation
 “Coloured” topology assigns parts of the structure properties derived from electronegativity and chemical hardness, which describe aspects of a molecule’s electronic response. The chapter develops these indices within conceptual density functional theory and applies them to polycyclic aromatic hydrocarbons. Comparing the topological description with energy-related quantities helps investigate structure–reactivity relationships. Here, “colour” means the chemical information assigned to the network.

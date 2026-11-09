@@ -20,12 +20,12 @@ test('revised teaching lineage is grounded in the author updates',()=>{
  assert.match(text,/Teacher Training di 60 ore/);
  assert.match(text,/2026/);
   assert.match(text,/arrampicata indoor/);
- assert.match(text,/Con Alexandra Santos.*?prosegue ancora oggi/s);
+ assert.match(text,/Con Alexandra Santos.*?continuo a praticare/s);
 });
 test('public biography and research stay free of stale meta-narration',()=>{
  const z=[c.profile.biography,c.research.introduction,c.research.connections,...c.research.areas.flatMap(a=>[a.overview,a.approach])].join(' ');
  assert.doesNotMatch(z,/nel curriculum|il curriculum comprende|le sezioni successive|la sezione raccoglie|questa attività viene distinta|per approfondire il programma/i);
- assert.match(c.profile.biography,/insegna Informatica come docente a contratto/);
+ assert.match(c.profile.biography,/Insegno Informatica come docente a contratto/);
 });
 test('2026–2027 ongoing courses are retained and no old pending warning remains',()=>{
  assert.equal(c.courses.filter(x=>x.academicYear==='2026/2027'&&x.verified).length,3);
@@ -42,12 +42,12 @@ test('official archive bibliographies are differentiated from conference year',(
  assert.match(pages.get('ricerca.html'),/Nota bibliografica: l.archivio BOA/);
 });
 test('CV exposes the author PDF and a separate download',()=>{
- assert.match(pages.get('risorse.html'),/formato PDF originale/);
+ assert.match(pages.get('risorse.html'),/curriculum in PDF/);
  assert.match(pages.get('cv.html'),/download="Marzio_De_Corato_CV.pdf"/);
  assert.doesNotMatch(pages.get('cv.html'),/PDF precedente agli aggiornamenti/);
 });
 test('course without attached slides does not advertise a download',()=>{
- assert.match(pages.get('didattica.html'),/SCHEDA SENZA ALLEGATI/);
+ assert.match(pages.get('didattica.html'),/Riferimenti dell’insegnamento/);
  assert.match(pages.get('corso-quantum-post-quantum-computing-2026-2027.html'),/7<\/strong><span>moduli/);
 });
 test('all seven quantum PDF originals match the packaged manifest',()=>{

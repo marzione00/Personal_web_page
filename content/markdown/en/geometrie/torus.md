@@ -21,3 +21,9 @@ The torus is a parametric geometric object here. It does not automatically repre
 
 ## fonti
 [Reproducible parametrisation included in the project](geometrie.html#torus)
+
+## osservazione
+Follow a curve that passes through the central opening and compare it with one travelling around the ring, rotating the surface to recognise the two periodic directions used to describe points on the torus.
+
+## lettura
+A circle of radius zero point three eight revolves around the central axis at distance one; u locates a point around the ring and v around the tube section.

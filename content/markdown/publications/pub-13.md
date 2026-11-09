@@ -15,7 +15,7 @@ Topological Modelling of Nanostructures and Extended Systems · Springer, pp. 10
 Modelli topologici e proprietà delle superfici carboniose
 
 ## plainSummary
-Rappresentare gli atomi come nodi e i legami come connessioni permette di confrontare alcune proprietà fisiche con descrizioni matematiche più semplici.
+Rappresentando gli atomi come nodi e i legami come connessioni, il lavoro mette in relazione alcune proprietà fisiche delle superfici carboniose con descrizioni topologiche più semplici, attraverso le quali confrontare strutture che presentano organizzazioni differenti.
 
 ## explanation
 Il capitolo studia superfici di carbonio a curvatura negativa, le schwarziti, confrontando argomenti topologici e calcoli ab initio. Esamina in quali approssimazioni la struttura delle connessioni aiuti a descrivere gli spettri vibrazionali e come i difetti modifichino tali spettri. Per alcune schwarziti planari mette inoltre a confronto la stabilità calcolata con le indicazioni dell’indice di Wiener. La relazione fra modello di rete e descrizione fisica viene discussa insieme alle ipotesi che ne delimitano la validità.

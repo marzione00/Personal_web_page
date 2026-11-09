@@ -18,3 +18,9 @@ La rotazione di una catenaria genera una superficie con un collo centrale. Il co
 
 ## fonti
 [Parametrizzazione riproducibile inclusa nel progetto](geometrie.html#catenoid)
+
+## osservazione
+Ruotando la superficie fino a guardarla di lato, segui il restringimento che conduce al collo centrale e osserva come le due estremità si allarghino, confrontando l’andamento del profilo con quello delle linee che percorrono la figura nella direzione circolare.
+
+## lettura
+A quota zero virgola otto v, la sezione circolare ha raggio zero virgola otto per il coseno iperbolico di v; l’angolo u percorre la circonferenza.

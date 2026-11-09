@@ -45,6 +45,16 @@ jobs:
         run: node scripts/verify-photos.mjs
       - name: Verify links, markup and CSP hashes
         run: node scripts/check-output.mjs
+      - name: Check translations, editorial mirrors and resource budgets
+        run: |
+          node scripts/sync-editorial.mjs --check
+          node scripts/audit-release.mjs
+      - name: Install browser test dependencies
+        run: |
+          python -m pip install playwright==1.56.0
+          python -m playwright install --with-deps chromium
+      - name: Browser regression checks
+        run: python tests/browser-revision.py
       - name: Upload site only
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request' && vars.ENABLE_DEPLOY == 'true'
         uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0

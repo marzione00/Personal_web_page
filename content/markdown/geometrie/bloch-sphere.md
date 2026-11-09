@@ -18,3 +18,9 @@ La rotazione del visualizzatore cambia il punto di vista, non applica una porta 
 
 ## fonti
 [IBM Quantum — Bloch sphere](https://quantum.cloud.ibm.com/learning/en/courses/general-formulation-of-quantum-information/density-matrices/bloch-sphere)
+
+## osservazione
+Seguendo il vettore evidenziato e i riferimenti sulla sfera, osserva come meridiani e paralleli permettano di leggere la posizione dello stato rappresentato, mentre la rotazione della scena ti consente di distinguere il disegno della sfera dal punto di vista attraverso cui la stai guardando.
+
+## lettura
+Lo stato è il coseno di metà theta per lo stato zero, più l’esponenziale di i phi per il seno di metà theta per lo stato uno; il vettore ha coordinate seno theta coseno phi, seno theta seno phi e coseno theta.

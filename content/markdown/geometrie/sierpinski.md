@@ -18,3 +18,9 @@ La scena mostra tre livelli di ricorsione, quindi 64 tetraedri. La dimensione in
 
 ## fonti
 [Costruzione ricorsiva inclusa nel progetto](geometrie.html#sierpinski)
+
+## osservazione
+Individua i tetraedri più grandi che riesci a riconoscere e avvicina la figura per seguirne la suddivisione, osservando come i vuoti e i solidi ripetano una disposizione simile attraverso i tre livelli di ricorsione presenti nella scena.
+
+## lettura
+L’insieme è l’unione di quattro copie ottenute dimezzando la somma fra un punto e ciascun vertice; la dimensione autosimilare è logaritmo di quattro diviso logaritmo di due, uguale a due.

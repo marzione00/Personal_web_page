@@ -20,3 +20,9 @@ The formula describes an Ising model on a graph. Z normalises the probabilities;
 
 ## fonti
 [Marzio De Corato’s work on graphical models](ricerca.html#tema-ia-spiegabile)
+
+## osservazione
+Identify the groups of nodes and follow the edges between them, rotating the graph to separate connections that overlap in projection and compare links within a group with those reaching other groups.
+
+## lettura
+The probability of configuration s is the exponential of the sum of local h times s terms and J times paired-state interactions, divided by normalisation constant Z; each state is minus one or plus one.

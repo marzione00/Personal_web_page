@@ -50,5 +50,5 @@ test('old decorative labels and photo placeholders are absent in rendered public
 test('distinct mathematical geometry reaches real pages, not only source functions',()=>{
  const text=pages.map(p=>p.body).join('\n');
  for(const id of ['gyroid','schwarz-p','schwarz-d','julia','sierpinski','helicoid','torus'])assert.ok(text.includes(`data-geometry="${id}"`));
- for(const file of ['index.html','didattica.html','ricerca.html','cv.html','blog.html','geometrie.html'])assert.ok(pages.find(p=>p.file===file).body.includes('data-geometry='),file);
+ for(const file of ['didattica.html','ricerca.html','cv.html','blog.html','geometrie.html'])assert.ok(pages.find(p=>p.file===file).body.includes('data-geometry='),file);
 });
