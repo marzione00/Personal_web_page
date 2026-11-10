@@ -29,7 +29,3 @@ Observe the atom pairs along the armchair edge, then select the zigzag view to c
 
 ## lettura
 The planar lattice has two atoms per primitive cell and unit bond lengths in this model. The cut direction determines an armchair or zigzag termination.
-
-## legenda
-mint | nanoribbon bonds
-pale | carbon atoms

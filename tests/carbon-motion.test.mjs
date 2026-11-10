@@ -54,9 +54,9 @@ test('sheet previews keep the hexagonal lattice visible throughout a full motion
 function loader({reduced=false,saveData=false,paused=false}={}){
  const watchers=[],views=[],effectCallbacks=[],jobs=[];let anchors=[];
  const eventTarget=()=>({listeners:new Map(),addEventListener(type,fn){const list=this.listeners.get(type)||[];list.push(fn);this.listeners.set(type,list);},emit(type,event={}){for(const fn of this.listeners.get(type)||[])fn(event);}});
- const element=()=>({...eventTarget(),dataset:{},setAttribute(){},removeAttribute(name){if(name==='data-geometry-motion')delete this.dataset.geometryMotion;},querySelectorAll:()=>[],hasAttribute:name=>name==='data-geometry-ambient',classList:{add(){},remove(){}}});
+ const element=()=>({...eventTarget(),dataset:{},setAttribute(){},removeAttribute(name){if(name==='data-geometry-motion')delete this.dataset.geometryMotion;},querySelectorAll:()=>[],classList:{add(){},remove(){}}});
  const dialog=element(),controls=new Map();dialog.querySelector=s=>{if(!controls.has(s))controls.set(s,element());return controls.get(s);};
- const document={...eventTarget(),hidden:false,body:{dataset:{}},querySelector:()=>dialog,querySelectorAll:s=>s.includes('data-geometry-ambient')?anchors:[]};
+ const document={...eventTarget(),hidden:false,body:{dataset:{}},querySelector:()=>dialog,querySelectorAll:s=>s.includes('data-carbon-lattice')?anchors:[]};
  const motion={...eventTarget(),matches:reduced};
  class Viewer{
   constructor(){this.alive=true;this.angle=[.2,.4];views.push(this);}

@@ -26,8 +26,3 @@ Ruota il modello fino a distinguere i due piani, quindi passa dagli strati trasl
 
 ## lettura
 Il secondo frammento si ottiene dal primo mediante una traslazione orizzontale e una separazione verticale costante. I legami disegnati appartengono ai singoli strati.
-
-## legenda
-mint | legami di un frammento
-blue | legami dell’altro frammento
-pale | atomi dei due strati

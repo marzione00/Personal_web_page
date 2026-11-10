@@ -21,12 +21,7 @@ This periodic equation is a nodal representation of the D family, with a suitabl
 [Schwarzites and periodic surfaces — original research](https://pmc.ncbi.nlm.nih.gov/articles/PMC6126744/)
 
 ## osservazione
-Follow the surface sections and rotate the figure to separate branches that overlap in the initial view, comparing constrictions and openings within the displayed nodal patch.
+Follow an opening as you rotate the surface, observing which passages become visible and which are hidden, then compare this organisation with the Schwarz P entry to recognise differences between the two spatial patterns.
 
 ## lettura
 The product of the cosines of x, y and z minus the product of their sines equals zero.
-
-## legenda
-mint | sections at constant x and z
-blue | sections at constant y
-amber | reference section z = 0

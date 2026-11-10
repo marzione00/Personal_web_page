@@ -47,7 +47,7 @@ test('all new browser modules are syntactically valid plain scripts',()=>{
  for(const f of ['effects.js','matrix-rain.js','navigation.js','sound.js'])assert.doesNotThrow(()=>new vm.Script(read('src/'+f)));
 });
 test('interface audio is opt-in, bounded and silent on pointer movement or scrolling',()=>{
- const s=read('src/sound.js');assert.match(s,/mdc-sound-enabled','off'/);assert.match(s,/voices\.size>=3/);assert.match(s,/silence\(\)/);assert.doesNotMatch(s,/fetch\(|\.mp3|\.wav|addEventListener\('pointermove'/);
+ const s=read('src/sound.js');assert.match(s,/mdc-sound-enabled','off'/);assert.match(s,/voices\.size>=3/);assert.match(s,/silence\(\)/);assert.doesNotMatch(s,/fetch\(|\.mp3|\.wav|addEventListener\('(?:pointermove|pointerover|scroll)'/);
 });
 test('page navigation is bounded, abortable and falls back to the real URL',()=>{
  const s=read('src/navigation.js');assert.match(s,/credentials:'same-origin',redirect:'error'/);assert.match(s,/url\.origin===base\.origin/);assert.match(s,/ev\.ctrlKey\|\|ev\.metaKey/);assert.match(s,/hasAttribute\('download'\)/);assert.match(s,/location\.assign\(url\.href\)/);assert.match(s,/AbortController/);assert.match(s,/token!==generation/);assert.match(s,/2\*1024\*1024/);assert.match(s,/Different site build/);

@@ -958,6 +958,10 @@ English: Return home
 Italiano: Cerca un contenuto
 English: Find content
 
+## label240
+Italiano: 24 modelli scientifici e geometrici: esplorazione tridimensionale, formule e spiegazioni.
+English: 24 scientific and geometric models: three-dimensional exploration, formulae and explanations.
+
 ## label241
 Italiano: Superfici, reti, onde e frattali. Un repertorio esplorabile, con formule e limiti espliciti.
 English: Surfaces, networks, waves and fractals. An explorable collection with explicit formulae and limitations.
@@ -1003,8 +1007,8 @@ Italiano: Chiudi il visualizzatore
 English: Close the viewer
 
 ## label252
-Italiano: Modello geometrico: trascina per ruotare, usa le frecce o i pulsanti per orientare e ingrandire.
-English: Geometric model: drag to rotate, use the arrows or buttons to orient and zoom.
+Italiano: Modello tridimensionale: trascina per ruotare, usa le frecce o i pulsanti per orientare e ingrandire.
+English: Three-dimensional model: drag to rotate; use the arrow keys or buttons to orient and zoom.
 
 ## label253
 Italiano: Il modello si carica all’apertura.
@@ -1035,8 +1039,8 @@ Italiano: Ripristina
 English: Reset view
 
 ## label260
-Italiano: Avvia rotazione
-English: Start rotation
+Italiano: Ruota
+English: Rotate
 
 ## label261
 Italiano: Trascina per orientare. Usa + e − per lo zoom; Esc chiude la finestra. La rotazione riguarda il punto di vista.
@@ -1100,8 +1104,8 @@ Italiano: Superficie
 English: Surface
 
 ## cinemaV36_3
-Italiano: Maglia triangolare
-English: Triangle mesh
+Italiano: Reticolo
+English: Wireframe
 
 ## cinemaV36_4
 Italiano: Vista immersiva

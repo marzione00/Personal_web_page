@@ -19,13 +19,7 @@ Il modello ha tre dimensioni e un numero finito di punti. Non rappresenta le dim
 [NIST — ML-KEM](https://www.nist.gov/publications/module-lattice-based-key-encapsulation-mechanism-standard)
 
 ## osservazione
-Individua le tre frecce della base e il parallelepipedo evidenziato, quindi segui le traslazioni che generano i punti vicini, ruotando la figura affinché le direzioni che si sovrappongono nella proiezione diventino distinguibili.
+Individua i tre vettori evidenziati e segui i punti che si dispongono lungo le loro direzioni, ruotando la figura per riconoscere come combinazioni intere degli stessi vettori consentano di descrivere la rete anche quando la proiezione ne sovrappone alcuni elementi.
 
 ## lettura
 Il reticolo è l’insieme di tutte le combinazioni dei tre vettori di base con coefficienti interi.
-
-## legenda
-pale | punti del reticolo
-blue | collegamenti fra punti vicini
-mint | bordi della cella scelta
-amber | tre vettori della base

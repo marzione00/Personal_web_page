@@ -12,7 +12,7 @@ A low pedal and suspended chords accompany the emergence of the forms, while a m
 The piece was composed and synthesised for this website with AI assistance, using original procedural timbres without external musical samples or quotations from the Matrix soundtrack.
 
 ## ascolto
-Choose “Enter with audio” or open the player from preferences, where music and effects have independent volume controls. Entering a card, clicking and changing pages produce brief, soft electronic accents, with a lower effects level while music is playing. One accent accompanies entry into a card; movement within it and scrolling stay silent.
+Choose “Enter with audio” or open the player from preferences, where music and effects have independent volume controls. Clicks and page changes use brief, soft accents, while scrolling stays silent.
 
 Playback continues between pages in the same language. The music becomes softer when an article occupies the reading area or when you enable the light reading mode. If playback stops after changing language or reloading a page, Resume continues from the saved position.
 

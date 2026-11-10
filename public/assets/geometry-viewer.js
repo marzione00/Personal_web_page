@@ -1,4 +1,4 @@
-/* Shared local renderer for visible scientific previews and the interactive dialog.
+/* Shared local renderer for visible carbon previews and the interactive dialog.
  * Each instance uses WebGL or a bounded Canvas 2D projection. No remote requests.
  */
 (() => {
@@ -53,7 +53,7 @@
  }
  class Viewer{
   constructor({preview=false}={}){
-   this.preview=preview;this.dynamicLight=false;this.lightPhase=0;this.previewCount=1;this.sway=false;this.swayYaw=.58;this.swayPitch=.09;this.motionTime=0;
+   this.preview=preview;this.dynamicLight=false;this.lightPhase=0;this.previewCount=1;this.sway=false;this.motionTime=0;
    this.canvas=document.createElement('canvas');this.canvas.className='geometry-canvas';this.canvas.setAttribute('aria-hidden','true');
    const gl=this.gl=this.canvas.getContext('webgl',{antialias:true,alpha:true,premultipliedAlpha:false,preserveDrawingBuffer:true,powerPreference:'low-power'});
    if(!gl){
@@ -142,7 +142,7 @@
     const interval=this.software?Math.max(this.preview?83:67,Math.min(500,(this.drawCost||0)*(this.preview?this.previewCount*3:1.5))):this.preview?50:32;
     if(t-previous<interval){this.raf=requestAnimationFrame(tick);return;}const dt=Math.min(.5,(t-previous)/1000);previous=t;
     if(this.auto){this.motionTime+=dt;
-     if(this.sway){this.target=[this.model.camera[0]+this.swayPitch*Math.sin(this.motionTime*.16),this.model.camera[1]+this.swayYaw*Math.sin(this.motionTime*.12)];}
+     if(this.sway){this.target=[this.model.camera[0]+.09*Math.sin(this.motionTime*.16),this.model.camera[1]+.58*Math.sin(this.motionTime*.12)];}
      else{const delta=dt*(this.dynamicLight ? .12 : .24);this.target[1]+=delta;this.angle[1]+=delta;}
      if(this.dynamicLight)this.lightPhase+=dt*.22;
     }

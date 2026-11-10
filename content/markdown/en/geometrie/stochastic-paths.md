@@ -22,12 +22,7 @@ S₀ = 1, μ = 0.07 and σ = 0.32, with a fixed random seed. The coefficient of 
 [Wolfram — GeometricBrownianMotionProcess](https://reference.wolfram.com/language/ref/GeometricBrownianMotionProcess.html)
 
 ## osservazione
-Follow the amber path and compare it with the other eleven, observing sample changes without assigning economic meaning to the lateral spacing; the piecewise-linear trace preserves the increments of the synthetic construction.
+Follow one path from beginning to end and compare it with the others, observing where curves approach or diverge and remembering that lateral spacing separates them visually, while their values belong to synthetic realisations of the same model.
 
 ## lettura
 The change in S contains drift mu S times dt and a random term sigma S times dW; the solution multiplies the initial value by the exponential of mu minus half sigma squared, times t, plus sigma W.
-
-## legenda
-blue | path ensemble, shaded from blue to green
-amber | one realisation selected as a reference
-pale | final endpoints of the other paths

@@ -29,7 +29,3 @@ Osserva le coppie di atomi che scandiscono il bordo armchair, poi passa alla vis
 
 ## lettura
 Il reticolo piano ha due atomi per cella primitiva e legami di lunghezza unitaria nel modello. La direzione del taglio determina la terminazione armchair o zigzag.
-
-## legenda
-mint | legami del nanonastro
-pale | atomi di carbonio

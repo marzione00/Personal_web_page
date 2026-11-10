@@ -35,7 +35,7 @@ test('all 24 models can provide bounded nonempty wireframes without modifying ge
  for(const g of manifest){const b=fs.readFileSync(new URL('../public/geometry/'+g.scene,import.meta.url));const m=window.MDCGeometry.decode(b.buffer.slice(b.byteOffset,b.byteOffset+b.byteLength)),edges=window.MDCGeometry.edgeIndices(m.ix);assert.ok(edges.length>0&&edges.length<=m.ix.length*2);assert.ok(edges.every(n=>n<m.p.length/3));}
 });
 test('geometry controls remain bilingual and explicit in immersive mode',()=>{
- for(const language of ['it','en']){const d=loadContent(root,{language}),p=renderPages(d).find(p=>p.file==='geometrie.html'),h=shellHtml({data:d,page:p,css:'',js:'',csp:"default-src 'none'"});for(const control of ['data-geo-style','data-geo-expand','data-geo-close','data-geo-spin'])assert.ok(h.includes(control));assert.ok(h.includes(language==='en'?'Triangle mesh':'Maglia triangolare'));assert.ok(h.includes(language==='en'?'Immersive view':'Vista immersiva'));}
+ for(const language of ['it','en']){const d=loadContent(root,{language}),p=renderPages(d).find(p=>p.file==='geometrie.html'),h=shellHtml({data:d,page:p,css:'',js:'',csp:"default-src 'none'"});for(const control of ['data-geo-style','data-geo-expand','data-geo-close','data-geo-spin'])assert.ok(h.includes(control));assert.ok(h.includes(language==='en'?'Wireframe':'Reticolo'));assert.ok(h.includes(language==='en'?'Immersive view':'Vista immersiva'));}
 });
 test('all models render with Canvas 2D when WebGL is unavailable, with bounded zoom and cleanup',()=>{
  const calls={fill:0,stroke:0,image:0},frames=new Map();let next=0;
@@ -50,5 +50,5 @@ test('all models render with Canvas 2D when WebGL is unavailable, with bounded z
 });
 test('asynchronous geometry labels are translated after interactions',()=>{
  const window={},document={documentElement:{lang:'en'},addEventListener(){}};vm.runInNewContext(read('src/i18n-client.js'),{window,document});
- for(const [it,en] of [['Ferma rotazione','Stop rotation'],['Avvia rotazione','Start rotation'],['Mostra spiegazione','Show explanation'],['Vista immersiva','Immersive view'],['Disattiva le animazioni automatiche','Disable automatic animations']])assert.equal(window.MDCTranslate(it),en);
+ for(const [it,en] of [['Ferma rotazione','Stop rotation'],['Ruota','Rotate'],['Mostra spiegazione','Show explanation'],['Vista immersiva','Immersive view'],['Disattiva le animazioni automatiche','Disable automatic animations']])assert.equal(window.MDCTranslate(it),en);
 });

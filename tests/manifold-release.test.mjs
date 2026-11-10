@@ -16,7 +16,7 @@ test('the licence preserves third-party documents, quotes and software scope',()
 test('rain texture has bright leading heads with trailing characters above, positive downward translation',()=>{
  const s=read('src/matrix-rain.js');assert.match(s,/y=textureHeight-\(row\+1\)\*gap/);assert.match(s,/s\.t=\(s\.t\+s\.speed\*dt\*acceleration\*intensity\(\)\.speed\)/);assert.match(s,/speed:rand\(speed\*\.65,speed\*1\.3\)/);assert.match(s,/get direction\(\)\{return 'down';\}/);
 });
-test('UI sound uses rounded sine accents with soft attacks and bounded card-entry accents',()=>{
+test('UI sound uses rounded sine accents with soft attacks and no pointer noise',()=>{
  const s=read('src/sound.js');assert.match(s,/osc\.type='sine'/);assert.match(s,/voices\.size>=3/);assert.match(s,/now-lastChirp<360/);assert.match(s,/now-lastPage<700/);assert.doesNotMatch(s,/type='square'|type='triangle'|createBufferSource\(/);assert.match(s,/t\+\.055/);
 });
 test('music is separate, opt-in, session-persistent and syntactically safe',()=>{

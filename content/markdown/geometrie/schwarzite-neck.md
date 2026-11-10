@@ -27,17 +27,3 @@ Segui gli anelli a sei atomi sulle pareti curve e riconosci gli ottagoni che li 
 
 ## lettura
 La somma dei coseni di due pi greco per ciascuna coordinata è zero. La curvatura gaussiana K è il prodotto delle curvature principali k uno e k due, che nel collo hanno segni opposti: il prodotto è negativo.
-
-## legenda
-mint | legami carbonio–carbonio
-pale | atomi nei vertici del reticolo
-
-### schwarzite-sections
-mint | superficie nodale di riferimento
-blue | sezione longitudinale del collo
-amber | sezione trasversale del collo
-pale | punto comune alle due sezioni
-
-### schwarzite-lattice
-mint | legami e giunzioni del reticolo P688 esteso
-dark | facce di supporto alla lettura degli anelli

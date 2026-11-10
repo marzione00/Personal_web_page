@@ -20,12 +20,7 @@ S₀ = 1, μ = 0.07 e σ = 0.32, con seme casuale fissato. Il coefficiente della
 [Wolfram — GeometricBrownianMotionProcess](https://reference.wolfram.com/language/ref/GeometricBrownianMotionProcess.html)
 
 ## osservazione
-Segui la traiettoria color ambra e confrontala con le altre undici, osservando le variazioni dei campioni senza attribuire alla separazione laterale un significato economico; il tratto angoloso conserva gli incrementi della costruzione sintetica.
+Segui una traiettoria dall’inizio alla fine e confrontala con le altre, osservando dove le curve si avvicinino o divergano e ricordando che la separazione laterale serve a distinguerle, mentre i valori rappresentati appartengono a realizzazioni sintetiche dello stesso modello.
 
 ## lettura
 La variazione di S contiene un termine di deriva mu S per dt e un termine casuale sigma S per dW; la soluzione moltiplica il valore iniziale per l’esponenziale di mu meno metà sigma al quadrato, per t, più sigma W.
-
-## legenda
-blue | insieme delle traiettorie, con toni dal blu al verde
-amber | una realizzazione scelta come riferimento
-pale | estremi finali delle altre traiettorie

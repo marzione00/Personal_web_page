@@ -20,12 +20,7 @@ L’altezza è riscalata come 9f − 0.7 per la visualizzazione. È una distribu
 [SciPy — multivariate_normal](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.multivariate_normal.html)
 
 ## osservazione
-Confronta le sezioni ellittiche della campana, che corrispondono a livelli costanti della densità, e passa dalla vista dall’alto a quella laterale per riconoscere insieme l’orientamento della dispersione e la variazione dell’altezza.
+Osserva la campana prima dall’alto e poi lateralmente, così da confrontare l’orientamento delle sue sezioni con la variazione dell’altezza e riconoscere come la forma renda visibili, insieme alla dispersione delle due componenti, la dipendenza descritta dalla correlazione.
 
 ## lettura
 La densità gaussiana usa nell’esponente meno metà della forma quadratica dello scarto dalla media con l’inversa della covarianza; la normalizzazione è due pi greco per la radice del determinante di sigma.
-
-## legenda
-blue | maglia della densità
-pale | tre ellissi a densità costante
-amber | quarta ellisse, scelta come riferimento

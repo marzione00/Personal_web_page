@@ -27,8 +27,3 @@ Segui il bordo di un pentagono e confrontalo con gli esagoni adiacenti, quindi r
 
 ## lettura
 Sessanta vertici e novanta spigoli delimitano trentadue facce, dodici pentagonali e venti esagonali. La differenza fra vertici e spigoli, sommata alle facce, vale due.
-
-## legenda
-mint | legami della gabbia
-pale | atomi di carbonio
-warm | facce pentagonali

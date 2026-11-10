@@ -22,11 +22,7 @@ Two levels are displayed, corresponding to 400 cubes. Properties of the infinite
 [Wolfram — MengerMesh](https://reference.wolfram.com/language/ref/MengerMesh.html)
 
 ## osservazione
-Look through the larger openings and follow the edges of smaller cavities as rotation reveals internal passages; shared faces between adjacent cubes are omitted from the rendering to clarify the same 400-cell structure.
+Look through one of the cube’s openings and slowly change viewpoint, observing how the larger cavities reveal smaller openings and how this organisation repeats across the two represented construction levels.
 
 ## lettura
 The set is the union of twenty copies scaled to one third; its self-similar dimension is logarithm of twenty divided by logarithm of three.
-
-## legenda
-mint | outer and cavity edges
-dark | exposed cube faces

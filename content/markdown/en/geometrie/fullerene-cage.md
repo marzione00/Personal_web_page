@@ -27,8 +27,3 @@ Follow a pentagon and compare its boundary with neighbouring hexagons. Rotate th
 
 ## lettura
 Sixty vertices and ninety edges enclose thirty-two faces: twelve pentagons and twenty hexagons. Vertices minus edges plus faces equals two.
-
-## legenda
-mint | cage bonds
-pale | carbon atoms
-warm | pentagonal faces

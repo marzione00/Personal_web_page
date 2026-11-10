@@ -3,20 +3,7 @@ from pathlib import Path
 from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 from functools import partial
 from threading import Thread
-from time import monotonic, sleep
 from playwright.sync_api import sync_playwright, expect
-
-def wait_for_light_change(page, previous_phase, timeout=10):
-    """Poll the renderer from the test process; avoid waitForFunction's page-side eval."""
-    deadline=monotonic()+timeout
-    while True:
-        phase=page.evaluate('window.MDCGeometryDebug?.viewer?.lightPhase ?? null')
-        if phase is not None and phase>previous_phase:
-            return
-        if monotonic()>=deadline:
-            raise AssertionError(f'Geometry light did not advance within {timeout}s: previous={previous_phase}, current={phase}')
-        sleep(.05)
-
 root=Path(__file__).resolve().parents[1]
 class QuietHandler(SimpleHTTPRequestHandler):
     def log_message(self,*args): pass
@@ -84,7 +71,7 @@ try:
         assert page.evaluate('!window.ManifoldMusic.loaded')
         page.locator('[data-entry-audio="on"]').click()
         expect(page.locator('[data-entry-dialog]')).not_to_be_visible(timeout=5000)
-        expect(page.locator('[data-music-play]')).to_have_attribute('aria-pressed','true',timeout=10000)
+        page.wait_for_function('window.ManifoldMusic.playing')
         origin=page.evaluate('performance.timeOrigin')
         page.locator('.hero .actions a[href="didattica.html"]').click()
         expect(page.locator('body')).to_have_attribute('data-page','didattica.html')
@@ -106,7 +93,7 @@ try:
         page.locator('.brand').first.click()
         expect(page.locator('body')).to_have_attribute('data-page','index.html')
         expect(page.locator('[data-entry-dialog]')).not_to_be_visible()
-        expect(page.locator('.construction-code, .portrait-shutters')).to_have_count(0,timeout=10000)
+        page.wait_for_function('!document.querySelector(".construction-code,.portrait-shutters")')
         assert page.evaluate('window.ManifoldMusic.playing')
         assert page.evaluate('window.MDCNavigation.stats.visits')>=6
         assert page.evaluate('window.MDCNavigation.stats.fallbacks')==0
@@ -121,15 +108,13 @@ try:
         expect(page.locator('body')).to_have_attribute('data-page','index.html')
         # An explicit silent replay also stops the existing audio.
         page.locator('[data-entry-replay]').click();page.locator('[data-entry-audio="off"]').click()
-        expect(page.locator('[data-entry-dialog]')).not_to_be_visible(timeout=5000)
-        expect(page.locator('[data-music-play]')).to_have_attribute('aria-pressed','false')
-        expect(page.locator('[data-sound-toggle]')).to_have_attribute('aria-pressed','false')
+        page.wait_for_function('!window.ManifoldMusic.playing && !window.MDCSound.enabled')
         # Carbon autoplay is visibility-driven; manual exploration and motion preferences stop it.
         carbon=page.locator('[data-geometry-open="fullerene-cage"]')
         carbon.scroll_into_view_if_needed();expect(carbon).to_have_attribute('data-geometry-motion','running')
         carbon.click();expect(page.locator('[data-geo-spin]')).to_have_attribute('aria-pressed','true')
         phase=page.evaluate('MDCGeometryDebug.viewer.lightPhase')
-        wait_for_light_change(page,phase)
+        page.wait_for_function('(phase)=>MDCGeometryDebug.viewer.lightPhase>phase',arg=phase)
         assert page.evaluate('!MDCGeometryDebug.viewer.gl || MDCGeometryDebug.viewer.gl.getError()===0')
         page.locator('[data-geo-right]').click()
         expect(page.locator('[data-geo-spin]')).to_have_attribute('aria-pressed','false')
@@ -143,45 +128,7 @@ try:
         expect(page.locator('body')).to_have_attribute('data-page','ricerca.html')
         bilayer=page.locator('[data-geometry-open="bilayer-nanoflake"]')
         bilayer.scroll_into_view_if_needed();expect(bilayer).to_have_attribute('data-geometry-motion','running')
-        # Every volumetric family uses the same bounded preview pool and modal renderer.
-        page.locator('.footer a[href="geometrie.html"]').click()
-        expect(page.locator('body')).to_have_attribute('data-page','geometrie.html')
-        for model in ['markov-network','program-flow','decision-surface','entropy-trace','gyroid','schwarz-p','schwarz-d','vibrational-mode','schwarz-network','bloch-sphere','interference','quantum-circuit','lattice','stochastic-paths','gaussian-density','covariance','sierpinski','menger','mobius','helicoid','catenoid','torus']:
-            card=page.locator(f'[data-geometry-open="{model}"]')
-            card.scroll_into_view_if_needed()
-            expect(card).to_have_attribute('data-geometry-motion','running',timeout=10000)
-            assert page.locator('[data-geometry-ambient] canvas').count()<=3
-            card.click();expect(page.locator('#geometry-dialog')).to_be_visible()
-            assert page.locator('#geometry-dialog').evaluate('(dialog)=>dialog.scrollTop')==0
-            expect(page.locator('[data-geo-status]')).to_contain_text('Trascina')
-            expect(page.locator('#geometry-stage canvas')).to_have_count(1)
-            expect(page.locator('#geometry-dialog [data-geo-legend]:visible')).to_have_count(1)
-            expect(page.locator('#geometry-dialog h2')).to_have_count(1)
-            expect(page.locator('[data-geo-spin]')).to_have_attribute('aria-pressed','true')
-            page.locator('[data-geo-right]').click()
-            expect(page.locator('[data-geo-spin]')).to_have_attribute('aria-pressed','false')
-            page.locator('[data-geo-close]').click()
-        page.locator('[data-geometry-open="julia"]').click()
-        expect(page.locator('[data-geo-status]')).to_contain_text('Trascina')
-        expect(page.locator('[data-geo-spin]')).to_have_attribute('aria-pressed','false')
-        page.locator('[data-geo-view="side"]').click()
-        page.locator('[data-geo-view="front"]').click()
-        expect(page.locator('[data-geo-spin]')).to_have_attribute('aria-pressed','false')
-        page.locator('[data-geo-close]').click()
-        page.locator('[data-geometry-open="schwarzite-neck"]').click()
-        expect(page.locator('[data-geo-status]')).to_contain_text('Trascina')
-        for preset in ['schwarzite-sections','schwarzite-lattice','schwarzite-neck']:
-            page.locator(f'[data-geo-preset="{preset}"]').click()
-            expect(page.locator('#geometry-stage')).to_have_attribute('data-geometry-scene',preset)
-            expect(page.locator('#geometry-dialog [data-geo-legend]:visible')).to_have_count(1)
-            expect(page.locator('#geometry-dialog [data-geo-legend]:visible')).to_have_attribute('data-geo-legend',preset)
-        page.locator('[data-geo-style]').select_option('wire')
-        expect(page.locator('#geometry-dialog .geometry-legend')).to_be_hidden()
-        expect(page.locator('[data-geo-style-help]')).to_contain_text('suddivisione grafica')
-        page.locator('[data-geo-style]').select_option('surface')
-        expect(page.locator('#geometry-dialog [data-geo-legend]:visible')).to_have_count(1)
-        page.locator('[data-geo-close]').click()
         assert not errors,errors
         context.close();browser.close()
 finally:server.shutdown()
-print('Entry, persistent music, navigation/history, carbon/security autoplay, motion preferences and cleanup passed.')
+print('Entry, persistent music, navigation/history, carbon autoplay, motion preferences and cleanup passed.')

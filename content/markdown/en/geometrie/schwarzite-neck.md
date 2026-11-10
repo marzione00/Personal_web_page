@@ -27,17 +27,3 @@ Follow the six-atom rings along the curved walls and identify the octagons conne
 
 ## lettura
 The sum of the cosines of two pi times each coordinate is zero. Gaussian curvature K is the product of the principal curvatures k one and k two. Their opposite signs make the product negative in the neck.
-
-## legenda
-mint | carbon–carbon bonds
-pale | atoms at lattice vertices
-
-### schwarzite-sections
-mint | reference nodal surface
-blue | longitudinal neck section
-amber | transverse neck section
-pale | common point of the two sections
-
-### schwarzite-lattice
-mint | bonds and junctions of the extended P688 lattice
-dark | faces supporting the reading of the rings

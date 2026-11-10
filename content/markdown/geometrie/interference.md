@@ -20,12 +20,7 @@ La superficie è l’istantanea di un campo reale sintetico. Non è una densità
 [IBM Quantum — Superposition](https://quantum.cloud.ibm.com/learning/en/modules/quantum-mechanics/superposition-with-qiskit)
 
 ## osservazione
-Confronta le creste e le depressioni attraverso il reticolo della superficie e segui le due sezioni centrali, che aiutano a riconoscere la sovrapposizione dei contributi periodici mentre cambi punto di vista su questa singola configurazione del campo.
+Confronta le creste con le depressioni e osserva come la disposizione delle une rispetto alle altre diventi più leggibile cambiando l’orientamento della scena, tenendo presente che stai esaminando una singola configurazione della somma dei due contributi periodici.
 
 ## lettura
 La superficie somma i coseni di tre x e tre y, moltiplicati per zero virgola trentaquattro; il modulo quadro della somma di due ampiezze comprende i due moduli quadri e due volte la parte reale del prodotto della prima ampiezza coniugata per la seconda.
-
-## legenda
-mint | maglia del campo risultante
-amber | sezione y = 0
-pale | sezione x = 0
