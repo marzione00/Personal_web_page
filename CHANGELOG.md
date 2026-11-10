@@ -1,5 +1,14 @@
+# Aggiornamento 3.12.2 — 10 novembre 2026
+
+- Sostituita l’attesa JavaScript della pulizia delle transizioni con un’asserzione sul numero degli elementi residui.
+- Controlli audio basati sugli stati accessibili dei pulsanti e sulla chiusura effettiva dell’ingresso.
+- Verifica dell’illuminazione con attesa limitata nel processo di test; rimossi i richiami a `wait_for_function` dalla suite CI.
+- Conservati i controlli funzionali, la configurazione di sicurezza e il README professionale.
+- 272 test Node e controlli della build superati; verifica mirata nel browser del ritorno dall’atlante e delle scelte audio.
+
 # Aggiornamento 3.12.1 — 10 novembre 2026
 
+- README riorganizzato con presentazione del progetto, avvio locale, struttura della repository, verifiche e pubblicazione; cronologia e rapporti tecnici raccolti nella documentazione dedicata.
 - Rotazione autonoma delle strutture carboniose visibili, anche su mobile.
 - Luce mobile con variazioni graduali e rotazione alternata dei modelli piani per conservare la leggibilità degli esagoni.
 - Continuità fra anteprima e visualizzatore, pausa ai comandi manuali, cambio di preset con conservazione dello stato di movimento.

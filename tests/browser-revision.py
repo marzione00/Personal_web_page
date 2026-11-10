@@ -3,7 +3,20 @@ from pathlib import Path
 from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 from functools import partial
 from threading import Thread
+from time import monotonic, sleep
 from playwright.sync_api import sync_playwright, expect
+
+def wait_for_light_change(page, previous_phase, timeout=10):
+    """Poll the renderer from the test process; avoid waitForFunction's page-side eval."""
+    deadline=monotonic()+timeout
+    while True:
+        phase=page.evaluate('window.MDCGeometryDebug?.viewer?.lightPhase ?? null')
+        if phase is not None and phase>previous_phase:
+            return
+        if monotonic()>=deadline:
+            raise AssertionError(f'Geometry light did not advance within {timeout}s: previous={previous_phase}, current={phase}')
+        sleep(.05)
+
 root=Path(__file__).resolve().parents[1]
 class QuietHandler(SimpleHTTPRequestHandler):
     def log_message(self,*args): pass
@@ -71,7 +84,7 @@ try:
         assert page.evaluate('!window.ManifoldMusic.loaded')
         page.locator('[data-entry-audio="on"]').click()
         expect(page.locator('[data-entry-dialog]')).not_to_be_visible(timeout=5000)
-        page.wait_for_function('window.ManifoldMusic.playing')
+        expect(page.locator('[data-music-play]')).to_have_attribute('aria-pressed','true',timeout=10000)
         origin=page.evaluate('performance.timeOrigin')
         page.locator('.hero .actions a[href="didattica.html"]').click()
         expect(page.locator('body')).to_have_attribute('data-page','didattica.html')
@@ -93,7 +106,7 @@ try:
         page.locator('.brand').first.click()
         expect(page.locator('body')).to_have_attribute('data-page','index.html')
         expect(page.locator('[data-entry-dialog]')).not_to_be_visible()
-        page.wait_for_function('!document.querySelector(".construction-code,.portrait-shutters")')
+        expect(page.locator('.construction-code, .portrait-shutters')).to_have_count(0,timeout=10000)
         assert page.evaluate('window.ManifoldMusic.playing')
         assert page.evaluate('window.MDCNavigation.stats.visits')>=6
         assert page.evaluate('window.MDCNavigation.stats.fallbacks')==0
@@ -108,13 +121,15 @@ try:
         expect(page.locator('body')).to_have_attribute('data-page','index.html')
         # An explicit silent replay also stops the existing audio.
         page.locator('[data-entry-replay]').click();page.locator('[data-entry-audio="off"]').click()
-        page.wait_for_function('!window.ManifoldMusic.playing && !window.MDCSound.enabled')
+        expect(page.locator('[data-entry-dialog]')).not_to_be_visible(timeout=5000)
+        expect(page.locator('[data-music-play]')).to_have_attribute('aria-pressed','false')
+        expect(page.locator('[data-sound-toggle]')).to_have_attribute('aria-pressed','false')
         # Carbon autoplay is visibility-driven; manual exploration and motion preferences stop it.
         carbon=page.locator('[data-geometry-open="fullerene-cage"]')
         carbon.scroll_into_view_if_needed();expect(carbon).to_have_attribute('data-geometry-motion','running')
         carbon.click();expect(page.locator('[data-geo-spin]')).to_have_attribute('aria-pressed','true')
         phase=page.evaluate('MDCGeometryDebug.viewer.lightPhase')
-        page.wait_for_function('(phase)=>MDCGeometryDebug.viewer.lightPhase>phase',arg=phase)
+        wait_for_light_change(page,phase)
         assert page.evaluate('!MDCGeometryDebug.viewer.gl || MDCGeometryDebug.viewer.gl.getError()===0')
         page.locator('[data-geo-right]').click()
         expect(page.locator('[data-geo-spin]')).to_have_attribute('aria-pressed','false')

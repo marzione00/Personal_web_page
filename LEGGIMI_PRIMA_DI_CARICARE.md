@@ -1,4 +1,6 @@
-# Pacchetto GitHub completo — Topological Manifolds v3.12.1 — Carbonio animato
+# Pacchetto GitHub completo — Topological Manifolds v3.12.2
+
+La correzione dei controlli browser è descritta in `docs/CORREZIONE_BROWSER_v3.12.2.md`. Per applicare soltanto questa correzione è sufficiente sostituire `tests/browser-revision.py` e creare un nuovo commit; lo ZIP completo include anche il README professionale e tutte le geometrie animate.
 
 1. Conserva una copia della repository attuale. Questo ZIP parte dal commit `8964fc96b08671089cfb5d3561acb311bb994599`; eventuali modifiche successive vanno confrontate prima di sostituire i file.
 2. Estrai lo ZIP. Nella radice trovi subito `package.json`, `README.md`, `CV.pdf`, `src/`, `content/`, `public/` e `.github/`.

@@ -4,10 +4,10 @@
   "baseRepository": "https://github.com/marzione00/Personal_web_page",
   "baseCommit": "8964fc96b08671089cfb5d3561acb311bb994599",
   "remoteDeployment": false,
-  "version": "3.12.1",
-  "packageVersion": "3.12.1",
-  "basedOnPackage": "v3.12 complete carbon family, periodic Schwarzite, graph, Matrix and audio package",
-  "sourceFiles": 554,
+  "version": "3.12.2",
+  "packageVersion": "3.12.2",
+  "basedOnPackage": "v3.12.1 animated carbon and professional README",
+  "sourceFiles": 556,
   "verification": {
     "nodeTests": 272,
     "nodeTestsPassed": 272,
@@ -16,32 +16,34 @@
     "imageReferences": 122,
     "geometryCatalogEntries": 28,
     "versionedScenes": 32,
-    "responsiveWidths": [
-      390,
-      320
+    "pythonSyntaxChecked": true,
+    "lightWaitIsolatedChecks": [
+      "phase advancement",
+      "bounded timeout",
+      "browser exception propagation"
     ],
-    "browserRenderingTested": "Canvas 2D: visible carbon autoplay, global pause, manual orientation, progressive navigation, offscreen cleanup, 27-cell Schwarzite, English mobile edge preset",
+    "browserSmokeChecks": [
+      "atlas model open and close",
+      "return home with no transition decorations",
+      "audio entry",
+      "silent replay with music and sound disabled"
+    ],
     "fullPlaywrightSuiteRunLocally": false,
-    "webGLBrowserRunLocally": false,
-    "carbonBinaryAssetsPreserved": true,
-    "previewRendererLimit": 3,
+    "remoteWorkflowVerified": false,
+    "siteAssetsUnchanged": true,
     "releaseAuditPassed": true,
     "editorialCheckPassed": true
   },
   "addedSourceFiles": [
-    "docs/CARBONIO_ANIMATO_v3.12.1.md",
-    "docs/storico/CARBONIO_v3.12_RELEASE_MANIFEST.json",
-    "tests/carbon-motion.test.mjs"
+    "docs/CORREZIONE_BROWSER_v3.12.2.md",
+    "docs/storico/CARBONIO_ANIMATO_v3.12.1_RELEASE_MANIFEST.json"
   ],
   "removedSourceFiles": [],
   "modifiedSourceFiles": [
     "CHANGELOG.md",
     "LEGGIMI_PRIMA_DI_CARICARE.md",
-    "README.md",
     "content/site.json",
     "package.json",
-    "public/assets/geometry-viewer.js",
-    "src/geometry-loader.js",
     "tests/browser-revision.py",
     "tests/identity-v33.test.mjs"
   ],
@@ -75,8 +77,8 @@
       "sha256": "7a4b2b912cb020d268a40917f3d38d427d131f6f2beb9c00721de924a286da9f"
     },
     "CHANGELOG.md": {
-      "bytes": 17723,
-      "sha256": "34d4fbd55c0a2e81ca19179af91f7d4dddcae2340c44ecd10b70cf66b109f7d8"
+      "bytes": 18544,
+      "sha256": "953794aea051a3182540ace99a674e38d484478e0f0bf17f65a4d4760cd49c89"
     },
     "COME_MODIFICARE_I_TESTI.md": {
       "bytes": 11138,
@@ -91,16 +93,16 @@
       "sha256": "88e2c4406b7a0292910ce07e628be083db5c82fd10a854a98a729aaba1cff3f2"
     },
     "LEGGIMI_PRIMA_DI_CARICARE.md": {
-      "bytes": 5222,
-      "sha256": "06417de55b72b0258efb01c24f1c2d23fa1fffe36e4ce68a75434ae841406ca2"
+      "bytes": 5497,
+      "sha256": "44978308c30b858a6433d7310734872a39cf0116910ba7984bd0c9c3f69748a0"
     },
     "LICENSE.md": {
       "bytes": 1613,
       "sha256": "de1adbb4b5efd72cb47094f3db8a0ea52d52df0ee5c09d68ed8cff664fcdb0af"
     },
     "README.md": {
-      "bytes": 11748,
-      "sha256": "18ba8416444b5f0a93040db80b5afd092a0c02138ff9065bfd2228172e609b3e"
+      "bytes": 5369,
+      "sha256": "963e5a32ac53243cca90d812272c07a284c276c0c978f16e49eb3249dfd2aae7"
     },
     "SECURITY.md": {
       "bytes": 5019,
@@ -916,7 +918,7 @@
     },
     "content/site.json": {
       "bytes": 161,
-      "sha256": "057f6a72ca64833aa6283363a5c3df3c1000b2baee77cf5bc5c64583ec0bcbd3"
+      "sha256": "98a3594b604783dbd08185662f75e05bf47719d9903f96e5da6285f0a568cc31"
     },
     "content/study-guide.json": {
       "bytes": 26232,
@@ -1001,6 +1003,10 @@
     "docs/CONTROLLO_STRATIFICAZIONI_v3.9.md": {
       "bytes": 2642,
       "sha256": "731801790fd0a1d4647ea670dc9cb5616d4ea97d78fcf3d050c581ef76b84aa8"
+    },
+    "docs/CORREZIONE_BROWSER_v3.12.2.md": {
+      "bytes": 2852,
+      "sha256": "ba8929c6328db967ecbec87850482baff80779a34f8e87503b004190da459334"
     },
     "docs/CORREZIONE_CI_v3.8.md": {
       "bytes": 2436,
@@ -1166,6 +1172,10 @@
       "bytes": 1629,
       "sha256": "a2a9d3b50409521d701cfb257a55430c966fb11f2bb6746e43c9bce9fb827e8f"
     },
+    "docs/storico/CARBONIO_ANIMATO_v3.12.1_RELEASE_MANIFEST.json": {
+      "bytes": 88651,
+      "sha256": "c1668b98e0d9556bfc217ba909c4b9b88ed89064b3d9f2444f3aff338c4c2fa0"
+    },
     "docs/storico/CARBONIO_v3.12_RELEASE_MANIFEST.json": {
       "bytes": 89422,
       "sha256": "7be6af3ef344d449c525c836a49af54a63f9f9a068041d2973be0363a1d0571a"
@@ -1312,7 +1322,7 @@
     },
     "package.json": {
       "bytes": 1567,
-      "sha256": "70d2d9165740d1b413e0438d7567682388361a6359f6df84f9a505fd46d00276"
+      "sha256": "a9a79a438bbe5444d74470f956b8ca11a8bee97b29fa8794e87e2c075a6c3025"
     },
     "public/assets/geometry-viewer.js": {
       "bytes": 15199,
@@ -2095,8 +2105,8 @@
       "sha256": "3b18b5149bda8e06e8114d4a38b39ac75c5107dc94e03ddf50391f345d8c1d97"
     },
     "tests/browser-revision.py": {
-      "bytes": 9697,
-      "sha256": "f9ce529d27cfddb70a5a788da88b70be53b4bf62948624c37cf9b48514850a1a"
+      "bytes": 10445,
+      "sha256": "58ad4ed5322d855877a1fcfb020d7b81ac0527ffb8ad954fed786f6e0cabb4d5"
     },
     "tests/browser-travels.py": {
       "bytes": 7258,
@@ -2148,7 +2158,7 @@
     },
     "tests/identity-v33.test.mjs": {
       "bytes": 2836,
-      "sha256": "3293666a3b6c0968ef792495a53e0263789f241ebb9794407a2487a494ee74b8"
+      "sha256": "d6daf1797d510a60a21ef1b3bf812db62680d72629d9ed35356ad47172c17e78"
     },
     "tests/manifold-release.test.mjs": {
       "bytes": 4545,
