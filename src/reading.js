@@ -17,6 +17,6 @@
   if(ev.target.closest('[data-print]'))window.print();
  });
  let closed=[];window.addEventListener('beforeprint',()=>{closed=Array.from(activeRoot()?.querySelectorAll('details:not([open])')||[]);closed.forEach(d=>d.open=true);});window.addEventListener('afterprint',()=>{closed.forEach(d=>d.open=false);closed=[];});
- window.addEventListener('hashchange',revealHash);window.addEventListener('mdc:content-change',()=>{contents();restoreStudy();requestAnimationFrame(revealHash);});
+ window.addEventListener('hashchange',revealHash);window.addEventListener('mdc:content-change',ev=>{contents();restoreStudy();if(!ev.detail?.positionManaged)requestAnimationFrame(revealHash);});
  revealHash();contents();restoreStudy();
 })();

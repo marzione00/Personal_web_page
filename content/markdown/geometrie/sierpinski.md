@@ -17,7 +17,7 @@ Quattro copie ridotte occupano i vertici di un tetraedro. Ripetendo la costruzio
 La scena mostra tre livelli di ricorsione, quindi 64 tetraedri. La dimensione indicata riguarda il limite matematico, non l’oggetto finito renderizzato.
 
 ## fonti
-[Costruzione ricorsiva inclusa nel progetto](geometrie.html#sierpinski)
+[Wolfram — SierpinskiMesh](https://reference.wolfram.com/language/ref/SierpinskiMesh.html)
 
 ## osservazione
 Individua i tetraedri più grandi che riesci a riconoscere e avvicina la figura per seguirne la suddivisione, osservando come i vuoti e i solidi ripetano una disposizione simile attraverso i tre livelli di ricorsione presenti nella scena.

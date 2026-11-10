@@ -18,7 +18,7 @@ Una mezza torsione prima di congiungere gli estremi cambia il rapporto fra bordo
 La formula parametrizza un nastro di Möbius. Il richiamo al movimento corporeo è personale e geometrico; non attribuisce proprietà topologiche o effetti terapeutici alla pratica dello yoga.
 
 ## fonti
-[Parametrizzazione riproducibile inclusa nel progetto](geometrie.html#mobius)
+[SageMath — Parametric surface, MoebiusStrip](https://doc.sagemath.org/html/en/reference/plot3d/sage/plot/plot3d/parametric_surface.html)
 
 ## osservazione
 Scegli un tratto del bordo e seguilo mentre ruoti il nastro, prestando attenzione alla torsione attraverso cui la superficie cambia orientamento nello spazio e alla continuità che puoi ricostruire quando le parti nascoste tornano visibili.

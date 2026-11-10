@@ -15,7 +15,9 @@
   nav?.addEventListener('click',e=>{if(e.target.closest('a[href]')){nav.classList.remove('is-open');toggle?.setAttribute('aria-expanded','false');}});
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav?.classList.contains('is-open')){nav.classList.remove('is-open');toggle?.setAttribute('aria-expanded','false');toggle?.focus();}});
   // Progressive filters: all content is present and readable without JavaScript.
-  $$('[data-filter-panel]').forEach(panel=>{
+  const prepared=new WeakSet();
+  function filters(){$$('[data-filter-panel]').forEach(panel=>{
+    if(prepared.has(panel))return;prepared.add(panel);
     const list=document.getElementById(panel.dataset.target);
     if(!list)return;
     const inputs=$$('input,select',panel),items=$$('[data-item]',list),count=$('[data-count]',panel),empty=$('[data-empty]',list);
@@ -32,6 +34,8 @@
     inputs.forEach(input=>input.addEventListener(input.type==='search'?'input':'change',update));
     $('[data-reset]',panel)?.addEventListener('click',()=>{inputs.forEach(x=>x.value='');update();inputs[0]?.focus();});update();
   });
+  }
+  filters();window.addEventListener('mdc:content-change',filters);
   const dialog=$('#search-dialog'),searchButton=$('[data-open-search]');
   let searchOpener=null;const openSearch=()=>{if(dialog&&typeof dialog.showModal==='function'&&!document.querySelector('dialog[open]')){searchOpener=document.activeElement;dialog.showModal();$('#dialog-search',dialog)?.focus();}};
   searchButton?.addEventListener('click',e=>{if(dialog&&typeof dialog.showModal==='function'){e.preventDefault();openSearch();}});
@@ -41,7 +45,7 @@
     const followsLink=!e.defaultPrevented&&e.button===0&&!e.ctrlKey&&!e.metaKey&&!e.shiftKey&&!e.altKey&&e.target.closest?.('a[href]');
     if(e.target===dialog||followsLink)dialog.close();
   });
-  dialog?.addEventListener('close',()=>{const target=searchOpener?.isConnected?searchOpener:searchButton;target?.focus({preventScroll:true});searchOpener=null;});
+  dialog?.addEventListener('close',()=>{const target=searchOpener?.isConnected?searchOpener:searchButton;if(!document.activeElement?.closest?.('#main'))target?.focus({preventScroll:true});searchOpener=null;});
   document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();openSearch();}});
   // Compatibility for the original preview's hash routes. Only hard-coded targets.
   const legacy={'#/':'index.html','#/didattica':'didattica.html','#/ricerca':'ricerca.html','#/blog':'blog.html','#/cv':'cv.html','#/contatti':'contatti.html'};

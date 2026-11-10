@@ -1,3 +1,61 @@
+# Aggiornamento 3.12.1 — 10 novembre 2026
+
+- Rotazione autonoma delle strutture carboniose visibili, anche su mobile.
+- Luce mobile con variazioni graduali e rotazione alternata dei modelli piani per conservare la leggibilità degli esagoni.
+- Continuità fra anteprima e visualizzatore, pausa ai comandi manuali, cambio di preset con conservazione dello stato di movimento.
+- Gestione condivisa di visibilità, preferenze, cache, risorse grafiche e navigazione.
+- 272 test Node superati e verifiche browser desktop/mobile; regressioni CI ampliate.
+
+# Aggiornamento 3.12 — 10 novembre 2026
+
+- Quattro nuovi modelli di carbonio, con due viste alternative e spiegazioni scientifiche IT/EN.
+- Figure distribuite in home, Ricerca e Fisica delle nanostrutture; raccolta completa nell’atlante e collegamenti dalle pubblicazioni.
+- Generatore condiviso delle mesh, preset localizzati esplicitamente e visualizzatore unico.
+- 264 test superati, build di 58 pagine, verifiche interattive desktop e mobile 390/320 px.
+
+# Aggiornamento 3.11.2 — 10 novembre 2026
+
+- Reticolo iniziale 2×2×2: 384 atomi, 64 esagoni e 48 ottagoni completi.
+- Vista d’insieme 3×3×3: 1.296 atomi; ingrandimento e orientamento condivisi.
+- Miniatura e scena costruite dalla stessa selezione; nessuna duplicazione di dialoghi o componenti.
+- Test della ripetizione per traslazione nelle tre direzioni e dei limiti del renderer.
+
+# Aggiornamento 3.11.1 — 10 novembre 2026
+
+- Vista iniziale ampliata a 96 atomi, con 16 esagoni e quattro ottagoni completi; il ritaglio precedente escludeva tutti gli esagoni completi.
+- Legami carboniosi in primo piano, facce scure per la profondità, superficie nodale continua riservata alla vista delle due curvature.
+- Miniatura SVG/WebP rigenerata dallo stesso reticolo, spiegazioni IT/EN aggiornate e regressione sul numero di anelli completi.
+- Nessun nuovo visualizzatore, dialogo o modello registrato: sostituzione degli asset negli stessi percorsi.
+
+# Aggiornamento 3.11 — 10 novembre 2026
+
+- Schwarzite P688 al posto del nanonastro esagonale, con collo a sella, sezioni principali di segno opposto e reticolo di otto celle.
+- Coordinate del carbonio conservate; guida nodale Schwarz P e limiti della rappresentazione esplicitati in italiano e inglese.
+- Tre viste nello stesso visualizzatore, caricate su richiesta e verificate mediante SHA-256; comandi sopra il modello anche su mobile.
+- Rimossi i quattro file del nanonastro sostituito; unico foglio di stile, unico dialogo, unico gestore di interazione.
+- 257 test Node, build di 58 pagine, controlli editoriali, collegamenti e risorse; prove visive tramite browser desktop e viewport 390/320 px.
+
+# Aggiornamento 3.10 — 10 novembre 2026
+
+- Grafo 2D con cartografia mondiale, nodi compromessi rossi e segno aggiuntivo per distinguerli anche senza colore.
+- Spiegazione scientifica IT/EN al clic, accessibile da tastiera, dall’atlante e dalla ricerca; collegamento alternativo senza JavaScript.
+- Animazione finita e sospesa fuori schermo, nelle schede nascoste, durante la lettura del pannello e con pausa globale o movimento ridotto.
+- Revisione dei testi pubblici: rimossi riferimenti alle iterazioni di sviluppo, sostituite otto fonti interne delle geometrie con documentazione matematica consultabile.
+- Conservati ingresso, audio, 24 modelli 3D, fotografie, CV e materiali; nessuna immagine generata.
+- Controlli di registrazione unica del nuovo componente e del dialogo; corretto il percorso del modulo ricerca nell’audit dei laboratori.
+- 254 test Node superati; verifiche browser del grafo, dialoghi, lingua, navigazione e viste mobili. Rapporto in `docs/GRAFI_E_REVISIONE_v3.10.md`.
+
+# Aggiornamento 3.9 — 10 novembre 2026
+
+- Ingresso a tutta schermata con scelta audio/silenzio, decodifica finita e comparsa progressiva della home.
+- Transizioni delle sezioni in un solo gestore, con cleanup di animazioni, maschere, timer e osservatori.
+- Navigazione interna progressiva nella stessa lingua, mantenendo lettore, cronologia, URL e collegamenti HTML di fallback.
+- Nuova composizione originale Descending Fields, conservazione del brano precedente, attenuazione in lettura e volumi indipendenti.
+- Effetti sinusoidali più gravi e morbidi; scorrimento e movimento del puntatore silenziosi.
+- Corretto il focus dopo la ricerca e riattivati filtri ed esperimenti sui contenuti sostituiti.
+- Consolidato il CSS dei portali; rimosso il vecchio sistema scan/view-transition.
+- Conservata la correzione CI Ubuntu 24.04 / Python 3.12; aggiunte regressioni browser per navigazione e audio.
+
 # Correzione CI della v3.8 — 9 novembre 2026
 
 - Runner fissato a Ubuntu 24.04, evitando il passaggio automatico di `ubuntu-latest` a Ubuntu 26.04, incompatibile con il Playwright 1.56.0 utilizzato nel pacchetto.

@@ -10,7 +10,8 @@ const render=read('src/render.mjs'),build=read('scripts/build.mjs');
 check(!/function teachingApps\(|data-app-launch-overlay|data-launch-sequence/.test(render),'nessuna vecchia implementazione nel renderer');
 check(!/data-app-launch-overlay/.test(read('src/app.js')),'nessun vecchio launcher in app.js');
 check(!/\.linked-apps-section\s*\{/.test(read('src/site.css')),'nessun vecchio blocco CSS');
-for(const marker of ['${renderTeachingApps(data)}','${renderAppLaunchDialog(data,page.body)}','...teachingAppSearchEntries(data),'])check(render.split(marker).length===2,'un solo punto: '+marker);
+for(const marker of ['${renderTeachingApps(data)}','${renderAppLaunchDialog(data,page.body)}'])check(render.split(marker).length===2,'un solo punto: '+marker);
+check(read('src/search.mjs').split('...teachingAppSearchEntries(data),').length===2,'un solo punto: teachingAppSearchEntries nel modulo ricerca');
 for(const marker of ["'teaching-apps.css'","'teaching-app-launch.js'",'d.teachingApps=loadTeachingApps(root,d.language);'])check(build.split(marker).length===2,'un solo punto build: '+marker);
 for(const language of ['it','en']){
  const d={language,teachingApps:loadTeachingApps(root,language)};const html=renderTeachingApps(d);

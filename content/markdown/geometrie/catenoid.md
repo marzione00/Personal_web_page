@@ -17,7 +17,7 @@ La rotazione di una catenaria genera una superficie con un collo centrale. Il co
 È una porzione parametrica di catenoide, discretizzata per lo schermo. La costruzione illustrata non simula la stabilità di una pellicola saponosa o un esperimento fisico.
 
 ## fonti
-[Parametrizzazione riproducibile inclusa nel progetto](geometrie.html#catenoid)
+[SageMath — Catenoid](https://doc.sagemath.org/html/en/reference/riemannian_geometry/sage/geometry/riemannian_manifolds/surface3d_generators.html)
 
 ## osservazione
 Ruotando la superficie fino a guardarla di lato, segui il restringimento che conduce al collo centrale e osserva come le due estremità si allarghino, confrontando l’andamento del profilo con quello delle linee che percorrono la figura nella direzione circolare.

@@ -1,7 +1,7 @@
 /* Single owner for header, brand, navigation and language switch at every width.
    Modal dialogs use the browser top layer; no arbitrary z-index escalation. */
-:root{--layer-atmosphere:0;--layer-content:1;--layer-scan:2;--layer-header:3;--layer-skip:4;--header-offset:112px}
-.header{position:sticky;top:0;z-index:var(--layer-header);background:rgba(9,17,14,.97);border-bottom:1px solid var(--line-soft);backdrop-filter:blur(18px);view-transition-name:mdc-header}
+:root{--layer-atmosphere:0;--layer-content:1;--layer-header:3;--layer-skip:4;--header-offset:112px}
+.header{position:sticky;top:0;z-index:var(--layer-header);background:rgba(9,17,14,.97);border-bottom:1px solid var(--line-soft);backdrop-filter:blur(18px)}
 .header-inner{display:grid;grid-template-columns:minmax(0,1fr) auto auto auto;align-items:center;gap:20px;min-height:88px}
 .brand{display:flex;align-items:center;gap:12px;color:var(--ink);min-width:0;width:fit-content}
 .brand-mark{width:35px;height:35px;flex:0 0 35px;display:grid;place-items:center;border:1px solid var(--green);font:16px var(--mono);color:var(--green);position:relative}

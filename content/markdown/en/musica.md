@@ -1,26 +1,26 @@
 # Soundtrack
 
 ## titolo
-Local Coordinates
+Descending Fields
 
 ## sottotitolo
 An original sound environment for Topological Manifolds · 4 minutes 30 seconds.
 
 ## testo
-The composition develops through sustained chords and synthetic string timbres, in which the lower parts support a slow movement while intervals and small motifs gradually change in the upper voices, allowing the density and duration of the resonances to suggest the passage of time.
+A low pedal and suspended chords accompany the emergence of the forms, while a measured pulse, broken by regular rests, suggests the movement of the code. Rounded voices answer each other in the middle register, leaving room for reading and observation.
 
-The piece was composed and synthesised for this website with AI assistance, using original synthetic timbres throughout, without external musical samples or reproductions of themes from the Matrix soundtrack.
+The piece was composed and synthesised for this website with AI assistance, using original procedural timbres without external musical samples or quotations from the Matrix soundtrack.
 
 ## ascolto
-You can start the music from the player, adjust its volume, pause it or choose to repeat the piece, while retaining separate control of the interface sounds; the audio file loads only when you choose to listen.
+Choose “Enter with audio” or open the player from preferences, where music and effects have independent volume controls. Clicks and page changes use brief, soft accents, while scrolling stays silent.
 
-In the single-page preview, playback continues as you move between sections, while on the multipage website a new document interrupts playback, retaining the position in the session so that you can resume from there.
+Playback continues between pages in the same language. The music becomes softer when an article occupies the reading area or when you enable the light reading mode. If playback stops after changing language or reloading a page, Resume continues from the saved position.
 
 ## percorso
-0:00–1:00 · Opening: low pedal and harmonics.
+0:00–1:00 · Opening: low pedal, sustained chords and first pulses.
 
-1:00–2:05 · Expansion: inner voices and suspended chords.
+1:00–2:05 · Expansion: middle-register answers and suspended intervals.
 
-2:05–3:20 · Central region: increased density and soft metallic resonances.
+2:05–3:20 · Central region: a denser texture with rests in the rhythm.
 
-3:20–4:30 · Return: gradual thinning and fade.
+3:20–4:30 · Return: thinning voices and a fade before optional repetition.

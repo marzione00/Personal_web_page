@@ -26,7 +26,7 @@ The surface of a torus also has dimension two. Locally it can be described like 
 The Möbius strip is a non-orientable surface with boundary. Interior points have neighbourhoods described by two coordinates; at the boundary the local model is a half-plane. It illustrates the distinction between local descriptions and global properties.
 
 ## nota
-These three mathematical illustrations were generated for this page. Colour highlights a local region, not experimental measurements. The interactive atlas contains other objects, including fractals, graphs and illustrative models, not all of which are manifolds.
+Colour highlights a local region of each surface. The figures describe mathematical properties and do not represent experimental measurements. The interactive atlas contains other objects, including fractals, graphs and illustrative models, not all of which are manifolds.
 
 ## fonti
 [Dominic Joyce — Introduction to Differential Geometry, University of Oxford](https://people.maths.ox.ac.uk/joyce/Nairobi2019/IntroDiffGeom.html)

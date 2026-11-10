@@ -30,14 +30,14 @@ test('sound toggle is accessible, muted by default, and present next to reading 
   assert.match(h,lang==='en'?/aria-label="Enable sound effects"/:/aria-label="Attiva gli effetti sonori"/);
  }
 });
-test('sound module is opt-in, rate-limited, generates oscillators without external media, and supports keyboard focus',()=>{
+test('sound module is opt-in, rate-limited, generates oscillators without external media, and supports keyboard activation',()=>{
  const s=source('sound.js');
- assert.match(s,/read\(\)==='on'/);
+ assert.match(s,/mdc-sound-enabled','off'/);
  assert.match(s,/toggle\.addEventListener\('click'/);
  assert.match(s,/new AudioClass\(\)/);
  assert.match(s,/if\(now-lastChirp<360\)return/);
  assert.match(s,/createOscillator\(/);
- assert.match(s,/pointerover/);assert.match(s,/focusin/);
+ assert.match(s,/keydown/);assert.doesNotMatch(s,/pointerover|pointermove/);
  assert.doesNotMatch(s,/fetch\(|\.mp3|\.wav|Audio\(/);
 });
 test('link-hover visual treatment is reversible, with reduced-motion and light-theme fallbacks',()=>{

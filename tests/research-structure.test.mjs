@@ -34,7 +34,7 @@ test('selected editorial boilerplate is absent from public fields',()=>{
  assert.doesNotMatch(fields,/in questa prospettiva|a questi temi si aggiungono|costituisce un interesse|si accompagna|non solo|non soltanto|nel panorama|in questo contesto|trova spazio/i);
 });
 test('no stale presentation copy and no old release number in current data',()=>{
- assert.equal(JSON.parse(fs.readFileSync(path.join(root,'package.json'))).version,content.site.version+'.0');
+ assert.equal(JSON.parse(fs.readFileSync(path.join(root,'package.json'))).version,content.site.version.split('.').length===2?content.site.version+'.0':content.site.version);
  assert.doesNotMatch(html['didattica.html'],/I titoli delle schede e dei file sono stati uniformati/);
  assert.doesNotMatch(html['ricerca.html'],/A questi ambiti si accompagna/);
 });

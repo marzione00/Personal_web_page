@@ -30,8 +30,8 @@ test('photo presentation contains no filters or clipping',()=>{
 });
 test('heterogeneous geometry assets are complete and not repeated under different names',()=>{
  const manifest=JSON.parse(fs.readFileSync(path.join(root,'public/geometry/manifest.json')));
- assert.equal(manifest.length,24);
- assert.equal(new Set(manifest.map(g=>g.sha256)).size,24);
+ assert.equal(manifest.length,28);
+ assert.equal(new Set(manifest.map(g=>g.sha256)).size,28);
  for(const g of manifest){assert.equal(digest(fs.readFileSync(path.join(root,'public/geometry',g.file))),g.sha256);assert.equal(g.labels,false);}
  for(const id of ['gyroid','schwarz-p','schwarz-d','julia','sierpinski','helicoid','torus'])assert.ok(manifest.some(g=>g.id===id));
 });

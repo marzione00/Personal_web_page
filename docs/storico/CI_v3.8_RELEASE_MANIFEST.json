@@ -1,0 +1,121 @@
+{
+  "version": "3.8",
+  "packageVersion": "3.8.0",
+  "brand": "Topological Manifolds",
+  "date": "2026-11-09",
+  "baseRepository": "https://github.com/marzione00/Personal_web_page",
+  "baseCommit": "8964fc96b08671089cfb5d3561acb311bb994599",
+  "basedOnPackage": "v3.8 complete source package",
+  "remoteDeployment": false,
+  "sourceFiles": 492,
+  "previousSourceFilesPreserved": 490,
+  "sourceFilesMissingFromPreviousPackage": 0,
+  "addedSourceFiles": [
+    "docs/CORREZIONE_CI_v3.8.md",
+    "docs/storico/REVISIONE_v3.8_PRIMA_CORREZIONE_CI_RELEASE_MANIFEST.json"
+  ],
+  "modifiedSourceFiles": [
+    ".github/workflows/validate-deploy.yml",
+    "CHANGELOG.md",
+    "LEGGIMI_PRIMA_DI_CARICARE.md",
+    "README.md",
+    "RELEASE_MANIFEST.json"
+  ],
+  "publicAssetsUnchangedByteForByte": 95,
+  "modifiedPublicAssets": [],
+  "addedPublicAssets": [],
+  "integrity": {
+    "cvSHA256": "24e063b275dc3cbf8a2598c04d22f10d3254723e53652ce56130af7a42726177",
+    "essayOriginalITandEN": true,
+    "epigraphsITandEN": true,
+    "scientificGeometryFields": true,
+    "bibliographicMetadata": true
+  },
+  "features": {
+    "pagesITandEN": 58,
+    "researchTopicPagesPerLanguage": 7,
+    "studyPDFDestinations": 91,
+    "studyPDFPages": 1950,
+    "studyActivities": 15,
+    "geometryModels": 24,
+    "parameterExperiments": 3,
+    "stableUIKeys": 52,
+    "sharedSearchIndexes": 2,
+    "responsivePhotoVariants": 3,
+    "globalVisualPause": true,
+    "adaptiveCascade": true,
+    "RSSLanguages": [
+      "it",
+      "en"
+    ],
+    "sourceDependencies": 0
+  },
+  "validation": {
+    "nodeTests": 246,
+    "nodePassed": 246,
+    "localLinks": 2548,
+    "imageReferences": 112,
+    "HTMLUniqueIDs": true,
+    "SRIandCSP": true,
+    "buildOrdinary": true,
+    "buildRelease": true,
+    "portableBuild": true,
+    "editorialSync": true,
+    "sourceBoundaries": true,
+    "ZIPCRC": "validated after packaging"
+  },
+  "browserValidation": {
+    "engine": "Chromium",
+    "desktop": true,
+    "embeddedMobileViewportWidths": [
+      360,
+      390
+    ],
+    "actualMobileContentWidths": [
+      345,
+      375
+    ],
+    "horizontalOverflowObserved": false,
+    "geometryControls": true,
+    "globalVisualPause": true,
+    "searchAndFocus": true,
+    "experimentParameters": true,
+    "teachingFilter": true,
+    "readingMode": true,
+    "portableModelAndPDFPageFragment": true,
+    "pageConsoleErrorsObserved": 0,
+    "physicalMobileDevices": false,
+    "SafariAndFirefox": false,
+    "CIConfiguredButNotRunHere": true
+  },
+  "externalLinkAudit": {
+    "total": 71,
+    "reachable": 41,
+    "accessLimited": 7,
+    "unverified": 22,
+    "nonstandardStatus": 1,
+    "HTTP404or410": 0
+  },
+  "reports": [
+    "docs/REVISIONE_COMPLETA_v3.8.md",
+    "docs/CONTROLLO_STRATIFICAZIONI_v3.8.md",
+    "docs/PRESTAZIONI_v3.8.json",
+    "docs/COLLEGAMENTI_ESTERNI_v3.8.json",
+    "docs/CORREZIONE_CI_v3.8.md"
+  ],
+  "historicalManifest": "docs/storico/REVISIONE_v3.8_PRIMA_CORREZIONE_CI_RELEASE_MANIFEST.json",
+  "patch": "ci-fix-1",
+  "previousPackageSHA256": "858a301c6a93d5cd9c6e3f408ed470b5d8d811ffb6a4ccb981c8a08f3470ae66",
+  "ciFix": {
+    "runner": "ubuntu-24.04",
+    "python": "3.12",
+    "playwright": "1.56.0",
+    "pythonSetupCommit": "e797f83bcb11b83ae66e0230d6156d7c80228e7c",
+    "browserTestsRequired": true,
+    "YAMLValidated": true,
+    "nodeTestsPassed": 246,
+    "releaseBuildPassed": true,
+    "GitHubExecutionConfirmed": false,
+    "applicationFilesUnchanged": true
+  }
+}

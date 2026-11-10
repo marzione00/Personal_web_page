@@ -26,7 +26,7 @@ Anche la superficie del toro ha dimensione due. Localmente si descrive come una 
 Il nastro di Möbius è una superficie non orientabile con bordo. I punti interni hanno intorni descrivibili con due coordinate; vicino al bordo il modello locale è un semipiano. Il suo esempio distingue la descrizione locale dalle proprietà globali della superficie.
 
 ## nota
-Le tre figure sono illustrazioni matematiche generate per questa pagina. Il colore mette in evidenza una regione locale; non rappresenta misure sperimentali. L’atlante interattivo contiene altri oggetti, fra cui frattali, grafi e modelli illustrativi, che non sono tutti varietà.
+Il colore evidenzia una regione locale della superficie. Le figure descrivono proprietà matematiche e non rappresentano misure sperimentali. L’atlante interattivo contiene altri oggetti, fra cui frattali, grafi e modelli illustrativi, che non sono tutti varietà.
 
 ## fonti
 [Dominic Joyce — Introduction to Differential Geometry, University of Oxford](https://people.maths.ox.ac.uk/joyce/Nairobi2019/IntroDiffGeom.html)

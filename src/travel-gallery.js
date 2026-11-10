@@ -44,6 +44,6 @@
  });
  dialog.addEventListener('close',()=>{
   full.removeAttribute('src');links=[];
-  lastFocused?.focus();lastFocused=null;
+  if(!document.activeElement?.closest?.('#main'))lastFocused?.focus();lastFocused=null;
  });
 })();

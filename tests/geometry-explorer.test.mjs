@@ -6,8 +6,8 @@ import {loadContent} from '../src/content.mjs';import {renderPages} from '../src
 import {loadGeometry,geometryInfo} from '../src/geometry.mjs';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const data=loadContent(root),pages=renderPages(data),hash=b=>createHash('sha256').update(b).digest('hex');
-test('24 distinct geometry models have matching binary snapshots and image previews',()=>{
- assert.equal(data.geometry.items.length,24);const seen=new Set();
+test('28 distinct geometry models have matching binary snapshots and image previews',()=>{
+ assert.equal(data.geometry.items.length,28);const seen=new Set();
  for(const g of data.geometry.items){const b=fs.readFileSync(path.join(root,'public/geometry',g.scene));
   assert.equal(b.toString('ascii',0,4),'MDC3');assert.equal(hash(b),g.sceneSha256);assert.ok(!seen.has(hash(b)));seen.add(hash(b));
   assert.equal(b.readUInt32LE(4),g.vertices);assert.equal(b.readUInt32LE(8),g.triangles*3);
@@ -24,10 +24,10 @@ test('graphics obey the declared lightweight budgets',()=>{
 test('no geometry repeats within an editorial page; atlas presents each once',()=>{
  for(const p of pages){const ids=[...p.body.matchAll(/data-geometry="([a-z-]+)"/g)].map(x=>x[1]);assert.equal(new Set(ids).size,ids.length,p.file);}
  const home=pages.find(x=>x.file==='index.html');assert.equal([...home.body.matchAll(/class="portal-art"/g)].length,3); // The compact home has section-specific SVG entrances.
- assert.equal([...pages.find(x=>x.file==='geometrie.html').body.matchAll(/data-geometry="/g)].length,24);
+ assert.equal([...pages.find(x=>x.file==='geometrie.html').body.matchAll(/data-geometry="/g)].length,28);
 });
-test('delivered editorial illustrations are not recycled across sections',()=>{
- const placements=new Map();for(const p of pages.filter(x=>x.file!=='geometrie.html'))for(const m of p.body.matchAll(/data-geometry="([a-z-]+)"/g)){assert.ok(!placements.has(m[1]),m[1]+' repeated on '+p.file);placements.set(m[1],p.file);}
+test('only the shared carbon family is intentionally reused across relevant sections',()=>{
+ const placements=new Map();for(const p of pages.filter(x=>x.file!=='geometrie.html'))for(const m of p.body.matchAll(/data-geometry="([a-z-]+)"/g)){assert.ok(!placements.has(m[1])||['fullerene-cage','carbon-nanoribbon','twisted-nanoribbon','bilayer-nanoflake','schwarzite-neck'].includes(m[1]),m[1]+' repeated on '+p.file);placements.set(m[1],p.file);}
  assert.ok(placements.size>=14); // The home no longer repeats extended personal/research material.
  for(const id of placements.keys())assert.ok(data.geometry.byId[id]);
 });

@@ -19,7 +19,7 @@ The curves represent twelve synthetic realisations of geometric Brownian motion.
 S₀ = 1, μ = 0.07 and σ = 0.32, with a fixed random seed. The coefficient of the shared component in the increments is 0.55, so the theoretical correlation between increments of different paths is 0.55². Lateral spacing distinguishes the curves; it is not an economic variable. These are neither market data nor forecasts.
 
 ## fonti
-[Reproducible generator included in the project](geometrie.html#stochastic-paths)
+[Wolfram — GeometricBrownianMotionProcess](https://reference.wolfram.com/language/ref/GeometricBrownianMotionProcess.html)
 
 ## osservazione
 Follow one path from beginning to end and compare it with the others, observing where curves approach or diverge and remembering that lateral spacing separates them visually, while their values belong to synthetic realisations of the same model.

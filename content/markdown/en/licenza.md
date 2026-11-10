@@ -18,9 +18,9 @@ The grant remains valid for copies already distributed as long as its terms are 
 
 **Quotations, figures and third-party materials.** These remain subject to their respective rights and applicable exceptions. Inclusion on this site does not grant a new licence. The epigraphs are quotations, not works by the site’s author.
 
-**Code and software.** The content licence does not extend to source code, build tools or software components. This release introduces no new software licence for the code.
+**Code and software.** The content licence does not extend to source code, build tools or software components. Making the source available does not grant additional software rights.
 
-**Soundtrack.** *Local Coordinates* is a composition made for Topological Manifolds using AI-assisted procedural synthesis, without sampling Matrix music or other recordings. It is offered under CC BY-NC-ND 4.0 only to the extent of any applicable rights in the composition and recording; this does not assert exclusive rights over unprotectable material.
+**Soundtrack.** *Descending Fields* and *Local Coordinates* are compositions made for Topological Manifolds using AI-assisted procedural synthesis, without sampling Matrix music or other recordings. They are offered under CC BY-NC-ND 4.0 only to the extent of any applicable rights in the composition and recording; this does not assert exclusive rights over unprotectable material.
 
 The licence may not provide all permissions required for a particular use: image, privacy and other personal rights may be relevant, particularly when third parties are depicted.
 

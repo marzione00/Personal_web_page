@@ -95,9 +95,8 @@ export function renderTeachingApps(data, {previewDisabled = false} = {}) {
   return `<section class="tm-apps" aria-labelledby="tm-apps-title"><div class="section-head"><div><span class="label">${c.eyebrow}</span><h2 id="tm-apps-title">${c.title}</h2><p class="tm-apps-intro">${c.intro}</p></div></div><div class="tm-app-grid">${apps.map(app => card(app, data.language, previewDisabled)).join('')}</div></section>`;
 }
 
-/** Only pages containing a launch link receive the dialog, including the portable preview. */
+/** One persistent dialog handles delegated launch links after page navigation. */
 export function renderAppLaunchDialog(data, body) {
-  if (!body.includes('data-app-launch')) return '';
   const c = copy(data.language);
   const initial = (data.teachingApps || []).find(app => app.enabled && app.launch === 'terminal');
   if (!initial) return '';

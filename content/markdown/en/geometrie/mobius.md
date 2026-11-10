@@ -20,7 +20,7 @@ A half-twist before joining the ends changes the relationship between boundary a
 The formula parametrises a Möbius strip. The connection with bodily movement is personal and geometric; it does not attribute topological properties or therapeutic effects to yoga practice.
 
 ## fonti
-[Reproducible parametrisation included in the project](geometrie.html#mobius)
+[SageMath — Parametric surface, MoebiusStrip](https://doc.sagemath.org/html/en/reference/plot3d/sage/plot/plot3d/parametric_surface.html)
 
 ## osservazione
 Choose a section of the edge and follow it while rotating the strip, paying attention to the twist through which the surface changes orientation in space and to the continuity revealed as hidden parts come into view.

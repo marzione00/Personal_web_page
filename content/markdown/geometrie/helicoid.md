@@ -16,7 +16,7 @@ Una retta ruota mentre avanza lungo un asse, generando una superficie rigata. La
 È una porzione finita di un elicoide parametrico. La rotazione del visualizzatore riguarda la camera; non modifica il passo della superficie.
 
 ## fonti
-[Parametrizzazione riproducibile inclusa nel progetto](geometrie.html#helicoid)
+[SageMath — Helicoid](https://doc.sagemath.org/html/en/reference/riemannian_geometry/sage/geometry/riemannian_manifolds/surface3d_generators.html)
 
 ## osservazione
 Seguendo il bordo della superficie mentre la ruoti, osserva come l’avanzamento lungo l’asse si accompagni a un cambiamento di orientamento, quindi confronta questa continuità con i segmenti rettilinei attraverso i quali viene costruita la forma.

@@ -1,26 +1,26 @@
 # Colonna sonora
 
 ## titolo
-Local Coordinates
+Descending Fields
 
 ## sottotitolo
 Un ambiente sonoro originale per Topological Manifolds · 4 minuti e 30 secondi.
 
 ## testo
-La composizione si sviluppa attraverso accordi distesi e timbri d’archi sintetici, nei quali le parti gravi sostengono un movimento lento mentre, nelle voci superiori, intervalli e piccoli motivi si trasformano gradualmente, lasciando che siano la densità e la durata delle risonanze a suggerire il trascorrere del tempo.
+La composizione accompagna l’emergere delle forme attraverso un pedale grave e accordi sospesi, sopra i quali una pulsazione misurata, interrotta da pause regolari, suggerisce il movimento del codice mentre le voci intermedie si rispondono con timbri arrotondati, lasciando spazio alla lettura e all’osservazione.
 
-Il brano è stato composto e sintetizzato per questo sito con assistenza di IA, utilizzando esclusivamente timbri sintetici originali, senza campionamenti musicali esterni né riproduzioni dei temi della colonna sonora di Matrix.
+Il brano è stato composto e sintetizzato per questo sito con assistenza di IA, utilizzando timbri procedurali originali, senza campionamenti musicali esterni né citazioni dei temi della colonna sonora di Matrix.
 
 ## ascolto
-Puoi avviare la musica dal lettore e regolarne il volume, interromperla o scegliere di ripetere il brano, mantenendo il controllo dei suoni dell’interfaccia attraverso il comando separato; il file audio viene caricato soltanto quando scegli di ascoltarlo.
+Puoi avviare la musica scegliendo «Entra con audio» oppure aprendo il lettore dalle preferenze, dove i volumi della colonna sonora e degli effetti sono regolabili separatamente; clic e passaggi fra le pagine producono accenti brevi, mentre lo scorrimento rimane silenzioso.
 
-Nell’anteprima a pagina unica l’ascolto prosegue durante il passaggio fra le sezioni, mentre nel sito multipagina il caricamento di un nuovo documento interrompe la riproduzione, conservando nella sessione la posizione dalla quale puoi riprenderla.
+Durante la navigazione fra le pagine della stessa lingua l’ascolto prosegue, mentre il suono si attenua quando un articolo occupa l’area di lettura o quando attivi la modalità lettura chiara. Se l’ascolto si interrompe dopo un cambio di lingua o il ricaricamento della pagina, il comando «Riprendi» permette di continuare dal punto raggiunto.
 
 ## percorso
-0:00–1:00 · Apertura: pedale grave e armonici.
+0:00–1:00 · Apertura: pedale grave, accordi distesi e prime pulsazioni.
 
-1:00–2:05 · Ampliamento: voci intermedie, accordi sospesi.
+1:00–2:05 · Espansione: risposte nel registro medio e intervalli sospesi.
 
-2:05–3:20 · Regione centrale: maggiore densità e risonanze metalliche morbide.
+2:05–3:20 · Regione centrale: trama più densa, attraversata da pause del ritmo.
 
-3:20–4:30 · Ritorno: progressivo diradamento e dissolvenza.
+3:20–4:30 · Ritorno: diradamento delle voci e dissolvenza, prima dell’eventuale ripetizione.

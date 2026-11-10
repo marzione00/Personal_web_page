@@ -18,9 +18,9 @@ La concessione rimane valida per le copie già distribuite finché ne vengono ri
 
 **Citazioni, figure e materiali di terzi.** Restano soggetti ai rispettivi diritti e alle eventuali eccezioni applicabili. La loro presenza nel sito non conferisce una nuova licenza. Le citazioni delle epigrafi non sono opere dell’autore del sito.
 
-**Codice e software.** Questa licenza dei contenuti non si estende a codice, strumenti di compilazione o componenti software. Per il codice non viene introdotta con questa revisione una nuova licenza software.
+**Codice e software.** Questa licenza dei contenuti non si estende a codice, strumenti di compilazione o componenti software. La disponibilità dei sorgenti non costituisce una concessione aggiuntiva di diritti sul software.
 
-**Colonna sonora.** *Local Coordinates* è una composizione realizzata per Topological Manifolds mediante sintesi procedurale assistita da IA, senza campionamenti della musica di Matrix o di altre registrazioni. È offerta con CC BY-NC-ND 4.0 soltanto nei limiti degli eventuali diritti applicabili alla composizione e alla registrazione; questa indicazione non afferma un diritto esclusivo su materiale non tutelabile.
+**Colonna sonora.** *Descending Fields* e *Local Coordinates* sono composizioni realizzate per Topological Manifolds mediante sintesi procedurale assistita da IA, senza campionamenti della musica di Matrix o di altre registrazioni. Sono offerte con CC BY-NC-ND 4.0 soltanto nei limiti degli eventuali diritti applicabili alla composizione e alla registrazione; questa indicazione non afferma un diritto esclusivo su materiale non tutelabile.
 
 La licenza non garantisce tutte le autorizzazioni necessarie per ogni utilizzo: possono rilevare diritti all’immagine, alla riservatezza o altri diritti personali, soprattutto quando il materiale raffigura terzi.
 

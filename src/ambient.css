@@ -1,6 +1,6 @@
 /* Full-screen scientific atmosphere; content is always painted above the canvas. */
 body{isolation:isolate}
-.matrix-ambient{position:fixed;inset:0;width:100%;height:100%;z-index:var(--layer-atmosphere);pointer-events:none;user-select:none;contain:strict;view-transition-name:mdc-atmosphere}
+.matrix-ambient{position:fixed;inset:0;width:100%;height:100%;z-index:var(--layer-atmosphere);pointer-events:none;user-select:none;contain:strict}
 .matrix-ambient[hidden]{display:none!important}
 #main,.footer,.header-note,.noscript{position:relative;z-index:var(--layer-content)}
 #main{background:transparent}
@@ -20,29 +20,8 @@ body{isolation:isolate}
 .formula-catalog h3{font:400 25px/1.4 var(--serif);margin:8px 0 16px}.formula-catalog p{font-size:14px;line-height:1.8}.formula-catalog .catalog-math{font:16px/1.9 var(--mono);color:var(--green);white-space:normal;overflow-wrap:anywhere;background:var(--panel);padding:16px;margin-bottom:14px}
 .formula-catalog a{display:inline-block;margin-top:13px;font-size:13px;text-decoration:underline;text-underline-offset:4px}
 .effects-toggle[aria-expanded=true]{border-color:var(--green)}
-/* Native multipage transitions: the outgoing text clears before the incoming text. */
-@view-transition{navigation:auto}
-#main{view-transition-name:mdc-content}
-
-::view-transition-old(root),::view-transition-new(root){animation:none;mix-blend-mode:normal}
-::view-transition-old(root){opacity:0}
-::view-transition-group(mdc-header),::view-transition-group(mdc-atmosphere){animation:none}
-::view-transition-old(mdc-header),::view-transition-old(mdc-atmosphere){animation:none;opacity:0}
-::view-transition-new(mdc-header),::view-transition-new(mdc-atmosphere){animation:none;opacity:1}
-::view-transition-old(mdc-content){animation:mdc-screen-out .14s ease-in both;mix-blend-mode:normal}
-::view-transition-new(mdc-content){animation:mdc-screen-in .54s .14s cubic-bezier(.18,.72,.22,1) both;mix-blend-mode:normal}
-@keyframes mdc-screen-out{from{opacity:1;transform:scale(1)}to{opacity:0;transform:scale(.985)}}
-@keyframes mdc-screen-in{from{opacity:0;clip-path:inset(0 0 100% 0);transform:translateY(12px)}60%{opacity:1}to{opacity:1;clip-path:inset(0);transform:translateY(0)}}
-.screen-scan{position:fixed;z-index:var(--layer-scan);inset:0;pointer-events:none;opacity:0;background:linear-gradient(180deg,transparent 35%,rgba(175,231,198,.045) 49%,rgba(175,231,198,.12) 50%,transparent 62%);transform:translateY(-100%)}
-.screen-arriving .screen-scan{animation:mdc-scan .65s ease-out both}
-@keyframes mdc-scan{0%{opacity:0;transform:translateY(-80%)}25%{opacity:.8}100%{opacity:0;transform:translateY(85%)}}
-.reading-mode .screen-scan{background:linear-gradient(180deg,transparent 45%,rgba(23,107,66,.08) 50%,transparent 60%)}
-html[data-fx-motion=off]::view-transition-old(mdc-content),html[data-fx-motion=off]::view-transition-new(mdc-content){animation:none}
-html[data-fx-motion=off] .screen-scan{display:none}
-@media(prefers-reduced-motion:reduce){@view-transition{navigation:none}::view-transition-old(*),::view-transition-new(*),::view-transition-group(*){animation:none!important}.screen-scan{display:none!important}}
-
 @media(max-width:460px){.formula-catalog .catalog-math{font-size:13px}.effects-dialog,.formula-catalog-dialog{padding:20px}}
 
-@media print{.matrix-ambient,.screen-scan,.effects-toggle,.effects-dialog,.formula-catalog-dialog{display:none!important}.shell.page-body,.hero-position,.hero-summary,.hero-teaching,.page-head .lead,.epigraph-card blockquote,.epigraph-reading>p,.prose,.bio-prose,.thought,.publication-feature,.talk-row{background:transparent!important;box-shadow:none!important}.hero-heading,.hero-content,.page-head .shell,.section-head,.footer{text-shadow:none}}
+@media print{.matrix-ambient,.effects-toggle,.effects-dialog,.formula-catalog-dialog{display:none!important}.shell.page-body,.hero-position,.hero-summary,.hero-teaching,.page-head .lead,.epigraph-card blockquote,.epigraph-reading>p,.prose,.bio-prose,.thought,.publication-feature,.talk-row{background:transparent!important;box-shadow:none!important}.hero-heading,.hero-content,.page-head .shell,.section-head,.footer{text-shadow:none}}
 
 html[data-effects-paused=true] *,html[data-effects-paused=true] *::before,html[data-effects-paused=true] *::after{animation-play-state:paused!important;transition:none!important}

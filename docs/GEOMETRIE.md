@@ -2,14 +2,18 @@
 
 ## Repertorio e impiego
 
-24 soggetti distinti, 24 anteprime statiche e 24 modelli binari. La Home usa sei figure diverse. La stessa figura non viene ripetuta nelle pagine editoriali correnti; l’atlante `geometrie.html` è la raccolta intenzionale di tutti i soggetti, ognuno una sola volta. I diagrammi originali del saggio e le fotografie non fanno parte di questo repertorio.
+28 soggetti distinti, 28 anteprime statiche e 32 scene binarie, contando le viste alternative. La famiglia del carbonio è distribuita intenzionalmente fra home e pagine scientifiche; ogni modello compare una sola volta nella stessa pagina. L’atlante raccoglie tutti i soggetti. I diagrammi del saggio e le fotografie restano distinti da questo repertorio.
 
 | ID | Titolo | Famiglia | Byte modello |
 |---|---|---|---:|
+| `fullerene-cage` | Fullerene C₆₀ | carbonio | 25,332 |
+| `carbon-nanoribbon` | Nanonastri di grafene | carbonio | 29,938 |
+| `twisted-nanoribbon` | Nanonastro deformato | carbonio | 29,938 |
+| `bilayer-nanoflake` | Nanoframmenti a doppio strato | carbonio | 29,478 |
 | `gyroid` | Giroide | carbonio | 120,006 |
 | `schwarz-p` | Superficie di Schwarz P | carbonio | 91,872 |
 | `schwarz-d` | Superficie di Schwarz D | carbonio | 107,886 |
-| `graphene-ribbon` | Nanonastro di grafene | carbonio | 73,032 |
+| `schwarzite-neck` | Schwarzite P688 | carbonio | 178,440 |
 | `vibrational-mode` | Deformazione fuori piano | carbonio | 73,032 |
 | `schwarz-network` | Connessioni a curvatura negativa | carbonio | 137,076 |
 | `markov-network` | Grafo probabilistico | sicurezza-xai | 39,984 |
@@ -33,7 +37,7 @@
 
 ## Correttezza e limiti
 
-Le superfici G/P/D sono approssimazioni nodali, non soluzioni minime esatte né modelli atomistici di schwarziti. `schwarz-network` è una costruzione di colli iperbolici scalati, priva di atomi e legami chimici. Il nanonastro è un reticolo esagonale ideale; il suo spostamento fuori piano è sintetico e non deriva da un calcolo DFT o da un modo normale misurato. I grafi, la superficie di classificazione e le traiettorie sono esempi deterministici, non risultati sperimentali o previsioni finanziarie.
+Le superfici G/P/D sono approssimazioni nodali, non soluzioni minime esatte né modelli atomistici di schwarziti. `schwarz-network` è una costruzione di colli iperbolici scalati, priva di atomi e legami chimici. La schwarzite P688 usa coordinate cristallografiche pubblicate e una guida nodale del collo a curvatura negativa; il modello vibrational-mode conserva uno spostamento sintetico fuori piano, privo di relazione con un calcolo DFT o con un modo normale misurato. I grafi, la superficie di classificazione e le traiettorie sono esempi deterministici, non risultati sperimentali o previsioni finanziarie.
 
 La sfera di Bloch illustra un singolo qubit. Il reticolo post-quantistico è tridimensionale e illustrativo, non un insieme di parametri crittografici utilizzabili. La rotazione del visualizzatore cambia la camera e non applica operazioni quantistiche, dinamiche molecolari o evoluzioni finanziarie. Julia è un frattale piano calcolato nello shader, non un volume frattale: l’interazione orienta il suo piano nello spazio.
 

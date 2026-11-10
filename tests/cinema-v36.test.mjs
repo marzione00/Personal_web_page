@@ -2,25 +2,26 @@ import test from 'node:test';import assert from 'node:assert/strict';import fs f
 import {loadContent} from '../src/content.mjs';import {renderPages,shellHtml} from '../src/render.mjs';
 const root=new URL('../',import.meta.url).pathname,read=p=>fs.readFileSync(new URL('../'+p,import.meta.url),'utf8');
 function entry(options={}){
- const events={},dialogEvents={},jobs=new Map(),storage=new Map(options.seen?[['mdc-entry-v36','seen']]:[]);let listener,id=0,focus=0;
- const button={disabled:false,addEventListener(n,fn){events.replay=fn;}};
- const skip={addEventListener(n,fn){events.skip=fn;}};
- const dialog={open:false,querySelector(){return skip;},addEventListener(n,fn){dialogEvents[n]=fn;},showModal(){this.open=true;},close(){this.open=false;dialogEvents.close?.();}};
+ const events={},dialogEvents={},jobs=new Map(),frames=new Map(),storage=new Map(options.seen?[['mdc-entry-v39','seen']]:[]);let listener,id=0,focus=0,starts=0,pauses=0;
+ const target={isConnected:true,setAttribute(){},focus(){focus++;}};
+ const button={disabled:false},skip={addEventListener(n,fn){events.skip=fn;}},code={textContent:''};
+ const choices=['on','off'].map(value=>({dataset:{entryAudio:value},addEventListener(n,fn){events[value]=fn;}}));
+ const dialog={open:false,classList:{add(){},remove(){}},querySelector(q){return q==='[data-entry-code]'?code:skip;},querySelectorAll(){return choices;},addEventListener(n,fn){dialogEvents[n]=fn;},showModal(){this.open=true;},close(){this.open=false;dialogEvents.close?.();}};
  const fx={intro:true,transitions:true,ambient:'on',reduced:false,...options.fx,subscribe(fn){listener=fn;}};
- const document={hidden:false,activeElement:{isConnected:true,focus(){focus++;}},querySelector(q){return q==='[data-entry-dialog]'?dialog:dialog.open?dialog:null;},querySelectorAll(){return [button];},addEventListener(n,fn){events[n]=fn;}};
- const window={MDCEffects:fx,dispatchEvent(){},addEventListener(n,fn){events[n]=fn;}};
- vm.runInNewContext(read('src/cinema.js'),{window,document,location:{hash:options.hash||''},sessionStorage:{getItem:k=>storage.get(k),setItem:(k,v)=>storage.set(k,v)},setTimeout(fn,ms){jobs.set(++id,{fn,ms});return id;},clearTimeout(n){jobs.delete(n);},Event:class{}});
- return {dialog,jobs,button,document,events,storage,get focus(){return focus;},finish(){[...jobs.values()].forEach(j=>j.fn());},set(v){Object.assign(fx,v);listener();}};
+ const document={body:{dataset:{page:options.page||'index.html'}},hidden:false,activeElement:target,querySelector(q){return q==='[data-entry-dialog]'?dialog:q==='#main h1'?target:q==='dialog[open]'&&dialog.open?dialog:null;},getElementById(){return null;},querySelectorAll(){return [button];},addEventListener(n,fn){events[n]=fn;}};
+ const window={scrollTo(){},MDCEffects:fx,MDCSound:{enable(){}},ManifoldMusic:{start(){starts++;},pause(){pauses++;}},dispatchEvent(){},addEventListener(n,fn){events[n]=fn;}};
+ vm.runInNewContext(read('src/cinema.js'),{window,document,performance:{now:()=>0},location:{hash:options.hash||''},sessionStorage:{getItem:k=>storage.get(k),setItem:(k,v)=>storage.set(k,v)},setTimeout(fn,ms){jobs.set(++id,{fn,ms});return id;},clearTimeout(n){jobs.delete(n);},requestAnimationFrame(fn){frames.set(++id,fn);return id;},cancelAnimationFrame(n){frames.delete(n);},Event:class{}});
+ return {dialog,jobs,frames,button,document,events,storage,get focus(){return focus;},get starts(){return starts;},get pauses(){return pauses;},finish(){[...jobs.values()].forEach(j=>j.fn());},replay(){events.click({target:{closest:()=>button}});},set(v){Object.assign(fx,v);listener();}};
 }
-test('entry finishes within 2.2 seconds, records the session and leaves no timer',()=>{const a=entry();assert.ok(a.dialog.open);assert.equal(a.jobs.size,1);assert.equal([...a.jobs.values()][0].ms,2200);assert.equal(a.storage.get('mdc-entry-v36'),'seen');a.finish();assert.equal(a.dialog.open,false);assert.equal(a.jobs.size,0);});
-test('entry never interrupts a deep link, a repeat visit, or disabled motion',()=>{for(const option of [{hash:'#main'},{seen:true},{fx:{reduced:true}},{fx:{transitions:false}},{fx:{intro:false}},{fx:{ambient:'static'}},{fx:{ambient:'off'}}]){const a=entry(option);assert.equal(a.dialog.open,false);assert.equal(a.jobs.size,0);}});
-test('skip, visibility and changed preferences dismiss entry; replay restores focus',()=>{
- const a=entry();a.events.skip();assert.equal(a.dialog.open,false);a.events.replay();assert.ok(a.dialog.open);a.finish();assert.equal(a.focus,1);
- a.events.replay();a.document.hidden=true;a.events.visibilitychange();assert.equal(a.dialog.open,false);assert.equal(a.jobs.size,0);
- a.document.hidden=false;a.events.replay();a.set({intro:false});assert.equal(a.dialog.open,false);assert.ok(a.button.disabled);
+test('entry waits for a deliberate choice, then completes the finite opening and clears work',()=>{const a=entry();assert.ok(a.dialog.open);assert.equal(a.jobs.size,0);assert.equal(a.starts,0);a.events.on();assert.equal(a.starts,1);assert.equal([...a.jobs.values()][0].ms,1200);assert.equal(a.storage.get('mdc-entry-v39'),'seen');a.finish();assert.equal(a.dialog.open,false);assert.equal(a.jobs.size,0);assert.equal(a.frames.size,0);});
+test('entry never interrupts a deep link, repeat visit, inner page or disabled motion',()=>{for(const option of [{hash:'#main'},{seen:true},{page:'didattica.html'},{fx:{reduced:true}},{fx:{transitions:false}},{fx:{intro:false}},{fx:{ambient:'static'}},{fx:{ambient:'off'}}]){const a=entry(option);assert.equal(a.dialog.open,false);assert.equal(a.jobs.size,0);}});
+test('silence, skip, visibility and preference changes cancel entry; replay restores focus',()=>{
+ const a=entry();a.events.off();assert.equal(a.starts,0);assert.equal(a.pauses,1);a.events.skip();assert.equal(a.dialog.open,false);assert.equal(a.frames.size,0);const old=a.focus;a.replay();assert.ok(a.dialog.open);a.events.on();a.finish();assert.equal(a.focus,old+2);
+ a.replay();a.document.hidden=true;a.events.visibilitychange();assert.equal(a.dialog.open,false);assert.equal(a.jobs.size,0);
+ a.document.hidden=false;a.replay();a.set({intro:false});assert.equal(a.dialog.open,false);assert.ok(a.button.disabled);
 });
-test('the opening is homepage-only, with replay and bilingual labels',()=>{
- for(const language of ['it','en']){const d=loadContent(root,{language});for(const p of renderPages(d)){const h=shellHtml({data:d,page:p,css:'',js:'',csp:"default-src 'none'"});assert.equal(h.includes('data-entry-dialog'),p.file==='index.html');if(p.file==='index.html'){assert.match(h,/data-entry-replay/);assert.ok(h.includes(language==='en'?'Enter the site':'Entra nel sito'));}}}
+test('one persistent opening dialog and bilingual choices accompany every static route',()=>{
+ for(const language of ['it','en']){const d=loadContent(root,{language});for(const p of renderPages(d)){const h=shellHtml({data:d,page:p,css:'',js:'',csp:"default-src 'none'"});assert.equal((h.match(/data-entry-dialog/g)||[]).length,1);assert.ok(h.includes(language==='en'?'Enter in silence':'Entra in silenzio'));if(p.file==='index.html')assert.match(h,/data-entry-replay/);}}
 });
 test('wireframe contains unique real mesh edges, without degenerate lines',()=>{
  const window={};vm.runInNewContext(read('public/assets/geometry-viewer.js'),{window,Uint16Array});

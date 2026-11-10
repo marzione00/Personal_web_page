@@ -20,7 +20,7 @@ Two periodic coordinates traverse the surface in distinct directions. The centra
 The torus is a parametric geometric object here. It does not automatically represent a state space or any particular material structure.
 
 ## fonti
-[Reproducible parametrisation included in the project](geometrie.html#torus)
+[SageMath — Torus](https://doc.sagemath.org/html/en/reference/riemannian_geometry/sage/geometry/riemannian_manifolds/surface3d_generators.html)
 
 ## osservazione
 Follow a curve that passes through the central opening and compare it with one travelling around the ring, rotating the surface to recognise the two periodic directions used to describe points on the torus.

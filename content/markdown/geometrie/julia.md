@@ -17,7 +17,7 @@ La stessa regola iterata produce bordi complessi fra punti che fuggono e punti c
 Il frattale è piano. Il visualizzatore consente di orientarne il piano nello spazio, senza inventare un volume tridimensionale. Il disegno usa 180 iterazioni: è un’approssimazione finita, non una rappresentazione di tutti i dettagli matematici.
 
 ## fonti
-[Algoritmo deterministico incluso nel progetto](geometrie.html#julia)
+[SageMath — Mandelbrot and Julia sets](https://doc.sagemath.org/html/en/reference/dynamics/sage/dynamics/complex_dynamics/mandel_julia.html)
 
 ## osservazione
 Avvicina il disegno per osservare le variazioni di colore lungo i bordi e confronta regioni vicine nelle quali il tempo di fuga cambia, ricordando che lo zoom ingrandisce la rappresentazione calcolata con un numero finito di iterazioni e con la risoluzione disponibile.

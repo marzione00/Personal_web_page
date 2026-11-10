@@ -17,6 +17,7 @@
  setMotionLabels();
  function stopHover(){clearTimeout(hoverTimer);generation++;observer.disconnect();if(!modal){viewer?.detach();owner=null;activeId='';}}
  const observer=new IntersectionObserver(entries=>{if(!modal&&entries.some(x=>!x.isIntersecting))stopHover();},{threshold:.05});
+ window.addEventListener('mdc:before-content-change',()=>{clearPreviews();if(dialog.open)dialog.close();stopHover();});
  function getLibrary(){
   if(window.MDCGeometry)return Promise.resolve(window.MDCGeometry);
   if(libraryPromise)return libraryPromise;
@@ -40,12 +41,13 @@
   const [lib,buffer]=await Promise.all([getLibrary(),getScene(id,a.dataset.scene,a.dataset.sceneSha256)]);
   if(token!==generation)return;
   if(!viewer||!viewer.alive){viewer?.dispose();viewer=new lib.Viewer();viewer.onlost=()=>{status.textContent=tr("Il contesto 3D è stato interrotto. Immagine, formula e spiegazione restano disponibili.");setSpin(false);};window.MDCGeometryDebug={get viewer(){return viewer;},get cacheSize(){return cache.size;}};}
-  viewer.attach(host);viewer.load(buffer);viewer.setMode(displayMode);activeId=id;owner=a;
+  viewer.dynamicLight=a.hasAttribute('data-carbon-lattice');viewer.sway=viewer.dynamicLight&&!['fullerene-cage','schwarzite-neck'].includes(id);viewer.lightPhase=0;viewer.attach(host);viewer.load(buffer);if(viewer.dynamicLight&&displayMode==='wire'){displayMode='surface';style.value=displayMode;}viewer.setMode(displayMode);activeId=id;owner=a;
+  const ambient=previews.get(a)?.view;if(modal&&ambient){viewer.angle=ambient.angle.slice();viewer.target=viewer.angle.slice();viewer.lightPhase=ambient.lightPhase;viewer.motionTime=ambient.motionTime;viewer.render();}
   if(modal&&motionAllowed()){viewer.auto=true;viewer.start();setSpin(true);}
   if(modal){status.textContent=motionAllowed()?tr("Trascina per esplorare il modello. Usa i controlli per cambiare la visualizzazione."):motionReason();setSpin(viewer.auto);}
  }
  document.addEventListener('pointerover',e=>{
-  const a=e.target.closest('[data-geometry-open]');if(!a||modal||!fine.matches||!motionAllowed()||a===owner)return;
+  const a=e.target.closest('[data-geometry-open]');if(!a||a.hasAttribute('data-carbon-lattice')||modal||!fine.matches||!motionAllowed()||a===owner)return;
   clearTimeout(hoverTimer);const token=++generation;
   hoverTimer=setTimeout(()=>{if(!a.matches(':hover')||token!==generation)return;observer.disconnect();observer.observe(a);activate(a,a,token).catch(()=>{/* Static link remains available. */});},300);
  });
@@ -54,10 +56,10 @@
  function open(a){
   if(typeof dialog.showModal!=='function')return false;
   const id=a.dataset.geometryOpen;if(!/^[a-z]+(?:-[a-z]+)*$/.test(id||''))return false;
-  stopHover();modal=true;opener=a;
+  stopHover();modal=true;opener=a;pausePreviews();
   const scope=a.closest('[data-view]')||document;
   const template=scope.querySelector(`template[data-geometry-info="${id}"]`)||document.querySelector(`template[data-geometry-info="${id}"]`);const source=scope.querySelector(`[data-geometry-detail-source="${id}"]`)||document.querySelector(`[data-geometry-detail-source="${id}"]`);if(!template&&!source){modal=false;return false;}
-  detail.replaceChildren(template?template.content.cloneNode(true):source.cloneNode(true));detail.querySelectorAll('h4').forEach(h=>{const replacement=document.createElement('h3');replacement.textContent=h.textContent;h.replaceWith(replacement);});const title=detail.querySelector('[data-geo-info-title]')?.textContent||a.querySelector('img')?.alt||tr("Esplora il modello");dialog.querySelector('#geometry-title').textContent=title;
+  dialog.querySelectorAll('.geometry-interaction > [data-geo-presets]').forEach(group=>group.remove());detail.replaceChildren(template?template.content.cloneNode(true):source.cloneNode(true));detail.querySelectorAll('[data-geo-presets]').forEach(group=>{group.hidden=false;stage.before(group);});detail.querySelectorAll('h4').forEach(h=>{const replacement=document.createElement('h3');replacement.textContent=h.textContent;h.replaceWith(replacement);});const title=detail.querySelector('[data-geo-info-title]')?.textContent||a.querySelector('img')?.alt||tr("Esplora il modello");dialog.querySelector('#geometry-title').textContent=title;
   fallback.src=a.querySelector('img').src;fallback.alt=title;status.textContent=tr("Caricamento del modello 3D…");setSpin(false);
   dialog.showModal();document.body.classList.add('geometry-modal-open');dialog.querySelector('[data-geo-close]').focus();setMotionLabels();
   const token=++generation;activate(a,stage,token).catch(error=>{if(token===generation){status.textContent=tr(error.message)||tr("3D non disponibile. La spiegazione resta consultabile.");viewer?.detach();}});return true;
@@ -65,8 +67,9 @@
  document.addEventListener('click',e=>{const a=e.target.closest('[data-geometry-open]');if(!a||e.ctrlKey||e.metaKey||e.shiftKey)return;if(open(a)){e.preventDefault();e.stopImmediatePropagation();}},true);
  dialog.querySelector('[data-geo-close]').addEventListener('click',()=>dialog.close());
  dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close();}});
- dialog.addEventListener('close',()=>{dialog.classList.remove('is-expanded');expand.setAttribute('aria-pressed','false');expand.textContent=tr('Vista immersiva');generation++;modal=false;viewer?.detach();owner=null;activeId='';document.body.classList.remove('geometry-modal-open');opener?.focus({preventScroll:true});opener=null;});
+ dialog.addEventListener('close',()=>{dialog.classList.remove('is-expanded');expand.setAttribute('aria-pressed','false');expand.textContent=tr('Vista immersiva');generation++;modal=false;viewer?.detach();owner=null;activeId='';document.body.classList.remove('geometry-modal-open');if(!document.activeElement?.closest?.('#main'))opener?.focus({preventScroll:true});opener=null;syncPreviews();});
  const ready=()=>!!(modal&&viewer?.alive&&viewer?.model&&viewer.host===stage);
+ dialog.addEventListener('click',async e=>{const button=e.target.closest('[data-geo-preset]');if(!button||!ready())return;const token=++generation,resume=viewer.auto;viewer.stop();setSpin(false);status.textContent=tr("Caricamento del modello 3D…");try{const buffer=await getScene(button.dataset.geoPreset,button.dataset.scene,button.dataset.sceneSha256);if(token!==generation||!modal)return;viewer.load(buffer);if(button.dataset.geoPreset==='schwarzite-sections'&&displayMode==='wire'){displayMode='surface';style.value=displayMode;}viewer.setMode(displayMode);if(resume&&motionAllowed()){viewer.auto=true;viewer.start();setSpin(true);}dialog.querySelectorAll('[data-geo-preset]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));status.textContent=button.textContent;}catch(error){if(token===generation)status.textContent=tr(error.message);}});
  style.addEventListener('change',()=>{displayMode=style.value;try{localStorage.setItem('mdc-geometry-style',displayMode);}catch{}if(ready())viewer.setMode(displayMode);});
  expand.addEventListener('click',()=>{const expanded=dialog.classList.toggle('is-expanded');expand.setAttribute('aria-pressed',String(expanded));expand.textContent=tr(expanded?'Mostra spiegazione':'Vista immersiva');viewer?.render();});
  const spin=dialog.querySelector('[data-geo-spin]');
@@ -76,11 +79,11 @@
  dialog.querySelector('[data-geo-right]').addEventListener('click',()=>{if(ready()){viewer.stop();setSpin(false);viewer.move(viewer.angle[0],viewer.angle[1]+.22,false);}});
  for(const [selector,delta] of [['[data-geo-up]',-.22],['[data-geo-down]',.22]])dialog.querySelector(selector).addEventListener('click',()=>{if(ready()){viewer.stop();setSpin(false);viewer.move(viewer.angle[0]+delta,viewer.angle[1],false);}});
  dialog.querySelectorAll('[data-geo-view]').forEach(button=>button.addEventListener('click',()=>{if(!ready())return;const angles={front:[0,0],side:[0,Math.PI/2],top:[Math.PI/2,0]}[button.dataset.geoView];viewer.stop();setSpin(false);viewer.move(...angles,false);}));
- window.MDCEffects?.subscribe(()=>{if(!motionAllowed()){viewer?.stop();if(!modal)stopHover();}setSpin(!!viewer?.auto&&motionAllowed());});
+ window.MDCEffects?.subscribe(()=>{if(!motionAllowed()){viewer?.stop();if(!modal)stopHover();}setSpin(!!viewer?.auto&&motionAllowed());syncPreviews();});
  dialog.querySelector('[data-geo-in]').addEventListener('click',()=>{if(ready())viewer.setZoom(viewer.zoom*1.15);});
  dialog.querySelector('[data-geo-out]').addEventListener('click',()=>{if(ready())viewer.setZoom(viewer.zoom/1.15);});
  dialog.querySelector('[data-geo-reset]').addEventListener('click',()=>{if(ready()){viewer.reset();setSpin(false);}});
- document.addEventListener('click',e=>{if(!e.target.closest('[data-geo-motion]'))return;disabled=!disabled;try{localStorage.setItem('mdc-geometry-motion',disabled?'off':'on');}catch{}if(disabled){viewer?.stop();if(!modal)stopHover();}setSpin(!!viewer?.auto&&motionAllowed());setMotionLabels();});
+ document.addEventListener('click',e=>{if(!e.target.closest('[data-geo-motion]'))return;disabled=!disabled;try{localStorage.setItem('mdc-geometry-motion',disabled?'off':'on');}catch{}if(disabled){viewer?.stop();if(!modal)stopHover();}setSpin(!!viewer?.auto&&motionAllowed());setMotionLabels();syncPreviews();});
  const pointers=new Map();let previousDistance=0;
  stage.addEventListener('pointerdown',e=>{if(!ready())return;stage.focus({preventScroll:true});stage.setPointerCapture(e.pointerId);pointers.set(e.pointerId,[e.clientX,e.clientY]);viewer.stop();setSpin(false);});
  stage.addEventListener('pointermove',e=>{
@@ -100,8 +103,43 @@
   else if(e.key==='Home')viewer.reset();else handled=false;
   if(handled)e.preventDefault();
  });
- document.addEventListener('visibilitychange',()=>{if(document.hidden){viewer?.stop();setSpin(false);if(!modal)stopHover();}});
- reduced.addEventListener('change',()=>{viewer?.stop();setSpin(false);setMotionLabels();if(!modal)stopHover();});
+ let resumeSpin=false;
+ document.addEventListener('visibilitychange',()=>{if(document.hidden){resumeSpin=!!viewer?.auto;viewer?.stop();setSpin(false);if(!modal)stopHover();}else if(resumeSpin&&ready()&&motionAllowed()){viewer.auto=true;viewer.start();setSpin(true);resumeSpin=false;}syncPreviews();});
+ reduced.addEventListener('change',()=>{viewer?.stop();setSpin(false);setMotionLabels();if(!modal)stopHover();syncPreviews();});
  window.addEventListener('hashchange',()=>{if(modal)dialog.close();stopHover();});
- window.addEventListener('pagehide',()=>{viewer?.dispose();viewer=null;cache.clear();});
+ /* At most three visible previews share the renderer implementation and scene cache.
+  * One fetch slot remains free for opening a dialog. Detached cards keep only angles. */
+ const previews=new Map(),visible=new Map(),idle=[],poses=new WeakMap(),failed=new WeakSet();
+ let suspended=false;
+ const previewObserver=new IntersectionObserver(entries=>{for(const e of entries){if(e.isIntersecting&&e.intersectionRatio>=.08)visible.set(e.target,e.intersectionRatio);else visible.delete(e.target);}syncPreviews();},{threshold:[0,.08,.35,.7,1]});
+ function releasePreview(a,entry){
+  if(entry.view){const v=entry.view;poses.set(a,{angle:v.angle.slice(),phase:v.lightPhase,time:v.motionTime});v.onlost=null;v.detach();if(v.alive)idle.push(v);else v.dispose();}
+  a.removeAttribute('data-geometry-motion');previews.delete(a);
+ }
+ function pausePreviews(){for(const [a,e] of previews)if(e.view){e.view.stop();a.dataset.geometryMotion='paused';}}
+ function clearPreviews(){previewObserver.disconnect();visible.clear();for(const [a,e] of previews)releasePreview(a,e);}
+ function syncPreviews(){
+  const wanted=new Set([...visible].filter(([a])=>a.isConnected&&!failed.has(a)).sort((a,b)=>b[1]-a[1]).slice(0,3).map(([a])=>a));
+  for(const [a,e] of previews)if(!wanted.has(a))releasePreview(a,e);
+  if(suspended||modal||document.hidden||!motionAllowed()){pausePreviews();return;}
+  for(const a of wanted){
+   const entry=previews.get(a);if(entry){if(entry.view){entry.view.previewCount=wanted.size;entry.view.auto=true;entry.view.start();a.dataset.geometryMotion='running';}continue;}
+   if(pending.size>=3)break;
+   const next={view:null};previews.set(a,next);
+   Promise.all([getLibrary(),getScene(a.dataset.geometryOpen,a.dataset.scene,a.dataset.sceneSha256)]).then(([lib,buffer])=>{
+    if(previews.get(a)!==next||!a.isConnected)return;
+    const v=next.view=idle.pop()||new lib.Viewer({preview:true});v.dynamicLight=true;v.sway=!['fullerene-cage','schwarzite-neck'].includes(a.dataset.geometryOpen);v.load(buffer);v.setMode('surface');
+    const pose=poses.get(a);v.lightPhase=pose?.phase??[...a.dataset.geometryOpen].reduce((n,c)=>n+c.charCodeAt(0),0)*.03;
+    if(pose){v.angle=pose.angle.slice();v.target=v.angle.slice();v.motionTime=pose.time;}
+    v.onlost=()=>{if(previews.get(a)===next){failed.add(a);releasePreview(a,next);syncPreviews();}};
+    v.attach(a);
+   }).catch(()=>{if(previews.get(a)===next){failed.add(a);releasePreview(a,next);}}).finally(syncPreviews);
+  }
+ }
+ function scanPreviews(){clearPreviews();document.querySelectorAll('[data-carbon-lattice][data-geometry-open]').forEach(a=>previewObserver.observe(a));}
+ window.addEventListener('mdc:content-change',()=>{scanPreviews();setMotionLabels();});
+ navigator.connection?.addEventListener?.('change',()=>{if(!motionAllowed()){viewer?.stop();setSpin(false);stopHover();}syncPreviews();});
+ window.addEventListener('pagehide',()=>{suspended=true;clearPreviews();for(const v of idle.splice(0))v.dispose();viewer?.dispose();viewer=null;cache.clear();});
+ window.addEventListener('pageshow',e=>{if(e.persisted){suspended=false;scanPreviews();}});
+ scanPreviews();
 })();

@@ -67,8 +67,8 @@ test('launch=none produces a real link without animation binding',()=>{
  const d=data('it');d.teachingApps[0].launch='none';
  assert.doesNotMatch(renderTeachingApps(d),/data-app-launch/);
 });
-test('dialog only appears on launch-enabled pages',()=>{
- assert.equal(renderAppLaunchDialog(data('it'),'<p>Home</p>'),'');
+test('one persistent dialog supports launch links after navigation',()=>{
+ assert.match(renderAppLaunchDialog(data('it'),'<p>Home</p>'),/data-app-launch-dialog/);
  const html=renderAppLaunchDialog(data('it'),renderTeachingApps(data('it')));
  assert.match(html,/^<dialog/);assert.match(html,/role="status"/);assert.match(html,/data-launch-direct/);assert.match(html,/data-launch-cancel/);
  assert.doesNotMatch(html,/style=|onclick=/);

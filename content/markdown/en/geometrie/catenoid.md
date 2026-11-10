@@ -19,7 +19,7 @@ Rotating a catenary generates a surface with a central neck. The contrast betwee
 This is a parametric portion of a catenoid, discretised for display. The construction does not simulate the stability of a soap film or a physical experiment.
 
 ## fonti
-[Reproducible parametrisation included in the project](geometrie.html#catenoid)
+[SageMath — Catenoid](https://doc.sagemath.org/html/en/reference/riemannian_geometry/sage/geometry/riemannian_manifolds/surface3d_generators.html)
 
 ## osservazione
 Rotate the surface to view it from the side, follow its narrowing towards the central neck and observe how both ends widen, comparing the profile with the lines that travel around the figure.

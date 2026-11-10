@@ -1202,3 +1202,11 @@ English: Relation in words
 ## revision38_geo_3
 Italiano: Apri l’esperimento
 English: Open the experiment
+
+## public-copy-v310-a
+Italiano: Curriculum completo in formato PDF.
+English: Complete curriculum in PDF format.
+
+## public-copy-v310-b
+Italiano: La sfera di Bloch descrive gli stati puri di un qubit, mentre i reticoli offrono la struttura matematica su cui si fondano alcune costruzioni crittografiche post-quantistiche, mettendo in relazione due ambiti che affrontano problemi differenti.
+English: The Bloch sphere describes the pure states of a qubit, while lattices provide the mathematical structure underlying some post-quantum cryptographic constructions, linking two fields that address different problems.

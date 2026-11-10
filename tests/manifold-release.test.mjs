@@ -16,8 +16,8 @@ test('the licence preserves third-party documents, quotes and software scope',()
 test('rain texture has bright leading heads with trailing characters above, positive downward translation',()=>{
  const s=read('src/matrix-rain.js');assert.match(s,/y=textureHeight-\(row\+1\)\*gap/);assert.match(s,/s\.t=\(s\.t\+s\.speed\*dt\*acceleration\*intensity\(\)\.speed\)/);assert.match(s,/speed:rand\(speed\*\.65,speed\*1\.3\)/);assert.match(s,/get direction\(\)\{return 'down';\}/);
 });
-test('UI sound uses smooth sinusoidal FM without stepped pitches, square waves or noise buffers',()=>{
- const s=read('src/sound.js');assert.match(s,/osc\.type='sine'/);assert.match(s,/voices\.size>=3/);assert.match(s,/distance<180/);assert.match(s,/now-lastMove<520/);assert.doesNotMatch(s,/type='square'|type='triangle'|createBufferSource\(/);assert.match(s,/\.065/);
+test('UI sound uses rounded sine accents with soft attacks and no pointer noise',()=>{
+ const s=read('src/sound.js');assert.match(s,/osc\.type='sine'/);assert.match(s,/voices\.size>=3/);assert.match(s,/now-lastChirp<360/);assert.match(s,/now-lastPage<700/);assert.doesNotMatch(s,/type='square'|type='triangle'|createBufferSource\(/);assert.match(s,/t\+\.055/);
 });
 test('music is separate, opt-in, session-persistent and syntactically safe',()=>{
  const s=read('src/music.js');assert.doesNotThrow(()=>new vm.Script(s));assert.match(s,/audio\.preload='none'/);assert.match(s,/play\.addEventListener\('click'/);assert.match(s,/sessionStorage/);assert.match(s,/pagehide/);assert.match(s,/loadedmetadata/);assert.doesNotMatch(s,/\.autoplay\s*=/);

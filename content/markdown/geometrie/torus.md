@@ -18,7 +18,7 @@ Due coordinate periodiche percorrono la superficie lungo direzioni distinte. La 
 Il toro è qui un oggetto geometrico parametrico. Non rappresenta automaticamente uno spazio degli stati o una particolare struttura materiale.
 
 ## fonti
-[Parametrizzazione riproducibile inclusa nel progetto](geometrie.html#torus)
+[SageMath — Torus](https://doc.sagemath.org/html/en/reference/riemannian_geometry/sage/geometry/riemannian_manifolds/surface3d_generators.html)
 
 ## osservazione
 Segui una curva che attraversa la cavità centrale e confrontala con una che percorre l’anello, ruotando la superficie per riconoscere le due direzioni periodiche attraverso le quali viene descritta la posizione dei punti sul toro.

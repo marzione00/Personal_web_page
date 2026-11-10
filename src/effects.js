@@ -13,7 +13,7 @@
   document.documentElement.dataset.ambient=state.ambient;document.documentElement.dataset.effectsPaused=String(state.paused);
   document.querySelectorAll('[data-effects-pause]').forEach(b=>{b.setAttribute('aria-pressed',String(state.paused));b.textContent=state.paused?(en?'Resume effects':'Riprendi gli effetti'):(en?'Pause visual effects':'Ferma gli effetti visivi');});
   const status=document.querySelector('[data-effects-status]');
-  if(status)status.textContent=reduced.matches?(en?'Reduced motion is enabled: cascades remain still and page transitions are disabled.':'Movimento ridotto attivo: le cascate restano ferme e le transizioni sono disabilitate.'):(en?'Scientific cascades cover the entire screen, including on mobile. Your choice is saved in this browser.':'Le cascate scientifiche occupano tutta la schermata, anche su mobile. La scelta viene salvata in questo browser.');
+  if(status)status.textContent=reduced.matches?(en?'Reduced motion is enabled: cascades remain still and page transitions are disabled.':'Movimento ridotto attivo: le cascate restano ferme e le transizioni sono disabilitate.'):(en?'Your preferences are saved in this browser.':'Le preferenze vengono conservate in questo browser.');
   listeners.forEach(fn=>fn());
  }
  window.MDCEffects={get paused(){return state.paused;},get quality(){return state.quality;},get intro(){return state.intro&&!state.paused;},get intensity(){return state.intensity;},get reading(){return state.reading;},get ambient(){return state.ambient;},get formulas(){return state.formulas;},get transitions(){return state.transitions&&!reduced.matches&&!state.paused;},get reduced(){return reduced.matches;},subscribe(fn){listeners.add(fn);return()=>listeners.delete(fn);}};
@@ -35,9 +35,9 @@
  const quality=dialog.querySelector('[data-effects-quality]');quality.value=state.quality;quality.addEventListener('change',()=>{state.quality=quality.value;put('mdc-quality',state.quality);notify();});
  document.querySelectorAll('[data-effects-pause]').forEach(b=>b.addEventListener('click',()=>{state.paused=!state.paused;put('mdc-effects-paused',state.paused?'on':'off');notify();}));
  notify();
- document.querySelectorAll('[data-music-open]').forEach(b=>b.addEventListener('click',()=>{if(!dialog.open)showPreferences(b);dialog.querySelector('[data-music-play]')?.focus();}));
+ document.addEventListener('click',ev=>{const b=ev.target.closest?.('[data-music-open]');if(!b)return;if(!dialog.open)showPreferences(b);dialog.querySelector('[data-music-play]')?.focus();});
  dialog.querySelector('[data-effects-close]').addEventListener('click',()=>dialog.close());
- dialog.addEventListener('close',()=>{if(!catalog?.open)(preferenceOpener?.isConnected?preferenceOpener:open).focus({preventScroll:true});});
+ dialog.addEventListener('close',()=>{if(!catalog?.open&&!document.activeElement?.closest?.('#main'))(preferenceOpener?.isConnected?preferenceOpener:open).focus({preventScroll:true});});
  for(const d of [dialog,catalog]){if(!d)continue;d.addEventListener('click',ev=>{if(ev.target===d){const r=d.getBoundingClientRect();if(ev.clientX<r.left||ev.clientX>r.right||ev.clientY<r.top||ev.clientY>r.bottom)d.close();}});}
  let loaded=false;
  const data=window.MDCFormulaCatalog;
@@ -58,5 +58,5 @@
  field.addEventListener('change',()=>list.querySelectorAll('article').forEach(a=>a.hidden=field.value!=='all'&&a.dataset.family!==field.value));
  dialog.querySelector('[data-formulas-open]').addEventListener('click',()=>{fill();dialog.close();catalog.showModal();catalog.querySelector('[data-formulas-close]').focus();});
  catalog.querySelector('[data-formulas-close]').addEventListener('click',()=>catalog.close());
- catalog.addEventListener('close',()=>{if(preferenceOpener?.isConnected)preferenceOpener.focus({preventScroll:true});else open.focus({preventScroll:true});});
+ catalog.addEventListener('close',()=>{if(document.activeElement?.closest?.('#main'))return;if(preferenceOpener?.isConnected)preferenceOpener.focus({preventScroll:true});else open.focus({preventScroll:true});});
 })();

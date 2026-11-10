@@ -18,7 +18,7 @@ A straight line rotates while advancing along an axis, generating a ruled surfac
 This is a finite portion of a parametric helicoid. Rotating the viewer moves the camera; it does not change the pitch of the surface.
 
 ## fonti
-[Reproducible parametrisation included in the project](geometrie.html#helicoid)
+[SageMath — Helicoid](https://doc.sagemath.org/html/en/reference/riemannian_geometry/sage/geometry/riemannian_manifolds/surface3d_generators.html)
 
 ## osservazione
 Follow the surface’s edge as you rotate it, observing how movement along the axis accompanies a change in orientation, then compare this continuity with the straight segments from which the shape is constructed.

@@ -19,7 +19,7 @@ Four scaled-down copies occupy a tetrahedron’s vertices. Repeating the constru
 The scene shows three recursion levels, hence 64 tetrahedra. The stated dimension concerns the mathematical limit, not the finite rendered object.
 
 ## fonti
-[Recursive construction included in the project](geometrie.html#sierpinski)
+[Wolfram — SierpinskiMesh](https://reference.wolfram.com/language/ref/SierpinskiMesh.html)
 
 ## osservazione
 Identify the largest tetrahedra you can recognise and zoom in to follow their subdivision, observing how voids and solids repeat a similar arrangement through the three recursion levels present in the scene.

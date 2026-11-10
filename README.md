@@ -1,14 +1,52 @@
-# Topological Manifolds v3.8 — Navigazione, studio ed esperimenti
+# Topological Manifolds v3.12.1 — Carbonio animato
 
 **Correzione CI del 9 novembre 2026:** il workflow usa Ubuntu 24.04 e Python 3.12 per Playwright 1.56.0. Vedi `docs/CORREZIONE_CI_v3.8.md`.
 
-Pacchetto sorgenti completo per `marzione00/Personal_web_page`, basato sulla consegna v3.6 e sul commit originario `8964fc96b08671089cfb5d3561acb311bb994599`. I testi italiani adottano una prosa ipotattica, nella quale periodi ampi e subordinate esplicitano le relazioni fra formazione, ricerca, insegnamento e interessi personali; la prima persona accompagna le pagine autobiografiche, mentre le sezioni scientifiche conservano un registro espositivo. La versione inglese è aggiornata in parallelo.
+Pacchetto sorgenti completo per `marzione00/Personal_web_page`, basato sulla consegna v3.9 con ingresso Matrix e ambiente sonoro e sul commit originario `8964fc96b08671089cfb5d3561acb311bb994599`. I testi italiani adottano una prosa ipotattica, nella quale periodi ampi e subordinate esplicitano le relazioni fra formazione, ricerca, insegnamento e interessi personali; la prima persona accompagna le pagine autobiografiche, mentre le sezioni scientifiche conservano un registro espositivo. La versione inglese è aggiornata in parallelo.
 
-La revisione comprende presentazioni, biografia breve e completa espandibile, sette aree di ricerca, sedici sintesi di pubblicazioni, sei corsi, Quantum Lab, blog, viaggi, risorse e contatti. Le 24 geometrie ricevono istruzioni di osservazione in entrambe le lingue. Le citazioni integrali sono accompagnate da note personali e raccolte in passaggi espandibili. L’ingresso cinematografico, le schede delle sezioni e il visualizzatore immersivo della v3.6 restano disponibili.
+La revisione comprende presentazioni, biografia breve e completa espandibile, sette aree di ricerca, sedici sintesi di pubblicazioni, sei corsi, Quantum Lab, blog, viaggi, risorse e contatti. Le 28 geometrie ricevono istruzioni di osservazione in entrambe le lingue. Le citazioni integrali sono accompagnate da note personali e raccolte in passaggi espandibili. Il visualizzatore immersivo conserva i modelli originali; ingresso e passaggi fra le sezioni seguono la regia della v3.9.
 
 Quantum Lab rimane un sito autonomo all'indirizzo https://marzione00.github.io/QuantumLab_Public/ . Questo archivio contiene il portale aggiornato e il collegamento; il laboratorio mantiene la propria repository e pubblicazione.
 
-## Revisione 3.8
+## Revisione 3.12.1
+
+Le strutture carboniose ruotano mentre sono visibili nella pagina, con illuminazione graduale verde e fredda. Fullerene e schwarzite compiono un giro completo; nastri e doppio strato alternano l’orientamento per mantenere leggibili gli esagoni. Pausa degli effetti, movimento ridotto e orientamento manuale arrestano l’animazione. Il renderer condiviso gestisce anche le anteprime, con risorse limitate e sospensione fuori schermo. Rapporto e verifiche in `docs/CARBONIO_ANIMATO_v3.12.1.md`.
+
+## Revisione 3.12
+
+Fullerene C₆₀, nanonastri armchair e zigzag, nastro deformato e nanoframmenti a doppio strato estendono il formato della schwarzite. Le figure sono distribuite fra home, Ricerca, Fisica delle nanostrutture e Atlante, con spiegazioni IT/EN e rimandi ai lavori pertinenti. Il catalogo comprende 28 schede e 32 scene. Le geometrie sono procedurali e usano lo stesso visualizzatore. Rapporto in `docs/CARBONIO_v3.12.md`.
+
+## Revisione 3.11.2
+
+Il reticolo iniziale si estende a otto celle disposte 2×2×2, con 384 atomi, 64 esagoni e 48 ottagoni completi. La vista «Struttura P688» mostra 27 celle disposte 3×3×3, per 1.296 atomi. Gli stessi controlli consentono di ruotare e ingrandire entrambe le strutture; la guida delle due curvature resta disponibile. Rapporto in `docs/PERIODICITA_v3.11.2.md`.
+
+## Revisione 3.11.1
+
+La vista iniziale mostra direttamente il reticolo carbonioso, con 96 atomi, 16 esagoni e quattro ottagoni completi. La selezione più ampia conserva gli anelli lungo le pareti curve; legami chiari e facce scure rendono leggibili le aperture e il raccordo a sella. La superficie nodale continua resta nella vista «Due curvature». Miniatura e modello interattivo derivano dalle stesse coordinate. Rapporto in `docs/RETICOLO_v3.11.1.md`.
+
+## Revisione 3.11
+
+Il nanonastro esagonale è sostituito dalla schwarzite P688: un collo a sella introduce la curvatura negativa, mentre nell’approfondimento le sezioni azzurra e ambra mostrano le due curvature di segno opposto. La vista della struttura comprende otto celle e 384 atomi. Atomi e legami derivano dai parametri cristallografici pubblicati; la superficie verde è una guida nodale della famiglia Schwarz P. La spiegazione e le fonti sono disponibili in italiano e inglese.
+
+I tre asset usano lo stesso visualizzatore, la stessa finestra e gli stessi controlli degli altri modelli, con verifica SHA-256 e caricamento su richiesta. Il vecchio nanonastro e i relativi file sono rimossi. Vedi `docs/SCHWARZITE_v3.11.md`.
+
+## Revisione 3.10
+
+La pagina Cybersecurity presenta una rete 2D sovrapposta alla cartografia Natural Earth: i nodi compromessi sono rossi e segnati da una croce, quelli non colpiti restano verdi. La figura contiene soltanto geometria; selezionandola si apre una spiegazione della teoria dei grafi, dei percorsi d’attacco e delle strategie di difesa, con riferimenti accademici. La stessa scheda è disponibile nell’atlante e nella ricerca, in italiano e in inglese.
+
+L’animazione è finita, si ferma fuori schermo o con gli effetti in pausa e rispetta il movimento ridotto. Il collegamento HTML conduce alla spiegazione nell’atlante anche senza JavaScript. Il grafo è illustrativo: posizione geografica, connessioni e tempi non costituiscono dati su attacchi reali.
+
+La revisione dei testi pubblici rimuove diciture sulle consegne precedenti e spiegazioni dei meccanismi interni; otto schede dell’atlante hanno ora riferimenti matematici esterni consultabili. Le spiegazioni scientifiche e i 24 modelli tridimensionali rimangono disponibili. Il rapporto corrente è `docs/GRAFI_E_REVISIONE_v3.10.md`.
+
+## Ingresso e audio
+
+L’ingresso offre **Entra con audio** ed **Entra in silenzio**; dopo la scelta, 1,2 secondi di decodifica lasciano spazio alla costruzione della home, nella quale titolo, ritratto e contenuti emergono in circa 1,6 secondi. Le pagine interne usano sequenze più brevi, mentre i collegamenti diretti e la cronologia raggiungono subito il contenuto. Le schede dei percorsi disegnano le proprie geometrie quando entrano nello schermo.
+
+**Descending Fields** è la nuova composizione originale di 4:30, con pulsazione a 72 BPM, accordi sospesi e timbri gravi. Il lettore si carica su richiesta e resta attivo fra le pagine della stessa lingua, attenuandosi durante la lettura. Musica ed effetti hanno volumi distinti; i clic e i cambi di pagina usano accenti morbidi, mentre scorrimento e movimento del puntatore restano silenziosi. Local Coordinates è conservato fra gli asset originali.
+
+Il cambio di lingua, una ricarica completa e i siti esterni aprono un nuovo documento; la posizione audio viene salvata e il comando Riprendi permette di continuare. I collegamenti HTML ordinari rimangono la via di accesso se JavaScript o la navigazione progressiva sono indisponibili. Il rapporto corrente è `docs/MATRIX_AUDIO_v3.9.md`.
+
+## Funzioni della revisione 3.8 conservate
 
 Homepage selettiva, sette pagine di ricerca, corsi ordinati per disponibilità dei materiali e annualità, ricerca locale condivisa con 91 argomenti delle slide e 24 geometrie. Il percorso didattico include tracce di studio, preparazione suggerita, collegamenti alle pagine dei PDF e ripresa locale. Tre esperimenti consentono di modificare stato di Bloch, fase e ampiezza delle onde, soglia di decisione.
 
@@ -20,9 +58,9 @@ Lo sfondo attraversa anche il centro della pagina; testi, foto e controlli resta
 
 Tre intensità: Leggera, Normale e Cinematografica. Le formule cambiano famiglia in base alla pagina; una preferenza attenua la cascata quando il corpo di un articolo entra nell’area di lettura. La scelta si conserva nel browser.
 
-Intestazione, navigazione e selettore lingua sono definiti soltanto in `src/header.css`; gli strati usano una scala comune. Le finestre modali usano il top layer del browser. CSS e JavaScript diventano due file condivisi con nome basato sul contenuto, SRI e CSP: i browser possono riutilizzarli fra le pagine. La homepage della build di controllo occupa circa 24 kB; il primo accesso scarica anche i due file condivisi. Il tempo effettivo dipende da rete, cache e dispositivo.
+Intestazione, navigazione e selettore lingua sono definiti soltanto in `src/header.css`; gli strati usano una scala comune. Le finestre modali usano il top layer del browser. CSS e JavaScript diventano due file condivisi con nome basato sul contenuto, SRI e CSP: i browser possono riutilizzarli fra le pagine. La homepage della build di controllo occupa circa 33 kB; il primo accesso scarica anche i due file condivisi. Il tempo effettivo dipende da rete, cache e dispositivo.
 
-Sono incluse dodici immagini social IT/EN con metadati Open Graph e Twitter, emessi per la build pubblicabile. Il rapporto corrente è `docs/REVISIONE_COMPLETA_v3.8.md`, accompagnato da `docs/CONTROLLO_STRATIFICAZIONI_v3.8.md`. I rapporti numerati delle consegne precedenti restano come documentazione storica.
+Sono incluse dodici immagini social IT/EN con metadati Open Graph e Twitter, emessi per la build pubblicabile. Il controllo corrente è `docs/GRAFI_E_REVISIONE_v3.10.md`. I rapporti numerati delle consegne precedenti restano come documentazione storica.
 
 Il visualizzatore usa WebGL quando disponibile e una proiezione interattiva Canvas 2D come alternativa. Sono presenti i comandi Luminosa / Superficie / Reticolo, Vista immersiva / Mostra spiegazione, zoom e pausa. Le geometrie condividono un solo foglio di stile, `src/geometry.css`. Il materiale scientifico e i 24 modelli originali sono conservati.
 

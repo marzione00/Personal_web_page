@@ -85,7 +85,7 @@ for i in range(-4,5):
   for p in vv:pts.setdefault(p,len(pts))
   for a,b in zip(vv,vv[1:]+vv[:1]):edges.add(tuple(sorted([pts[a],pts[b]])))
 base=np.array(list(pts))
-for id,vibration in [('graphene-ribbon',False),('vibrational-mode',True)]:
+for id,vibration in [('vibrational-mode',True)]:
  m=Mesh();p=base.copy()
  if vibration:p[:,2]=1.1*np.sin(p[:,0]*.7)*np.cos(p[:,1]*.42)
  for a,b in edges:m.tube(p[a],p[b],.037,MINT,6)
@@ -201,3 +201,8 @@ for id,fn,nu,nv,ur,vr,cam in [
 assert len(registry)==24
 (OUT/'manifest.json').write_text(json.dumps(registry,ensure_ascii=False,indent=2)+'\n')
 print('Total binary mesh bytes',sum(x['sceneBytes'] for x in registry))
+
+# The P688 model replaces the former ribbon and owns its two additional views.
+import subprocess, sys
+subprocess.run([sys.executable, str(ROOT/"tools/generate-schwarzite.py")], check=True)
+subprocess.run([sys.executable, str(ROOT/"tools/generate-carbon-family.py")], check=True)

@@ -48,20 +48,72 @@
     "sha256": "096b56baca6732dc46d07ca4cb531e016e5422fb7dce08bc3577be405854c487"
   },
   {
-    "id": "graphene-ribbon",
-    "file": "graphene-ribbon.webp",
-    "scene": "scenes/graphene-ribbon.bin",
+    "id": "schwarzite-neck",
+    "scene": "scenes/schwarzite-neck.bin",
+    "vertices": 11632,
+    "triangles": 12288,
+    "sceneBytes": 178440,
+    "sceneSha256": "cf642c2f4832b0d2772d5b5ee4f27b11ccf0c913caa6db672a84c065437fa569",
+    "file": "schwarzite-neck.webp",
     "family": "carbonio",
-    "model": "ideal honeycomb; no relaxed atomic coordinates",
-    "vertices": 4368,
-    "triangles": 5616,
-    "sceneBytes": 73032,
-    "sceneSha256": "435a3b324fb2392e155728ed21a16a27f39daf30169fe1cbf3c193c2aa4ebc27",
+    "model": "P688 carbon lattice: 2×2×2 cells, 384 atoms, 64 complete hexagons and 48 complete octagons",
     "labels": false,
     "width": 800,
     "height": 640,
-    "bytes": 27140,
-    "sha256": "41c2016279a144206dd5444b24fc9c9378dbbf5a1b6affa953c90ca1de6b90cb"
+    "bytes": 54754,
+    "sha256": "3daf5f87adaa66ad2c52a9030b5bec5c288fe7b626b943a36f88e8f2e93b1961",
+    "carbonAtoms": 384,
+    "completeHexagons": 64,
+    "completeOctagons": 48,
+    "cellRepeats": [
+      2,
+      2,
+      2
+    ],
+    "views": [
+      {
+        "id": "schwarzite-neck",
+        "scene": "scenes/schwarzite-neck.bin",
+        "vertices": 11632,
+        "triangles": 12288,
+        "sceneBytes": 178440,
+        "sceneSha256": "cf642c2f4832b0d2772d5b5ee4f27b11ccf0c913caa6db672a84c065437fa569",
+        "label": {
+          "it": "Reticolo carbonioso",
+          "en": "Carbon lattice"
+        }
+      },
+      {
+        "id": "schwarzite-sections",
+        "scene": "scenes/schwarzite-sections.bin",
+        "vertices": 8626,
+        "triangles": 17024,
+        "sceneBytes": 179802,
+        "sceneSha256": "31353e822a9ca6d1ea3754589d3512d4a19741c45f146e2c47872cc4e981ab53",
+        "label": {
+          "it": "Due curvature",
+          "en": "Two curvatures"
+        }
+      },
+      {
+        "id": "schwarzite-lattice",
+        "scene": "scenes/schwarzite-lattice.bin",
+        "vertices": 18144,
+        "triangles": 17712,
+        "sceneBytes": 269592,
+        "sceneSha256": "6e6309bcef19bdf652aa5c2d4391e526629a1b05fed78795acde06c124122a1f",
+        "label": {
+          "it": "Struttura P688",
+          "en": "P688 structure"
+        },
+        "carbonAtoms": 1296,
+        "cellRepeats": [
+          3,
+          3,
+          3
+        ]
+      }
+    ]
   },
   {
     "id": "vibrational-mode",
@@ -382,5 +434,149 @@
     "height": 640,
     "bytes": 15164,
     "sha256": "78bf612b8f94a13ff9b2a42cb50b676f5a60a96ddce057f5959bc7853589d79c"
+  },
+  {
+    "id": "fullerene-cage",
+    "scene": "scenes/fullerene-cage.bin",
+    "vertices": 1652,
+    "triangles": 1740,
+    "sceneBytes": 25332,
+    "sceneSha256": "65251cd9ce0420a0fa6e6dbc215bc888fae5154029d47e561264bdc919c11846",
+    "file": "fullerene-cage.webp",
+    "width": 800,
+    "height": 640,
+    "bytes": 27838,
+    "sha256": "98b4a2de99f37ec37d5ad426c2d9e5b6e039c386315840c6dfefe84d4b80e6a1",
+    "family": "carbonio",
+    "labels": false,
+    "carbonAtoms": 60,
+    "model": "Idealised carbon bond graph; see scientific explanation",
+    "carbonLattice": true
+  },
+  {
+    "id": "carbon-nanoribbon",
+    "scene": "scenes/carbon-nanoribbon.bin",
+    "vertices": 1941,
+    "triangles": 2074,
+    "sceneBytes": 29938,
+    "sceneSha256": "e98f7b8884e47196bf4141b168218f227374a62db1391c597ddc6bfbac4b4946",
+    "file": "carbon-nanoribbon.webp",
+    "width": 800,
+    "height": 640,
+    "bytes": 24102,
+    "sha256": "f90bc3f2a9e7db553c0362ae355990cc86a0ba37792be81f00f4f9941f614210",
+    "family": "carbonio",
+    "labels": false,
+    "carbonAtoms": 80,
+    "model": "Idealised carbon bond graph; see scientific explanation",
+    "carbonLattice": true,
+    "views": [
+      {
+        "id": "carbon-nanoribbon",
+        "scene": "scenes/carbon-nanoribbon.bin",
+        "vertices": 1941,
+        "triangles": 2074,
+        "sceneBytes": 29938,
+        "sceneSha256": "e98f7b8884e47196bf4141b168218f227374a62db1391c597ddc6bfbac4b4946",
+        "file": "carbon-nanoribbon.webp",
+        "width": 800,
+        "height": 640,
+        "bytes": 24102,
+        "sha256": "f90bc3f2a9e7db553c0362ae355990cc86a0ba37792be81f00f4f9941f614210",
+        "family": "carbonio",
+        "labels": false,
+        "carbonAtoms": 80,
+        "model": "Idealised carbon bond graph; see scientific explanation",
+        "carbonLattice": true,
+        "label": {
+          "it": "Bordo armchair",
+          "en": "Armchair edge"
+        }
+      },
+      {
+        "id": "carbon-zigzag",
+        "scene": "scenes/carbon-zigzag.bin",
+        "vertices": 2051,
+        "triangles": 2190,
+        "sceneBytes": 31624,
+        "sceneSha256": "b7d0d041b8255389a076a47a2d0b1a0e7235bc658df4557fd795edecf3e8111f",
+        "label": {
+          "it": "Bordo zigzag",
+          "en": "Zigzag edge"
+        }
+      }
+    ]
+  },
+  {
+    "id": "twisted-nanoribbon",
+    "scene": "scenes/twisted-nanoribbon.bin",
+    "vertices": 1941,
+    "triangles": 2074,
+    "sceneBytes": 29938,
+    "sceneSha256": "77b8118b3c9e3f7c300ed77816ab8cb45b78d0d12bf9d9a459a64d8c327b8a42",
+    "file": "twisted-nanoribbon.webp",
+    "width": 800,
+    "height": 640,
+    "bytes": 21848,
+    "sha256": "634f531dcf468a27e482c4d1eb4538178fe9dd59167a192afe5ea84d25e0283e",
+    "family": "carbonio",
+    "labels": false,
+    "carbonAtoms": 80,
+    "model": "Idealised carbon bond graph; see scientific explanation",
+    "carbonLattice": true
+  },
+  {
+    "id": "bilayer-nanoflake",
+    "scene": "scenes/bilayer-nanoflake.bin",
+    "vertices": 1910,
+    "triangles": 2044,
+    "sceneBytes": 29478,
+    "sceneSha256": "f2ec00d5ae478df5f5a08cc5b5e0ab67e20c411f22e0c279b98178da871b1679",
+    "file": "bilayer-nanoflake.webp",
+    "width": 800,
+    "height": 640,
+    "bytes": 25098,
+    "sha256": "11f455d46df4b13925a939a8c99b04b75967cf9ed58a7dc7c37c6af6b05eb941",
+    "family": "carbonio",
+    "labels": false,
+    "carbonAtoms": 80,
+    "model": "Idealised carbon bond graph; see scientific explanation",
+    "carbonLattice": true,
+    "views": [
+      {
+        "id": "bilayer-nanoflake",
+        "scene": "scenes/bilayer-nanoflake.bin",
+        "vertices": 1910,
+        "triangles": 2044,
+        "sceneBytes": 29478,
+        "sceneSha256": "f2ec00d5ae478df5f5a08cc5b5e0ab67e20c411f22e0c279b98178da871b1679",
+        "file": "bilayer-nanoflake.webp",
+        "width": 800,
+        "height": 640,
+        "bytes": 25098,
+        "sha256": "11f455d46df4b13925a939a8c99b04b75967cf9ed58a7dc7c37c6af6b05eb941",
+        "family": "carbonio",
+        "labels": false,
+        "carbonAtoms": 80,
+        "model": "Idealised carbon bond graph; see scientific explanation",
+        "carbonLattice": true,
+        "label": {
+          "it": "Strati traslati",
+          "en": "Shifted layers"
+        }
+      },
+      {
+        "id": "bilayer-aligned",
+        "scene": "scenes/bilayer-aligned.bin",
+        "vertices": 1910,
+        "triangles": 2044,
+        "sceneBytes": 29478,
+        "sceneSha256": "d598f2060df1e442896d44c7995cae3711e9f40f13627915b6cb68df9f9a2376",
+        "label": {
+          "it": "Strati allineati",
+          "en": "Aligned layers"
+        }
+      }
+    ]
   }
 ]
