@@ -26,3 +26,7 @@ Segui un bordo da un’estremità all’altra e osserva come ruoti attorno all�
 
 ## lettura
 Ogni coordinata trasversale del nastro ruota di un angolo che cresce linearmente lungo l’asse. La lista dei legami resta la stessa del nastro piano.
+
+## legenda
+mint | legami del nastro deformato
+pale | atomi di carbonio

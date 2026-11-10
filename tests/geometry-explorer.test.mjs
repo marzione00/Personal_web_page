@@ -23,7 +23,7 @@ test('graphics obey the declared lightweight budgets',()=>{
 });
 test('no geometry repeats within an editorial page; atlas presents each once',()=>{
  for(const p of pages){const ids=[...p.body.matchAll(/data-geometry="([a-z-]+)"/g)].map(x=>x[1]);assert.equal(new Set(ids).size,ids.length,p.file);}
- const home=pages.find(x=>x.file==='index.html');assert.equal([...home.body.matchAll(/class="portal-art"/g)].length,3); // The compact home has section-specific SVG entrances.
+ const home=pages.find(x=>x.file==='index.html');assert.equal([...home.body.matchAll(/class="portal-art(?: [a-z-]+)?"/g)].length,3); // Three section entrances, including the galaxy map.
  assert.equal([...pages.find(x=>x.file==='geometrie.html').body.matchAll(/data-geometry="/g)].length,28);
 });
 test('only the shared carbon family is intentionally reused across relevant sections',()=>{

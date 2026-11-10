@@ -1,22 +1,14 @@
-# Pacchetto GitHub completo — Topological Manifolds v3.12.1 — Carbonio animato
+# Pacchetto GitHub completo — Topological Manifolds v3.15.2
 
-1. Conserva una copia della repository attuale. Questo ZIP parte dal commit `8964fc96b08671089cfb5d3561acb311bb994599`; eventuali modifiche successive vanno confrontate prima di sostituire i file.
-2. Estrai lo ZIP. Nella radice trovi subito `package.json`, `README.md`, `CV.pdf`, `src/`, `content/`, `public/` e `.github/`.
-3. Copia il contenuto estratto nella radice di `marzione00/Personal_web_page`, includendo i file e le cartelle nascosti. Non caricare una cartella contenitrice né il solo ZIP.
-4. Il CV originale della repository è già incluso. Non occorre aggiungere un altro PDF. Il workflow verifica la copia pubblica byte per byte.
-5. Mantieni **Settings → Pages → Source: GitHub Actions**, `SITE_URL=https://marzione00.github.io/Personal_web_page/` ed `ENABLE_DEPLOY=true`.
-6. Controlla i testi italiani e inglesi, il comando **Approfondisci il percorso**, i passi citati espandibili e la guida **Osserva la figura** nelle schede geometriche. Verifica anche l’ingresso iniziale e il pulsante Rivedi l’ingresso, le schede delle sezioni, le tre visualizzazioni delle geometrie e Vista immersiva / Mostra spiegazione. Aspetto consente di disabilitare l’ingresso; il movimento ridotto lo esclude automaticamente.
-7. Dopo il commit e il completamento del workflow verifica la cascata a tutta schermata su desktop e mobile, i controlli **Aspetto → intensità / animazione / attenuazione in lettura**, **Didattica → Quantum Lab**, l'apertura del laboratorio, il ritorno alla Didattica e la ricerca in entrambe le lingue.
+Questa versione corregge la causa dell'errore `Locator expected to contain text Trascina`: la suite richiedeva il messaggio della modalità animata in un contesto che aveva attivato il movimento ridotto. Il caricamento del modello ora viene verificato attraverso canvas, renderer e geometria effettivamente caricata; testi, pulsanti e preferenze sono controllati separatamente. Il percorso ridotto copre tutte le 28 figure in italiano e inglese a 1440 e 390 pixel. Restano incluse le correzioni CSP e dei selettori dei preset della schwarzite.
 
-L'archivio contiene tutti i sorgenti e i materiali del portale aggiornato. La build viene generata da GitHub Actions. Quantum Lab mantiene la propria repository; SistemiLab resta escluso. Nessuna modifica è stata pubblicata automaticamente durante la preparazione dello ZIP.
+Se la repository contiene già la v3.15.1 completa, sostituire `tests/browser-revision.py` per aggiornare il controllo obbligatorio di GitHub Actions; aggiornare anche `tests/browser-i18n.py` per mantenere coerente il controllo bilingue aggiuntivo. Per riallineare versione, manifest e documentazione, usare l'intero contenuto dello ZIP. Creare un nuovo commit: **Re-run jobs su una vecchia esecuzione riutilizza il vecchio codice**.
 
-I controlli eseguiti sono documentati in `docs/CARBONIO_ANIMATO_v3.12.1.md` e `docs/COLLAUDO_QUANTUM_LAB.md`; il manifest della consegna è `RELEASE_MANIFEST.json`.
-
-Verifica inoltre ricerca per “Bloch”, pagine dei sette temi di ricerca, mappa degli argomenti nei moduli, ripresa dello studio, tre esperimenti e pausa degli effetti visivi. Le geometrie carboniose ruotano quando sono visibili; prova la pausa da Aspetto, l’apertura di una figura e il cambio di preset. Il rapporto sull’integrazione è in `docs/CARBONIO_ANIMATO_v3.12.1.md`.
+Il rapporto della revisione, con verifiche effettuate e limiti, è `docs/CORREZIONE_CI_v3.15.2.md`. I rapporti delle versioni precedenti restano come documentazione storica. Nessuna modifica è stata pubblicata automaticamente su GitHub.
 
 ## Correzione dell’errore di installazione Chromium
 
-Questa consegna include la correzione del workflow: Ubuntu 24.04, Python 3.12 e Playwright 1.56.0. Per applicare anche gli interventi della v3.12.1 occorre aggiornare l’intero contenuto dello ZIP, poiché navigazione, componenti e musica condividono la stessa build. I test del browser rimangono obbligatori prima della pubblicazione.
+Questa consegna include la correzione del workflow: Ubuntu 24.04, Python 3.12 e Playwright 1.56.0. Per applicare anche gli interventi della v3.15.0 occorre aggiornare l’intero contenuto dello ZIP, poiché navigazione, componenti e musica condividono la stessa build. I test del browser rimangono obbligatori prima della pubblicazione.
 
 Il pulsante **Re-run jobs** della vecchia esecuzione riusa la vecchia configurazione: attendere la nuova esecuzione avviata dal commit che contiene la correzione.
 

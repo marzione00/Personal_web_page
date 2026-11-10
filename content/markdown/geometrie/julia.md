@@ -20,7 +20,10 @@ Il frattale è piano. Il visualizzatore consente di orientarne il piano nello sp
 [SageMath — Mandelbrot and Julia sets](https://doc.sagemath.org/html/en/reference/dynamics/sage/dynamics/complex_dynamics/mandel_julia.html)
 
 ## osservazione
-Avvicina il disegno per osservare le variazioni di colore lungo i bordi e confronta regioni vicine nelle quali il tempo di fuga cambia, ricordando che lo zoom ingrandisce la rappresentazione calcolata con un numero finito di iterazioni e con la risoluzione disponibile.
+La vista iniziale presenta il piano frontalmente, così puoi avvicinare i bordi e confrontare le variazioni del tempo di fuga senza che l’inclinazione nasconda i dettagli; la rappresentazione conserva il limite di 180 iterazioni e la risoluzione disponibile.
 
 ## lettura
 A ogni iterazione si eleva al quadrato il numero complesso z e si aggiunge c, che vale meno zero virgola sette quattro cinque quattro tre più zero virgola uno uno tre zero uno per l’unità immaginaria.
+
+## legenda
+mint | fasce chiare e scure: codifica periodica del tempo di fuga, priva di una scala cromatica monotona

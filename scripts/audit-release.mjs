@@ -13,7 +13,9 @@ for(const m of css.matchAll(/z-index\s*:\s*(-?\d+)/g))assert.ok(Number(m[1])<=1,
 assert.doesNotMatch(css,/\.home-context(?:-grid|-row)?\{/);
 const home=read('dist/index.html');assert.equal((home.match(/data-app-launch-dialog/g)||[]).length,1);assert.equal((home.match(/id="search-dialog"/g)||[]).length,1);
 assert.equal((home.match(/id="cyber-dialog"/g)||[]).length,1);
+const htmlPages=fs.readdirSync(dist,{recursive:true}).filter(f=>f.endsWith('.html'));
+for(const file of htmlPages){const html=fs.readFileSync(path.join(dist,file),'utf8');for(const id of ['geometry-dialog','cyber-dialog','search-dialog'])assert.equal(html.split('id="'+id+'"').length-1,1,'Dialog ownership: '+file+'/'+id);}
 const catalog=JSON.parse(read('public/geometry/manifest.json')),sceneIds=new Set(catalog.flatMap(g=>[g.id,...(g.views||[]).map(v=>v.id)]));
 const sceneNames=fs.readdirSync(path.join(dist,'geometry/scenes'));assert.equal(sceneNames.filter(f=>/-[a-f0-9]{12}\.bin$/.test(f)).length,sceneIds.size);assert.equal(catalog.length,28);assert.equal(sceneIds.size,32);
-report.checks=['single bundle registration','one header owner','bounded layers with native modal top layer','obsolete home selectors removed','single modal instances','28 catalog entries and 32 versioned scene URLs'];
+report.checks=['single bundle registration','one header owner','bounded layers with native modal top layer','obsolete home selectors removed',`single geometry, cyber and search dialog in all ${htmlPages.length} pages`,'28 catalog entries and 32 versioned scene URLs'];
 console.log(JSON.stringify(report,null,2));

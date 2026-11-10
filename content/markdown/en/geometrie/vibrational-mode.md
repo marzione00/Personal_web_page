@@ -21,7 +21,12 @@ The field is synthetic. It is not a normal mode calculated from a dynamical matr
 [Publications on vibrational properties](ricerca.html#bibliografia)
 
 ## osservazione
-Compare the deformed ribbon with its lattice arrangement, observing how out-of-plane displacements change the surface’s appearance while the connections between nodes remain recognisable, then use a side view to follow the deformation.
+Follow the hexagons along the sheet as the out-of-plane deformation changes their projection while preserving connectivity; small blue and amber vertices distinguish the sign of the synthetic displacement, and the bonds keep the lattice readable.
 
 ## lettura
 Displacement along z equals one point one times the sine of zero point seven x times the cosine of zero point four two y.
+
+## legenda
+mint | lattice connections
+blue | vertices with positive z displacement
+amber | vertices with zero or negative z displacement

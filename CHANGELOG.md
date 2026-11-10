@@ -1,5 +1,72 @@
+# Aggiornamento 3.15.2 — 10 novembre 2026
+
+- Separato il caricamento del renderer dai messaggi associati alle preferenze di movimento nei test browser.
+- Verificati esplicitamente messaggi IT/EN, pulsanti e stato del renderer per movimento normale e ridotto; il controllo ridotto comprende tutte le 28 geometrie a 1440 e 390 pixel.
+- Aggiunti orientamento manuale senza animazione, passaggi fra preferenze, riapertura e diagnostica contestuale degli errori. Conservati tutti i controlli precedenti.
+- Allineata l'asserzione di movimento ridotto nel controllo bilingue. Runtime del sito e CSP invariati.
+- Esiti e limiti di verifica in `docs/CORREZIONE_CI_v3.15.2.md`.
+
+# Aggiornamento 3.15.1 — 10 novembre 2026
+
+- Corretto il selettore dei preset della schwarzite nei test browser: la ricerca è limitata al visualizzatore, evitando la copia nascosta presente nell’Atlante.
+- Controllati pulsante univoco, stato selezionato, scena e legenda dopo ogni cambio; aggiunte chiusura e riapertura nei percorsi desktop/mobile IT/EN.
+- Gli altri controlli geometrici della suite sono ora circoscritti alla stessa finestra. Nessun test rimosso o reso facoltativo.
+- 318 test Node superati e scenario dei preset verificato nel browser. Dettagli in `docs/CORREZIONE_CI_v3.15.1.md`.
+
+# Aggiornamento 3.15.0 — 10 novembre 2026
+
+- Nuova mappa di due galassie esplorabili per Quantum Lab e GeoStat Lab, con spirali procedurali, rotazione lenta, selezione e percorsi tematici.
+- GeoStat Lab integrato nel registro dei laboratori, nella Didattica, nella ricerca locale e negli accessi dalla home.
+- Otto percorsi collegati ai moduli reali, con lo stesso terminale di cinque secondi già presente nel sito.
+- Selezione nativa da tastiera, testi IT/EN, layout mobile e rispetto delle preferenze di movimento. Suoni di selezione affidati al motore condiviso.
+- 318 test Node superati; controlli e limiti documentati in `docs/GALASSIE_v3.15.0.md`.
+
+# Aggiornamento 3.14.2 — 10 novembre 2026
+
+- Apertura di Quantum Lab estesa a cinque secondi, con barra segmentata, percentuale e scrittura progressiva delle righe.
+- Codice in caduta, cursore pulsante e dissolvenza finale coordinati con il terminale esistente.
+- Conservati accesso immediato, annullamento, focus da tastiera e preferenze di movimento; rimossa la precedente animazione autonoma della barra.
+- 311 test Node superati; controlli desktop e mobile IT/EN documentati in `docs/QUANTUM_LAB_v3.14.2.md`.
+
+# Aggiornamento 3.14.1 — 10 novembre 2026
+
+- Legende IT/EN aggiunte alle 28 figure e alle 32 scene, con selezione coerente per le varianti della schwarzite.
+- Distinta la maglia triangolare dal reticolo scientifico; chiarite le indicazioni su colori, illuminazione e rotazione automatica.
+- Titoli delle finestre resi univoci e introduzioni uniformate fra atlante e pagine di contesto.
+- Corretti il conteggio obsoleto dei modelli, due descrizioni e la vista frontale di Julia.
+- Nuove aperture riportate all’inizio; audit delle finestre esteso a tutte le 58 pagine.
+- 302 test Node superati, controlli desktop/mobile e temi scuro/chiaro documentati in `docs/COERENZA_v3.14.1.md`.
+
+# Aggiornamento 3.14.0 — 10 novembre 2026
+
+- Rifatte le altre 19 geometrie dell’atlante: superfici nodali e parametriche, modelli quantistici e quantitativi, reticoli e frattali.
+- Sezioni, bordi e riferimenti matematici resi leggibili attraverso la stessa palette, il visualizzatore condiviso e l’illuminazione mobile.
+- Animazione estesa alle 27 figure solide; Julia mantiene un’apertura frontale e la rotazione manuale.
+- Guide di osservazione italiane e inglesi aggiornate, con formule e parametri scientifici conservati.
+- Caricamento delle finestre prioritario quando le anteprime occupano i quattro slot disponibili, senza superare il limite delle richieste concorrenti.
+- Eliminati i vecchi generatori delle figure sostituite; primitive e proiezioni condivise con i modelli Sicurezza/XAI.
+- 296 test Node superati; verifiche matematiche, build, audit e controlli browser desktop/mobile documentati in `docs/ATLANTE_v3.14.0.md`.
+
+# Aggiornamento 3.13.0 — 10 novembre 2026
+
+- Rifatti i quattro modelli di Sicurezza e XAI: comunità reticolari, percorsi diretti, superficie di decisione e curva nello spazio dei ritardi.
+- Rotazione contenuta e luce mobile attraverso il visualizzatore e il pool già usati dal carbonio; pausa fuori schermo, con movimento ridotto e durante l’esplorazione manuale.
+- Aggiornate le spiegazioni scientifiche italiane e inglesi, mantenendo esplicita la natura illustrativa dei modelli.
+- Accenti elettronici morbidi all’ingresso nelle schede, al clic e al cambio pagina, con volume indipendente, attivazione volontaria e limiti alle sovrapposizioni.
+- Sostituiti generatori e risorse precedenti mantenendo gli stessi identificatori, percorsi e finestre di approfondimento.
+- 284 test Node superati, build di 58 pagine, controlli visivi desktop e mobile a 390/320 pixel; suite Python ampliata per i quattro modelli.
+
+# Aggiornamento 3.12.2 — 10 novembre 2026
+
+- Sostituita l’attesa JavaScript della pulizia delle transizioni con un’asserzione sul numero degli elementi residui.
+- Controlli audio basati sugli stati accessibili dei pulsanti e sulla chiusura effettiva dell’ingresso.
+- Verifica dell’illuminazione con attesa limitata nel processo di test; rimossi i richiami a `wait_for_function` dalla suite CI.
+- Conservati i controlli funzionali, la configurazione di sicurezza e il README professionale.
+- 272 test Node e controlli della build superati; verifica mirata nel browser del ritorno dall’atlante e delle scelte audio.
+
 # Aggiornamento 3.12.1 — 10 novembre 2026
 
+- README riorganizzato con presentazione del progetto, avvio locale, struttura della repository, verifiche e pubblicazione; cronologia e rapporti tecnici raccolti nella documentazione dedicata.
 - Rotazione autonoma delle strutture carboniose visibili, anche su mobile.
 - Luce mobile con variazioni graduali e rotazione alternata dei modelli piani per conservare la leggibilità degli esagoni.
 - Continuità fra anteprima e visualizzatore, pausa ai comandi manuali, cambio di preset con conservazione dello stato di movimento.

@@ -22,7 +22,12 @@ The height is rescaled as 9f − 0.7 for display. This is a theoretical distribu
 [SciPy — multivariate_normal](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.multivariate_normal.html)
 
 ## osservazione
-View the bell from above and then from the side, comparing the orientation of its sections with the change in height to see how the shape reveals both the dispersion of its components and the dependence described by correlation.
+Compare the elliptical sections, which follow constant density levels, and switch between top and side views to recognise both the orientation of dispersion and the changing height.
 
 ## lettura
 The Gaussian density exponent is minus one half of the quadratic form of the deviation from the mean with the inverse covariance; normalisation is two pi times the square root of the determinant of sigma.
+
+## legenda
+blue | density grid
+pale | three constant-density ellipses
+amber | fourth ellipse, selected as a reference

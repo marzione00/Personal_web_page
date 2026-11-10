@@ -23,7 +23,11 @@ The formula parametrises a Möbius strip. The connection with bodily movement is
 [SageMath — Parametric surface, MoebiusStrip](https://doc.sagemath.org/html/en/reference/plot3d/sage/plot/plot3d/parametric_surface.html)
 
 ## osservazione
-Choose a section of the edge and follow it while rotating the strip, paying attention to the twist through which the surface changes orientation in space and to the continuity revealed as hidden parts come into view.
+Follow the amber boundary until you return to the starting point, observing how one continuous path visits both apparent margins while the grid reveals the half-twist of the surface.
 
 ## lettura
 Parameter u makes a full turn while v ranges from minus one to one; the width, scaled by zero point three five, makes a half turn around the central circle.
+
+## legenda
+mint | surface grid
+amber | single continuous ribbon boundary

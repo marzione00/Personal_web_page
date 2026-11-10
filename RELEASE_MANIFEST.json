@@ -4,46 +4,58 @@
   "baseRepository": "https://github.com/marzione00/Personal_web_page",
   "baseCommit": "8964fc96b08671089cfb5d3561acb311bb994599",
   "remoteDeployment": false,
-  "version": "3.12.1",
-  "packageVersion": "3.12.1",
-  "basedOnPackage": "v3.12 complete carbon family, periodic Schwarzite, graph, Matrix and audio package",
-  "sourceFiles": 554,
+  "version": "3.15.2",
+  "packageVersion": "3.15.2",
+  "basedOnPackage": "v3.15.1 complete CI correction release",
+  "basePackageSha256": "94cf186c355ced656b8bca64275d22cfe5f703a08459c95dd269bcce6f06513b",
+  "sourceFiles": 612,
   "verification": {
-    "nodeTests": 272,
-    "nodeTestsPassed": 272,
-    "htmlPages": 58,
-    "localLinks": 2594,
-    "imageReferences": 122,
+    "nodeTests": 318,
+    "nodeTestsPassed": 318,
+    "pythonSyntaxChecked": true,
+    "htmlPages": 60,
+    "localLinks": 2712,
+    "imageReferences": 130,
     "geometryCatalogEntries": 28,
     "versionedScenes": 32,
-    "responsiveWidths": [
-      390,
-      320
+    "mainJavaScriptGzipBytes": 41514,
+    "cssGzipBytes": 22210,
+    "homeItalianGzipBytes": 11937,
+    "browserSmokeChecks": [
+      "112 desktop catalogue openings: 28 models x IT/EN x two simulated motion preferences",
+      "16 embedded 390px targeted openings: four representative models x IT/EN x two simulated motion preferences",
+      "schwarzite presets: unique controls, selected scene and legend, close and reopen",
+      "motion preference changes while viewer is open",
+      "wire/surface legend visibility"
     ],
-    "browserRenderingTested": "Canvas 2D: visible carbon autoplay, global pause, manual orientation, progressive navigation, offscreen cleanup, 27-cell Schwarzite, English mobile edge preset",
-    "fullPlaywrightSuiteRunLocally": false,
-    "webGLBrowserRunLocally": false,
-    "carbonBinaryAssetsPreserved": true,
-    "previewRendererLimit": 3,
+    "siteRuntimeUnchanged": true,
+    "allPublicAssetsUnchanged": true,
+    "readmeUnchanged": true,
+    "workflowUnchanged": true,
     "releaseAuditPassed": true,
-    "editorialCheckPassed": true
+    "editorialCheckPassed": true,
+    "securityAuditPassed": true,
+    "fullPlaywrightSuiteRunLocally": false,
+    "remoteWorkflowVerified": false,
+    "physicalMobileDevicesVerified": false,
+    "browserQaMethod": "CUA browser, production runtime with an isolated matchMedia fixture; not a full Python Playwright run",
+    "localPlaywrightBlocker": "Chromium process launch refused: socket() failed: Operation not permitted",
+    "protectedFilesCompared": 164
   },
   "addedSourceFiles": [
-    "docs/CARBONIO_ANIMATO_v3.12.1.md",
-    "docs/storico/CARBONIO_v3.12_RELEASE_MANIFEST.json",
-    "tests/carbon-motion.test.mjs"
+    "docs/CORREZIONE_CI_v3.15.2.md",
+    "docs/storico/CI_v3.15.1_RELEASE_MANIFEST.json"
   ],
   "removedSourceFiles": [],
   "modifiedSourceFiles": [
     "CHANGELOG.md",
     "LEGGIMI_PRIMA_DI_CARICARE.md",
-    "README.md",
     "content/site.json",
     "package.json",
-    "public/assets/geometry-viewer.js",
-    "src/geometry-loader.js",
+    "tests/browser-i18n.py",
     "tests/browser-revision.py",
-    "tests/identity-v33.test.mjs"
+    "tests/identity-v33.test.mjs",
+    "RELEASE_MANIFEST.json"
   ],
   "files": {
     ".gitattributes": {
@@ -75,8 +87,8 @@
       "sha256": "7a4b2b912cb020d268a40917f3d38d427d131f6f2beb9c00721de924a286da9f"
     },
     "CHANGELOG.md": {
-      "bytes": 17723,
-      "sha256": "34d4fbd55c0a2e81ca19179af91f7d4dddcae2340c44ecd10b70cf66b109f7d8"
+      "bytes": 23546,
+      "sha256": "b309f2ed5ba47a22feb44299c12ee7396d66a57cdc9d2e6fdabb8d5a1d073454"
     },
     "COME_MODIFICARE_I_TESTI.md": {
       "bytes": 11138,
@@ -91,16 +103,16 @@
       "sha256": "88e2c4406b7a0292910ce07e628be083db5c82fd10a854a98a729aaba1cff3f2"
     },
     "LEGGIMI_PRIMA_DI_CARICARE.md": {
-      "bytes": 5222,
-      "sha256": "06417de55b72b0258efb01c24f1c2d23fa1fffe36e4ce68a75434ae841406ca2"
+      "bytes": 4050,
+      "sha256": "f429a25e57ae594e6c69c8b49afd70fb63b56a346d22834e37d10f471bb57a7e"
     },
     "LICENSE.md": {
       "bytes": 1613,
       "sha256": "de1adbb4b5efd72cb47094f3db8a0ea52d52df0ee5c09d68ed8cff664fcdb0af"
     },
     "README.md": {
-      "bytes": 11748,
-      "sha256": "18ba8416444b5f0a93040db80b5afd092a0c02138ff9065bfd2228172e609b3e"
+      "bytes": 5369,
+      "sha256": "963e5a32ac53243cca90d812272c07a284c276c0c978f16e49eb3249dfd2aae7"
     },
     "SECURITY.md": {
       "bytes": 5019,
@@ -141,6 +153,10 @@
     "content/editorial-selection.json": {
       "bytes": 618,
       "sha256": "083e3a149c4ed1c9bfaa19599cfc2a2460f2f7b2494f4c5c22900d9af7721c78"
+    },
+    "content/galaxies.json": {
+      "bytes": 2848,
+      "sha256": "303251d576b42e342598d56666bfce62c35e58cf7516963255cca2d2b0fed668"
     },
     "content/lectures/.gitkeep": {
       "bytes": 0,
@@ -291,124 +307,128 @@
       "sha256": "57d44195715b669b642cb5fbede9480755e65b3e0a26ef3a7edb7d6ec8d4db47"
     },
     "content/markdown/en/geometrie/bilayer-nanoflake.md": {
-      "bytes": 1382,
-      "sha256": "4b7ed500b377ba85f2fee5816712ec40f07a6e7820bc83dbdf5b5c311a1b101c"
+      "bytes": 1486,
+      "sha256": "8d919db739d6c58b0f0f47ea95a2d3e24cd6ad25afa017f4d915bef86bd764c8"
     },
     "content/markdown/en/geometrie/bloch-sphere.md": {
-      "bytes": 1293,
-      "sha256": "9e5ce8aa7fed2ab497447339e94f160e40cfbe49ab83641abbb4dd99bf828150"
+      "bytes": 1357,
+      "sha256": "67204a728c69404754ca015e7fcbb7ebc7870e0a8948505c5f84ef78bb6cd5fb"
     },
     "content/markdown/en/geometrie/carbon-nanoribbon.md": {
-      "bytes": 1821,
-      "sha256": "48c2464c863e876d118473f686d20fd8beb9c7f24f761d69307dfa789d79356b"
+      "bytes": 1877,
+      "sha256": "3f8c29b959e8eff12a57f7b9bb39ce75b94f9de2c55d79c3adc2c7797ec281be"
     },
     "content/markdown/en/geometrie/catenoid.md": {
-      "bytes": 1098,
-      "sha256": "f717fd006f3633e3491b603ac13ad7933412d7985f3105e5c5017034470e2df3"
+      "bytes": 1187,
+      "sha256": "7e8c6a05d529ebfbeb6cce126e5370d692baea16c451499a92a69e83116c4c98"
     },
     "content/markdown/en/geometrie/covariance.md": {
-      "bytes": 1236,
-      "sha256": "6f2db835522bfcad3fbf2ed25d917f03c8017f8d03a221510a268cbc2a4730b4"
+      "bytes": 1367,
+      "sha256": "b98f32bb755bc32dfbd180951d894f2316dfdf960c1d592bd3c349dbfad0c0be"
     },
     "content/markdown/en/geometrie/decision-surface.md": {
-      "bytes": 1239,
-      "sha256": "9a95b975b4b2908eda9c30039f8f10838510748d0aa1ccdfdccf01a8f3ac3f7c"
+      "bytes": 1479,
+      "sha256": "520b67dce1131b8ac3f9b919ef98da60b87b85bf903f86b059658e4bf9feb0a9"
     },
     "content/markdown/en/geometrie/entropy-trace.md": {
-      "bytes": 1341,
-      "sha256": "5b8da924c6896ed149a6e216552c7c88c19679964f9c853ea54f25baf3894c03"
+      "bytes": 1823,
+      "sha256": "5fc294e9ef2689745eba49b1314870c1044290b1e71970c15b6f0490e053b59c"
     },
     "content/markdown/en/geometrie/fullerene-cage.md": {
-      "bytes": 1369,
-      "sha256": "8005c563f764dd3ef73c09a70f5b8085fe17a521bc3bd2e7ef9cbf44d3f110f4"
+      "bytes": 1443,
+      "sha256": "0ace4d8d572cfa3ca6053d6bea57a6e666d4655df9f7719135dc0973d0a4a70e"
     },
     "content/markdown/en/geometrie/gaussian-density.md": {
-      "bytes": 1220,
-      "sha256": "6600f2c4b71ea621a925699dc61b89fabc670222ad3a235fa1a2f3cb1c94e566"
+      "bytes": 1292,
+      "sha256": "94891265aa3a7141f7649debc6d56f8b1b343ff1ae3e1d66bc1010896d7ad148"
     },
     "content/markdown/en/geometrie/gyroid.md": {
-      "bytes": 1052,
-      "sha256": "fd5b89a2db30184a40e5a845d725e5866820c1908c8faf4b34334209de0c9eef"
+      "bytes": 1131,
+      "sha256": "e7fc08dc8b477ec3a607c055436cac210a58023f19e93564653fd120915e2876"
     },
     "content/markdown/en/geometrie/helicoid.md": {
-      "bytes": 1089,
-      "sha256": "cbfe6bea9b99a0395ebe021600cae3a343c01012cd42a90b6617b35a8a406fa9"
+      "bytes": 1142,
+      "sha256": "bdf182d89315372362a4901b511420ba2c3ef3bedd1aefcd1f0a9ad77424fc2b"
     },
     "content/markdown/en/geometrie/interference.md": {
-      "bytes": 1355,
-      "sha256": "583901d700473c95951a1915ea1f64f0bb7fe87032f774dab48f45137da58b90"
+      "bytes": 1419,
+      "sha256": "263b6c844bcb288bb4bc7dfb8231af6647d19f714cdec9d466f8e4f990073faa"
     },
     "content/markdown/en/geometrie/julia.md": {
-      "bytes": 1230,
-      "sha256": "0dbcf986fcc532bed25f73501ed632c4ced3bf963c5062038a0b49e85d436ec5"
+      "bytes": 1323,
+      "sha256": "4014c1919edf71d5fb7a8c6bc31ee1637ae884884168fb075a4378ecc641d21a"
     },
     "content/markdown/en/geometrie/lattice.md": {
-      "bytes": 1197,
-      "sha256": "5f073953bf00ccdb3ab21f81990573388f990f1ae6b3f035e93b15d39088a2a8"
+      "bytes": 1302,
+      "sha256": "32ca9295f96b3c8ebd67ce65a6940ee7787420e1dcd41b2e048cdde5f93dc21f"
     },
     "content/markdown/en/geometrie/markov-network.md": {
-      "bytes": 1285,
-      "sha256": "eaf81f25937f6b42997e17a2a68d20c49c84bcd54a508982458a5a3df2b0428f"
+      "bytes": 1535,
+      "sha256": "c1c754876c438891dd11871d0194f70bcd0e677634387d36ab47c2fd7af85f60"
     },
     "content/markdown/en/geometrie/menger.md": {
-      "bytes": 1050,
-      "sha256": "efe393ee7e97e6e76028ef04140885e33dc0103862ff7d6efd39a77be037c643"
+      "bytes": 1127,
+      "sha256": "3e1c711ba930ffb5ddba529d92e12e8bebd3cd7ec5f423190ef871f5cac60f17"
     },
     "content/markdown/en/geometrie/mobius.md": {
-      "bytes": 1255,
-      "sha256": "a021b116386040d7fb27ec5ec6d18d472396aec29bcc933b211fdb7864cbc968"
+      "bytes": 1295,
+      "sha256": "831781989d3c992654a9742bc914aec50d95f041bdf5624a709ec67ec10cc454"
     },
     "content/markdown/en/geometrie/program-flow.md": {
-      "bytes": 1142,
-      "sha256": "be3a21a5845b104f3c57fc9c8bb323e7a5933ec3f607ce5e0a2e74452009c1df"
+      "bytes": 1343,
+      "sha256": "fb83c74df83ca56d02a81fe58d251da66a647bd802515f0d673bdde178b850e5"
     },
     "content/markdown/en/geometrie/quantum-circuit.md": {
-      "bytes": 1306,
-      "sha256": "42f2126241d7d01cdf35aff4d8d654afdf77905b9534e8115b9eee42c4f05ac4"
+      "bytes": 1444,
+      "sha256": "71d0759b96781959ea70df76447bd88495d6589e7260236997696b6a3566d5a9"
     },
     "content/markdown/en/geometrie/schwarz-d.md": {
-      "bytes": 1076,
-      "sha256": "ce9b44198be7a068588d7f65d36c5b1777b1147fa117299bed393f2725913b3c"
+      "bytes": 1140,
+      "sha256": "9f8996238afb629c396b9022c3b8eac4b527619f9e08f528968af44d4492f813"
     },
     "content/markdown/en/geometrie/schwarz-network.md": {
-      "bytes": 1348,
-      "sha256": "e09df15fffee7f4421c04a895f30ee6abf60a9936846ee341b13bc9e5e860e65"
+      "bytes": 1503,
+      "sha256": "724128272e70f09222fb5face29370d46fb22b7fa77d72bb0fceffc92123b18f"
     },
     "content/markdown/en/geometrie/schwarz-p.md": {
-      "bytes": 1045,
-      "sha256": "63880ff92a871d3526d1722f644890d46e3ff714264959793d47e18af39be87f"
+      "bytes": 1132,
+      "sha256": "944a558b6e6d407fc0680ab4d6db29dc656748afa4bd5c1e1bb61d08ba8b8701"
     },
     "content/markdown/en/geometrie/schwarzite-neck.md": {
-      "bytes": 2648,
-      "sha256": "4a05d57587751faf7a24c2f90956c4e66f207def004506cd86b4cd6b25d4a2a6"
+      "bytes": 3012,
+      "sha256": "c2d5dc5b62c50a99dbac95157c19a13d71c260074545bde43264e2af78fd241d"
     },
     "content/markdown/en/geometrie/sierpinski.md": {
-      "bytes": 1122,
-      "sha256": "58ab846b4fafa4bbe0ea2297d67462d5abeda6ae28d48dd12f910c1a77d51e77"
+      "bytes": 1192,
+      "sha256": "16f417eed8b4fe2b9a99bc5578a0eb612714c43fd91116192aabdfa9e2090e9d"
     },
     "content/markdown/en/geometrie/stochastic-paths.md": {
-      "bytes": 1384,
-      "sha256": "3452cf63a621fd35a889546ac91e3536037f992f2b9a0cd1ac61dcfa8919c4b7"
+      "bytes": 1515,
+      "sha256": "7117557902712dee9c89bad822d4f72440a3773fe4d1f9b3c57d690023563550"
     },
     "content/markdown/en/geometrie/torus.md": {
-      "bytes": 1117,
-      "sha256": "a6056fc11cc9f33329ceffb7dad5c067fbdfd1a57be0330b59242813ab8da251"
+      "bytes": 1220,
+      "sha256": "254e36cd3ec574f7045334351bd33a060af949fc0e3aed3674b173c7547179bd"
     },
     "content/markdown/en/geometrie/twisted-nanoribbon.md": {
-      "bytes": 1420,
-      "sha256": "b8f7bc9b21a29989e1e90afa3fdfa56eb3f44b97b32e961dc9b2f2008b300e7d"
+      "bytes": 1481,
+      "sha256": "d237165211887519ab3b528f31efdcf6dc5240afac324762d636c11d445f002b"
     },
     "content/markdown/en/geometrie/vibrational-mode.md": {
-      "bytes": 1155,
-      "sha256": "f5872dfaf7a7cb05097de6362335aa51a96c4f6b57e899391023460820218d15"
+      "bytes": 1302,
+      "sha256": "c10215310f204bc41e5b61c8312b6f6b0db5d59c55099ac12b8b24030c6441af"
     },
     "content/markdown/en/homepage.md": {
       "bytes": 1308,
       "sha256": "1cb94dcce4494544bff7541e0332d918699444db2cc9e718662ee0bac0175b4a"
     },
     "content/markdown/en/interfaccia.md": {
-      "bytes": 32481,
-      "sha256": "afe406d3e64ffc3ccfad2c028f245e7e67179a1726fca3a0d4b7c4a91a523765"
+      "bytes": 32280,
+      "sha256": "ac665d0453ef223e9c29ff4d360e52c09a6ebbacc45fbecd8fd8936594a08ef4"
+    },
+    "content/markdown/en/laboratori/geostat-lab.md": {
+      "bytes": 336,
+      "sha256": "1a6e90f1bfa19886c7dedb565a5dd3bfb18327e90a2ff1871b4b21eef2be4fec"
     },
     "content/markdown/en/laboratori/nuovo-laboratorio.md": {
       "bytes": 142,
@@ -455,8 +475,8 @@
       "sha256": "1bf27d9f6f8ecffe570737eb62cac84a6532b131388594d5ba1c73faf5c28283"
     },
     "content/markdown/en/musica.md": {
-      "bytes": 1389,
-      "sha256": "a296fffcc2e540c1eac37affceca961fecfcdc38af009abf592677b8b5f7a787"
+      "bytes": 1534,
+      "sha256": "8a0a86671e6cb1c691693fc98694aead1d4b33194ea0b784fd0e05bc5182c0a8"
     },
     "content/markdown/en/post-details/colpire-i-nervi-del-sistema.md": {
       "bytes": 511,
@@ -563,120 +583,124 @@
       "sha256": "e19c2d05dc5f393cf57ce3afe0bc82178b188d56386ce9a73b64d0f498191265"
     },
     "content/markdown/geometrie/bilayer-nanoflake.md": {
-      "bytes": 1621,
-      "sha256": "fccca03efcd863e029f0513d429c4deb2963dbde51af63c35551c9675d1377dd"
+      "bytes": 1728,
+      "sha256": "0c6371f17de2985277b09870c732f7dd35dec70990f83d9f76eb307cf860c47c"
     },
     "content/markdown/geometrie/bloch-sphere.md": {
-      "bytes": 1312,
-      "sha256": "34f4a401f1c9868e9b797c2d75e12834de1cf634857a63b2c5aba712d103402b"
+      "bytes": 1399,
+      "sha256": "b46f5049b982efa6aac85df6299297ab98672f150160be51c6cb3eb86abc0249"
     },
     "content/markdown/geometrie/carbon-nanoribbon.md": {
-      "bytes": 2061,
-      "sha256": "2a4bd79e7ec395d6aa054f709042fbaff1953bbfabde273a62acc1e7409dfa3d"
+      "bytes": 2127,
+      "sha256": "10b995f1683989616cccbf389d6653b0bcca5f76268f5ff72b860e07abe9255f"
     },
     "content/markdown/geometrie/catenoid.md": {
-      "bytes": 1144,
-      "sha256": "087009763628ce66fd0a37e7785f69c2f3176ecee55105a0e4989b18320bafc8"
+      "bytes": 1173,
+      "sha256": "0811633eb9832c98a91572ea21232414ac967c605c171f47ae55dd0143a78faa"
     },
     "content/markdown/geometrie/covariance.md": {
-      "bytes": 1288,
-      "sha256": "b0adacc1eea01053112ca8dba515d21ce87298f7ec811eec84d6239c975828da"
+      "bytes": 1447,
+      "sha256": "bd3cdf26b1546d7bafd80799681dea07c685e70e56714a18af50c5a936ee0673"
     },
     "content/markdown/geometrie/decision-surface.md": {
-      "bytes": 1255,
-      "sha256": "f49b4ef016df55db66d7c4a65c62933913607f16fe732b01df17bbfea90683ea"
+      "bytes": 1589,
+      "sha256": "0370abd76fe2afbca419c6954be98c360058b9b07feee7dfa3c7e94d79835a81"
     },
     "content/markdown/geometrie/entropy-trace.md": {
-      "bytes": 1373,
-      "sha256": "33e9adeb67af723f9da1c4ea6a939eaa7bc20b93bade4f0676ef34af14f2c397"
+      "bytes": 2012,
+      "sha256": "0a314fbaba2e8cbd88b8ff71662c158aeffdae825b12f76dd0dfb005f40da198"
     },
     "content/markdown/geometrie/fullerene-cage.md": {
-      "bytes": 1672,
-      "sha256": "a6b6ca0cbeba671bf5eec7f4eadea19b37efa9274cce5c3664d825130213cbb9"
+      "bytes": 1761,
+      "sha256": "206a2c1104879b30c0a65f2980cb07f40928edbe09485d724fccaf55351fac46"
     },
     "content/markdown/geometrie/gaussian-density.md": {
-      "bytes": 1228,
-      "sha256": "d85a654818be031f6105ae03dee6c238e67281a255c8f488271bb398d3db4449"
+      "bytes": 1316,
+      "sha256": "1f5af6376dc83c7dc471f68dc61efb4f029a5f64f940143d978b26b5cc705b76"
     },
     "content/markdown/geometrie/gyroid.md": {
-      "bytes": 1039,
-      "sha256": "7c752d33275807e4945f194a3fed152b654e2beae2f121829c7add82b4f3f365"
+      "bytes": 1199,
+      "sha256": "5f22980dd570e4f3c569ec9fa92dea9b1e2a7348fd52abb6f7aa1834e9f2d592"
     },
     "content/markdown/geometrie/helicoid.md": {
-      "bytes": 1086,
-      "sha256": "96dfd4611f30b610c1b458e7f043f570e0ce1b613d3f9ce933a90e260faf7cfc"
+      "bytes": 1133,
+      "sha256": "fbb56add87814c622040772a295545cb164a155eeb26e06d97bd7025bbfa6626"
     },
     "content/markdown/geometrie/interference.md": {
-      "bytes": 1375,
-      "sha256": "b089135a9752d95951b89e881c75e3662e5eef359988753484af6ecf15571f8d"
+      "bytes": 1448,
+      "sha256": "a8cc9b25f3024cfd66f0d6f70d237f5334f66d336e377ce7035844be7d94c611"
     },
     "content/markdown/geometrie/julia.md": {
-      "bytes": 1262,
-      "sha256": "a8565944d55fb787b1b1ca541a8b5b4f166919680438724babe1d6f494ec94b8"
+      "bytes": 1370,
+      "sha256": "bfff1fb911c3f849e50dec883cabd0549688a24efb1b3074f0a1581290c67c12"
     },
     "content/markdown/geometrie/lattice.md": {
-      "bytes": 1180,
-      "sha256": "585d38a2801689a91d7e9e57dc4f9ee8ca94b3d26cc3ddd179c0e9391759d066"
+      "bytes": 1282,
+      "sha256": "21cd350e2bf4395a4f0bcff1ac07b5af626cba7388802d502abf69111ec99597"
     },
     "content/markdown/geometrie/markov-network.md": {
-      "bytes": 1360,
-      "sha256": "b273bae9f42f73607ad5b1cef337a72481f457dbaa60241d314696874b0b60a9"
+      "bytes": 1671,
+      "sha256": "27d60835f1926aca0c6b64f2c68d4cc7294e7019d422406e6b45647b962f8cea"
     },
     "content/markdown/geometrie/menger.md": {
-      "bytes": 1081,
-      "sha256": "7e1c30e5c04cee48046a1d5c954c8bad8e8f03229f972f63f82cc721b80b8d09"
+      "bytes": 1188,
+      "sha256": "8b55725d5202003fe7f2df9c0a25321d7f55abc4292a9aba143514eea0e4c144"
     },
     "content/markdown/geometrie/mobius.md": {
-      "bytes": 1263,
-      "sha256": "7b8046de975fc64a5e75c9192c759f17dc68f25df74552dacb36110fa363fabc"
+      "bytes": 1332,
+      "sha256": "3b2004fe75fde794c43936c87b10cfdb81dbd48ed948eb0fd9f44638ededd7fe"
     },
     "content/markdown/geometrie/program-flow.md": {
-      "bytes": 1157,
-      "sha256": "3e7587848a4638e81e1819b7492f027e8468680706d5876205cf0bdff8b0ba77"
+      "bytes": 1479,
+      "sha256": "b86f153c5b637b12086747b27a341716c948ed22c71aaf51fd1feaa890c92865"
     },
     "content/markdown/geometrie/quantum-circuit.md": {
-      "bytes": 1335,
-      "sha256": "797569e6ffea231982b79e1bb9e6b185795026766dd2193654287d889b7d794a"
+      "bytes": 1472,
+      "sha256": "23bb5d91ebb65f93565eb075dda46958e60ade622a0feec38367c9258d76f37e"
     },
     "content/markdown/geometrie/schwarz-d.md": {
-      "bytes": 1109,
-      "sha256": "91b615da019a780de54f59d832207a9a616afc7cabf5871ccd443ebc9671f277"
+      "bytes": 1213,
+      "sha256": "a007efaf05ffc50872653bcbff247bf1afc7b5297403ee79449a546c0442ea7c"
     },
     "content/markdown/geometrie/schwarz-network.md": {
-      "bytes": 1339,
-      "sha256": "738870d9e7723b241e26faa89426d105e0cd54cf1dc7f0c0cfc3fc393167a835"
+      "bytes": 1519,
+      "sha256": "01e5f19737f6aa48af051c8f437f0af44271dc0fe7fe980a631ee19e2ce1e4b3"
     },
     "content/markdown/geometrie/schwarz-p.md": {
-      "bytes": 1022,
-      "sha256": "d806050a4be2aadd645049f81afd24c823d7865b17e47a08d101f93608656780"
+      "bytes": 1152,
+      "sha256": "43b9b88ecbda60d73039810f12bf7eca24c7e525ea05ee1395927003378f8be3"
     },
     "content/markdown/geometrie/schwarzite-neck.md": {
-      "bytes": 2915,
-      "sha256": "fceedf5663de2ba10bc084ad2f5ca0599ead88306dcb301b13d4cb33a7f33760"
+      "bytes": 3304,
+      "sha256": "53c991127e8d1bceddaa28b222315e3536b8b456682626c4a7b78d55a4218b1c"
     },
     "content/markdown/geometrie/sierpinski.md": {
-      "bytes": 1147,
-      "sha256": "6230ca7274529acfc724272a438ce42b788a9d73927a0f472020237fd0fa1d03"
+      "bytes": 1211,
+      "sha256": "de5d25b3384e62403104a6e1870fdb176c8b96b92c9cc04921512744e64c7665"
     },
     "content/markdown/geometrie/stochastic-paths.md": {
-      "bytes": 1391,
-      "sha256": "930deda9e3ef196ded79722407d10a3e7607167e05a3df859f4d7952b0a88081"
+      "bytes": 1526,
+      "sha256": "4003795813624f7a02d85d2056b76518c9d275ed7e3f782576902291a6f5dcaf"
     },
     "content/markdown/geometrie/torus.md": {
-      "bytes": 1122,
-      "sha256": "9c6861dba9eae1b9fe1e485eaca30c39d1a554a9176bcd6209b18625976267c3"
+      "bytes": 1237,
+      "sha256": "ab9d7dc2864eef77b1c2d1991435ec5bb3093fec4ee92b0ed74d32d2e643e3e6"
     },
     "content/markdown/geometrie/twisted-nanoribbon.md": {
-      "bytes": 1583,
-      "sha256": "3b6484548db7fca2c6d5e8138008b9bafdc67439b47964862733b17e3dabe357"
+      "bytes": 1655,
+      "sha256": "7104b00be7699acc0482b45d4ccc52fb0c58932b61f30778454764586d939e9f"
     },
     "content/markdown/geometrie/vibrational-mode.md": {
-      "bytes": 1166,
-      "sha256": "02318a27d690011b16910c942a325b2a4f8a98cd104d068f7b29e448383c39e7"
+      "bytes": 1301,
+      "sha256": "a1a41bf11083562e21719d41576c06537633e1b35a2b8c952d23c5768dbf6876"
     },
     "content/markdown/homepage.md": {
       "bytes": 1449,
       "sha256": "a5691652fde2190df6baeca2568d8d7633de6416fb2ed022df2c74d246292451"
+    },
+    "content/markdown/laboratori/geostat-lab.md": {
+      "bytes": 392,
+      "sha256": "cc0c56d7091189948a2a943c2ac2508bb97164e66233794aa78e6eae7b8c8628"
     },
     "content/markdown/laboratori/nuovo-laboratorio.md": {
       "bytes": 155,
@@ -723,8 +747,8 @@
       "sha256": "f06f18cce335637134ffc034fb02082cc77e67fad1aac2e79ca9bc74032e91d3"
     },
     "content/markdown/musica.md": {
-      "bytes": 1677,
-      "sha256": "381d841bd63698291b213b900723afd4bf733067418ebd6a0f67c4ea8f60eba5"
+      "bytes": 1936,
+      "sha256": "fa6e1abee45207d784c8a41e53ae43b5ddbf92ecb2ab5a7bb2fb64bf732b82c1"
     },
     "content/markdown/post-details/colpire-i-nervi-del-sistema.md": {
       "bytes": 626,
@@ -916,7 +940,7 @@
     },
     "content/site.json": {
       "bytes": 161,
-      "sha256": "057f6a72ca64833aa6283363a5c3df3c1000b2baee77cf5bc5c64583ec0bcbd3"
+      "sha256": "200b9d36420628b29d2d278c286fe17ff796f9d30a6aa9fd8ccb363a72d6c022"
     },
     "content/study-guide.json": {
       "bytes": 26232,
@@ -927,8 +951,8 @@
       "sha256": "3ccae242216af282d4f58bc276b468fa3e6b3d99adea099911b8fb8a6cd2f9d8"
     },
     "content/teaching-apps.json": {
-      "bytes": 537,
-      "sha256": "fd56079ae0bbcad3114a9f7386cfbcf73c0e5a30a8ddc6de6b8329e5c6366ee8"
+      "bytes": 806,
+      "sha256": "10ce72ce8b677dfb1b46739613098e58813cb750801a30e1ea11210f4518fd86"
     },
     "content/ui.json": {
       "bytes": 6100,
@@ -946,6 +970,10 @@
       "bytes": 969,
       "sha256": "decbb57ebcb83ef8f64f1a1d1243127d02150dc20a98e935609a8266883575e9"
     },
+    "docs/ATLANTE_v3.14.0.md": {
+      "bytes": 6788,
+      "sha256": "1b2dcc6a37298b34a9a2cb3ec27786e8672342f41fe0f791147ae753782f0cab"
+    },
     "docs/BILINGUE_IT_EN.md": {
       "bytes": 6304,
       "sha256": "e228c83a05cd7868df60ffe3ec91306fe66388579032f073d70d6d7f1f3e0c00"
@@ -961,6 +989,10 @@
     "docs/CARBONIO_v3.12.md": {
       "bytes": 3245,
       "sha256": "28d3ee00936a46e4a1071d4ea270b6e95f5f46b21da3d6673caf789d9aba752f"
+    },
+    "docs/COERENZA_v3.14.1.md": {
+      "bytes": 5176,
+      "sha256": "af8a642a771311fe00df5c319fbc6d675252629445654413989ae1757b7f6588"
     },
     "docs/COLLAUDO_MATRIX_v3.4.md": {
       "bytes": 2929,
@@ -1002,6 +1034,18 @@
       "bytes": 2642,
       "sha256": "731801790fd0a1d4647ea670dc9cb5616d4ea97d78fcf3d050c581ef76b84aa8"
     },
+    "docs/CORREZIONE_BROWSER_v3.12.2.md": {
+      "bytes": 2852,
+      "sha256": "ba8929c6328db967ecbec87850482baff80779a34f8e87503b004190da459334"
+    },
+    "docs/CORREZIONE_CI_v3.15.1.md": {
+      "bytes": 3156,
+      "sha256": "f99a4769f08a02440fdb7abc6ddc2faf598b7a856cd501c12e0684541a592c4e"
+    },
+    "docs/CORREZIONE_CI_v3.15.2.md": {
+      "bytes": 4810,
+      "sha256": "d3d408024348515dad8e5212514145a52d397f3f7b872a0384db87e792c77385"
+    },
     "docs/CORREZIONE_CI_v3.8.md": {
       "bytes": 2436,
       "sha256": "a4c75a948c30c465f3dcb832bb73516f0078bfd2a085ba7db0b8b8978bb8c5b9"
@@ -1026,9 +1070,17 @@
       "bytes": 1042,
       "sha256": "9b9c2ede830404aa160325f45b5318806896be82f5e78b62926c3d36fdd82f5c"
     },
+    "docs/GALASSIE_v3.15.0.md": {
+      "bytes": 4721,
+      "sha256": "7d415ae447936b8d70b315f68c34e47614994d331307e787f66916ba0e0e298e"
+    },
     "docs/GEOMETRIE.md": {
       "bytes": 5519,
       "sha256": "3285e5970d9895141fe01a65de0db08dc4bc58ef9304cb4193bef2cb7ef3af77"
+    },
+    "docs/GEOMETRIE_AUDIO_v3.13.0.md": {
+      "bytes": 4934,
+      "sha256": "3a6d73211dfb46a054bddd8d7dd346eef4b0cf344d6719b7ca7294fb87b4425a"
     },
     "docs/GRAFI_E_REVISIONE_v3.10.md": {
       "bytes": 5739,
@@ -1089,6 +1141,10 @@
     "docs/PUBBLICAZIONI_DIVULGATIVE.md": {
       "bytes": 18018,
       "sha256": "9625bf997180111c0190b9308f1c88d45333fa31fc3116568fd474715257cdc2"
+    },
+    "docs/QUANTUM_LAB_v3.14.2.md": {
+      "bytes": 3631,
+      "sha256": "6c1602002d208c83b4f42515520ce035452ca6ad80cfb56c519bf136a4b6093c"
     },
     "docs/RETICOLO_v3.11.1.md": {
       "bytes": 2468,
@@ -1154,6 +1210,10 @@
       "bytes": 6010,
       "sha256": "299f01d9b8114d27750612ad1d926e233a6ccd5f611dc36199ff271dd36cbeb5"
     },
+    "docs/storico/ATLANTE_v3.14.0_RELEASE_MANIFEST.json": {
+      "bytes": 100275,
+      "sha256": "acb8ac90ad2677048ccb3abe55aef274e284bcb3ee23fc26a6dd5bd30bad217c"
+    },
     "docs/storico/BASE_v3.3_LEGGIMI_PRIMA_DI_CARICARE.md": {
       "bytes": 1662,
       "sha256": "c01355d2e6e5a88fc136d3a85dece5ed608d0266504e0d4b6f60e174e58b64cb"
@@ -1166,6 +1226,14 @@
       "bytes": 1629,
       "sha256": "a2a9d3b50409521d701cfb257a55430c966fb11f2bb6746e43c9bce9fb827e8f"
     },
+    "docs/storico/BROWSER_v3.12.2_RELEASE_MANIFEST.json": {
+      "bytes": 88739,
+      "sha256": "6ec2f8c6c15fc3542257d8728be90624b9aacf4fbbff4212973e56595ac8f63c"
+    },
+    "docs/storico/CARBONIO_ANIMATO_v3.12.1_RELEASE_MANIFEST.json": {
+      "bytes": 88651,
+      "sha256": "c1668b98e0d9556bfc217ba909c4b9b88ed89064b3d9f2444f3aff338c4c2fa0"
+    },
     "docs/storico/CARBONIO_v3.12_RELEASE_MANIFEST.json": {
       "bytes": 89422,
       "sha256": "7be6af3ef344d449c525c836a49af54a63f9f9a068041d2973be0363a1d0571a"
@@ -1174,9 +1242,17 @@
       "bytes": 3810,
       "sha256": "4f077ef8d45577056dc55e7a8fe8d58a7794e1d466db37d67d1ac458537fcc49"
     },
+    "docs/storico/CI_v3.15.1_RELEASE_MANIFEST.json": {
+      "bytes": 97865,
+      "sha256": "e3489f533090cc62e41ad17655a9eca9238cbdcf5cbda233eba8a2ebb362e409"
+    },
     "docs/storico/CI_v3.8_RELEASE_MANIFEST.json": {
       "bytes": 3462,
       "sha256": "ebb940fba61d7612a076c1759b3b69de42c9beb76edb80c9a83f756b188914ee"
+    },
+    "docs/storico/COERENZA_v3.14.1_RELEASE_MANIFEST.json": {
+      "bytes": 98929,
+      "sha256": "db756475554ec9893a62b4435225a5a47d9cc63e64074e8f275432d48071801f"
     },
     "docs/storico/COLLAUDO_v1.4.md": {
       "bytes": 2393,
@@ -1226,6 +1302,14 @@
       "bytes": 3858,
       "sha256": "61266e7d9bb638a86af276c34248157c1cf5759678826c26fd37981b5db36416"
     },
+    "docs/storico/GALASSIE_v3.15.0_RELEASE_MANIFEST.json": {
+      "bytes": 98803,
+      "sha256": "65ef57d87defa7ad9f78358151f82e0aae320b9012614c0601d199d54c9b8c05"
+    },
+    "docs/storico/GEOMETRIE_AUDIO_v3.13.0_RELEASE_MANIFEST.json": {
+      "bytes": 92426,
+      "sha256": "53512f68195872ebd64b43a6de20003a0e406221d7476bbecd1beb98d6df779e"
+    },
     "docs/storico/GRAFI_v3.10_RELEASE_MANIFEST.json": {
       "bytes": 4977,
       "sha256": "234cb5dd9a19efcb6bc2de70b2ea96184e5fc91a115773815b515c145e8ed9ab"
@@ -1270,6 +1354,10 @@
       "bytes": 1552,
       "sha256": "64495edafcb5155c09fa6f59a9625de569ed0b413638c8e1a2a0c451bbd7e7fc"
     },
+    "docs/storico/QUANTUM_LAB_v3.14.2_RELEASE_MANIFEST.json": {
+      "bytes": 96101,
+      "sha256": "a95e10a6f186815b645e8f7321b6659d26c3445cf5b248c321230c44b259bf23"
+    },
     "docs/storico/RETICOLO_v3.11.1_RELEASE_MANIFEST.json": {
       "bytes": 83026,
       "sha256": "927cdf8a27e410a520ce8deb5065561efcd1b94f8a2090660bcbc579b5d45616"
@@ -1312,11 +1400,23 @@
     },
     "package.json": {
       "bytes": 1567,
-      "sha256": "70d2d9165740d1b413e0438d7567682388361a6359f6df84f9a505fd46d00276"
+      "sha256": "0be7529284ee96437cb73a7a656bd5a0e25d1862721162e963a3e6422c60298a"
     },
     "public/assets/geometry-viewer.js": {
-      "bytes": 15199,
-      "sha256": "6cf19b8b87f4d8b6a870022265df4052301284efeaebda193975d07f706a3f7c"
+      "bytes": 15259,
+      "sha256": "5b942227cb42710814a2771f0b824c66976ce4876683c18ac2e4ae8af25467cd"
+    },
+    "public/assets/labs/galaxy-geostat.svg": {
+      "bytes": 136953,
+      "sha256": "e88574dc1679c41dd0d58d4a916125612f238fee56ca5d8bd2f67593dd931b16"
+    },
+    "public/assets/labs/galaxy-quantum.svg": {
+      "bytes": 133985,
+      "sha256": "d7122b8935b5fa38eaa3078ba97f6ba228e326722b8a8b26f93fc80e53853100"
+    },
+    "public/assets/labs/star-field.svg": {
+      "bytes": 16952,
+      "sha256": "2783616b7953ee74b9b9ee2db69b6ac2d77bc549cbc3b13429b9554d814ffa8b"
     },
     "public/audio/descending-fields.mp3": {
       "bytes": 5401216,
@@ -1331,80 +1431,80 @@
       "sha256": "11f455d46df4b13925a939a8c99b04b75967cf9ed58a7dc7c37c6af6b05eb941"
     },
     "public/geometry/bloch-sphere.webp": {
-      "bytes": 91818,
-      "sha256": "a36092dea8ad514b1802aa45437c50c417737caead65cd1511dc31fefd9c3b15"
+      "bytes": 39700,
+      "sha256": "6be2c2cdbbc0a85983211675594388bfb160ecf6e5a71b00ee56c8706a2578c8"
     },
     "public/geometry/carbon-nanoribbon.webp": {
       "bytes": 24102,
       "sha256": "f90bc3f2a9e7db553c0362ae355990cc86a0ba37792be81f00f4f9941f614210"
     },
     "public/geometry/catenoid.webp": {
-      "bytes": 12400,
-      "sha256": "194a14ba3adf28a404466b09cb98c427a5c29441bc682aad851183a39f3d3bc4"
+      "bytes": 37078,
+      "sha256": "8a1d9ce00e7a7989a27276cfa02bffe12bfffc5418e68e26f2258e053855bd55"
     },
     "public/geometry/covariance.webp": {
-      "bytes": 11536,
-      "sha256": "0a8a5391c6b3b0fe70e15348b35be33cae3412ec126241aaab237aee4a9b85ea"
+      "bytes": 15048,
+      "sha256": "60b011e0dad215f5dc03fb403ed313fea325d0c5fa67358934dc31574a98184d"
     },
     "public/geometry/decision-surface.webp": {
-      "bytes": 9390,
-      "sha256": "d4be2f4019973055fecc2b0c22a7f4537aa6b4e39378a4145ec9557d73beaeb6"
+      "bytes": 91920,
+      "sha256": "962327661f63c379356733425e05fc62718c9ba106927d4beeb58f394b108ed3"
     },
     "public/geometry/entropy-trace.webp": {
-      "bytes": 43332,
-      "sha256": "40b3aaaadf7670927f639436dc3e5bfdae56ce1ab7a8be52cfec5faabcea39db"
+      "bytes": 62352,
+      "sha256": "f4f2f770408a279eb966b9aab7db422db18d34a95c0e4b896dd1db82d9465f0b"
     },
     "public/geometry/fullerene-cage.webp": {
       "bytes": 27838,
       "sha256": "98b4a2de99f37ec37d5ad426c2d9e5b6e039c386315840c6dfefe84d4b80e6a1"
     },
     "public/geometry/gaussian-density.webp": {
-      "bytes": 9404,
-      "sha256": "6e5aacf115f627ebed8fb36d761968604ee0131a9b9eb762d79a0fe5e70df8f0"
+      "bytes": 37712,
+      "sha256": "6f6b388f362de134aa15263caa21d41254e89be1496f0bb28348f8164f7bd824"
     },
     "public/geometry/gyroid.webp": {
-      "bytes": 20138,
-      "sha256": "8dd792c00250a20c0d57478b1baa7768b9a5fdd43920894631fdde2d4f77ddd3"
+      "bytes": 30162,
+      "sha256": "09934deb60d89f5bc3f54a7862f1f66268fc721dae25da8e84fc2cc88d426fbe"
     },
     "public/geometry/helicoid.webp": {
-      "bytes": 14400,
-      "sha256": "2ce3722bdf51f03e1853ad2decb5b1b41d3897a308a06eb5c0f1e1f9ac92cbb1"
+      "bytes": 24192,
+      "sha256": "6407f80514f1c690e7dc291bf417eebb975442d60a53034ac432d5e8b0bb486c"
     },
     "public/geometry/interference.webp": {
-      "bytes": 13942,
-      "sha256": "22610f9216e052dedd8c8f0a1ef25aadfec7e32e36c8fffb1616d061c624d06f"
+      "bytes": 44108,
+      "sha256": "f4f9bd906b488f51e37cd7a45edb408105e53e606c88b592b0107716aeda6906"
     },
     "public/geometry/julia.webp": {
-      "bytes": 32774,
-      "sha256": "056c618c5898783fe49a9d86efaa53c510bf1d57000f561552db196032696b95"
+      "bytes": 28442,
+      "sha256": "8080161c8e9b7930d78134d3a341beb936c6d0b928474ff9d3df311e1a9f256e"
     },
     "public/geometry/lattice.webp": {
-      "bytes": 38932,
-      "sha256": "f3b057d0d38aa89c6880fbce02dc116644aa65ff59ecf99909c8c8c9d160f133"
+      "bytes": 32916,
+      "sha256": "c990173d007866bcec6660ccf14e9af7193b9638539954e2e5c739bd8728f5cd"
     },
     "public/geometry/manifest.json": {
-      "bytes": 18255,
-      "sha256": "70b4caf30ac53fd4c5c963c50ab55b2317d1ae4a1c142552d37fd9ec8478e572"
+      "bytes": 19018,
+      "sha256": "7ee1c6c68365b302eaec5bb4c3d41929e4ee466729a3366e6e062d50e07adf2d"
     },
     "public/geometry/markov-network.webp": {
-      "bytes": 19668,
-      "sha256": "379d76c306031d6e800ef2ef4a1e68ba11708529e1569b838f74326e8d486b5c"
+      "bytes": 60272,
+      "sha256": "35aec592d310493d7aff1496ec36cd4d51bfbe585b96a9507b8426d11b41e210"
     },
     "public/geometry/menger.webp": {
-      "bytes": 17870,
-      "sha256": "9ff63103c7969fed93aac1ff1388865ca07264378d6d79263cc0b147dbc98eab"
+      "bytes": 13388,
+      "sha256": "ae0715f7e01adec05c1db67f375525a57856c685057db6409e49635095790d94"
     },
     "public/geometry/mobius.webp": {
-      "bytes": 11326,
-      "sha256": "4948b5ef664dd36cb37a61b38695fb76f7660d59b81b9ca4e9382344bff039f9"
+      "bytes": 45920,
+      "sha256": "f5da701ef26a9c67951a25e0289e3f67a486a8183345189b437621bf24e7a5ed"
     },
     "public/geometry/program-flow.webp": {
-      "bytes": 25468,
-      "sha256": "38d1778817b0e2c990f618e6bfc211066fd73579302c537c11796bed064fe268"
+      "bytes": 30962,
+      "sha256": "a6bb92f08c73cea5832893fdd51e2f862b91b562b5bf1e60426c4b8629f0dc52"
     },
     "public/geometry/quantum-circuit.webp": {
-      "bytes": 15348,
-      "sha256": "9b3fc13229d60441ea9e49ab623b35f156638bede21b377a35ef2ef0ac46ce98"
+      "bytes": 9938,
+      "sha256": "e269abdcdbcc46b6f7efbbbd7e1c4866f5004ca6f48a5e708e10fb91095567c8"
     },
     "public/geometry/scenes/bilayer-aligned.bin": {
       "bytes": 29478,
@@ -1415,8 +1515,8 @@
       "sha256": "f2ec00d5ae478df5f5a08cc5b5e0ab67e20c411f22e0c279b98178da871b1679"
     },
     "public/geometry/scenes/bloch-sphere.bin": {
-      "bytes": 190824,
-      "sha256": "e8fb1177238d64a8085c3f7a059b269900e0480067b5254daca887d3073b8de1"
+      "bytes": 50526,
+      "sha256": "f9f43256f373e16f6b3f271e7c001bd2153ad473aff3d3875a98734eb249d81b"
     },
     "public/geometry/scenes/carbon-nanoribbon.bin": {
       "bytes": 29938,
@@ -1427,80 +1527,80 @@
       "sha256": "b7d0d041b8255389a076a47a2d0b1a0e7235bc658df4557fd795edecf3e8111f"
     },
     "public/geometry/scenes/catenoid.bin": {
-      "bytes": 51672,
-      "sha256": "74c58b59fde25c99b6e8110b6d19ef8e019483f24dc13933ac919e92d46cf4e5"
+      "bytes": 75622,
+      "sha256": "f74dff1b62d67fd6c06d3de4869160caeb49c9823ead24e8e1cf4e1d884e9a9b"
     },
     "public/geometry/scenes/covariance.bin": {
-      "bytes": 64932,
-      "sha256": "0d6fce299b840fdb56d15021d1777ffcc9d56246201362261aeb2d0caacd7879"
+      "bytes": 60606,
+      "sha256": "e10d5e87884955f0d33ef9f1f961d32bc571a72ef7cd43b5ad6bfe39cb0e471c"
     },
     "public/geometry/scenes/decision-surface.bin": {
-      "bytes": 46812,
-      "sha256": "152faa8c581c12f77506e8ac73ac39c0c60bbfefbb5928afb4b02151dae46c40"
+      "bytes": 95878,
+      "sha256": "38a53b24b3d0e5ef02d9f00387bbd5599012833ab9149da1e19b8ae82cbed596"
     },
     "public/geometry/scenes/entropy-trace.bin": {
-      "bytes": 38952,
-      "sha256": "be755f545faa28a39cb2167db3d5a95623493a063079078ba1d0e890879ef54e"
+      "bytes": 77208,
+      "sha256": "0b79bef6534dd7b0e76cdcad80eb4dd04d70aa37eaedc4730f697e34627c122d"
     },
     "public/geometry/scenes/fullerene-cage.bin": {
       "bytes": 25332,
       "sha256": "65251cd9ce0420a0fa6e6dbc215bc888fae5154029d47e561264bdc919c11846"
     },
     "public/geometry/scenes/gaussian-density.bin": {
-      "bytes": 54240,
-      "sha256": "7293fa0e6a7a51010370367637c19d715af2d5838ce6575a367d1f6b87d58890"
+      "bytes": 77374,
+      "sha256": "1d0f3250992abc3fd3e223698a1731a8adb4380a2ab19dbce8134d4b7eec3ddb"
     },
     "public/geometry/scenes/gyroid.bin": {
-      "bytes": 120006,
-      "sha256": "2ab2852fa5a7817b15c0c8729f1ca4a8def896a740445823f02924b4a2ab1eb9"
+      "bytes": 138282,
+      "sha256": "d45c0afd97cb77425430f70f86b61d9afc92ec91487cccc1a8921a297bc5c11b"
     },
     "public/geometry/scenes/helicoid.bin": {
-      "bytes": 45012,
-      "sha256": "02af9756576e6c68195cc36e5b2060bec6f28b159682f91e4d23d48bb2ca8ce1"
+      "bytes": 72478,
+      "sha256": "74f71759e5996be88cf3adb986b2eca95c12a60564d2ed3753858bf27b723499"
     },
     "public/geometry/scenes/interference.bin": {
-      "bytes": 62052,
-      "sha256": "cbcc0665e4ffad083af1b1fb99d78b60eb7a4e0381d0acce06b681b68136e58f"
+      "bytes": 87346,
+      "sha256": "cdb6da10ff1b16acc1019b20af99f0182d85a50a9a0f8c2ad5687df30f2d3d90"
     },
     "public/geometry/scenes/julia.bin": {
       "bytes": 72,
-      "sha256": "84df171491f83a76cf27117aa24f04bf97cc758ca5cb9751554626768cdf8267"
+      "sha256": "f1e4e66139fb519da5cbe91e786d9db7b751d034d39ecb919284d52df608579a"
     },
     "public/geometry/scenes/lattice.bin": {
-      "bytes": 60864,
-      "sha256": "f59d2abf3477ae1e0a2c53668014b497d80fd3d230f87f4a42266737fc7064a1"
+      "bytes": 30172,
+      "sha256": "01a544a677c12bc845446f3bd0c8e01ca277b27c3a017c51f47b33ec34802a23"
     },
     "public/geometry/scenes/markov-network.bin": {
-      "bytes": 39984,
-      "sha256": "780da1c7c147046ca986b84872c3d594214cd538acbee600446a4f7b47ae842a"
+      "bytes": 60594,
+      "sha256": "186cd57d56b10797ed93ccdcfed263162805170590baf4a2f2b4ccd7ca3ece63"
     },
     "public/geometry/scenes/menger.bin": {
-      "bytes": 115224,
-      "sha256": "68b93130fde84bf5097f062fab44147e1fe7ac911de70e55949711ea3af869cb"
+      "bytes": 108312,
+      "sha256": "9fd8fd3f6b5fb35b6f39e8213421a2d1f41170837aa9ea1cd7d2df364e9fa303"
     },
     "public/geometry/scenes/mobius.bin": {
-      "bytes": 40596,
-      "sha256": "19611f4414cfa07b750dc64a277abe4bcdfe63de94e4fc76133e20d32506aa9f"
+      "bytes": 64006,
+      "sha256": "09c934a563d4ef4dcc04f3f6c4845972a323b4271bbba0baa33363aab6c1c7d0"
     },
     "public/geometry/scenes/program-flow.bin": {
-      "bytes": 30264,
-      "sha256": "5c1e637d2d4ed7f8b388636f3201bf9d1f5555e89ab7ffa3fa7aa75e925f67c7"
+      "bytes": 35518,
+      "sha256": "897b91d990e65f8913f94119c1f484d0f41d3f01579ef89cfbbbf9512d7d7e18"
     },
     "public/geometry/scenes/quantum-circuit.bin": {
-      "bytes": 7584,
-      "sha256": "b119303617c881db789bfb392ef321d1483384a6686d077028f2c95f24ec23c6"
+      "bytes": 14724,
+      "sha256": "833e22c2fbf88e90e516eebb05d8a905affb4f8eafd31306907d34e4adba9897"
     },
     "public/geometry/scenes/schwarz-d.bin": {
-      "bytes": 107886,
-      "sha256": "238734905bc50f8dae209b3c4588ebf37d2050a1bda82e3005375a1d18478367"
+      "bytes": 152514,
+      "sha256": "16b75109387fcb33d7f7dc2343b4f3e90ba4ff2d44e6f8b39e5997c2a04a6af8"
     },
     "public/geometry/scenes/schwarz-network.bin": {
-      "bytes": 137076,
-      "sha256": "75a2f91e2b04b074c879239ef6bdb2bf93eab70939341e1be3c6cf0950c1be31"
+      "bytes": 106260,
+      "sha256": "d476cd767dd70574d6a613f5485a9ac2e7ff8f0fb0cee451805c7991137f7e1b"
     },
     "public/geometry/scenes/schwarz-p.bin": {
-      "bytes": 91872,
-      "sha256": "5818ce1158e1fd0d853b14b3df8a1c60e5b7f6cc1d87c9a22359fe09ab19c8c1"
+      "bytes": 130572,
+      "sha256": "60c102062715609b3f01cc4aecadd6368f1a2a844fed5f6a12c8a35331a0ca5d"
     },
     "public/geometry/scenes/schwarzite-lattice.bin": {
       "bytes": 269592,
@@ -1515,60 +1615,60 @@
       "sha256": "31353e822a9ca6d1ea3754589d3512d4a19741c45f146e2c47872cc4e981ab53"
     },
     "public/geometry/scenes/sierpinski.bin": {
-      "bytes": 8472,
-      "sha256": "818874fb96ff4792760b40b6f3404453e5f8298e36af8da0dfbd8c9ec2d418cd"
+      "bytes": 54552,
+      "sha256": "0c027b93e438405b14e1a36bc07afd1b50f923fcda500283d4e092c73a05cad7"
     },
     "public/geometry/scenes/stochastic-paths.bin": {
-      "bytes": 150360,
-      "sha256": "977d46c6c3fc0674de3649f85ecae3928abc8fae1b79398c04af45376a937a5a"
+      "bytes": 76416,
+      "sha256": "6ee202f533823a0f0c04cba1e4c5d8606549b56b80224d1b82222fdc58dcf0ad"
     },
     "public/geometry/scenes/torus.bin": {
-      "bytes": 51672,
-      "sha256": "675be87b20d197f333acc7ed493983b480b17050a7447e514b64ac8c3b949ae1"
+      "bytes": 96226,
+      "sha256": "5088a718cef41f4cde563d6589e6a12ceff9a2d1eb70413551259cedf2680da1"
     },
     "public/geometry/scenes/twisted-nanoribbon.bin": {
       "bytes": 29938,
       "sha256": "77b8118b3c9e3f7c300ed77816ab8cb45b78d0d12bf9d9a459a64d8c327b8a42"
     },
     "public/geometry/scenes/vibrational-mode.bin": {
-      "bytes": 73032,
-      "sha256": "cf44a6f910befbb59b94e60b8cde8f3481d32ec0a929278548ddea8c8f9b9c88"
+      "bytes": 20460,
+      "sha256": "9f7582bde703591670c8d3c315bda97b4e43ea01b7e0d24ebdd49e79855f0809"
     },
     "public/geometry/schwarz-d.webp": {
-      "bytes": 19662,
-      "sha256": "096b56baca6732dc46d07ca4cb531e016e5422fb7dce08bc3577be405854c487"
+      "bytes": 31366,
+      "sha256": "47024084e979bbbbedfaa71737467027b2a92eda29cbe888404907ba6a97ae38"
     },
     "public/geometry/schwarz-network.webp": {
-      "bytes": 93906,
-      "sha256": "1b3853a583950c403ff09e20c36bb279806fbde3dd109e887f10a54a2c92c6a0"
+      "bytes": 53742,
+      "sha256": "9b44b442fd0f353b44cc429f015c2cd8939ffb12ecdba299bab75d48c51d142d"
     },
     "public/geometry/schwarz-p.webp": {
-      "bytes": 18960,
-      "sha256": "8b026e8e5461e9ef7347188d54c90020ada4f8e5fb45078b992eb6eccc70c34e"
+      "bytes": 41654,
+      "sha256": "5aa854eb7970de12096624e0371c846c23dfc88851d974c05fc9e56c1b9e4e61"
     },
     "public/geometry/schwarzite-neck.webp": {
       "bytes": 54754,
       "sha256": "3daf5f87adaa66ad2c52a9030b5bec5c288fe7b626b943a36f88e8f2e93b1961"
     },
     "public/geometry/sierpinski.webp": {
-      "bytes": 20984,
-      "sha256": "48e4aa1fa864cebf2bf9fc2e1e4119b6a9edf895a1fdbbccf3978699a9eebb4d"
+      "bytes": 21684,
+      "sha256": "9cf37819d492825c090ca705e234f6a0be298d3fc9023ad8f3d037e37c2968b6"
     },
     "public/geometry/stochastic-paths.webp": {
-      "bytes": 46632,
-      "sha256": "1457500eb46aa1898ee27802ad5ef0a236f5fb47cd401abf62e647d77eeefa99"
+      "bytes": 31702,
+      "sha256": "b097f3af1644ff4bf92ee854131503e8d193edd91719948cf30bdd4a76679d7b"
     },
     "public/geometry/torus.webp": {
-      "bytes": 15164,
-      "sha256": "78bf612b8f94a13ff9b2a42cb50b676f5a60a96ddce057f5959bc7853589d79c"
+      "bytes": 21286,
+      "sha256": "111d503a1e5fddb0ed5f128390d438b96dba159809ba00da2e015070f2c41a1e"
     },
     "public/geometry/twisted-nanoribbon.webp": {
       "bytes": 21848,
       "sha256": "634f531dcf468a27e482c4d1eb4538178fe9dd59167a192afe5ea84d25e0283e"
     },
     "public/geometry/vibrational-mode.webp": {
-      "bytes": 28758,
-      "sha256": "d108bdb064d3c9ba9455c30c7dcff3012dc81d86b102d0857811d16b86d8869b"
+      "bytes": 17426,
+      "sha256": "30c29bda7a3beae9ca7a7350c7c420a3e90c1ac2674e290b766ab68ac34b43a0"
     },
     "public/media/docs/CV_Marzio_De_Corato.pdf": {
       "bytes": 670385,
@@ -1747,16 +1847,16 @@
       "sha256": "b614edef5ffd3f36f526db5330a31e9661d453601bbfe4d519afe5acde810336"
     },
     "scripts/audit-release.mjs": {
-      "bytes": 2556,
-      "sha256": "caec0930bcad3fd5d0b327e85dd52353fcdc1e9669bb26606ed54d831006d247"
+      "bytes": 2931,
+      "sha256": "287f877d8fd0c1563ca19082115961e4a81df4c077568ebf31679681af8c4968"
     },
     "scripts/audit-teaching-apps.mjs": {
       "bytes": 2079,
       "sha256": "136a9c0a4dba23bb1e0b458077335c4b8ffc841ac2761bf3ac40f84cd6fa7156"
     },
     "scripts/build.mjs": {
-      "bytes": 15129,
-      "sha256": "323b55f9d854949b4620042bd597c437ef87b32a36e6598dede2c65d8ba563c8"
+      "bytes": 14996,
+      "sha256": "3c2099715334d984feb32e48ef841cf657113a717a73ec7a80adb46e50cc860b"
     },
     "scripts/check-external-links.mjs": {
       "bytes": 1387,
@@ -1810,6 +1910,82 @@
       "bytes": 458,
       "sha256": "e578c4599c1f22345ff358e4bd0dd5a5a6eeaa437da49f05f9639bf8b63b5d67"
     },
+    "source-materials/atlas-models/bloch-sphere.svg": {
+      "bytes": 643547,
+      "sha256": "5593f2b27e43af674c16e8bdd373003dba05af81dc846f3f1769d93424737d6e"
+    },
+    "source-materials/atlas-models/catenoid.svg": {
+      "bytes": 961273,
+      "sha256": "231c74dcd985c80b3a7c4ed38693b31118b9a52bc82ad943cbd1160b71f6e09e"
+    },
+    "source-materials/atlas-models/covariance.svg": {
+      "bytes": 766697,
+      "sha256": "95258f05aa3d52eb2250d908068aa52ab3f4c83a1db424dcb0c0b53bb9be5c4a"
+    },
+    "source-materials/atlas-models/gaussian-density.svg": {
+      "bytes": 986709,
+      "sha256": "5f79103048978f76292d079a0e613c5e1c4a85693ff178757835503ed9a1ea06"
+    },
+    "source-materials/atlas-models/gyroid.svg": {
+      "bytes": 1748238,
+      "sha256": "68555f28023ac738c6d1f136eec1211b28e579e6fb97a31974dcd52308c9a119"
+    },
+    "source-materials/atlas-models/helicoid.svg": {
+      "bytes": 917542,
+      "sha256": "f898f2b823047a379867951fb9926becd81e6808ab81469f6e05dc90ddc681a1"
+    },
+    "source-materials/atlas-models/interference.svg": {
+      "bytes": 1113692,
+      "sha256": "620020e68db693d373fd67ca66b4fc2666f15ef4f2c3924268f7b706b6130769"
+    },
+    "source-materials/atlas-models/lattice.svg": {
+      "bytes": 285289,
+      "sha256": "fb9dce3e37e2977b5f711aa0371dceaab92fac2435baa5097a0605f54b745d85"
+    },
+    "source-materials/atlas-models/menger.svg": {
+      "bytes": 809341,
+      "sha256": "f564d71a1b60316d2c131b5572a9a3c9ff2b7c41e75d85c14df9fe359fab135f"
+    },
+    "source-materials/atlas-models/mobius.svg": {
+      "bytes": 807210,
+      "sha256": "cbf3fd3fc5323aa365aed8b5500c02d2db22883d2925150c4272399476eabea7"
+    },
+    "source-materials/atlas-models/models.json": {
+      "bytes": 928863,
+      "sha256": "71b85a9d7a76c4b7c55a9db47c85c6458c10dd79f550d30fd03add36b48118b6"
+    },
+    "source-materials/atlas-models/quantum-circuit.svg": {
+      "bytes": 161049,
+      "sha256": "f39ad8f621ad942d052b0fbbb9397804b749c6d1003b4b1b00af1fdf213ee707"
+    },
+    "source-materials/atlas-models/schwarz-d.svg": {
+      "bytes": 1915421,
+      "sha256": "0e25085292825f2e9ae97077ae0dc7469954e161bfaef8bb1a4240df839e5d78"
+    },
+    "source-materials/atlas-models/schwarz-network.svg": {
+      "bytes": 1357044,
+      "sha256": "d07f7fe2c53ec980d8cb76c72a48cf43a1ce5e1b29a7a5dc75425780daf01346"
+    },
+    "source-materials/atlas-models/schwarz-p.svg": {
+      "bytes": 1648755,
+      "sha256": "10e59722fbea59590a4f26a27ff5e1210bcfd5e45eacb2b13daa0260d881a2b9"
+    },
+    "source-materials/atlas-models/sierpinski.svg": {
+      "bytes": 452701,
+      "sha256": "9e90419aab899fe462e4b48c4241ac775b73ae68c2c676cd0cfd04a1cc1bc228"
+    },
+    "source-materials/atlas-models/stochastic-paths.svg": {
+      "bytes": 982308,
+      "sha256": "2760d8db4d7bc4c790b981f19e52d5cba7ce47ac06dfa0161fb7e172cb195ea7"
+    },
+    "source-materials/atlas-models/torus.svg": {
+      "bytes": 1224801,
+      "sha256": "92e1e5c083639c7210af4171d3bb19e1ebad9e04571ca93e8b8d87a0e6e7c528"
+    },
+    "source-materials/atlas-models/vibrational-mode.svg": {
+      "bytes": 197901,
+      "sha256": "0e6d75fb454be7e6155599879345a875c68676602c15425ad8002466c4d873af"
+    },
     "source-materials/carbon/README.md": {
       "bytes": 3150,
       "sha256": "e0f2cc82d77b7fd6d3b1c26b838c40fc52f7a9327caf4fa80556a2e616dda9db"
@@ -1862,6 +2038,26 @@
       "bytes": 95613,
       "sha256": "04736e764bb1b2920e9d4b3abedccc08e978863194dd320aa57ce1f1bbbf22a2"
     },
+    "source-materials/security-models/decision-surface.svg": {
+      "bytes": 1218525,
+      "sha256": "45d735933ce92d42552d6a028f3ddd95ca36a2200e029d84cab5453025b5ec45"
+    },
+    "source-materials/security-models/entropy-trace.svg": {
+      "bytes": 994533,
+      "sha256": "a4a270293353fb92de3d16676ac863d89de78de4129b14fd1f560f4ca77f810b"
+    },
+    "source-materials/security-models/markov-network.svg": {
+      "bytes": 579982,
+      "sha256": "d4f23b547b55d0834f3143d714bab13353c97640fd8c519bb44bfd0afbe4d88a"
+    },
+    "source-materials/security-models/models.json": {
+      "bytes": 55903,
+      "sha256": "75627bd616a1b30f0d2c80d95f95734e9e35bd7410e61c5dd1b2f262183f173d"
+    },
+    "source-materials/security-models/program-flow.svg": {
+      "bytes": 370119,
+      "sha256": "ac6fbfb0e33d131e67c6c92d6111d4b66288e23bf70282f2971e8c1ba4ff41f1"
+    },
     "src/ambient-content.mjs": {
       "bytes": 2251,
       "sha256": "938898509e04e3a4e8057efe951d45e7f8ecf5f8e42329d56b7001e9aa438f7e"
@@ -1887,8 +2083,8 @@
       "sha256": "bd63e143c258b2add7d6150d7fb15ef66184ce39c477789f055074b6f5e443a9"
     },
     "src/content.mjs": {
-      "bytes": 16126,
-      "sha256": "5e47f5d1353b6ece6e06f421a97858de593f6208db007e574791ac50d3bb10a0"
+      "bytes": 16371,
+      "sha256": "edba6b29b1f827a031703ff77bcf77521205d3cc11fc59c87fa8d2eea0f7399d"
     },
     "src/cyber-network.css": {
       "bytes": 3465,
@@ -1903,8 +2099,8 @@
       "sha256": "e165771406393508bb8ffadb1f4d911a0ddda1eb01bee85f265e64f710f3ab34"
     },
     "src/effects-ui.mjs": {
-      "bytes": 4562,
-      "sha256": "ed32d64a07de9e4503984c32e6cfc7bc134db43dba453ea05f82133d30892728"
+      "bytes": 4597,
+      "sha256": "f8dbf0ca622a4b66177a964c4d7cc0c197181e8db43266df21ba2b0d8040c19d"
     },
     "src/effects.js": {
       "bytes": 7105,
@@ -1915,8 +2111,8 @@
       "sha256": "c6952f14af9401614a74c4a17787c60a55548aac1074bb14beda56b3e2dbf06d"
     },
     "src/experience.mjs": {
-      "bytes": 6053,
-      "sha256": "41d1fb2544b0f516e46ffe1430fb3eee5656a0f95b55e776ab5ff58240c7cddf"
+      "bytes": 6331,
+      "sha256": "c1da6af2e842ea94eb02b14880f736083626bc5aa1d3df4ba1556f0b7841ba9a"
     },
     "src/experiments.css": {
       "bytes": 2149,
@@ -1930,29 +2126,37 @@
       "bytes": 4844,
       "sha256": "8f360fa174a64c23e67639bc207d7bd32d3f11fc20ba7706f2e3cc2f53d6773b"
     },
+    "src/galaxies.css": {
+      "bytes": 9940,
+      "sha256": "8b7ebe277efef99a68d2b4c3f93ef6ba931790aa0dc587ee7e1fa760562a1776"
+    },
+    "src/galaxies.mjs": {
+      "bytes": 6098,
+      "sha256": "d34db1724c846ecfd497ecd1070b12cbb05000ee692a3e027fd8846a750b5c6a"
+    },
     "src/geometry-loader.js": {
-      "bytes": 19422,
-      "sha256": "1a15444b151aae6b8c0fb9d46a9329f6870c6f458eaa64691e11c5d9c130ae50"
+      "bytes": 21393,
+      "sha256": "c6b645619c91e1696390a6df327c390039278c4063cdffd5215ce96cb48d4761"
     },
     "src/geometry.css": {
-      "bytes": 10065,
-      "sha256": "126fb74f38e1ef227faecfe5940a22c3982c19d6fa67c6536f9e483f845c88bc"
+      "bytes": 10811,
+      "sha256": "c2a6caed458671f47c4e42be982585061024e66c5b8f69ab5718025810484321"
     },
     "src/geometry.mjs": {
-      "bytes": 9192,
-      "sha256": "81615bbc76bc62cdb8898c04bad773d1740565a2ee020fa50fe9cbcdda76fd60"
+      "bytes": 10991,
+      "sha256": "3be8b93cc8aa081be7260b73c399c7133e48a38981adca006fb030101baf75d9"
     },
     "src/header.css": {
       "bytes": 3619,
       "sha256": "77f6968a1213fdb819f5e7380b2d275cb4c6963fad4d602f2477fbca1cb54ae2"
     },
     "src/i18n-client.js": {
-      "bytes": 4113,
-      "sha256": "bf9f1812018839a068a62c6a54b0743d7c8a792c1e3bacb00559810db05be3db"
+      "bytes": 4722,
+      "sha256": "d3d15810214e55829df04be9fc4de772674b659271f92244eeb56d14bce6c35b"
     },
     "src/i18n.mjs": {
-      "bytes": 11014,
-      "sha256": "66dc56393b2b0bc0150561b53125e9fbea8cf349bb6240cc9c8661255b652df0"
+      "bytes": 11024,
+      "sha256": "ab329a79d34bef8185595b15ddbb7d71e118c6b71c824c8ef8cac4cc400c7831"
     },
     "src/identity.css": {
       "bytes": 2458,
@@ -1995,8 +2199,8 @@
       "sha256": "518fdc2282a1e2b24690270aaf606eaf1156e6485f9932349db673ab1a9096a9"
     },
     "src/render.mjs": {
-      "bytes": 49195,
-      "sha256": "8e7c3d7551db2f4b283234d3546666545a3677bb506b4ecbd01ffac5b2b3b726"
+      "bytes": 49812,
+      "sha256": "9a25295210e221d581f159bae47d4d8790ce0a49ffa31de8164632bdd6da0153"
     },
     "src/safety.mjs": {
       "bytes": 3714,
@@ -2007,12 +2211,12 @@
       "sha256": "2c588aadef41ada3710e7f70d0cb5645db7f6bebfd79617bce8f230fd563d385"
     },
     "src/search.mjs": {
-      "bytes": 4248,
-      "sha256": "10b38f08ab461333b40fcc2c546192d96a1f025ae1f20848d9b60ad67ee57946"
+      "bytes": 4431,
+      "sha256": "3c37d87c3d970770f242ddae6f117f9561c4cb9c5162b4e076c4e9f0dd5b21cf"
     },
     "src/security.mjs": {
-      "bytes": 2742,
-      "sha256": "10227395cee15027e7481d1af047d89d5b2a9d1e9d251dadf2c067838b684746"
+      "bytes": 3359,
+      "sha256": "6957fa1c2e0bfbe89e035b16ea1b9369ab2547dfebb863736a14343718f08a53"
     },
     "src/seo.mjs": {
       "bytes": 1882,
@@ -2023,20 +2227,20 @@
       "sha256": "f98948891c5436b0b4217202edcc22f708f6fd3dc59ef0964bdf243977d6aea6"
     },
     "src/sound.js": {
-      "bytes": 5074,
-      "sha256": "90c00abaecf8bd23613a5e3d8c4072e02b81329090691a6c3e78a0d2be983485"
+      "bytes": 7487,
+      "sha256": "c70b0a8583bb71865c4c9439609f5905a323b90a6f1f74433d8951834cb55af3"
     },
     "src/teaching-app-launch.js": {
-      "bytes": 5040,
-      "sha256": "70857be28b8a31e47995e775783dd32cab5cba933366173ea0e5613e73801123"
+      "bytes": 5527,
+      "sha256": "a47b525c651fce5f564579a65f1cb679219ad0602df01dd44d3e88d2afff38ae"
     },
     "src/teaching-apps.css": {
-      "bytes": 6141,
-      "sha256": "0681b7d49d96e00ce4ed49990c9bbaf1d060a967c0faa6165b6bb5bd88a9799a"
+      "bytes": 7021,
+      "sha256": "1c6812bb7931623e7a2b02bce673a8d170988227d37f701ab032aa69033f986e"
     },
     "src/teaching-apps.mjs": {
-      "bytes": 9097,
-      "sha256": "22667f1e589f518f9627f4ad19504bcaefbe8be92484ee0f3894282e143fb48f"
+      "bytes": 9812,
+      "sha256": "e81c9b50b97835633bfa77bb595c7f4f715b61a873794927e320909341ba0048"
     },
     "src/travel-gallery.js": {
       "bytes": 2310,
@@ -2051,8 +2255,8 @@
       "sha256": "e13358f84acc78416b2a62a6eb3afc0f9eb989c53deb8447b50f9df2da78b487"
     },
     "tests/ambient-effects.test.mjs": {
-      "bytes": 4573,
-      "sha256": "071b85de6329a25de696a4309fe98c7baa67b660a534aea5715cca3d5407ed47"
+      "bytes": 4550,
+      "sha256": "0f4cb82cafa2c13617e405879ac4befe98ff739ec31ba4bf876f83c3c280b11c"
     },
     "tests/ambient_browser_fixture.py": {
       "bytes": 1397,
@@ -2061,6 +2265,10 @@
     "tests/article-release.test.mjs": {
       "bytes": 1716,
       "sha256": "4b7c3193bfe8e31de1346007ff1d7095945402919d3d41672a75186af2ddb4b3"
+    },
+    "tests/atlas-models.test.mjs": {
+      "bytes": 5119,
+      "sha256": "b84d06bc80759b4ff83c062dd11eecb97112c791b5c899e2588d70ccedcfc801"
     },
     "tests/biography-revision-v011.test.mjs": {
       "bytes": 1537,
@@ -2087,16 +2295,16 @@
       "sha256": "00f2ec52731575a9dcb0000f3d0b66e65009fa51fdf8c17314675cedc3f63139"
     },
     "tests/browser-i18n.py": {
-      "bytes": 9913,
-      "sha256": "17a7085bc800f2803f26a86781e8935464e5270c1b7c981e8ea7c71ba5c7cde6"
+      "bytes": 9970,
+      "sha256": "e3298b177454953f75d7a93d67b60d40801752268f8ff55b16476ee1ff9fe006"
     },
     "tests/browser-manifold.py": {
       "bytes": 5887,
       "sha256": "3b18b5149bda8e06e8114d4a38b39ac75c5107dc94e03ddf50391f345d8c1d97"
     },
     "tests/browser-revision.py": {
-      "bytes": 9697,
-      "sha256": "f9ce529d27cfddb70a5a788da88b70be53b4bf62948624c37cf9b48514850a1a"
+      "bytes": 22267,
+      "sha256": "ec3515534973bda5a0d9a4e096dbc501e8f73784373301e039ee4bc77b64b046"
     },
     "tests/browser-travels.py": {
       "bytes": 7258,
@@ -2107,12 +2315,12 @@
       "sha256": "94b98c32f5191c10f8b9c8963c5dfa2db5e9482b247e2c451471199d3a812a5f"
     },
     "tests/carbon-motion.test.mjs": {
-      "bytes": 8796,
-      "sha256": "89d4969c3490cceedcbbcf4a76fd6981bf3a9e6dc57c5b4f1640e14e1bcb2a03"
+      "bytes": 8848,
+      "sha256": "84a22bbc3f7205df1a33956d43903e2eb85f82a4c19895f214c9015fe569b420"
     },
     "tests/cinema-v36.test.mjs": {
-      "bytes": 8357,
-      "sha256": "45a081ebb98b8fe14bb497f9a4dfcb9d46bcfbf69b610c8db2406b5d8b5c38d4"
+      "bytes": 8389,
+      "sha256": "2561808460767b50b8c9df6fbf07fbcdd958a7ac39365626007f70aa8952a9a2"
     },
     "tests/content.test.mjs": {
       "bytes": 4621,
@@ -2132,11 +2340,23 @@
     },
     "tests/experience-v35.test.mjs": {
       "bytes": 3926,
-      "sha256": "43879cf007e0f9050ec316147d27bb0bef1bd5773cce7bb2d60a0650ac65e767"
+      "sha256": "95f0d429500ccb261398e641ed1cf0e801b391a055570511d720b2e802d7821e"
+    },
+    "tests/galaxies.test.mjs": {
+      "bytes": 5186,
+      "sha256": "f27e63e5012e79bafac354905f4261fcccdf6989849c9885ac52413d69f186dc"
     },
     "tests/geometry-explorer.test.mjs": {
-      "bytes": 5629,
-      "sha256": "f2cb01c2b6b2cfc9ddb59934e825191caada5a83379b44e1336fdf13e38ebe6e"
+      "bytes": 5640,
+      "sha256": "a8d87b0e90ca477772b0e29759b3b1e59f8b2d80b5dfa46ec71105c0adb87a33"
+    },
+    "tests/geometry-legends.test.mjs": {
+      "bytes": 3948,
+      "sha256": "bec4748af1eb5b8a6854ff38c67c09065f5522b0e1d3111442557412857243bb"
+    },
+    "tests/geometry-queue.test.mjs": {
+      "bytes": 1939,
+      "sha256": "5129721243586ff6ede05d6bda39ba4820913b9a01cfa55ac5870b538720ce90"
     },
     "tests/hardening.test.mjs": {
       "bytes": 4719,
@@ -2148,11 +2368,11 @@
     },
     "tests/identity-v33.test.mjs": {
       "bytes": 2836,
-      "sha256": "3293666a3b6c0968ef792495a53e0263789f241ebb9794407a2487a494ee74b8"
+      "sha256": "e6c4466ef720d228591559206e2086da745d9d467f6377d76facd984ddf28ec9"
     },
     "tests/manifold-release.test.mjs": {
-      "bytes": 4545,
-      "sha256": "a905919cdd7fda6b642c1ee1f499d2984181e27f5c7672148c28615d4fe6caaf"
+      "bytes": 4555,
+      "sha256": "058c567eb0b24e94506e916858ee952a657d936f7839dbbcfa8d7ec58b3157e7"
     },
     "tests/markdown-workflow.test.mjs": {
       "bytes": 3912,
@@ -2194,17 +2414,29 @@
       "bytes": 3394,
       "sha256": "6b6db596641c039f8d2a6173ff02031fb3d4b4e909e84766799a8db984d7f80a"
     },
+    "tests/security-models.test.mjs": {
+      "bytes": 3502,
+      "sha256": "762eb8f78d9eb059af25075deea28dc4956ea50c98d9f5a93f3e9bad036a2124"
+    },
     "tests/security.test.mjs": {
       "bytes": 3871,
       "sha256": "b8700cbeb77fd650fcc0f29e9e9c704d76fe3ded4ed956959e2918cad5930afd"
     },
     "tests/sound-and-contact.test.mjs": {
-      "bytes": 2515,
-      "sha256": "9fc88df2f5b36bfaf801f186f96c28c86a366109ea7a2786a4a5416917eb8c19"
+      "bytes": 2533,
+      "sha256": "22c2550c74fe539a83bfa01e1ef85a118e93279b9c2ddb34e56d882b88fc29e4"
+    },
+    "tests/sound-interactions.test.mjs": {
+      "bytes": 7143,
+      "sha256": "5cae2e1e35b2afb315f4a5e3d4d98151fdaaef20ef57ba1979dc57c72333c89e"
     },
     "tests/teaching-apps.test.mjs": {
-      "bytes": 7909,
-      "sha256": "def97a7d59a9406bd19291b90dba1a33f3bde0111e5e64a67ab4aa263796dbab"
+      "bytes": 7977,
+      "sha256": "e591d6965de191c270dfe81636318c528e9ca8a210c1f582e9cc720a5806b853"
+    },
+    "tests/teaching-launch-runtime.test.mjs": {
+      "bytes": 7711,
+      "sha256": "da927dec09e8f084df3c8f913b88640f363c0abe0d513963113c63fec4ad9a89"
     },
     "tests/travels.test.mjs": {
       "bytes": 5483,
@@ -2217,6 +2449,10 @@
     "tests/visual-integrity.test.mjs": {
       "bytes": 3542,
       "sha256": "cec7fe8c330bd78202e98a9ec5fd85dcf34b35fffd4d72032eb3a3ca7d67917e"
+    },
+    "tools/build-laboratory-galaxies.py": {
+      "bytes": 3321,
+      "sha256": "b12fb1c7c971b44e069427dac99d812d4221630e75bd4a821173a3b8e2b60192"
     },
     "tools/carbon_mesh.py": {
       "bytes": 1738,
@@ -2235,12 +2471,20 @@
       "sha256": "b3dbce9b806f953d8422f29d252b0458eb28c67c3f1908e54c15044a616495a8"
     },
     "tools/generate-explorer.py": {
-      "bytes": 14381,
-      "sha256": "dbec5ead81ecdaca369740a5ff29650af0ae69898e0b8488079aad7f72d56d36"
+      "bytes": 20398,
+      "sha256": "ed5e0280545a0827de7d03890aa1699e7f38add5d1c261bcc9f2a259f6f7a3ec"
     },
     "tools/generate-schwarzite.py": {
       "bytes": 5721,
       "sha256": "91fe452c8243e46c210c9d4d8c3a59949b824b6d0403dc6895a12145fb4ab63e"
+    },
+    "tools/generate-security-models.py": {
+      "bytes": 9849,
+      "sha256": "abc11b806ad469c42b02219a4e451c9880a2f964220ae09fe0d5806c06e39c02"
+    },
+    "tools/geometry_mesh.py": {
+      "bytes": 3179,
+      "sha256": "0de43aeb629fa45dcdfd52ea3cbaa839230116444be67572bc3eebede771e722"
     },
     "tools/identity-geometries.py": {
       "bytes": 2593,

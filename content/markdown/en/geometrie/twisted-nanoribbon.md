@@ -26,3 +26,7 @@ Follow an edge from one end to the other as it turns around the long axis. Compa
 
 ## lettura
 Each transverse coordinate rotates through an angle that increases linearly along the ribbon axis. The bond list remains identical to the planar ribbon.
+
+## legenda
+mint | deformed ribbon bonds
+pale | carbon atoms

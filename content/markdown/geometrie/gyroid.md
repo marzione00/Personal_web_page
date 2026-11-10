@@ -19,7 +19,12 @@ La formula genera un’approssimazione nodale della superficie minima, non il gi
 [Schwarziti e superfici periodiche — ricerca originale](https://pmc.ncbi.nlm.nih.gov/articles/PMC6126744/)
 
 ## osservazione
-Ruota la superficie e segui le aperture che, diventando visibili da punti di vista differenti, permettono di riconoscere come i passaggi si sviluppino nelle tre direzioni dello spazio e come la porzione rappresentata prosegua fino ai bordi del dominio.
+Segui le sezioni luminose che attraversano la superficie e osserva come proseguano intorno ai canali, mentre la rotazione rende visibili i passaggi fra regioni che nella proiezione possono sovrapporsi; il colore ambra distingue una sezione di riferimento della stessa costruzione nodale.
 
 ## lettura
 La somma di seno di x per coseno di y, seno di y per coseno di z e seno di z per coseno di x è uguale a zero.
+
+## legenda
+mint | sezioni nei piani x e z costanti
+blue | sezioni nei piani y costante
+amber | sezione di riferimento z = 0

@@ -22,7 +22,13 @@ Rotating the viewer changes the viewpoint; it does not apply a gate to the qubit
 [IBM Quantum — Bloch sphere](https://quantum.cloud.ibm.com/learning/en/courses/general-formulation-of-quantum-information/density-matrices/bloch-sphere)
 
 ## osservazione
-Follow the highlighted vector and the references on the sphere to see how meridians and parallels locate the represented state, while rotating the scene helps distinguish the sphere itself from the viewpoint through which you are observing it.
+Follow the amber arrow to the represented pure state and compare it with the angular arcs, meridians and parallels, distinguishing a change of viewpoint from a change in the quantum state.
 
 ## lettura
 The state is cosine of half theta times state zero plus the exponential of i phi times sine of half theta times state one; the vector coordinates are sine theta cosine phi, sine theta sine phi, and cosine theta.
+
+## legenda
+amber | state vector and θ, φ arcs
+blue | sphere meridians
+mint | sphere parallels
+pale | reference axes

@@ -19,7 +19,12 @@ Il campo è sintetico. Non è un modo normale calcolato dalla matrice dinamica, 
 [Pubblicazioni sulle proprietà vibrazionali](ricerca.html#bibliografia)
 
 ## osservazione
-Confronta il nastro deformato con la sua disposizione reticolare, osservando come gli spostamenti fuori dal piano cambino l’aspetto della superficie mentre i collegamenti fra i nodi restano riconoscibili, quindi usa la vista laterale per seguire l’andamento della deformazione.
+Segui gli esagoni lungo il foglio, osservando come la deformazione fuori piano ne modifichi la proiezione senza cambiare i collegamenti; i piccoli vertici azzurri e ambra distinguono il segno dello spostamento sintetico, mentre i legami rendono continua la lettura del reticolo.
 
 ## lettura
 Lo spostamento lungo z è uno virgola uno per il seno di zero virgola sette x, moltiplicato per il coseno di zero virgola quarantadue y.
+
+## legenda
+mint | collegamenti del reticolo
+blue | vertici con spostamento z positivo
+amber | vertici con spostamento z nullo o negativo

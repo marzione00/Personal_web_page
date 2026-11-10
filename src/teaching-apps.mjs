@@ -58,26 +58,32 @@ const copy = language => language === 'en' ? {
   eyebrow:'Explore and experiment', title:'Interactive laboratories', intro:'Independent environments to explore alongside the course materials.',
   type:'Interactive laboratory', launch:'Enter the laboratory', code:'Source code', note:'Opens in this tab, with its own interface.',
   italian:'Laboratory interface: Italian.', english:'Laboratory interface: English.', draft:'Unpublished template',
-  dialog:'Opening the laboratory', visual:'Visual transition', status:'Opening', direct:'Open now', cancel:'Cancel', destination:'Destination'
+  dialog:'Opening the laboratory', visual:'Visual transition', sequence:'Opening sequence', status:'Opening', direct:'Open now', cancel:'Cancel', destination:'Destination'
 } : {
   eyebrow:'Esplora e sperimenta', title:'Laboratori interattivi', intro:'Ambienti autonomi da esplorare accanto ai materiali del corso.',
   type:'Laboratorio interattivo', launch:'Entra nel laboratorio', code:'Codice sorgente', note:'Si apre in questa scheda, con la propria interfaccia.',
   italian:'Interfaccia del laboratorio: italiano.', english:'Interfaccia del laboratorio: inglese.', draft:'Modello non pubblicato',
-  dialog:'Apertura del laboratorio', visual:'Transizione visiva', status:'Apertura di', direct:'Apri subito', cancel:'Annulla', destination:'Destinazione'
+  dialog:'Apertura del laboratorio', visual:'Transizione visiva', sequence:'Sequenza di apertura', status:'Apertura di', direct:'Apri subito', cancel:'Annulla', destination:'Destinazione'
 };
 
 export function teachingAppSearchEntries(data) {
   return (data.teachingApps || []).filter(app => app.enabled).map(app => ({
     url: 'didattica.html#laboratorio-' + app.id, title: app.title,
-    kind: data.language === 'en' ? 'Teaching / laboratory' : 'Didattica / laboratorio'
+    kind: data.language === 'en' ? 'Teaching / laboratory' : 'Didattica / laboratorio',
+    context: app.paragraphs.join(' ')
   }));
+}
+
+/** All entry points share one launch contract and the existing terminal. */
+export function launchAttributes(app, name = app.title) {
+  return app.launch === 'terminal' ? ` data-app-launch data-launch-id="${escape(app.id)}" data-launch-name="${escape(name)}"` : '';
 }
 
 function card(app, language, preview) {
   const c = copy(language), disabled = !app.enabled;
   if (disabled && !preview) return '';
   const action = disabled ? `<span class="tm-app-draft-label">${c.draft}</span>` :
-    `<a class="button primary tm-app-enter" href="${escape(app.url)}"${app.launch === 'terminal' ? ` data-app-launch data-launch-id="${escape(app.id)}" data-launch-name="${escape(app.title)}"` : ''}>${c.launch} <span aria-hidden="true">→</span></a>`;
+    `<a class="button primary tm-app-enter" href="${escape(app.url)}"${launchAttributes(app)}>${c.launch} <span aria-hidden="true">→</span></a>`;
   const languageNote = app.interfaceLanguage !== language ? `<p class="tm-app-language">${app.interfaceLanguage === 'it' ? c.italian : c.english}</p>` : '';
   return `<article class="tm-app-card${disabled ? ' tm-app-card-draft' : ''}" id="laboratorio-${escape(app.id)}">
     <div class="tm-app-card-top"><span class="label">${disabled ? c.draft : c.type}</span><span class="tm-app-mark" aria-hidden="true">&gt;_</span></div>
@@ -92,7 +98,7 @@ export function renderTeachingApps(data, {previewDisabled = false} = {}) {
   const apps = (data.teachingApps || []).filter(app => app.enabled || previewDisabled);
   if (!apps.length) return '';
   const c = copy(data.language);
-  return `<section class="tm-apps" aria-labelledby="tm-apps-title"><div class="section-head"><div><span class="label">${c.eyebrow}</span><h2 id="tm-apps-title">${c.title}</h2><p class="tm-apps-intro">${c.intro}</p></div></div><div class="tm-app-grid">${apps.map(app => card(app, data.language, previewDisabled)).join('')}</div></section>`;
+  return `<section class="tm-apps" aria-labelledby="tm-apps-title"><div class="section-head"><div><span class="label">${c.eyebrow}</span><h2 id="tm-apps-title">${c.title}</h2><p class="tm-apps-intro">${c.intro}</p><a class="tm-apps-map" href="laboratori.html">${data.language==='en'?'Explore the galaxy map':'Esplora la mappa delle galassie'} ↗</a></div></div><div class="tm-app-grid">${apps.map(app => card(app, data.language, previewDisabled)).join('')}</div></section>`;
 }
 
 /** One persistent dialog handles delegated launch links after page navigation. */
@@ -108,7 +114,7 @@ export function renderAppLaunchDialog(data, body) {
         <span class="label">${c.visual}</span><h2 id="tm-launch-title" data-launch-title>${c.dialog}</h2>
         <p id="tm-launch-status" role="status" aria-live="polite" aria-atomic="true" data-launch-status>${c.dialog}…</p>
         <div class="tm-launch-code" aria-hidden="true"><div><span class="tm-launch-prompt">$</span> <span data-launch-line></span></div><div><span class="tm-launch-prompt">$</span> <span data-launch-line></span></div><div><span class="tm-launch-prompt">›</span> <span data-launch-line></span><span class="tm-launch-cursor">▍</span></div></div>
-        <div class="tm-launch-progress" aria-hidden="true"><span></span></div>
+        <div class="tm-launch-meter"><div class="tm-launch-meter-head"><label for="tm-launch-progress">${c.sequence}</label><span data-launch-percent aria-hidden="true">0%</span></div><progress class="tm-launch-progress" id="tm-launch-progress" data-launch-progress max="100" value="0">0%</progress><div class="tm-launch-scale" aria-hidden="true"><span>0 s</span><span>5 s</span></div></div>
         <p class="tm-launch-destination"><span>${c.destination}</span><span data-launch-destination></span></p>
       </div>
       <div class="tm-launch-footer"><span aria-hidden="true">ESC · ${c.cancel}</span><a class="button" data-launch-direct href="${escape(initial.url)}">${c.direct} <span aria-hidden="true">→</span></a></div>

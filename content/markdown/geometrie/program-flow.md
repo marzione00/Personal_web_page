@@ -11,16 +11,20 @@ G = (V, E)
 Aᵢⱼ = 1 se esiste un arco i → j, altrimenti 0
 
 ## spiegazione
-Un programma può essere descritto attraverso le relazioni fra operazioni, funzioni o stati. I rami e le convergenze di questa rete richiamano il problema di ricostruire un comportamento dalle tracce della sua esecuzione.
+I blocchi di un programma formano un’architettura di percorsi diretti, nella quale una diramazione apre tre possibilità che tornano a convergere, mentre il tracciato color ambra permette di seguire una delle sequenze ammesse e di riconoscere il verso indicato dalle frecce.
 
 ## limiti
-Il grafo è costruito per illustrare ramificazioni e connessioni dirette; non proviene da un malware. Le frecce indicano la direzione degli archi. La matrice A descrive soltanto la connettività, senza attribuire probabilità ai passaggi.
+Il grafo, costruito per illustrare un insieme di percorsi di esecuzione, comprende dieci blocchi e undici archi diretti. La posizione dei blocchi e il percorso evidenziato sono scelte illustrative: la figura non deriva da un malware e la matrice A descrive la connettività, senza assegnare probabilità ai passaggi. I grafi di programmi reali possono includere cicli, che questo esempio lascia fuori dalla rappresentazione.
 
 ## fonti
 [Saggio: Colpire i nervi del sistema](articolo-colpire-i-nervi-del-sistema.html)
 
 ## osservazione
-Segui le frecce a partire da un nodo e osserva dove il percorso si ramifica o torna a convergere, ruotando la rete per distinguere gli incroci della proiezione dai collegamenti effettivamente presenti fra operazioni, funzioni o stati.
+Parti dal blocco di ingresso e segui le frecce lungo il percorso color ambra, quindi confrontalo con gli altri due rami, osservando dove le possibilità si separano e dove tornano a condividere il cammino verso l’uscita.
 
 ## lettura
 Il grafo G comprende vertici V e archi E; la matrice di adiacenza ha elemento uno quando un arco collega il vertice i al vertice j, e zero negli altri casi.
+
+## legenda
+mint | blocchi e percorsi alternativi
+amber | percorso scelto, ingresso e uscita

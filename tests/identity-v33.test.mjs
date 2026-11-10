@@ -14,8 +14,8 @@ test('current release uses one plural public name and keeps existing page addres
  const site=JSON.parse(read('content/site.json'));
  const pkg=JSON.parse(read('package.json'));
  assert.equal(site.name,brand);
- assert.equal(site.version,'3.12.1');
- assert.equal(pkg.version,'3.12.1');
+ assert.equal(site.version,'3.15.2');
+ assert.equal(pkg.version,'3.15.2');
  assert.equal(pkg.name,'topological-manifolds-personal-site');
  for(const lang of ['it','en']){
   const data=loadContent(root,{language:lang});

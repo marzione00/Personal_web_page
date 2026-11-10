@@ -19,7 +19,12 @@ Questa equazione periodica è una rappresentazione nodale della famiglia D, con 
 [Schwarziti e superfici periodiche — ricerca originale](https://pmc.ncbi.nlm.nih.gov/articles/PMC6126744/)
 
 ## osservazione
-Segui un’apertura mentre ruoti la superficie, osservando quali passaggi diventano visibili e quali vengono nascosti, quindi confronta questa organizzazione con la scheda di Schwarz P per riconoscere le differenze fra le due trame spaziali.
+Segui le sezioni che percorrono la superficie e ruota la figura per distinguere le ramificazioni che si sovrappongono nella vista iniziale, confrontando i restringimenti e le aperture della porzione nodale rappresentata.
 
 ## lettura
 Il prodotto dei coseni di x, y e z, diminuito del prodotto dei seni delle stesse coordinate, è uguale a zero.
+
+## legenda
+mint | sezioni nei piani x e z costanti
+blue | sezioni nei piani y costante
+amber | sezione di riferimento z = 0

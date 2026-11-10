@@ -59,7 +59,7 @@ with sync_playwright() as pw:
   p.locator(f'[data-geometry-open="{g["id"]}"]').click();live(p)
   check('EN model '+g['id'],p.evaluate('MDCGeometryDebug.viewer.gl.getError()===0 && MDCGeometryDebug.viewer.model.ix.length>0'))
   check('EN formula '+g['id'],'Formula or construction' in p.locator('#geometry-dialog').inner_text())
-  check('EN status '+g['id'],p.locator('[data-geo-status]').inner_text().startswith('Drag to explore'))
+  check('EN status '+g['id'],p.locator('#geometry-dialog [data-geo-status]').inner_text()=='Your system requests reduced motion. Use the orientation controls.')
   if g['id']=='gyroid':p.screenshot(path=str(P/'viewer-gyroid-en-desktop.png'))
   p.keyboard.press('Escape');p.wait_for_function('()=>!document.querySelector("#geometry-dialog").open')
  check('shared viewer fetched once',len([x for x in req if 'viewer-' in x])==1)

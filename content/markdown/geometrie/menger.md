@@ -20,7 +20,11 @@ Sono visualizzati due livelli, corrispondenti a 400 cubi. Le proprietà del limi
 [Wolfram — MengerMesh](https://reference.wolfram.com/language/ref/MengerMesh.html)
 
 ## osservazione
-Guarda il cubo attraverso una delle aperture e cambia lentamente punto di vista, osservando come le cavità maggiori lascino riconoscere aperture più piccole e come questa organizzazione si ripeta nei due livelli di costruzione rappresentati.
+Osserva il cubo attraverso le aperture maggiori e segui gli spigoli delle cavità più piccole, mentre la rotazione lascia emergere i passaggi interni; le facce condivise fra cubi adiacenti sono omesse dal disegno per rendere leggibile la stessa struttura di 400 celle.
 
 ## lettura
 L’insieme è l’unione di venti copie ridotte a un terzo della scala; la dimensione autosimilare è logaritmo di venti diviso logaritmo di tre.
+
+## legenda
+mint | spigoli esterni e delle cavità
+dark | facce esposte dei cubi
