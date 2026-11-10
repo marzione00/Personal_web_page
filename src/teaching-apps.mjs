@@ -69,15 +69,21 @@ const copy = language => language === 'en' ? {
 export function teachingAppSearchEntries(data) {
   return (data.teachingApps || []).filter(app => app.enabled).map(app => ({
     url: 'didattica.html#laboratorio-' + app.id, title: app.title,
-    kind: data.language === 'en' ? 'Teaching / laboratory' : 'Didattica / laboratorio'
+    kind: data.language === 'en' ? 'Teaching / laboratory' : 'Didattica / laboratorio',
+    context: app.paragraphs.join(' ')
   }));
+}
+
+/** All entry points share one launch contract and the existing terminal. */
+export function launchAttributes(app, name = app.title) {
+  return app.launch === 'terminal' ? ` data-app-launch data-launch-id="${escape(app.id)}" data-launch-name="${escape(name)}"` : '';
 }
 
 function card(app, language, preview) {
   const c = copy(language), disabled = !app.enabled;
   if (disabled && !preview) return '';
   const action = disabled ? `<span class="tm-app-draft-label">${c.draft}</span>` :
-    `<a class="button primary tm-app-enter" href="${escape(app.url)}"${app.launch === 'terminal' ? ` data-app-launch data-launch-id="${escape(app.id)}" data-launch-name="${escape(app.title)}"` : ''}>${c.launch} <span aria-hidden="true">→</span></a>`;
+    `<a class="button primary tm-app-enter" href="${escape(app.url)}"${launchAttributes(app)}>${c.launch} <span aria-hidden="true">→</span></a>`;
   const languageNote = app.interfaceLanguage !== language ? `<p class="tm-app-language">${app.interfaceLanguage === 'it' ? c.italian : c.english}</p>` : '';
   return `<article class="tm-app-card${disabled ? ' tm-app-card-draft' : ''}" id="laboratorio-${escape(app.id)}">
     <div class="tm-app-card-top"><span class="label">${disabled ? c.draft : c.type}</span><span class="tm-app-mark" aria-hidden="true">&gt;_</span></div>
@@ -92,7 +98,7 @@ export function renderTeachingApps(data, {previewDisabled = false} = {}) {
   const apps = (data.teachingApps || []).filter(app => app.enabled || previewDisabled);
   if (!apps.length) return '';
   const c = copy(data.language);
-  return `<section class="tm-apps" aria-labelledby="tm-apps-title"><div class="section-head"><div><span class="label">${c.eyebrow}</span><h2 id="tm-apps-title">${c.title}</h2><p class="tm-apps-intro">${c.intro}</p></div></div><div class="tm-app-grid">${apps.map(app => card(app, data.language, previewDisabled)).join('')}</div></section>`;
+  return `<section class="tm-apps" aria-labelledby="tm-apps-title"><div class="section-head"><div><span class="label">${c.eyebrow}</span><h2 id="tm-apps-title">${c.title}</h2><p class="tm-apps-intro">${c.intro}</p><a class="tm-apps-map" href="laboratori.html">${data.language==='en'?'Explore the galaxy map':'Esplora la mappa delle galassie'} ↗</a></div></div><div class="tm-app-grid">${apps.map(app => card(app, data.language, previewDisabled)).join('')}</div></section>`;
 }
 
 /** One persistent dialog handles delegated launch links after page navigation. */

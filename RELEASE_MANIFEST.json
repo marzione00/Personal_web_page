@@ -4,41 +4,43 @@
   "baseRepository": "https://github.com/marzione00/Personal_web_page",
   "baseCommit": "8964fc96b08671089cfb5d3561acb311bb994599",
   "remoteDeployment": false,
-  "version": "3.14.2",
-  "packageVersion": "3.14.2",
-  "basedOnPackage": "v3.14.1 complete geometry and copy coherence review",
-  "sourceFiles": 596,
+  "version": "3.15.0",
+  "packageVersion": "3.15.0",
+  "basedOnPackage": "v3.14.2 complete Quantum Lab release",
+  "basePackageSha256": "a50da0b8950c3dc3ebfc71b74d01be24b26a2a6ad046cc4747a6087cf530ea8e",
+  "sourceFiles": 608,
   "verification": {
-    "nodeTests": 311,
-    "nodeTestsPassed": 311,
-    "newLaunchTests": 9,
-    "htmlPages": 58,
-    "localLinks": 2594,
-    "imageReferences": 122,
+    "nodeTests": 318,
+    "nodeTestsPassed": 318,
+    "newGalaxyTests": 7,
+    "htmlPages": 60,
+    "localLinks": 2712,
+    "imageReferences": 130,
     "geometryCatalogEntries": 28,
     "versionedScenes": 32,
+    "galaxies": 2,
+    "thematicRoutes": 8,
     "launchProgressDurationMs": 5000,
     "launchDepartureMs": 5350,
     "launchFallbackMs": 5650,
-    "mainJavaScriptGzipBytes": 41488,
-    "cssGzipBytes": 19935,
-    "homeItalianGzipBytes": 11833,
+    "mainJavaScriptGzipBytes": 41514,
+    "cssGzipBytes": 22210,
+    "homeItalianGzipBytes": 11937,
     "browserSmokeChecks": [
-      "home launch, progressive terminal and segmented percentage bar",
-      "automatic navigation reaches public Quantum Lab",
-      "browser back and cancellation preserve the local page",
-      "teaching launch works after internal navigation",
-      "Escape cancels and restores focus",
-      "IT 390 px and EN 320 px embedded viewport layout and labels",
-      "English Cancel returns to the laboratory link"
+      "desktop selection of both galaxies and destination panels",
+      "native radio arrow-key selection",
+      "home portal reaches map through internal navigation",
+      "five-second terminal navigates to public GeoStat Lab spatial-statistics module M11",
+      "IT 390px and EN 320px embedded viewports: galaxy selection, separated click targets and no horizontal overflow",
+      "English launch cancellation returns to map"
     ],
-    "timingVerification": "actual browser runtime executed with a controlled clock in Node tests",
     "readmeUnchanged": true,
     "allGeometryAssetsUnchanged": true,
-    "audioUnchanged": true,
-    "rendererUnchanged": true,
+    "geometryLegendsUnchanged": true,
+    "audioAssetsUnchanged": true,
+    "sharedSoundEngineExtended": true,
+    "geometryRendererUnchanged": true,
     "workflowUnchanged": true,
-    "editorialContentUnchanged": true,
     "releaseAuditPassed": true,
     "editorialCheckPassed": true,
     "securityAuditPassed": true,
@@ -47,10 +49,24 @@
     "physicalMobileDevicesVerified": false,
     "auditoryReviewPerformed": false
   },
+  "geoStatIntegration": {
+    "url": "https://marzione00.github.io/Lab_Geo/",
+    "reviewedCommit": "863dfe1b9dca98f0b06d6af4545b995e1ae19aeb",
+    "separateRepositoryUnchanged": true
+  },
   "addedSourceFiles": [
-    "docs/QUANTUM_LAB_v3.14.2.md",
-    "docs/storico/COERENZA_v3.14.1_RELEASE_MANIFEST.json",
-    "tests/teaching-launch-runtime.test.mjs"
+    "content/galaxies.json",
+    "content/markdown/en/laboratori/geostat-lab.md",
+    "content/markdown/laboratori/geostat-lab.md",
+    "docs/GALASSIE_v3.15.0.md",
+    "docs/storico/QUANTUM_LAB_v3.14.2_RELEASE_MANIFEST.json",
+    "public/assets/labs/galaxy-geostat.svg",
+    "public/assets/labs/galaxy-quantum.svg",
+    "public/assets/labs/star-field.svg",
+    "src/galaxies.css",
+    "src/galaxies.mjs",
+    "tests/galaxies.test.mjs",
+    "tools/build-laboratory-galaxies.py"
   ],
   "removedSourceFiles": [],
   "modifiedSourceFiles": [
@@ -58,11 +74,20 @@
     "LEGGIMI_PRIMA_DI_CARICARE.md",
     "RELEASE_MANIFEST.json",
     "content/site.json",
+    "content/teaching-apps.json",
     "package.json",
-    "src/teaching-app-launch.js",
-    "src/teaching-apps.css",
+    "scripts/build.mjs",
+    "src/content.mjs",
+    "src/experience.mjs",
+    "src/render.mjs",
+    "src/search.mjs",
+    "src/security.mjs",
+    "src/sound.js",
     "src/teaching-apps.mjs",
-    "tests/identity-v33.test.mjs"
+    "tests/experience-v35.test.mjs",
+    "tests/geometry-explorer.test.mjs",
+    "tests/identity-v33.test.mjs",
+    "tests/teaching-apps.test.mjs"
   ],
   "files": {
     ".gitattributes": {
@@ -94,8 +119,8 @@
       "sha256": "7a4b2b912cb020d268a40917f3d38d427d131f6f2beb9c00721de924a286da9f"
     },
     "CHANGELOG.md": {
-      "bytes": 21611,
-      "sha256": "6d1c00b86f02f920ad98a848e5ca6eac63b7e01ddfdae8dadc1cc808f8b81085"
+      "bytes": 22269,
+      "sha256": "1962e0e5e6884a256ba45e37c40c26b6cbba63ff600a58b1059738a41e670a00"
     },
     "COME_MODIFICARE_I_TESTI.md": {
       "bytes": 11138,
@@ -110,8 +135,8 @@
       "sha256": "88e2c4406b7a0292910ce07e628be083db5c82fd10a854a98a729aaba1cff3f2"
     },
     "LEGGIMI_PRIMA_DI_CARICARE.md": {
-      "bytes": 5728,
-      "sha256": "f6323a52009c43594dd68f2bf3556fe6077475c9bb460e1ec7aab980b3ab1199"
+      "bytes": 6096,
+      "sha256": "b2dadcccae30db67668a6c311423cce2b85ce3ad9f735ba66dd6e6aa2522c73a"
     },
     "LICENSE.md": {
       "bytes": 1613,
@@ -160,6 +185,10 @@
     "content/editorial-selection.json": {
       "bytes": 618,
       "sha256": "083e3a149c4ed1c9bfaa19599cfc2a2460f2f7b2494f4c5c22900d9af7721c78"
+    },
+    "content/galaxies.json": {
+      "bytes": 2848,
+      "sha256": "303251d576b42e342598d56666bfce62c35e58cf7516963255cca2d2b0fed668"
     },
     "content/lectures/.gitkeep": {
       "bytes": 0,
@@ -429,6 +458,10 @@
       "bytes": 32280,
       "sha256": "ac665d0453ef223e9c29ff4d360e52c09a6ebbacc45fbecd8fd8936594a08ef4"
     },
+    "content/markdown/en/laboratori/geostat-lab.md": {
+      "bytes": 336,
+      "sha256": "1a6e90f1bfa19886c7dedb565a5dd3bfb18327e90a2ff1871b4b21eef2be4fec"
+    },
     "content/markdown/en/laboratori/nuovo-laboratorio.md": {
       "bytes": 142,
       "sha256": "6791e3e7561f8e55236a7f5e6eb6538aaa4622b9933f239b1299c851d226737e"
@@ -565,13 +598,13 @@
       "bytes": 1507,
       "sha256": "f80ef12798227a9b1513005adeb0975935f5f619931481e5094d66b6417a0fec"
     },
-    "content/markdown/en/viaggi.md": {
-      "bytes": 591,
-      "sha256": "d73cb0f9281ce2797f581570de58f2a537679cebb5bc15f30bad0d279925af50"
-    },
     "content/markdown/en/viaggi/.gitkeep": {
       "bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "content/markdown/en/viaggi.md": {
+      "bytes": 591,
+      "sha256": "d73cb0f9281ce2797f581570de58f2a537679cebb5bc15f30bad0d279925af50"
     },
     "content/markdown/epigrafi.md": {
       "bytes": 2336,
@@ -696,6 +729,10 @@
     "content/markdown/homepage.md": {
       "bytes": 1449,
       "sha256": "a5691652fde2190df6baeca2568d8d7633de6416fb2ed022df2c74d246292451"
+    },
+    "content/markdown/laboratori/geostat-lab.md": {
+      "bytes": 392,
+      "sha256": "cc0c56d7091189948a2a943c2ac2508bb97164e66233794aa78e6eae7b8c8628"
     },
     "content/markdown/laboratori/nuovo-laboratorio.md": {
       "bytes": 155,
@@ -829,13 +866,13 @@
       "bytes": 1683,
       "sha256": "3f63eaeb3f1ef929af8fd99cf943eabe40d90572c42faf150740701dac48ea70"
     },
-    "content/markdown/viaggi.md": {
-      "bytes": 636,
-      "sha256": "c6e35932ccdeeb6d03610971c90b3819338be253c509f7cd249961edf738019e"
-    },
     "content/markdown/viaggi/.gitkeep": {
       "bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "content/markdown/viaggi.md": {
+      "bytes": 636,
+      "sha256": "c6e35932ccdeeb6d03610971c90b3819338be253c509f7cd249961edf738019e"
     },
     "content/music-manifest-local-coordinates.json": {
       "bytes": 506,
@@ -935,7 +972,7 @@
     },
     "content/site.json": {
       "bytes": 161,
-      "sha256": "ee5a3085134b2a2e41229dc15dd47dcddd28f5bf773162aefc5956f6f5ab5a84"
+      "sha256": "517fe55a1750b866c14685dbb57259ff71ec7cdbbe611809c7f388695a0a1edf"
     },
     "content/study-guide.json": {
       "bytes": 26232,
@@ -946,8 +983,8 @@
       "sha256": "3ccae242216af282d4f58bc276b468fa3e6b3d99adea099911b8fb8a6cd2f9d8"
     },
     "content/teaching-apps.json": {
-      "bytes": 537,
-      "sha256": "fd56079ae0bbcad3114a9f7386cfbcf73c0e5a30a8ddc6de6b8329e5c6366ee8"
+      "bytes": 806,
+      "sha256": "10ce72ce8b677dfb1b46739613098e58813cb750801a30e1ea11210f4518fd86"
     },
     "content/ui.json": {
       "bytes": 6100,
@@ -1056,6 +1093,10 @@
     "docs/FOTOGRAFIE_PERSONALI.md": {
       "bytes": 1042,
       "sha256": "9b9c2ede830404aa160325f45b5318806896be82f5e78b62926c3d36fdd82f5c"
+    },
+    "docs/GALASSIE_v3.15.0.md": {
+      "bytes": 4721,
+      "sha256": "7d415ae447936b8d70b315f68c34e47614994d331307e787f66916ba0e0e298e"
     },
     "docs/GEOMETRIE.md": {
       "bytes": 5519,
@@ -1329,6 +1370,10 @@
       "bytes": 1552,
       "sha256": "64495edafcb5155c09fa6f59a9625de569ed0b413638c8e1a2a0c451bbd7e7fc"
     },
+    "docs/storico/QUANTUM_LAB_v3.14.2_RELEASE_MANIFEST.json": {
+      "bytes": 96101,
+      "sha256": "a95e10a6f186815b645e8f7321b6659d26c3445cf5b248c321230c44b259bf23"
+    },
     "docs/storico/RETICOLO_v3.11.1_RELEASE_MANIFEST.json": {
       "bytes": 83026,
       "sha256": "927cdf8a27e410a520ce8deb5065561efcd1b94f8a2090660bcbc579b5d45616"
@@ -1371,11 +1416,23 @@
     },
     "package.json": {
       "bytes": 1567,
-      "sha256": "51c85036e6aa23b30ce38331babea9cfc6c263d95b551067695e806213870757"
+      "sha256": "f3996b41f12c268e478ab86e1095015fbad882fc116daab36b4513eefea4e848"
     },
     "public/assets/geometry-viewer.js": {
       "bytes": 15259,
       "sha256": "5b942227cb42710814a2771f0b824c66976ce4876683c18ac2e4ae8af25467cd"
+    },
+    "public/assets/labs/galaxy-geostat.svg": {
+      "bytes": 136953,
+      "sha256": "e88574dc1679c41dd0d58d4a916125612f238fee56ca5d8bd2f67593dd931b16"
+    },
+    "public/assets/labs/galaxy-quantum.svg": {
+      "bytes": 133985,
+      "sha256": "d7122b8935b5fa38eaa3078ba97f6ba228e326722b8a8b26f93fc80e53853100"
+    },
+    "public/assets/labs/star-field.svg": {
+      "bytes": 16952,
+      "sha256": "2783616b7953ee74b9b9ee2db69b6ac2d77bc549cbc3b13429b9554d814ffa8b"
     },
     "public/audio/descending-fields.mp3": {
       "bytes": 5401216,
@@ -1814,8 +1871,8 @@
       "sha256": "136a9c0a4dba23bb1e0b458077335c4b8ffc841ac2761bf3ac40f84cd6fa7156"
     },
     "scripts/build.mjs": {
-      "bytes": 15129,
-      "sha256": "323b55f9d854949b4620042bd597c437ef87b32a36e6598dede2c65d8ba563c8"
+      "bytes": 14996,
+      "sha256": "3c2099715334d984feb32e48ef841cf657113a717a73ec7a80adb46e50cc860b"
     },
     "scripts/check-external-links.mjs": {
       "bytes": 1387,
@@ -2042,8 +2099,8 @@
       "sha256": "bd63e143c258b2add7d6150d7fb15ef66184ce39c477789f055074b6f5e443a9"
     },
     "src/content.mjs": {
-      "bytes": 16126,
-      "sha256": "5e47f5d1353b6ece6e06f421a97858de593f6208db007e574791ac50d3bb10a0"
+      "bytes": 16371,
+      "sha256": "edba6b29b1f827a031703ff77bcf77521205d3cc11fc59c87fa8d2eea0f7399d"
     },
     "src/cyber-network.css": {
       "bytes": 3465,
@@ -2070,8 +2127,8 @@
       "sha256": "c6952f14af9401614a74c4a17787c60a55548aac1074bb14beda56b3e2dbf06d"
     },
     "src/experience.mjs": {
-      "bytes": 6053,
-      "sha256": "41d1fb2544b0f516e46ffe1430fb3eee5656a0f95b55e776ab5ff58240c7cddf"
+      "bytes": 6331,
+      "sha256": "c1da6af2e842ea94eb02b14880f736083626bc5aa1d3df4ba1556f0b7841ba9a"
     },
     "src/experiments.css": {
       "bytes": 2149,
@@ -2084,6 +2141,14 @@
     "src/experiments.mjs": {
       "bytes": 4844,
       "sha256": "8f360fa174a64c23e67639bc207d7bd32d3f11fc20ba7706f2e3cc2f53d6773b"
+    },
+    "src/galaxies.css": {
+      "bytes": 9940,
+      "sha256": "8b7ebe277efef99a68d2b4c3f93ef6ba931790aa0dc587ee7e1fa760562a1776"
+    },
+    "src/galaxies.mjs": {
+      "bytes": 6098,
+      "sha256": "d34db1724c846ecfd497ecd1070b12cbb05000ee692a3e027fd8846a750b5c6a"
     },
     "src/geometry-loader.js": {
       "bytes": 21393,
@@ -2150,8 +2215,8 @@
       "sha256": "518fdc2282a1e2b24690270aaf606eaf1156e6485f9932349db673ab1a9096a9"
     },
     "src/render.mjs": {
-      "bytes": 49359,
-      "sha256": "ca8ff321ed36d965bb5a0a690166c1374e05c8b3f139364f5e7a64ead07534f7"
+      "bytes": 49812,
+      "sha256": "9a25295210e221d581f159bae47d4d8790ce0a49ffa31de8164632bdd6da0153"
     },
     "src/safety.mjs": {
       "bytes": 3714,
@@ -2162,12 +2227,12 @@
       "sha256": "2c588aadef41ada3710e7f70d0cb5645db7f6bebfd79617bce8f230fd563d385"
     },
     "src/search.mjs": {
-      "bytes": 4248,
-      "sha256": "10b38f08ab461333b40fcc2c546192d96a1f025ae1f20848d9b60ad67ee57946"
+      "bytes": 4431,
+      "sha256": "3c37d87c3d970770f242ddae6f117f9561c4cb9c5162b4e076c4e9f0dd5b21cf"
     },
     "src/security.mjs": {
-      "bytes": 2742,
-      "sha256": "10227395cee15027e7481d1af047d89d5b2a9d1e9d251dadf2c067838b684746"
+      "bytes": 3359,
+      "sha256": "6957fa1c2e0bfbe89e035b16ea1b9369ab2547dfebb863736a14343718f08a53"
     },
     "src/seo.mjs": {
       "bytes": 1882,
@@ -2178,8 +2243,8 @@
       "sha256": "f98948891c5436b0b4217202edcc22f708f6fd3dc59ef0964bdf243977d6aea6"
     },
     "src/sound.js": {
-      "bytes": 7452,
-      "sha256": "1c16a24c00119ca2339cb25c151de4a63b9ff5433d7c2e599a5d750e0a2b4e84"
+      "bytes": 7487,
+      "sha256": "c70b0a8583bb71865c4c9439609f5905a323b90a6f1f74433d8951834cb55af3"
     },
     "src/teaching-app-launch.js": {
       "bytes": 5527,
@@ -2190,8 +2255,8 @@
       "sha256": "1c6812bb7931623e7a2b02bce673a8d170988227d37f701ab032aa69033f986e"
     },
     "src/teaching-apps.mjs": {
-      "bytes": 9472,
-      "sha256": "5bf4fe823938975a61703ada7e7c6d1f71f3845e1ca3fce90f689e4842e6a00a"
+      "bytes": 9812,
+      "sha256": "e81c9b50b97835633bfa77bb595c7f4f715b61a873794927e320909341ba0048"
     },
     "src/travel-gallery.js": {
       "bytes": 2310,
@@ -2291,11 +2356,15 @@
     },
     "tests/experience-v35.test.mjs": {
       "bytes": 3926,
-      "sha256": "43879cf007e0f9050ec316147d27bb0bef1bd5773cce7bb2d60a0650ac65e767"
+      "sha256": "95f0d429500ccb261398e641ed1cf0e801b391a055570511d720b2e802d7821e"
+    },
+    "tests/galaxies.test.mjs": {
+      "bytes": 5186,
+      "sha256": "f27e63e5012e79bafac354905f4261fcccdf6989849c9885ac52413d69f186dc"
     },
     "tests/geometry-explorer.test.mjs": {
-      "bytes": 5629,
-      "sha256": "f2cb01c2b6b2cfc9ddb59934e825191caada5a83379b44e1336fdf13e38ebe6e"
+      "bytes": 5640,
+      "sha256": "a8d87b0e90ca477772b0e29759b3b1e59f8b2d80b5dfa46ec71105c0adb87a33"
     },
     "tests/geometry-legends.test.mjs": {
       "bytes": 3948,
@@ -2315,7 +2384,7 @@
     },
     "tests/identity-v33.test.mjs": {
       "bytes": 2836,
-      "sha256": "f6603fd3bd073dd438954d2ae4ff5fcf447946ee6ec9bbcc35bfe0b8086743f0"
+      "sha256": "d21c8fbcd824b13c11d06816e90284e6a8f954c97a0f1f49c628f9426ee924e6"
     },
     "tests/manifold-release.test.mjs": {
       "bytes": 4555,
@@ -2378,8 +2447,8 @@
       "sha256": "5cae2e1e35b2afb315f4a5e3d4d98151fdaaef20ef57ba1979dc57c72333c89e"
     },
     "tests/teaching-apps.test.mjs": {
-      "bytes": 7909,
-      "sha256": "def97a7d59a9406bd19291b90dba1a33f3bde0111e5e64a67ab4aa263796dbab"
+      "bytes": 7977,
+      "sha256": "e591d6965de191c270dfe81636318c528e9ca8a210c1f582e9cc720a5806b853"
     },
     "tests/teaching-launch-runtime.test.mjs": {
       "bytes": 7711,
@@ -2396,6 +2465,10 @@
     "tests/visual-integrity.test.mjs": {
       "bytes": 3542,
       "sha256": "cec7fe8c330bd78202e98a9ec5fd85dcf34b35fffd4d72032eb3a3ca7d67917e"
+    },
+    "tools/build-laboratory-galaxies.py": {
+      "bytes": 3321,
+      "sha256": "b12fb1c7c971b44e069427dac99d812d4221630e75bd4a821173a3b8e2b60192"
     },
     "tools/carbon_mesh.py": {
       "bytes": 1738,

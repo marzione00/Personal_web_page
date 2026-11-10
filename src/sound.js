@@ -10,7 +10,7 @@
  const slider=document.querySelector('[data-sound-volume]'),output=document.querySelector('[data-sound-volume-value]');
  const voices=new Set(),counts={link:0,page:0,enable:0,hover:0};
  const fine=matchMedia('(hover: hover) and (pointer: fine)');
- const actions='a[href],button,summary',cards='.atlas-card,.carbon-card,.course-card,.research-index-card,.travel-card,.blog-card,.portal,.path-card,.search-row';
+ const actions='a[href],button,summary,.lab-destination,[data-lab-choice]',cards='.atlas-card,.carbon-card,.course-card,.research-index-card,.travel-card,.blog-card,.portal,.path-card,.search-row';
  const excluded='[data-sound-toggle],[data-entry-audio],[data-entry-skip],[disabled],[aria-disabled="true"]';
  const action=target=>{const a=target?.closest?.(actions);return a&&!a.matches(excluded)&&!a.closest('[inert]')?a:null;};
  const hoverItem=target=>{if(target?.closest?.(excluded))return null;return target?.closest?.(cards)||action(target);};

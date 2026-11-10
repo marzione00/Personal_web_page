@@ -1,3 +1,5 @@
+import {loadGalaxies} from './galaxies.mjs';
+import {loadTeachingApps} from './teaching-apps.mjs';
 import {loadPaths} from './paths.mjs';
 import {loadStudyPaths} from './experience.mjs';
 import {loadIdentityPages} from './identity.mjs';
@@ -93,6 +95,7 @@ function additionalMarkdownPosts(root,existing){
 }
 
 export function loadContent(root,{preview=false,language='it'}={}){
+ if(!['it','en'].includes(language))throw Error('Unsupported language');
  const profile=readJson(path.join(root,'content/profile.json')),site=readJson(path.join(root,'content/site.json')),research=readJson(path.join(root,'content/research.json'));
  const travels=loadTravels(root,{preview,language});
  const travelIndex=readTravelIndex(root,language);
@@ -165,5 +168,5 @@ export function loadContent(root,{preview=false,language='it'}={}){
  const photoBytes=fs.readFileSync(path.join(root,'public',safeMedia(profile.homepagePhoto.file)));
  if(createHash('sha256').update(photoBytes).digest('hex')!==profile.homepagePhoto.sha256)throw new Error('La fotografia non corrisponde al file originale approvato.');
  for(const post of posts)if(post.geometria&&!geometry.byId[post.geometria])throw Error('Geometria articolo inesistente: '+post.geometria);
- return localiseData(root,{...loadPaths(root),studyPaths:loadStudyPaths(root),identity:loadIdentityPages(root,language),cyberNetwork:loadCyberNetwork(root,language),geometry,profile,site,research,home,epigraphs,courses,posts,lectures,publications:publications.sort((a,b)=>b.year.localeCompare(a.year)),travels,travelIndex,preview},language);
+ return localiseData(root,{teachingApps:loadTeachingApps(root,language),galaxies:loadGalaxies(root),...loadPaths(root),studyPaths:loadStudyPaths(root),identity:loadIdentityPages(root,language),cyberNetwork:loadCyberNetwork(root,language),geometry,profile,site,research,home,epigraphs,courses,posts,lectures,publications:publications.sort((a,b)=>b.year.localeCompare(a.year)),travels,travelIndex,preview},language);
 }

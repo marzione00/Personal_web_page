@@ -1,0 +1,1 @@
+GeoStat Lab lets you explore statistical methods used in Earth sciences by comparing samples, time series and spatial data as you change model assumptions and parameters. Visual representations, mathematical explanations and R code accompany each path, helping you interpret the results and reconstruct the analysis that produced them.

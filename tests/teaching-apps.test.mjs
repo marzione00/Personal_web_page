@@ -16,32 +16,32 @@ function fixture(run) {
 }
 function changed(change) { const r=registry(); change(r); return r; }
 
-test('registry has one live lab and a disabled template',()=>{
+test('registry has two live labs and a disabled template',()=>{
  const r=validateTeachingRegistry(registry());
- assert.equal(r.filter(x=>x.enabled).length,1);
+ assert.equal(r.filter(x=>x.enabled).length,2);
  assert.equal(r.find(x=>x.id==='nuovo-laboratorio').enabled,false);
 });
-test('IT and EN load one live app, with distinct editorial text',()=>{
+test('IT and EN load two live apps, with distinct editorial text',()=>{
  const it=data('it'),en=data('en');
- assert.equal(it.teachingApps.length,1); assert.equal(en.teachingApps.length,1);
+ assert.equal(it.teachingApps.length,2); assert.equal(en.teachingApps.length,2);
  assert.notEqual(it.teachingApps[0].paragraphs[0],en.teachingApps[0].paragraphs[0]);
 });
 test('disabled template never leaks into public markup or search',()=>{
  const d={language:'it',teachingApps:loadTeachingApps(root,'it',{includeDisabled:true})};
  assert.doesNotMatch(renderTeachingApps(d),/nuovo-laboratorio|Nuovo laboratorio/);
- assert.equal(teachingAppSearchEntries(d).length,1);
+ assert.equal(teachingAppSearchEntries(d).length,2);
  assert.match(renderTeachingApps(d,{previewDisabled:true}),/Modello non pubblicato/);
 });
-test('a second enabled application needs only registry and text changes',()=>fixture(dir=>{
- const r=registry();r.apps[1].enabled=true;r.apps[1].url='https://lab.example.it/';
+test('a third enabled application needs only registry and text changes',()=>fixture(dir=>{
+ const r=registry();r.apps[2].enabled=true;r.apps[2].url='https://lab.example.it/';
  fs.writeFileSync(path.join(dir,'content/teaching-apps.json'),JSON.stringify(r));
- assert.equal(loadTeachingApps(dir).length,2);
+ assert.equal(loadTeachingApps(dir).length,3);
 }));
 test('single title, section and semantic h2/h3 hierarchy',()=>{
  const html=renderTeachingApps(data('it'));
  assert.equal((html.match(/<section /g)||[]).length,1);
  assert.equal((html.match(/<h2 /g)||[]).length,1);
- assert.equal((html.match(/<h3>/g)||[]).length,1);
+ assert.equal((html.match(/<h3>/g)||[]).length,2);
  assert.equal((html.match(/id="laboratorio-quantum-lab"/g)||[]).length,1);
 });
 test('main CTA is a real same-tab link and source link is separate',()=>{
@@ -52,7 +52,7 @@ test('main CTA is a real same-tab link and source link is separate',()=>{
  assert.match(html,/rel="noopener noreferrer"/);
 });
 test('search routes to the local card rather than bypassing it',()=>{
- assert.deepEqual(teachingAppSearchEntries(data('it'))[0],{url:'didattica.html#laboratorio-quantum-lab',title:'Quantum Lab',kind:'Didattica / laboratorio'});
+ assert.deepEqual(teachingAppSearchEntries(data('it'))[0],{url:'didattica.html#laboratorio-quantum-lab',title:'Quantum Lab',kind:'Didattica / laboratorio',context:data('it').teachingApps[0].paragraphs.join(' ')});
 });
 test('English page explicitly identifies the Italian lab interface',()=>{
  const html=renderTeachingApps(data('en'));
@@ -64,7 +64,7 @@ test('no brittle activity counts or unperformed security claims',()=>{
  assert.doesNotMatch(html,/87|5\.1|ponte sicuro|verify runtime|build condivise|iframe/);
 });
 test('launch=none produces a real link without animation binding',()=>{
- const d=data('it');d.teachingApps[0].launch='none';
+ const d=data('it');d.teachingApps.forEach(a=>a.launch='none');
  assert.doesNotMatch(renderTeachingApps(d),/data-app-launch/);
 });
 test('one persistent dialog supports launch links after navigation',()=>{
@@ -87,7 +87,7 @@ test('published destinations cannot be the GitHub repository or an example domai
 });
 test('draft may have empty URLs; active application cannot',()=>{
  assert.doesNotThrow(()=>validateTeachingRegistry(registry()));
- assert.throws(()=>validateTeachingRegistry(changed(x=>x.apps[1].enabled=true)),/Laboratori:/);
+ assert.throws(()=>validateTeachingRegistry(changed(x=>x.apps[2].enabled=true)),/Laboratori:/);
 });
 test('ids cannot contain paths and must be unique',()=>{
  for(const value of ['../file','a/b','lab_1','Lab','a'.repeat(61)])

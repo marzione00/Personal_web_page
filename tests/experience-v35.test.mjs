@@ -6,7 +6,7 @@ test('the homepage prioritises paths, research and writing before personal conte
  const d=dataset(),h=renderPages(d)[0].body;
  const indexes=['home-entry','home-research','home-latest-post','home-reading'].map(c=>h.indexOf(c));
  assert.ok(indexes.every(i=>i>=0));assert.deepEqual([...indexes].sort((a,b)=>a-b),indexes);
- assert.equal((h.match(/data-app-launch /g)||[]).length,1);
+ assert.equal((h.match(/data-app-launch /g)||[]).length,2);
 });
 test('every quantum module has real activity URLs and retains its original PDF actions in both languages',()=>{
  for(const language of ['it','en']){

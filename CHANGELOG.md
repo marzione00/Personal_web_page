@@ -1,3 +1,11 @@
+# Aggiornamento 3.15.0 — 10 novembre 2026
+
+- Nuova mappa di due galassie esplorabili per Quantum Lab e GeoStat Lab, con spirali procedurali, rotazione lenta, selezione e percorsi tematici.
+- GeoStat Lab integrato nel registro dei laboratori, nella Didattica, nella ricerca locale e negli accessi dalla home.
+- Otto percorsi collegati ai moduli reali, con lo stesso terminale di cinque secondi già presente nel sito.
+- Selezione nativa da tastiera, testi IT/EN, layout mobile e rispetto delle preferenze di movimento. Suoni di selezione affidati al motore condiviso.
+- 318 test Node superati; controlli e limiti documentati in `docs/GALASSIE_v3.15.0.md`.
+
 # Aggiornamento 3.14.2 — 10 novembre 2026
 
 - Apertura di Quantum Lab estesa a cinque secondi, con barra segmentata, percentuale e scrittura progressiva delle righe.
