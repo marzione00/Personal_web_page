@@ -23,7 +23,12 @@ The torus is a parametric geometric object here. It does not automatically repre
 [SageMath — Torus](https://doc.sagemath.org/html/en/reference/riemannian_geometry/sage/geometry/riemannian_manifolds/surface3d_generators.html)
 
 ## osservazione
-Follow a curve that passes through the central opening and compare it with one travelling around the ring, rotating the surface to recognise the two periodic directions used to describe points on the torus.
+Follow the amber cycle around the ring and compare it with the pale section around the tube, using the grid to distinguish the two periodic directions even when part of the surface is hidden behind the central opening.
 
 ## lettura
 A circle of radius zero point three eight revolves around the central axis at distance one; u locates a point around the ring and v around the tube section.
+
+## legenda
+mint | surface grid
+amber | cycle around the ring
+pale | cycle around the tube

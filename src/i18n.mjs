@@ -42,7 +42,7 @@ export function localiseData(root,data,language='it'){
  apply(path.join(base,'profilo.md'),data.profile,['intro','biography','personalInterests','headline']);
  apply(path.join(base,'ricerca.md'),data.research,['title','subtitle','introduction','connectionsTitle','connections']);
  for(const area of data.research.areas)apply(path.join(base,'aree-ricerca',area.id+'.md'),area,['title','shortTitle','scope','summary','question','overview','approach','methods','activities'],['methods','activities']);
- for(const g of data.geometry.items)apply(path.join(base,'geometrie',g.id+'.md'),g,['titolo','tema','formula','spiegazione','limiti','fonti','osservazione','lettura']);
+ for(const g of data.geometry.items)apply(path.join(base,'geometrie',g.id+'.md'),g,['titolo','tema','formula','spiegazione','limiti','fonti','osservazione','lettura','legenda']);
  for(const c of data.courses)apply(path.join(base,'courses',c.id+'.md'),c,['title','summary','university','department','description','credits','hours','materialsLabel','learningPath']);
  for(const l of data.lectures)apply(path.join(base,'lectures',l.id+'.md'),l,['title','summary','topics','body'],['topics']);
  const category={Libri:'Books',Articoli:'Articles',Conferenze:'Conference contributions',Capitoli:'Book chapters'};

@@ -21,7 +21,11 @@ La formula parametrizza un nastro di Möbius. Il richiamo al movimento corporeo 
 [SageMath — Parametric surface, MoebiusStrip](https://doc.sagemath.org/html/en/reference/plot3d/sage/plot/plot3d/parametric_surface.html)
 
 ## osservazione
-Scegli un tratto del bordo e seguilo mentre ruoti il nastro, prestando attenzione alla torsione attraverso cui la superficie cambia orientamento nello spazio e alla continuità che puoi ricostruire quando le parti nascoste tornano visibili.
+Segui il bordo color ambra lungo il nastro fino a ritrovare il punto di partenza, osservando come un unico percorso attraversi entrambi i margini apparenti, mentre il reticolo rende visibile la mezza torsione della superficie.
 
 ## lettura
 Il parametro u percorre un giro completo, mentre v varia fra meno uno e uno; la larghezza, scalata di zero virgola trentacinque, ruota di mezzo giro attorno alla circonferenza centrale.
+
+## legenda
+mint | maglia della superficie
+amber | unico bordo continuo del nastro

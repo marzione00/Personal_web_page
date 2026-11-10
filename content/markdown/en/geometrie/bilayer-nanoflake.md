@@ -26,3 +26,8 @@ Rotate the model to separate the two planes visually, then switch between shifte
 
 ## lettura
 The second fragment is translated horizontally and separated vertically from the first. All drawn bonds belong to individual layers.
+
+## legenda
+mint | bonds in one fragment
+blue | bonds in the other fragment
+pale | atoms in both layers

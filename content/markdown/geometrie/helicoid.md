@@ -19,7 +19,11 @@ Una retta ruota mentre avanza lungo un asse, generando una superficie rigata. La
 [SageMath — Helicoid](https://doc.sagemath.org/html/en/reference/riemannian_geometry/sage/geometry/riemannian_manifolds/surface3d_generators.html)
 
 ## osservazione
-Seguendo il bordo della superficie mentre la ruoti, osserva come l’avanzamento lungo l’asse si accompagni a un cambiamento di orientamento, quindi confronta questa continuità con i segmenti rettilinei attraverso i quali viene costruita la forma.
+Segui i bordi color ambra e confrontali con le generatrici rettilinee del reticolo, osservando come la rotazione intorno all’asse si accompagni a una traslazione verticale nella costruzione della superficie.
 
 ## lettura
 Le prime due coordinate sono u coseno v e u seno v, mentre la quota è zero virgola ventitré v, così che la rotazione accompagna una traslazione verticale.
+
+## legenda
+mint | maglia e generatrici rettilinee
+amber | due bordi elicoidali esterni

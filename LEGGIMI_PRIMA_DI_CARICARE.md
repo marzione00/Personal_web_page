@@ -1,6 +1,6 @@
-# Pacchetto GitHub completo — Topological Manifolds v3.12.2
+# Pacchetto GitHub completo — Topological Manifolds v3.14.2
 
-La correzione dei controlli browser è descritta in `docs/CORREZIONE_BROWSER_v3.12.2.md`. Per applicare soltanto questa correzione è sufficiente sostituire `tests/browser-revision.py` e creare un nuovo commit; lo ZIP completo include anche il README professionale e tutte le geometrie animate.
+Questa versione estende a cinque secondi il terminale di apertura di Quantum Lab, con barra segmentata, percentuale e righe progressive, conservando annullamento e accesso immediato. Il rapporto è in `docs/QUANTUM_LAB_v3.14.2.md`. Sono inclusi i modelli approvati, le legende, l’audio morbido, la correzione Playwright e il README professionale delle consegne precedenti; aggiorna insieme sorgenti e risorse dello ZIP.
 
 1. Conserva una copia della repository attuale. Questo ZIP parte dal commit `8964fc96b08671089cfb5d3561acb311bb994599`; eventuali modifiche successive vanno confrontate prima di sostituire i file.
 2. Estrai lo ZIP. Nella radice trovi subito `package.json`, `README.md`, `CV.pdf`, `src/`, `content/`, `public/` e `.github/`.
@@ -12,13 +12,13 @@ La correzione dei controlli browser è descritta in `docs/CORREZIONE_BROWSER_v3.
 
 L'archivio contiene tutti i sorgenti e i materiali del portale aggiornato. La build viene generata da GitHub Actions. Quantum Lab mantiene la propria repository; SistemiLab resta escluso. Nessuna modifica è stata pubblicata automaticamente durante la preparazione dello ZIP.
 
-I controlli eseguiti sono documentati in `docs/CARBONIO_ANIMATO_v3.12.1.md` e `docs/COLLAUDO_QUANTUM_LAB.md`; il manifest della consegna è `RELEASE_MANIFEST.json`.
+I controlli di questa consegna sono documentati in `docs/QUANTUM_LAB_v3.14.2.md`; i rapporti precedenti rimangono in `docs/COERENZA_v3.14.1.md`, `docs/CARBONIO_ANIMATO_v3.12.1.md` e `docs/COLLAUDO_QUANTUM_LAB.md`. Il manifest della consegna è `RELEASE_MANIFEST.json`.
 
 Verifica inoltre ricerca per “Bloch”, pagine dei sette temi di ricerca, mappa degli argomenti nei moduli, ripresa dello studio, tre esperimenti e pausa degli effetti visivi. Le geometrie carboniose ruotano quando sono visibili; prova la pausa da Aspetto, l’apertura di una figura e il cambio di preset. Il rapporto sull’integrazione è in `docs/CARBONIO_ANIMATO_v3.12.1.md`.
 
 ## Correzione dell’errore di installazione Chromium
 
-Questa consegna include la correzione del workflow: Ubuntu 24.04, Python 3.12 e Playwright 1.56.0. Per applicare anche gli interventi della v3.12.1 occorre aggiornare l’intero contenuto dello ZIP, poiché navigazione, componenti e musica condividono la stessa build. I test del browser rimangono obbligatori prima della pubblicazione.
+Questa consegna include la correzione del workflow: Ubuntu 24.04, Python 3.12 e Playwright 1.56.0. Per applicare anche gli interventi della v3.14.2 occorre aggiornare l’intero contenuto dello ZIP, poiché navigazione, componenti e musica condividono la stessa build. I test del browser rimangono obbligatori prima della pubblicazione.
 
 Il pulsante **Re-run jobs** della vecchia esecuzione riusa la vecchia configurazione: attendere la nuova esecuzione avviata dal commit che contiene la correzione.
 

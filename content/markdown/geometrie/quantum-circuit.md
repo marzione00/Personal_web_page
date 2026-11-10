@@ -20,7 +20,12 @@ Due linee rappresentano i qubit. Una trasformazione di Hadamard sul primo, segui
 [IBM Quantum — Bits, gates, and circuits](https://quantum.cloud.ibm.com/learning/en/courses/utility-scale-quantum-computing/bits-gates-and-circuits)
 
 ## osservazione
-Individua le due linee del circuito e confronta la loro disposizione con la sequenza riportata nella formula, seguendo la trasformazione di Hadamard sul primo qubit e il collegamento della porta controllata X prima di arrivare alle forme terminali di lettura.
+Segui le due linee da sinistra a destra, riconoscendo il blocco di Hadamard sul primo qubit e il collegamento color ambra fra controllo e bersaglio della porta X, prima dei simboli terminali di lettura; la formula esplicita la sequenza delle operazioni.
 
 ## lettura
 Alla coppia di qubit nello stato zero zero si applicano Hadamard al primo qubit e identità al secondo, poi CNOT; il risultato è la somma degli stati zero zero e uno uno, divisa per radice di due.
+
+## legenda
+blue | due fili del circuito
+mint | blocco H e riquadri terminali di lettura
+amber | controllo, bersaglio X e indicatori terminali

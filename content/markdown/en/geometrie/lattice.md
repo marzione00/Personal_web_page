@@ -21,7 +21,13 @@ The model has three dimensions and finitely many points. It does not represent t
 [NIST — ML-KEM](https://www.nist.gov/publications/module-lattice-based-key-encapsulation-mechanism-standard)
 
 ## osservazione
-Identify the three highlighted vectors and follow the points arranged along their directions, rotating the figure to see how integer combinations of the same vectors describe the lattice even when the projection makes some elements overlap.
+Identify the three basis arrows and the highlighted parallelepiped, then follow the translations that generate neighbouring points, rotating the figure to separate directions that overlap in projection.
 
 ## lettura
 The lattice is the set of all combinations of the three basis vectors with integer coefficients.
+
+## legenda
+pale | lattice points
+blue | connections between neighbouring points
+mint | edges of the selected cell
+amber | three basis vectors

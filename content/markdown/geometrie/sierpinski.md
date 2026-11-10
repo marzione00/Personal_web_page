@@ -20,7 +20,11 @@ La scena mostra tre livelli di ricorsione, quindi 64 tetraedri. La dimensione in
 [Wolfram — SierpinskiMesh](https://reference.wolfram.com/language/ref/SierpinskiMesh.html)
 
 ## osservazione
-Individua i tetraedri più grandi che riesci a riconoscere e avvicina la figura per seguirne la suddivisione, osservando come i vuoti e i solidi ripetano una disposizione simile attraverso i tre livelli di ricorsione presenti nella scena.
+Segui gli spigoli luminosi dei tetraedri e confronta le aperture ai diversi livelli della costruzione, ruotando la figura per distinguere i vuoti interni dalle sovrapposizioni che una singola proiezione può produrre.
 
 ## lettura
 L’insieme è l’unione di quattro copie ottenute dimezzando la somma fra un punto e ciascun vertice; la dimensione autosimilare è logaritmo di quattro diviso logaritmo di due, uguale a due.
+
+## legenda
+mint | spigoli dei tetraedri
+dark | facce dei solidi, distinte dai vuoti

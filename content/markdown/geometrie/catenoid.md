@@ -20,7 +20,11 @@ La rotazione di una catenaria genera una superficie con un collo centrale. Il co
 [SageMath — Catenoid](https://doc.sagemath.org/html/en/reference/riemannian_geometry/sage/geometry/riemannian_manifolds/surface3d_generators.html)
 
 ## osservazione
-Ruotando la superficie fino a guardarla di lato, segui il restringimento che conduce al collo centrale e osserva come le due estremità si allarghino, confrontando l’andamento del profilo con quello delle linee che percorrono la figura nella direzione circolare.
+Confronta l’anello color ambra al collo con le sezioni più larghe e segui le curve longitudinali, ruotando la superficie per riconoscere la curvatura del profilo insieme a quella delle sezioni circolari.
 
 ## lettura
 A quota zero virgola otto v, la sezione circolare ha raggio zero virgola otto per il coseno iperbolico di v; l’angolo u percorre la circonferenza.
+
+## legenda
+mint | meridiani e sezioni circolari
+amber | circonferenza minima al collo

@@ -21,7 +21,12 @@ This is a nodal representation of Schwarz P on a finite domain, not an exact num
 [Schwarzites and periodic surfaces — original research](https://pmc.ncbi.nlm.nih.gov/articles/PMC6126744/)
 
 ## osservazione
-Rotate the surface to look through its openings and observe how repeated passages organise the regions of space, comparing the figure’s symmetry with the portions interrupted by the boundary of the represented domain.
+Compare the openings along the three directions with the illuminated sections, following how the surface joins neighbouring necks as the moving light distinguishes the near side from the interior.
 
 ## lettura
 The sum of the cosines of coordinates x, y and z equals zero.
+
+## legenda
+mint | sections at constant x and z
+blue | sections at constant y
+amber | reference section z = 0

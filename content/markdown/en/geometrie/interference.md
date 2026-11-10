@@ -22,7 +22,12 @@ The surface is a snapshot of a synthetic real-valued field. It is not a probabil
 [IBM Quantum — Superposition](https://quantum.cloud.ibm.com/learning/en/modules/quantum-mechanics/superposition-with-qiskit)
 
 ## osservazione
-Compare the peaks with the troughs and observe how their arrangement becomes clearer as you change the scene’s orientation, keeping in mind that you are examining a single configuration of the sum of two periodic contributions.
+Compare crests and troughs using the surface grid and follow the two central sections, which reveal the superposition of periodic contributions as you change viewpoint on this single field configuration.
 
 ## lettura
 The surface sums cosine of three x and cosine of three y, multiplied by zero point three four; the squared magnitude of two summed amplitudes includes their individual squared magnitudes and twice the real part of the first conjugated amplitude times the second.
+
+## legenda
+mint | grid of the resulting field
+amber | section y = 0
+pale | section x = 0

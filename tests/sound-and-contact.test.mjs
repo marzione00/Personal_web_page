@@ -37,7 +37,7 @@ test('sound module is opt-in, rate-limited, generates oscillators without extern
  assert.match(s,/new AudioClass\(\)/);
  assert.match(s,/if\(now-lastChirp<360\)return/);
  assert.match(s,/createOscillator\(/);
- assert.match(s,/keydown/);assert.doesNotMatch(s,/pointerover|pointermove/);
+ assert.match(s,/keydown/);assert.match(s,/pointerover/);assert.doesNotMatch(s,/pointermove/);
  assert.doesNotMatch(s,/fetch\(|\.mp3|\.wav|Audio\(/);
 });
 test('link-hover visual treatment is reversible, with reduced-motion and light-theme fallbacks',()=>{

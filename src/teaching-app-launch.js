@@ -1,4 +1,4 @@
-/* A short, decorative terminal transition. No commands are executed and no remote checks
+/* A five-second decorative terminal transition. No commands are executed and no remote checks
  * or preload claims are made. Real links remain usable without this enhancement. */
 (() => {
   'use strict';
@@ -10,10 +10,13 @@
   const direct = dialog.querySelector('[data-launch-direct]');
   const cancel = dialog.querySelector('[data-launch-cancel]');
   const rows = Array.from(dialog.querySelectorAll('[data-launch-line]'));
-  if (!title || !status || !destination || !direct || !cancel || rows.length !== 3) return;
+  const progress = dialog.querySelector('[data-launch-progress]'),percent = dialog.querySelector('[data-launch-percent]');
+  if (!title || !status || !destination || !direct || !cancel || !progress || !percent || rows.length !== 3) return;
+  const duration = 5000, departure = duration + 350;
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
   const en = document.documentElement.lang === 'en';
   let active = null;
+  function setProgress(value) { progress.value=value; progress.textContent=percent.textContent=value+'%'; }
 
   function cleanup(restoreFocus = true) {
     const previous = active;
@@ -37,13 +40,15 @@
   function animate(now) {
     const state = active;
     if (!state) return;
-    const elapsed = now - state.started;
+    const elapsed = Math.max(0, now - state.started);
+    const value = Math.min(100, Math.floor(elapsed / duration * 100));
+    if (progress.value !== value) setProgress(value);
     state.commands.forEach((command, i) => {
-      const progress = Math.max(0, Math.min(1, (elapsed - 150 - i * 320) / 280));
-      rows[i].textContent = command.slice(0, Math.ceil(command.length * progress));
+      const typed = Math.max(0, Math.min(1, (elapsed - 250 - i * 1550) / 950));
+      rows[i].textContent = command.slice(0, Math.ceil(command.length * typed));
     });
-    if (elapsed >= 1250) dialog.classList.add('is-opening');
-    if (elapsed >= 1500) { navigate(); return; }
+    if (elapsed >= duration) dialog.classList.add('is-opening');
+    if (elapsed >= departure) { navigate(); return; }
     state.frame = requestAnimationFrame(animate);
   }
 
@@ -68,6 +73,7 @@
     destination.textContent = url.host + url.pathname;
     direct.href = url.href;
     rows.forEach(row => { row.textContent = ''; });
+    setProgress(0);
     try { dialog.showModal(); } catch { return; } // If enhancement fails, keep native navigation.
     event.preventDefault();
     active = {url:url.href, trigger:link, started:performance.now(), frame:0, timeout:0,
@@ -75,7 +81,7 @@
     dialog.classList.add('is-running');
     direct.focus({preventScroll:true});
     // Hard upper bound independent of animation frames; cancellation always clears it.
-    active.timeout = setTimeout(navigate, 1850);
+    active.timeout = setTimeout(navigate, departure + 300);
     active.frame = requestAnimationFrame(animate);
   });
 

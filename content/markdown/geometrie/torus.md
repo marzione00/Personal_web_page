@@ -21,7 +21,12 @@ Il toro è qui un oggetto geometrico parametrico. Non rappresenta automaticament
 [SageMath — Torus](https://doc.sagemath.org/html/en/reference/riemannian_geometry/sage/geometry/riemannian_manifolds/surface3d_generators.html)
 
 ## osservazione
-Segui una curva che attraversa la cavità centrale e confrontala con una che percorre l’anello, ruotando la superficie per riconoscere le due direzioni periodiche attraverso le quali viene descritta la posizione dei punti sul toro.
+Segui il ciclo color ambra lungo l’anello e confrontalo con la sezione chiara che gira intorno al tubo, usando il reticolo per distinguere le due direzioni periodiche anche quando una parte della superficie scompare dietro la cavità centrale.
 
 ## lettura
 Una circonferenza di raggio zero virgola trentotto ruota attorno all’asse centrale a distanza uno; u individua la posizione lungo l’anello e v quella lungo la sezione del tubo.
+
+## legenda
+mint | maglia della superficie
+amber | ciclo lungo l’anello
+pale | ciclo attorno al tubo

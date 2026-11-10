@@ -1,3 +1,38 @@
+# Aggiornamento 3.14.2 — 10 novembre 2026
+
+- Apertura di Quantum Lab estesa a cinque secondi, con barra segmentata, percentuale e scrittura progressiva delle righe.
+- Codice in caduta, cursore pulsante e dissolvenza finale coordinati con il terminale esistente.
+- Conservati accesso immediato, annullamento, focus da tastiera e preferenze di movimento; rimossa la precedente animazione autonoma della barra.
+- 311 test Node superati; controlli desktop e mobile IT/EN documentati in `docs/QUANTUM_LAB_v3.14.2.md`.
+
+# Aggiornamento 3.14.1 — 10 novembre 2026
+
+- Legende IT/EN aggiunte alle 28 figure e alle 32 scene, con selezione coerente per le varianti della schwarzite.
+- Distinta la maglia triangolare dal reticolo scientifico; chiarite le indicazioni su colori, illuminazione e rotazione automatica.
+- Titoli delle finestre resi univoci e introduzioni uniformate fra atlante e pagine di contesto.
+- Corretti il conteggio obsoleto dei modelli, due descrizioni e la vista frontale di Julia.
+- Nuove aperture riportate all’inizio; audit delle finestre esteso a tutte le 58 pagine.
+- 302 test Node superati, controlli desktop/mobile e temi scuro/chiaro documentati in `docs/COERENZA_v3.14.1.md`.
+
+# Aggiornamento 3.14.0 — 10 novembre 2026
+
+- Rifatte le altre 19 geometrie dell’atlante: superfici nodali e parametriche, modelli quantistici e quantitativi, reticoli e frattali.
+- Sezioni, bordi e riferimenti matematici resi leggibili attraverso la stessa palette, il visualizzatore condiviso e l’illuminazione mobile.
+- Animazione estesa alle 27 figure solide; Julia mantiene un’apertura frontale e la rotazione manuale.
+- Guide di osservazione italiane e inglesi aggiornate, con formule e parametri scientifici conservati.
+- Caricamento delle finestre prioritario quando le anteprime occupano i quattro slot disponibili, senza superare il limite delle richieste concorrenti.
+- Eliminati i vecchi generatori delle figure sostituite; primitive e proiezioni condivise con i modelli Sicurezza/XAI.
+- 296 test Node superati; verifiche matematiche, build, audit e controlli browser desktop/mobile documentati in `docs/ATLANTE_v3.14.0.md`.
+
+# Aggiornamento 3.13.0 — 10 novembre 2026
+
+- Rifatti i quattro modelli di Sicurezza e XAI: comunità reticolari, percorsi diretti, superficie di decisione e curva nello spazio dei ritardi.
+- Rotazione contenuta e luce mobile attraverso il visualizzatore e il pool già usati dal carbonio; pausa fuori schermo, con movimento ridotto e durante l’esplorazione manuale.
+- Aggiornate le spiegazioni scientifiche italiane e inglesi, mantenendo esplicita la natura illustrativa dei modelli.
+- Accenti elettronici morbidi all’ingresso nelle schede, al clic e al cambio pagina, con volume indipendente, attivazione volontaria e limiti alle sovrapposizioni.
+- Sostituiti generatori e risorse precedenti mantenendo gli stessi identificatori, percorsi e finestre di approfondimento.
+- 284 test Node superati, build di 58 pagine, controlli visivi desktop e mobile a 390/320 pixel; suite Python ampliata per i quattro modelli.
+
 # Aggiornamento 3.12.2 — 10 novembre 2026
 
 - Sostituita l’attesa JavaScript della pulizia delle transizioni con un’asserzione sul numero degli elementi residui.

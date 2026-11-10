@@ -22,7 +22,11 @@ This is a parametric portion of a catenoid, discretised for display. The constru
 [SageMath — Catenoid](https://doc.sagemath.org/html/en/reference/riemannian_geometry/sage/geometry/riemannian_manifolds/surface3d_generators.html)
 
 ## osservazione
-Rotate the surface to view it from the side, follow its narrowing towards the central neck and observe how both ends widen, comparing the profile with the lines that travel around the figure.
+Compare the amber throat ring with the wider sections and follow the longitudinal curves, rotating the surface to see the profile curvature alongside the curvature of circular sections.
 
 ## lettura
 At height zero point eight v, the circular section has radius zero point eight times the hyperbolic cosine of v; angle u runs around the circle.
+
+## legenda
+mint | meridians and circular sections
+amber | narrowest circumference at the neck
