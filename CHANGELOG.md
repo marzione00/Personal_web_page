@@ -1,3 +1,44 @@
+# Aggiornamenti
+
+## 3.18.0 — La guerra delle false percezioni (12 novembre 2026)
+
+- Inserito integralmente il nuovo saggio fornito dall’autore, con sei capitoli e riferimenti.
+- Aggiunta la traduzione inglese completa, con titolo e sommario localizzati.
+- Articolo incluso nel blog, nella ricerca interna, nel feed RSS e nella sitemap.
+- Avviso di traduzione coerente con gli allegati effettivamente disponibili.
+- Controlli sugli articoli riferiti al loro identificativo, indipendenti dall’ordine e dalla dimensione della raccolta.
+
+## 3.17.2 — Relatori e teoria dell’informazione (12 novembre 2026)
+
+- Aggiunti relatori e correlatori ai quattro titoli di studio in IT/EN, sulla base del CV.
+- Riformulato il contributo di Nicolò Cesa-Bianchi intorno a teoria dell’apprendimento e teoria dell’informazione; computabilità mantenuta come argomento studiato.
+- Integrati gli interessi per l’informazione classica e quantistica in presentazione, biografia, CV, ricerca e scheda quantistica.
+- Aggiornata la voce degli interessi nel PDF del CV, conservandone impaginazione e contenuti rimanenti.
+
+## 3.17.1 — Revisione narrativa della biografia (11 novembre 2026)
+
+- Riscritti introduzione, formazione scientifica, insegnamento e interessi personali in IT/EN, eliminando ripetizioni e raccordi accumulati.
+- Articoli utilizzati come base tematica: rimossi titoli, descrizioni dei singoli contributi e rimandi bibliografici dai riquadri biografici.
+- Rimossi i pulsanti di approfondimento dai riquadri, insieme al relativo codice e agli stili; conservati indice, fotografie, geometria e cronologia.
+- Distinti contributi dei docenti e delle maestre, con Ashtanga, analogia matematica, citazione greca e prāṇāyāma conservati.
+
+
+## 3.17.0 — Biografia in riquadri (11 novembre 2026)
+
+- Percorso scientifico suddiviso in sei riquadri, con i testi approvati e riferimenti alle pubblicazioni pertinenti.
+- Insegnamento in una sezione propria; geometria e corpo in sei riquadri, con Vinyasa/Yin, Ashtanga, prāṇāyāma e arrampicata.
+- Ancore Markdown stabili condivise tra IT/EN; media e rimandi associati al capitolo, senza dipendere dalla posizione.
+- Unico componente e unico foglio di stile per la biografia; niente nuovi script del browser o livelli sovrapposti.
+- Citazione di Eraclito tramandata da Plutarco, con greco marcato `lang="grc"` e traduzione.
+
+
+- Riorganizzata la biografia attorno a geometria, corpo e movimento, in italiano e inglese.
+- Riunite Giada Merli, Alessandra Martin e Camilla Vigorelli nel Vinyasa; ruolo centrale di Alessandra anche nello Yin Yoga e formazione Ashtanga con Alexandra Santos.
+- Nuova apertura con fotografia originale; percorso scientifico visibile, quattro capitoli personali illustrati e indice in cinque voci.
+- Conservati cronologia, incarichi, PDF, fotografie originali e destinazioni dei collegamenti; approfondimenti accademici espandibili.
+- Impaginazione del profilo raccolta in un componente e un foglio di stile; rimosse le vecchie regole dedicate.
+- Esiti e limiti di verifica in `docs/BIOGRAFIA_v3.16.0.md`.
+
 # Aggiornamento 3.15.2 — 10 novembre 2026
 
 - Separato il caricamento del renderer dai messaggi associati alle preferenze di movimento nei test browser.

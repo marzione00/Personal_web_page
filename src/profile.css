@@ -1,0 +1,89 @@
+/* Single owner for profile layout. Cards remain readable without JS or motion. */
+.profile-hero{padding:38px 0 56px}
+.profile-hero-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(240px,.8fr);gap:70px;align-items:center}
+.profile-hero h1{font-size:clamp(54px,6.5vw,86px);line-height:1.05;margin:20px 0 24px}
+.profile-headline{font:13px/1.8 var(--mono);color:var(--green);margin-bottom:24px}
+.profile-hero .bio-prose{font-size:18px;line-height:1.85;max-width:62ch}
+.profile-roles{margin:28px 0 22px;color:var(--muted);font-size:13px;line-height:1.7}
+.profile-portrait{margin:0;max-width:350px;justify-self:end;border:1px solid var(--line);padding:12px;background:var(--panel)}
+.profile-portrait img{display:block;width:100%;height:auto;object-fit:contain;filter:none;transform:none}
+.profile-portrait figcaption{font:11px/1.7 var(--mono);color:var(--muted);padding:14px 3px 2px}
+.cv-layout{display:grid;grid-template-columns:165px minmax(0,1fr);gap:48px}
+.cv-toc{position:sticky;top:var(--header-offset);align-self:start;display:flex;flex-direction:column;gap:8px;font:12px/1.6 var(--mono);color:var(--muted)}
+.cv-toc .label{margin-bottom:10px}
+.cv-toc a{padding:12px 0;min-height:44px;border-bottom:1px solid var(--line-soft)}
+.cv-toc a span{color:var(--green);margin-right:7px}
+.cv-toc a:hover,.cv-toc a:focus-visible{color:var(--ink)}
+.profile-content{min-width:0}
+.cv-section{margin-bottom:72px;scroll-margin-top:var(--header-offset)}
+.profile-section-head{padding:25px 0 26px;border-top:1px solid var(--line)}
+.profile-section-head h2{font:400 clamp(32px,3.4vw,46px)/1.2 var(--serif);letter-spacing:-.025em;margin:14px 0}
+.profile-section-head p{max-width:62ch;color:var(--muted);line-height:1.8}
+.profile-card-index{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px;font:11px/1.5 var(--mono)}
+.profile-card-index a{display:flex;align-items:center;gap:10px;min-height:44px;padding:10px 14px;border:1px solid var(--line);background:var(--panel);color:var(--ink)}
+.profile-card-index a span{color:var(--green)}
+.profile-card-index a:hover,.profile-card-index a:focus-visible{border-color:var(--green)}
+.profile-card-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.profile-card{grid-column:1/-1;min-width:0;margin:0;padding:32px;border:1px solid var(--line);border-top:2px solid var(--green);background:var(--panel);scroll-margin-top:var(--header-offset)}
+.profile-card:target{border-color:var(--green)}
+.profile-card-compact{grid-column:auto}
+.profile-card-visual{display:grid;grid-template-columns:minmax(0,1fr) 230px;gap:30px;align-items:start}
+.profile-card-copy{min-width:0}
+.profile-card-label{display:flex;align-items:baseline;gap:12px;font:11px/1.7 var(--mono);color:var(--muted);margin:0 0 18px}
+.profile-card-label span{color:var(--green);font-size:14px}
+.profile-card h3{font:400 clamp(25px,2.4vw,32px)/1.25 var(--serif);margin:0 0 22px;letter-spacing:-.015em;text-wrap:balance}
+.profile-card .bio-prose{font-size:17px;line-height:1.85;max-width:67ch;overflow-wrap:break-word}
+.profile-card .bio-prose>p{margin:0 0 18px}
+.profile-card .bio-prose>p:last-child{margin-bottom:0}
+.profile-model-aside{min-width:0;margin-top:4px}
+.profile-model-aside>p{font:11px/1.8 var(--mono);color:var(--muted);margin-top:14px}
+.profile-quote{margin:28px 0;padding:18px 0 18px 22px;border-left:2px solid var(--green);color:var(--ink)}
+.profile-quote p{margin:0 0 12px}
+.profile-quote p[lang="grc"]{font:400 23px/1.6 var(--serif)}
+.profile-quote p:last-child{margin-bottom:0;color:var(--muted)}
+.personal-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin:30px 0}
+.personal-gallery-item{margin:0;min-width:0;border:1px solid var(--line);background:var(--panel)}
+.personal-gallery-item img{display:block;width:100%;height:auto;max-height:none;object-fit:contain;filter:none;transform:none;opacity:1}
+.personal-gallery-item figcaption{font:11px/1.7 var(--mono);padding:12px 14px;color:var(--muted)}
+.personal-section>.text-link{display:inline-flex;align-items:center;min-height:44px;margin-top:24px}
+.profile-records{border:1px solid var(--line);background:var(--panel);margin-bottom:12px;padding:0 24px}
+.profile-records>summary{padding:20px 0;font-size:17px;line-height:1.6;color:var(--ink);cursor:pointer;min-height:44px}
+.profile-records-body{padding:5px 0 25px;scroll-margin-top:var(--header-offset)}
+.profile-records-body>h3{font-size:18px;margin:26px 0 15px}
+.profile-records-body>p{margin:15px 0}
+.cv-download{display:flex;gap:18px;flex-wrap:wrap;margin:32px 0}
+@media(max-width:1100px){
+ .profile-hero-grid{gap:38px}.cv-layout{grid-template-columns:145px minmax(0,1fr);gap:30px}
+ .profile-card-visual{grid-template-columns:1fr}.profile-model-aside{max-width:320px}
+ .profile-card-visual>.personal-gallery-item{max-width:360px}
+ .profile-card-grid{grid-template-columns:1fr}.profile-card{padding:28px}
+}
+@media(max-width:800px){
+ .cv-layout{grid-template-columns:1fr;gap:28px}
+ .cv-toc{position:static;display:flex;flex-flow:row wrap;gap:4px 20px;padding-bottom:16px;border-bottom:1px solid var(--line)}
+ .cv-toc .label{display:none}.cv-toc a{font-size:11px;border:0}
+}
+@media(max-width:700px){
+ .profile-hero-grid{grid-template-columns:1fr;gap:32px}.profile-hero{padding-bottom:36px}
+ .profile-hero h1{font-size:58px}.profile-hero .bio-prose{font-size:17px}
+ .profile-portrait{width:80%;max-width:300px;justify-self:center}
+ .personal-gallery{grid-template-columns:1fr}.personal-gallery-item{width:100%;max-width:420px;justify-self:center}
+ .profile-card-grid{gap:16px}.profile-card{padding:22px 18px}
+ .profile-card .bio-prose{font-size:17px;line-height:1.8}
+ .profile-card-index{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+ .profile-card-index a{padding:10px;gap:7px}
+ .profile-card-label{font-size:10px;gap:9px}
+ .profile-quote{padding-left:14px}.profile-quote p[lang="grc"]{font-size:21px}
+ .cv-section{margin-bottom:48px}.profile-section-head{padding:22px 0 16px}
+ .profile-records{padding:0 18px}
+}
+@media print{
+ .profile-hero-grid,.cv-layout,.profile-card-grid,.profile-card-visual{display:block}
+ .cv-toc,.cv-download,.profile-model-aside,.profile-hero .actions,.profile-card-index{display:none!important}
+ .profile-portrait,.personal-gallery-item{max-width:50mm;margin:8mm 0;break-inside:avoid;background:white}
+ .profile-body,.profile-hero{background:white}.cv-section{margin:20px 0}
+ .profile-card{background:white;border:1px solid #999;padding:5mm;margin:0 0 6mm;break-inside:auto}
+ .profile-card .bio-prose,.profile-hero .bio-prose{font-size:11pt;line-height:1.55}
+ .profile-section-head h2{font-size:23pt}.profile-card h3{font-size:17pt;break-after:avoid}
+ .profile-records{background:white}.profile-records-body{padding-bottom:15px}
+}

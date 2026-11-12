@@ -6,9 +6,11 @@ import {loadContent} from '../src/content.mjs';
 import {renderPages} from '../src/render.mjs';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 test('biography covers research, teaching and dated experience',()=>{
- const bio=loadContent(root).profile.biography;
+ const profile=loadContent(root).profile,bio=profile.biography;
  assert.ok(bio.split(/\n\s*\n/).length>=7);
- for(const word of ['grafene','ransomware','Cattolica','marzo 2026','ANNPR 2026','MUSA','Uni.ON','sicurezza informatica'])assert.ok(bio.includes(word),word);
+ for(const word of ['grafene','ransomware','Cattolica','MUSA','Uni.ON','sicurezza informatica'])assert.ok(bio.includes(word),word);
+ assert.ok(profile.experience.some(x=>x.detail?.includes('marzo 2026')));
+ assert.ok(profile.talks.some(x=>x.event.includes('ANNPR 2026')));
 });
 test('public biography has no source narration or stock negated contrast',()=>{
  const p=loadContent(root).profile;

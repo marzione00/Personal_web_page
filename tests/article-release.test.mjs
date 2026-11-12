@@ -14,7 +14,7 @@ test('Original Overleaf archive and PDF have recorded checksums',()=>{
   assert.equal(sha(fs.readFileSync(path.join(root,'public/media/docs/colpire-i-nervi-del-sistema.pdf'))),manifest.pdf_sha256);
 });
 test('Article figures are present with exactly the approved bytes',()=>{
-  const article=loadContent(root).posts[0];
+  const article=loadContent(root).posts.find(p=>p.id==='colpire-i-nervi-del-sistema');
   for(let i=1;i<=7;i++){
     const file=`colpire-nervi-fig-${String(i).padStart(2,'0')}.png`;
     assert.equal(sha(fs.readFileSync(path.join(root,'public/media/images',file))),manifest.figure_sha256[file]);

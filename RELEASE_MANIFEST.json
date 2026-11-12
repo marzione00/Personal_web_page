@@ -1,62 +1,87 @@
 {
   "brand": "Topological Manifolds",
-  "date": "2026-11-10",
+  "date": "2026-11-12",
   "baseRepository": "https://github.com/marzione00/Personal_web_page",
   "baseCommit": "8964fc96b08671089cfb5d3561acb311bb994599",
   "remoteDeployment": false,
-  "version": "3.15.2",
-  "packageVersion": "3.15.2",
-  "basedOnPackage": "v3.15.1 complete CI correction release",
-  "basePackageSha256": "94cf186c355ced656b8bca64275d22cfe5f703a08459c95dd269bcce6f06513b",
-  "sourceFiles": 612,
-  "verification": {
-    "nodeTests": 318,
-    "nodeTestsPassed": 318,
-    "pythonSyntaxChecked": true,
-    "htmlPages": 60,
-    "localLinks": 2712,
-    "imageReferences": 130,
-    "geometryCatalogEntries": 28,
-    "versionedScenes": 32,
-    "mainJavaScriptGzipBytes": 41514,
-    "cssGzipBytes": 22210,
-    "homeItalianGzipBytes": 11937,
-    "browserSmokeChecks": [
-      "112 desktop catalogue openings: 28 models x IT/EN x two simulated motion preferences",
-      "16 embedded 390px targeted openings: four representative models x IT/EN x two simulated motion preferences",
-      "schwarzite presets: unique controls, selected scene and legend, close and reopen",
-      "motion preference changes while viewer is open",
-      "wire/surface legend visibility"
-    ],
-    "siteRuntimeUnchanged": true,
-    "allPublicAssetsUnchanged": true,
-    "readmeUnchanged": true,
-    "workflowUnchanged": true,
-    "releaseAuditPassed": true,
-    "editorialCheckPassed": true,
-    "securityAuditPassed": true,
-    "fullPlaywrightSuiteRunLocally": false,
-    "remoteWorkflowVerified": false,
-    "physicalMobileDevicesVerified": false,
-    "browserQaMethod": "CUA browser, production runtime with an isolated matchMedia fixture; not a full Python Playwright run",
-    "localPlaywrightBlocker": "Chromium process launch refused: socket() failed: Operation not permitted",
-    "protectedFilesCompared": 164
-  },
+  "version": "3.18.0",
+  "packageVersion": "3.18.0",
+  "basedOnPackage": "v3.17.2 academic biography and information theory release",
+  "basePackageSha256": "8b737d76b718ef04eb9f9ba6bb06b0455876f0d99f9bdc908ef5b1c78be89d14",
+  "sourceFiles": 622,
   "addedSourceFiles": [
-    "docs/CORREZIONE_CI_v3.15.2.md",
-    "docs/storico/CI_v3.15.1_RELEASE_MANIFEST.json"
+    "content/markdown/posts/la-guerra-delle-false-percezioni.md",
+    "content/markdown/en/posts/la-guerra-delle-false-percezioni.md",
+    "docs/ARTICOLO_FALSE_PERCEZIONI_v3.18.0.md"
   ],
   "removedSourceFiles": [],
   "modifiedSourceFiles": [
     "CHANGELOG.md",
     "LEGGIMI_PRIMA_DI_CARICARE.md",
+    "RELEASE_MANIFEST.json",
     "content/site.json",
+    "docs/PROVENIENZA.md",
     "package.json",
-    "tests/browser-i18n.py",
-    "tests/browser-revision.py",
-    "tests/identity-v33.test.mjs",
-    "RELEASE_MANIFEST.json"
+    "src/render.mjs",
+    "tests/article-release.test.mjs",
+    "tests/content.test.mjs"
   ],
+  "verification": {
+    "unitTests": {
+      "passed": 321,
+      "failed": 0
+    },
+    "builds": [
+      "https://marzione00.github.io/Personal_web_page/",
+      "https://www.mdctopologicalmanifolds.it/"
+    ],
+    "htmlPages": 62,
+    "localLinks": 2788,
+    "imageReferences": 132,
+    "editorialSync": "passed",
+    "resourceAndComponentAudit": {
+      "version": "3.18.0",
+      "budgets": [
+        {
+          "file": "index.html",
+          "bytes": 42810,
+          "gzip": 11965,
+          "limit": 12000
+        },
+        {
+          "file": "en/index.html",
+          "bytes": 40885,
+          "gzip": 11218,
+          "limit": 12000
+        },
+        {
+          "file": "assets/site-4fd454bfafab.css",
+          "bytes": 108589,
+          "gzip": 22902,
+          "limit": 26000
+        },
+        {
+          "file": "assets/site-7ab95a0bd1e7.js",
+          "bytes": 142623,
+          "gzip": 41514,
+          "limit": 42000
+        }
+      ],
+      "checks": [
+        "single bundle registration",
+        "one header owner",
+        "bounded layers with native modal top layer",
+        "obsolete home selectors removed",
+        "single geometry, cyber and search dialog in all 62 pages",
+        "28 catalog entries and 32 versioned scene URLs"
+      ]
+    },
+    "unchangedPublicAndCvFiles": 112,
+    "articleText": "Every source paragraph and all seven section headings verified in IT/EN HTML. Two published feed entries per language. Present in homepage, blog, search and sitemap.",
+    "browserChecks": "Desktop: homepage entry, Italian layout, chapter navigation, English switch retaining chapter, English layout without horizontal overflow.",
+    "browserTests": "Full Playwright suite not rerun; retained in GitHub CI.",
+    "remoteDeployment": false
+  },
   "files": {
     ".gitattributes": {
       "bytes": 80,
@@ -71,8 +96,8 @@
       "sha256": "5e54c7e473646e7b15345ac8dc7749922495be1cac57135cdf3cde5e4d20911f"
     },
     ".github/workflows/validate-deploy.yml": {
-      "bytes": 2998,
-      "sha256": "d1410a4e23dbc83fe73be335d16ef0dd5e1e3b950a57cb782dec18ba7a4cd1f7"
+      "bytes": 3005,
+      "sha256": "c98187f12f0e21cf31a11106652d7edf42dcf087f82f67d05eea1bd29d372da5"
     },
     ".gitignore": {
       "bytes": 337,
@@ -87,24 +112,24 @@
       "sha256": "7a4b2b912cb020d268a40917f3d38d427d131f6f2beb9c00721de924a286da9f"
     },
     "CHANGELOG.md": {
-      "bytes": 23546,
-      "sha256": "b309f2ed5ba47a22feb44299c12ee7396d66a57cdc9d2e6fdabb8d5a1d073454"
+      "bytes": 26633,
+      "sha256": "668662498a761f33d17e33b7e6ca6e230298ace5c44bb27ddd8863991db9a7ec"
     },
     "COME_MODIFICARE_I_TESTI.md": {
-      "bytes": 11138,
-      "sha256": "989a523f859d7036ee02b3cad78298057768f91c7a36306fe6d8bfeaa926144c"
+      "bytes": 12145,
+      "sha256": "c008ec20afd08d92d9f1b7c57056f142f0e675ec1ef2c6da91ea3e505b244fbc"
     },
     "CV.pdf": {
-      "bytes": 670385,
-      "sha256": "24e063b275dc3cbf8a2598c04d22f10d3254723e53652ce56130af7a42726177"
+      "bytes": 739603,
+      "sha256": "a6114158688699d1d10ff6988c49e119a0788dd679e58af5b2dcdf39d300ad40"
     },
     "FOTO_ORIGINALE_IMPORTANTE.md": {
       "bytes": 696,
       "sha256": "88e2c4406b7a0292910ce07e628be083db5c82fd10a854a98a729aaba1cff3f2"
     },
     "LEGGIMI_PRIMA_DI_CARICARE.md": {
-      "bytes": 4050,
-      "sha256": "f429a25e57ae594e6c69c8b49afd70fb63b56a346d22834e37d10f471bb57a7e"
+      "bytes": 3724,
+      "sha256": "d01fab57129c4ef29c0ef18ffdf628187a884aebb12960840eeba61d1b3c92c0"
     },
     "LICENSE.md": {
       "bytes": 1613,
@@ -195,8 +220,8 @@
       "sha256": "3738304b1dcb363e601c034e37de1eb2d7320a857f007efc8b79a632500258b2"
     },
     "content/markdown/aree-ricerca/calcolo-quantistico.md": {
-      "bytes": 1327,
-      "sha256": "9669416699a07436f4195e2a0e502f7b856f56a0b15181ac89048438758341de"
+      "bytes": 1618,
+      "sha256": "fc53097c05a7f12ad772536e66c0f4412554f6e8dfec5a08962dea4c344f92ce"
     },
     "content/markdown/aree-ricerca/cybersecurity.md": {
       "bytes": 1788,
@@ -251,8 +276,8 @@
       "sha256": "99cb9d8f718828118eb549e28382bd74eab5c461cb647c3275336f097eb23dee"
     },
     "content/markdown/en/aree-ricerca/calcolo-quantistico.md": {
-      "bytes": 1166,
-      "sha256": "0557a5c6d5a54a12a8541bc7fdc55f53aad668c5df98ebdb7638c1a5cada39fb"
+      "bytes": 1387,
+      "sha256": "0aad4f92d3c618952b12391942eec5e65cdedcc4e0c69f47880901e8baf62abe"
     },
     "content/markdown/en/aree-ricerca/cybersecurity.md": {
       "bytes": 1514,
@@ -419,8 +444,8 @@
       "sha256": "c10215310f204bc41e5b61c8312b6f6b0db5d59c55099ac12b8b24030c6441af"
     },
     "content/markdown/en/homepage.md": {
-      "bytes": 1308,
-      "sha256": "1cb94dcce4494544bff7541e0332d918699444db2cc9e718662ee0bac0175b4a"
+      "bytes": 1393,
+      "sha256": "f1225bbbb8d9ee5829d3ac69204a99b36dbe92b770de14c02d2911f60609a6c9"
     },
     "content/markdown/en/interfaccia.md": {
       "bytes": 32280,
@@ -486,13 +511,17 @@
       "bytes": 35101,
       "sha256": "5ac538bde98fefd276f44841992c0170fd26e9094770acb38a3147dbc72148d6"
     },
+    "content/markdown/en/posts/la-guerra-delle-false-percezioni.md": {
+      "bytes": 19329,
+      "sha256": "27e46f3db04abeccd2e76361f2c2759b24f27e4837184160b13a832e273e94e1"
+    },
     "content/markdown/en/profilo-dati.md": {
-      "bytes": 6835,
-      "sha256": "9476443b71e3b79c32fa98a404bfad703e9b3983e0ea4f9e57024840b2c79ec7"
+      "bytes": 7209,
+      "sha256": "7a555a8d0c1360638935e47fd5d9d5fb33c44fd93b8155ab9a759a305deea7a5"
     },
     "content/markdown/en/profilo.md": {
-      "bytes": 6062,
-      "sha256": "3805fbb27a1af0fe3ac4ea6ca7ac53f8268c61f032f6a31752657a743bd6a6ce"
+      "bytes": 9879,
+      "sha256": "c74e976bf1fc3da417eb011dbebd4762a7466bf1cf11b96de0713fe389207901"
     },
     "content/markdown/en/publications/pub-01.md": {
       "bytes": 1154,
@@ -563,8 +592,8 @@
       "sha256": "d3b0ae5b8dba1d64752a7b12a25e077d09ddd04da2805cb2f020903f777d4ca9"
     },
     "content/markdown/en/ricerca.md": {
-      "bytes": 1507,
-      "sha256": "f80ef12798227a9b1513005adeb0975935f5f619931481e5094d66b6417a0fec"
+      "bytes": 1701,
+      "sha256": "2b09221a73e7e7328ac2e5248d4610397ba06015d16142e4cd4432be5e3b6fe4"
     },
     "content/markdown/en/viaggi.md": {
       "bytes": 591,
@@ -695,8 +724,8 @@
       "sha256": "a1a41bf11083562e21719d41576c06537633e1b35a2b8c952d23c5768dbf6876"
     },
     "content/markdown/homepage.md": {
-      "bytes": 1449,
-      "sha256": "a5691652fde2190df6baeca2568d8d7633de6416fb2ed022df2c74d246292451"
+      "bytes": 1567,
+      "sha256": "e2feb16c3868a86b0aef9026b73e97e269b3cb8bbacd16a9f6de1ccada0b7a18"
     },
     "content/markdown/laboratori/geostat-lab.md": {
       "bytes": 392,
@@ -758,9 +787,13 @@
       "bytes": 40005,
       "sha256": "ee7200da5ac25c4bb4f44702b4b783050bded2f20699347e6e5bbe282f6cbac2"
     },
+    "content/markdown/posts/la-guerra-delle-false-percezioni.md": {
+      "bytes": 21857,
+      "sha256": "ad6ec7c8e2a485cac8abf7bdb0e62f905e7f7ad7c382bad3339969bc4358271c"
+    },
     "content/markdown/profilo.md": {
-      "bytes": 6868,
-      "sha256": "6295c87bcce54191f8d334e4ed4299970d87b6061527fabdd87f8b185574398e"
+      "bytes": 10886,
+      "sha256": "49de1ae2251189d00e18ce7dd2ea06333cece08d0833c673756a3f7c1638b7bf"
     },
     "content/markdown/publications/pub-01.md": {
       "bytes": 1263,
@@ -831,8 +864,8 @@
       "sha256": "51bb9fb33f5a8b1190a2c2b8aada9eab1c42c6c05e6a82b1afa2f82df304af39"
     },
     "content/markdown/ricerca.md": {
-      "bytes": 1683,
-      "sha256": "3f63eaeb3f1ef929af8fd99cf943eabe40d90572c42faf150740701dac48ea70"
+      "bytes": 1898,
+      "sha256": "85cd8294d612f0f5e6eb4d9c0e26ac46e17b9d73feb744783d4bbafd72629979"
     },
     "content/markdown/viaggi.md": {
       "bytes": 636,
@@ -859,8 +892,8 @@
       "sha256": "4738c7a4728c0e9971f6a6402100760b38753d99347b5200a81dcac06e947caf"
     },
     "content/profile.json": {
-      "bytes": 16504,
-      "sha256": "1eeda0c18a40f08d8ceabfc88491325d60e2cce3fe0d41001c8e43e02b1b8d49"
+      "bytes": 20945,
+      "sha256": "15cdd97a49b85829915630c3f355174daf20ef16493ec194b8518f5be89d26d9"
     },
     "content/publications/pub-01.json": {
       "bytes": 1547,
@@ -931,8 +964,8 @@
       "sha256": "3695ce2c01087674cd6a52f398835ef176e383bc7c71b8b3a461542741f19a13"
     },
     "content/research.json": {
-      "bytes": 13599,
-      "sha256": "caaa47df99bc83d40799cef16b6d0d40e44114f2fff20b5d63d5d50e99e52234"
+      "bytes": 14114,
+      "sha256": "f5c87675c3430440475546155cb72ee06aea33556441a273c654d291922b1f23"
     },
     "content/responsive-images.json": {
       "bytes": 758,
@@ -940,7 +973,7 @@
     },
     "content/site.json": {
       "bytes": 161,
-      "sha256": "200b9d36420628b29d2d278c286fe17ff796f9d30a6aa9fd8ccb363a72d6c022"
+      "sha256": "aa86939912645dde77cffbe22dab1830fd1bbfe32f719bee23c058b0bfd113c2"
     },
     "content/study-guide.json": {
       "bytes": 26232,
@@ -962,6 +995,10 @@
       "bytes": 4717,
       "sha256": "c65fe46bc9a34c20eb5ed3d3263f58ed30dc501e0ce32913c6bc5fe5204db72d"
     },
+    "docs/ARTICOLO_FALSE_PERCEZIONI_v3.18.0.md": {
+      "bytes": 2861,
+      "sha256": "b072f45982cd7264ef72479c31174028a1325af5344ba5538089d2adda59ff57"
+    },
     "docs/ARTICOLO_PRIMO_BLOG.md": {
       "bytes": 879,
       "sha256": "d22ba2f24da4879f98eba8de1886cfc12c2a032a066c592c8ff0e598b588cc29"
@@ -975,12 +1012,28 @@
       "sha256": "1b2dcc6a37298b34a9a2cb3ec27786e8672342f41fe0f791147ae753782f0cab"
     },
     "docs/BILINGUE_IT_EN.md": {
-      "bytes": 6304,
-      "sha256": "e228c83a05cd7868df60ffe3ec91306fe66388579032f073d70d6d7f1f3e0c00"
+      "bytes": 6344,
+      "sha256": "f6799d8c160b9001c86933b8e86c8179b27983afd7fed85179f2e4790bdebde0"
     },
     "docs/BIOGRAFIA.md": {
-      "bytes": 6704,
-      "sha256": "4703d0df66bd112f1174d8368d1487e9f96fba337316b14206450a5ec8cb4bc1"
+      "bytes": 10741,
+      "sha256": "a29db7830612d06972541fc8653c7e61d81e44c48901ebd15042d49593fdeb2a"
+    },
+    "docs/BIOGRAFIA_v3.16.0.md": {
+      "bytes": 3842,
+      "sha256": "e3a632965ad7795db686d29beb9f386f6d6d849378ff9563a5dd244c3f65c4c5"
+    },
+    "docs/BIOGRAFIA_v3.17.0.md": {
+      "bytes": 2649,
+      "sha256": "ac4f6b34132db064ed5a4a8927b6709e6b061cb2382db1c110992f50edae7055"
+    },
+    "docs/BIOGRAFIA_v3.17.1.md": {
+      "bytes": 2656,
+      "sha256": "4bc482e84dd36f14d8aab634ccaca195c2bd708b2f24be114aa8627dcb719425"
+    },
+    "docs/BIOGRAFIA_v3.17.2.md": {
+      "bytes": 3371,
+      "sha256": "23ef416dc1c628a266824862211cb34ecafa91784fcaac7178ae1ff31fc5afbc"
     },
     "docs/CARBONIO_ANIMATO_v3.12.1.md": {
       "bytes": 3838,
@@ -1119,8 +1172,8 @@
       "sha256": "65c2c9006f1b80d6baa9c071ca5f2542f599d75bad62a0e6a4a058dea440f3ca"
     },
     "docs/NOTE_EDITORIALI.md": {
-      "bytes": 6147,
-      "sha256": "f1d7ef127c3af0593c10eecc5c73a1342a584f895040e7d2dce5b9be437a3690"
+      "bytes": 6039,
+      "sha256": "5c05a2790278eee30ba7c53a18a91fc30fa9bee51b716675d24dfd2efc7c1adc"
     },
     "docs/PERIODICITA_v3.11.2.md": {
       "bytes": 2619,
@@ -1131,8 +1184,8 @@
       "sha256": "fe73a0fc7e5f419b42f9753c8676c25b76773f3a5dbeeba6ea2de927fb3b1ed3"
     },
     "docs/PROVENIENZA.md": {
-      "bytes": 3269,
-      "sha256": "b5875570af76c1ef7290e8e9c1f67f208a2caee48d0639ade9b8fc3b01fb5d31"
+      "bytes": 7072,
+      "sha256": "482a37cabb33b41968e33e455ca85c7ad72c8e2a999facf3e2b7eaf8d64fed62"
     },
     "docs/PUBBLICAZIONE.md": {
       "bytes": 2668,
@@ -1163,12 +1216,12 @@
       "sha256": "f0a88434bd6694ea834832c6687dda0f642b1b4881ce901ef5864bf07508b325"
     },
     "docs/RICERCA.md": {
-      "bytes": 9371,
-      "sha256": "27c439ae1181816ab6b74ae0295139349ff7e4fdcb1681262bc33224ae32e4fc"
+      "bytes": 9791,
+      "sha256": "83ef38f7c3f08cb8996766f1767b69dca045b3457d6c79f3dffa011328e8d3fa"
     },
     "docs/RIPRESA_E_MANUTENZIONE.md": {
-      "bytes": 3248,
-      "sha256": "de5150ef385ee5c9c3bd95cef978da2785ed8e5435d81e5c66d3469e654122b4"
+      "bytes": 3298,
+      "sha256": "588a6054218aee6360879d13d5ceb7c63d9e0a41e244b5114edb01c54a44f5e2"
     },
     "docs/SCHWARZITE_v3.11.md": {
       "bytes": 4039,
@@ -1400,7 +1453,7 @@
     },
     "package.json": {
       "bytes": 1567,
-      "sha256": "0be7529284ee96437cb73a7a656bd5a0e25d1862721162e963a3e6422c60298a"
+      "sha256": "a80bf8f505687b2a5d359ac1e0d85c327c2baee1ab0efdd869512f363cecb0df"
     },
     "public/assets/geometry-viewer.js": {
       "bytes": 15259,
@@ -1671,8 +1724,8 @@
       "sha256": "30c29bda7a3beae9ca7a7350c7c420a3e90c1ac2674e290b766ab68ac34b43a0"
     },
     "public/media/docs/CV_Marzio_De_Corato.pdf": {
-      "bytes": 670385,
-      "sha256": "24e063b275dc3cbf8a2598c04d22f10d3254723e53652ce56130af7a42726177"
+      "bytes": 739603,
+      "sha256": "a6114158688699d1d10ff6988c49e119a0788dd679e58af5b2dcdf39d300ad40"
     },
     "public/media/docs/Modulo_01/Modulo_01.pdf": {
       "bytes": 3225552,
@@ -1855,8 +1908,8 @@
       "sha256": "136a9c0a4dba23bb1e0b458077335c4b8ffc841ac2761bf3ac40f84cd6fa7156"
     },
     "scripts/build.mjs": {
-      "bytes": 14996,
-      "sha256": "3c2099715334d984feb32e48ef841cf657113a717a73ec7a80adb46e50cc860b"
+      "bytes": 15010,
+      "sha256": "7a63c23295300799d1fbdaf7e51f659720e649c1f90412c509b370619c737fe3"
     },
     "scripts/check-external-links.mjs": {
       "bytes": 1387,
@@ -1895,8 +1948,8 @@
       "sha256": "4d9f4a3025685c75cfd43d882d6f230a744807d3ac7c7a8f934f30f52c876372"
     },
     "scripts/sync-editorial.mjs": {
-      "bytes": 1270,
-      "sha256": "94ee43291894e806dd042a525ab56dd34b0458faff0f21c1d16edaedf1e52c79"
+      "bytes": 1272,
+      "sha256": "38001e7084d6cc02ea471e7148feb1beb657c89212b602fa2d80f22200310bb5"
     },
     "scripts/verify-photos.mjs": {
       "bytes": 881,
@@ -2194,13 +2247,21 @@
       "bytes": 4659,
       "sha256": "6bf04de49f864eec1d1be88274ed838916575a1d8f8b747c2353ebf202307fef"
     },
+    "src/profile.css": {
+      "bytes": 6754,
+      "sha256": "5c95034f367382857b3ce4592822c42c63e42a401a29456058cacf8ce59315c1"
+    },
+    "src/profile.mjs": {
+      "bytes": 11107,
+      "sha256": "b06df8daccdaef43385c4931b5c2c48540af30f04618277a4557a1fa6cd19443"
+    },
     "src/reading.js": {
       "bytes": 3343,
       "sha256": "518fdc2282a1e2b24690270aaf606eaf1156e6485f9932349db673ab1a9096a9"
     },
     "src/render.mjs": {
-      "bytes": 49812,
-      "sha256": "9a25295210e221d581f159bae47d4d8790ce0a49ffa31de8164632bdd6da0153"
+      "bytes": 45270,
+      "sha256": "d58856ae399ad1ea3d56b03834a7831006dc20e18b72d4712c9d89d32afb09ea"
     },
     "src/safety.mjs": {
       "bytes": 3714,
@@ -2223,8 +2284,8 @@
       "sha256": "b1cf2746c4df356acc5d4db5a3a021ae3ced3da799548b6b94d02a268f8ce122"
     },
     "src/site.css": {
-      "bytes": 32790,
-      "sha256": "f98948891c5436b0b4217202edcc22f708f6fd3dc59ef0964bdf243977d6aea6"
+      "bytes": 30802,
+      "sha256": "de5724530a96a2f15d33750bc87091a4e07634e2e8492630c14abf8e66e7e740"
     },
     "src/sound.js": {
       "bytes": 7487,
@@ -2251,8 +2312,8 @@
       "sha256": "d7b715d31be20ed626e602900dd10419e51d1737fcee8a8961dea1f99657c19d"
     },
     "src/visual.css": {
-      "bytes": 17574,
-      "sha256": "e13358f84acc78416b2a62a6eb3afc0f9eb989c53deb8447b50f9df2da78b487"
+      "bytes": 16800,
+      "sha256": "19fb6dc6dd82481606761f04462a5e77b58f87df24ad0480d6bbe6ab4583d588"
     },
     "tests/ambient-effects.test.mjs": {
       "bytes": 4550,
@@ -2263,20 +2324,20 @@
       "sha256": "331c4c493bb2f7a41fb6bbe2e3a73d6fda435746fb6fde24ffb105a79332a726"
     },
     "tests/article-release.test.mjs": {
-      "bytes": 1716,
-      "sha256": "4b7c3193bfe8e31de1346007ff1d7095945402919d3d41672a75186af2ddb4b3"
+      "bytes": 1759,
+      "sha256": "b89a8605f568d4a2cdd8c4f213b1e6ec7559c772fbcf505d08a9791e53e6f285"
     },
     "tests/atlas-models.test.mjs": {
       "bytes": 5119,
       "sha256": "b84d06bc80759b4ff83c062dd11eecb97112c791b5c899e2588d70ccedcfc801"
     },
     "tests/biography-revision-v011.test.mjs": {
-      "bytes": 1537,
-      "sha256": "1ea178b02c3f2d7c764b724a71f760313c1b20eb81148994d0400b588364d7ad"
+      "bytes": 1564,
+      "sha256": "3ffa3d54abab695c99f94746177d3fd1fbf148488bb9b909d7aaecd26905ec86"
     },
     "tests/biography.test.mjs": {
-      "bytes": 2005,
-      "sha256": "907df593c131e2aa5de31c2350f2e4b0ca800daad3e51d4357848f0ce5ae1d2f"
+      "bytes": 2136,
+      "sha256": "96a917c9d25c54121c613245e9981f917c377f07812fb59fb65e1dd8ed0c2934"
     },
     "tests/browser-ambient-webgl.py": {
       "bytes": 1915,
@@ -2323,8 +2384,8 @@
       "sha256": "2561808460767b50b8c9df6fbf07fbcdd958a7ac39365626007f70aa8952a9a2"
     },
     "tests/content.test.mjs": {
-      "bytes": 4621,
-      "sha256": "9f5341d9f3570d63c106b18eac35ecb98f583d9ac7b598bc696b4e507febfca4"
+      "bytes": 4690,
+      "sha256": "e1323f7f356a7b0666839e9dd00d9408d08f1c9a524506b0fe310aae67ce5f77"
     },
     "tests/cyber-network.test.mjs": {
       "bytes": 3679,
@@ -2367,16 +2428,16 @@
       "sha256": "042edef6d4442d2c9b608e388d39b73e12c0eabe353de621b89cfd7d6c7e76db"
     },
     "tests/identity-v33.test.mjs": {
-      "bytes": 2836,
-      "sha256": "e6c4466ef720d228591559206e2086da745d9d467f6377d76facd984ddf28ec9"
+      "bytes": 2849,
+      "sha256": "7e15348b52401239659151b3e5ce044c0ca0dc99d866762d19282532d026991b"
     },
     "tests/manifold-release.test.mjs": {
       "bytes": 4555,
       "sha256": "058c567eb0b24e94506e916858ee952a657d936f7839dbbcfa8d7ec58b3157e7"
     },
     "tests/markdown-workflow.test.mjs": {
-      "bytes": 3912,
-      "sha256": "f3574cf7d5461657bb93d1c7606fd1f7b6ba15fa85bd1ab960cd80d58a626042"
+      "bytes": 3940,
+      "sha256": "3956d864db3ac495db7d3f7e6cb709a9bf66eed49ce51856d8a88ee98ef77f59"
     },
     "tests/matrix-fullscreen.test.mjs": {
       "bytes": 5726,
@@ -2387,20 +2448,24 @@
       "sha256": "011f5cb5cd9aaf917a612cc3b644a525acea1ae8f70d959326a19651000a95bc"
     },
     "tests/personal-interests.test.mjs": {
-      "bytes": 1810,
-      "sha256": "eedc1b33dbeed3bcbe0513a18c0541ccaf0c7907eae1613b2a68901f8f0d0fa9"
+      "bytes": 2314,
+      "sha256": "d2d2fbb59bb8fb29e69dde117baafca68b82cb1a9c3dcbe3deb3adca2edc3a4d"
     },
     "tests/personal-photos.test.mjs": {
       "bytes": 1516,
       "sha256": "ffbffb29921d8e8838ceb54fd5f11b83129ea462baa3ea558fa36d7e4e656c83"
     },
+    "tests/profile-cards.test.mjs": {
+      "bytes": 2428,
+      "sha256": "ff18cca3205c72508ab5cf6ae72148b1da5bfc9f9e9b959e9e5b805e3f18c097"
+    },
     "tests/publications-and-teaching.test.mjs": {
-      "bytes": 6036,
-      "sha256": "cb8e1eae71fab908c9d939d9d7058afa3c946f5aeb573ee5f1c3f26f7bcf4f7d"
+      "bytes": 6011,
+      "sha256": "c66d70f9b320603e64e40a76c80eaca06a6c0b5e9f6ef72e66a1b29b2fb5cd67"
     },
     "tests/research-structure.test.mjs": {
-      "bytes": 3277,
-      "sha256": "f3045118f9019bb1259f155dcc4710cf0f9d3c2a9103db40555acbb3ee2d6aeb"
+      "bytes": 3432,
+      "sha256": "1479602798a760342aa796be2735afe7f4e242f23b243e005d09b32f255f2c65"
     },
     "tests/research.test.mjs": {
       "bytes": 3571,

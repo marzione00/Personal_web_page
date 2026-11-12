@@ -2,7 +2,7 @@
 
 Riconoscere un comportamento malevolo nelle tracce di un programma, comprendere quali variabili orientino la risposta di un classificatore e collegare la geometria di una nanostruttura alle sue proprietà fisiche sono problemi che, pur appartenendo ad ambiti differenti, richiedono di esaminare come vengono costruiti i dati e quali ipotesi consentano di interpretarli.
 
-Le schede raccolgono gli studi sulla sicurezza informatica, sull’intelligenza artificiale spiegabile e sulla fisica computazionale, ai quali si affiancano le esperienze nell’analisi delle serie temporali e nei metodi quantitativi, mentre il calcolo quantistico e l’architettura dei sistemi sono presentati attraverso gli interessi scientifici e le attività didattiche che ne accompagnano l’approfondimento.
+Le schede raccolgono gli studi sulla sicurezza informatica, sull’intelligenza artificiale spiegabile e sulla fisica computazionale, ai quali si affiancano le esperienze nell’analisi delle serie temporali e nei metodi quantitativi, mentre la teoria dell’informazione classica e quantistica, il calcolo quantistico e l’architettura dei sistemi trovano spazio negli interessi scientifici e nelle attività didattiche. In questo quadro mi interessa comprendere come l’informazione venga rappresentata, trasmessa ed elaborata, mettendo in relazione i limiti dei modelli con le proprietà dei sistemi fisici che li realizzano.
 
 ## Intelligenza artificiale spiegabile e modelli probabilistici
 
@@ -78,7 +78,7 @@ Poiché una previsione corretta può dipendere da regolarità del campione, da r
 
 La verifica riguarda la costruzione dei campioni, la robustezza delle relazioni apprese e il confronto con ipotesi formulate indipendentemente dai dati impiegati per addestrare un modello. La questione è stata discussa anche nei lavori sul rapporto fra interpretabilità degli algoritmi e leggi fisiche, e nelle analisi delle spiegazioni prodotte da classificatori differenti.
 
-## Calcolo quantistico, ottimizzazione e apprendimento automatico
+## Informazione quantistica, calcolo e apprendimento automatico
 
 Interessi scientifici e didattica
 
@@ -86,7 +86,7 @@ Interessi scientifici e didattica
 
 Lo studio del calcolo quantistico comprende algoritmi, complessità e applicazioni alla crittografia, che nei materiali dell’insegnamento di Quantum e post-quantum computing dell’Università degli Studi di Milano, per l’anno accademico 2026/2027, vengono affrontati a partire da qubit, circuiti e interferenza, fino agli algoritmi di Deutsch–Jozsa, Bernstein–Vazirani, Simon, Shor e Grover e ai protocolli di comunicazione quantistica.
 
-L’interesse per l’ottimizzazione e per le applicazioni all’apprendimento automatico si collega alla didattica degli algoritmi quantistici. I sette moduli disponibili affrontano i fondamenti matematici, gli schemi circuitali e le conseguenze computazionali degli algoritmi studiati.
+Alla didattica degli algoritmi affianco l’interesse per la teoria dell’informazione classica e quantistica, che mi porta a interrogarmi sul ruolo dell’entropia, sulla rappresentazione degli stati e sulle possibilità della comunicazione. Queste domande accompagnano anche lo studio dell’ottimizzazione e delle applicazioni all’apprendimento automatico; i sette moduli disponibili ne accompagnano l’approfondimento attraverso fondamenti matematici, circuiti e protocolli quantistici.
 
 ## Architettura dei sistemi e progettazione didattica
 

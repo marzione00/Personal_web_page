@@ -26,7 +26,7 @@ jobs:
           package-manager-cache: false
       - name: Check build boundaries
         run: node scripts/security-audit.mjs
-      - name: Import the author-supplied CV unchanged
+      - name: Import the approved CV without further changes
         run: node scripts/import-cv.mjs
       - name: Unit tests
         run: node --test tests/*.test.mjs

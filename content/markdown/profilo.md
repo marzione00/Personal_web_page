@@ -1,39 +1,82 @@
 # Biografia, sintesi e interessi personali
 
-<!-- Modifica il testo sotto ciascun titolo ##. Conserva i nomi delle sezioni. -->
+<!-- Modifica il testo sotto ciascun titolo ##. Conserva le ancore {#...} dei capitoli. -->
 
 ## intro
-La mia attività si è sviluppata dalla fisica computazionale all’analisi dei dati e all’intelligenza artificiale spiegabile, attraverso un percorso nel quale lo studio delle nanostrutture, l’osservazione delle tracce prodotte dai programmi e l’insegnamento mi hanno condotto a interrogare le condizioni che rendono un modello utile alla comprensione di un fenomeno.
+La mia formazione unisce fisica, statistica e informatica, attraverso un percorso nel quale l’interesse per le forme si è esteso ai dati, agli algoritmi e alla teoria dell’informazione, classica e quantistica. Alla ricerca e all’insegnamento affianco lo yoga e l’arrampicata, dove la geometria diventa un’esperienza del corpo.
 
 ## biography
-Insegno Informatica come docente a contratto all’Università degli Studi di Milano, nell’ambito di Matematica I e Informatica per Scienze Geologiche, e Advanced Calculus and Stochastic Processes all’Università Cattolica del Sacro Cuore, mentre nell’anno accademico 2026/2027 partecipo alle attività didattiche di Quantum e post-quantum computing presso il Dipartimento di Informatica dell’ateneo milanese.
+### Fisica, geometria e gusto estetico {#fisica-geometria}
 
-La mia formazione è iniziata all’Università degli Studi di Milano-Bicocca, dove ho conseguito la laurea triennale in Fisica nel 2009 e la magistrale, con lode, nel 2012; è proseguita all’Università degli Studi di Modena e Reggio Emilia, con il dottorato in Physics and Nanosciences ottenuto nel 2016 discutendo una tesi sulle proprietà vibrazionali e ottiche delle nanostrutture di grafene, e si è ampliata con la laurea magistrale in Data Science and Economics, conseguita con lode all’Università degli Studi di Milano nel 2022.
+Ho studiato Fisica all’Università degli Studi di Milano-Bicocca, dove ho svolto le tesi triennale e magistrale sotto la guida del professor Giorgio Benedek, affiancato nella magistrale dal professor Marco Bernasconi e dal dottor Ottorino Ori come correlatori. Dallo studio della dinamica e della termodinamica delle schwarziti, strutture di carbonio a curvatura negativa, sono arrivato a interrogarmi sul rapporto fra la disposizione dei legami atomici e le proprietà della materia, avvicinandomi alla topologia come strumento per comprendere la stabilità e le vibrazioni di questi reticoli.
 
-Nei primi lavori, ai quali appartiene il periodo di ricerca presso CNR–NANO fra il 2012 e il 2013, ho studiato nanonastri e nanoframmenti di grafene, schwarziti e altri sistemi a base di carbonio, ricorrendo a calcoli ab initio e descrizioni topologiche per comprendere come la configurazione dei legami si rifletta sulle proprietà elettroniche, ottiche e vibrazionali; i contributi di questa fase sono apparsi, fra le altre sedi, su Nano Letters, Journal of the American Chemical Society e Nanoscale.
+Benedek mi ha trasmesso un gusto estetico per le discipline scientifiche che ha segnato profondamente il mio modo di guardarle: nelle nanostrutture di carbonio, l’eleganza delle forme diventava un invito a studiarne le ragioni fisiche, mentre una simmetria o una curvatura suggerivano relazioni da esplorare attraverso la matematica. Da quell’esperienza nasce un interesse per la geometria che continua ad accompagnarmi anche oltre la ricerca.
 
-Dopo l’esperienza nel settore optoelettronico presso Hamamatsu Photonics Italia, dal 2016 al 2019, mi sono occupato di serie temporali relative alla pandemia di COVID-19 e, nel progetto Data Science 4Citizens, di dati climatici, avvicinandomi a questioni di previsione e di valutazione dei modelli che hanno accompagnato il successivo passaggio allo studio delle tracce generate dall’esecuzione dei programmi.
+### Il dottorato: leggere la materia {#dottorato}
 
-Nelle ricerche sulla sicurezza informatica analizzo contatori hardware, chiamate alle librerie ed entropia campionaria, attraverso i quali è possibile descrivere comportamenti del software da esaminare mediante modelli grafici probabilistici; nello studio dei classificatori, la scelta delle variabili e delle rappresentazioni dei dati si collega alla domanda su quanto le spiegazioni dipendano dal fenomeno osservato e quanto dalle regolarità introdotte dal processo di raccolta e codifica.
+Il dottorato in Fisica e Nanoscienze all’Università degli Studi di Modena e Reggio Emilia mi ha permesso di approfondire le proprietà ottiche e vibrazionali delle nanostrutture di grafene, sotto la supervisione della professoressa Alice Ruini, con la dottoressa Deborah Prezzi come correlatrice, alla cui pazienza e cura devo molto della mia maturazione come ricercatore.
 
-Il rapporto fra capacità predittiva e valore esplicativo, che ho approfondito anche attraverso le questioni epistemologiche dell’analisi dei dati, è stato al centro della relazione invitata a IFCS 2026, mentre il contributo presentato ad ANNPR 2026 affronta lo shortcut learning e i bias induttivi nella classificazione multi-view delle tracce comportamentali; a questo percorso appartiene inoltre il lavoro sulla rilevazione di ransomware pubblicato nel 2025 in Applied Stochastic Models in Business and Industry.
+Studiare come una variazione nella forma, nei bordi o nell’accostamento di queste strutture ne modifichi le vibrazioni e la risposta alla luce ha reso più concreto il legame fra descrizione geometrica e comportamento della materia. Nel confronto con loro ho potuto sviluppare questa ricerca con il tempo e l’attenzione necessari a comprenderne le difficoltà, trovando nel rapporto umano un sostegno essenziale al lavoro scientifico.
 
-Al Dipartimento di Informatica «Giovanni Degli Antoni» dell’Università degli Studi di Milano ho svolto un assegno di ricerca dal novembre 2022 al 2025 e un incarico di ricerca dall’aprile 2025 al marzo 2026, ricoprendo inoltre, fra settembre 2023 e il 2025, il ruolo di rappresentante dei ricercatori post-dottorato; le collaborazioni comprendono il progetto MUSA — Multilayered Urban Sustainability Action e i volumi La Cybersecurity negli enti locali e L’Intelligenza Artificiale negli enti locali, pubblicati da Milano University Press rispettivamente nel 2024 e nel 2025.
+### Statistica e analisi dei dati {#statistica}
 
-All’insegnamento affianco un’esperienza di collaborazione nei corsi di statistica, matematica, metodi matematici per la finanza, Fisica generale e Meccanica quantistica, alla quale si aggiungono la partecipazione al progetto formativo Uni.ON e la correlazione di tesi su sicurezza informatica, intelligenza artificiale spiegabile e analisi del linguaggio, attraverso cui il confronto con problemi e domande degli studenti entra nel lavoro di ricerca.
+Dopo l’esperienza professionale nel settore optoelettronico, ho conseguito una seconda laurea magistrale in Data Science and Economics all’Università degli Studi di Milano, sotto la supervisione della professoressa Silvia Salini. La sua guida mi ha trasmesso la passione per la statistica e per l’analisi dei dati, orientandomi verso le domande che precedono la scelta di un metodo: come si raccolgono le osservazioni, quali ipotesi sostengono un’inferenza e quanto possiamo fidarci di una conclusione. Ho dedicato la tesi ai fondamenti epistemologici dell’analisi dei dati, facendo dialogare questa formazione con quella fisica.
+
+### Apprendimento e teoria dell’informazione {#fondamenti-ia}
+
+Nello stesso percorso, il professor Nicolò Cesa-Bianchi, correlatore della tesi insieme al professor Alfio Ferrara, mi ha accompagnato nello studio dei fondamenti statistici e algoritmici del machine learning, aiutandomi a comprendere quali ipotesi rendano possibile apprendere dai dati e quali garanzie si possano formulare sulla capacità di generalizzare oltre gli esempi osservati. La teoria dell’informazione ha arricchito questa prospettiva attraverso lo studio dell’entropia, della codifica e dei limiti della trasmissione; con lui ho affrontato anche la computabilità e la macchina di Turing, entro una riflessione più ampia sui fondamenti del calcolo.
+
+Da questo intreccio fra fisica, statistica e apprendimento nasce il mio interesse per la teoria dell’informazione classica e quantistica, nella quale ritrovo domande su come si rappresenti la conoscenza, come si misuri l’incertezza e quali possibilità di elaborazione e comunicazione dipendano dalla natura fisica dei sistemi. È un ambito che continuo ad approfondire, cercando di comprendere tanto le relazioni fra le due descrizioni quanto ciò che rende specifica l’informazione quantistica.
+
+### Interpretabilità e pensiero umanistico {#interpretabilita}
+
+L’incontro con il professor Alfio Ferrara ha ampliato questa riflessione verso la componente umanistica dell’intelligenza artificiale, ponendo al centro il significato della conoscenza prodotta dai sistemi e la responsabilità del loro impiego. Da lui ho ricevuto un impulso decisivo ad approfondire l’interpretabilità, perché poter esaminare come un modello giunga a una conclusione permette di discuterne le ragioni, riconoscerne i limiti e valutarne il rapporto con il problema al quale viene applicato.
+
+### Comprendere e proteggere i sistemi {#sicurezza-sistemi}
+
+Nel percorso di ricerca post-dottorale all’Università degli Studi di Milano, il professor Danilo Bruschi mi ha introdotto ai fondamenti della sicurezza informatica e dell’architettura dei sistemi, insegnandomi, e continuando a insegnarmi, quanto sia necessario comprenderne il funzionamento per riconoscere le condizioni che li rendono vulnerabili.
+
+Mi sono così dedicato allo studio del comportamento dei programmi e delle tracce della loro esecuzione, cercando di distinguere le attività malevole, come quelle dei ransomware, attraverso modelli dei quali fosse possibile esaminare il ragionamento. La sicurezza ha dato una destinazione concreta all’interesse per l’interpretabilità maturato negli studi precedenti, richiedendo di mettere in relazione i risultati dell’analisi con ciò che accade effettivamente nel sistema. In questo periodo ho partecipato anche al progetto MUSA.
+
+### Ricerca e insegnamento {#didattica}
+
+Insegno Informatica come docente a contratto all’Università degli Studi di Milano, nell’ambito di Matematica I e Informatica per Scienze Geologiche, e Advanced Calculus and Stochastic Processes all’Università Cattolica del Sacro Cuore; nell’anno accademico 2026/2027 partecipo inoltre alle attività didattiche di Quantum e post-quantum computing presso il Dipartimento di Informatica dell’ateneo milanese.
+
+Nell’insegnamento, nelle collaborazioni didattiche, nella correlazione delle tesi e nell’esperienza di Uni.ON, le domande degli studenti mi portano a tornare sui passaggi che tendo a considerare acquisiti, cercando una spiegazione che renda comprensibili le idee e il percorso attraverso cui si costruiscono.
 
 ## personalInterests
-Quando ripeto una sequenza di yoga, osservo come il respiro, la distribuzione del peso e l’attenzione modifichino l’esperienza di una postura che, pur conservando una forma riconoscibile, può suscitare timore, impazienza, fiducia o soddisfazione, rendendo percepibile la distanza fra ciò che mi aspetto dal corpo e quanto accade durante la pratica.
+### Le forme prendono corpo {#geometria-vissuta}
 
-Ho iniziato con Giada Merli, che mi ha introdotto al Vinyasa Krama, e ho proseguito un percorso nel quale Alessandra Martin ha avuto e continua ad avere un ruolo formativo decisivo; con lei ho seguito, nel 2026, un Teacher Training di 60 ore sul corpo yogico e sul sequenziamento delle pratiche, approfondendo il rapporto fra organizzazione del movimento ed esperienza corporea.
+Negli asana ritrovo la geometria nella sua realizzazione materiale, perché una forma prende consistenza attraverso gli appoggi, la distribuzione del peso e le relazioni fra le parti del corpo. Una linea, un angolo o una curva diventano qualcosa che posso conoscere dall’interno, sentendo come una variazione del gesto modifichi l’equilibrio dell’insieme. È questa possibilità di costruire le forme e di abitarle che alimenta il mio interesse per lo yoga.
 
-Con Alexandra Santos ho intrapreso lo studio dell’Ashtanga Vinyasa, che continuo a praticare apprezzando la precisione con cui mi ha fatto conoscere una disciplina fondata sul respiro e sulla ripetizione delle sequenze, mentre attraverso le lezioni di Camilla Vigorelli proseguo la formazione nel Vinyasa; a queste esperienze affianco lo Yin Yoga, nel quale la durata delle posture invita a osservare più a lungo il mutare delle sensazioni.
+### Il percorso nel Vinyasa {#percorso-vinyasa}
 
-L’arrampicata indoor, che ho imparato con Luca Pani, richiede di scegliere gli appigli e distribuire il peso mentre si valuta un passaggio, così che il movimento immaginato debba trovare una misura nelle possibilità concrete del corpo; nell’escursionismo in montagna, una relazione analoga si costruisce attraverso il terreno, le condizioni ambientali e il ritmo del cammino.
+Giada Merli mi ha introdotto al Vinyasa Krama, accompagnando i primi passi nella pratica. Con Alessandra Martin, che con grande pazienza e attenzione mi ha seguito e continua ad accompagnarmi, ho scoperto negli anni la molteplicità degli asana, attraverso un apprendimento che ha trasformato il rapporto con il mio corpo. Il suo insegnamento ha un ruolo centrale tanto nel Vinyasa quanto nello Yin Yoga, dove il tempo trascorso negli asana permette di accorgersi delle sensazioni e del loro mutare; con lei ho seguito, nel 2026, un Teacher Training di 60 ore sul corpo yogico e sul sequenziamento delle pratiche.
 
-Nell’attenzione alle emozioni e alle aspettative riconosco il significato personale della deidentificazione, intesa come esercizio attraverso cui distinguere gli stati che attraversano l’esperienza dall’immagine stabile che si tende a costruire di sé, mentre le forme incontrate nello yoga e nell’arrampicata rinnovano il mio interesse per i rapporti fra geometria, osservazione e interpretazione.
+Camilla Vigorelli ha arricchito questo percorso nel Vinyasa attraverso l’attenzione alle geometrie e al valore simbolico degli asana, aiutandomi a cogliere come la costruzione di una figura possa esprimere anche un’immagine e un significato. Con lei, lo studio delle direzioni, degli appoggi e delle proporzioni diventa un modo per entrare più a fondo nella forma che il corpo realizza.
 
-Questo confronto accompagna la mia riflessione epistemologica, poiché rende sensibile il ruolo delle attese nel giudizio, pur appartenendo a un’esperienza personale il cui significato va tenuto distinto dalla verifica scientifica, che richiede ipotesi esplicite, procedure condivisibili e riscontri indipendenti.
+### Ashtanga: disciplina e apprendimento {#disciplina-ashtanga}
+
+Con Alexandra Santos ho intrapreso lo studio dell’Ashtanga Vinyasa, che continuo a praticare riconoscendo nella sua disciplina un’affinità con lo studio della matematica: tornare sugli esercizi e dedicare tempo ai passaggi difficili permette di comprendere gradualmente relazioni che inizialmente sfuggono. La sua guida mi ha insegnato il valore di questa costanza, attraverso una pratica nella quale asana, respiro e direzione dello sguardo richiedono un’attenzione continua, che si educa insieme al gesto.
+
+La ripetizione della sequenza mi richiama il pensiero di Eraclito tramandato da Plutarco:
+
+> ποταμῷ γὰρ οὐκ ἔστιν ἐμβῆναι δὶς τῷ αὐτῷ.
+> Non è infatti possibile immergersi due volte nello stesso fiume.
+
+L’ordine degli asana offre un riferimento stabile, mentre il corpo e la comprensione cambiano, rendendo ogni ritorno alla pratica un’occasione per riconoscere ciò che l’esercizio ha trasformato.
+
+### Il respiro e la consapevolezza {#pranayama}
+
+Con tutte le mie maestre ho approfondito anche le pratiche di prāṇāyāma, che mi hanno reso più consapevole delle infinite particolarità del corpo umano: nel prestare attenzione al respiro ho cominciato a distinguere variazioni e sensazioni che prima attraversavano l’esperienza senza che riuscissi a riconoscerle.
+
+### Appigli, equilibri e traiettorie {#appigli-equilibri}
+
+Nell’arrampicata indoor, che ho imparato con Luca Pani, la disposizione degli appigli invita a cercare un movimento possibile fra punti di contatto differenti, valutando dove portare il peso e come preparare il passaggio successivo. Nell’escursionismo in montagna, la lettura del terreno e il ritmo del cammino prolungano questo rapporto con lo spazio, attraverso un’attenzione che si adatta alle caratteristiche del percorso.
+
+### Attenzione e interpretazione {#attenzione-interpretazione}
+
+L’attenzione alle emozioni e alle aspettative mi aiuta a distinguere ciò che provo dall’immagine stabile che tendo a costruire di me, un esercizio al quale associo il significato personale della deidentificazione. Osservare quanto le attese possano orientare la percezione alimenta anche la mia curiosità per il giudizio e l’interpretazione; considero queste esperienze occasioni di riflessione personale, la cui natura resta distinta dalla verifica scientifica, fondata su ipotesi esplicite, procedure condivisibili e riscontri indipendenti.
 
 ## headline
-Cybersecurity · Explainable AI · Quantum Computing · Finanza quantitativa
+Fisica computazionale · Dati · Geometria e corpo

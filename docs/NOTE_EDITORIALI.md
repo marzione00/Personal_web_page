@@ -6,7 +6,7 @@ Criteri raccolti durante le revisioni del 7–8 novembre 2026; stato del sito ag
 
 Le docenze a contratto di Informatica in UniMI e di Advanced Calculus and Stochastic Processes in Cattolica sono presentate al presente sulla base della conferma diretta dell’autore in questa conversazione. Le annualità pregresse restano nell’archivio; sono presenti le schede 2026/2027. L’attività in Quantum e post-quantum computing è inserita per l’anno accademico 2026/2027, secondo l’indicazione dell’autore. La pagina istituzionale distingue il responsabile dell’insegnamento, Danilo Bruschi, dal contributo didattico dell’autore. L’incarico di ricerca aprile 2025–marzo 2026 conserva le date originali.
 
-Il CV originale di sette pagine è stato fornito dall’autore e dovrà essere aggiunto come `CV.pdf` nella radice del repository prima della pubblicazione. La vecchia rielaborazione PDF della v0.2 non viene distribuita né presentata come curriculum aggiornato. La pagina Profilo mantiene le attività didattiche riportate nei Markdown; non viene dedotto che il PDF originale contenga tutte le informazioni aggiunte in seguito.
+Il CV di otto pagine è incluso come `CV.pdf`. La v3.17.2 aggiorna, su richiesta dell’autore, la voce sulla teoria dell’informazione nella prima pagina; le altre parti restano invariate. Il sito mantiene le attività didattiche aggiornate nei Markdown, senza presumere che il PDF recepisca tutte le integrazioni web.
 
 ## Yoga, montagna ed epistemologia
 

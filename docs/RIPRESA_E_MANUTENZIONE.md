@@ -15,7 +15,7 @@ Questa è l’unica base corrente del progetto. Conservare una copia dello ZIP, 
 
 Per correggere una frase, modifica il Markdown e conferma il commit su GitHub. Per un articolo o un viaggio nuovo, usa i rispettivi esempi in `examples/`. I PDF e i file media richiedono un caricamento separato. Non sostituire immagini approvate con immagini generate; le cinque fotografie originali sono protette da hash.
 
-Il CV originale è già incluso come `CV.pdf`; la build ne verifica l’identità e lo copia senza ricodificarlo nella cartella pubblica.
+Il CV approvato, con la voce sugli interessi aggiornata nella v3.17.2, è incluso come `CV.pdf`; la build ne verifica l’identità e lo copia senza ricodificarlo nella cartella pubblica.
 
 ## Collaudo
 

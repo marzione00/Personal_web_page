@@ -1,7 +1,7 @@
 # Topological Manifolds v3.7 — aggiornare i contenuti
 
-## CV originale
-Il PDF originale è già incluso come `CV.pdf` nella radice del repository. L'importatore incluso lo copia senza ricodificarlo e aggiorna il collegamento IT/EN. In futuro sostituisci quel PDF e conferma il commit.
+## Curriculum PDF
+Il PDF approvato, aggiornato nella v3.17.2 negli interessi di teoria dell’informazione, è incluso come `CV.pdf` nella radice del repository. L'importatore incluso lo copia senza ricodificarlo e aggiorna il collegamento IT/EN. In futuro sostituisci quel PDF e conferma il commit.
 
 ## Testi modificati nella v3.7
 
@@ -112,7 +112,7 @@ L’MP3 è in `public/audio/`; il manifest ne verifica l’integrità. La modifi
 
 ## Biografia, citazioni e corso quantistico
 
-Nel profilo, `## intro` appare subito nella sezione Biografia; `## biography` fornisce il testo del percorso completo espandibile. I paragrafi devono essere separati da una riga vuota.
+Nel profilo, `## intro` appare nell’apertura accanto alla fotografia; `## biography` e `## personalInterests` sono sempre leggibili. I titoli `###` suddividono il racconto in capitoli e devono essere separati dai paragrafi con una riga vuota. I titoli usano ancore stabili, per esempio `### Fisica, geometria e gusto estetico {#fisica-geometria}`: conservare la parte `{#...}` quando si rinomina o si sposta un capitolo. Le ancore devono essere identiche in IT ed EN e uniche nella pagina. Fotografie e modello sono associati alle ancore, indipendentemente dall’ordine. I riquadri biografici sono narrativi: mantenere i riferimenti ai singoli articoli nella pagina Ricerca, evitando rimandi bibliografici nel racconto. Un nuovo capitolo senza configurazione specifica viene reso come riquadro di testo; `> ` introduce una citazione. La sezione `{#didattica}` è collocata sotto Insegnamento. La cronologia accademica è espandibile e i collegamenti diretti aprono automaticamente la sezione richiesta. Aggiornare anche `content/markdown/en/profilo.md` e sincronizzare `docs/BIOGRAFIA.md` con `npm run sync:editorial`.
 
 In `epigrafi.md`, conserva la citazione nelle righe che iniziano con `>` e la fonte dopo `Fonte:`; scrivi il commento personale dopo `Nota:`, fuori dalle righe citate. Il commento rimane visibile mentre il lettore sceglie se aprire il passo integrale.
 

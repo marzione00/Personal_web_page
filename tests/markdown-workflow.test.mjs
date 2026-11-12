@@ -18,7 +18,7 @@ function fixture(fn){
 function page(data,filename){return renderPages(data).find(p=>p.file===filename)?.body||'';}
 test('approved home wording and three complete epigraphs remain on the appropriate pages',()=>{
  const data=loadContent(root),home=page(data,'index.html');
- for(const phrase of ['Cybersecurity · Explainable AI · Quantum Computing · Finanza quantitativa','proprietà elettroniche, ottiche e vibrazionali','yoga e nell’arrampicata','Platone','Wheeler','Engel'])assert.ok(['index.html','cv.html','manifold.html'].some(f=>page(data,f).includes(phrase)),phrase);
+ for(const phrase of ['Cybersecurity · Explainable AI · Teoria dell’informazione · Quantum Computing · Finanza quantitativa','proprietà ottiche e vibrazionali delle nanostrutture di grafene','yoga e','Platone','Wheeler','Engel'])assert.ok(['index.html','cv.html','manifold.html'].some(f=>page(data,f).includes(phrase)),phrase);
  assert.equal((page(data,'manifold.html').match(/class="epigraph-card"/g)||[]).length,3);
  assert.equal((home.match(/class="epigraph-card"/g)||[]).length,0);
  assert.doesNotMatch(home,/Fisica computazionale\.<br>Intelligenza artificiale spiegabile|in prospettiva sociale|altresì|motivo geometrico/i);

@@ -13,7 +13,7 @@ test('course and personal chronology remain coherent after revision',()=>{
  assert.match(person,/arrampicata indoor, che ho imparato con Luca Pani/);
  assert.doesNotMatch(person,/teacher training.{0,70}2025|Nel 2025 ha (?:seguito|frequentato) un Teacher Training/i);
  for(const name of ['Giada Merli','Alessandra Martin','Alexandra Santos','Camilla Vigorelli','Luca Pani'])assert.equal(person.split(name).length-1,1,name);
- assert.match(p.biography,/marzo 2026/);
+ assert.ok(p.experience.some(x=>x.detail?.includes('marzo 2026')));
  assert.match(p.biography,/Quantum e post-quantum computing/);
  assert.match(p.biography,/progetto MUSA/);
 });

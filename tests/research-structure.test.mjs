@@ -22,16 +22,18 @@ test('outdated didactics notice is gone and PDF modules remain',()=>{
  assert.match(html['didattica.html'],/sette moduli/);
  assert.equal((html['corso-quantum-post-quantum-computing-2026-2027.html'].match(/aria-label="Scarica PDF:/g)||[]).length,7);
 });
-test('CV introduction is separate from the long biography',()=>{
- assert.match(html['cv.html'],/Cybersecurity · Explainable AI · Quantum Computing · Finanza quantitativa/);
+test('CV presents the biography openly with a geometry and body introduction',()=>{
+ assert.match(html['cv.html'],/Fisica computazionale · Dati · Geometria e corpo/);
  assert.ok(html['cv.html'].includes('<p>'+content.profile.intro+'</p>'));
- assert.match(html['cv.html'],/class="bio-full"><summary>Leggi il percorso completo/);
+ assert.doesNotMatch(html['cv.html'],/class="bio-full"/);
+ assert.match(html['cv.html'],/<h3 id="titolo-fisica-geometria">Fisica, geometria e gusto estetico<\/h3>/);
+ assert.match(html['cv.html'],/<h3 id="titolo-statistica">Statistica e analisi dei dati<\/h3>/);
  assert.match(content.profile.personalInterests,/deidentificazione/);
 });
 test('selected editorial boilerplate is absent from public fields',()=>{
  const p=content.profile,r=content.research;
  const fields=[p.intro,p.biography,p.personalInterests,r.introduction,r.connections,...r.areas.flatMap(a=>[a.summary,a.question,a.overview,a.approach]),...content.publications.flatMap(x=>[x.plainTitle,x.plainSummary,x.explanation].filter(Boolean))].join(' ');
- assert.doesNotMatch(fields,/in questa prospettiva|a questi temi si aggiungono|costituisce un interesse|si accompagna|non solo|non soltanto|nel panorama|in questo contesto|trova spazio/i);
+ assert.doesNotMatch(fields,/in questa prospettiva|a questi temi si aggiungono|costituisce un interesse|non solo|non soltanto|nel panorama|in questo contesto|trova spazio/i);
 });
 test('no stale presentation copy and no old release number in current data',()=>{
  assert.equal(JSON.parse(fs.readFileSync(path.join(root,'package.json'))).version,content.site.version.split('.').length===2?content.site.version+'.0':content.site.version);

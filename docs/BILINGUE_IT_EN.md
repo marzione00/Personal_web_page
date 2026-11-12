@@ -58,7 +58,7 @@ Per il saggio già presente, titolo e riassunto sono nel file `post-details` ing
 
 Sono tradotti presentazione, biografia, cronologie, testi didattici, descrizioni delle pubblicazioni, saggio, interfaccia, ricerca locale e spiegazioni dei 24 modelli. I titoli bibliografici dei lavori restano quelli originali; gli autori, i DOI e le informazioni editoriali non sono inventati né modificati per la traduzione. Le tre epigrafi sono identiche ai passi approvati, già in inglese; cambia soltanto l'attribuzione quando necessario.
 
-Le fotografie, i PDF delle lezioni, il PDF del saggio, il PDF del curriculum e i diagrammi originali rimangono byte per byte invariati. I loro testi interni non vengono tradotti. Nell'inglese del sito, i corsi e il saggio lo dichiarano; i diagrammi hanno descrizioni e didascalie inglesi esterne all'immagine. Il PDF originale del CV viene importato senza alterazioni dal file CV.pdf, che deve essere aggiunto prima della pubblicazione. La pagina profilo rimane aggiornata nei rispettivi Markdown.
+Le fotografie, i PDF delle lezioni, il PDF del saggio e i diagrammi originali rimangono byte per byte invariati. I loro testi interni non vengono tradotti. Nell'inglese del sito, i corsi e il saggio lo dichiarano; i diagrammi hanno descrizioni e didascalie inglesi esterne all'immagine. Il CV, in inglese, include l’aggiornamento autorizzato della voce sulla teoria dell’informazione nella v3.17.2; viene importato senza ulteriori alterazioni dal file CV.pdf già incluso. La pagina profilo rimane aggiornata nei rispettivi Markdown.
 
 La traduzione del saggio conserva argomenti e riferimenti della fonte. Non costituisce una nuova verifica delle affermazioni storiche o delle fonti citate.
 

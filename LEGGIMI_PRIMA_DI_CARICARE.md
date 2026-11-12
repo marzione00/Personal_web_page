@@ -1,10 +1,10 @@
-# Pacchetto GitHub completo — Topological Manifolds v3.15.2
+# Pacchetto GitHub completo — Topological Manifolds v3.18.0
 
-Questa versione corregge la causa dell'errore `Locator expected to contain text Trascina`: la suite richiedeva il messaggio della modalità animata in un contesto che aveva attivato il movimento ridotto. Il caricamento del modello ora viene verificato attraverso canvas, renderer e geometria effettivamente caricata; testi, pulsanti e preferenze sono controllati separatamente. Il percorso ridotto copre tutte le 28 figure in italiano e inglese a 1440 e 390 pixel. Restano incluse le correzioni CSP e dei selettori dei preset della schwarzite.
+La nuova versione aggiunge al blog «La guerra delle false percezioni», con il testo italiano integrale fornito dall’autore e la traduzione inglese. Comprende gli aggiornamenti della biografia e del CV della v3.17.2. L’articolo entra in indice, ricerca, feed e sitemap; non richiede librerie o configurazioni aggiuntive.
 
-Se la repository contiene già la v3.15.1 completa, sostituire `tests/browser-revision.py` per aggiornare il controllo obbligatorio di GitHub Actions; aggiornare anche `tests/browser-i18n.py` per mantenere coerente il controllo bilingue aggiuntivo. Per riallineare versione, manifest e documentazione, usare l'intero contenuto dello ZIP. Creare un nuovo commit: **Re-run jobs su una vecchia esecuzione riutilizza il vecchio codice**.
+Usare l’intero contenuto dello ZIP per riallineare sorgenti, contenuti, stili e documentazione. Restano incluse tutte le correzioni dei test browser della versione 3.15.2. Creare un nuovo commit: **Re-run jobs su una vecchia esecuzione riutilizza il vecchio codice**.
 
-Il rapporto della revisione, con verifiche effettuate e limiti, è `docs/CORREZIONE_CI_v3.15.2.md`. I rapporti delle versioni precedenti restano come documentazione storica. Nessuna modifica è stata pubblicata automaticamente su GitHub.
+Il rapporto corrente è `docs/ARTICOLO_FALSE_PERCEZIONI_v3.18.0.md`; `docs/CORREZIONE_CI_v3.15.2.md` documenta la precedente revisione della CI. Nessuna modifica è stata pubblicata automaticamente su GitHub. La suite browser completa e il workflow remoto restano da eseguire sul nuovo commit.
 
 ## Correzione dell’errore di installazione Chromium
 

@@ -18,6 +18,12 @@ test('all five teachers are credited once in the public biography',()=>{
  assert.doesNotMatch(p,/Teacher Training[^\n]*2025|Nel 2025 ha seguito un Teacher Training/i);
  assert.match(p,/arrampicata indoor, che ho imparato con Luca Pani/s);
  assert.match(p,/Camilla Vigorelli/s);
+ const vinyasa=p.split('### Il percorso nel Vinyasa')[1].split('### Ashtanga:')[0];
+ for(const name of ['Alessandra Martin','Camilla Vigorelli'])assert.ok(vinyasa.includes(name));
+ assert.match(vinyasa,/Alessandra Martin[\s\S]*continua ad accompagnarmi[\s\S]*ruolo centrale/);
+ assert.match(vinyasa,/tanto nel Vinyasa quanto nello Yin Yoga/);
+ assert.ok(!vinyasa.includes('Alexandra Santos'));
+ assert.match(p.split(/\n\s*\n/).find(paragraph=>paragraph.includes('Alexandra Santos')),/Ashtanga Vinyasa/);
  assert.match(p,/procedure condivisibili e riscontri indipendenti/);
  assert.doesNotMatch(p,/non solo|non soltanto|non.{0,100},? ma\b|nel curriculum|ha dimostrato che lo yoga/i);
 });

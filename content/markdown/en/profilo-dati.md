@@ -6,6 +6,7 @@
 - Cybersecurity: threat, malware and ransomware analysis
 - Artificial intelligence and Explainable AI (XAI)
 - Statistical models, data analysis and probabilistic methods
+- Classical and quantum information theory: entropy, coding and communication
 - Quantum computing and algorithms
 - Mathematical modelling for finance
 - Systems architecture and educational design
@@ -45,7 +46,7 @@ M.Sc. in Data Science and Economics
 University of Milan
 
 ## education_0_detail
-Thesis: Epistemological foundations of data analysis: A combined study through statistics, computer science and physics. Final grade: 110/110 with honours.
+Thesis: Epistemological foundations of data analysis: A combined study through statistics, computer science and physics. Supervisor: Prof. Silvia Salini. Co-supervisors: Prof. Nicolò Cesa-Bianchi and Prof. Alfio Ferrara. Final grade: 110/110 with honours.
 
 ## education_1_date
 January 2013 – December 2016
@@ -57,7 +58,7 @@ Ph.D. in Physics and Nanoscience
 University of Modena and Reggio Emilia
 
 ## education_1_detail
-Thesis: Vibrational and optical fingerprints in graphene-based nanostructures.
+Thesis: Vibrational and optical fingerprints in graphene-based nanostructures. Supervisor: Prof. Alice Ruini. Co-supervisor: Dr Deborah Prezzi.
 
 ## education_2_date
 November 2009 – March 2012
@@ -69,7 +70,7 @@ M.Sc. in Physics
 University of Milano-Bicocca
 
 ## education_2_detail
-Thesis: Topological versus physical and chemical properties of carbon nanostructures. Final grade: 110/110 with honours.
+Thesis: Topological versus physical and chemical properties of carbon nanostructures. Supervisor: Prof. Giorgio Benedek. Co-supervisors: Prof. Marco Bernasconi and Dr Ottorino Ori. Final grade: 110/110 with honours.
 
 ## education_3_date
 October 2005 – July 2009
@@ -81,7 +82,7 @@ B.Sc. in Physics
 University of Milano-Bicocca
 
 ## education_3_detail
-Thesis: Dynamics and thermodynamics of carbon schwarzites.
+Thesis: Dynamics and thermodynamics of carbon schwarzites. Supervisor: Prof. Giorgio Benedek.
 
 ## experience_0_title
 Research appointment (Postdoc)

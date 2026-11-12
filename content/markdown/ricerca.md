@@ -11,7 +11,7 @@ Dalle tracce del software alle proprietà delle nanostrutture, studi che interro
 ## introduction
 Riconoscere un comportamento malevolo nelle tracce di un programma, comprendere quali variabili orientino la risposta di un classificatore e collegare la geometria di una nanostruttura alle sue proprietà fisiche sono problemi che, pur appartenendo ad ambiti differenti, richiedono di esaminare come vengono costruiti i dati e quali ipotesi consentano di interpretarli.
 
-Le schede raccolgono gli studi sulla sicurezza informatica, sull’intelligenza artificiale spiegabile e sulla fisica computazionale, ai quali si affiancano le esperienze nell’analisi delle serie temporali e nei metodi quantitativi, mentre il calcolo quantistico e l’architettura dei sistemi sono presentati attraverso gli interessi scientifici e le attività didattiche che ne accompagnano l’approfondimento.
+Le schede raccolgono gli studi sulla sicurezza informatica, sull’intelligenza artificiale spiegabile e sulla fisica computazionale, ai quali si affiancano le esperienze nell’analisi delle serie temporali e nei metodi quantitativi, mentre la teoria dell’informazione classica e quantistica, il calcolo quantistico e l’architettura dei sistemi trovano spazio negli interessi scientifici e nelle attività didattiche. In questo quadro mi interessa comprendere come l’informazione venga rappresentata, trasmessa ed elaborata, mettendo in relazione i limiti dei modelli con le proprietà dei sistemi fisici che li realizzano.
 
 ## connectionsTitle
 Tesi e contributi interdisciplinari

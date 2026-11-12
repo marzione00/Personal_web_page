@@ -11,7 +11,7 @@ From software traces to the properties of nanostructures, studies examining the 
 ## introduction
 Recognising malicious behaviour in program traces, understanding which variables influence a classifier’s response and relating the geometry of a nanostructure to its physical properties are problems that, despite belonging to different fields, require close attention to how data are constructed and which assumptions allow them to be interpreted.
 
-The following entries bring together studies in cybersecurity, explainable artificial intelligence and computational physics, alongside experience in time-series analysis and quantitative methods, while quantum computing and systems architecture are presented through the scientific interests and teaching activities that support their exploration.
+The following entries bring together studies in cybersecurity, explainable artificial intelligence and computational physics, alongside experience in time-series analysis and quantitative methods, while classical and quantum information theory, quantum computing and systems architecture feature among my scientific interests and teaching activities. Within this framework, I am interested in how information is represented, transmitted and processed, relating the limits of models to the properties of the physical systems that realise them.
 
 ## connectionsTitle
 Theses and interdisciplinary contributions
