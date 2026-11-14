@@ -1,5 +1,19 @@
 # Aggiornamenti
 
+## 3.20.0 — 14 novembre 2026
+
+- Aggiunti tre diagrammi procedurali IT/EN al saggio SolarWinds: dipendenze dal fornitore, cronologia geopolitica e capacità di difesa.
+- Grafo esplorabile tramite link e spiegazioni native, disposizione mobile dedicata, modalità chiara e stampa completa.
+- Comparsa progressiva affidata alla regia di animazione esistente, con rispetto delle preferenze di movimento ridotto.
+- Testo condensato della v3.19.0 conservato integralmente, senza nuovi runtime o immagini generate.
+- Corretta la colonna laterale degli articoli: indice, stampa e metadati scorrono come un unico blocco, senza sovrapposizioni.
+
+## 3.19.0 — 14 novembre 2026
+
+- Pubblicato il saggio «SolarWinds e la vulnerabilità degli Stati digitali» in italiano e inglese, integrato in blog, homepage, ricerca, feed e sitemap.
+- Testo italiano ridotto da 2.010 a 1.298 parole (−35,4%, esclusi titoli e fonti), con apertura sul danno istituzionale e conclusione su ricerca e formazione tecnologica.
+- Riutilizzata l’impaginazione degli articoli con indice, cambio lingua e stampa; nessun nuovo livello CSS o runtime duplicato.
+
 ## 3.18.0 — La guerra delle false percezioni (12 novembre 2026)
 
 - Inserito integralmente il nuovo saggio fornito dall’autore, con sei capitoli e riferimenti.

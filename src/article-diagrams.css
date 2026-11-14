@@ -1,0 +1,69 @@
+/* One owner for the SolarWinds figures. Native links/details use reading.js. */
+.article-diagram{--ad-warning:#f1a090;--ad-cyan:#9edbd6;margin:36px 0 42px;padding:24px;border:1px solid var(--line);background:var(--panel);border-radius:12px;isolation:isolate;overflow-wrap:normal}
+.article-diagram figcaption{margin:0 0 14px}
+.article-diagram .ad-kicker{display:block;font:11px/1.7 var(--mono);letter-spacing:.09em;text-transform:uppercase;color:var(--green)}
+.article-diagram figcaption h3{font:normal 27px/1.25 var(--serif);letter-spacing:-.02em;margin:10px 0;color:var(--ink)}
+.article-diagram figcaption p,.article-diagram .ad-instruction{font:14px/1.65 var(--sans);color:var(--muted);margin:10px 0}
+.ad-board{min-width:0}.ad-board svg{width:100%;height:auto;overflow:visible}
+.article-diagram .ad-narrow{display:none}
+.ad-grid{fill:none;stroke:var(--line);stroke-width:1;opacity:.45}
+.ad-edge{fill:none;stroke:var(--green);stroke-width:1.3;opacity:.8}
+.ad-arrow{fill:none;stroke:var(--green);stroke-width:1.3}
+.ad-svg-title{fill:var(--ink);font:16px var(--sans);letter-spacing:0}
+.ad-svg-sub{fill:var(--muted);font:12px var(--mono);letter-spacing:0}
+.ad-node rect,.ad-capability rect{fill:var(--raised);stroke:var(--green);stroke-width:1.2}
+.ad-node{outline:none;text-decoration:none!important}
+.ad-node rect{transition:stroke-width .15s ease,fill .15s ease}
+.ad-node:hover rect,.ad-node:focus rect{stroke-width:3;fill:var(--bg)}
+.ad-node:focus .ad-svg-title{text-decoration:underline}
+.ad-node.ad-compromised rect{stroke:var(--ad-warning);stroke-dasharray:5 3}
+.ad-node.ad-compromised .ad-svg-sub{fill:var(--ad-warning)}
+.ad-alert{fill:var(--ad-warning)}
+.ad-legend{display:flex;flex-wrap:wrap;gap:10px 24px;border-top:1px solid var(--line-soft);padding-top:14px;font:12px/1.6 var(--sans);color:var(--body)}
+.ad-legend span{display:flex;align-items:center;gap:9px}
+.ad-key-line{display:block;width:22px;border-top:2px solid var(--green)}
+.ad-key-alert{display:block;width:9px;height:9px;background:var(--ad-warning)}
+.ad-explanations{display:grid;grid-template-columns:1fr 1fr;gap:0 18px;margin-top:12px}
+.ad-explanations details{min-width:0;border-top:1px solid var(--line);padding:0}
+.ad-explanations summary{cursor:pointer;padding:12px 0;min-height:44px;font:14px/1.5 var(--sans);color:var(--green)}
+.ad-explanations p{font:14px/1.7 var(--sans);margin:0 0 18px;color:var(--body);scroll-margin-top:var(--header-offset)}
+.ad-explanations p:target{outline:1px solid var(--green);outline-offset:5px}
+.article-diagram .ad-timeline{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;padding:0;margin:22px 0 0;list-style:none}
+.ad-timeline::before{content:"";position:absolute;left:22px;right:22px;top:22px;height:1px;background:var(--green);opacity:.5}
+.article-diagram .ad-timeline li{position:relative;margin:0;padding:0;min-width:0;list-style:none}
+.ad-timeline svg{width:44px;height:44px;margin-bottom:16px;fill:var(--panel);stroke:var(--green);stroke-width:1.2}
+.ad-timeline .ad-time-core{fill:var(--green);stroke:none}
+.ad-date{display:block;font:11px/1.6 var(--mono);letter-spacing:.03em;color:var(--green)}
+.ad-timeline h4{font:600 17px/1.35 var(--sans);margin:8px 0;color:var(--ink)}
+.ad-timeline p{font:14px/1.65 var(--sans);margin:0;color:var(--body)}
+.ad-law-frame{fill:none;stroke:var(--line);stroke-width:1.5;stroke-dasharray:6 5}
+.ad-education rect{stroke:var(--ad-cyan)}
+.ad-protection rect{fill:var(--bg);stroke-width:1.8}
+.reading-mode .article-diagram{--ad-warning:#9d3525;--ad-cyan:#20615e}
+@media(max-width:650px){
+ .article-diagram{padding:18px 12px;margin:28px 0;border-radius:8px}
+ .article-diagram .ad-wide{display:none}.article-diagram .ad-narrow{display:block}
+ .article-diagram figcaption h3{font-size:25px}
+ .ad-explanations{grid-template-columns:1fr}
+ .ad-svg-sub{font-size:13px}
+ .article-diagram .ad-timeline{grid-template-columns:1fr;gap:28px}
+ .article-diagram .ad-timeline li{display:grid;grid-template-columns:44px 1fr;gap:14px}
+ .ad-timeline::before{left:22px;right:auto;top:22px;bottom:22px;height:auto;width:1px}
+ .ad-timeline svg{margin:0}.ad-date{font-size:12px}
+}
+@media(prefers-reduced-motion:reduce){.ad-node rect{transition:none}}
+@media print{
+ .article-diagram{--ad-warning:#111;--ad-cyan:#111;--panel:#fff;--raised:#fff;--bg:#fff;--ink:#111;--body:#111;--muted:#333;--line:#777;--line-soft:#aaa;--green:#111;border-color:#999;background:#fff;color:#111;padding:14px;margin:20px 0;break-inside:auto}
+ .article-diagram .ad-wide{display:block}.article-diagram .ad-narrow{display:none}
+ .ad-board,.ad-timeline,.ad-explanations details{break-inside:avoid}
+ .ad-grid{display:none}.ad-instruction{display:none}
+ .article-diagram figcaption h3{font-size:20px}
+ .article-diagram figcaption p,.ad-explanations p{font-size:11px}
+ .ad-explanations{display:block}.ad-explanations summary{min-height:0;padding:6px 0;font-size:12px}
+ .ad-explanations details>p{display:block!important}
+ .ad-explanations details::details-content{display:contents;content-visibility:visible}
+ .article-diagram .ad-timeline{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+ .article-diagram .ad-timeline li{display:block}.ad-timeline::before{left:22px;right:22px;top:22px;bottom:auto;height:1px;width:auto}
+ .ad-timeline svg{margin-bottom:10px}.ad-timeline h4{font-size:13px}.ad-timeline p{font-size:11px}
+ .ad-node rect{transition:none}.ad-node:focus rect{stroke-width:1.2}
+}

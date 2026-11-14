@@ -19,7 +19,7 @@ const out=path.join(root,preview?'preview':'dist');
 validateSourceBoundary(root);validatePublicBoundary(root);
 const datasets=Object.fromEntries(languages.map(language=>[language,loadContent(root,{preview:editorial,language})]));
 const media=validateMedia(root),data=datasets.it;
-const css=['site.css','visual.css','ambient.css','identity.css','teaching-apps.css','galaxies.css','header.css','experience.css','geometry.css','cyber-network.css','cinema.css','paths.css','experiments.css','profile.css'].map(f=>fs.readFileSync(path.join(root,'src',f),'utf8')).join('\n');
+const css=['site.css','visual.css','ambient.css','identity.css','teaching-apps.css','galaxies.css','header.css','experience.css','geometry.css','cyber-network.css','cinema.css','paths.css','article-diagrams.css','experiments.css','profile.css'].map(f=>fs.readFileSync(path.join(root,'src',f),'utf8')).join('\n');
 const formulaData=loadAmbientFormulas(root);
 const formulaScript='window.MDCFormulaCatalog='+JSON.stringify(formulaData).replace(/</g,'\\u003c').replace(/>/g,'\\u003e')+';';
 const js=formulaScript+'\n'+['i18n-client.js','app.js','search.js','reading.js','math-models.js','experiments.js','effects.js','sound.js','music.js','travel-gallery.js','geometry-loader.js','cyber-network.js','matrix-rain.js','teaching-app-launch.js','navigation.js','cinema.js'].map(f=>fs.readFileSync(path.join(root,'src',f),'utf8')).join('\n');

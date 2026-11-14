@@ -6,7 +6,7 @@ const bundles=assets.filter(f=>/^site-.*\.(js|css)$/.test(f));
 const report={version:JSON.parse(fs.readFileSync(path.join(root,'content/site.json'))).version,budgets:[],checks:[]};
 for(const file of ['index.html','en/index.html',...bundles.map(f=>'assets/'+f)]){const b=fs.readFileSync(path.join(dist,file)),gzip=gzipSync(b).length,limit=file.endsWith('.html')?12000:file.endsWith('.css')?26000:42000;assert.ok(gzip<=limit,`${file}: ${gzip} > ${limit}`);report.budgets.push({file,bytes:b.length,gzip,limit});}
 const build=read('scripts/build.mjs');
-for(const name of ['header.css','geometry.css','cyber-network.css','cyber-network.js','paths.css','experiments.css','search.js','reading.js','matrix-rain.js','cinema.js','navigation.js','music.js','sound.js'])assert.equal(build.split("'"+name+"'").length-1,1,'Bundle duplication: '+name);
+for(const name of ['header.css','geometry.css','cyber-network.css','cyber-network.js','paths.css','article-diagrams.css','experiments.css','search.js','reading.js','matrix-rain.js','cinema.js','navigation.js','music.js','sound.js'])assert.equal(build.split("'"+name+"'").length-1,1,'Bundle duplication: '+name);
 for(const f of ['site.css','visual.css','ambient.css','identity.css','paths.css'])assert.doesNotMatch(read('src/'+f),/\.(header-inner|header-tools|language-switch|menu-button)\s*\{/,'Header ownership '+f);
 const css=fs.readdirSync(path.join(root,'src')).filter(x=>x.endsWith('.css')).map(f=>read('src/'+f)).join('\n');
 for(const m of css.matchAll(/z-index\s*:\s*(-?\d+)/g))assert.ok(Number(m[1])<=1,'Unbounded layer: '+m[0]);

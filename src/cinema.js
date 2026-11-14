@@ -29,7 +29,7 @@
   const art=root.querySelector('.page-head-visual,.atlas-featured');animate(art,[{opacity:.12,transform:'scale(.9) rotate(-3deg)'},{opacity:1,transform:'scale(1) rotate(0)'}],{duration:home?duration:560});
   // Below-the-fold portals assemble once when reached; scrolling itself stays silent.
   if(typeof IntersectionObserver!=='undefined'){
-   observer=new IntersectionObserver(entries=>{for(const entry of entries){if(!entry.isIntersecting)continue;observer?.unobserve(entry.target);if(!enabled())continue;animate(entry.target,[{opacity:.25,transform:'translateY(20px)'},{opacity:1,transform:'translateY(0)'}],{duration:560});entry.target.querySelectorAll('.orbit-mark').forEach(svg=>animate(svg,[{opacity:.08,strokeDasharray:'400',strokeDashoffset:'400'},{opacity:.62,strokeDasharray:'400',strokeDashoffset:'0'}],{duration:1100}));}},{threshold:.12});root.querySelectorAll('.portal-card').forEach(el=>observer.observe(el));
+   observer=new IntersectionObserver(entries=>{for(const entry of entries){if(!entry.isIntersecting)continue;observer?.unobserve(entry.target);if(!enabled())continue;animate(entry.target,[{opacity:.25,transform:'translateY(20px)'},{opacity:1,transform:'translateY(0)'}],{duration:560});entry.target.querySelectorAll('.ad-step').forEach((node,i)=>animate(node,[{opacity:.15},{opacity:1}],{duration:360,delay:i*70}));entry.target.querySelectorAll('.orbit-mark').forEach(svg=>animate(svg,[{opacity:.08,strokeDasharray:'400',strokeDashoffset:'400'},{opacity:.62,strokeDasharray:'400',strokeDashoffset:'0'}],{duration:1100}));}},{threshold:.12});root.querySelectorAll('.portal-card,[data-article-diagram]').forEach(el=>observer.observe(el));
   }
   window.dispatchEvent(new Event('mdc:page-transition'));
  }
@@ -55,7 +55,7 @@
  document.addEventListener('click',ev=>{if(ev.target.closest?.('[data-entry-replay]'))show(true);});
  function sync(){if(!entryEnabled())close();if(!enabled())clearAssembly();document.querySelectorAll('[data-entry-replay]').forEach(b=>b.disabled=!entryEnabled());}
  fx.subscribe(sync);window.addEventListener('mdc:content-change',sync);window.addEventListener('mdc:before-content-change',clearAssembly);
- document.addEventListener('visibilitychange',()=>{if(document.hidden){close();clearAssembly();}});window.addEventListener('pagehide',()=>{close();clearAssembly();});
+ document.addEventListener('visibilitychange',()=>{if(document.hidden){close();clearAssembly();}});window.addEventListener('pagehide',()=>{close();clearAssembly();});window.addEventListener('beforeprint',clearAssembly);
  window.MDCCinema={arrive,get stats(){return {...stats};},get activeAnimations(){return animations.length;}};
  sync();if(!show()&&!location.hash)arrive();
 })();

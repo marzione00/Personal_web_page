@@ -1,69 +1,70 @@
 {
   "brand": "Topological Manifolds",
-  "date": "2026-11-12",
+  "date": "2026-11-14",
   "baseRepository": "https://github.com/marzione00/Personal_web_page",
   "baseCommit": "8964fc96b08671089cfb5d3561acb311bb994599",
   "remoteDeployment": false,
-  "version": "3.18.0",
-  "packageVersion": "3.18.0",
-  "basedOnPackage": "v3.17.2 academic biography and information theory release",
-  "basePackageSha256": "8b737d76b718ef04eb9f9ba6bb06b0455876f0d99f9bdc908ef5b1c78be89d14",
-  "sourceFiles": 622,
+  "version": "3.20.0",
+  "packageVersion": "3.20.0",
+  "basedOnPackage": "v3.19.0 complete SolarWinds release",
+  "basePackageSha256": "665a9426e9efdc0e871f05a86062299bb187d37f21f334aadee5056513340960",
+  "sourceFiles": 629,
   "addedSourceFiles": [
-    "content/markdown/posts/la-guerra-delle-false-percezioni.md",
-    "content/markdown/en/posts/la-guerra-delle-false-percezioni.md",
-    "docs/ARTICOLO_FALSE_PERCEZIONI_v3.18.0.md"
+    "src/article-diagrams.mjs",
+    "src/article-diagrams.css",
+    "tests/article-diagrams.test.mjs",
+    "docs/DIAGRAMMI_SOLARWINDS_v3.20.0.md"
   ],
   "removedSourceFiles": [],
   "modifiedSourceFiles": [
     "CHANGELOG.md",
-    "LEGGIMI_PRIMA_DI_CARICARE.md",
     "RELEASE_MANIFEST.json",
     "content/site.json",
-    "docs/PROVENIENZA.md",
     "package.json",
-    "src/render.mjs",
-    "tests/article-release.test.mjs",
-    "tests/content.test.mjs"
+    "scripts/audit-release.mjs",
+    "scripts/build.mjs",
+    "src/cinema.js",
+    "src/paths.css",
+    "src/paths.mjs"
   ],
   "verification": {
     "unitTests": {
-      "passed": 321,
+      "passed": 328,
       "failed": 0
     },
     "builds": [
       "https://marzione00.github.io/Personal_web_page/",
       "https://www.mdctopologicalmanifolds.it/"
     ],
-    "htmlPages": 62,
-    "localLinks": 2788,
+    "htmlPages": 64,
+    "localLinks": 2880,
     "imageReferences": 132,
     "editorialSync": "passed",
     "resourceAndComponentAudit": {
-      "version": "3.18.0",
+      "version": "3.20.0",
       "budgets": [
         {
           "file": "index.html",
-          "bytes": 42810,
-          "gzip": 11965,
+          "bytes": 42812,
+          "gzip": 11928,
           "limit": 12000
         },
         {
           "file": "en/index.html",
-          "bytes": 40885,
-          "gzip": 11218,
+          "bytes": 40907,
+          "gzip": 11196,
           "limit": 12000
         },
         {
-          "file": "assets/site-4fd454bfafab.css",
-          "bytes": 108589,
-          "gzip": 22902,
+          "file": "assets/site-2e3e5656b8ab.css",
+          "bytes": 114150,
+          "gzip": 24001,
           "limit": 26000
         },
         {
-          "file": "assets/site-7ab95a0bd1e7.js",
-          "bytes": 142623,
-          "gzip": 41514,
+          "file": "assets/site-ca7955632830.js",
+          "bytes": 142828,
+          "gzip": 41561,
           "limit": 42000
         }
       ],
@@ -72,14 +73,48 @@
         "one header owner",
         "bounded layers with native modal top layer",
         "obsolete home selectors removed",
-        "single geometry, cyber and search dialog in all 62 pages",
+        "single geometry, cyber and search dialog in all 64 pages",
         "28 catalog entries and 32 versioned scene URLs"
       ]
     },
-    "unchangedPublicAndCvFiles": 112,
-    "articleText": "Every source paragraph and all seven section headings verified in IT/EN HTML. Two published feed entries per language. Present in homepage, blog, search and sitemap.",
-    "browserChecks": "Desktop: homepage entry, Italian layout, chapter navigation, English switch retaining chapter, English layout without horizontal overflow.",
-    "browserTests": "Full Playwright suite not rerun; retained in GitHub CI.",
+    "unchangedPublicMarkdownAndCvFiles": 279,
+    "article": {
+      "origin": "https://www.mdctopologicalmanifolds.it/",
+      "languages": {
+        "it": {
+          "paragraphs": 17,
+          "chapters": 4,
+          "references": 18,
+          "words": 1298
+        },
+        "en": {
+          "paragraphs": 17,
+          "chapters": 4,
+          "references": 18,
+          "words": 1229
+        }
+      },
+      "compression": {
+        "previousWords": 2010,
+        "currentWords": 1298,
+        "reductionPercent": 35.42,
+        "scope": "Italian prose, excluding headings, metadata and bibliography"
+      },
+      "htmlPages": 64,
+      "canonicalUrls": 62
+    },
+    "diagrams": {
+      "perLanguage": 3,
+      "languages": [
+        "it",
+        "en"
+      ],
+      "nativeExplanations": 5,
+      "tocChaptersPreserved": 5
+    },
+    "browserChecks": "Desktop: native SVG node activation by pointer and keyboard, explanation focus, language switch retaining explanation, light theme, timeline, sidebar without overlap. Mobile: 390px IT/EN frames, 375px content width with no overflow; vertical graph and timeline, defense diagram, explanation activation.",
+    "printChecks": "CSS reviewed; unit tests verify opening all explanations and restoring prior choices, plus cancellation of active animations. Native print preview not visually inspected.",
+    "browserTests": "Full Playwright regression suite not rerun locally; retained in GitHub CI.",
     "remoteDeployment": false
   },
   "files": {
@@ -112,8 +147,8 @@
       "sha256": "7a4b2b912cb020d268a40917f3d38d427d131f6f2beb9c00721de924a286da9f"
     },
     "CHANGELOG.md": {
-      "bytes": 26633,
-      "sha256": "668662498a761f33d17e33b7e6ca6e230298ace5c44bb27ddd8863991db9a7ec"
+      "bytes": 27763,
+      "sha256": "18e9371eb5e8ac6229b7998e07112d1189b7cb95b357c21d3dd2a7c005396ce1"
     },
     "COME_MODIFICARE_I_TESTI.md": {
       "bytes": 12145,
@@ -515,6 +550,10 @@
       "bytes": 19329,
       "sha256": "27e46f3db04abeccd2e76361f2c2759b24f27e4837184160b13a832e273e94e1"
     },
+    "content/markdown/en/posts/solarwinds-e-la-vulnerabilita-degli-stati-digitali.md": {
+      "bytes": 13301,
+      "sha256": "3164d4a5425affb17559d18def720b70e8ebf3a3195fc15426a837724dfe9b85"
+    },
     "content/markdown/en/profilo-dati.md": {
       "bytes": 7209,
       "sha256": "7a555a8d0c1360638935e47fd5d9d5fb33c44fd93b8155ab9a759a305deea7a5"
@@ -791,6 +830,10 @@
       "bytes": 21857,
       "sha256": "ad6ec7c8e2a485cac8abf7bdb0e62f905e7f7ad7c382bad3339969bc4358271c"
     },
+    "content/markdown/posts/solarwinds-e-la-vulnerabilita-degli-stati-digitali.md": {
+      "bytes": 14404,
+      "sha256": "f1e32f0110d12e7cfdc2a50fa2d4a24c9893ea36dc3f87647bf5f1da306f5e05"
+    },
     "content/markdown/profilo.md": {
       "bytes": 10886,
       "sha256": "49de1ae2251189d00e18ce7dd2ea06333cece08d0833c673756a3f7c1638b7bf"
@@ -973,7 +1016,7 @@
     },
     "content/site.json": {
       "bytes": 161,
-      "sha256": "aa86939912645dde77cffbe22dab1830fd1bbfe32f719bee23c058b0bfd113c2"
+      "sha256": "ddc8cfe17b2f9d5e5bdca283c79014f7052aca77de74e173a558603c249969df"
     },
     "content/study-guide.json": {
       "bytes": 26232,
@@ -1006,6 +1049,10 @@
     "docs/ARTICOLO_PRIMO_BLOG_MANIFEST.json": {
       "bytes": 969,
       "sha256": "decbb57ebcb83ef8f64f1a1d1243127d02150dc20a98e935609a8266883575e9"
+    },
+    "docs/ARTICOLO_SOLARWINDS_v3.19.0.md": {
+      "bytes": 3262,
+      "sha256": "631db5dd8b5c7434b1c30569d36a9004965b1935fe83c2bbe9c252820ff55479"
     },
     "docs/ATLANTE_v3.14.0.md": {
       "bytes": 6788,
@@ -1102,6 +1149,10 @@
     "docs/CORREZIONE_CI_v3.8.md": {
       "bytes": 2436,
       "sha256": "a4c75a948c30c465f3dcb832bb73516f0078bfd2a085ba7db0b8b8978bb8c5b9"
+    },
+    "docs/DIAGRAMMI_SOLARWINDS_v3.20.0.md": {
+      "bytes": 3523,
+      "sha256": "0d33b549b171617b2b2d030ceac5674d80ef4a9a58e80fcf527de5bb6831f4ad"
     },
     "docs/EDITORIA.md": {
       "bytes": 840,
@@ -1453,7 +1504,7 @@
     },
     "package.json": {
       "bytes": 1567,
-      "sha256": "a80bf8f505687b2a5d359ac1e0d85c327c2baee1ab0efdd869512f363cecb0df"
+      "sha256": "f5e53c9a4e6854694af57542197baeb7bbb2e212fa762dbd94c2e46b89ce0e45"
     },
     "public/assets/geometry-viewer.js": {
       "bytes": 15259,
@@ -1900,16 +1951,16 @@
       "sha256": "b614edef5ffd3f36f526db5330a31e9661d453601bbfe4d519afe5acde810336"
     },
     "scripts/audit-release.mjs": {
-      "bytes": 2931,
-      "sha256": "287f877d8fd0c1563ca19082115961e4a81df4c077568ebf31679681af8c4968"
+      "bytes": 2954,
+      "sha256": "d55131a1a0cc5f6b8f9aa34ae46e31eade7b238f61d9ba0df76498d36b1cd1b4"
     },
     "scripts/audit-teaching-apps.mjs": {
       "bytes": 2079,
       "sha256": "136a9c0a4dba23bb1e0b458077335c4b8ffc841ac2761bf3ac40f84cd6fa7156"
     },
     "scripts/build.mjs": {
-      "bytes": 15010,
-      "sha256": "7a63c23295300799d1fbdaf7e51f659720e649c1f90412c509b370619c737fe3"
+      "bytes": 15033,
+      "sha256": "38cfa887e6a3639000e5bfdec0590ea97b7cbe983a3dc2fc13985132ba01d747"
     },
     "scripts/check-external-links.mjs": {
       "bytes": 1387,
@@ -2123,13 +2174,21 @@
       "bytes": 4681,
       "sha256": "a30988c4f0c4a61c596d673787c8bd02562322fd4f38e6811c904a448cb46d58"
     },
+    "src/article-diagrams.css": {
+      "bytes": 5436,
+      "sha256": "d56afb3ddfa9aad0e5b22be459fbc312bf3c79bb81b6ab9b872fa40f7f661620"
+    },
+    "src/article-diagrams.mjs": {
+      "bytes": 11164,
+      "sha256": "a4fc3713d47020027643866efd0f8350f4f1972a9507ef68c157d360fde2f9c5"
+    },
     "src/cinema.css": {
       "bytes": 6560,
       "sha256": "01640c2c0c31ce0988a5abc4e704cba73f592e64d96f1924c48345cb205034ff"
     },
     "src/cinema.js": {
-      "bytes": 7159,
-      "sha256": "f0c50202a34c08ccaee755ae39346086285f7fe608740b7e9a5939a03bca8fdd"
+      "bytes": 7364,
+      "sha256": "e76d1ffb30d6723e2f96795a74ac8476714ef9f97be033d0296e97c3624ca5a4"
     },
     "src/cinema.mjs": {
       "bytes": 2487,
@@ -2240,12 +2299,12 @@
       "sha256": "a214453d1f66958794046ac2962c4c60b775630df208962a76aad78fcf0d2927"
     },
     "src/paths.css": {
-      "bytes": 3506,
-      "sha256": "35c9c95a0af0f67b8195f65322b5dd28cae0fe369e6632c10c0c0fea52a6435a"
+      "bytes": 3630,
+      "sha256": "3435233572ee0638c3da88462ebe4640b85723a972ff115fb41cf31e6594cbb2"
     },
     "src/paths.mjs": {
-      "bytes": 4659,
-      "sha256": "6bf04de49f864eec1d1be88274ed838916575a1d8f8b747c2353ebf202307fef"
+      "bytes": 4773,
+      "sha256": "c6088335414a2c0c7cd4697c9b3758e1ae4960038c38b7425fcdf413b95f9422"
     },
     "src/profile.css": {
       "bytes": 6754,
@@ -2322,6 +2381,10 @@
     "tests/ambient_browser_fixture.py": {
       "bytes": 1397,
       "sha256": "331c4c493bb2f7a41fb6bbe2e3a73d6fda435746fb6fde24ffb105a79332a726"
+    },
+    "tests/article-diagrams.test.mjs": {
+      "bytes": 4547,
+      "sha256": "b69d8316d5d17bcde8a448a63aa2be8f44094a437d3708814c4ac340caa0e7cd"
     },
     "tests/article-release.test.mjs": {
       "bytes": 1759,
