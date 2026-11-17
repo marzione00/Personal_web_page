@@ -230,7 +230,7 @@ dialog .filter-panel label{width:100%}
 .side-panel dl{display:flex;gap:30px;flex-wrap:wrap}
 .side-panel dt{margin-top:0}
 .side-panel .text-link{margin-top:20px}
-.article-layout{grid-template-columns:1fr;gap:20px}
+.article-layout{grid-template-columns:minmax(0,1fr);gap:20px}
 .article-sidebar{display:flex;gap:24px;flex-wrap:wrap}
 .article-sidebar p{margin:0}
 .research-intro{grid-template-columns:1fr;gap:14px}

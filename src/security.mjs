@@ -11,7 +11,7 @@ export function inspectTree(folder,{maxFile=25*MiB,maxTotal=768*MiB,maxFiles=120
 export function validateSourceBoundary(root){return inspectTree(path.join(root,'content'),{maxFile:2*MiB,maxTotal:32*MiB,maxFiles:2500,accept:r=>r==='.gitkeep'||/^(?!.*(?:^|\/)\.)[a-zA-Z0-9_/-]+\.(?:json|md)$/.test(r)||/\/\.gitkeep$/.test(r)});}
 export function validatePublicBoundary(root){
  const result=inspectTree(path.join(root,'public'),{accept:r=>r.endsWith('/.gitkeep')||labArt.test(r)||articleArt.test(r)||safeMedia(r)!==null||/^geometry\/(?:manifest\.json|[a-z-]+\.(?:webp|svg)|scenes\/[a-z-]+\.bin)$/.test(r)||r==='assets/geometry-viewer.js'||['audio/local-coordinates.mp3','audio/descending-fields.mp3'].includes(r)});
- const vectorTags=new Set(['svg','defs','g','path','use','clippath','rect','pattern']);
+ const vectorTags=new Set(['svg','defs','g','path','use','clippath','rect','pattern','text','tspan','title','desc']);
  for(let i=1;i<=44;i++){
   const file=`assets/articles/equilibrio/figure-${String(i).padStart(2,'0')}.svg`;
   const svg=fs.readFileSync(path.join(root,'public',file),'utf8');

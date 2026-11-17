@@ -1,5 +1,12 @@
 # Aggiornamenti
 
+## 3.22.0 — 17 novembre 2026
+
+- Integrati i 44 diagrammi di «L’equilibrio sul tappetino» nell’HTML e nei temi del sito, con testo selezionabile, ingrandimento SVG e palette coerente.
+- Rivisto il testo, eliminando ripetizioni e anticipazioni redazionali; titoli specifici per i riquadri matematici.
+- Corrette due formule MathML e il confronto numerico bastone–matita; aggiornato il PDF.
+- Ridotta la complessità della griglia dei bacini conservandone i campioni e corretta la larghezza della colonna degli articoli su mobile.
+
 ## 3.21.0 — 17 novembre 2026
 
 - Pubblicato «L’equilibrio sul tappetino», con 44 diagrammi derivati dal sorgente TikZ dell’autore, 12 capitoli, formule, glossario e note.

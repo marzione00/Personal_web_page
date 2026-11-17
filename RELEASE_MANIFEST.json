@@ -1,19 +1,27 @@
 {
   "brand": "Topological Manifolds",
   "date": "2026-11-17",
-  "version": "3.21.0",
-  "packageVersion": "3.21.0",
+  "version": "3.22.0",
+  "packageVersion": "3.22.0",
   "baseRepository": "https://github.com/marzione00/Personal_web_page",
-  "basedOnPackage": "Topological_Manifolds_v3.20.0_GitHub_COMPLETO.zip",
-  "basePackageSha256": "2e603e3d2b22ca7d1ac49bf1c6c8af3b6794962ba6fea9c14896a1d9850cdff6",
+  "basedOnPackage": "Topological_Manifolds_v3.21.0_GitHub_COMPLETO.zip",
+  "basePackageSha256": "d0a463eddddca1c497aefc0882afa1fd8342641aeaa90a7dbae9d72797818dbb",
   "remoteDeployment": false,
-  "sourceFiles": 686,
+  "sourceFiles": 689,
   "addedSourceFiles": [
+    "docs/EQUILIBRIO_v3.22.0.md",
+    "docs/sources/equilibrio/equilibrio-editoriale.tex",
+    "scripts/equilibrium-vectors.py"
+  ],
+  "modifiedSourceFiles": [
+    "CHANGELOG.md",
+    "LEGGIMI_PRIMA_DI_CARICARE.md",
+    "README.md",
     "content/markdown/posts/lequilibrio-sul-tappetino.md",
-    "docs/EQUILIBRIO_v3.21.0.md",
+    "content/site.json",
     "docs/sources/equilibrio/equilibrio-figure-web.tex",
-    "docs/sources/equilibrio/equilibrio-originale.tex",
     "docs/sources/equilibrio/equilibrio-stampa.tex",
+    "package.json",
     "public/assets/articles/equilibrio/figure-01.svg",
     "public/assets/articles/equilibrio/figure-02.svg",
     "public/assets/articles/equilibrio/figure-03.svg",
@@ -61,23 +69,15 @@
     "public/media/docs/equilibrio-sul-tappetino.pdf",
     "scripts/export-equilibrium.py",
     "scripts/import-equilibrium.py",
-    "src/scientific-articles.css",
-    "src/scientific-articles.mjs",
-    "src/scientific-articles/lequilibrio-sul-tappetino.html",
-    "src/scientific-articles/lequilibrio-sul-tappetino.json",
-    "tests/scientific-articles.test.mjs"
-  ],
-  "modifiedSourceFiles": [
-    "CHANGELOG.md",
-    "README.md",
-    "content/site.json",
-    "package.json",
-    "scripts/audit-release.mjs",
-    "scripts/build.mjs",
     "src/paths.mjs",
     "src/render.mjs",
+    "src/scientific-articles.css",
+    "src/scientific-articles/lequilibrio-sul-tappetino.html",
+    "src/scientific-articles/lequilibrio-sul-tappetino.json",
     "src/security.mjs",
-    "src/travel-gallery.js"
+    "src/site.css",
+    "src/travel-gallery.js",
+    "tests/scientific-articles.test.mjs"
   ],
   "removedSourceFiles": [],
   "article": {
@@ -85,6 +85,8 @@
     "slug": "lequilibrio-sul-tappetino",
     "sourceSha256": "cf1ef184a5a9f6b21e56578dab18cac21482ca69c690d02e473c4708beba2105",
     "figures": 44,
+    "figureFormat": "inline SVG, native text, theme-aware palette",
+    "editorialMaster": "docs/sources/equilibrio/equilibrio-editoriale.tex",
     "chapters": 12,
     "glossaryTerms": 17,
     "language": "it",
@@ -97,7 +99,7 @@
       "failed": 0
     },
     "finalTargetedTests": {
-      "passed": 15,
+      "passed": 9,
       "failed": 0
     },
     "builds": [
@@ -105,34 +107,34 @@
       "https://www.mdctopologicalmanifolds.it/"
     ],
     "htmlPages": 66,
-    "localLinks": 3177,
-    "imageReferences": 220,
+    "localLinks": 3247,
+    "imageReferences": 132,
     "editorialSync": "passed",
     "resourceAndComponentAudit": {
-      "version": "3.21.0",
+      "version": "3.22.0",
       "budgets": [
         {
           "file": "index.html",
-          "bytes": 42765,
-          "gzip": 11901,
+          "bytes": 42807,
+          "gzip": 11886,
           "limit": 12000
         },
         {
           "file": "en/index.html",
-          "bytes": 40773,
-          "gzip": 11125,
+          "bytes": 40820,
+          "gzip": 11114,
           "limit": 12000
         },
         {
-          "file": "assets/site-2b02c2432e67.js",
-          "bytes": 143206,
-          "gzip": 41630,
+          "file": "assets/site-982323e5989c.js",
+          "bytes": 143926,
+          "gzip": 41854,
           "limit": 42000
         },
         {
-          "file": "assets/site-bdc3c198018d.css",
-          "bytes": 116959,
-          "gzip": 24528,
+          "file": "assets/site-bdd16c336177.css",
+          "bytes": 118428,
+          "gzip": 24858,
           "limit": 26000
         }
       ],
@@ -145,8 +147,8 @@
         "28 catalog entries and 32 versioned scene URLs"
       ]
     },
-    "browser": "Targeted CUA checks: desktop and 390x844 iframe viewport; figure viewer, zoom, Escape, focus return, no page overflow. Full Playwright suite not rerun locally.",
-    "originalAssets": "All prior public media, audio, geometry and CV byte-identical",
+    "browser": "Targeted CUA checks: desktop and 390x844 iframe viewport, dark/light themes, native SVG modal, unique modal IDs, zoom, Escape, focus return, no page overflow after mobile grid fix. Full Playwright suite not rerun locally.",
+    "originalAssets": "All prior public media, audio, geometry and CV byte-identical, except revised equilibrium essay PDF",
     "zipIntegrity": "CRC and contained file hashes verified after packaging"
   },
   "files": {
@@ -179,8 +181,8 @@
       "sha256": "7a4b2b912cb020d268a40917f3d38d427d131f6f2beb9c00721de924a286da9f"
     },
     "CHANGELOG.md": {
-      "bytes": 28387,
-      "sha256": "1177f2cf2d47062b1a42bf92aa106fd86ac630b16d8483240cb41ebac3b00469"
+      "bytes": 28926,
+      "sha256": "749096b8d17e76484b97d42167cd79414dcec1ccb5dece0561895bdeb4f11558"
     },
     "COME_MODIFICARE_I_TESTI.md": {
       "bytes": 12145,
@@ -195,16 +197,16 @@
       "sha256": "88e2c4406b7a0292910ce07e628be083db5c82fd10a854a98a729aaba1cff3f2"
     },
     "LEGGIMI_PRIMA_DI_CARICARE.md": {
-      "bytes": 3724,
-      "sha256": "d01fab57129c4ef29c0ef18ffdf628187a884aebb12960840eeba61d1b3c92c0"
+      "bytes": 3433,
+      "sha256": "a4c8d37f6bb9aea8b611617f62d815fd8b5f0e17987bde6c875c6e11586c3623"
     },
     "LICENSE.md": {
       "bytes": 1613,
       "sha256": "de1adbb4b5efd72cb47094f3db8a0ea52d52df0ee5c09d68ed8cff664fcdb0af"
     },
     "README.md": {
-      "bytes": 5754,
-      "sha256": "3600d7760169a45dd57daac41213a707989fcf7c2f19fc534fcac40a5a73416e"
+      "bytes": 5775,
+      "sha256": "6c65deb2278224bebe2fbb1c2e2c26b716935b478719d13517ec45aa344fd0f2"
     },
     "SECURITY.md": {
       "bytes": 5019,
@@ -863,8 +865,8 @@
       "sha256": "ad6ec7c8e2a485cac8abf7bdb0e62f905e7f7ad7c382bad3339969bc4358271c"
     },
     "content/markdown/posts/lequilibrio-sul-tappetino.md": {
-      "bytes": 47683,
-      "sha256": "96b463a234cd1b98ee30ad0ec1890c8dcc13dc6bac50b24efceaaa45df9ddb8b"
+      "bytes": 46514,
+      "sha256": "4911ca0342bfbfdfd8d8db8fdcd76572aecbc88d9df0fc541e7394d56c7bd0f1"
     },
     "content/markdown/posts/solarwinds-e-la-vulnerabilita-degli-stati-digitali.md": {
       "bytes": 14404,
@@ -1052,7 +1054,7 @@
     },
     "content/site.json": {
       "bytes": 161,
-      "sha256": "cabe0a2cc732ea4604d0d9839cc1d1cc8ed5147ace8531796365b27c8575271d"
+      "sha256": "6ca2c25079c6f9ba5acc85e916cce1d00a6eaea0dc10f933673c56d4f8510ef7"
     },
     "content/study-guide.json": {
       "bytes": 26232,
@@ -1202,6 +1204,10 @@
       "bytes": 3583,
       "sha256": "97d94bf4dfac9ae01a14a5fa2f78aeec7f1863dc65c705eb866ee9aa7d11efcf"
     },
+    "docs/EQUILIBRIO_v3.22.0.md": {
+      "bytes": 3928,
+      "sha256": "47256c5753eb9484f25e5210b4f7aec56949c33fa2b8a8ebed131772c2ca1a89"
+    },
     "docs/ESPERIENZA_v3.5.md": {
       "bytes": 3157,
       "sha256": "4ac5f0ea1b565480773548305e79215fd3564b12befee1fad6d0814a65ce841f"
@@ -1350,17 +1356,21 @@
       "bytes": 102954,
       "sha256": "eb63089fcfdc7c6158aeb7ef2d109ebe0ca9bf362f757bb12db02ee617e81c57"
     },
+    "docs/sources/equilibrio/equilibrio-editoriale.tex": {
+      "bytes": 427055,
+      "sha256": "93d6327d7efbc88252f0208142ce020be52f67d8845d106cf58b9bdfffd27bd3"
+    },
     "docs/sources/equilibrio/equilibrio-figure-web.tex": {
       "bytes": 380828,
-      "sha256": "5c6f967e5abd8012bfcc52501ae6eb8edb75942ec72e38e16168006affda7a38"
+      "sha256": "e6cfacf556ade191f8a7e3ccfa789ffa442f305754479d089b4121f53a8e225b"
     },
     "docs/sources/equilibrio/equilibrio-originale.tex": {
       "bytes": 427924,
       "sha256": "cf1ef184a5a9f6b21e56578dab18cac21482ca69c690d02e473c4708beba2105"
     },
     "docs/sources/equilibrio/equilibrio-stampa.tex": {
-      "bytes": 428341,
-      "sha256": "082ff14973ed9e1387b466d874bd134bc67810402a3e857931cc6545d9da9972"
+      "bytes": 427453,
+      "sha256": "6334249cf1436dcc5efd45e55ac4bbe8b64d32f0f39d17f6bf72661a39c80627"
     },
     "docs/storico/AMBIENTE_MATRIX_v2.8.md": {
       "bytes": 6010,
@@ -1556,183 +1566,183 @@
     },
     "package.json": {
       "bytes": 1567,
-      "sha256": "4c321385ed4c650a11fd830b380eebcb05950118535fa0ad3b20ee8cf361e7a2"
+      "sha256": "f3d895aeb8be32d27d16f26d15d103380885025ca8a4483d061c183dff02ce28"
     },
     "public/assets/articles/equilibrio/figure-01.svg": {
-      "bytes": 37085,
-      "sha256": "4d9126cdc18b22688cf9c69bd4c12ad2c26b1a9aeead80e542bbde5ed3581897"
+      "bytes": 4542,
+      "sha256": "c49bf9a97e99b8a24abff32838aac90276def3e322de46c78f4d9731046a7add"
     },
     "public/assets/articles/equilibrio/figure-02.svg": {
-      "bytes": 61523,
-      "sha256": "2a9397f33f307266094dae0143cb75dce9901f9281d76f288f1b40d34baf44f5"
+      "bytes": 13341,
+      "sha256": "701d902b8c6049fa6e625d6ac6fc190d318cfdf847c54af3f5b648d0746690ce"
     },
     "public/assets/articles/equilibrio/figure-03.svg": {
-      "bytes": 42893,
-      "sha256": "21789ee48d937f8ca91391f67995f354c877472b358ea71fed1deebdc3a58125"
+      "bytes": 6986,
+      "sha256": "9175ccf7c5205f544757268d2c080526b34aa7d87d01d5ca706f32903370db41"
     },
     "public/assets/articles/equilibrio/figure-04.svg": {
-      "bytes": 54103,
-      "sha256": "8db0145b430f0f7a455a04767ba353f2a4532a2870c7c6832e3f0ea618acf016"
+      "bytes": 13176,
+      "sha256": "39336de95eb5d74391747b075fa7c1113cae672da7ba455a165cd8aca654d61f"
     },
     "public/assets/articles/equilibrio/figure-05.svg": {
-      "bytes": 36627,
-      "sha256": "65df2b9930b2846d01dc2b66f15547cc81974c405d3289a3f9aae97fe273f80b"
+      "bytes": 11928,
+      "sha256": "bfb1f489b90a5bfef14761b81a2a71ac2628c67153f224f1dd1c978e26870ec0"
     },
     "public/assets/articles/equilibrio/figure-06.svg": {
-      "bytes": 26682,
-      "sha256": "1163895ab11bb0c7488e9db8ffa4da87584a10fcd93e0f686a0b295990f3627d"
+      "bytes": 9133,
+      "sha256": "618dd5eadb47dcaa4d9e85e22c4308c2e13657e17508bcdb9464ab6a15e331de"
     },
     "public/assets/articles/equilibrio/figure-07.svg": {
-      "bytes": 34440,
-      "sha256": "1013c3fdacc84d365eeb4b815f5ee078a81629704af71925119c55bd36038974"
+      "bytes": 11816,
+      "sha256": "3d801eda72b10b088023fda4270f7273d335210fbd645476cd680b2a18338585"
     },
     "public/assets/articles/equilibrio/figure-08.svg": {
-      "bytes": 276009,
-      "sha256": "68bd56c452023a6d9aa092ac19f626cfffad6529242e560b23151ee255253f48"
+      "bytes": 305038,
+      "sha256": "2502a2a9b4221cb7f5af2bafb93caf2f491013f9060f159278d9920323995a3a"
     },
     "public/assets/articles/equilibrio/figure-09.svg": {
-      "bytes": 23980,
-      "sha256": "7b1c51ee2af9b753329deb8bf4a84338a1c4b6d32297fec54e9c9fb43b2d306f"
+      "bytes": 5659,
+      "sha256": "e53d5a3494f955009ad31b69a734bba92faf9672e26c82479de753a45a1805f9"
     },
     "public/assets/articles/equilibrio/figure-10.svg": {
-      "bytes": 53283,
-      "sha256": "d3d1d586bdd8a2d2d79131ab8c4c09d74ffa8fdd67820e600274e9b59fb788c7"
+      "bytes": 11396,
+      "sha256": "95ad86695109bfaa89caf0adced1e716df24220eb04918f532ad7c5ed9480613"
     },
     "public/assets/articles/equilibrio/figure-11.svg": {
-      "bytes": 42562,
-      "sha256": "2e12760c1eb43d6caf82acd91976870d80184a1f5452d41829e70405c7fd874b"
+      "bytes": 20197,
+      "sha256": "90c6d32c16b5dd65d3c16caa602b4d7b4aba33eaa51074a80a44a8ec049289a9"
     },
     "public/assets/articles/equilibrio/figure-12.svg": {
-      "bytes": 50065,
-      "sha256": "06a4f959ca23554b3bb03c06346761b617e7a0e81d956b62c8064c775a9b1b3f"
+      "bytes": 18146,
+      "sha256": "6aa0347ca519dde847a7efce34dd87bf02f3e9bf8d7829dcb114cf52c0850ba0"
     },
     "public/assets/articles/equilibrio/figure-13.svg": {
-      "bytes": 51421,
-      "sha256": "972d76c410d2e796987034c4f1b101542710c4c010b300f78b567f78d81d0052"
+      "bytes": 10772,
+      "sha256": "a0c1ca12e64011885152470695c385ccfa124b6c15a7e7b89f540f22b0c132c4"
     },
     "public/assets/articles/equilibrio/figure-14.svg": {
-      "bytes": 43799,
-      "sha256": "24246714bf67ee8ddbf1a604c0d138976293523237570f7548a4e550d3db7262"
+      "bytes": 11515,
+      "sha256": "6274157c107a5d07729e10b60c0a363a5211873071493a573575e955d887abf1"
     },
     "public/assets/articles/equilibrio/figure-15.svg": {
-      "bytes": 25343,
-      "sha256": "89fed7b5eca8cb9cd0306fcbc175513f11672911c3f506d6b64ebda16ee613e6"
+      "bytes": 6488,
+      "sha256": "a28a3336b843021468dfc6500a44890cc82d667396f4026c0165f11666f77e7e"
     },
     "public/assets/articles/equilibrio/figure-16.svg": {
-      "bytes": 205627,
-      "sha256": "fb1480e6da38a0d7c128282e00f8e33d3d6e0d43ad50740345eb79a5457b6470"
+      "bytes": 213650,
+      "sha256": "7ece01008375e3b64c192e73ba0dfdb5e5a48ee314c32c2a41e8c1897da6b939"
     },
     "public/assets/articles/equilibrio/figure-17.svg": {
-      "bytes": 55523,
-      "sha256": "9afe6660b92c46c6191f009d4d26162e043e64f41825a08dddcf65a3594e6fdf"
+      "bytes": 35807,
+      "sha256": "38f6ad6a5069be583f5986893eef93b272d35dd3e08fcf3cf976f98854d4bbe6"
     },
     "public/assets/articles/equilibrio/figure-18.svg": {
-      "bytes": 37502,
-      "sha256": "1679ceca69293c0899d400b029bdc2818724e725f600948bebff338bc63a71b5"
+      "bytes": 4804,
+      "sha256": "0f86cb7be448ac41088a2326d8715cc0e377ad7a751e8117470ed82d618336d0"
     },
     "public/assets/articles/equilibrio/figure-19.svg": {
-      "bytes": 22537,
-      "sha256": "61994a43660ac37c7d89fb0e4e99da56e148b12abaac1b14e2ff1e2acab50ee2"
+      "bytes": 6288,
+      "sha256": "91b90f0cfb4e54ccb7842414776dd26891a660055bbec5b9df6a1a732eef57c3"
     },
     "public/assets/articles/equilibrio/figure-20.svg": {
-      "bytes": 33458,
-      "sha256": "63090eb9d4f711712ccf1545000dc8f1b0333442ef4b421de2cbee703fb9413e"
+      "bytes": 15581,
+      "sha256": "7b0e306fc3a0dbd858ae4b4e791080826b62249cdcd0db51b89b2a9c2eacd9c6"
     },
     "public/assets/articles/equilibrio/figure-21.svg": {
-      "bytes": 36807,
-      "sha256": "5f62011d4cc14a8f8a5ec2896c77ab1d95f92556420a0578b3ef42e73deb62a5"
+      "bytes": 11165,
+      "sha256": "366c423160344f354203cf14e902971bab6b44223ecb8dbc8b7a8e91ca11b5bf"
     },
     "public/assets/articles/equilibrio/figure-22.svg": {
-      "bytes": 45798,
-      "sha256": "060aa5b6dc44ea4202d1f175ca386c60daf041a41972925bfcbacddfbf021fe3"
+      "bytes": 4932,
+      "sha256": "6a3a34f59b859940b2243fe72b83625a94f2236f7bc32c6d63a8c146bdc31d65"
     },
     "public/assets/articles/equilibrio/figure-23.svg": {
-      "bytes": 33468,
-      "sha256": "ef96b0c53651f29ac1fee221f126f0100ce2b775d78c34bd3784259e6251b346"
+      "bytes": 2225,
+      "sha256": "3d6cb7301f64ecf9205f449bbddeaf529ef20ffb55f019c8f6d5f0e685b7ed0b"
     },
     "public/assets/articles/equilibrio/figure-24.svg": {
-      "bytes": 20615,
-      "sha256": "b9fed7557e76962eebe3803354f971b0f22f46b7cbc222a8223b3c5bc3986cce"
+      "bytes": 6868,
+      "sha256": "2b23be41b2f35747d13e0f3138ef38fe3ab51852cfe7c442b410d0b2ae719b50"
     },
     "public/assets/articles/equilibrio/figure-25.svg": {
-      "bytes": 46838,
-      "sha256": "1472fb858f0f074c24cd89fb36a9f773fb2050efe3ad93bafcbf66d921e95dbd"
+      "bytes": 9896,
+      "sha256": "121fd691ce35503bfe806bd53c856cfdd353f438c1c2956765304ceb1fba39b2"
     },
     "public/assets/articles/equilibrio/figure-26.svg": {
-      "bytes": 171910,
-      "sha256": "3a1d5bab7db2ca1059ac9b440253a1328441950969786266ed375d60a1926948"
+      "bytes": 198251,
+      "sha256": "2b0ec0b3cec0c7d5da3d7b9523a1acb87f36a15c345b6a32167ab9940ea5de35"
     },
     "public/assets/articles/equilibrio/figure-27.svg": {
-      "bytes": 74551,
-      "sha256": "705bf0e66e3a58df980d523425fa9261077aff60b17065e5fa4e5a4e7f91af08"
+      "bytes": 9306,
+      "sha256": "577754f3a243bab1f0dc74b7b30542ac0cd9e7f278604a5c2672d143243c95d7"
     },
     "public/assets/articles/equilibrio/figure-28.svg": {
-      "bytes": 64574,
-      "sha256": "27b6f48792d4bce52498944b0cff9d441a6d59e16184b8b14542abdfd21e2ed9"
+      "bytes": 31812,
+      "sha256": "02b4076f0f92020f62cca41caf4419cea563af8c9f49eacd54213f03c95f70cc"
     },
     "public/assets/articles/equilibrio/figure-29.svg": {
-      "bytes": 39755,
-      "sha256": "eeea38f4ed4f280bdf714570bbdd5dee704fd76b779802ca1ed2fe368be1ff03"
+      "bytes": 8948,
+      "sha256": "1995722834d88a6ab36bc7f720ee4ebd83fc7a63487171a6a5b1530c3f059635"
     },
     "public/assets/articles/equilibrio/figure-30.svg": {
-      "bytes": 47757,
-      "sha256": "b1234868460188228f670d3fb34b6adf4e9d81af1ec5ed2c1a56cdfc0ba6af36"
+      "bytes": 13951,
+      "sha256": "b60ca471bd22d44445388814aa8ab44057fd0e873ed1ce3d264856043b239259"
     },
     "public/assets/articles/equilibrio/figure-31.svg": {
-      "bytes": 27038,
-      "sha256": "c9bb4ff142b8c7d7da4bdee401148e917b8903175b29ace48bc5bc7421af2385"
+      "bytes": 8476,
+      "sha256": "af40bf6cf11ce81dd3dfdbf9d7add66ffb91ad13de7408f0435c952268942a43"
     },
     "public/assets/articles/equilibrio/figure-32.svg": {
-      "bytes": 138234,
-      "sha256": "59aa26169dbf344e29ccd94d88dcefd106757876207552cc3b5794a034268455"
+      "bytes": 159968,
+      "sha256": "040ea8bb3289ac66f5398d6d364bc15ecf6131b3e233b2c994a9e5f2a9c932ea"
     },
     "public/assets/articles/equilibrio/figure-33.svg": {
-      "bytes": 48592,
-      "sha256": "b6fd2e5bfc15d202f1634175387b82a7bbf63294620713abd58638a61a84f0b6"
+      "bytes": 10270,
+      "sha256": "3c338df2e4841518483a2c2e48f5854b065d97acb09fcee51338dd3fd61fe948"
     },
     "public/assets/articles/equilibrio/figure-34.svg": {
-      "bytes": 40629,
-      "sha256": "877fd279f94421037a467f3e198ff1b1c31123069b9fc5bfe5e4631083568ba9"
+      "bytes": 4070,
+      "sha256": "dffd01937654b5ef90f130488fb76c96972e711cf3e2f7e4849e8b8932ffe7be"
     },
     "public/assets/articles/equilibrio/figure-35.svg": {
-      "bytes": 60382,
-      "sha256": "13332f0ec30648cee895750347982050da8a0650602662bb72ffcf34955e2de4"
+      "bytes": 10143,
+      "sha256": "a002fbc8182b359fe5876a5af3eae8f3cef7c7a529474459ddbc76f9b060d3da"
     },
     "public/assets/articles/equilibrio/figure-36.svg": {
-      "bytes": 40401,
-      "sha256": "74fe961158899f6e6c1b0eba31c3fb1f58a74a52d87ca0b9e52da1692d7cfd11"
+      "bytes": 21865,
+      "sha256": "a65e2c6b4d50b593343e690d9c8cdc29f6776b0a1ec67f7364d03181381d4536"
     },
     "public/assets/articles/equilibrio/figure-37.svg": {
-      "bytes": 51627,
-      "sha256": "ca2e95b02a9f7af9a87e028a45af5280d1fc8095bd8fb327a4f9eeaf6eeca3f5"
+      "bytes": 28560,
+      "sha256": "1f821a9bf4d65f99237932df84cc7eb0d1db6a32f9c5a9c93025949b69532856"
     },
     "public/assets/articles/equilibrio/figure-38.svg": {
-      "bytes": 36393,
-      "sha256": "9e5c54840b2d8ac07d9e1cdb2fad7cdb7da69341a8ea2904b0356baf3d83f8f2"
+      "bytes": 22030,
+      "sha256": "5c7b503951e5a95ace9984cd9499f81a0a5bbda44719f339e97f5ba559b163ab"
     },
     "public/assets/articles/equilibrio/figure-39.svg": {
-      "bytes": 186047,
-      "sha256": "9a6df96bb4631be688985b85d055da7301f2484e096d2eef818a5383eea8bf94"
+      "bytes": 182461,
+      "sha256": "d12be3a52c653a7889a7ee129937de316557eab94f53833cbb865b96e1ec9926"
     },
     "public/assets/articles/equilibrio/figure-40.svg": {
-      "bytes": 183876,
-      "sha256": "063a3fc0ddd1c893b3dd760d4ae98ecdeb8ac6df280e03bdc0b2bb777ec2c2a3"
+      "bytes": 192447,
+      "sha256": "a32e79dde8b97c9b57fc2d7b3eb88e59cf824491c50bfedf309595786ecee95a"
     },
     "public/assets/articles/equilibrio/figure-41.svg": {
-      "bytes": 72980,
-      "sha256": "981791b806126dfc36107951bf591a9916149d2f1d28cc12cfe224639646e088"
+      "bytes": 38883,
+      "sha256": "a5f9d006e5c6f5f434c4eccd24e60ce1040e1ad67da32a947daf9acae291b164"
     },
     "public/assets/articles/equilibrio/figure-42.svg": {
-      "bytes": 68686,
-      "sha256": "24e255681adf95e4287d268db853adb3084bbc8a1bfa993eb2d35dce8168bd95"
+      "bytes": 57391,
+      "sha256": "8037047243ea04b6e209b971cf01bd7f26b93ebd3adfeb57bd4928d674eeb5d5"
     },
     "public/assets/articles/equilibrio/figure-43.svg": {
-      "bytes": 1454913,
-      "sha256": "2bb11a98c21462dcfddd36dd15b38d6bf82d63494d6ca9b47524977bce112e7b"
+      "bytes": 191844,
+      "sha256": "876541a583526ebc08309ad1fad36f32221f58873ce854efaeb44064d5e378d4"
     },
     "public/assets/articles/equilibrio/figure-44.svg": {
-      "bytes": 133962,
-      "sha256": "4496f2927cdfe107ee9c290995598ce7816ed8a0701f70e54f1bc7ef3e44ebdb"
+      "bytes": 61340,
+      "sha256": "3cfa54ec3395c89a4b7bddaf76a97d8762f3b1614fb420d63fa80d573a3e61dc"
     },
     "public/assets/geometry-viewer.js": {
       "bytes": 15259,
@@ -2023,8 +2033,8 @@
       "sha256": "642594ed774d1d59c78635f3966a94d7e98d37c3ddc246e2eece5b68cc84c169"
     },
     "public/media/docs/equilibrio-sul-tappetino.pdf": {
-      "bytes": 3901706,
-      "sha256": "3369f8220e521bee1d5d8d3085fddef0c4757bfb85a9fee7b121314692882bd1"
+      "bytes": 3901581,
+      "sha256": "e798012263029620b6b09388ef4a5b8c6986d081a90205a33c4fce2c2df6cf80"
     },
     "public/media/docs/quantum-2026-2027/UniMI_Quantum_PostQuantum_2026-2027_M01_fondamenti-fisici-e-simulazione.pdf": {
       "bytes": 3225552,
@@ -2202,9 +2212,13 @@
       "bytes": 4489,
       "sha256": "3922c57615339c6fd9fd6e04aed8a71a304056d1052414feefc4719a5bda74a8"
     },
+    "scripts/equilibrium-vectors.py": {
+      "bytes": 6262,
+      "sha256": "6f896ac7b4435ece7b7b57e3daf0d99832c5e8c33166b0c2378f66c1c013379a"
+    },
     "scripts/export-equilibrium.py": {
-      "bytes": 1770,
-      "sha256": "a9c125f518edfaceb03237dce881451f232390a73e5ac0e37e6cfd809117fc40"
+      "bytes": 1346,
+      "sha256": "e3d22430f6a0475706fbb5ee2d9945ff431d8bf17b422a0c675b35fbe93547d7"
     },
     "scripts/generate-share-cards.py": {
       "bytes": 2556,
@@ -2215,8 +2229,8 @@
       "sha256": "05fe85c53dd420e71487e4dc969c880e6a75d7e934f35f572656b38738161a9c"
     },
     "scripts/import-equilibrium.py": {
-      "bytes": 6034,
-      "sha256": "bfff9cf404f8497f080af4d1865809456dd5c922530007fd2ef8d2bd11c58533"
+      "bytes": 6455,
+      "sha256": "e98d5c7a3534faa4864ab86270f390011728acf99399853cb7ed2eb1833bc529"
     },
     "scripts/import-overleaf.py": {
       "bytes": 8098,
@@ -2543,8 +2557,8 @@
       "sha256": "3435233572ee0638c3da88462ebe4640b85723a972ff115fb41cf31e6594cbb2"
     },
     "src/paths.mjs": {
-      "bytes": 5106,
-      "sha256": "5994bcbf735ca6ef9d6bace453f73a3b40705ccd1ac27db9c89103a311b1a459"
+      "bytes": 5143,
+      "sha256": "1ee6fb7f782184ed237d5e5339c0f43b584645b9259a9cd36a2c16d367d2a2cb"
     },
     "src/profile.css": {
       "bytes": 6754,
@@ -2559,28 +2573,28 @@
       "sha256": "518fdc2282a1e2b24690270aaf606eaf1156e6485f9932349db673ab1a9096a9"
     },
     "src/render.mjs": {
-      "bytes": 45278,
-      "sha256": "bda30761ab19adaf500d27ed07b972efd3a1051344c98a11729fd87b710e20c3"
+      "bytes": 45223,
+      "sha256": "b3582be82e9fbe78e42bff02ce1adce2b61b5df7786660de8a0900775f0c7cce"
     },
     "src/safety.mjs": {
       "bytes": 3714,
       "sha256": "a82be0a1eb05be9852e5991203d4b6672da478cc8a1506eb467f188f51a1e4bb"
     },
     "src/scientific-articles.css": {
-      "bytes": 2808,
-      "sha256": "f6370627b3258cfe44290064ea644baaee6f39d664ff1812539516c7787b7357"
+      "bytes": 4267,
+      "sha256": "98e5fac017e56149fe1d7c2c83fe202c2e9bb805b7d304f6a72289d9faafea5d"
     },
     "src/scientific-articles.mjs": {
       "bytes": 516,
       "sha256": "4111c895e37320944d4174599a1f559623b9faff985a45424976d873b70deabc"
     },
     "src/scientific-articles/lequilibrio-sul-tappetino.html": {
-      "bytes": 106797,
-      "sha256": "182dff815834af3226d38161eecbbeeec010987d219f9ab2b225d6d0eb4a02b9"
+      "bytes": 2127058,
+      "sha256": "f7889923ed338c98873afd6e8c4a59a125db5102ffd709f08c415cbeb0d3954f"
     },
     "src/scientific-articles/lequilibrio-sul-tappetino.json": {
-      "bytes": 21086,
-      "sha256": "d62a46949c8071fd6b971e77e8af3288e723c58dd264c13ecc9220c6775b2f91"
+      "bytes": 21126,
+      "sha256": "0e0679fee355f936c0be8bd32c2a32dd1af7f06b11234c374bc117398886daab"
     },
     "src/search.js": {
       "bytes": 3253,
@@ -2591,16 +2605,16 @@
       "sha256": "3c37d87c3d970770f242ddae6f117f9561c4cb9c5162b4e076c4e9f0dd5b21cf"
     },
     "src/security.mjs": {
-      "bytes": 4001,
-      "sha256": "d7b9603f23b10bfb74456da021bab8575594903daf65f3c574dfd82bece189a8"
+      "bytes": 4031,
+      "sha256": "b09733adbf4f64466e8f3ca385d0ae01e4c66301ce438db1e5aac15c4367e5c1"
     },
     "src/seo.mjs": {
       "bytes": 1882,
       "sha256": "b1cf2746c4df356acc5d4db5a3a021ae3ced3da799548b6b94d02a268f8ce122"
     },
     "src/site.css": {
-      "bytes": 30802,
-      "sha256": "de5724530a96a2f15d33750bc87091a4e07634e2e8492630c14abf8e66e7e740"
+      "bytes": 30812,
+      "sha256": "d28269cd7386112631527cc7841071b4451bc072b6c10801afb8eab70c347c21"
     },
     "src/sound.js": {
       "bytes": 7487,
@@ -2619,8 +2633,8 @@
       "sha256": "e81c9b50b97835633bfa77bb595c7f4f715b61a873794927e320909341ba0048"
     },
     "src/travel-gallery.js": {
-      "bytes": 2688,
-      "sha256": "489f486a2c2ff402e5c5eb5c35a0d134c6627824473bae38a04c65a675846983"
+      "bytes": 3408,
+      "sha256": "a423ddbdeaaf710a1a37f820ceea0e6acb70622993095af8b9e82bf688de78d3"
     },
     "src/travel.mjs": {
       "bytes": 6359,
@@ -2799,8 +2813,8 @@
       "sha256": "6b6db596641c039f8d2a6173ff02031fb3d4b4e909e84766799a8db984d7f80a"
     },
     "tests/scientific-articles.test.mjs": {
-      "bytes": 2241,
-      "sha256": "77e2e60b30719f8e76428e48f3a30021b2871e44b6aeba4a357d066323aec6ab"
+      "bytes": 2587,
+      "sha256": "b06118ef2af54bd3e403e8a36d7acc434e37a447d521223bb7f9887fb37526c0"
     },
     "tests/security-models.test.mjs": {
       "bytes": 3502,

@@ -100,8 +100,8 @@
   {
     "number": 15,
     "label": "fig:patto",
-    "caption": "Il patto per una pallina lasciata da ferma. Per ogni tolleranza <math display=\"inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mi>ε</mi><annotation encoding=\"application/x-tex\">\\varepsilon</annotation></semantics></math> si cerca un limite <math display=\"inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mi>δ</mi><annotation encoding=\"application/x-tex\">\\delta</annotation></semantics></math> allo spostamento iniziale. Le distanze si misurano dal fondo.",
-    "alt": "Il patto per una pallina lasciata da ferma. Per ogni tolleranza ε si cerca un limite δ allo spostamento iniziale. Le distanze si misurano dal fondo.",
+    "caption": "Tolleranza e spostamento iniziale per una pallina lasciata da ferma. Per ogni tolleranza <math display=\"inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mi>ε</mi><annotation encoding=\"application/x-tex\">\\varepsilon</annotation></semantics></math> si cerca un limite <math display=\"inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mi>δ</mi><annotation encoding=\"application/x-tex\">\\delta</annotation></semantics></math> allo spostamento iniziale. Le distanze si misurano dal fondo.",
+    "alt": "Tolleranza e spostamento iniziale per una pallina lasciata da ferma. Per ogni tolleranza ε si cerca un limite δ allo spostamento iniziale. Le distanze si misurano dal fondo.",
     "file": "figure-15.svg"
   },
   {
@@ -282,8 +282,8 @@
   {
     "number": 41,
     "label": "fig:uhpfase",
-    "caption": "Conca con bordo nel modello conservativo associato all’equilibrio su una gamba. L’origine è stabile ma non attrattiva. Il richiamo è efficace: la postura reale richiede controllo muscolare.",
-    "alt": "Conca con bordo nel modello conservativo associato all’equilibrio su una gamba. L’origine è stabile ma non attrattiva. Il richiamo è efficace: la postura reale richiede controllo muscolare.",
+    "caption": "Conca con bordo nel modello conservativo associato all’equilibrio su una gamba. L’origine è stabile ma non attrattiva. Il richiamo è efficace: l’asana reale richiede controllo muscolare.",
+    "alt": "Conca con bordo nel modello conservativo associato all’equilibrio su una gamba. L’origine è stabile ma non attrattiva. Il richiamo è efficace: l’asana reale richiede controllo muscolare.",
     "file": "figure-41.svg"
   },
   {
@@ -296,15 +296,15 @@
   {
     "number": 43,
     "label": "fig:bacini",
-    "caption": "Bacini del modello a doppia conca: azzurro per l’equilibrio sinistro, ocra per quello destro. Le posture sono un’associazione qualitativa. Il cerchietto vuoto indica la sella; sulla frontiera gli stati convergono a essa, non ai due fondi. La colorazione è un’approssimazione su una griglia finita.",
-    "alt": "Bacini del modello a doppia conca: azzurro per l’equilibrio sinistro, ocra per quello destro. Le posture sono un’associazione qualitativa. Il cerchietto vuoto indica la sella; sulla frontiera gli stati convergono a essa, non ai due fondi. La colorazione è un’approssimazione su una griglia finita.",
+    "caption": "Bacini del modello a doppia conca: azzurro per l’equilibrio sinistro, ocra per quello destro. Gli asana sono un’associazione qualitativa. Il cerchietto vuoto indica la sella; sulla frontiera gli stati convergono a essa, non ai due fondi. La colorazione è un’approssimazione su una griglia finita.",
+    "alt": "Bacini del modello a doppia conca: azzurro per l’equilibrio sinistro, ocra per quello destro. Gli asana sono un’associazione qualitativa. Il cerchietto vuoto indica la sella; sulla frontiera gli stati convergono a essa, non ai due fondi. La colorazione è un’approssimazione su una griglia finita.",
     "file": "figure-43.svg"
   },
   {
     "number": 44,
     "label": "fig:riepilogo",
-    "caption": "Modelli associati alle posture: potenziale, ritratto nel piano degli stati e tipo di equilibrio. La classificazione riguarda il modello specificato, non la postura in ogni condizione.",
-    "alt": "Modelli associati alle posture: potenziale, ritratto nel piano degli stati e tipo di equilibrio. La classificazione riguarda il modello specificato, non la postura in ogni condizione.",
+    "caption": "Modelli associati agli asana: potenziale, ritratto nel piano degli stati e tipo di equilibrio. La classificazione riguarda il modello specificato, non l’asana in ogni condizione.",
+    "alt": "Modelli associati agli asana: potenziale, ritratto nel piano degli stati e tipo di equilibrio. La classificazione riguarda il modello specificato, non l’asana in ogni condizione.",
     "file": "figure-44.svg"
   }
 ]

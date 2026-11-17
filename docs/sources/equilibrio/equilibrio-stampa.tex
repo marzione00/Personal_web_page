@@ -59,11 +59,11 @@
   arc=0pt,outer arc=0pt,left=9pt,right=9pt,top=6pt,bottom=6pt,
   before skip=10pt,after skip=10pt,
   before upper={{\color{Maroon}\spacedlowsmallcaps{#1}}\par\smallskip}}
-\newtcolorbox{formule}{enhanced,
+\newtcolorbox{formule}[1]{enhanced,
   colback=black!3,colframe=black!45,boxrule=0pt,leftrule=1.6pt,
   arc=0pt,outer arc=0pt,left=9pt,right=9pt,top=6pt,bottom=6pt,
   before skip=10pt,after skip=10pt,fontupper=\small,
-  before upper={{\color{black!60}\spacedlowsmallcaps{Per chi ama le formule}}\par\smallskip}}
+  before upper={{\color{black!60}\spacedlowsmallcaps{#1}}\par\smallskip}}
 
 % ------------------------------------------------------------------
 % Stili TikZ
@@ -245,7 +245,7 @@
 \section*{Una caduta, per cominciare}
 % ==================================================================
 
-Chi ha imparato Śīrṣāsana ricorda le prime cadute. Per qualche secondo il corpo capovolto sembra reggersi; poi l'inclinazione cresce e le correzioni non bastano più. In Śavāsana si può osservare una risposta diversa: un braccio rilassato, sollevato di poco, tende a ricadere verso il pavimento e a fermarsi (figura~\ref{fig:apertura}). Il confronto riguarda questi movimenti precisi: un corpo disteso può anche essere spostato e trovare quiete in una nuova posizione.
+Chi ha imparato Śīrṣāsana ricorda le prime cadute. Per qualche secondo il corpo capovolto sembra reggersi; poi l'inclinazione cresce e le correzioni non bastano più. In Śavāsana si può osservare una risposta diversa: un braccio rilassato, sollevato di poco, tende a ricadere verso il pavimento e a fermarsi (figura~\ref{fig:apertura}). Per il braccio consideriamo il solo movimento verticale, fino al contatto con il suolo.
 
 \begin{figure}[htbp]
 \centering
@@ -270,10 +270,10 @@ Chi ha imparato Śīrṣāsana ricorda le prime cadute. Per qualche secondo il c
 
 La teoria della stabilità studia come un sistema risponde a piccoli disturbi. Aleksandr Michajlovič Ljapunov, noto nella letteratura internazionale come Lyapunov, ne pose le basi nella tesi \emph{Il problema generale della stabilità del moto}, pubblicata nel 1892. Il suo metodo permette di stabilire se un movimento resterà vicino a un equilibrio senza doverne calcolare l'intero percorso.
 
-Il percorso parte da una pallina e usa quattro esempi della pratica Aṣṭāṅga: Śavāsana, l'equilibrio su una gamba, Śīrṣāsana e il dropback fra Samasthiti e Ūrdhva Dhanurāsana. I riquadri raccolgono i termini nuovi; quelli grigi contengono gli approfondimenti matematici. Le figure del corpo sono schemi per discutere la stabilità, non descrizioni complete della postura.
+Una pallina lasciata sul fondo di una ciotola e una appoggiata sulla cima di un dosso reagiscono diversamente a un piccolo spostamento, perché la forma della superficie determina le forze che agiscono durante il moto. Da questa differenza possiamo ricavare le condizioni che consentono di mantenere un equilibrio e riconoscere quelle che provocano l'allontanamento. Nel passaggio al corpo dovremo considerare anche le correzioni muscolari, dalle quali dipende la possibilità di sostenere un asana quando cambiano gli appoggi, la distribuzione del peso e l'inclinazione.
 
 \begin{riquadro}{Come leggere le figure}
-Il blu indica il movimento, il verde l'energia, il rosso gli equilibri e le frontiere. L'ocra distingue le perturbazioni esterne e le correzioni. Dove compare una soglia di caduta, è un limite scelto per il modello illustrato.
+Blu: movimento. Verde: energia. Rosso: equilibri e frontiere. Ocra: perturbazioni e correzioni.
 \end{riquadro}
 
 % ==================================================================
@@ -282,9 +282,9 @@ Il blu indica il movimento, il verde l'energia, il rosso gli equilibri e le fron
 
 \paragraph{La pallina} Una pallina in una ciotola con attrito si ferma, dopo qualche oscillazione, nel punto più basso. Se la si sposta di poco e la si lascia andare, scende, attraversa il fondo e risale dalla parte opposta. A ogni passaggio perde una parte dell'energia di movimento; le oscillazioni si riducono fino alla quiete.
 
-La pallina ferma sul fondo è in \emph{equilibrio}. Una piccola perturbazione la fa oscillare nei dintorni: in questo senso l'equilibrio è \emph{stabile}. L'attrito assicura anche il ritorno al fondo, una proprietà ulteriore chiamata \emph{stabilità asintotica}. La distinzione servirà quando immagineremo una ciotola senza attrito.
+La pallina ferma sul fondo è in \emph{equilibrio}. Una piccola perturbazione la fa oscillare nei dintorni: in questo senso l'equilibrio è \emph{stabile}. L'attrito assicura anche il ritorno al fondo, una proprietà ulteriore chiamata \emph{stabilità asintotica}.
 
-\paragraph{Il corpo} Il braccio rilassato in Śavāsana offre un esempio di ritorno alla quiete. Sollevato di poco, ricade e si ferma a contatto con il suolo, eventualmente dopo un piccolo rimbalzo (figura~\ref{fig:tornare}). Per il confronto con la pallina consideriamo soltanto il movimento verticale del braccio. Non occorre supporre che ogni parte del corpo ritorni sempre nella configurazione iniziale.
+\paragraph{Il corpo} Il braccio rilassato in Śavāsana offre un esempio di ritorno alla quiete. Sollevato di poco, ricade e si ferma a contatto con il suolo, eventualmente dopo un piccolo rimbalzo (figura~\ref{fig:tornare}).
 
 \begin{figure}[htbp]
 \centering
@@ -319,7 +319,7 @@ La pallina ferma sul fondo è in \emph{equilibrio}. Una piccola perturbazione la
 \label{fig:tornare}
 \end{figure}
 
-Un grafico può mostrare come cambia la posizione nel tempo (figura~\ref{fig:onda}). Lo scostamento dal punto di riposo ha un segno: positivo da una parte, negativo dall'altra. L'onda rappresenta un oscillatore smorzato; per il braccio ne illustra soltanto il progressivo arresto, perché il pavimento ne limita il movimento. Chiameremo \emph{perturbazione}, o più semplicemente \emph{spinta}, una variazione iniziale della posizione o della velocità.
+Lo scostamento dal punto di riposo cambia segno quando la pallina attraversa il fondo: positivo da una parte, negativo dall'altra (figura~\ref{fig:onda}). L'ampiezza decrescente delle oscillazioni misura il progressivo arresto. Nei modelli meccanici senza memoria che useremo, posizione e velocità costituiscono lo \emph{stato}: note queste due quantità e le forze in gioco, possiamo determinare il movimento successivo. Una variazione iniziale della posizione o della velocità è una \emph{perturbazione}, che chiameremo anche spinta.
 
 \begin{figure}[htbp]
 \centering
@@ -457,7 +457,7 @@ Un pendolo appeso e uno rovesciato rispondono diversamente alla stessa inclinazi
 \label{fig:sugiu}
 \end{figure}
 
-Il pendolo appeso ha quindi un minimo dell'energia potenziale nella posizione di riposo; quello inverso ha un massimo. Sollevare il braccio in Śavāsana aumenta la sua energia e il rilascio lo riporta verso il suolo. Il corpo capovolto, approssimato da un pendolo inverso senza correzioni, si allontana invece dalla verticale (figura~\ref{fig:paesaggiocorpo}). Il disegno a valle rappresenta qui il movimento scelto per il braccio: uno spostamento orizzontale del corpo disteso può lasciare invariata l'altezza del centro di massa.
+Il pendolo appeso ha quindi un minimo dell'energia potenziale nella posizione di riposo; quello inverso ha un massimo. Sollevare il braccio in Śavāsana aumenta la sua energia e il rilascio lo riporta verso il suolo. Il corpo capovolto, approssimato da un pendolo inverso senza correzioni, si allontana invece dalla verticale (figura~\ref{fig:paesaggiocorpo}).
 
 \begin{figure}[htbp]
 \centering
@@ -598,7 +598,7 @@ La somma dell'energia potenziale e di quella cinetica non aumenta durante il mot
 \label{fig:gradini}
 \end{figure}
 
-Un altimetro offre un'immagine utile. Un escursionista che segue un cammino sempre in discesa non può raggiungere quote superiori a quella iniziale, anche se il sentiero gira attorno alla valle (figura~\ref{fig:escursionista}). Questa informazione limita la regione raggiungibile. Per concludere che arriverà al fondo bisogna anche escludere che il cammino si arresti, o si avvicini indefinitamente a una quota più alta.
+Un escursionista che segue un cammino sempre in discesa non può raggiungere quote superiori a quella iniziale, anche se il sentiero gira attorno alla valle (figura~\ref{fig:escursionista}). Questa informazione limita la regione raggiungibile. Per concludere che arriverà al fondo bisogna anche escludere che il cammino si arresti, o si avvicini indefinitamente a una quota più alta.
 
 \begin{figure}[htbp]
 \centering
@@ -639,7 +639,7 @@ Il metodo di Lyapunov cerca una grandezza con proprietà simili: vale zero nell'
 
 Questa grandezza si chiama \emph{funzione di Lyapunov}; qui la chiameremo anche altimetro. L'energia meccanica ne è un esempio. In un modello di popolazione o in un sistema di controllo si può usare una funzione costruita appositamente, senza interpretarla come energia fisica. Non deve essere una misura esatta della distanza dall'equilibrio.
 
-\paragraph{Il corpo} Nel braccio sollevato l'energia fornita dall'esterno diventa movimento durante la caduta e viene poi dissipata nei tessuti e nel contatto con il pavimento (figura~\ref{fig:braccio}). Il bilancio spiega il ritorno alla quiete. Per descrivere gli urti servirebbe un modello con contatto; l'oscillatore liscio che useremo nei grafici ne rappresenta soltanto lo smorzamento.
+\paragraph{Il corpo} Nel braccio sollevato l'energia fornita dall'esterno diventa movimento durante la caduta e viene poi dissipata nei tessuti e nel contatto con il pavimento (figura~\ref{fig:braccio}). Il bilancio spiega il ritorno alla quiete.
 
 \begin{figure}[htbp]
 \centering
@@ -665,7 +665,7 @@ Questa grandezza si chiama \emph{funzione di Lyapunov}; qui la chiameremo anche 
 \label{fig:braccio}
 \end{figure}
 
-\begin{formule}
+\begin{formule}{Condizioni di stabilità}
 Per un sistema autonomo $\dot x=f(x)$, con $f$ localmente lipschitziana e $f(x^\ast)=0$, sia $V$ una funzione continuamente differenziabile in un intorno dell'equilibrio. Se
 \[
 V(x^\ast)=0, \qquad V(x)>0 \ \text{per}\ x\neq x^\ast, \qquad \dot V(x)\le 0,
@@ -707,9 +707,9 @@ Una funzione regolare dello stato, nulla nell'equilibrio e positiva nei suoi din
 \label{fig:duegrafici}
 \end{figure}
 
-La stabilità richiede che chi parte sufficientemente vicino resti vicino. La stabilità asintotica richiede anche che lo scostamento tenda a zero. La ciotola ideale separa le due proprietà senza cambiare la forma del potenziale.
+La stessa conca può dunque ospitare un movimento che si spegne oppure un'oscillazione persistente, a seconda della dissipazione presente.
 
-Si può formulare la stabilità come un patto. Una persona fissa una tolleranza, indicata con $\varepsilon$ (epsilon); l'altra deve trovare un limite $\delta$ (delta) alla perturbazione iniziale che garantisca di rispettarla per tutto il moto. Il patto deve reggere per ogni tolleranza, anche piccolissima (figura~\ref{fig:patto}). Nel disegno la pallina parte da ferma e basta limitarne lo spostamento. In generale vanno limitate insieme posizione e velocità: è lo \emph{stato iniziale}, che riprenderemo nel capitolo~\ref{sec:mappa}.
+Assegnata una tolleranza $\varepsilon$ (epsilon) attorno all'equilibrio, cerchiamo un limite $\delta$ (delta) alla perturbazione iniziale che permetta di rispettarla durante tutto il moto. La stabilità richiede che questo limite esista per ogni tolleranza positiva, anche molto piccola (figura~\ref{fig:patto}). Nel disegno la pallina parte da ferma e basta limitarne lo spostamento; per uno stato iniziale qualsiasi occorre tenere conto anche della velocità.
 
 \begin{figure}[htbp]
 \centering
@@ -727,7 +727,7 @@ Si può formulare la stabilità come un patto. Una persona fissa una tolleranza,
   \draw[blu,line width=0.8pt,{Stealth[length=1.8mm]}-{Stealth[length=1.8mm]}]
     (-0.6,0.48) .. controls (-0.2,0.3) and (0.2,0.3) .. (0.6,0.48);
 \end{tikzpicture}
-\caption{Il patto per una pallina lasciata da ferma. Per ogni tolleranza $\varepsilon$ si cerca un limite $\delta$ allo spostamento iniziale. Le distanze si misurano dal fondo.}
+\caption{Tolleranza e spostamento iniziale per una pallina lasciata da ferma. Per ogni tolleranza $\varepsilon$ si cerca un limite $\delta$ allo spostamento iniziale. Le distanze si misurano dal fondo.}
 \label{fig:patto}
 \end{figure}
 
@@ -766,7 +766,7 @@ La ciotola della figura~\ref{fig:cratere} ha un bordo. Se la pallina parte nella
 \label{fig:cratere}
 \end{figure}
 
-\paragraph{Il corpo} In Utthita Hasta Pādāṅguṣṭhāsana un piede sostiene il corpo, mentre l'altra gamba si distende in avanti e la mano trattiene l'alluce. La postura presenta piccole oscillazioni. Una pedana stabilometrica può registrare il centro di pressione, cioè il punto di applicazione della risultante delle forze di contatto sul piano d'appoggio. La traccia della figura~\ref{fig:uhp} ne dà un'illustrazione schematica.
+\paragraph{Il corpo} In Utthita Hasta Pādāṅguṣṭhāsana un piede sostiene il corpo, mentre l'altra gamba si distende in avanti e la mano trattiene l'alluce. Durante il mantenimento dell’asana si osservano piccole oscillazioni. Una pedana stabilometrica può registrare il centro di pressione, cioè il punto di applicazione della risultante delle forze di contatto sul piano d'appoggio. La traccia della figura~\ref{fig:uhp} ne dà un'illustrazione schematica.
 
 \begin{figure}[htbp]
 \centering
@@ -793,11 +793,11 @@ La ciotola della figura~\ref{fig:cratere} ha un bordo. Se la pallina parte nella
 \label{fig:uhp}
 \end{figure}
 
-Le oscillazioni contenute richiamano l'idea di restare vicini. Il confronto ha però un limite: il centro di pressione non descrive da solo lo stato del corpo, e una traccia osservata per pochi secondi non garantisce il comportamento futuro. La possibilità di recupero dipende anche dalla velocità, dai movimenti degli arti e dalle correzioni disponibili.
+La traccia rappresenta lo spostamento del punto di applicazione della forza di contatto durante l'intervallo osservato. La possibilità di recuperare l'equilibrio dipende anche dalla velocità del corpo, dai movimenti degli arti e dalle correzioni muscolari disponibili.
 
-Il corpo riceve disturbi continui, fra cui quelli associati al respiro, e li compensa con il controllo posturale. L'oscillazione persistente della pallina senza attrito serve a distinguere stabilità e convergenza; non riproduce questo controllo.
+Il corpo riceve disturbi continui, fra cui quelli associati al respiro, e li compensa con il controllo posturale.
 
-\begin{formule}
+\begin{formule}{Stabilità e regioni invarianti}
 Per uno stato $x(t)$ e un equilibrio $x^\ast$, la stabilità si esprime così:
 \[
 \begin{gathered}
@@ -811,7 +811,7 @@ Un sottolivello compatto di $V$, contenuto nella regione dove $\dot V\le0$, è p
 \end{formule}
 
 \begin{parola}{Bacino di attrazione}
-L'insieme degli stati iniziali da cui il moto converge a un dato equilibrio. Posizione e velocità possono entrambe influire sull'appartenenza al bacino. Una regione in cui il moto rimane limitato, senza convergere, non è per questo un bacino di attrazione.
+L'insieme degli stati iniziali da cui il moto converge a un dato equilibrio. Posizione e velocità possono entrambe influire sull'appartenenza al bacino.
 \end{parola}
 
 % ==================================================================
@@ -908,8 +908,8 @@ Prendiamo un pendolo semplice inverso lungo 0,8 metri, inizialmente inclinato di
 
 Questi numeri illustrano una scala temporale, non prevedono la caduta di una persona. Il corpo ha una massa distribuita e più articolazioni; inoltre, all'aumentare dell'angolo, l'approssimazione lineare perde precisione.
 
-\begin{formule}
-Per il pendolo semplice inverso, a piccoli angoli $\ddot\theta=(g/\ell)\theta$. Posto $\tau=\sqrt{\ell/g}$, la soluzione è $\theta(t)=\theta_0\cosh(t/\tau)+\tau\omega_0\sinh(t/\tau)$. Se $\omega_0=0$ si ottiene la crescita delle figure. Il modo puro $\theta_0e^{t/\tau}$ richiede invece $\omega_0=\theta_0/\tau$ e raddoppia ogni $\tau\ln2$. Con $g=9{,}81$~m/s$^2$ e $\ell=0{,}8$~m, $\tau\approx0{,}286$~s. Per un corpo rigido di massa $m$, con centro di massa a distanza $\ell$ dal perno e momento d'inerzia $I$, si usa $\ddot\theta=(mg\ell/I)\theta$.
+\begin{formule}{Equazioni del pendolo inverso}
+Per il pendolo semplice inverso, a piccoli angoli $\ddot{\theta}=(g/\ell)\theta$. Posto $\tau=\sqrt{\ell/g}$, la soluzione è $\theta(t)=\theta_0\cosh(t/\tau)+\tau\omega_0\sinh(t/\tau)$. Se $\omega_0=0$ si ottiene la crescita delle figure. Il modo puro $\theta_0e^{t/\tau}$ richiede invece $\omega_0=\theta_0/\tau$ e raddoppia ogni $\tau\ln2$. Con $g=9{,}81$~m/s$^2$ e $\ell=0{,}8$~m, $\tau\approx0{,}286$~s. Per un corpo rigido di massa $m$, con centro di massa a distanza $\ell$ dal perno e momento d'inerzia $I$, si usa $\ddot{\theta}=(mg\ell/I)\theta$.
 \end{formule}
 
 \begin{parola}{Instabile}
@@ -971,7 +971,7 @@ Per aste della stessa forma, una lunghezza maggiore rallenta la crescita dell'in
   \begin{scope}[shift={(6.2,0)}]
     \mano
     \draw[bastone,line width=1.6pt] (0,0.07) -- ($(0,0.07)+(82:0.55)$);
-    \node[piccola,anchor=west,align=left] at (0.9,0.6) {matita di 18 centimetri:\\ l'inclinazione raddoppia\\ in circa 0,08 secondi};
+    \node[piccola,anchor=west,align=left] at (0.9,0.6) {matita di 15 centimetri:\\ l'inclinazione raddoppia\\ in circa 0,07 secondi};
   \end{scope}
 \end{tikzpicture}
 \caption{Più l'oggetto è lungo, più lentamente cade, e più tempo resta per correggerlo.}
@@ -1086,7 +1086,7 @@ La figura~\ref{fig:anello} riassume il circuito del controllo: rilevamento, elab
 
 Il circuito introduce un ritardo. In uno studio su persone in piedi, Horak e Nashner misurarono risposte muscolari a perturbazioni dell'appoggio con latenze fra 73 e 110 millisecondi.\footnote{F.~B. Horak e L.~M. Nashner, \emph{Central programming of postural movements: adaptation to altered support-surface configurations}, Journal of Neurophysiology 55(6), 1369--1381, 1986, DOI: \href{https://doi.org/10.1152/jn.1986.55.6.1369}{10.1152/jn.1986.55.6.1369}. Le misure riguardano la stazione eretta, non Śīrṣāsana.} Nel modo esponenziale del pendolo lungo 0,8 metri, un decimo di secondo basta ad aumentare l'inclinazione di circa il 42\%. Quando arriva la risposta, lo stato può quindi essere già cambiato in misura rilevante.
 
-Le simulazioni della figura~\ref{fig:ritardo} mostrano come il ritardo modifica un controllo proporzionale alla posizione e alla velocità. Con i parametri scelti, un ritardo breve permette il rientro; aumentandolo, le oscillazioni persistono più a lungo o crescono. Anche aumentare troppo i guadagni, a ritardo fissato, può destabilizzare il sistema. Si tratta di esempi numerici: i parametri e la soglia rappresentata non sono misure del corpo umano.
+Le simulazioni della figura~\ref{fig:ritardo} mostrano come il ritardo modifica un controllo proporzionale alla posizione e alla velocità. Con i parametri scelti, un ritardo breve permette il rientro; aumentandolo, le oscillazioni persistono più a lungo o crescono. Anche una correzione troppo intensa, a ritardo fissato, può destabilizzare il sistema: i coefficienti che ne regolano l'intensità sono chiamati guadagni. Si tratta di esempi numerici: i parametri e la soglia rappresentata non sono misure del corpo umano.
 
 \begin{figure}[htbp]
 \centering
@@ -1129,18 +1129,18 @@ Le simulazioni della figura~\ref{fig:ritardo} mostrano come il ritardo modifica 
 
 Il pendolo inverso è utile anche per descrivere alcune oscillazioni in piedi. Nel corpo intervengono però più strategie articolari. In Utthita Hasta Pādāṅguṣṭhāsana la base ridotta limita alcune correzioni, ma da sola non determina l'estensione del bacino di attrazione.
 
-\begin{formule}
-Nel modello lineare del pendolo semplice, una correzione $u=-k_p\theta-k_d\dot\theta$ dà
+\begin{formule}{Controllo con retroazione}
+Nel modello lineare del pendolo semplice, una correzione $u=-k_p\theta-k_d\dot{\theta}$ dà
 \[
-\ddot\theta=\Bigl(\frac{g}{\ell}-k_p\Bigr)\theta-k_d\,\dot\theta .
+\ddot{\theta}=\left(\frac{g}{\ell}-k_p\right)\theta-k_d\,\dot{\theta} .
 \]
 Se $k_p>g/\ell$ e $k_d>0$, la grandezza
 \[
-V=\tfrac12\,\dot\theta^{2}+\tfrac12\Bigl(k_p-\frac{g}{\ell}\Bigr)\theta^{2},
+V=\frac{1}{2}\,\dot{\theta}^{2}+\frac{1}{2}\left(k_p-\frac{g}{\ell}\right)\theta^{2},
 \qquad
-\dot V=-k_d\,\dot\theta^{2}\le 0 ,
+\dot V=-k_d\,\dot{\theta}^{2}\le 0 ,
 \]
-è positiva fuori dall'origine e non cresce. LaSalle assicura la convergenza, perché in $\{\dot\theta=0\}$ l'unico moto che può restare è l'equilibrio. La stabilità asintotica vale per questo modello senza ritardo. Per un'asta omogenea lunga $L$, invece, $\tau=\sqrt{2L/(3g)}$. La figura~\ref{fig:lungocorto} confronta i tempi del modo crescente di due aste.
+è positiva fuori dall'origine e non cresce. LaSalle assicura la convergenza, perché in $\{\dot{\theta}=0\}$ l'unico moto che può restare è l'equilibrio. La stabilità asintotica vale per questo modello senza ritardo. Per un'asta omogenea lunga $L$, invece, $\tau=\sqrt{2L/(3g)}$. La figura~\ref{fig:lungocorto} confronta i tempi del modo crescente di due aste.
 \end{formule}
 
 \begin{parola}{Retroazione}
@@ -1177,9 +1177,7 @@ Il meccanismo che usa una misura dello stato o dell'effetto prodotto per regolar
 \label{fig:dueconche}
 \end{figure}
 
-Un interruttore a scatto offre un esempio di passaggio fra due configurazioni stabili. Per spostarlo occorre superare la resistenza del meccanismo lungo il percorso.
-
-\paragraph{Il corpo} Nel dropback si passa da Samasthiti a Ūrdhva Dhanurāsana e poi si risale (figura~\ref{fig:sequenza}). Possiamo rappresentare le due posture mantenute come due conche di un paesaggio efficace. Il dosso raffigura la regione di passaggio, dove cambiano configurazione e azione muscolare (figura~\ref{fig:dropback}). È un'analogia del movimento controllato: non esiste, in questo schema, un unico angolo del corpo che decida da solo l'esito.
+\paragraph{Il corpo} Nel dropback si passa da Samasthiti a Ūrdhva Dhanurāsana e poi si risale (figura~\ref{fig:sequenza}). Possiamo rappresentare i due asana mantenuti come due conche di un paesaggio efficace. Il dosso raffigura la regione di passaggio, dove cambiano configurazione e azione muscolare (figura~\ref{fig:dropback}). La transizione dipende dalla configurazione del corpo, dalla velocità e dal controllo esercitato durante il movimento.
 
 \begin{figure}[htbp]
 \centering
@@ -1264,7 +1262,7 @@ Il potenziale efficace riassume il richiamo del modello, mentre l'azione muscola
 \label{fig:dropbacktre}
 \end{figure}
 
-Per la risalita il modello richiede energia sufficiente a superare il dislivello del potenziale, oltre a quella dissipata durante il percorso (figura~\ref{fig:risalita}). Questo bilancio dà una condizione necessaria, non una ricetta per il movimento. Anche dopo il dosso, velocità e controllo determinano l'arrivo e l'arresto nella postura in piedi.
+Per la risalita il modello richiede energia sufficiente a superare il dislivello del potenziale, oltre a quella dissipata durante il percorso (figura~\ref{fig:risalita}). Superato il dosso, occorre ridurre la velocità in modo da arrivare in Samasthiti e arrestarsi: il controllo deve accompagnare anche questa fase della risalita.
 
 \begin{figure}[htbp]
 \centering
@@ -1301,9 +1299,7 @@ Una frontiera invariante che separa famiglie di traiettorie con comportamenti di
 \section{Un passo in più: la mappa degli stati}\label{sec:mappa}
 % ==================================================================
 
-Questo capitolo facoltativo introduce lo spazio degli stati e collega i paesaggi dell'energia ai grafici del movimento.
-
-\paragraph{Lo stato} Due pendoli si trovano nel punto più basso. Uno è fermo, l'altro lo attraversa velocemente (figura~\ref{fig:velocita}). Per prevederne il seguito bisogna conoscere posizione e velocità. Nel modello a un grado di libertà, con forze assegnate e senza memoria, queste due quantità formano lo \emph{stato}.
+\paragraph{Lo stato} Due pendoli si trovano nel punto più basso. Uno è fermo, l'altro lo attraversa velocemente (figura~\ref{fig:velocita}). Per prevederne il seguito bisogna conoscere posizione e velocità. La mappa degli stati permette di rappresentare insieme queste due informazioni.
 
 \begin{figure}[htbp]
 \centering
@@ -1487,7 +1483,7 @@ Sollevando ogni stato alla quota data dall'energia totale si ottiene la conca de
 \label{fig:lyatre}
 \end{figure}
 
-\paragraph{Le posizioni sulla mappa} L'oscillatore smorzato usato per illustrare il ritorno alla quiete in Śavāsana produce le spirali della figura~\ref{fig:savasanatre}. Le due viste usano la stessa dinamica. Il braccio reale, con il suo contatto col suolo, richiederebbe una descrizione diversa.
+\paragraph{Le posizioni sulla mappa} L'oscillatore smorzato usato per illustrare il ritorno alla quiete in Śavāsana produce le spirali della figura~\ref{fig:savasanatre}. Le due viste usano la stessa dinamica.
 
 \begin{figure}[htbp]
 \centering
@@ -1562,11 +1558,11 @@ Nel modello conservativo della conca con bordo, le piccole oscillazioni formano 
 \draw[black!45,line width=0.4pt] (fug) -- (6.0cm,4.85cm) node[right,piccola,align=left] {traiettorie che si allontanano:\\ la posizione si perde};
 \draw[black!45,line width=0.4pt] (bor) -- (6.0cm,1.4cm) node[right,piccola,align=left] {equilibrio instabile\\ sul bordo della conca};
 \end{tikzpicture}
-\caption{Conca con bordo nel modello conservativo associato all'equilibrio su una gamba. L'origine è stabile ma non attrattiva. Il richiamo è efficace: la postura reale richiede controllo muscolare.}
+\caption{Conca con bordo nel modello conservativo associato all'equilibrio su una gamba. L'origine è stabile ma non attrattiva. Il richiamo è efficace: l’asana reale richiede controllo muscolare.}
 \label{fig:uhpfase}
 \end{figure}
 
-Il pendolo inverso senza correzioni ha un equilibrio a sella. Nella figura~\ref{fig:selleafuochi} una sola retta, disegnata con due frecce entranti, raccoglie gli stati che convergono alla verticale. La retta trasversale è instabile. Gli altri stati, anche arbitrariamente vicini, si allontanano nel modello lineare. Con un controllo adeguato l'origine diventa asintoticamente stabile; i guadagni scelti nel disegno danno un rientro a spirale.
+Il pendolo inverso senza correzioni ha un equilibrio a sella. Nella figura~\ref{fig:selleafuochi} una sola retta, disegnata con due frecce entranti, raccoglie gli stati che convergono alla verticale. La retta trasversale è instabile. Gli altri stati, anche arbitrariamente vicini, si allontanano nel modello lineare. Con un controllo adeguato l'origine diventa asintoticamente stabile; i coefficienti del controllo scelti nel disegno danno un rientro a spirale.
 
 \begin{figure}[htbp]
 \centering
@@ -1645,7 +1641,7 @@ La doppia conca smorzata ha due equilibri attrattivi. Nella figura~\ref{fig:baci
   \addplot[sella] coordinates {(0,0)};
 \end{axis}
 \end{tikzpicture}
-\caption{Bacini del modello a doppia conca: azzurro per l'equilibrio sinistro, ocra per quello destro. Le posture sono un'associazione qualitativa. Il cerchietto vuoto indica la sella; sulla frontiera gli stati convergono a essa, non ai due fondi. La colorazione è un'approssimazione su una griglia finita.}
+\caption{Bacini del modello a doppia conca: azzurro per l'equilibrio sinistro, ocra per quello destro. Gli asana sono un'associazione qualitativa. Il cerchietto vuoto indica la sella; sulla frontiera gli stati convergono a essa, non ai due fondi. La colorazione è un'approssimazione su una griglia finita.}
 \label{fig:bacini}
 \end{figure}
 
@@ -1755,13 +1751,15 @@ La figura~\ref{fig:riepilogo} raccoglie i modelli discussi. Nella colonna centra
   \end{scope}
 \end{tikzpicture}%
 }
-\caption{Modelli associati alle posture: potenziale, ritratto nel piano degli stati e tipo di equilibrio. La classificazione riguarda il modello specificato, non la postura in ogni condizione.}
+\caption{Modelli associati agli asana: potenziale, ritratto nel piano degli stati e tipo di equilibrio. La classificazione riguarda il modello specificato, non l’asana in ogni condizione.}
 \label{fig:riepilogo}
 \end{figure}
 
 Il corpo ha molti gradi di libertà, contatti variabili e un controllo che dipende anche dalla storia recente. Questi aspetti sono stati ridotti a pochi movimenti per rendere leggibili i modelli. Il ritardo, in particolare, richiede uno stato che contenga la storia del sistema.\footnote{I funzionali di Lyapunov--Krasovskij estendono l'idea di altimetro a una storia di stati.} Una funzione di Lyapunov trovata con le proprietà richieste dimostra la stabilità; il fallimento di una ricerca non dimostra l'instabilità.
 
-Lo Yogasūtra II.47 richiama l'allentamento dello sforzo: \emph{prayatna-śaithilya-ananta-samāpattibhyām}. Nel confronto proposto qui, si può leggere questo invito come ricerca di una correzione ben dosata. Le simulazioni mostrano che aumentare la forza della risposta non garantisce un equilibrio migliore, soprattutto in presenza di ritardo. È una lettura della pratica attraverso il modello, non una spiegazione fisiologica del sūtra.
+Una correzione troppo intensa può alimentare proprio l'oscillazione che dovrebbe arrestare: nel modello del pendolo inverso questo accade, per alcuni valori dei parametri, quando la risposta arriva con ritardo e agisce su un'inclinazione che nel frattempo è cambiata. L'efficacia dell'intervento dipende dunque dalla sua intensità e dal momento in cui viene esercitato, così che uno sforzo maggiore può rendere più difficile il recupero dell'equilibrio.
+
+Ripenso, a questo proposito, al richiamo all'allentamento dello sforzo nello Yogasūtra II.47, \emph{prayatna-śaithilya-ananta-samāpattibhyām}. Mi interessa l'idea che la cura di un asana comprenda anche la capacità di riconoscere quanto sforzo occorra per sostenerlo e quanto, invece, possa essere lasciato andare.
 
 % ==================================================================
 \section*{Piccolo glossario}
@@ -1792,42 +1790,42 @@ Lo Yogasūtra II.47 richiama l'allentamento dello sforzo: \emph{prayatna-śaithi
 \section*{Nota sui modelli e sui grafici}
 % ==================================================================
 
-Questa nota raccoglie i dati necessari a riprodurre i grafici ricalcolati nella revisione. Le coordinate numeriche sono incluse nel sorgente LaTeX, conservato nel pacchetto del sito insieme agli strumenti per esportare le figure. Salvo il pendolo delle figure~\ref{fig:ventaglio} e~\ref{fig:raddoppio}, le grandezze sono in unità adimensionali. I parametri servono a illustrare comportamenti matematici e non sono stime del corpo umano. I pittogrammi, le barre di energia e le tracce del centro di pressione sono schemi didattici, non misure sperimentali.
+Salvo il pendolo delle figure~\ref{fig:ventaglio} e~\ref{fig:raddoppio}, le grandezze sono in unità adimensionali. I parametri servono a illustrare comportamenti matematici e non sono stime del corpo umano. Pittogrammi, barre di energia e tracce del centro di pressione illustrano i modelli descritti. Le coordinate numeriche e gli strumenti per esportare le figure sono conservati nel pacchetto sorgente del sito.
 
-\begin{formule}
+\begin{formule}{Oscillazioni smorzate}
 \textbf{Oscillazioni e altimetro.} Per i ritratti di fase si usa
 \[
  \dot q=v,\qquad \dot v=-q-cv,\qquad
- V=\tfrac12(q^2+v^2),\qquad \dot V=-cv^2.
+ V=\frac{1}{2}(q^2+v^2),\qquad \dot V=-cv^2.
 \]
 Nella figura~\ref{fig:lyatre} si pone $c=0{,}24$, con stato iniziale $(1{,}8,0)$ e tempo da 0 a 25; la quota superiore è $1{,}3+V$, con un piccolo scarto grafico per rendere visibile la curva. Nella figura~\ref{fig:savasanatre} si pone $c=0{,}4$, con stati iniziali $(\pm1{,}8,0)$ e $(0,\pm1{,}8)$ e tempo da 0 a 24. Le curve in piano e in rilievo provengono dalla stessa soluzione analitica.
 
 La figura~\ref{fig:corretto} usa invece due coordinate di posizione indipendenti, ciascuna soggetta a $\ddot q+0{,}5\dot q+1{,}2q=0$. I dati iniziali sono $(q_1,q_2,\dot q_1,\dot q_2)=(1{,}5,0,0,0{,}7)$. La superficie rappresenta il solo potenziale $0{,}6(q_1^2+q_2^2)$; il controllo di monotonia riguarda l'energia totale, inclusa quella cinetica.
 \end{formule}
 
-\begin{formule}
+\begin{formule}{Conca con bordo}
 \textbf{Conca con bordo.} Il ritratto conservativo della figura~\ref{fig:uhpfase} corrisponde a
 \[
- \dot q=v,\qquad \dot v=-q+\tfrac12q^3,\qquad
- H=\tfrac12v^2+\tfrac12q^2-\tfrac18q^4.
+ \dot q=v,\qquad \dot v=-q+\frac{1}{2}q^3,\qquad
+ H=\frac{1}{2}v^2+\frac{1}{2}q^2-\tfrac18q^4.
 \]
 Il centro è in $(0,0)$ e le selle in $(\pm\sqrt2,0)$. Le separatrici appartengono al livello $H=1/2$ e hanno equazioni $v=\pm(1-q^2/2)$. Le orbite interne sono periodiche; non convergono al centro. Gli altri paesaggi schematici mostrano la forma del potenziale e non vanno letti come superfici di Lyapunov nello spazio degli stati.
 \end{formule}
 
-\begin{formule}
+\begin{formule}{Bacini della doppia conca}
 \textbf{Doppia conca e bacini.} La carta della figura~\ref{fig:bacini} usa
 \[
  \dot q=v,\qquad \dot v=q-q^3-0{,}3v,\qquad
- E=\tfrac12v^2+\tfrac14(q^2-1)^2.
+ E=\frac{1}{2}v^2+\tfrac14(q^2-1)^2.
 \]
 I 4096 stati iniziali formano una griglia $64\times64$ nel quadrato $[-2,2]^2$. L'integrazione Runge--Kutta del quarto ordine ha passo $0{,}01$ e termina a $t=120$; il colore dipende dal pozzo raggiunto. Su questa griglia, lo scarto finale da uno dei due equilibri è inferiore a $10^{-7}$ in entrambe le componenti.
 
 Le curve rosse approssimano la varietà stabile della sella: si parte da $\pm10^{-5}(1,\lambda_s)$, con $\lambda_s=(-0{,}3-\sqrt{4{,}09})/2$, e si integra all'indietro con passo $-0{,}001$. La griglia colorata ha risoluzione finita e non certifica da sola l'esatta posizione del confine.
 
-Per il rilievo della figura~\ref{fig:dropbacktre} si aggiunge una coordinata $r$ con $\ddot r+0{,}3\dot r+r=0$. La superficie è $U(q,r)=\tfrac14(q^2-1)^2+\tfrac12r^2$. Si parte da $(q,r,\dot q,\dot r)=(-1,0{,}2,1{,}1,0{,}3)$ e si integra fino a $t=50$, con passo $0{,}01$.
+Per il rilievo della figura~\ref{fig:dropbacktre} si aggiunge una coordinata $r$ con $\ddot r+0{,}3\dot r+r=0$. La superficie è $U(q,r)=\tfrac14(q^2-1)^2+\frac{1}{2}r^2$. Si parte da $(q,r,\dot q,\dot r)=(-1,0{,}2,1{,}1,0{,}3)$ e si integra fino a $t=50$, con passo $0{,}01$.
 \end{formule}
 
-\begin{formule}
+\begin{formule}{Effetti del ritardo}
 \textbf{Controllo ritardato.} La figura~\ref{fig:ritardo} usa il sistema
 \[
  \dot q(t)=v(t),\qquad

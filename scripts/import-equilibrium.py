@@ -5,7 +5,7 @@ ROOT=Path(__file__).resolve().parents[1]
 SOURCE=ROOT
 ORIGINAL=ROOT/'docs/sources/equilibrio/equilibrio-originale.tex'
 SLUG='lequilibrio-sul-tappetino'
-tex=ORIGINAL.read_text()
+tex=(ROOT/'docs/sources/equilibrio/equilibrio-editoriale.tex').read_text()
 
 def brace(s, pos):
     assert s[pos]=='{'
@@ -54,7 +54,7 @@ body=body.replace(r'Le coordinate sono già incluse nel sorgente; lo script alle
 boxes=[]
 def box(m):
     kind=m[1]; arg=m[2] or ''; content=m[3]
-    title='Per chi ama le formule' if kind=='formule' else arg[1:-1]
+    title=arg[1:-1]
     boxes.append((kind,title,pandoc(content)))
     return '\n\nEQUILIBRIUMBOX'+f'{len(boxes):02d}'+'\n\n'
 body=re.sub(r'\\begin\{(riquadro|parola|formule)\}(\{[^}]*\})?([\s\S]*?)\\end\{\1\}',box,body)
@@ -67,15 +67,16 @@ for i,(kind,title,content) in enumerate(boxes,1):
         markup=f'<aside class="science-note"><p class="science-note-title">{html.escape(title)}</p>{content}</aside>'
     result=result.replace(f'<p>EQUILIBRIUMBOX{i:02d}</p>',markup)
 for f in manifest:
-    i=f['number']; label=f'Figura {i}. '+f['alt']; asset='assets/articles/equilibrio/'+f['file']
-    import xml.etree.ElementTree as ET
-    svg=ET.parse(SOURCE/'public'/asset).getroot()
-    dims=svg.attrib['viewBox'].split()
-    dimension=f'width="{round(float(dims[2]))}" height="{round(float(dims[3]))}"'
+    i=f['number']; asset='assets/articles/equilibrio/'+f['file']
+    svg=(SOURCE/'public'/asset).read_text()
+    svg=svg.replace(f'<title id="eq-{i:02d}-title">Diagramma {i}</title>',f'<title id="eq-{i:02d}-title">{html.escape(f["alt"])}</title>')
     markup=f'''<figure class="science-figure" id="figura-{i:02d}">
-<a class="science-figure-link" href="{asset}" data-travel-photo data-science-figure aria-label="{html.escape('Ingrandisci la figura '+str(i),quote=True)}"><img src="{asset}" {dimension} alt="{html.escape(label,quote=True)}" loading="lazy" decoding="async"><span class="science-expand" aria-hidden="true">↗ Ingrandisci la figura {i}</span></a>
+<div class="science-figure-head"><span>DIAGRAMMA {i:02d}</span><a href="#figura-{i:02d}" data-travel-photo data-science-figure aria-haspopup="dialog" aria-label="Ingrandisci il diagramma {i}">Esplora ↗</a></div>
+<div class="science-board" tabindex="0" role="region" aria-label="Diagramma {i}, area scorrevole">{svg}</div>
 <figcaption><strong>Figura {i}.</strong> {f['caption']}</figcaption></figure>'''
     result=result.replace(f'<p>EQUILIBRIUMFIGURE{i:02d}</p>',markup)
+result=re.sub(r'<aside class="science-note"><p class="science-note-title">Come leggere le figure</p>.*?</aside>', '<div class="science-legend" aria-label="Legenda dei diagrammi"><span class="sd-motion">Movimento</span><span class="sd-energy">Energia</span><span class="sd-boundary">Equilibri e frontiere</span><span class="sd-correction">Perturbazioni e correzioni</span></div>',result,flags=re.S)
+assert not re.search(r'<span class="math (?:display|inline)"|\$\$',result), 'Unconverted mathematics'
 result='<div class="scientific-article" lang="it" data-travel-gallery>\n'+result+'\n</div>'
 # Pandoc emits redundant inline style on definition-list terms. CSS owns styling.
 result=re.sub(r' style="[^"]*"','',result)

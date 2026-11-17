@@ -1,10 +1,10 @@
-# Pacchetto GitHub completo — Topological Manifolds v3.18.0
+# Pacchetto GitHub completo — Topological Manifolds v3.22.0
 
-La nuova versione aggiunge al blog «La guerra delle false percezioni», con il testo italiano integrale fornito dall’autore e la traduzione inglese. Comprende gli aggiornamenti della biografia e del CV della v3.17.2. L’articolo entra in indice, ricerca, feed e sitemap; non richiede librerie o configurazioni aggiuntive.
+La versione aggiorna «L’equilibrio sul tappetino»: testo rivisto, 44 diagrammi SVG integrati nel sito, formule corrette e PDF aggiornato. Include tutti gli articoli e le funzionalità delle revisioni precedenti.
 
-Usare l’intero contenuto dello ZIP per riallineare sorgenti, contenuti, stili e documentazione. Restano incluse tutte le correzioni dei test browser della versione 3.15.2. Creare un nuovo commit: **Re-run jobs su una vecchia esecuzione riutilizza il vecchio codice**.
+Usare l’intero contenuto dello ZIP per riallineare sorgenti, contenuti, stili e documentazione. Il rapporto corrente è `docs/EQUILIBRIO_v3.22.0.md`.
 
-Il rapporto corrente è `docs/ARTICOLO_FALSE_PERCEZIONI_v3.18.0.md`; `docs/CORREZIONE_CI_v3.15.2.md` documenta la precedente revisione della CI. Nessuna modifica è stata pubblicata automaticamente su GitHub. La suite browser completa e il workflow remoto restano da eseguire sul nuovo commit.
+Creare un nuovo commit: **Re-run jobs su una vecchia esecuzione riutilizza il vecchio codice**. Nessun push o deploy remoto è stato eseguito; la suite browser completa e il workflow GitHub devono essere eseguiti sul nuovo commit.
 
 ## Correzione dell’errore di installazione Chromium
 

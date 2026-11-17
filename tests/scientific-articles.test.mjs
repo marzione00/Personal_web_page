@@ -15,7 +15,9 @@ test('Equilibrium essay retains all 44 figures, 12 chapters, equations and gloss
  assert.equal((toc.match(/<a /g)||[]).length,12);
  assert.ok((body.match(/<math /g)||[]).length>80);
  assert.equal((body.match(/<dt>/g)||[]).length,17);
- assert.match(body,/Piccolo glossario/);assert.match(body,/Horak/);
+ assert.equal((body.match(/class="science-svg"/g)||[]).length,44);
+ assert.doesNotMatch(body,/<img|<span class="math (?:display|inline)"|Per chi ama le formule|Il percorso parte|Nel confronto proposto qui|ricalcolati nella revisione/);
+ assert.match(body,/Controllo con retroazione/);assert.match(body,/Piccolo glossario/);assert.match(body,/Horak/);
  const ids=[...body.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);
  assert.equal(ids.length,new Set(ids).size);
  for(const m of (body+toc).matchAll(/href="(?:articolo-lequilibrio-sul-tappetino\.html)?#([^"]+)"/g))assert.ok(ids.includes(m[1]),'Missing reference '+m[1]);
@@ -28,7 +30,7 @@ test('Scientific diagrams remain local, passive vectors with preserved descripti
  for(const figure of manifest){
   assert.ok(figure.alt.length>30);
   const svg=fs.readFileSync(path.join(root,'public/assets/articles/equilibrio',figure.file),'utf8');
-  assert.match(svg,/<svg /);assert.match(svg,/<path /);
+  assert.match(svg,/<svg /);assert.match(svg,/<path /);if(![26,32].includes(figure.number))assert.match(svg,/<text /);
   assert.doesNotMatch(svg,/<(?:script|image|foreignObject)|(?:href="(?!#))|\son\w+=/);
  }
 });

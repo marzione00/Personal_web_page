@@ -6,6 +6,7 @@
  const dialog=document.getElementById('travel-lightbox');
  if(!dialog || typeof dialog.showModal!=='function')return;
  const full=dialog.querySelector('[data-travel-large]');
+ const diagrams=document.createElement('div');diagrams.dataset.travelDiagram='';full.after(diagrams);
  const caption=dialog.querySelector('[data-travel-caption]');
  const count=dialog.querySelector('[data-travel-count]');
  const close=dialog.querySelector('[data-travel-close]');
@@ -16,14 +17,22 @@
  function display(index){
   if(!links.length)return;
   active=(index+links.length)%links.length;
-  const link=links[active],thumb=link.querySelector('img');
-  dialog.toggleAttribute('data-science',link.hasAttribute('data-science-figure'));
+  const link=links[active],thumb=link.querySelector('img'),science=link.hasAttribute('data-science-figure');
+  dialog.toggleAttribute('data-science',science);
   dialog.removeAttribute('data-zoom');zoom?.setAttribute('aria-pressed','false');
-  // In the portable preview, images are embedded verbatim as data URLs.
-  const url=document.body.dataset.portable==='true' ? (thumb?.src||link.href) : link.href;
-  full.src=url;
-  const text=thumb?.alt||link.textContent.trim();
-  full.alt=text;caption.textContent=text;
+  diagrams.replaceChildren();full.removeAttribute('src');
+  if(science){
+   const figure=link.closest('figure'),svg=figure.querySelector('svg').cloneNode(true);
+   // Scope cloned references so the page and its modal never share IDs.
+   for(const node of [svg,...svg.querySelectorAll('*')])for(const attr of Array.from(node.attributes)){
+    if(attr.name==='id'||attr.name==='aria-labelledby')node.setAttribute(attr.name,attr.value+'-viewer');
+    else if(attr.value.includes('url(#'))node.setAttribute(attr.name,attr.value.replace(/url\(#([^)]*)\)/g,'url(#$1-viewer)'));
+   }
+   diagrams.append(svg);caption.textContent=figure.querySelector('figcaption').textContent;
+  }else{
+   full.src=document.body.dataset.portable==='true'?(thumb?.src||link.href):link.href;
+   full.alt=thumb?.alt||link.textContent.trim();caption.textContent=full.alt;
+  }
   count.textContent=`${active+1} / ${links.length}`;
   prev.disabled=next.disabled=links.length<=1;
  }
@@ -48,7 +57,7 @@
   if(event.key==='ArrowRight'){event.preventDefault();display(active+1);}
  });
  dialog.addEventListener('close',()=>{
-  full.removeAttribute('src');links=[];
+  full.removeAttribute('src');diagrams.replaceChildren();links=[];
   if(!document.activeElement?.closest?.('#main'))lastFocused?.focus();lastFocused=null;
  });
 })();

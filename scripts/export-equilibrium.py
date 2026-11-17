@@ -19,16 +19,6 @@ with tempfile.TemporaryDirectory(prefix='equilibrio-') as temporary:
             result=subprocess.run(['pdflatex','-no-shell-escape','-interaction=nonstopmode','-halt-on-error',name+'.tex'],cwd=work,capture_output=True,text=True)
             if result.returncode:
                 raise RuntimeError(result.stdout[-5000:])
-    document=fitz.open(work/'equilibrio-figure-web.pdf')
-    if len(document)!=44: raise ValueError('Expected 44 figure pages')
-    vectors=[]
-    for page in document:
-        svg=page.get_svg_image(text_as_path=True)
-        if any(node.tag.rsplit('}',1)[-1] not in allowed for node in ET.fromstring(svg).iter()):
-            raise ValueError('Only passive vector geometry is allowed')
-        vectors.append(svg)
-    destination.mkdir(parents=True,exist_ok=True)
-    for i,svg in enumerate(vectors,1):
-        (destination/f'figure-{i:02d}.svg').write_text(svg)
+    subprocess.run(['python3',str(root/'scripts/equilibrium-vectors.py'),str(work/'equilibrio-figure-web.pdf'),str(destination)],check=True)
     shutil.copyfile(work/'equilibrio-stampa.pdf',root/'public/media/docs/equilibrio-sul-tappetino.pdf')
 print('Exported 44 vector diagrams and the print PDF.')

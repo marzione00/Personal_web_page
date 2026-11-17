@@ -16,30 +16,30 @@ pdf: media/docs/equilibrio-sul-tappetino.pdf
 
 ## Una caduta, per cominciare
 
-Chi ha imparato Śīrṣāsana ricorda le prime cadute. Per qualche secondo il corpo capovolto sembra reggersi; poi l’inclinazione cresce e le correzioni non bastano più. In Śavāsana si può osservare una risposta diversa: un braccio rilassato, sollevato di poco, tende a ricadere verso il pavimento e a fermarsi (figura [1](articolo-lequilibrio-sul-tappetino.html#figura-01)). Il confronto riguarda questi movimenti precisi: un corpo disteso può anche essere spostato e trovare quiete in una nuova posizione.
+Chi ha imparato Śīrṣāsana ricorda le prime cadute. Per qualche secondo il corpo capovolto sembra reggersi; poi l’inclinazione cresce e le correzioni non bastano più. In Śavāsana si può osservare una risposta diversa: un braccio rilassato, sollevato di poco, tende a ricadere verso il pavimento e a fermarsi (figura [1](articolo-lequilibrio-sul-tappetino.html#figura-01)). Per il braccio consideriamo il solo movimento verticale, fino al contatto con il suolo.
 
 Figura 1. Risposte a una perturbazione. In Śīrṣāsana l’inclinazione tende a crescere se mancano le correzioni; il braccio rilassato in Śavāsana ricade verso il pavimento.
 
 La teoria della stabilità studia come un sistema risponde a piccoli disturbi. Aleksandr Michajlovič Ljapunov, noto nella letteratura internazionale come Lyapunov, ne pose le basi nella tesi *Il problema generale della stabilità del moto*, pubblicata nel 1892. Il suo metodo permette di stabilire se un movimento resterà vicino a un equilibrio senza doverne calcolare l’intero percorso.
 
-Il percorso parte da una pallina e usa quattro esempi della pratica Aṣṭāṅga: Śavāsana, l’equilibrio su una gamba, Śīrṣāsana e il dropback fra Samasthiti e Ūrdhva Dhanurāsana. I riquadri raccolgono i termini nuovi; quelli grigi contengono gli approfondimenti matematici. Le figure del corpo sono schemi per discutere la stabilità, non descrizioni complete della postura.
+Una pallina lasciata sul fondo di una ciotola e una appoggiata sulla cima di un dosso reagiscono diversamente a un piccolo spostamento, perché la forma della superficie determina le forze che agiscono durante il moto. Da questa differenza possiamo ricavare le condizioni che consentono di mantenere un equilibrio e riconoscere quelle che provocano l’allontanamento. Nel passaggio al corpo dovremo considerare anche le correzioni muscolari, dalle quali dipende la possibilità di sostenere un asana quando cambiano gli appoggi, la distribuzione del peso e l’inclinazione.
 
 **Come leggere le figure**
 
-Il blu indica il movimento, il verde l’energia, il rosso gli equilibri e le frontiere. L’ocra distingue le perturbazioni esterne e le correzioni. Dove compare una soglia di caduta, è un limite scelto per il modello illustrato.
+Blu: movimento. Verde: energia. Rosso: equilibri e frontiere. Ocra: perturbazioni e correzioni.
 
 
 ## Tornare
 
 **La pallina.** Una pallina in una ciotola con attrito si ferma, dopo qualche oscillazione, nel punto più basso. Se la si sposta di poco e la si lascia andare, scende, attraversa il fondo e risale dalla parte opposta. A ogni passaggio perde una parte dell’energia di movimento; le oscillazioni si riducono fino alla quiete.
 
-La pallina ferma sul fondo è in *equilibrio*. Una piccola perturbazione la fa oscillare nei dintorni: in questo senso l’equilibrio è *stabile*. L’attrito assicura anche il ritorno al fondo, una proprietà ulteriore chiamata *stabilità asintotica*. La distinzione servirà quando immagineremo una ciotola senza attrito.
+La pallina ferma sul fondo è in *equilibrio*. Una piccola perturbazione la fa oscillare nei dintorni: in questo senso l’equilibrio è *stabile*. L’attrito assicura anche il ritorno al fondo, una proprietà ulteriore chiamata *stabilità asintotica*.
 
-**Il corpo.** Il braccio rilassato in Śavāsana offre un esempio di ritorno alla quiete. Sollevato di poco, ricade e si ferma a contatto con il suolo, eventualmente dopo un piccolo rimbalzo (figura [2](articolo-lequilibrio-sul-tappetino.html#figura-02)). Per il confronto con la pallina consideriamo soltanto il movimento verticale del braccio. Non occorre supporre che ogni parte del corpo ritorni sempre nella configurazione iniziale.
+**Il corpo.** Il braccio rilassato in Śavāsana offre un esempio di ritorno alla quiete. Sollevato di poco, ricade e si ferma a contatto con il suolo, eventualmente dopo un piccolo rimbalzo (figura [2](articolo-lequilibrio-sul-tappetino.html#figura-02)).
 
 Figura 2. Pallina e braccio in quattro momenti. La pallina grigia, nel terzo disegno, indica l’altezza iniziale. Il rimbalzo del braccio è schematico.
 
-Un grafico può mostrare come cambia la posizione nel tempo (figura [3](articolo-lequilibrio-sul-tappetino.html#figura-03)). Lo scostamento dal punto di riposo ha un segno: positivo da una parte, negativo dall’altra. L’onda rappresenta un oscillatore smorzato; per il braccio ne illustra soltanto il progressivo arresto, perché il pavimento ne limita il movimento. Chiameremo *perturbazione*, o più semplicemente *spinta*, una variazione iniziale della posizione o della velocità.
+Lo scostamento dal punto di riposo cambia segno quando la pallina attraversa il fondo: positivo da una parte, negativo dall’altra (figura [3](articolo-lequilibrio-sul-tappetino.html#figura-03)). L’ampiezza decrescente delle oscillazioni misura il progressivo arresto. Nei modelli meccanici senza memoria che useremo, posizione e velocità costituiscono lo *stato*: note queste due quantità e le forze in gioco, possiamo determinare il movimento successivo. Una variazione iniziale della posizione o della velocità è una *perturbazione*, che chiameremo anche spinta.
 
 Figura 3. Scostamento dal punto di riposo in un oscillatore smorzato. Il grafico descrive il ritorno della pallina; il confronto con il braccio riguarda la riduzione del movimento, non il passaggio attraverso il pavimento.
 
@@ -64,7 +64,7 @@ Un pendolo appeso e uno rovesciato rispondono diversamente alla stessa inclinazi
 
 Figura 6. Uno spostamento alza il centro di massa di un oggetto appeso e abbassa quello di un oggetto in appoggio su una base stretta. Il cerchietto vuoto indica la posizione di partenza.
 
-Il pendolo appeso ha quindi un minimo dell’energia potenziale nella posizione di riposo; quello inverso ha un massimo. Sollevare il braccio in Śavāsana aumenta la sua energia e il rilascio lo riporta verso il suolo. Il corpo capovolto, approssimato da un pendolo inverso senza correzioni, si allontana invece dalla verticale (figura [7](articolo-lequilibrio-sul-tappetino.html#figura-07)). Il disegno a valle rappresenta qui il movimento scelto per il braccio: uno spostamento orizzontale del corpo disteso può lasciare invariata l’altezza del centro di massa.
+Il pendolo appeso ha quindi un minimo dell’energia potenziale nella posizione di riposo; quello inverso ha un massimo. Sollevare il braccio in Śavāsana aumenta la sua energia e il rilascio lo riporta verso il suolo. Il corpo capovolto, approssimato da un pendolo inverso senza correzioni, si allontana invece dalla verticale (figura [7](articolo-lequilibrio-sul-tappetino.html#figura-07)).
 
 Figura 7. Paesaggi schematici dei movimenti considerati: il ritorno del braccio in Śavāsana e l’inclinazione del pendolo inverso associato a Śīrṣāsana senza correzioni.
 
@@ -95,7 +95,7 @@ La somma dell’energia potenziale e di quella cinetica non aumenta durante il m
 
 Figura 11. Posizione ed energia totale dell’oscillatore smorzato. L’energia non risale; la pendenza si annulla agli istanti di inversione del moto.
 
-Un altimetro offre un’immagine utile. Un escursionista che segue un cammino sempre in discesa non può raggiungere quote superiori a quella iniziale, anche se il sentiero gira attorno alla valle (figura [12](articolo-lequilibrio-sul-tappetino.html#figura-12)). Questa informazione limita la regione raggiungibile. Per concludere che arriverà al fondo bisogna anche escludere che il cammino si arresti, o si avvicini indefinitamente a una quota più alta.
+Un escursionista che segue un cammino sempre in discesa non può raggiungere quote superiori a quella iniziale, anche se il sentiero gira attorno alla valle (figura [12](articolo-lequilibrio-sul-tappetino.html#figura-12)). Questa informazione limita la regione raggiungibile. Per concludere che arriverà al fondo bisogna anche escludere che il cammino si arresti, o si avvicini indefinitamente a una quota più alta.
 
 Figura 12. Un cammino in discesa e la sua quota. Le curve verdi uniscono punti alla stessa altezza; il percorso illustrato si avvicina al fondo della valle, posto a 1000 metri.
 
@@ -103,11 +103,11 @@ Il metodo di Lyapunov cerca una grandezza con proprietà simili: vale zero nell�
 
 Questa grandezza si chiama *funzione di Lyapunov*; qui la chiameremo anche altimetro. L’energia meccanica ne è un esempio. In un modello di popolazione o in un sistema di controllo si può usare una funzione costruita appositamente, senza interpretarla come energia fisica. Non deve essere una misura esatta della distanza dall’equilibrio.
 
-**Il corpo.** Nel braccio sollevato l’energia fornita dall’esterno diventa movimento durante la caduta e viene poi dissipata nei tessuti e nel contatto con il pavimento (figura [13](articolo-lequilibrio-sul-tappetino.html#figura-13)). Il bilancio spiega il ritorno alla quiete. Per descrivere gli urti servirebbe un modello con contatto; l’oscillatore liscio che useremo nei grafici ne rappresenta soltanto lo smorzamento.
+**Il corpo.** Nel braccio sollevato l’energia fornita dall’esterno diventa movimento durante la caduta e viene poi dissipata nei tessuti e nel contatto con il pavimento (figura [13](articolo-lequilibrio-sul-tappetino.html#figura-13)). Il bilancio spiega il ritorno alla quiete.
 
 Figura 13. Il braccio che ricade in Śavāsana, con il bilancio dell’energia sotto ogni momento. La somma delle prime due colonne è l’altimetro, che può soltanto scendere.
 
-**Per chi ama le formule**
+**Condizioni di stabilità**
 
 Per un sistema autonomo $\dot{x} = f(x)$, con $f$ localmente lipschitziana e $f\left( x^{*} \right) = 0$, sia $V$ una funzione continuamente differenziabile in un intorno dell’equilibrio. Se $$V\left( x^{*} \right) = 0,\qquad V(x) > 0\ \text{per}\ x \neq x^{*},\qquad\dot{V}(x) \leq 0,$$ l’equilibrio è stabile. Se $\dot{V} < 0$ in ogni stato dell’intorno diverso da $x^{*}$, è asintoticamente stabile. Quando $\dot{V} \leq 0$, LaSalle permette di concludere la convergenza se, in un insieme compatto positivamente invariante, l’unico moto che resta sempre in $\{\dot{V} = 0\}$ è l’equilibrio. Per l’oscillatore $\ddot{q} + c\dot{q} + kq = 0$, con $c,k > 0$, si ha $V = \left( {\dot{q}}^{2} + kq^{2} \right)/2$ e $\dot{V} = -c{\dot{q}}^{2}$: fuori dall’origine, gli zeri di $\dot{V}$ durano un solo istante. Nel caso meccanico conservativo, il teorema di Lagrange–Dirichlet lega un minimo stretto del potenziale alla stabilità.
 
@@ -123,25 +123,25 @@ Una funzione regolare dello stato, nulla nell’equilibrio e positiva nei suoi d
 
 Figura 14. Scostamento della pallina dal fondo. Con attrito le oscillazioni si spengono; senza attrito l’ampiezza rimane costante.
 
-La stabilità richiede che chi parte sufficientemente vicino resti vicino. La stabilità asintotica richiede anche che lo scostamento tenda a zero. La ciotola ideale separa le due proprietà senza cambiare la forma del potenziale.
+La stessa conca può dunque ospitare un movimento che si spegne oppure un’oscillazione persistente, a seconda della dissipazione presente.
 
-Si può formulare la stabilità come un patto. Una persona fissa una tolleranza, indicata con $\varepsilon$ (epsilon); l’altra deve trovare un limite $\delta$ (delta) alla perturbazione iniziale che garantisca di rispettarla per tutto il moto. Il patto deve reggere per ogni tolleranza, anche piccolissima (figura [15](articolo-lequilibrio-sul-tappetino.html#figura-15)). Nel disegno la pallina parte da ferma e basta limitarne lo spostamento. In generale vanno limitate insieme posizione e velocità: è lo *stato iniziale*, che riprenderemo nel capitolo [8](articolo-lequilibrio-sul-tappetino.html#capitolo-9).
+Assegnata una tolleranza $\varepsilon$ (epsilon) attorno all’equilibrio, cerchiamo un limite $\delta$ (delta) alla perturbazione iniziale che permetta di rispettarla durante tutto il moto. La stabilità richiede che questo limite esista per ogni tolleranza positiva, anche molto piccola (figura [15](articolo-lequilibrio-sul-tappetino.html#figura-15)). Nel disegno la pallina parte da ferma e basta limitarne lo spostamento; per uno stato iniziale qualsiasi occorre tenere conto anche della velocità.
 
-Figura 15. Il patto per una pallina lasciata da ferma. Per ogni tolleranza ε si cerca un limite δ allo spostamento iniziale. Le distanze si misurano dal fondo.
+Figura 15. Tolleranza e spostamento iniziale per una pallina lasciata da ferma. Per ogni tolleranza ε si cerca un limite δ allo spostamento iniziale. Le distanze si misurano dal fondo.
 
 La ciotola della figura [16](articolo-lequilibrio-sul-tappetino.html#figura-16) ha un bordo. Se la pallina parte nella conca con energia totale inferiore a quella del bordo, non può uscirne. Un’energia maggiore può consentirle di superarlo. Con attrito, gli stati iniziali da cui il moto converge al fondo formano il suo *bacino di attrazione*. Senza attrito, la regione delle oscillazioni confinate non è un bacino di attrazione: la pallina resta vicina, ma continua a muoversi. La stabilità è una proprietà locale; alcuni sistemi la possiedono anche per perturbazioni arbitrariamente grandi.
 
 Figura 16. Una conca con il bordo. A sinistra la superficie, con il bordo tratteggiato e il percorso di una pallina che resta dentro; a destra la stessa conca vista in sezione.
 
-**Il corpo.** In Utthita Hasta Pādāṅguṣṭhāsana un piede sostiene il corpo, mentre l’altra gamba si distende in avanti e la mano trattiene l’alluce. La postura presenta piccole oscillazioni. Una pedana stabilometrica può registrare il centro di pressione, cioè il punto di applicazione della risultante delle forze di contatto sul piano d’appoggio. La traccia della figura [17](articolo-lequilibrio-sul-tappetino.html#figura-17) ne dà un’illustrazione schematica.
+**Il corpo.** In Utthita Hasta Pādāṅguṣṭhāsana un piede sostiene il corpo, mentre l’altra gamba si distende in avanti e la mano trattiene l’alluce. Durante il mantenimento dell’asana si osservano piccole oscillazioni. Una pedana stabilometrica può registrare il centro di pressione, cioè il punto di applicazione della risultante delle forze di contatto sul piano d’appoggio. La traccia della figura [17](articolo-lequilibrio-sul-tappetino.html#figura-17) ne dà un’illustrazione schematica.
 
 Figura 17. Utthita Hasta Pādāṅguṣṭhāsana e una traccia sintetica del centro di pressione vista dall’alto. Cerchi e percorso sono illustrativi: una registrazione finita di questa grandezza non dimostra la stabilità dello stato completo.
 
-Le oscillazioni contenute richiamano l’idea di restare vicini. Il confronto ha però un limite: il centro di pressione non descrive da solo lo stato del corpo, e una traccia osservata per pochi secondi non garantisce il comportamento futuro. La possibilità di recupero dipende anche dalla velocità, dai movimenti degli arti e dalle correzioni disponibili.
+La traccia rappresenta lo spostamento del punto di applicazione della forza di contatto durante l’intervallo osservato. La possibilità di recuperare l’equilibrio dipende anche dalla velocità del corpo, dai movimenti degli arti e dalle correzioni muscolari disponibili.
 
-Il corpo riceve disturbi continui, fra cui quelli associati al respiro, e li compensa con il controllo posturale. L’oscillazione persistente della pallina senza attrito serve a distinguere stabilità e convergenza; non riproduce questo controllo.
+Il corpo riceve disturbi continui, fra cui quelli associati al respiro, e li compensa con il controllo posturale.
 
-**Per chi ama le formule**
+**Stabilità e regioni invarianti**
 
 Per uno stato $x(t)$ e un equilibrio $x^{*}$, la stabilità si esprime così: $$\begin{matrix}
 {\forall\,\varepsilon > 0\ \ \exists\,\delta > 0:\qquad \parallel x(0) - x^{*} \parallel < \delta} \\
@@ -151,7 +151,7 @@ Per uno stato $x(t)$ e un equilibrio $x^{*}$, la stabilità si esprime così: $$
 
 **Bacino di attrazione**
 
-L’insieme degli stati iniziali da cui il moto converge a un dato equilibrio. Posizione e velocità possono entrambe influire sull’appartenenza al bacino. Una regione in cui il moto rimane limitato, senza convergere, non è per questo un bacino di attrazione.
+L’insieme degli stati iniziali da cui il moto converge a un dato equilibrio. Posizione e velocità possono entrambe influire sull’appartenenza al bacino.
 
 
 ## La cima
@@ -174,7 +174,7 @@ Figura 21. Crescita dell’inclinazione nel modello lineare, partendo da fermo. 
 
 Questi numeri illustrano una scala temporale, non prevedono la caduta di una persona. Il corpo ha una massa distribuita e più articolazioni; inoltre, all’aumentare dell’angolo, l’approssimazione lineare perde precisione.
 
-**Per chi ama le formule**
+**Equazioni del pendolo inverso**
 
 Per il pendolo semplice inverso, a piccoli angoli $\ddot{\theta} = \left( g/\ell \right)\theta$. Posto $\tau = \sqrt{\ell/g}$, la soluzione è $\theta(t) = \theta_{0}\cosh(t/\tau) + \tau\omega_{0}\sinh(t/\tau)$. Se $\omega_{0} = 0$ si ottiene la crescita delle figure. Il modo puro $\theta_{0}e^{t/\tau}$ richiede invece $\omega_{0} = \theta_{0}/\tau$ e raddoppia ogni $\tau\ln 2$. Con $g = 9,81$ m/s$^{2}$ e $\ell = 0,8$ m, $\tau \approx 0,286$ s. Per un corpo rigido di massa $m$, con centro di massa a distanza $\ell$ dal perno e momento d’inerzia $I$, si usa $\ddot{\theta} = \left( mg\ell/I \right)\theta$.
 
@@ -214,15 +214,15 @@ Figura 27. L’anello di retroazione che sostiene Śīrṣāsana.
 
 Il circuito introduce un ritardo. In uno studio su persone in piedi, Horak e Nashner misurarono risposte muscolari a perturbazioni dell’appoggio con latenze fra 73 e 110 millisecondi.[^1] Nel modo esponenziale del pendolo lungo 0,8 metri, un decimo di secondo basta ad aumentare l’inclinazione di circa il 42%. Quando arriva la risposta, lo stato può quindi essere già cambiato in misura rilevante.
 
-Le simulazioni della figura [28](articolo-lequilibrio-sul-tappetino.html#figura-28) mostrano come il ritardo modifica un controllo proporzionale alla posizione e alla velocità. Con i parametri scelti, un ritardo breve permette il rientro; aumentandolo, le oscillazioni persistono più a lungo o crescono. Anche aumentare troppo i guadagni, a ritardo fissato, può destabilizzare il sistema. Si tratta di esempi numerici: i parametri e la soglia rappresentata non sono misure del corpo umano.
+Le simulazioni della figura [28](articolo-lequilibrio-sul-tappetino.html#figura-28) mostrano come il ritardo modifica un controllo proporzionale alla posizione e alla velocità. Con i parametri scelti, un ritardo breve permette il rientro; aumentandolo, le oscillazioni persistono più a lungo o crescono. Anche una correzione troppo intensa, a ritardo fissato, può destabilizzare il sistema: i coefficienti che ne regolano l’intensità sono chiamati guadagni. Si tratta di esempi numerici: i parametri e la soglia rappresentata non sono misure del corpo umano.
 
 Figura 28. Quattro risposte del pendolo inverso con controllo ritardato. La linea rossa è una soglia illustrativa di ampiezza; la croce segna il primo superamento. Equazione, parametri e storia iniziale sono riportati nella nota sui modelli.
 
 Il pendolo inverso è utile anche per descrivere alcune oscillazioni in piedi. Nel corpo intervengono però più strategie articolari. In Utthita Hasta Pādāṅguṣṭhāsana la base ridotta limita alcune correzioni, ma da sola non determina l’estensione del bacino di attrazione.
 
-**Per chi ama le formule**
+**Controllo con retroazione**
 
-Nel modello lineare del pendolo semplice, una correzione $u = -k_{p}\theta - k_{d}\dot{\theta}$ dà <span class="math display">\$\$\ddot\theta=\Bigl(\frac{g}{\ell}-k_p\Bigr)\theta-k_d\\\dot\theta .\$\$</span> Se $k_{p} > g/\ell$ e $k_{d} > 0$, la grandezza <span class="math display">\$\$V=\tfrac12\\\dot\theta^{2}+\tfrac12\Bigl(k_p-\frac{g}{\ell}\Bigr)\theta^{2}, \qquad \dot V=-k_d\\\dot\theta^{2}\le 0 ,\$\$</span> è positiva fuori dall’origine e non cresce. LaSalle assicura la convergenza, perché in $\{\dot{\theta} = 0\}$ l’unico moto che può restare è l’equilibrio. La stabilità asintotica vale per questo modello senza ritardo. Per un’asta omogenea lunga $L$, invece, $\tau = \sqrt{2L/(3g)}$. La figura [23](articolo-lequilibrio-sul-tappetino.html#figura-23) confronta i tempi del modo crescente di due aste.
+Nel modello lineare del pendolo semplice, una correzione $u = -k_{p}\theta - k_{d}\dot{\theta}$ dà $$\ddot{\theta} = \left( \frac{g}{\ell} - k_{p} \right)\theta - k_{d}\,\dot{\theta}.$$ Se $k_{p} > g/\ell$ e $k_{d} > 0$, la grandezza $$V = \frac{1}{2}\,{\dot{\theta}}^{2} + \frac{1}{2}\left( k_{p} - \frac{g}{\ell} \right)\theta^{2},\qquad\dot{V} = -k_{d}\,{\dot{\theta}}^{2} \leq 0,$$ è positiva fuori dall’origine e non cresce. LaSalle assicura la convergenza, perché in $\{\dot{\theta} = 0\}$ l’unico moto che può restare è l’equilibrio. La stabilità asintotica vale per questo modello senza ritardo. Per un’asta omogenea lunga $L$, invece, $\tau = \sqrt{2L/(3g)}$. La figura [23](articolo-lequilibrio-sul-tappetino.html#figura-23) confronta i tempi del modo crescente di due aste.
 
 
 **Retroazione**
@@ -236,9 +236,7 @@ Il meccanismo che usa una misura dello stato o dell’effetto prodotto per regol
 
 Figura 29. Due conche e un dosso. La freccia ocra è la spinta; la linea tratteggiata è il percorso dopo una spinta debole, la linea continua quello dopo una spinta forte.
 
-Un interruttore a scatto offre un esempio di passaggio fra due configurazioni stabili. Per spostarlo occorre superare la resistenza del meccanismo lungo il percorso.
-
-**Il corpo.** Nel dropback si passa da Samasthiti a Ūrdhva Dhanurāsana e poi si risale (figura [30](articolo-lequilibrio-sul-tappetino.html#figura-30)). Possiamo rappresentare le due posture mantenute come due conche di un paesaggio efficace. Il dosso raffigura la regione di passaggio, dove cambiano configurazione e azione muscolare (figura [31](articolo-lequilibrio-sul-tappetino.html#figura-31)). È un’analogia del movimento controllato: non esiste, in questo schema, un unico angolo del corpo che decida da solo l’esito.
+**Il corpo.** Nel dropback si passa da Samasthiti a Ūrdhva Dhanurāsana e poi si risale (figura [30](articolo-lequilibrio-sul-tappetino.html#figura-30)). Possiamo rappresentare i due asana mantenuti come due conche di un paesaggio efficace. Il dosso raffigura la regione di passaggio, dove cambiano configurazione e azione muscolare (figura [31](articolo-lequilibrio-sul-tappetino.html#figura-31)). La transizione dipende dalla configurazione del corpo, dalla velocità e dal controllo esercitato durante il movimento.
 
 Figura 30. Quattro momenti del dropback e la loro rappresentazione schematica su un paesaggio a due conche. Il dosso indica il passaggio fra le posture.
 
@@ -250,7 +248,7 @@ Il potenziale efficace riassume il richiamo del modello, mentre l’azione musco
 
 Figura 32. Un potenziale a due conche, associate alle due posture. Il cerchietto vuoto indica il valico e la linea tratteggiata la cresta geometrica. La traiettoria blu supera il dosso e si smorza nella conca destra. La quota rappresenta il potenziale, che può risalire mentre l’energia totale diminuisce.
 
-Per la risalita il modello richiede energia sufficiente a superare il dislivello del potenziale, oltre a quella dissipata durante il percorso (figura [33](articolo-lequilibrio-sul-tappetino.html#figura-33)). Questo bilancio dà una condizione necessaria, non una ricetta per il movimento. Anche dopo il dosso, velocità e controllo determinano l’arrivo e l’arresto nella postura in piedi.
+Per la risalita il modello richiede energia sufficiente a superare il dislivello del potenziale, oltre a quella dissipata durante il percorso (figura [33](articolo-lequilibrio-sul-tappetino.html#figura-33)). Superato il dosso, occorre ridurre la velocità in modo da arrivare in Samasthiti e arrestarsi: il controllo deve accompagnare anche questa fase della risalita.
 
 Figura 33. Passaggio dalla conca destra a quella sinistra. Il dislivello verde è la barriera del potenziale; l’energia da fornire deve coprire anche le perdite lungo il percorso.
 
@@ -263,9 +261,7 @@ Una frontiera invariante che separa famiglie di traiettorie con comportamenti di
 
 ## Un passo in più: la mappa degli stati
 
-Questo capitolo facoltativo introduce lo spazio degli stati e collega i paesaggi dell’energia ai grafici del movimento.
-
-**Lo stato.** Due pendoli si trovano nel punto più basso. Uno è fermo, l’altro lo attraversa velocemente (figura [34](articolo-lequilibrio-sul-tappetino.html#figura-34)). Per prevederne il seguito bisogna conoscere posizione e velocità. Nel modello a un grado di libertà, con forze assegnate e senza memoria, queste due quantità formano lo *stato*.
+**Lo stato.** Due pendoli si trovano nel punto più basso. Uno è fermo, l’altro lo attraversa velocemente (figura [34](articolo-lequilibrio-sul-tappetino.html#figura-34)). Per prevederne il seguito bisogna conoscere posizione e velocità. La mappa degli stati permette di rappresentare insieme queste due informazioni.
 
 Figura 34. Due pendoli nella stessa posizione e con futuri diversi.
 
@@ -289,21 +285,21 @@ Sollevando ogni stato alla quota data dall’energia totale si ottiene la conca 
 
 Figura 39. La spirale vista in rilievo. In basso, in azzurro, la traiettoria sulla mappa degli stati; sopra, sollevata per chiarezza, la superficie dell’altimetro, sulla quale la traiettoria scende verso il fondo. I segmenti tratteggiati collegano alcuni punti alla loro ombra sulla mappa.
 
-**Le posizioni sulla mappa.** L’oscillatore smorzato usato per illustrare il ritorno alla quiete in Śavāsana produce le spirali della figura [40](articolo-lequilibrio-sul-tappetino.html#figura-40). Le due viste usano la stessa dinamica. Il braccio reale, con il suo contatto col suolo, richiederebbe una descrizione diversa.
+**Le posizioni sulla mappa.** L’oscillatore smorzato usato per illustrare il ritorno alla quiete in Śavāsana produce le spirali della figura [40](articolo-lequilibrio-sul-tappetino.html#figura-40). Le due viste usano la stessa dinamica.
 
 Figura 40. Oscillatore smorzato associato al ritorno alla quiete. A sinistra una traiettoria sollevata alla quota dell’energia totale; a destra quattro traiettorie nel piano posizione–velocità. La curva di sinistra è il sollevamento di quella che parte da destra con velocità nulla.
 
 Nel modello conservativo della conca con bordo, le piccole oscillazioni formano orbite chiuse attorno al centro (figura [41](articolo-lequilibrio-sul-tappetino.html#figura-41)). Le curve rosse sono separatrici: delimitano la regione delle oscillazioni interne. Sulla frontiera, il moto si avvicina a un equilibrio instabile sul bordo in un tempo infinito; non è un’ultima oscillazione periodica di ampiezza massima.
 
-Figura 41. Conca con bordo nel modello conservativo associato all’equilibrio su una gamba. L’origine è stabile ma non attrattiva. Il richiamo è efficace: la postura reale richiede controllo muscolare.
+Figura 41. Conca con bordo nel modello conservativo associato all’equilibrio su una gamba. L’origine è stabile ma non attrattiva. Il richiamo è efficace: l’asana reale richiede controllo muscolare.
 
-Il pendolo inverso senza correzioni ha un equilibrio a sella. Nella figura [42](articolo-lequilibrio-sul-tappetino.html#figura-42) una sola retta, disegnata con due frecce entranti, raccoglie gli stati che convergono alla verticale. La retta trasversale è instabile. Gli altri stati, anche arbitrariamente vicini, si allontanano nel modello lineare. Con un controllo adeguato l’origine diventa asintoticamente stabile; i guadagni scelti nel disegno danno un rientro a spirale.
+Il pendolo inverso senza correzioni ha un equilibrio a sella. Nella figura [42](articolo-lequilibrio-sul-tappetino.html#figura-42) una sola retta, disegnata con due frecce entranti, raccoglie gli stati che convergono alla verticale. La retta trasversale è instabile. Gli altri stati, anche arbitrariamente vicini, si allontanano nel modello lineare. Con un controllo adeguato l’origine diventa asintoticamente stabile; i coefficienti del controllo scelti nel disegno danno un rientro a spirale.
 
 Figura 42. Śīrṣāsana sulla mappa degli stati: a sinistra senza correzioni, a destra con la correzione.
 
 La doppia conca smorzata ha due equilibri attrattivi. Nella figura [43](articolo-lequilibrio-sul-tappetino.html#figura-43) ogni stato iniziale è colorato secondo l’equilibrio raggiunto. La curva rossa è la varietà stabile della sella centrale e separa i due bacini. Le regioni si avvolgono perché un moto con energia sufficiente può attraversare più volte il dosso prima di fermarsi. Vicino alla frontiera, piccoli cambiamenti dello stato iniziale cambiano la destinazione.
 
-Figura 43. Bacini del modello a doppia conca: azzurro per l’equilibrio sinistro, ocra per quello destro. Le posture sono un’associazione qualitativa. Il cerchietto vuoto indica la sella; sulla frontiera gli stati convergono a essa, non ai due fondi. La colorazione è un’approssimazione su una griglia finita.
+Figura 43. Bacini del modello a doppia conca: azzurro per l’equilibrio sinistro, ocra per quello destro. Gli asana sono un’associazione qualitativa. Il cerchietto vuoto indica la sella; sulla frontiera gli stati convergono a essa, non ai due fondi. La colorazione è un’approssimazione su una griglia finita.
 
 Un equilibrio attorno al quale le traiettorie spiraleggiano si chiama *fuoco*; quello circondato da orbite chiuse è un *centro*. Una *sella* ha direzioni attrattive e repulsive.
 
@@ -316,11 +312,13 @@ Nel modello meccanico a un grado di libertà, lo stato è la coppia posizione–
 
 La figura [44](articolo-lequilibrio-sul-tappetino.html#figura-44) raccoglie i modelli discussi. Nella colonna centrale il paesaggio rappresenta il potenziale, eventualmente efficace; la mappa mostra anche la velocità.
 
-Figura 44. Modelli associati alle posture: potenziale, ritratto nel piano degli stati e tipo di equilibrio. La classificazione riguarda il modello specificato, non la postura in ogni condizione.
+Figura 44. Modelli associati agli asana: potenziale, ritratto nel piano degli stati e tipo di equilibrio. La classificazione riguarda il modello specificato, non l’asana in ogni condizione.
 
 Il corpo ha molti gradi di libertà, contatti variabili e un controllo che dipende anche dalla storia recente. Questi aspetti sono stati ridotti a pochi movimenti per rendere leggibili i modelli. Il ritardo, in particolare, richiede uno stato che contenga la storia del sistema.[^2] Una funzione di Lyapunov trovata con le proprietà richieste dimostra la stabilità; il fallimento di una ricerca non dimostra l’instabilità.
 
-Lo Yogasūtra II.47 richiama l’allentamento dello sforzo: *prayatna-śaithilya-ananta-samāpattibhyām*. Nel confronto proposto qui, si può leggere questo invito come ricerca di una correzione ben dosata. Le simulazioni mostrano che aumentare la forza della risposta non garantisce un equilibrio migliore, soprattutto in presenza di ritardo. È una lettura della pratica attraverso il modello, non una spiegazione fisiologica del sūtra.
+Una correzione troppo intensa può alimentare proprio l’oscillazione che dovrebbe arrestare: nel modello del pendolo inverso questo accade, per alcuni valori dei parametri, quando la risposta arriva con ritardo e agisce su un’inclinazione che nel frattempo è cambiata. L’efficacia dell’intervento dipende dunque dalla sua intensità e dal momento in cui viene esercitato, così che uno sforzo maggiore può rendere più difficile il recupero dell’equilibrio.
+
+Ripenso, a questo proposito, al richiamo all’allentamento dello sforzo nello Yogasūtra II.47, *prayatna-śaithilya-ananta-samāpattibhyām*. Mi interessa l’idea che la cura di un asana comprenda anche la capacità di riconoscere quanto sforzo occorra per sostenerlo e quanto, invece, possa essere lasciato andare.
 
 ## Piccolo glossario
 
@@ -377,21 +375,21 @@ La curva che lo stato disegna sulla mappa con il passare del tempo.
 
 ## Nota sui modelli e sui grafici
 
-Questa nota raccoglie i dati necessari a riprodurre i grafici ricalcolati nella revisione. Le coordinate numeriche sono incluse nel sorgente LaTeX, conservato nel pacchetto del sito insieme agli strumenti per esportare le figure. Salvo il pendolo delle figure [20](articolo-lequilibrio-sul-tappetino.html#figura-20) e [21](articolo-lequilibrio-sul-tappetino.html#figura-21), le grandezze sono in unità adimensionali. I parametri servono a illustrare comportamenti matematici e non sono stime del corpo umano. I pittogrammi, le barre di energia e le tracce del centro di pressione sono schemi didattici, non misure sperimentali.
+Salvo il pendolo delle figure [20](articolo-lequilibrio-sul-tappetino.html#figura-20) e [21](articolo-lequilibrio-sul-tappetino.html#figura-21), le grandezze sono in unità adimensionali. I parametri servono a illustrare comportamenti matematici e non sono stime del corpo umano. Pittogrammi, barre di energia e tracce del centro di pressione illustrano i modelli descritti. Le coordinate numeriche e gli strumenti per esportare le figure sono conservati nel pacchetto sorgente del sito.
 
-**Per chi ama le formule**
+**Oscillazioni smorzate**
 
 **Oscillazioni e altimetro.** Per i ritratti di fase si usa $$\dot{q} = v,\qquad\dot{v} = -q - cv,\qquad V = \frac{1}{2}\left( q^{2} + v^{2} \right),\qquad\dot{V} = -cv^{2}.$$ Nella figura [39](articolo-lequilibrio-sul-tappetino.html#figura-39) si pone $c = 0,24$, con stato iniziale $(1,8,0)$ e tempo da 0 a 25; la quota superiore è $1,3 + V$, con un piccolo scarto grafico per rendere visibile la curva. Nella figura [40](articolo-lequilibrio-sul-tappetino.html#figura-40) si pone $c = 0,4$, con stati iniziali $(\pm 1,8,0)$ e $(0,\pm 1,8)$ e tempo da 0 a 24. Le curve in piano e in rilievo provengono dalla stessa soluzione analitica.
 
 La figura [26](articolo-lequilibrio-sul-tappetino.html#figura-26) usa invece due coordinate di posizione indipendenti, ciascuna soggetta a $\ddot{q} + 0,5\dot{q} + 1,2q = 0$. I dati iniziali sono $\left( q_{1},q_{2},{\dot{q}}_{1},{\dot{q}}_{2} \right) = (1,5,0,0,0,7)$. La superficie rappresenta il solo potenziale $0,6\left( q_{1}^{2} + q_{2}^{2} \right)$; il controllo di monotonia riguarda l’energia totale, inclusa quella cinetica.
 
 
-**Per chi ama le formule**
+**Conca con bordo**
 
 **Conca con bordo.** Il ritratto conservativo della figura [41](articolo-lequilibrio-sul-tappetino.html#figura-41) corrisponde a $$\dot{q} = v,\qquad\dot{v} = -q + \frac{1}{2}q^{3},\qquad H = \frac{1}{2}v^{2} + \frac{1}{2}q^{2} - \frac{1}{8}q^{4}.$$ Il centro è in $(0,0)$ e le selle in $\left( \pm\sqrt{2},0 \right)$. Le separatrici appartengono al livello $H = 1/2$ e hanno equazioni $v = \pm\left( 1 - q^{2}/2 \right)$. Le orbite interne sono periodiche; non convergono al centro. Gli altri paesaggi schematici mostrano la forma del potenziale e non vanno letti come superfici di Lyapunov nello spazio degli stati.
 
 
-**Per chi ama le formule**
+**Bacini della doppia conca**
 
 **Doppia conca e bacini.** La carta della figura [43](articolo-lequilibrio-sul-tappetino.html#figura-43) usa $$\dot{q} = v,\qquad\dot{v} = q - q^{3} - 0,3v,\qquad E = \frac{1}{2}v^{2} + \frac{1}{4}\left( q^{2} - 1 \right)^{2}.$$ I 4096 stati iniziali formano una griglia $64 \times 64$ nel quadrato $\lbrack-2,2\rbrack^{2}$. L’integrazione Runge–Kutta del quarto ordine ha passo $0,01$ e termina a $t = 120$; il colore dipende dal pozzo raggiunto. Su questa griglia, lo scarto finale da uno dei due equilibri è inferiore a $10^{-7}$ in entrambe le componenti.
 
@@ -400,7 +398,7 @@ Le curve rosse approssimano la varietà stabile della sella: si parte da $\pm 10
 Per il rilievo della figura [32](articolo-lequilibrio-sul-tappetino.html#figura-32) si aggiunge una coordinata $r$ con $\ddot{r} + 0,3\dot{r} + r = 0$. La superficie è $U(q,r) = \frac{1}{4}\left( q^{2} - 1 \right)^{2} + \frac{1}{2}r^{2}$. Si parte da $\left( q,r,\dot{q},\dot{r} \right) = (-1,0,2,1,1,0,3)$ e si integra fino a $t = 50$, con passo $0,01$.
 
 
-**Per chi ama le formule**
+**Effetti del ritardo**
 
 **Controllo ritardato.** La figura [28](articolo-lequilibrio-sul-tappetino.html#figura-28) usa il sistema $$\dot{q}(t) = v(t),\qquad\dot{v}(t) = q(t) - k_{p}q(t - d) - k_{d}v(t - d),$$ con storia costante $q(t) = 0,1$, $v(t) = 0$ per $t \leq 0$. I quattro casi, nell’ordine di lettura, sono: $$\begin{array}{lccc}
  & d & k_{p} & k_{d} \\
