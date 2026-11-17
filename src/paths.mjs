@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {escapeHtml as e,safeMedia,markdown} from './safety.mjs';
 import {withArticleDiagrams} from './article-diagrams.mjs';
+import {scientificArticle} from './scientific-articles.mjs';
 export function loadPaths(root){
  const read=n=>JSON.parse(fs.readFileSync(path.join(root,'content',n),'utf8'));
  const messages=read('ui.json'),selection=read('editorial-selection.json'),guide=read('study-guide.json');
@@ -18,9 +19,11 @@ export function loadPaths(root){
 export function t(data,id){const result=data.messages?.[id]?.[data.language||'it'];if(!result)throw Error('Missing UI key: '+id);return result;}
 export function articleReading(post,data){
  let index=0;const items=[];
- const body=markdown(post.body).replace(/<h([23])>([\s\S]*?)<\/h\1>/g,(_,level,label)=>{const id='capitolo-'+(++index);if(level==='2')items.push({id,label});return `<h${level} id="${id}" tabindex="-1">${label}</h${level}>`;});
+ const scientific=scientificArticle(post,data.language);
+ const body=(scientific||markdown(post.body)).replace(/<h([23])(?:\s[^>]*)?>([\s\S]*?)<\/h\1>/g,(_,level,label)=>{const id='capitolo-'+(++index);if(level==='2')items.push({id,label});return `<h${level} id="${id}" tabindex="-1">${label}</h${level}>`;});
  const toc=items.length?`<nav class="article-toc" data-section-nav aria-label="${e(t(data,'article.index'))}"><span class="label">${e(t(data,'article.index'))}</span>${items.map(x=>`<a href="articolo-${e(post.id)}.html#${x.id}">${x.label}</a>`).join('')}</nav>`:'';
- return {body:withArticleDiagrams(post.id,body,data.language||'it'),toc};
+ const words=scientific?scientific.replace(/<annotation\b[\s\S]*?<\/annotation>/g,'').replace(/<[^>]*>/g,' '):post.body;
+ return {body:withArticleDiagrams(post.id,body,data.language||'it'),toc,minutes:Math.max(1,Math.ceil(words.trim().split(/\s+/).length/200))};
 }
 export function studyMap(lecture,data){
  const m=data.studyGuide.modules.find(x=>x.id===lecture.id);if(!m)return '';

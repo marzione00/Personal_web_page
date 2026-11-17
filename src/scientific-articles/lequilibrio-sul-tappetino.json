@@ -1,0 +1,310 @@
+[
+  {
+    "number": 1,
+    "label": "fig:apertura",
+    "caption": "Risposte a una perturbazione. In Śīrṣāsana l’inclinazione tende a crescere se mancano le correzioni; il braccio rilassato in Śavāsana ricade verso il pavimento.",
+    "alt": "Risposte a una perturbazione. In Śīrṣāsana l’inclinazione tende a crescere se mancano le correzioni; il braccio rilassato in Śavāsana ricade verso il pavimento.",
+    "file": "figure-01.svg"
+  },
+  {
+    "number": 2,
+    "label": "fig:tornare",
+    "caption": "Pallina e braccio in quattro momenti. La pallina grigia, nel terzo disegno, indica l’altezza iniziale. Il rimbalzo del braccio è schematico.",
+    "alt": "Pallina e braccio in quattro momenti. La pallina grigia, nel terzo disegno, indica l’altezza iniziale. Il rimbalzo del braccio è schematico.",
+    "file": "figure-02.svg"
+  },
+  {
+    "number": 3,
+    "label": "fig:onda",
+    "caption": "Scostamento dal punto di riposo in un oscillatore smorzato. Il grafico descrive il ritorno della pallina; il confronto con il braccio riguarda la riduzione del movimento, non il passaggio attraverso il pavimento.",
+    "alt": "Scostamento dal punto di riposo in un oscillatore smorzato. Il grafico descrive il ritorno della pallina; il confronto con il braccio riguarda la riduzione del movimento, non il passaggio attraverso il pavimento.",
+    "file": "figure-03.svg"
+  },
+  {
+    "number": 4,
+    "label": "fig:paesaggio",
+    "caption": "Tre profili dell’energia potenziale. Le frecce sui pendii indicano il verso iniziale del movimento dopo uno spostamento da fermo; sul pianoro non c’è richiamo verso un punto particolare.",
+    "alt": "Tre profili dell’energia potenziale. Le frecce sui pendii indicano il verso iniziale del movimento dopo uno spostamento da fermo; sul pianoro non c’è richiamo verso un punto particolare.",
+    "file": "figure-04.svg"
+  },
+  {
+    "number": 5,
+    "label": "fig:basi",
+    "caption": "Centro di massa e base d’appoggio in quattro posizioni. La striscia ocra rappresenta la base nella sezione disegnata. La verticale del centro di massa al suo interno è una condizione di equilibrio statico nel modello con il solo sostegno del suolo; non garantisce il recupero di un corpo già in movimento.",
+    "alt": "Centro di massa e base d’appoggio in quattro posizioni. La striscia ocra rappresenta la base nella sezione disegnata. La verticale del centro di massa al suo interno è una condizione di equilibrio statico nel modello con il solo sostegno del suolo; non garantisce il recupero di un corpo già in movimento.",
+    "file": "figure-05.svg"
+  },
+  {
+    "number": 6,
+    "label": "fig:sugiu",
+    "caption": "Uno spostamento alza il centro di massa di un oggetto appeso e abbassa quello di un oggetto in appoggio su una base stretta. Il cerchietto vuoto indica la posizione di partenza.",
+    "alt": "Uno spostamento alza il centro di massa di un oggetto appeso e abbassa quello di un oggetto in appoggio su una base stretta. Il cerchietto vuoto indica la posizione di partenza.",
+    "file": "figure-06.svg"
+  },
+  {
+    "number": 7,
+    "label": "fig:paesaggiocorpo",
+    "caption": "Paesaggi schematici dei movimenti considerati: il ritorno del braccio in Śavāsana e l’inclinazione del pendolo inverso associato a Śīrṣāsana senza correzioni.",
+    "alt": "Paesaggi schematici dei movimenti considerati: il ritorno del braccio in Śavāsana e l’inclinazione del pendolo inverso associato a Śīrṣāsana senza correzioni.",
+    "file": "figure-07.svg"
+  },
+  {
+    "number": 8,
+    "label": "fig:concacupola",
+    "caption": "Con due direzioni di spostamento il paesaggio diventa una superficie. In rosso l’equilibrio, in grigio la pallina spostata, in blu il suo percorso.",
+    "alt": "Con due direzioni di spostamento il paesaggio diventa una superficie. In rosso l’equilibrio, in grigio la pallina spostata, in blu il suo percorso.",
+    "file": "figure-08.svg"
+  },
+  {
+    "number": 9,
+    "label": "fig:quote",
+    "caption": "Le cinque risalite successive di una pallina in una ciotola con attrito, da una parte e dall’altra. Ogni risalita si ferma più in basso della precedente.",
+    "alt": "Le cinque risalite successive di una pallina in una ciotola con attrito, da una parte e dall’altra. Ogni risalita si ferma più in basso della precedente.",
+    "file": "figure-09.svg"
+  },
+  {
+    "number": 10,
+    "label": "fig:bilancio",
+    "caption": "Il bilancio dell’energia della pallina in quattro momenti. L’energia potenziale è quella di altezza, l’energia cinetica quella di movimento.",
+    "alt": "Il bilancio dell’energia della pallina in quattro momenti. L’energia potenziale è quella di altezza, l’energia cinetica quella di movimento.",
+    "file": "figure-10.svg"
+  },
+  {
+    "number": 11,
+    "label": "fig:gradini",
+    "caption": "Posizione ed energia totale dell’oscillatore smorzato. L’energia non risale; la pendenza si annulla agli istanti di inversione del moto.",
+    "alt": "Posizione ed energia totale dell’oscillatore smorzato. L’energia non risale; la pendenza si annulla agli istanti di inversione del moto.",
+    "file": "figure-11.svg"
+  },
+  {
+    "number": 12,
+    "label": "fig:escursionista",
+    "caption": "Un cammino in discesa e la sua quota. Le curve verdi uniscono punti alla stessa altezza; il percorso illustrato si avvicina al fondo della valle, posto a 1000 metri.",
+    "alt": "Un cammino in discesa e la sua quota. Le curve verdi uniscono punti alla stessa altezza; il percorso illustrato si avvicina al fondo della valle, posto a 1000 metri.",
+    "file": "figure-12.svg"
+  },
+  {
+    "number": 13,
+    "label": "fig:braccio",
+    "caption": "Il braccio che ricade in Śavāsana, con il bilancio dell’energia sotto ogni momento. La somma delle prime due colonne è l’altimetro, che può soltanto scendere.",
+    "alt": "Il braccio che ricade in Śavāsana, con il bilancio dell’energia sotto ogni momento. La somma delle prime due colonne è l’altimetro, che può soltanto scendere.",
+    "file": "figure-13.svg"
+  },
+  {
+    "number": 14,
+    "label": "fig:duegrafici",
+    "caption": "Scostamento della pallina dal fondo. Con attrito le oscillazioni si spengono; senza attrito l’ampiezza rimane costante.",
+    "alt": "Scostamento della pallina dal fondo. Con attrito le oscillazioni si spengono; senza attrito l’ampiezza rimane costante.",
+    "file": "figure-14.svg"
+  },
+  {
+    "number": 15,
+    "label": "fig:patto",
+    "caption": "Il patto per una pallina lasciata da ferma. Per ogni tolleranza <math display=\"inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mi>ε</mi><annotation encoding=\"application/x-tex\">\\varepsilon</annotation></semantics></math> si cerca un limite <math display=\"inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mi>δ</mi><annotation encoding=\"application/x-tex\">\\delta</annotation></semantics></math> allo spostamento iniziale. Le distanze si misurano dal fondo.",
+    "alt": "Il patto per una pallina lasciata da ferma. Per ogni tolleranza ε si cerca un limite δ allo spostamento iniziale. Le distanze si misurano dal fondo.",
+    "file": "figure-15.svg"
+  },
+  {
+    "number": 16,
+    "label": "fig:cratere",
+    "caption": "Una conca con il bordo. A sinistra la superficie, con il bordo tratteggiato e il percorso di una pallina che resta dentro; a destra la stessa conca vista in sezione.",
+    "alt": "Una conca con il bordo. A sinistra la superficie, con il bordo tratteggiato e il percorso di una pallina che resta dentro; a destra la stessa conca vista in sezione.",
+    "file": "figure-16.svg"
+  },
+  {
+    "number": 17,
+    "label": "fig:uhp",
+    "caption": "Utthita Hasta Pādāṅguṣṭhāsana e una traccia sintetica del centro di pressione vista dall’alto. Cerchi e percorso sono illustrativi: una registrazione finita di questa grandezza non dimostra la stabilità dello stato completo.",
+    "alt": "Utthita Hasta Pādāṅguṣṭhāsana e una traccia sintetica del centro di pressione vista dall’alto. Cerchi e percorso sono illustrativi: una registrazione finita di questa grandezza non dimostra la stabilità dello stato completo.",
+    "file": "figure-17.svg"
+  },
+  {
+    "number": 18,
+    "label": "fig:collepalline",
+    "caption": "Schema del modo esponenziale crescente vicino alla cima: gli scostamenti raddoppiano a intervalli uguali. Il disegno amplifica il movimento per renderlo visibile.",
+    "alt": "Schema del modo esponenziale crescente vicino alla cima: gli scostamenti raddoppiano a intervalli uguali. Il disegno amplifica il movimento per renderlo visibile.",
+    "file": "figure-18.svg"
+  },
+  {
+    "number": 19,
+    "label": "fig:pendolonudo",
+    "caption": "Śīrṣāsana e il suo modello più semplice, il pendolo inverso: un bastone appoggiato in basso con il peso in alto.",
+    "alt": "Śīrṣāsana e il suo modello più semplice, il pendolo inverso: un bastone appoggiato in basso con il peso in alto.",
+    "file": "figure-19.svg"
+  },
+  {
+    "number": 20,
+    "label": "fig:ventaglio",
+    "caption": "Pendolo semplice inverso lungo 0,8 metri, inizialmente fermo a un grado dalla verticale. Le inclinazioni, arrotondate, sono calcolate con il modello lineare a intervalli di 0,2 secondi.",
+    "alt": "Pendolo semplice inverso lungo 0,8 metri, inizialmente fermo a un grado dalla verticale. Le inclinazioni, arrotondate, sono calcolate con il modello lineare a intervalli di 0,2 secondi.",
+    "file": "figure-20.svg"
+  },
+  {
+    "number": 21,
+    "label": "fig:raddoppio",
+    "caption": "Crescita dell’inclinazione nel modello lineare, partendo da fermo. Il ritmo dei raddoppi si avvicina a quello del modo esponenziale crescente.",
+    "alt": "Crescita dell’inclinazione nel modello lineare, partendo da fermo. Il ritmo dei raddoppi si avvicina a quello del modo esponenziale crescente.",
+    "file": "figure-21.svg"
+  },
+  {
+    "number": 22,
+    "label": "fig:bastone",
+    "caption": "Il bastone sul palmo in tre momenti. La linea tratteggiata è la verticale che scende dalla cima; la freccia ocra è lo spostamento della mano.",
+    "alt": "Il bastone sul palmo in tre momenti. La linea tratteggiata è la verticale che scende dalla cima; la freccia ocra è lo spostamento della mano.",
+    "file": "figure-22.svg"
+  },
+  {
+    "number": 23,
+    "label": "fig:lungocorto",
+    "caption": "Più l’oggetto è lungo, più lentamente cade, e più tempo resta per correggerlo.",
+    "alt": "Più l’oggetto è lungo, più lentamente cade, e più tempo resta per correggerlo.",
+    "file": "figure-23.svg"
+  },
+  {
+    "number": 24,
+    "label": "fig:pendolo",
+    "caption": "Śīrṣāsana con la correzione. Il peso tende ad aumentare l’inclinazione, indicata con la lettera greca <math display=\"inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mi>θ</mi><annotation encoding=\"application/x-tex\">\\theta</annotation></semantics></math> (theta); la correzione esercitata alla base tende a ridurla.",
+    "alt": "Śīrṣāsana con la correzione. Il peso tende ad aumentare l’inclinazione, indicata con la lettera greca θ (theta); la correzione esercitata alla base tende a ridurla.",
+    "file": "figure-24.svg"
+  },
+  {
+    "number": 25,
+    "label": "fig:somma",
+    "caption": "Somma del potenziale gravitazionale e del termine correttivo. Un richiamo sufficiente produce un minimo; un richiamo insufficiente lascia un massimo. Il disegno suppone una correzione senza ritardo.",
+    "alt": "Somma del potenziale gravitazionale e del termine correttivo. Un richiamo sufficiente produce un minimo; un richiamo insufficiente lascia un massimo. Il disegno suppone una correzione senza ritardo.",
+    "file": "figure-25.svg"
+  },
+  {
+    "number": 26,
+    "label": "fig:corretto",
+    "caption": "Potenziale efficace con correzione, in verde, e potenziale instabile di partenza, in grigio. Il percorso blu illustra un rientro smorzato in due coordinate di posizione. La quota è il solo potenziale e può risalire durante le oscillazioni.",
+    "alt": "Potenziale efficace con correzione, in verde, e potenziale instabile di partenza, in grigio. Il percorso blu illustra un rientro smorzato in due coordinate di posizione. La quota è il solo potenziale e può risalire durante le oscillazioni.",
+    "file": "figure-26.svg"
+  },
+  {
+    "number": 27,
+    "label": "fig:anello",
+    "caption": "L’anello di retroazione che sostiene Śīrṣāsana.",
+    "alt": "L’anello di retroazione che sostiene Śīrṣāsana.",
+    "file": "figure-27.svg"
+  },
+  {
+    "number": 28,
+    "label": "fig:ritardo",
+    "caption": "Quattro risposte del pendolo inverso con controllo ritardato. La linea rossa è una soglia illustrativa di ampiezza; la croce segna il primo superamento. Equazione, parametri e storia iniziale sono riportati nella nota sui modelli.",
+    "alt": "Quattro risposte del pendolo inverso con controllo ritardato. La linea rossa è una soglia illustrativa di ampiezza; la croce segna il primo superamento. Equazione, parametri e storia iniziale sono riportati nella nota sui modelli.",
+    "file": "figure-28.svg"
+  },
+  {
+    "number": 29,
+    "label": "fig:dueconche",
+    "caption": "Due conche e un dosso. La freccia ocra è la spinta; la linea tratteggiata è il percorso dopo una spinta debole, la linea continua quello dopo una spinta forte.",
+    "alt": "Due conche e un dosso. La freccia ocra è la spinta; la linea tratteggiata è il percorso dopo una spinta debole, la linea continua quello dopo una spinta forte.",
+    "file": "figure-29.svg"
+  },
+  {
+    "number": 30,
+    "label": "fig:sequenza",
+    "caption": "Quattro momenti del dropback e la loro rappresentazione schematica su un paesaggio a due conche. Il dosso indica il passaggio fra le posture.",
+    "alt": "Quattro momenti del dropback e la loro rappresentazione schematica su un paesaggio a due conche. Il dosso indica il passaggio fra le posture.",
+    "file": "figure-30.svg"
+  },
+  {
+    "number": 31,
+    "label": "fig:dropback",
+    "caption": "Il paesaggio efficace usato per il dropback. Le frecce indicano i due versi possibili del passaggio; l’esito dipende dal movimento e dalle correzioni, oltre che dalla configurazione.",
+    "alt": "Il paesaggio efficace usato per il dropback. Le frecce indicano i due versi possibili del passaggio; l’esito dipende dal movimento e dalle correzioni, oltre che dalla configurazione.",
+    "file": "figure-31.svg"
+  },
+  {
+    "number": 32,
+    "label": "fig:dropbacktre",
+    "caption": "Un potenziale a due conche, associate alle due posture. Il cerchietto vuoto indica il valico e la linea tratteggiata la cresta geometrica. La traiettoria blu supera il dosso e si smorza nella conca destra. La quota rappresenta il potenziale, che può risalire mentre l’energia totale diminuisce.",
+    "alt": "Un potenziale a due conche, associate alle due posture. Il cerchietto vuoto indica il valico e la linea tratteggiata la cresta geometrica. La traiettoria blu supera il dosso e si smorza nella conca destra. La quota rappresenta il potenziale, che può risalire mentre l’energia totale diminuisce.",
+    "file": "figure-32.svg"
+  },
+  {
+    "number": 33,
+    "label": "fig:risalita",
+    "caption": "Passaggio dalla conca destra a quella sinistra. Il dislivello verde è la barriera del potenziale; l’energia da fornire deve coprire anche le perdite lungo il percorso.",
+    "alt": "Passaggio dalla conca destra a quella sinistra. Il dislivello verde è la barriera del potenziale; l’energia da fornire deve coprire anche le perdite lungo il percorso.",
+    "file": "figure-33.svg"
+  },
+  {
+    "number": 34,
+    "label": "fig:velocita",
+    "caption": "Due pendoli nella stessa posizione e con futuri diversi.",
+    "alt": "Due pendoli nella stessa posizione e con futuri diversi.",
+    "file": "figure-34.svg"
+  },
+  {
+    "number": 35,
+    "label": "fig:leggere",
+    "caption": "Come leggere la mappa degli stati. In ogni quadrante una piccola icona mostra la posizione (il punto nero rispetto al trattino rosso dell’equilibrio) e la velocità (la freccia blu).",
+    "alt": "Come leggere la mappa degli stati. In ogni quadrante una piccola icona mostra la posizione (il punto nero rispetto al trattino rosso dell’equilibrio) e la velocità (la freccia blu).",
+    "file": "figure-35.svg"
+  },
+  {
+    "number": 36,
+    "label": "fig:fotogrammi",
+    "caption": "Un pendolo senza attrito, fotogramma per fotogramma, con la velocità in blu (in alto), e gli stessi istanti sulla mappa degli stati (in basso). I punti numerati formano un anello percorso in senso orario.",
+    "alt": "Un pendolo senza attrito, fotogramma per fotogramma, con la velocità in blu (in alto), e gli stessi istanti sulla mappa degli stati (in basso). I punti numerati formano un anello percorso in senso orario.",
+    "file": "figure-36.svg"
+  },
+  {
+    "number": 37,
+    "label": "fig:spiralefot",
+    "caption": "Un pendolo con attrito. A sinistra la posizione nel tempo, a destra la mappa degli stati; i numeri indicano gli stessi istanti nei due disegni.",
+    "alt": "Un pendolo con attrito. A sinistra la posizione nel tempo, a destra la mappa degli stati; i numeri indicano gli stessi istanti nei due disegni.",
+    "file": "figure-37.svg"
+  },
+  {
+    "number": 38,
+    "label": "fig:livelli",
+    "caption": "Livelli dell’energia totale e traiettoria dell’oscillatore smorzato. La quota non aumenta lungo il percorso blu.",
+    "alt": "Livelli dell’energia totale e traiettoria dell’oscillatore smorzato. La quota non aumenta lungo il percorso blu.",
+    "file": "figure-38.svg"
+  },
+  {
+    "number": 39,
+    "label": "fig:lyatre",
+    "caption": "La spirale vista in rilievo. In basso, in azzurro, la traiettoria sulla mappa degli stati; sopra, sollevata per chiarezza, la superficie dell’altimetro, sulla quale la traiettoria scende verso il fondo. I segmenti tratteggiati collegano alcuni punti alla loro ombra sulla mappa.",
+    "alt": "La spirale vista in rilievo. In basso, in azzurro, la traiettoria sulla mappa degli stati; sopra, sollevata per chiarezza, la superficie dell’altimetro, sulla quale la traiettoria scende verso il fondo. I segmenti tratteggiati collegano alcuni punti alla loro ombra sulla mappa.",
+    "file": "figure-39.svg"
+  },
+  {
+    "number": 40,
+    "label": "fig:savasanatre",
+    "caption": "Oscillatore smorzato associato al ritorno alla quiete. A sinistra una traiettoria sollevata alla quota dell’energia totale; a destra quattro traiettorie nel piano posizione–velocità. La curva di sinistra è il sollevamento di quella che parte da destra con velocità nulla.",
+    "alt": "Oscillatore smorzato associato al ritorno alla quiete. A sinistra una traiettoria sollevata alla quota dell’energia totale; a destra quattro traiettorie nel piano posizione–velocità. La curva di sinistra è il sollevamento di quella che parte da destra con velocità nulla.",
+    "file": "figure-40.svg"
+  },
+  {
+    "number": 41,
+    "label": "fig:uhpfase",
+    "caption": "Conca con bordo nel modello conservativo associato all’equilibrio su una gamba. L’origine è stabile ma non attrattiva. Il richiamo è efficace: la postura reale richiede controllo muscolare.",
+    "alt": "Conca con bordo nel modello conservativo associato all’equilibrio su una gamba. L’origine è stabile ma non attrattiva. Il richiamo è efficace: la postura reale richiede controllo muscolare.",
+    "file": "figure-41.svg"
+  },
+  {
+    "number": 42,
+    "label": "fig:selleafuochi",
+    "caption": "Śīrṣāsana sulla mappa degli stati: a sinistra senza correzioni, a destra con la correzione.",
+    "alt": "Śīrṣāsana sulla mappa degli stati: a sinistra senza correzioni, a destra con la correzione.",
+    "file": "figure-42.svg"
+  },
+  {
+    "number": 43,
+    "label": "fig:bacini",
+    "caption": "Bacini del modello a doppia conca: azzurro per l’equilibrio sinistro, ocra per quello destro. Le posture sono un’associazione qualitativa. Il cerchietto vuoto indica la sella; sulla frontiera gli stati convergono a essa, non ai due fondi. La colorazione è un’approssimazione su una griglia finita.",
+    "alt": "Bacini del modello a doppia conca: azzurro per l’equilibrio sinistro, ocra per quello destro. Le posture sono un’associazione qualitativa. Il cerchietto vuoto indica la sella; sulla frontiera gli stati convergono a essa, non ai due fondi. La colorazione è un’approssimazione su una griglia finita.",
+    "file": "figure-43.svg"
+  },
+  {
+    "number": 44,
+    "label": "fig:riepilogo",
+    "caption": "Modelli associati alle posture: potenziale, ritratto nel piano degli stati e tipo di equilibrio. La classificazione riguarda il modello specificato, non la postura in ogni condizione.",
+    "alt": "Modelli associati alle posture: potenziale, ritratto nel piano degli stati e tipo di equilibrio. La classificazione riguarda il modello specificato, non la postura in ogni condizione.",
+    "file": "figure-44.svg"
+  }
+]

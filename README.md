@@ -92,3 +92,7 @@ SITE_URL=https://marzione00.github.io/Personal_web_page/ npm run build:release
 ## Licenza e attribuzioni
 
 Testi editoriali e fotografie originali sono distribuiti secondo i termini indicati in [LICENSE.md](LICENSE.md). Pubblicazioni, materiali didattici e contributi di terzi mantengono le rispettive attribuzioni e condizioni d’uso; il codice è escluso dalla licenza dei contenuti.
+
+## Saggi illustrati
+
+Il blog comprende **L’equilibrio sul tappetino**, un percorso sulla stabilità di Lyapunov con 44 diagrammi vettoriali, formule accessibili, glossario e PDF. Le istruzioni di manutenzione sono in [docs/EQUILIBRIO_v3.21.0.md](docs/EQUILIBRIO_v3.21.0.md). Gli strumenti TeX sono necessari solo per riesportare i diagrammi, non per costruire o pubblicare il sito.

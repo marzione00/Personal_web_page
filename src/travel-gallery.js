@@ -1,4 +1,4 @@
-/* Progressive enhancement: photographs remain ordinary links without JavaScript.
+/* Progressive enhancement: images remain ordinary links without JavaScript.
  * One accessible viewer for every gallery; never edits the original image.
  */
 (() => {
@@ -11,11 +11,14 @@
  const close=dialog.querySelector('[data-travel-close]');
  const prev=dialog.querySelector('[data-travel-prev]');
  const next=dialog.querySelector('[data-travel-next]');
+ const zoom=dialog.querySelector('[data-travel-zoom]');
  let links=[],active=0,lastFocused=null;
  function display(index){
   if(!links.length)return;
   active=(index+links.length)%links.length;
   const link=links[active],thumb=link.querySelector('img');
+  dialog.toggleAttribute('data-science',link.hasAttribute('data-science-figure'));
+  dialog.removeAttribute('data-zoom');zoom?.setAttribute('aria-pressed','false');
   // In the portable preview, images are embedded verbatim as data URLs.
   const url=document.body.dataset.portable==='true' ? (thumb?.src||link.href) : link.href;
   full.src=url;
@@ -37,8 +40,10 @@
  close?.addEventListener('click',()=>dialog.close());
  prev?.addEventListener('click',()=>display(active-1));
  next?.addEventListener('click',()=>display(active+1));
+ zoom?.addEventListener('click',()=>zoom.setAttribute('aria-pressed',String(dialog.toggleAttribute('data-zoom'))));
  dialog.addEventListener('click',event=>{if(event.target===dialog)dialog.close();});
  dialog.addEventListener('keydown',event=>{
+  if(dialog.hasAttribute('data-zoom'))return;
   if(event.key==='ArrowLeft'){event.preventDefault();display(active-1);}
   if(event.key==='ArrowRight'){event.preventDefault();display(active+1);}
  });

@@ -1,5 +1,13 @@
 # Aggiornamenti
 
+## 3.21.0 — 17 novembre 2026
+
+- Pubblicato «L’equilibrio sul tappetino», con 44 diagrammi derivati dal sorgente TikZ dell’autore, 12 capitoli, formule, glossario e note.
+- Figure SVG vettoriali, zoom e navigazione nel visualizzatore condiviso; dettagli matematici apribili e stampa completa.
+- Aggiunto il PDF di lettura, conservando il LaTeX originale e gli strumenti di esportazione.
+- Nuova voce nel blog, nella ricerca, nel feed e nella sitemap; pagina inglese con indicazione esplicita della lingua originale italiana.
+- Verifiche su rimandi, numerazione, integrità dei file e visualizzazione desktop/mobile.
+
 ## 3.20.0 — 14 novembre 2026
 
 - Aggiunti tre diagrammi procedurali IT/EN al saggio SolarWinds: dipendenze dal fornitore, cronologia geopolitica e capacità di difesa.
