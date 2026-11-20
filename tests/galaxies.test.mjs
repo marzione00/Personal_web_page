@@ -14,7 +14,7 @@ const read=p=>fs.readFileSync(path.join(root,p),'utf8');
 
 test('each galaxy resolves to one active laboratory and four real module routes',()=>{
  const data=loadContent(root);
- assert.deepEqual(data.galaxies.map(g=>g.app),['quantum-lab','geostat-lab']);
+ assert.deepEqual(data.galaxies.map(g=>g.app),['quantum-lab','geostat-lab','sistemi-lab']);
  for(const g of data.galaxies){
   const app=data.teachingApps.find(a=>a.id===g.app);assert.ok(app.enabled);
   assert.equal(g.routes.length,4);
@@ -26,11 +26,11 @@ test('each galaxy resolves to one active laboratory and four real module routes'
 test('native galaxy choices expose one initial selection and labelled destination panels',()=>{
  for(const language of ['it','en']){
   const html=galaxiesPage(loadContent(root,{language}));
-  assert.equal((html.match(/type="radio"/g)||[]).length,2);
+  assert.equal((html.match(/type="radio"/g)||[]).length,3);
   assert.equal((html.match(/ checked/g)||[]).length,1);
   assert.equal((html.match(/<fieldset/g)||[]).length,1);
   assert.match(html,/<legend class="visually-hidden">/);
-  for(const id of ['quantum-lab','geostat-lab']){
+  for(const id of ['quantum-lab','geostat-lab','sistemi-lab']){
    assert.ok(html.includes(`aria-controls="mission-${id}"`));
    assert.ok(html.includes(`id="mission-${id}"`));
    assert.ok(html.includes(`aria-labelledby="mission-title-${id}"`));
@@ -42,10 +42,11 @@ test('native galaxy choices expose one initial selection and labelled destinatio
 test('galaxy entry and route links share the five-second terminal contract',()=>{
  const html=galaxiesPage(loadContent(root));
  const links=[...html.matchAll(/<a[^>]+data-app-launch[^>]+>/g)].map(m=>m[0]);
- assert.equal(links.length,10);
- for(const link of links){assert.match(link,/href="https:\/\//);assert.match(link,/data-launch-id="(?:quantum|geostat)-lab"/);assert.doesNotMatch(link,/target=/);}
+ assert.equal(links.length,15);
+ for(const link of links){assert.match(link,/href="https:\/\//);assert.match(link,/data-launch-id="(?:quantum|geostat|sistemi)-lab"/);assert.doesNotMatch(link,/target=/);}
  assert.ok(links.some(a=>a.includes('Lab_Geo/#modulo-M11')));
  assert.ok(links.some(a=>a.includes('QuantumLab_Public/#modulo-5')));
+ for(const fragment of ['#/m/0','#/m/3','#/m/5','#/m/6'])assert.ok(links.some(a=>a.includes('Archittetura_PUB_/'+fragment)));
 });
 
 test('galaxy page and home are bilingual and share existing single-instance dialogs',()=>{
@@ -63,19 +64,20 @@ test('galaxy page and home are bilingual and share existing single-instance dial
  }
 });
 
-test('search includes both laboratories, their descriptions and geology aliases',()=>{
+test('search includes all three laboratories, their descriptions and geology aliases',()=>{
  const rows=searchEntries(loadContent(root));
  const geo=rows.find(r=>r.title==='GeoStat Lab');assert.ok(geo);
  assert.match(geo.context,/statistici|statistica/);assert.match(geo.keywords,/geologia/);
  assert.equal(rows.filter(r=>r.url==='laboratori.html').length,1);
  assert.equal(rows.filter(r=>r.url==='didattica.html#laboratorio-geostat-lab').length,1);
+ const architecture=rows.find(r=>r.url==='didattica.html#laboratorio-sistemi-lab');assert.equal(architecture.title,'SistemiLab');assert.match(architecture.context,/processore/);
 });
 
 test('galaxy catalogue rejects duplicate themes, unsafe fragments and missing translations',()=>{
  const tmp=fs.mkdtempSync(path.join(os.tmpdir(),'galaxy-'));
  fs.mkdirSync(path.join(tmp,'content'));
  try{
-  for(const change of [d=>d.galaxies[1].theme='quantum',d=>d.galaxies[0].routes[0].fragment='https://example.com',d=>delete d.galaxies[0].routes[0].title.en,d=>d.galaxies[1].app='quantum-lab']){
+  for(const change of [d=>d.galaxies[1].theme='quantum',d=>d.galaxies[0].routes[0].fragment='https://example.com',d=>delete d.galaxies[0].routes[0].title.en,d=>d.galaxies[1].app='quantum-lab',d=>d.galaxies[2].routes[0].fragment='#/m/7',d=>d.galaxies[2].routes[0].fragment='#modulo-1']){
    const data=JSON.parse(read('content/galaxies.json'));change(data);
    fs.writeFileSync(path.join(tmp,'content/galaxies.json'),JSON.stringify(data));
    assert.throws(()=>loadGalaxies(tmp),/Galassie:/);
@@ -85,7 +87,7 @@ test('galaxy catalogue rejects duplicate themes, unsafe fragments and missing tr
 
 test('procedural navigation artwork stays self-contained and animation respects motion settings',()=>{
  assert.doesNotThrow(()=>validatePublicBoundary(root));
- for(const file of ['galaxy-quantum','galaxy-geostat','star-field']){
+ for(const file of ['galaxy-quantum','galaxy-geostat','galaxy-systems','star-field']){
   const svg=read(`public/assets/labs/${file}.svg`);
   assert.doesNotMatch(svg,/<(?:script|image|foreignObject|text|animate)\b|\son\w+=|href=/i);
   assert.match(svg,/<circle/);assert.match(svg,/viewBox=/);
@@ -95,4 +97,5 @@ test('procedural navigation artwork stays self-contained and animation respects 
  assert.match(css,/html\[data-fx-motion=off\]/);
  assert.match(css,/:has\(input:focus-visible\)/);
  assert.match(css,/\.lab-hub:has\(\.lab-destination-geostat input:checked\) \.lab-mission-geostat/);
+ assert.match(css,/\.lab-hub:has\(\.lab-destination-systems input:checked\) \.lab-mission-systems/);
 });

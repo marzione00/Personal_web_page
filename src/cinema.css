@@ -21,7 +21,7 @@
 .portal-copy{position:relative;z-index:1;padding:25px 27px 27px;display:flex;flex-direction:column;flex:1}.portal-card .meta{font-size:12px;letter-spacing:.04em}.portal-card h3{font:400 34px/1.25 var(--serif);margin:12px 0}.portal-card p{max-width:100%;font-size:15px;line-height:1.8}.portal-link{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:25px;font:12px var(--mono);color:var(--green)}.portal-link>span{font-size:20px}
 .portal-art{display:block;height:165px;position:relative;overflow:hidden;border-bottom:1px solid var(--line-soft);color:var(--green);background:radial-gradient(ellipse at 55% 90%,#2c794435,transparent 70%)}
 .portal-art .orbit-mark{position:absolute;width:230px;height:202px;right:6px;top:-20px;opacity:.62;transform:rotate(-12deg);transition:transform .7s cubic-bezier(.2,.8,.2,1),opacity .5s}
-.portal-number{position:absolute;top:23px;left:26px;font:11px var(--mono);letter-spacing:.15em;color:var(--muted)}
+
 .portal-card:hover .orbit-mark,.portal-card:focus-visible .orbit-mark{transform:rotate(0) scale(1.12);opacity:1}
 .portal-card:after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,transparent 30%,#baffd812 47%,transparent 64%);transform:translateX(-120%);transition:transform .8s ease;z-index:0}
 .portal-card:is(:hover,:focus-visible):after{transform:translateX(120%)}
@@ -32,3 +32,18 @@ html[data-fx-motion=off] .portal-art .orbit-mark,html[data-fx-motion=off] .porta
 @media print{.entry-sequence,.entry-replay,.portal-art,.construction-code,.portrait-shutters{display:none!important}}
 
 .visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+.portal-art img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 51%}
+.portal-art .construction-code{z-index:1}
+@media(max-width:590px){
+ .home-entry{padding-top:0}
+ .home-entry .portal-grid{gap:10px}
+ .home-entry .portal-card{display:grid;grid-template-columns:88px minmax(0,1fr);align-items:stretch}
+ .home-entry .portal-art{height:auto;min-height:100%;border-bottom:0;border-right:1px solid var(--line-soft)}
+ .home-entry .portal-art .orbit-mark{width:140px;top:0;right:-26px}
+ .home-entry .portal-copy{padding:13px 14px}
+ .home-entry .portal-copy h3{font-size:21px;margin:3px 0 5px}
+ .home-entry .portal-copy p{font-size:13px;line-height:1.5;margin:0 0 8px}
+ .home-entry .portal-link{font-size:11px}
+}
+
+#home-entry-title{scroll-margin-top:var(--header-offset)}

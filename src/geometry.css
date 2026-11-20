@@ -42,3 +42,19 @@ html[data-fx-motion=off] .geometry-dialog[open]{animation:none}
 @media print{.geometry,.geometry-dialog,.atlas-index{display:none}.atlas-grid{display:block}}
 
 .geometry-verbal p{font-size:14px;line-height:1.85;margin:12px 0}.geometry-verbal summary{min-height:44px;cursor:pointer;color:var(--green)}
+.editorial-plate{margin:0;min-width:0;border:1px solid var(--line);background:var(--panel);break-inside:avoid}
+.editorial-plate img{display:block;width:100%;height:auto}
+.editorial-plate figcaption{padding:12px 16px;font-size:13px;color:var(--body)}
+.editorial-plate figcaption p{margin:.45em 0 0}
+.carbon-comparison{margin:26px 0 44px;scroll-margin-top:var(--header-offset)}
+.plate-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.bilayer-comparison{margin:2.6rem 0;scroll-margin-top:var(--header-offset)}
+.bilayer-comparison .plate-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.lattice-repeat{min-width:0;margin:22px 0 0;padding:14px;border:1px solid var(--line)}
+.lattice-repeat label{display:inline-flex;align-items:center;min-height:44px;margin-right:12px;color:var(--ink);cursor:pointer}
+.lattice-repeat input{accent-color:var(--green)}
+.lattice-repeat figure{max-width:600px;margin:10px auto 0}
+.lattice-repeat figure img{aspect-ratio:9/7;object-fit:contain}
+#carbon-once:not(:checked)~.repeat-one,#carbon-many:not(:checked)~.repeat-many{display:none}
+@media(max-width:650px){.plate-grid{grid-template-columns:1fr}.bilayer-comparison .plate-grid{gap:8px}.editorial-plate figcaption{padding:9px 11px}}
+@media print{.lattice-repeat input,.lattice-repeat label{display:none}.lattice-repeat .editorial-plate{display:block!important}}

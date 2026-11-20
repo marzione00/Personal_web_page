@@ -40,6 +40,7 @@ def galaxy(name, seed, arms, pitch, flatten, tilt, colours):
 
 galaxy('quantum', 1905, 3, 1.5, .63, -30, ('#65bce7','#d1f6ff','#b5c3fa'))
 galaxy('geostat', 1864, 4, 1.8, .75, 28, ('#71c9ad','#dcf6da','#e2bb80'))
+galaxy('systems', 2026, 2, 1.28, .68, -16, ('#d39862','#ffe3b4','#ab85df'))
 rng = random.Random(720)
 stars = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 800">']
 for _ in range(240):

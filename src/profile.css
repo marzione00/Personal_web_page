@@ -89,3 +89,12 @@
  .profile-section-head h2{font-size:23pt}.profile-card h3{font-size:17pt;break-after:avoid}
  .profile-records{background:white}.profile-records-body{padding-bottom:15px}
 }
+.photo-image{position:relative}
+.photo-guides{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;display:none;fill:#fff4ce;stroke:#ffe08f;stroke-width:8;stroke-linecap:round;filter:drop-shadow(0 1px 5px #130f00)}
+.photo-guides path{fill:none}
+.personal-gallery-item:has(.photo-annotation[open]) .photo-guides{display:block}
+.photo-annotation{margin-top:9px;border-top:1px solid var(--line)}
+.photo-annotation summary{cursor:pointer;color:var(--green);padding-block:12px;min-height:44px}
+.photo-annotation:not([open]) summary span+span,.photo-annotation[open] summary span:first-child{display:none}
+.photo-annotation p{margin:0 0 12px}
+@media print{.photo-annotation,.photo-guides{display:none!important}}

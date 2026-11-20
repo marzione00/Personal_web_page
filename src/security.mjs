@@ -1,6 +1,6 @@
 import fs from 'node:fs';import path from 'node:path';import {safeMedia} from './safety.mjs';
 const MiB=1024*1024;
-const labArt=/^assets\/labs\/(?:galaxy-(?:quantum|geostat)|star-field)\.svg$/;
+const labArt=/^assets\/labs\/(?:galaxy-(?:quantum|geostat|systems)|star-field)\.svg$/;
 const articleArt=/^assets\/articles\/equilibrio\/figure-(?:0[1-9]|[1-3][0-9]|4[0-4])\.svg$/;
 export function inspectTree(folder,{maxFile=25*MiB,maxTotal=768*MiB,maxFiles=12000,accept=()=>true}={}){
  const root=path.resolve(folder);let files=0,bytes=0;
@@ -17,7 +17,7 @@ export function validatePublicBoundary(root){
   const svg=fs.readFileSync(path.join(root,'public',file),'utf8');
   if(svg.length>2*MiB||/<!|\s(?:on[a-z]+|style|src)\s*=|(?:href\s*=\s*["'](?!#))|url\((?!#[a-zA-Z0-9_-]+\))/i.test(svg)||[...svg.matchAll(/<\/?([a-zA-Z][a-zA-Z0-9]*)\b/g)].some(m=>!vectorTags.has(m[1].toLowerCase())))throw Error('Invalid scientific SVG: '+file);
  }
- for(const name of ['galaxy-quantum','galaxy-geostat','star-field']){
+ for(const name of ['galaxy-quantum','galaxy-geostat','galaxy-systems','star-field']){
   const svg=fs.readFileSync(path.join(root,'public/assets/labs',name+'.svg'),'utf8');
   const allowed=new Set(['svg','defs','radialgradient','stop','filter','fegaussianblur','circle','ellipse','path']);
   if(svg.length>220000||/<!|\s(?:on[a-z]+|style|href|src)\s*=|url\((?!#[a-z-]+\))/i.test(svg)||[...svg.matchAll(/<\/?([a-zA-Z][a-zA-Z0-9]*)\b/g)].some(m=>!allowed.has(m[1].toLowerCase())))throw Error('Illustrazione galattica non valida: '+name);

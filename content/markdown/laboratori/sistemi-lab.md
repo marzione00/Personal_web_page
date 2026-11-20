@@ -1,0 +1,1 @@
+SistemiLab accompagna la dispensa Architecture of Computer Systems di Marzio De Corato e Danilo Bruschi. Gli esperimenti guidati permettono di seguire un’istruzione nel processore, osservare l’esecuzione dei processi e ricostruire il percorso di un dato tra cache e memoria.

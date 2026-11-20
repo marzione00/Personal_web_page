@@ -49,7 +49,7 @@ with sync_playwright() as pw:
    if name=='index.html':
     vals=page.locator('.hero-portrait img').evaluate('''e=>{let r=e.getBoundingClientRect(),s=getComputedStyle(e);return{nw:e.naturalWidth,nh:e.naturalHeight,fit:s.objectFit,filter:s.filter,ratio:(r.width-2)/(r.height-2)}}''')
     check(f'{width}: original photograph aspect ratio',vals['nw'] in [480,768,1274] and abs(vals['nw']/vals['nh']-1274/2048)<.002 and vals['fit']=='contain' and vals['filter']=='none' and abs(vals['ratio']-1274/2048)<.001,vals)
-    if width<590:check(f'{width}: mobile actions before portrait',page.locator('.hero .actions').bounding_box()['y']<page.locator('.hero-portrait').bounding_box()['y'])
+    if width<590:check(f'{width}: mobile portrait before selected resources',page.locator('.hero-portrait').bounding_box()['y']<page.locator('.home-entry .portal-card').first.bounding_box()['y'])
    if name=='manifold.html':
     q=page.locator('.epigraph-card blockquote').all_inner_texts();check(f'{width}: full epigraphs',len(q)==3 and 'spiegazione immateriali' in q[1] and 'anni più appassionati della sua vita' in q[2] and '[...]' not in ''.join(q))
    if width in [390,1440] and name in ['index.html','didattica.html','ricerca.html','geometrie.html','cv.html','blog.html','articolo-colpire-i-nervi-del-sistema.html','corso-quantum-post-quantum-computing-2026-2027.html']:

@@ -43,7 +43,7 @@
    diagrams.append(svg);caption.textContent=figure.querySelector('figcaption').textContent;
   }else{
    full.src=document.body.dataset.portable==='true'?(thumb?.src||link.href):link.href;
-   full.alt=thumb?.alt||link.textContent.trim();caption.textContent=link.closest('figure')?.querySelector('figcaption')?.textContent||full.alt;
+   full.alt=thumb?.alt||link.textContent.trim();caption.textContent=link.closest('figure')?.querySelector('.photo-caption,figcaption:not(:has(.photo-caption))')?.textContent||full.alt;
   }
   count.textContent=`${active+1} / ${links.length}`;
   prev.disabled=next.disabled=links.length<=1;

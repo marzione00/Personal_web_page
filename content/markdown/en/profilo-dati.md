@@ -250,7 +250,7 @@ Statistics and Data Science Conference · Invited talk, Pavia
 Yoga and mountains
 
 ## personalPhotos_0_caption
-Practice in an alpine setting
+Parivṛtta Sūrya Yantrāsana · Compass pose, with one hand on the rock and the leg extended upwards.
 
 ## personalPhotos_0_alt
 A person performs a yoga posture on a rock above a small alpine lake, with mountains and snowfields in the background.
@@ -259,7 +259,7 @@ A person performs a yoga posture on a rock above a small alpine lake, with mount
 Yoga
 
 ## personalPhotos_1_caption
-Studio practice
+Parivṛtta Sūrya Yantrāsana variation · Compass pose with one leg raised upwards and the other extended forwards off the floor.
 
 ## personalPhotos_1_alt
 Black-and-white photograph of a person practising yoga on a mat in a room with mirrors.
@@ -268,7 +268,7 @@ Black-and-white photograph of a person practising yoga on a mat in a room with m
 Yoga and mountains
 
 ## personalPhotos_2_caption
-Yoga at altitude
+Utthita Hasta Pādāṅguṣṭhāsana B · The lifted leg opens to the side, with one hand on the summit cross.
 
 ## personalPhotos_2_alt
 A person in a red jacket performs a balance posture on a mountain summit beside a summit cross.
@@ -286,7 +286,7 @@ A person climbs an artificial wall with numbered holds, supported by their hands
 Yoga
 
 ## personalPhotos_4_caption
-Side balance on one hand and one foot
+Vasiṣṭhāsana variation · Side balance on one hand and one foot, with the other leg lifted.
 
 ## personalPhotos_4_alt
 Marzio balances on one hand and one foot with the other leg raised in front of a bookcase.
@@ -295,7 +295,7 @@ Marzio balances on one hand and one foot with the other leg raised in front of a
 Yoga
 
 ## personalPhotos_5_caption
-Extension and support on the mat
+Hanumānāsana variation · Front split with the back knee bent and one hand holding the foot.
 
 ## personalPhotos_5_alt
 Marzio on the mat with one leg extended forward and the other bent behind him, holding his foot with one hand.

@@ -30,7 +30,7 @@ test('the biography opens the two practice photos in one bilingual gallery',()=>
  for(const language of ['it','en']){
   const data=loadContent(root,{language});
   const page=renderPages(data).find(p=>p.file==='cv.html').body;
-  const gallery=page.match(/<div class="personal-gallery profile-practice-photos" data-travel-gallery>(.*?)<\/div>/)?.[1];
+  const gallery=page.match(/<div class="personal-gallery profile-practice-photos" data-travel-gallery>([\s\S]*?<\/figure><figure[\s\S]*?<\/figure>)<\/div>/)?.[1];
   assert.ok(gallery);
   assert.equal((gallery.match(/data-travel-photo/g)||[]).length,2);
   for(const id of ['yoga-equilibrio-laterale','yoga-estensione-studio']){
@@ -38,6 +38,9 @@ test('the biography opens the two practice photos in one bilingual gallery',()=>
    assert.equal((page.match(new RegExp('src="media/images/'+id+'.jpg"','g'))||[]).length,1);
    assert.ok(gallery.includes(photo.caption));
   }
-  assert.match(gallery,language==='en'?/Side balance/:/Equilibrio laterale/);
+  assert.match(gallery,/Vasiṣṭhāsana/);
+  assert.match(page,/<figcaption>Bharadvājāsana · /);
+  assert.match(page,/Parivṛtta Sūrya Yantrāsana/);
+  assert.equal((page.match(/class="photo-guides"/g)||[]).length,2);
  }
 });

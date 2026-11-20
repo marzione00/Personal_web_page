@@ -1,0 +1,59 @@
+01	Gestione remota\\\footnotesize identità e permessi	Remote management\\\footnotesize identity and permissions
+01	Accesso abusivo\\\footnotesize credenziali o vulnerabilità	Unauthorised access\\\footnotesize credentials or vulnerabilities
+01	Controllore\\\footnotesize regole e valore obiettivo	Controller\\\footnotesize rules and set point
+01	Attuatori\\\footnotesize esecuzione del comando	Actuators\\\footnotesize execute the command
+01	Processo fisico\\\footnotesize raffreddamento	Physical process\\\footnotesize refrigeration
+01	Sensore\\\footnotesize temperatura misurata	Sensor\\\footnotesize measured temperature
+01	{impostazioni}	{settings}
+01	{comando}	{command}
+01	{azione}	{action}
+01	{retroazione}	{feedback}
+01	possibile alterazione\\delle informazioni	possible alteration\\of information
+02	Scoperta\\riservata	Private\\discovery
+02	Sfruttamento\\malevolo	Malicious\\exploitation
+02	Patch\\pubblica	Public\\patch
+02	Installazione\\locale	Local\\installation
+02	sfruttamento prima\\della correzione pubblica	exploitation before\\a public fix
+02	rimedio disponibile,\\sistema ancora da aggiornare	a fix is available;\\the system still needs patching
+02	La divulgazione al pubblico segue una propria sequenza:\\può precedere, accompagnare o seguire il rilascio della patch.	Public disclosure follows its own timeline.\\It may precede, coincide with or follow the patch release.
+03	Intrusione\\informatica	Cyber\\intrusion
+03	Parametri\\alterati	Altered\\parameters
+03	Processo\\compromesso	Compromised\\process
+03	Falsa minaccia\\di bomba	Bomb\\hoax
+03	Valutazione\\del pericolo	Threat\\assessment
+03	Misure\\di sicurezza	Safety\\measures
+03	Verifiche e\\coordinamento\\[4pt]\footnotesize personale e tempo\\impegnati	Checks and\\coordination\\[4pt]\footnotesize staff and time\\committed
+03	L'istruzione raggiunge l'apparecchiatura.	The instruction reaches the equipment.
+03	Il messaggio raggiunge chi decide.	The message reaches decision-makers.
+04	MOVIMENTO E MINACCIA	MOVEMENT AND THREAT
+04	{iniziativa}	{initiative}
+04	pressione\\diretta	direct\\pressure
+04	fronte\\preparato	prepared\\front
+04	forza\\organizzata	organised\\force
+04	Comando e\\rifornimenti	Command\\and supply
+04	direttrice\\meno attesa	less expected\\direction
+04	EFFETTO SULL'AVVERSARIO	EFFECT ON THE OPPONENT
+04	Minaccia ai collegamenti	Threat to connections
+04	Ridistribuzione dello sforzo	Redistribution of effort
+04	Minore libertà d'azione	Reduced freedom of action
+05	Patrimonio\\ereditato	Genetic\\heritage
+05	Cultura ed\\esperienza	Culture and\\experience
+05	Nuove\\informazioni	New\\information
+05	Osservazione\\\footnotesize indizi	Observation\\\footnotesize evidence
+05	\textbf{Orientamento}\\\footnotesize analisi e sintesi\\interpretazione	\textbf{Orientation}\\\footnotesize analysis and synthesis\\interpretation
+05	Decisione\\\footnotesize ipotesi	Decision\\\footnotesize hypothesis
+05	Azione\\\footnotesize prova	Action\\\footnotesize test
+05	guida implicita	implicit guidance
+05	conseguenze e nuove osservazioni	consequences and new observations
+06	EVENTI DISTANZIATI	EVENTS SPACED APART
+06	verifica e risposta	checks and response
+06	Fra una richiesta e la successiva rimane tempo per ricomporre la valutazione.	Between requests there is time to reassess the situation.
+06	EVENTI RAVVICINATI	EVENTS CLOSE TOGETHER
+06	il lavoro incompiuto\\si sovrappone	unfinished\\work overlaps
+06	tempo $\longrightarrow$	time $\longrightarrow$
+07	Relazioni fisiche\\\footnotesize risorse e informazione	Physical relationships\\\footnotesize resources and information
+07	Relazioni mentali\\\footnotesize comprensione degli eventi	Mental relationships\\\footnotesize understanding events
+07	Relazioni morali\\\footnotesize fiducia e condotta condivisa	Moral relationships\\\footnotesize trust and shared conduct
+07	Azione\\collettiva	Collective\\action
+07	disponibilità\\degli scambi	capacity for\\exchange
+07	attendibilità\\e cooperazione	trustworthiness\\and cooperation

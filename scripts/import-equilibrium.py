@@ -95,20 +95,70 @@ for i,(kind,title,content) in enumerate(boxes,1):
     else:
         markup=f'<aside class="science-note"><p class="science-note-title">{html.escape(title)}</p>{content}</aside>'
     result=result.replace(f'<p>EQUILIBRIUMBOX{i:02d}</p>',markup)
+def narrow_board(i, svg, description):
+    if i == 30:
+        # Reuse the four panels of the original vector at their exact bounding boxes.
+        drawing=re.sub(r'^.*?<title[^>]*>.*?</title>', '', svg, count=1, flags=re.S).rsplit('</svg>',1)[0]
+        tiles=''.join(
+            f'<svg x="{118*(j%2)}" y="{179*(j//2)}" width="118" height="177" viewBox="{offset} 2 118 177">'
+            '<use href="#eq-30-mobile-panels"/></svg>'
+            for j,offset in enumerate([0,118,236,354])
+        )
+        return f'<svg class="science-narrow" viewBox="0 0 236 356" role="img" aria-label="{html.escape(description)}"><defs><g id="eq-30-mobile-panels">{drawing}</g></defs>{tiles}</svg>'
+    if i != 27:
+        return ''
+    nodes=[
+        ('Corpo capovolto','inclinazione e velocità','Inverted body','tilt and speed'),
+        ('Sensi','vista, orecchio interno, pressione','Senses','vision, inner ear, pressure'),
+        ('Sistema nervoso','stima e decisione','Nervous system','estimation and decision'),
+        ('Muscoli','spalle, addome, avambracci','Muscles','shoulders, abdomen, forearms')
+    ]
+    headings=['Stato','Ritardo','Comando','Correzione'] if not english else ['State','Delay','Command','Correction']
+    external='External disturbances: breathing, distractions' if english else 'Spinte esterne: respiro, distrazioni'
+    parts=[]
+    for j,row in enumerate(nodes):
+        y=52+j*81
+        title,sub=row[2:] if english else row[:2]
+        parts.append(f'<rect x="27" y="{y}" width="218" height="46" rx="5" fill="var(--raised)" stroke="var(--line)"/>'
+                     f'<text x="136" y="{y+19}" font-size="14" text-anchor="middle">{title}</text>'
+                     f'<text x="136" y="{y+35}" font-size="11" text-anchor="middle">{sub}</text>')
+        if j<3:
+            parts.append(f'<path d="M136 {y+46}v35m-4-6 4 6 4-6" stroke="var(--sd-motion)" fill="none"/>'
+                         f'<text x="145" y="{y+66}" font-size="11">{headings[j]}</text>')
+    return f"""<svg class="science-narrow" viewBox="0 0 285 372" role="img" aria-label="{html.escape(description)}" fill="var(--ink)" font-family="sans-serif">
+     <text x="137" y="19" text-anchor="middle" font-size="10.8" fill="var(--sd-correction)">{external}</text>
+     <path d="M136 26v26m-4-6 4 6 4-6" stroke="var(--sd-correction)" fill="none"/>
+     {''.join(parts)}
+     <path d="M136 341v18H11V75h16m-6-4 6 4-6 4" fill="none" stroke="var(--sd-motion)"/>
+     <text transform="rotate(-90 22 275)" x="22" y="275" font-size="10">{headings[3]}</text>
+    </svg>"""
+
+result=result.replace(
+    '<p>EQUILIBRIUMFIGURE29</p>',
+    '<figure class="editorial-plate potential-plate"><img src="media/images/rendered/due-valli.webp" width="940" height="620" loading="lazy" decoding="async" alt="'+
+    ('A surface with two green basins and an amber saddle between them, above a set of contour lines.' if english else 'Una superficie con due conche verdi e una sella color ocra fra loro, sopra una serie di curve di livello.')+
+    '"><figcaption>'+
+    ('The two minima and the saddle between them in the model potential. The curves below join points at the same potential. <a href="#figura-32">See figure 32 ↗</a>' if english else 'I due minimi e la sella che li separa nel potenziale del modello. Alla base, le curve uniscono punti allo stesso potenziale. <a href="#figura-32">Vedi la figura 32 ↗</a>')+
+    '</figcaption></figure><p>EQUILIBRIUMFIGURE29</p>'
+)
+
 for f in manifest:
     i=f['number']; asset='assets/articles/equilibrio/'+f['file']
     svg=compact_paths((SOURCE/'public'/asset).read_text())
     if english:
         svg=re.sub(r'(<text\b[^>]*>)([^<]*)(</text>)',english_label,svg)
     svg=svg.replace(f'<title id="eq-{i:02d}-title">Diagramma {i}</title>',f'<title id="eq-{i:02d}-title">{html.escape(f["alt"])}</title>')
+    narrow=narrow_board(i,svg,f['alt'])
+    board_class='science-board science-board-responsive' if narrow else 'science-board'
+    copy='Copy figure link' if english else 'Copia il link alla figura'
     heading='DIAGRAM' if english else 'DIAGRAMMA'
     explore='Explore' if english else 'Esplora'
     expand=f'Enlarge diagram {i}' if english else f'Ingrandisci il diagramma {i}'
     board=f'Diagram {i}, scrollable area' if english else f'Diagramma {i}, area scorrevole'
     figure='Figure' if english else 'Figura'
     markup=f'''<figure class="science-figure" id="figura-{i:02d}">
-<div class="science-figure-head"><span>{heading} {i:02d}</span><a href="#figura-{i:02d}" data-travel-photo data-science-figure aria-haspopup="dialog" aria-label="{expand}">{explore} ↗</a></div>
-<div class="science-board" tabindex="0" role="region" aria-label="{board}">{svg}</div>
+<div class="science-figure-head"><span>{heading} {i:02d}</span><div><a href="#figura-{i:02d}" data-travel-photo data-science-figure aria-haspopup="dialog" aria-label="{expand}">{explore} ↗</a><button type="button" class="text-link js-only" data-copy-figure aria-label="{copy} {i}">{copy}</button></div></div>
+<div class="{board_class}" tabindex="0" role="region" aria-label="{board}">{svg}{narrow}</div><p class="figure-link-status" data-copy-status role="status" hidden></p>
 <figcaption><strong>{figure} {i}.</strong> {f['caption']}</figcaption></figure>'''
     result=result.replace(f'<p>EQUILIBRIUMFIGURE{i:02d}</p>',markup)
 key_title='Diagram key' if english else 'Come leggere le figure'

@@ -12,62 +12,74 @@
         {
           "title": "Parte I – La simulazione classica",
           "page": 13,
-          "pageHeading": "Quantum e post-quantum computing / MODULO 01 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+          "pageHeading": "Quantum e post-quantum computing / MODULO 01 / De Corato, Bruschi (UniMi) / ⟨Sezione",
+          "titleEn": "Part I – Classical simulation"
         },
         {
           "title": "Parte II – La simulazione statistica",
           "page": 54,
-          "pageHeading": "Quantum e post-quantum computing / MODULO 01 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+          "pageHeading": "Quantum e post-quantum computing / MODULO 01 / De Corato, Bruschi (UniMi) / ⟨Sezione",
+          "titleEn": "Part II – Statistical simulation"
         },
         {
           "title": "Parte III – Onde e interferenza",
           "page": 96,
-          "pageHeading": "Quantum e post-quantum computing / MODULO 01 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+          "pageHeading": "Quantum e post-quantum computing / MODULO 01 / De Corato, Bruschi (UniMi) / ⟨Sezione",
+          "titleEn": "Part III – Waves and interference"
         },
         {
           "title": "Parte IV – L'interferenza di particelle singole",
           "page": 129,
-          "pageHeading": "Quantum e post-quantum computing / MODULO 01 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+          "pageHeading": "Quantum e post-quantum computing / MODULO 01 / De Corato, Bruschi (UniMi) / ⟨Sezione",
+          "titleEn": "Part IV – Single-particle interference"
         },
         {
           "title": "Parte V – Stati a due alternative",
           "page": 169,
-          "pageHeading": "Quantum e post-quantum computing / MODULO 01 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+          "pageHeading": "Quantum e post-quantum computing / MODULO 01 / De Corato, Bruschi (UniMi) / ⟨Sezione",
+          "titleEn": "Part V – Two-alternative states"
         },
         {
           "title": "Parte VI – Il calcolo quantistico",
           "page": 226,
-          "pageHeading": "Quantum e post-quantum computing / MODULO 01 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+          "pageHeading": "Quantum e post-quantum computing / MODULO 01 / De Corato, Bruschi (UniMi) / ⟨Sezione",
+          "titleEn": "Part VI – Quantum computing"
         },
         {
           "title": "Parte VII – Due qubit e stati congiunti",
           "page": 250,
-          "pageHeading": "Quantum e post-quantum computing / MODULO 01 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+          "pageHeading": "Quantum e post-quantum computing / MODULO 01 / De Corato, Bruschi (UniMi) / ⟨Sezione",
+          "titleEn": "Part VII – Two qubits and joint states"
         },
         {
           "title": "Parte VIII – Ambiente e perdita di interferenza",
           "page": 281,
-          "pageHeading": "Quantum e post-quantum computing / MODULO 01 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+          "pageHeading": "Quantum e post-quantum computing / MODULO 01 / De Corato, Bruschi (UniMi) / ⟨Sezione",
+          "titleEn": "Part VIII – The environment and loss of interference"
         },
         {
           "title": "Parte IX – Informazione e irreversibilità",
           "page": 304,
-          "pageHeading": "Quantum e post-quantum computing / MODULO 01 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+          "pageHeading": "Quantum e post-quantum computing / MODULO 01 / De Corato, Bruschi (UniMi) / ⟨Sezione",
+          "titleEn": "Part IX – Information and irreversibility"
         },
         {
           "title": "Sintesi",
           "page": 312,
-          "pageHeading": "Quantum e post-quantum computing / MODULO 01 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+          "pageHeading": "Quantum e post-quantum computing / MODULO 01 / De Corato, Bruschi (UniMi) / ⟨Sezione",
+          "titleEn": "Summary"
         },
         {
           "title": "Parte X – Come si costruisce un computer quantistico",
           "page": 329,
-          "pageHeading": "Quantum e post-quantum computing / MODULO 01 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+          "pageHeading": "Quantum e post-quantum computing / MODULO 01 / De Corato, Bruschi (UniMi) / ⟨Sezione",
+          "titleEn": "Part X – How to build a quantum computer"
         },
         {
           "title": "Parte XI – Dalla meccanica quantistica al calcolo quantistico",
           "page": 495,
-          "pageHeading": "Quantum e post-quantum computing / MODULO 01 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+          "pageHeading": "Quantum e post-quantum computing / MODULO 01 / De Corato, Bruschi (UniMi) / ⟨Sezione",
+          "titleEn": "Part XI – From quantum mechanics to quantum computing"
         }
       ],
       "goal": {
@@ -90,157 +102,188 @@
         {
           "title": "Numeri complessi",
           "page": 11,
-          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione",
+          "titleEn": "Complex numbers"
         },
         {
           "title": "Vettori, basi e coordinate",
           "page": 33,
-          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione",
+          "titleEn": "Vectors, bases and coordinates"
         },
         {
           "title": "Prodotto interno e ortogonalità",
           "page": 45,
-          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione",
+          "titleEn": "Inner products and orthogonality"
         },
         {
           "title": "Matrici e trasformazioni lineari",
           "page": 76,
-          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione",
+          "titleEn": "Matrices and linear transformations"
         },
         {
           "title": "Aggiunto, hermitiane e unitarie",
           "page": 89,
-          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione",
+          "titleEn": "Adjoints, Hermitian and unitary matrices"
         },
         {
           "title": "Autovalori e autovettori",
           "page": 101,
-          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione",
+          "titleEn": "Eigenvalues and eigenvectors"
         },
         {
           "title": "Diagonalizzazione e spettro",
           "page": 113,
-          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione",
+          "titleEn": "Diagonalisation and the spectrum"
         },
         {
           "title": "Cambio di base e commutatori",
           "page": 138,
-          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione",
+          "titleEn": "Change of basis and commutators"
         },
         {
           "title": "Nucleo, immagine e rango",
           "page": 160,
-          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione",
+          "titleEn": "Kernel, image and rank"
         },
         {
           "title": "Prodotto tensoriale",
           "page": 167,
-          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione",
+          "titleEn": "Tensor products"
         },
         {
           "title": "Funzioni di matrici",
           "page": 180,
-          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione",
+          "titleEn": "Matrix functions"
         },
         {
           "title": "Un problema di algebra completo",
           "page": 203,
-          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione",
+          "titleEn": "A complete algebra problem"
         },
         {
           "title": "Esiti ed eventi",
           "page": 217,
-          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione",
+          "titleEn": "Outcomes and events"
         },
         {
           "title": "Variabili aleatorie discrete",
           "page": 223,
-          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione",
+          "titleEn": "Discrete random variables"
         },
         {
           "title": "Valore atteso",
           "page": 229,
-          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione",
+          "titleEn": "Expected value"
         },
         {
           "title": "Varianza e dispersione",
           "page": 235,
-          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione",
+          "titleEn": "Variance and spread"
         },
         {
           "title": "Prove ripetute e binomiale",
           "page": 242,
-          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione",
+          "titleEn": "Repeated trials and the binomial distribution"
         },
         {
           "title": "Frequenze e precisione",
           "page": 253,
-          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione",
+          "titleEn": "Frequencies and precision"
         },
         {
           "title": "Condizionamento e Bayes",
           "page": 264,
-          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione",
+          "titleEn": "Conditional probability and Bayes’ theorem"
         },
         {
           "title": "Distribuzioni congiunte",
           "page": 271,
-          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione",
+          "titleEn": "Joint distributions"
         },
         {
           "title": "Dal vettore al ket",
           "page": 319,
-          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione",
+          "titleEn": "From vectors to kets"
         },
         {
           "title": "Bra e prodotto interno",
           "page": 331,
-          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione",
+          "titleEn": "Bras and inner products"
         },
         {
           "title": "Prodotto diadico e proiettori",
           "page": 345,
-          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione",
+          "titleEn": "Outer products and projectors"
         },
         {
           "title": "Operatori e trasformazioni del qubit",
           "page": 354,
-          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione",
+          "titleEn": "Qubit operators and transformations"
         },
         {
           "title": "Autostati e decomposizione spettrale",
           "page": 389,
-          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione",
+          "titleEn": "Eigenstates and spectral decomposition"
         },
         {
           "title": "Regola di Born",
           "page": 396,
-          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione",
+          "titleEn": "The Born rule"
         },
         {
           "title": "Misura e aggiornamento dello stato",
           "page": 410,
-          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione",
+          "titleEn": "Measurement and state update"
         },
         {
           "title": "Valori medi e dispersioni quantistiche",
           "page": 424,
-          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione",
+          "titleEn": "Quantum expectation values and variances"
         },
         {
           "title": "Osservabili incompatibili",
           "page": 433,
-          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione",
+          "titleEn": "Incompatible observables"
         },
         {
           "title": "Sistemi composti",
           "page": 449,
-          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione",
+          "titleEn": "Composite systems"
         },
         {
           "title": "Un esperimento calcolato dall’inizio alla fine",
           "page": 488,
-          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione"
+          "pageHeading": "Quantum e post-quantum computing / MODULO 02 / De Corato, Bruschi (UniMi) / ⟨Sezione",
+          "titleEn": "A worked experiment from start to finish"
         }
       ],
       "goal": {
@@ -263,67 +306,80 @@
         {
           "title": "1. Lettura ed esecuzione",
           "page": 3,
-          "pageHeading": "MODULO 03 / / / CIRCUITI QUANTISTICI / 1. Lettura ed esecuzione"
+          "pageHeading": "MODULO 03 / / / CIRCUITI QUANTISTICI / 1. Lettura ed esecuzione",
+          "titleEn": "1. Reading and execution"
         },
         {
           "title": "2. Porte a un qubit",
           "page": 11,
-          "pageHeading": "MODULO 03 / / / CIRCUITI QUANTISTICI / 2. Porte a un qubit"
+          "pageHeading": "MODULO 03 / / / CIRCUITI QUANTISTICI / 2. Porte a un qubit",
+          "titleEn": "2. Single-qubit gates"
         },
         {
           "title": "3. Composizione e inversione",
           "page": 26,
-          "pageHeading": "MODULO 03 / / / CIRCUITI QUANTISTICI / 3. Composizione e inversione"
+          "pageHeading": "MODULO 03 / / / CIRCUITI QUANTISTICI / 3. Composizione e inversione",
+          "titleEn": "3. Composition and inversion"
         },
         {
           "title": "4. Fasi e interferenza",
           "page": 36,
-          "pageHeading": "MODULO 03 / / / CIRCUITI QUANTISTICI / 4. Fasi e interferenza"
+          "pageHeading": "MODULO 03 / / / CIRCUITI QUANTISTICI / 4. Fasi e interferenza",
+          "titleEn": "4. Phases and interference"
         },
         {
           "title": "5. Registri di due qubit",
           "page": 47,
-          "pageHeading": "MODULO 03 / / / CIRCUITI QUANTISTICI / 5. Registri di due qubit"
+          "pageHeading": "MODULO 03 / / / CIRCUITI QUANTISTICI / 5. Registri di due qubit",
+          "titleEn": "5. Two-qubit registers"
         },
         {
           "title": "6. CNOT, Toffoli e ausiliari",
           "page": 59,
-          "pageHeading": "MODULO 03 / / / CIRCUITI QUANTISTICI / 6. CNOT, Toffoli e ausiliari"
+          "pageHeading": "MODULO 03 / / / CIRCUITI QUANTISTICI / 6. CNOT, Toffoli e ausiliari",
+          "titleEn": "6. CNOT, Toffoli and ancillas"
         },
         {
           "title": "7. Deutsch: derivazione commentata",
           "page": 94,
-          "pageHeading": "MODULO 03 / / / CIRCUITI QUANTISTICI / 7. Deutsch: derivazione commentata"
+          "pageHeading": "MODULO 03 / / / CIRCUITI QUANTISTICI / 7. Deutsch: derivazione commentata",
+          "titleEn": "7. Deutsch’s algorithm, annotated derivation"
         },
         {
           "title": "8. Interpretazione e prosecuzione",
           "page": 115,
-          "pageHeading": "MODULO 03 / / / CIRCUITI QUANTISTICI / 8. Interpretazione e prosecuzione"
+          "pageHeading": "MODULO 03 / / / CIRCUITI QUANTISTICI / 8. Interpretazione e prosecuzione",
+          "titleEn": "8. Interpretation and next steps"
         },
         {
           "title": "9. Deutsch–Jozsa su più bit",
           "page": 119,
-          "pageHeading": "MODULO 03 / / / CIRCUITI QUANTISTICI / 9. Deutsch–Jozsa su più bit"
+          "pageHeading": "MODULO 03 / / / CIRCUITI QUANTISTICI / 9. Deutsch–Jozsa su più bit",
+          "titleEn": "9. Deutsch–Jozsa on multiple bits"
         },
         {
           "title": "A. Verifiche e dimostrazioni",
           "page": 148,
-          "pageHeading": "MODULO 03 / / / CIRCUITI QUANTISTICI / A. Verifiche e dimostrazioni"
+          "pageHeading": "MODULO 03 / / / CIRCUITI QUANTISTICI / A. Verifiche e dimostrazioni",
+          "titleEn": "A. Checks and proofs"
         },
         {
           "title": "B. Preparazioni alternative",
           "page": 155,
-          "pageHeading": "MODULO 03 / / / CIRCUITI QUANTISTICI / B. Preparazioni alternative"
+          "pageHeading": "MODULO 03 / / / CIRCUITI QUANTISTICI / B. Preparazioni alternative",
+          "titleEn": "B. Alternative preparations"
         },
         {
           "title": "C. AND, fase e ripristino",
           "page": 171,
-          "pageHeading": "MODULO 03 / / / CIRCUITI QUANTISTICI / C. AND, fase e ripristino"
+          "pageHeading": "MODULO 03 / / / CIRCUITI QUANTISTICI / C. AND, fase e ripristino",
+          "titleEn": "C. AND, phase and uncomputation"
         },
         {
           "title": "Riferimenti",
           "page": 177,
-          "pageHeading": "MODULO 03 / / / CIRCUITI QUANTISTICI / Riferimenti"
+          "pageHeading": "MODULO 03 / / / CIRCUITI QUANTISTICI / Riferimenti",
+          "titleEn": "References"
         }
       ],
       "goal": {
@@ -346,32 +402,38 @@
         {
           "title": "Bernstein–Vazirani",
           "page": 3,
-          "pageHeading": "MODULO 04 / / / ALGORITMI QUANTISTICI / Bernstein–Vazirani"
+          "pageHeading": "MODULO 04 / / / ALGORITMI QUANTISTICI / Bernstein–Vazirani",
+          "titleEn": "Bernstein–Vazirani"
         },
         {
           "title": "Simon",
           "page": 60,
-          "pageHeading": "MODULO 04 / / / ALGORITMI QUANTISTICI / Simon"
+          "pageHeading": "MODULO 04 / / / ALGORITMI QUANTISTICI / Simon",
+          "titleEn": "Simon"
         },
         {
           "title": "Simon: quante prove servono",
           "page": 134,
-          "pageHeading": "MODULO 04 / / / ALGORITMI QUANTISTICI / Simon / Numero di esecuzioni"
+          "pageHeading": "MODULO 04 / / / ALGORITMI QUANTISTICI / Simon / Numero di esecuzioni",
+          "titleEn": "Simon’s algorithm and the number of trials"
         },
         {
           "title": "Simon: confronto classico e risorse",
           "page": 147,
-          "pageHeading": "MODULO 04 / / / ALGORITMI QUANTISTICI / Simon / Confronto classico"
+          "pageHeading": "MODULO 04 / / / ALGORITMI QUANTISTICI / Simon / Confronto classico",
+          "titleEn": "Simon’s algorithm, classical comparison and resources"
         },
         {
           "title": "Confronto dei procedimenti",
           "page": 156,
-          "pageHeading": "MODULO 04 / / / ALGORITMI QUANTISTICI / Confronto dei procedimenti"
+          "pageHeading": "MODULO 04 / / / ALGORITMI QUANTISTICI / Confronto dei procedimenti",
+          "titleEn": "Comparing the procedures"
         },
         {
           "title": "Appendice",
           "page": 159,
-          "pageHeading": "MODULO 04 / / / ALGORITMI QUANTISTICI / Appendice"
+          "pageHeading": "MODULO 04 / / / ALGORITMI QUANTISTICI / Appendice",
+          "titleEn": "Appendix"
         }
       ],
       "goal": {
@@ -394,67 +456,80 @@
         {
           "title": "01 Il problema di Shor",
           "page": 4,
-          "pageHeading": "CAPITOLO 01 / Il problema / di Shor / Il precedente di Simon"
+          "pageHeading": "CAPITOLO 01 / Il problema / di Shor / Il precedente di Simon",
+          "titleEn": "01 Shor’s problem"
         },
         {
           "title": "02 Divisori e coprimalità",
           "page": 15,
-          "pageHeading": "CAPITOLO 02 / Divisori / e coprimalità / Il massimo comun divisore"
+          "pageHeading": "CAPITOLO 02 / Divisori / e coprimalità / Il massimo comun divisore",
+          "titleEn": "02 Divisors and coprimality"
         },
         {
           "title": "03 Congruenze e inversi",
           "page": 34,
-          "pageHeading": "CAPITOLO 03 / Congruenze / e inversi / Il calcolo con i resti"
+          "pageHeading": "CAPITOLO 03 / Congruenze / e inversi / Il calcolo con i resti",
+          "titleEn": "03 Congruences and inverses"
         },
         {
           "title": "04 Potenze e ordine",
           "page": 57,
-          "pageHeading": "CAPITOLO 04 / Potenze / e ordine / Le ripetizioni delle"
+          "pageHeading": "CAPITOLO 04 / Potenze / e ordine / Le ripetizioni delle",
+          "titleEn": "04 Powers and order"
         },
         {
           "title": "05 La costruzione di RSA",
           "page": 82,
-          "pageHeading": "CAPITOLO 05 / La costruzione / di RSA / Chiavi, cifratura e correttezza"
+          "pageHeading": "CAPITOLO 05 / La costruzione / di RSA / Chiavi, cifratura e correttezza",
+          "titleEn": "05 Constructing RSA"
         },
         {
           "title": "06 Il periodo del cifrato",
           "page": 115,
-          "pageHeading": "CAPITOLO 06 / Il periodo / del cifrato / Il recupero del messaggio"
+          "pageHeading": "CAPITOLO 06 / Il periodo / del cifrato / Il recupero del messaggio",
+          "titleEn": "06 The period of the ciphertext"
         },
         {
           "title": "07 La difficoltà della ricerca",
           "page": 128,
-          "pageHeading": "CAPITOLO 07 / La difficoltà / della ricerca / Valutare una potenza e determinare il"
+          "pageHeading": "CAPITOLO 07 / La difficoltà / della ricerca / Valutare una potenza e determinare il",
+          "titleEn": "07 The difficulty of the search"
         },
         {
           "title": "08 La rappresentazione di Fourier",
           "page": 137,
-          "pageHeading": "CAPITOLO 08 / La rappresentazione / di Fourier / Oscillazioni, campioni e frequenze"
+          "pageHeading": "CAPITOLO 08 / La rappresentazione / di Fourier / Oscillazioni, campioni e frequenze",
+          "titleEn": "08 The Fourier representation"
         },
         {
           "title": "09 La ricerca quantistica del periodo",
           "page": 152,
-          "pageHeading": "CAPITOLO 09 / La ricerca / quantistica / del periodo"
+          "pageHeading": "CAPITOLO 09 / La ricerca / quantistica / del periodo",
+          "titleEn": "09 Quantum period finding"
         },
         {
           "title": "10 Dalla misura al messaggio",
           "page": 169,
-          "pageHeading": "CAPITOLO 10 / Dalla misura / al messaggio / Approssimazioni razionali"
+          "pageHeading": "CAPITOLO 10 / Dalla misura / al messaggio / Approssimazioni razionali",
+          "titleEn": "10 From measurement to the message"
         },
         {
           "title": "11 La realizzazione del circuito",
           "page": 185,
-          "pageHeading": "CAPITOLO 11 / La realizzazione / del circuito / Porte, aritmetica reversibile e misura"
+          "pageHeading": "CAPITOLO 11 / La realizzazione / del circuito / Porte, aritmetica reversibile e misura",
+          "titleEn": "11 Building the circuit"
         },
         {
           "title": "A Il periodo e i fattori (facoltativo)",
           "page": 201,
-          "pageHeading": "APPROFONDIMENTI FACOLTATIVI / Il periodo / e i fattori / Un’altra applicazione della ricerca"
+          "pageHeading": "APPROFONDIMENTI FACOLTATIVI / Il periodo / e i fattori / Un’altra applicazione della ricerca",
+          "titleEn": "A The period and the factors (optional)"
         },
         {
           "title": "Riferimenti bibliografici",
           "page": 207,
-          "pageHeading": "Indicazioni di lettura / N. David Mermin, Quantum Computer Science: An Introduction, Cambridge University Press, / 2007, capitolo 3, «Breaking RSA Encryption». Le pagine indicate sono quelle stampate nel / volume, non il contatore del lettore PDF."
+          "pageHeading": "Indicazioni di lettura / N. David Mermin, Quantum Computer Science: An Introduction, Cambridge University Press, / 2007, capitolo 3, «Breaking RSA Encryption». Le pagine indicate sono quelle stampate nel / volume, non il contatore del lettore PDF.",
+          "titleEn": "References"
         }
       ],
       "goal": {
@@ -477,62 +552,74 @@
         {
           "title": "Il problema della ricerca",
           "page": 4,
-          "pageHeading": "CAPITOLO 01 / Il problema / della ricerca / Candidati, verificatori"
+          "pageHeading": "CAPITOLO 01 / Il problema / della ricerca / Candidati, verificatori",
+          "titleEn": "The search problem"
         },
         {
           "title": "Stati e probabilità",
           "page": 21,
-          "pageHeading": "CAPITOLO 02 / Stati / e probabilità / La preparazione dei registri"
+          "pageHeading": "CAPITOLO 02 / Stati / e probabilità / La preparazione dei registri",
+          "titleEn": "States and probabilities"
         },
         {
           "title": "Oracoli reversibili",
           "page": 42,
-          "pageHeading": "CAPITOLO 03 / Oracoli / reversibili / Il valore della funzione"
+          "pageHeading": "CAPITOLO 03 / Oracoli / reversibili / Il valore della funzione",
+          "titleEn": "Reversible oracles"
         },
         {
           "title": "Quattro candidati",
           "page": 61,
-          "pageHeading": "CAPITOLO 04 / Quattro / candidati / Un esempio completo"
+          "pageHeading": "CAPITOLO 04 / Quattro / candidati / Un esempio completo",
+          "titleEn": "Four candidates"
         },
         {
           "title": "Otto candidati",
           "page": 78,
-          "pageHeading": "CAPITOLO 05 / Otto / candidati / Il calcolo delle ampiezze"
+          "pageHeading": "CAPITOLO 05 / Otto / candidati / Il calcolo delle ampiezze",
+          "titleEn": "Eight candidates"
         },
         {
           "title": "Riflessioni e sottospazi",
           "page": 97,
-          "pageHeading": "CAPITOLO 06 / Riflessioni / e sottospazi / Proiezioni, ortogonalità"
+          "pageHeading": "CAPITOLO 06 / Riflessioni / e sottospazi / Proiezioni, ortogonalità",
+          "titleEn": "Reflections and subspaces"
         },
         {
           "title": "La rotazione di Grover",
           "page": 123,
-          "pageHeading": "CAPITOLO 07 / La rotazione / di Grover / Il piano degli stati"
+          "pageHeading": "CAPITOLO 07 / La rotazione / di Grover / Il piano degli stati",
+          "titleEn": "Grover rotation"
         },
         {
           "title": "Circuiti e ausiliari",
           "page": 146,
-          "pageHeading": "CAPITOLO 08 / Circuiti / e ausiliari / La costruzione dell’oracolo"
+          "pageHeading": "CAPITOLO 08 / Circuiti / e ausiliari / La costruzione dell’oracolo",
+          "titleEn": "Circuits and ancillas"
         },
         {
           "title": "Più soluzioni",
           "page": 175,
-          "pageHeading": "CAPITOLO 09 / Più / soluzioni / La probabilità complessiva"
+          "pageHeading": "CAPITOLO 09 / Più / soluzioni / La probabilità complessiva",
+          "titleEn": "Multiple solutions"
         },
         {
           "title": "Il numero di soluzioni ignoto",
           "page": 192,
-          "pageHeading": "CAPITOLO 10 / Il numero di / soluzioni ignoto / Conteggi casuali, verifiche"
+          "pageHeading": "CAPITOLO 10 / Il numero di / soluzioni ignoto / Conteggi casuali, verifiche",
+          "titleEn": "An unknown number of solutions"
         },
         {
           "title": "Amplificazione di ampiezza",
           "page": 210,
-          "pageHeading": "CAPITOLO 11 / Amplificazione / di ampiezza / La ricerca con una"
+          "pageHeading": "CAPITOLO 11 / Amplificazione / di ampiezza / La ricerca con una",
+          "titleEn": "Amplitude amplification"
         },
         {
           "title": "Costo e uso dell’algoritmo",
           "page": 230,
-          "pageHeading": "CAPITOLO 12 / Costo e uso / dell’algoritmo / Risorse, limiti"
+          "pageHeading": "CAPITOLO 12 / Costo e uso / dell’algoritmo / Risorse, limiti",
+          "titleEn": "Algorithm cost and use"
         }
       ],
       "goal": {
@@ -555,22 +642,26 @@
         {
           "title": "BB84 e distribuzione delle chiavi",
           "page": 10,
-          "pageHeading": "CAPITOLO 01 / BB84 e distribuzione / delle chiavi / Preparazione, misura e confronto delle basi"
+          "pageHeading": "CAPITOLO 01 / BB84 e distribuzione / delle chiavi / Preparazione, misura e confronto delle basi",
+          "titleEn": "BB84 and key distribution"
         },
         {
           "title": "La QKD nelle comunicazioni protette",
           "page": 29,
-          "pageHeading": "CAPITOLO 02 / La QKD nelle / comunicazioni protette / Autenticazione, protezione dei dati"
+          "pageHeading": "CAPITOLO 02 / La QKD nelle / comunicazioni protette / Autenticazione, protezione dei dati",
+          "titleEn": "QKD in secure communications"
         },
         {
           "title": "Codifica superdensa",
           "page": 46,
-          "pageHeading": "CAPITOLO 03 / Codifica / superdensa / Due bit per qubit trasmesso"
+          "pageHeading": "CAPITOLO 03 / Codifica / superdensa / Due bit per qubit trasmesso",
+          "titleEn": "Superdense coding"
         },
         {
           "title": "Correzione degli errori quantistici",
           "page": 57,
-          "pageHeading": "CAPITOLO 04 / Correzione degli / errori quantistici / Ridondanza, sindromi e recupero"
+          "pageHeading": "CAPITOLO 04 / Correzione degli / errori quantistici / Ridondanza, sindromi e recupero",
+          "titleEn": "Quantum error correction"
         }
       ],
       "goal": {

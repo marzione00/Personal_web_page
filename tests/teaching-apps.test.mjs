@@ -16,32 +16,32 @@ function fixture(run) {
 }
 function changed(change) { const r=registry(); change(r); return r; }
 
-test('registry has two live labs and a disabled template',()=>{
+test('registry has three live labs and a disabled template',()=>{
  const r=validateTeachingRegistry(registry());
- assert.equal(r.filter(x=>x.enabled).length,2);
+ assert.equal(r.filter(x=>x.enabled).length,3);
  assert.equal(r.find(x=>x.id==='nuovo-laboratorio').enabled,false);
 });
-test('IT and EN load two live apps, with distinct editorial text',()=>{
+test('IT and EN load three live apps, with distinct editorial text',()=>{
  const it=data('it'),en=data('en');
- assert.equal(it.teachingApps.length,2); assert.equal(en.teachingApps.length,2);
+ assert.equal(it.teachingApps.length,3); assert.equal(en.teachingApps.length,3);
  assert.notEqual(it.teachingApps[0].paragraphs[0],en.teachingApps[0].paragraphs[0]);
 });
 test('disabled template never leaks into public markup or search',()=>{
  const d={language:'it',teachingApps:loadTeachingApps(root,'it',{includeDisabled:true})};
  assert.doesNotMatch(renderTeachingApps(d),/nuovo-laboratorio|Nuovo laboratorio/);
- assert.equal(teachingAppSearchEntries(d).length,2);
+ assert.equal(teachingAppSearchEntries(d).length,3);
  assert.match(renderTeachingApps(d,{previewDisabled:true}),/Modello non pubblicato/);
 });
-test('a third enabled application needs only registry and text changes',()=>fixture(dir=>{
- const r=registry();r.apps[2].enabled=true;r.apps[2].url='https://lab.example.it/';
+test('another enabled application needs only registry and text changes',()=>fixture(dir=>{
+ const r=registry();const draft=r.apps.find(app=>app.id==='nuovo-laboratorio');draft.enabled=true;draft.url='https://lab.example.it/';
  fs.writeFileSync(path.join(dir,'content/teaching-apps.json'),JSON.stringify(r));
- assert.equal(loadTeachingApps(dir).length,3);
+ assert.equal(loadTeachingApps(dir).length,4);
 }));
 test('single title, section and semantic h2/h3 hierarchy',()=>{
  const html=renderTeachingApps(data('it'));
  assert.equal((html.match(/<section /g)||[]).length,1);
  assert.equal((html.match(/<h2 /g)||[]).length,1);
- assert.equal((html.match(/<h3>/g)||[]).length,2);
+ assert.equal((html.match(/<h3>/g)||[]).length,3);
  assert.equal((html.match(/id="laboratorio-quantum-lab"/g)||[]).length,1);
 });
 test('main CTA is a real same-tab link and source link is separate',()=>{
@@ -87,7 +87,7 @@ test('published destinations cannot be the GitHub repository or an example domai
 });
 test('draft may have empty URLs; active application cannot',()=>{
  assert.doesNotThrow(()=>validateTeachingRegistry(registry()));
- assert.throws(()=>validateTeachingRegistry(changed(x=>x.apps[2].enabled=true)),/Laboratori:/);
+ assert.throws(()=>validateTeachingRegistry(changed(x=>x.apps.find(app=>app.id==='nuovo-laboratorio').enabled=true)),/Laboratori:/);
 });
 test('ids cannot contain paths and must be unique',()=>{
  for(const value of ['../file','a/b','lab_1','Lab','a'.repeat(61)])

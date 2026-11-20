@@ -1,11 +1,13 @@
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import path from 'node:path';import os from 'node:os';import {fileURLToPath} from 'node:url';
-import {loadContent} from '../src/content.mjs';import {renderPages,shellHtml} from '../src/render.mjs';import {localiseHtml,prefixResources,languageSwitch,sections} from '../src/i18n.mjs';
+import {loadContent} from '../src/content.mjs';import {renderPages,shellHtml} from '../src/render.mjs';import {searchEntries} from '../src/search.mjs';import {structuredData} from '../src/seo.mjs';import {localiseHtml,prefixResources,languageSwitch,sections} from '../src/i18n.mjs';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const it=loadContent(root),en=loadContent(root,{language:'en'}),pi=renderPages(it),pe=renderPages(en);
 const page=(d,f)=>renderPages(d).find(p=>p.file===f);
 function fixture(fn){const d=fs.mkdtempSync(path.join(os.tmpdir(),'mdc-i18n-'));try{for(const f of ['content','public'])fs.cpSync(path.join(root,f),path.join(d,f),{recursive:true});return fn(d);}finally{fs.rmSync(d,{recursive:true,force:true});}}
 test('IT/EN contain corresponding paths with stable anchors and original assets',()=>{
- assert.deepEqual(pi.map(p=>p.file),pe.map(p=>p.file));assert.equal(it.language,'it');assert.equal(en.language,'en');
+ assert.deepEqual(pi.map(p=>p.file),pe.map(p=>p.file));
+ assert.ok(en.posts.every(post=>post.draft||!post.translationMissing));
+ assert.ok(en.travels.every(trip=>trip.draft||!trip.translationMissing));assert.equal(it.language,'it');assert.equal(en.language,'en');
  for(const p of pi){const q=pe.find(q=>q.file===p.file);assert.deepEqual([...p.body.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]),[...q.body.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]));}
  assert.equal(it.profile.homepagePhoto.sha256,en.profile.homepagePhoto.sha256);
  assert.deepEqual(it.lectures.map(l=>l.files),en.lectures.map(l=>l.files));
@@ -23,7 +25,9 @@ test('Italian epigraphs are complete labelled translations; English sources reta
 test('English article preserves seven source figures and nineteen bibliography entries',()=>{
  const a=en.posts.find(p=>p.id==='colpire-i-nervi-del-sistema');const original=it.posts.find(p=>p.id===a.id);
  assert.match(a.title,/Striking the Nerves/);assert.ok(a.body.split(/\s+/).length>4000);
- const figures=s=>[...s.matchAll(/media\/images\/colpire-nervi-fig-[^\s)]+/g)].map(m=>m[0]);assert.deepEqual(figures(a.body),figures(original.body));assert.equal(figures(a.body).length,7);
+ const figures=s=>[...s.matchAll(/media\/images\/colpire-nervi-fig-[^\s)]+/g)].map(m=>m[0]);
+ const localised=figures(a.body);assert.deepEqual(localised,figures(original.body).map(f=>f.replace('.png','-en.png')));assert.equal(localised.length,7);
+ for(const figure of localised)assert.ok(fs.existsSync(path.join(root,'public',figure)));
  for(let n=1;n<=19;n++)assert.ok(a.body.includes('['+n+']'),n);
  assert.equal(a.pdf,original.pdf);
 });
@@ -62,4 +66,29 @@ test('an English Markdown counterpart for a new post works without JavaScript ed
 test('unsupported languages and duplicate translation sections fail clearly',()=>{
  assert.throws(()=>loadContent(root,{language:'xx'}),/Unsupported language/);
  const tmp=path.join(os.tmpdir(),'mdc-dup-'+process.pid+'.md');try{fs.writeFileSync(tmp,'## title\nOne\n## title\nTwo');assert.throws(()=>sections(tmp),/Duplicate/);}finally{fs.rmSync(tmp,{force:true});}
+});
+
+test('the English PDF index and search use localised titles with identical destinations',()=>{
+ const file='corso-quantum-post-quantum-computing-2026-2027.html';
+ const course=pe.find(p=>p.file===file);
+ const rows=searchEntries(en).filter(r=>r.url.startsWith(file+'#argomento-'));
+ assert.equal(rows.length,91);
+ for(const module of en.studyGuide.modules)for(const chapter of module.chapters){
+  const anchor=`argomento-${module.id}-${chapter.page}`;
+  assert.ok(course.body.includes('id="'+anchor+'"'));
+  assert.equal(rows.find(r=>r.url.endsWith('#'+anchor))?.title,chapter.titleEn);
+ }
+ assert.match(course.body,/>Part III – Waves and interference<\/span>/);
+ assert.match(course.body,/PDF slides in Italian/);
+ assert.doesNotMatch(course.body,/>Parte III – Onde e interferenza<\/span>/);
+});
+test('page metadata is localised before it enters the structured data and share card',()=>{
+ const travel=pe.find(p=>p.file==='viaggi.html');
+ const record=JSON.parse(structuredData(en,travel,'https://marzione00.github.io/Personal_web_page/en/viaggi.html'));
+ assert.equal(record.inLanguage,'en');
+ assert.equal(record.description,'Travel diaries, walks and photo albums.');
+ assert.match(record.name,/Travel/);
+ const teaching=pe.find(p=>p.file==='didattica.html');
+ assert.equal(teaching.title,'Teaching');
+ assert.match(teaching.description,/Public courses/);
 });

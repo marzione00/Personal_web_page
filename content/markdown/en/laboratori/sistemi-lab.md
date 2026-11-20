@@ -1,0 +1,1 @@
+SistemiLab accompanies Architecture of Computer Systems, the course notes by Marzio De Corato and Danilo Bruschi. Guided experiments let you follow an instruction through the processor, observe processes as they run, and trace data through cache and memory.

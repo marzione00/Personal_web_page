@@ -12,7 +12,7 @@ export function loadPaths(root){
  if(guide.schemaVersion!==1||guide.modules.length!==7)throw Error('Invalid study guide');
  for(const m of guide.modules){if(!safeMedia(m.pdf)||!/^quantum-2026-2027-modulo-0[1-7]$/.test(m.id)||!Number.isInteger(m.pages)||!Array.isArray(m.chapters)||!m.chapters.length)throw Error('Invalid study module');
   for(const language of ['it','en'])if(typeof m.goal?.[language]!=='string'||!m.goal[language].trim()||typeof m.preparation?.[language]!=='string'||!m.preparation[language].trim())throw Error('Incomplete study guide translation');
-  for(const c of m.chapters)if(typeof c.title!=='string'||c.title.length>300||!Number.isInteger(c.page)||c.page<1||c.page>m.pages)throw Error('Invalid PDF destination');
+  for(const c of m.chapters)if(![c.title,c.titleEn].every(title=>typeof title==='string'&&title.trim()&&title.length<=300)||!Number.isInteger(c.page)||c.page<1||c.page>m.pages)throw Error('Invalid PDF destination');
  }
  return {messages,editorialSelection:selection,studyGuide:guide};
 }
@@ -21,14 +21,15 @@ export function articleReading(post,data){
  let index=0;const items=[];
  const scientific=scientificArticle(post,data.language);
  const body=(scientific||markdown(post.body)).replace(/<h([23])(?:\s[^>]*)?>([\s\S]*?)<\/h\1>/g,(_,level,label)=>{const id='capitolo-'+(++index);if(level==='2')items.push({id,label});return `<h${level} id="${id}" tabindex="-1">${label}</h${level}>`;});
+ const resume=items.length>1?`<a class="text-link reading-resume" data-reading-resume href="articolo-${e(post.id)}.html" hidden>${data.language==='en'?'Resume reading':'Riprendi la lettura'}</a>`:'';
  const toc=items.length?`<nav class="article-toc" data-section-nav aria-label="${e(t(data,'article.index'))}"><span class="label">${e(t(data,'article.index'))}</span>${items.map(x=>`<a href="articolo-${e(post.id)}.html#${x.id}">${x.label}</a>`).join('')}</nav>`:'';
  const words=scientific?scientific.replace(/<svg\b[\s\S]*?<\/svg>/g,'').replace(/<annotation\b[\s\S]*?<\/annotation>/g,'').replace(/<[^>]*>/g,' '):post.body;
- return {sections:items,body:withArticleDiagrams(post.id,body,data.language||'it'),toc,minutes:Math.max(1,Math.ceil(words.trim().split(/\s+/).length/200))};
+ return {resume,sections:items,body:withArticleDiagrams(post.id,body,data.language||'it'),toc,minutes:Math.max(1,Math.ceil(words.trim().split(/\s+/).length/200))};
 }
 export function studyMap(lecture,data){
  const m=data.studyGuide.modules.find(x=>x.id===lecture.id);if(!m)return '';
  const lang=data.language||'it';
- return `<div class="study-objectives"><h4>${lang==='en'?'Reading task':'Traccia di studio'}</h4><p>${e(m.goal[lang])}</p><details><summary>${lang==='en'?'Suggested preparation':'Preparazione suggerita'}</summary><p>${e(m.preparation[lang])}</p></details></div><details class="study-map"><summary>${e(t(data,'study.map'))} · ${m.chapters.length}</summary><p class="small">${e(t(data,'study.language'))}</p><ol>${m.chapters.map(c=>`<li id="argomento-${e(m.id)}-${c.page}"><a data-study-destination data-study-id="${e(m.id)}" data-study-page="${c.page}" data-study-title="${e(c.title)}" href="${e(safeMedia(m.pdf))}#page=${c.page}" target="_blank" rel="noopener noreferrer"><span lang="it">${e(c.title)}</span><span>${e(t(data,'study.page'))} ${c.page} ↗</span></a></li>`).join('')}</ol><p class="small muted">${e(t(data,'study.note'))}</p></details>`;
+ return `<div class="study-objectives"><h4>${lang==='en'?'Reading task':'Traccia di studio'}</h4><p>${e(m.goal[lang])}</p><details><summary>${lang==='en'?'Suggested preparation':'Preparazione suggerita'}</summary><p>${e(m.preparation[lang])}</p></details></div><details class="study-map"><summary>${e(t(data,'study.map'))} · ${m.chapters.length}</summary><p class="small">${e(t(data,'study.language'))}</p><ol>${m.chapters.map(c=>`<li id="argomento-${e(m.id)}-${c.page}"><a data-study-destination data-study-id="${e(m.id)}" data-study-page="${c.page}" data-study-title-it="${e(c.title)}" data-study-title-en="${e(c.titleEn)}" href="${e(safeMedia(m.pdf))}#page=${c.page}" target="_blank" rel="noopener noreferrer"><span>${e(lang==='en'?c.titleEn:c.title)}</span><span>${e(t(data,'study.page'))} ${c.page} ↗</span></a></li>`).join('')}</ol><p class="small muted">${e(t(data,'study.note'))}</p></details>`;
 }
 export function resumeStudy(data){return `<div class="study-resume" data-study-resume hidden><a class="text-link" data-study-resume-link href="corso-quantum-post-quantum-computing-2026-2027.html">${e(t(data,'study.resume'))}</a><button type="button" class="reset" data-study-forget>${e(t(data,'study.forget'))}</button><p class="small muted">${e(t(data,'study.saved'))}</p></div>`;}
 export function printButton(data){return `<button type="button" class="text-link print-command js-only" data-print>${e(t(data,'print.all'))}</button>`;}

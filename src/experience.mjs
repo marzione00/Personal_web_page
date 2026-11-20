@@ -1,4 +1,5 @@
 import {launchAttributes} from './teaching-apps.mjs';
+import {plateImage} from './editorial-plates.mjs';
 import {orbitMark,replayEntry} from './cinema.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -29,12 +30,18 @@ export function studyLinks(lecture,data){
 }
 export function homePortals(data){
  const en=data.language==='en',apps=(data.teachingApps||[]).filter(a=>a.enabled);
+ const labLinks=apps.map(app=>`<a href="${e(app.url)}"${launchAttributes(app)}>${e(app.title)} ↗</a>`).join('');
+ const lesson=data.lectures.find(lecture=>lecture.id==='quantum-2026-2027-modulo-01');
+ const essay=data.posts.find(post=>post.id==='lequilibrio-sul-tappetino');
  const cards=[
-  {title:en?'Teaching':'Didattica',href:'didattica.html',label:en?'Study':'Studia',copy:en?'Choose a course and academic year to reach its entry and the available materials.':'Scegli il corso e l’anno accademico per raggiungere le schede e i materiali disponibili.'},
-  {title:en?'Research':'Ricerca',href:'ricerca.html',label:en?'Explore':'Approfondisci',copy:en?'Follow the questions running through the studies, comparing methods, findings and references.':'Segui le domande che attraversano gli studi, confrontandone metodi, risultati e riferimenti.'},
-  {title:en?'Laboratories':'Laboratori',href:'laboratori.html',label:en?'Navigate':'Esplora',copy:en?'Two galaxies to explore: Quantum Lab and GeoStat Lab, from quantum computing to statistics for Earth sciences.':'Due galassie da esplorare: Quantum Lab e GeoStat Lab, dal calcolo quantistico alla statistica per le scienze della Terra.'}
+  {title:lesson?.title||(en?'Course materials':'Materiali dei corsi'),href:lesson?`corso-${lesson.course}.html#lezione-${lesson.id}`:'didattica.html',
+   label:en?'Teaching':'Didattica',copy:en?'The first module of Quantum and Post-Quantum Computing.':'Il primo modulo di Quantum e post-quantum computing.',art:orbitMark('lattice')},
+  {title:en?'Inside a schwarzite':'Dentro la schwarzite',href:'geometrie.html#confronto-carbonio',label:en?'Atlas':'Atlante',
+   copy:en?'From the plane of graphene to the pores of the P688 lattice.':'Dal piano del grafene ai pori del reticolo P688.',art:plateImage('schwarzite-pori',1080,650,'',true)},
+  {title:essay?.title||(en?'Essays':'Saggi'),href:essay?`articolo-${essay.id}.html`:'blog.html',label:'Blog',
+   copy:en?'A ball, a pendulum and four asanas to study stability.':'Una pallina, un pendolo e quattro asana per studiare la stabilità.',art:orbitMark('wave')}
  ];
- return `<section class="section portals home-entry" aria-labelledby="home-entry-title"><div class="shell"><div class="section-head"><div><span class="label">${en?'Choose your path':'Scegli il tuo percorso'}</span><h2 id="home-entry-title">${en?'From study to exploration':'Dallo studio all’esplorazione'}</h2></div>${replayEntry(data)}</div><div class="portal-grid">${cards.map((c,i)=>`<a class="portal-card" href="${e(c.href)}"><div class="portal-art${i===2?' lab-portal-art':''}" aria-hidden="true"><span class="portal-number">0${i+1}</span>${i===2?'<img src="assets/labs/galaxy-quantum.svg" alt="" width="800" height="800" loading="lazy">':orbitMark(['lattice','wave'][i])}</div><div class="portal-copy"><span class="meta">${c.label}</span><h3>${c.title}</h3><p>${c.copy}</p><span class="portal-link">${i===2?(en?'Explore the map':'Esplora la mappa'):(en?'Open':'Apri')} <span aria-hidden="true">↗</span></span></div></a>`).join('')}</div><div class="lab-shortcuts"><span>${en?'Direct access':'Accesso diretto'}</span>${apps.map(app=>`<a href="${e(app.url)}"${launchAttributes(app)}>${e(app.title)} ↗</a>`).join('')}</div></div></section>`;
+ return `<section class="section portals home-entry" aria-labelledby="home-entry-title"><div class="shell"><div class="section-head"><h2 id="home-entry-title">${en?'Study and explore':'Studia ed esplora'}</h2>${replayEntry(data)}</div><div class="portal-grid">${cards.map(c=>`<a class="portal-card" href="${e(c.href)}"><div class="portal-art" aria-hidden="true">${c.art}</div><div class="portal-copy"><span class="meta">${c.label}</span><h3>${e(c.title)}</h3><p>${c.copy}</p><span class="portal-link">${en?'Open':'Apri'} <span aria-hidden="true">↗</span></span></div></a>`).join('')}</div><div class="lab-shortcuts"><a href="laboratori.html">${en?'Laboratory map':'Mappa dei laboratori'} ↗</a>${labLinks}</div></div></section>`;
 }
 export function shareMetadata(data,page,canonical){
  if(!canonical)return '';

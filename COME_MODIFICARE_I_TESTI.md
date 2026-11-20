@@ -47,6 +47,12 @@ Copia `examples/NUOVO_ARTICOLO_ESEMPIO.md.txt`, rinomina la copia con un nome co
 
 **Avvertenza:** GitHub, se il repository è pubblico, mostra anche le bozze nei sorgenti. `draft: true` le esclude dalla pubblicazione del sito, ma **non le rende private**.
 
+## Indice delle dispense e diagrammi di «Colpire i nervi del sistema»
+
+In `content/study-guide.json`, ogni voce dell’indice usa `title` per il titolo italiano e `titleEn` per quello inglese. Entrambe rimandano alla stessa pagina della dispensa PDF.
+
+Le etichette inglesi del saggio sono in `docs/sources/colpire-i-nervi/etichette-en.tsv`. Per rigenerare le figure dai disegni TikZ dell’autore, esegui `python3 tools/render-nervi-en.py` con pdfLaTeX, TikZ, la classe standalone e Poppler installati.
+
 ## Documenti e PDF
 
 I PDF del corso e le fotografie originali sono in `public/media/`. Non modificare le fotografie approvate: la build ne verifica l'hash. Per nuovi PDF usa la stessa cartella di un documento esistente e aggiungi i metadati della lezione tramite CMS o tramite un file nella raccolta strutturata `content/lectures/`: i riferimenti ai file restano dati tecnici separati dal testo descrittivo.

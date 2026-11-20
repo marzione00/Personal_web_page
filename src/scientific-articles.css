@@ -43,3 +43,18 @@
  .science-figure-head a{display:none}.science-figure{border-color:#aaa}.science-figure figcaption{color:#222}.science-board{padding:10px;overflow:visible}
  .science-note,.science-formula{background:#fff;color:#111}.science-formula>div,.scientific-article math[display="block"]{overflow:visible}.travel-lightbox{display:none}
 }
+.science-figure-head>div{display:flex;align-items:center;gap:14px}
+.science-figure-head button{min-height:44px;font-size:11px;text-align:left}
+.science-figure-head .text-link{padding:0}
+.figure-link-status{font-size:12px;margin:0;padding:8px 16px;overflow-wrap:anywhere}
+.science-narrow{display:none}
+.potential-plate{margin:24px 0}
+@media(max-width:650px){
+ .science-figure-head{flex-wrap:wrap;gap:0 12px}
+ .science-board-responsive>.science-svg{display:none}
+ .science-board-responsive>.science-narrow{display:block;width:100%;height:auto;margin:auto;max-width:440px}
+}
+@media print{
+ .science-figure-head button,.figure-link-status,.reading-resume,.science-board-responsive>.science-narrow{display:none!important}
+ .science-board-responsive>.science-svg{display:block!important}
+}

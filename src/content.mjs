@@ -121,7 +121,7 @@ export function loadContent(root,{preview=false,language='it'}={}){
   }
  }
 
- for(const key of ['github','linkedin','orcid','unimi','cattolica','air'])if(!safeExternal(profile[key]))throw new Error('Link profilo non valido: '+key);
+ for(const key of ['github','linkedin','orcid','unimi','cattolica','air','scholar'])if(!safeExternal(profile[key]))throw new Error('Link profilo non valido: '+key);
  const allCourses=collection(root,'courses'),allPosts=collection(root,'posts'),allLectures=collection(root,'lectures'),publications=collection(root,'publications');
  for(const x of allCourses)applyMarkdownSections(root,'courses',x.id,x,EDITABLE.courses);
  for(const x of allLectures)applyMarkdownSections(root,'lectures',x.id,x,EDITABLE.lectures);
@@ -151,6 +151,15 @@ export function loadContent(root,{preview=false,language='it'}={}){
  const textList=(value,label,max=20)=>{if(!Array.isArray(value)||value.length>max||!value.every(x=>typeof x==='string'&&x.trim()&&x.length<=2000))throw new Error('Elenco ricerca non valido: '+label);};
  const pubRefs=refs=>{textList(refs,'pubblicazioni',30);if(new Set(refs).size!==refs.length||refs.some(id=>!pubIds.has(id)))throw new Error('Riferimento bibliografico ricerca non valido');};
  for(const area of research.areas){if(!['ricerca','trasversale','approfondimenti'].includes(area.group))throw new Error('Categoria editoriale del tema non valida');safeId(area.id);if(areaIds.has(area.id))throw new Error('Identificativo tema duplicato');areaIds.add(area.id);for(const key of ['title','shortTitle','scope','summary','question','overview','approach'])requireText(area,key,6000);textList(area.methods,'metodi');textList(area.activities,'attività');pubRefs(area.publications);if(area.courseLink&&!allCourses.some(c=>c.id===area.courseLink))throw new Error('Collegamento corso ricerca non valido');}
+
+ const highlights=research.publicationHighlights;
+ if(!highlights||typeof highlights!=='object'||Array.isArray(highlights))throw new Error('Selezione di pubblicazioni non valida');
+ for(const [area,ids] of Object.entries(highlights)){
+  if(!areaIds.has(area))throw new Error('Tema della selezione di pubblicazioni non valido: '+area);
+  pubRefs(ids);
+  if(!ids.length)throw new Error('Tema senza pubblicazioni selezionate: '+area);
+ }
+ pubRefs(Object.values(highlights).flat());
 
  const courses=allCourses.filter(x=>preview||(!x.draft&&x.verified)).sort((a,b)=>b.academicYear.localeCompare(a.academicYear)||a.title.localeCompare(b.title));
  const posts=allPosts.filter(x=>preview||(!x.draft&&!x.demo&&x.date<=new Date().toISOString().slice(0,10))).sort((a,b)=>b.date.localeCompare(a.date));

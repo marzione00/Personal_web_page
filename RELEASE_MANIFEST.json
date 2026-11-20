@@ -1,56 +1,32 @@
 {
   "brand": "Topological Manifolds",
   "date": "2026-11-20",
-  "version": "3.24.0",
-  "packageVersion": "3.24.0",
+  "version": "3.26.2",
+  "packageVersion": "3.26.2",
   "baseRepository": "https://github.com/marzione00/Personal_web_page",
-  "basedOnPackage": "Topological_Manifolds_v3.23.0_GitHub_COMPLETO.zip",
-  "basePackageSha256": "a0fc8288ba1fce7e3598ff48cb8b8285cb495a43c43a5762551e7139c6683f0b",
+  "basedOnPackage": "Topological_Manifolds_v3.26.1_GitHub_COMPLETO.zip",
+  "basePackageSha256": "60c2a1ac051b6650c7e23c99e16e0ba349fb14497f666e094cc59eb88908c212",
   "remoteDeployment": false,
-  "sourceFiles": 698,
+  "sourceFiles": 723,
   "addedSourceFiles": [
-    "public/media/images/yoga-equilibrio-laterale.jpg",
-    "public/media/images/yoga-estensione-studio.jpg",
-    "src/scientific-articles/lequilibrio-sul-tappetino.build.json",
-    "src/scientific-articles/lequilibrio-sul-tappetino.en.build.json"
+    "src/publications.mjs"
   ],
   "modifiedSourceFiles": [
     "CHANGELOG.md",
-    "COME_MODIFICARE_I_TESTI.md",
     "LEGGIMI_PRIMA_DI_CARICARE.md",
-    "content/markdown/en/homepage.md",
-    "content/markdown/en/posts/la-guerra-delle-false-percezioni.md",
-    "content/markdown/en/profilo-dati.md",
-    "content/markdown/homepage.md",
-    "content/markdown/posts/la-guerra-delle-false-percezioni.md",
-    "content/photo-manifest.json",
     "content/profile.json",
+    "content/research.json",
     "content/site.json",
     "package.json",
-    "scripts/audit-release.mjs",
-    "scripts/build.mjs",
-    "scripts/import-equilibrium.py",
-    "scripts/sync-editorial.mjs",
     "src/app.js",
-    "src/cinema.js",
     "src/content.mjs",
-    "src/effects-ui.mjs",
-    "src/effects.js",
-    "src/header.css",
-    "src/paths.mjs",
-    "src/profile.css",
     "src/profile.mjs",
     "src/render.mjs",
-    "src/scientific-articles/lequilibrio-sul-tappetino.en.html",
-    "src/scientific-articles/lequilibrio-sul-tappetino.html",
     "src/search.mjs",
-    "src/teaching-app-launch.js",
-    "src/travel-gallery.js",
-    "tests/browser-revision.py",
-    "tests/personal-photos.test.mjs",
-    "tests/scientific-articles.test.mjs",
-    "tests/teaching-launch-runtime.test.mjs",
-    "tests/visual-integrity.test.mjs"
+    "src/seo.mjs",
+    "src/site.css",
+    "tests/profile-cards.test.mjs",
+    "tests/research.test.mjs"
   ],
   "removedSourceFiles": [],
   "article": {
@@ -71,7 +47,7 @@
   },
   "verification": {
     "unitTests": {
-      "passed": 334,
+      "passed": 337,
       "failed": 0
     },
     "builds": [
@@ -79,44 +55,44 @@
       "https://www.mdctopologicalmanifolds.it/"
     ],
     "htmlPages": 66,
-    "localLinks": 3356,
-    "imageReferences": 136,
+    "localLinks": 3406,
+    "imageReferences": 154,
     "editorialSync": "passed",
     "resourceAndComponentAudit": {
-      "version": "3.24.0",
+      "version": "3.26.2",
       "budgets": [
         {
           "file": "index.html",
-          "bytes": 42750,
-          "gzip": 11913,
+          "bytes": 42806,
+          "gzip": 11990,
           "limit": 12000
         },
         {
           "file": "en/index.html",
-          "bytes": 40943,
-          "gzip": 11187,
+          "bytes": 41014,
+          "gzip": 11260,
           "limit": 12000
         },
         {
-          "file": "assets/site-9bb5cec8dcec.js",
-          "bytes": 142821,
-          "gzip": 41376,
-          "limit": 42000
-        },
-        {
-          "file": "assets/site-bfc9ec4da2c8.css",
-          "bytes": 118519,
-          "gzip": 24882,
+          "file": "assets/site-01f159d991d8.css",
+          "bytes": 123197,
+          "gzip": 25705,
           "limit": 26000
         },
         {
+          "file": "assets/site-4de889227cdb.js",
+          "bytes": 144380,
+          "gzip": 41814,
+          "limit": 42000
+        },
+        {
           "file": "articolo-lequilibrio-sul-tappetino.html",
-          "bytes": 1983187,
+          "bytes": 2008611,
           "limit": 2050000
         },
         {
           "file": "en/articolo-lequilibrio-sul-tappetino.html",
-          "bytes": 1978303,
+          "bytes": 2002903,
           "limit": 2050000
         }
       ],
@@ -129,8 +105,8 @@
         "28 catalog entries and 32 versioned scene URLs"
       ]
     },
-    "browser": "Targeted Chromium checks: continued article navigation via search, mobile menu focus, bilingual practice gallery, English scientific zoom, visual preset, and launcher cancellation. Full browser suite not rerun.",
-    "originalAssets": "All 3.23.0 public vector, media, audio and CV files preserved. Both supplied photographs are byte-identical copies.",
+    "browser": "Targeted Chromium checks: profile and research publication sections in IT and EN, the supplied Scholar URL, DOI on the Raman paper, and visibility of a selected work after applying an incompatible category filter. Scholar itself returned an access error during retrieval.",
+    "originalAssets": "All 3.26.1 public assets and the supplied PDF CV are byte-identical.",
     "zipIntegrity": "CRC and contained file hashes verified after packaging"
   },
   "files": {
@@ -163,12 +139,12 @@
       "sha256": "7a4b2b912cb020d268a40917f3d38d427d131f6f2beb9c00721de924a286da9f"
     },
     "CHANGELOG.md": {
-      "bytes": 30209,
-      "sha256": "48097c81825860a662fc35b0f434ae626203bfd9d55cdaa26c71622820a06707"
+      "bytes": 32075,
+      "sha256": "dcd996aff5b8dcbc763ade42881eaedebefc0911a4e7987f5b833eeadaaccc8d"
     },
     "COME_MODIFICARE_I_TESTI.md": {
-      "bytes": 12505,
-      "sha256": "6c5320ea83e64dc04b3fd2db9cf2addc49637ea8c996963d3dc9e666c936f03f"
+      "bytes": 13011,
+      "sha256": "c220d7575a9628c7e2b10e2af2130c687ece3569118b13276233f36e8bc26a84"
     },
     "CV.pdf": {
       "bytes": 739603,
@@ -179,8 +155,8 @@
       "sha256": "88e2c4406b7a0292910ce07e628be083db5c82fd10a854a98a729aaba1cff3f2"
     },
     "LEGGIMI_PRIMA_DI_CARICARE.md": {
-      "bytes": 2961,
-      "sha256": "453ba8c2c20855d5fb2e0936a2e09229b1cae094c883b3c7e39bd30f23cf9dcd"
+      "bytes": 3179,
+      "sha256": "f0d3677ea4bb1de43031f03a05cda36e19d2151423f1c3491f8372b5ff016497"
     },
     "LICENSE.md": {
       "bytes": 1613,
@@ -231,8 +207,8 @@
       "sha256": "083e3a149c4ed1c9bfaa19599cfc2a2460f2f7b2494f4c5c22900d9af7721c78"
     },
     "content/galaxies.json": {
-      "bytes": 2848,
-      "sha256": "303251d576b42e342598d56666bfce62c35e58cf7516963255cca2d2b0fed668"
+      "bytes": 4812,
+      "sha256": "d6196d95647f46b5bad6605810414e4d0796de9fd635fe3d4453cc85ba98f67e"
     },
     "content/lectures/.gitkeep": {
       "bytes": 0,
@@ -514,6 +490,10 @@
       "bytes": 297,
       "sha256": "63cfdc4bb3cf900c9ba97a932ba1ab89f92750de51f78a1b9cf5bd3b173e1d1c"
     },
+    "content/markdown/en/laboratori/sistemi-lab.md": {
+      "bytes": 258,
+      "sha256": "172f905994ffc2639da6e923c91bb3738b8187676e099f5a1dd1170cec819472"
+    },
     "content/markdown/en/lectures/quantum-2026-2027-modulo-01.md": {
       "bytes": 616,
       "sha256": "dda83259897109b664aa1b8a5de5b3db8e3c0b77320c0d5ea09da7bf879d9a05"
@@ -559,8 +539,8 @@
       "sha256": "7267199671c7fdf1c6d87e39c3cf37aa5459dd534c8949a80ae3b4fae27e3078"
     },
     "content/markdown/en/posts/colpire-i-nervi-del-sistema.md": {
-      "bytes": 35101,
-      "sha256": "5ac538bde98fefd276f44841992c0170fd26e9094770acb38a3147dbc72148d6"
+      "bytes": 35122,
+      "sha256": "0ef24595ed90e48b30ea9362eab2e0779719397964b2cfc9dffcc557d7732ccb"
     },
     "content/markdown/en/posts/la-guerra-delle-false-percezioni.md": {
       "bytes": 20466,
@@ -575,8 +555,8 @@
       "sha256": "3164d4a5425affb17559d18def720b70e8ebf3a3195fc15426a837724dfe9b85"
     },
     "content/markdown/en/profilo-dati.md": {
-      "bytes": 7660,
-      "sha256": "030c679acff43455f83d9148b308b72718f4ac84de83d8d60499ec83a0381e5e"
+      "bytes": 8067,
+      "sha256": "11656910b848ab56e683782f4574caf00656d2feb195e9c15743cdf4530d93d8"
     },
     "content/markdown/en/profilo.md": {
       "bytes": 9879,
@@ -798,6 +778,10 @@
       "bytes": 319,
       "sha256": "1299cd98f38a39c39690d518b2eb30d545a1516a2a08bfbaf65e57e9a437788b"
     },
+    "content/markdown/laboratori/sistemi-lab.md": {
+      "bytes": 279,
+      "sha256": "c8cc7ef3ea663ee6e177231868409d34d64f05900e1bb0b998e7eea07748daf4"
+    },
     "content/markdown/lectures/quantum-2026-2027-modulo-01.md": {
       "bytes": 632,
       "sha256": "8ffc0d4fb33b52f282b6518fe6777a62cf50817847055e265b35b85e0c45460b"
@@ -959,8 +943,8 @@
       "sha256": "4738c7a4728c0e9971f6a6402100760b38753d99347b5200a81dcac06e947caf"
     },
     "content/profile.json": {
-      "bytes": 21740,
-      "sha256": "e316ad28af8745c66144e64c48cef94e4d349500306f3c03e2b854150e32345a"
+      "bytes": 22241,
+      "sha256": "6173d2388e98c0f43bf106d0c491670e7dc7cd0641770cf29fdf5af64b796e2d"
     },
     "content/publications/pub-01.json": {
       "bytes": 1547,
@@ -1031,8 +1015,8 @@
       "sha256": "3695ce2c01087674cd6a52f398835ef176e383bc7c71b8b3a461542741f19a13"
     },
     "content/research.json": {
-      "bytes": 14114,
-      "sha256": "f5c87675c3430440475546155cb72ee06aea33556441a273c654d291922b1f23"
+      "bytes": 14283,
+      "sha256": "15132b2ffe73ea83f4c155d1e0f56ec6c2f0144aa823a141c558cc643f9e8275"
     },
     "content/responsive-images.json": {
       "bytes": 758,
@@ -1040,23 +1024,23 @@
     },
     "content/site.json": {
       "bytes": 161,
-      "sha256": "0c9d5047de1cf3f39b50c64535b2faa40a792a66ec2bbebaa27a07a97e3ef459"
+      "sha256": "51496b94af2a616c2348260c95c682218aceec2160ad63752e2343757ce0a114"
     },
     "content/study-guide.json": {
-      "bytes": 26232,
-      "sha256": "5fbccdea50945ce72e36c2be12d773fd147bcf6fdaaed6a91a53b508b560e201"
+      "bytes": 30968,
+      "sha256": "02891cd097419bcbff1cffadd947ba9ed13232f05eb600c5b6873a775e956878"
     },
     "content/study-paths.json": {
       "bytes": 3763,
       "sha256": "3ccae242216af282d4f58bc276b468fa3e6b3d99adea099911b8fb8a6cd2f9d8"
     },
     "content/teaching-apps.json": {
-      "bytes": 806,
-      "sha256": "10ce72ce8b677dfb1b46739613098e58813cb750801a30e1ea11210f4518fd86"
+      "bytes": 1093,
+      "sha256": "75d0deb2fe71de349cf91e7935099cd1ef2a114f35fd87c0976ea53178abf553"
     },
     "content/ui.json": {
-      "bytes": 6100,
-      "sha256": "6e8a56b6be11bf385ca08eeaaca1c10446d797cc5efcaf4d5865d373cdfe8053"
+      "bytes": 6044,
+      "sha256": "16c7900887e4135ab89f506851da03922f9d937b6d3ff80276a94fca00c15755"
     },
     "docs/AMBIENTE_MATRIX.md": {
       "bytes": 4717,
@@ -1342,6 +1326,10 @@
       "bytes": 102954,
       "sha256": "eb63089fcfdc7c6158aeb7ef2d109ebe0ca9bf362f757bb12db02ee617e81c57"
     },
+    "docs/sources/colpire-i-nervi/etichette-en.tsv": {
+      "bytes": 3968,
+      "sha256": "8c674c45548f972c972cd2b4f3a6280981eef2e62625707c51f2eb5892f08fd7"
+    },
     "docs/sources/equilibrio/equilibrio-editoriale.tex": {
       "bytes": 427055,
       "sha256": "93d6327d7efbc88252f0208142ce020be52f67d8845d106cf58b9bdfffd27bd3"
@@ -1560,7 +1548,7 @@
     },
     "package.json": {
       "bytes": 1567,
-      "sha256": "cdd972b7956052798e6b5b8e68987068b2df91d9348c17795eb14de331bcea48"
+      "sha256": "c2431a749ccd9f964520ab3ace1d2b274772c4b88711fb1314acb04bfc57ebdc"
     },
     "public/assets/articles/equilibrio/figure-01.svg": {
       "bytes": 4542,
@@ -1749,6 +1737,10 @@
     "public/assets/labs/galaxy-quantum.svg": {
       "bytes": 133985,
       "sha256": "d7122b8935b5fa38eaa3078ba97f6ba228e326722b8a8b26f93fc80e53853100"
+    },
+    "public/assets/labs/galaxy-systems.svg": {
+      "bytes": 130974,
+      "sha256": "f9a99e8f0f5c4396b528abc7dc69c3ab74b6aee45e2b11aef740a21101ce2392"
     },
     "public/assets/labs/star-field.svg": {
       "bytes": 16952,
@@ -2066,29 +2058,57 @@
       "bytes": 326150,
       "sha256": "2ad52b8d557d2f0555cdd102e9340f174030db194827483d9ec38e87f48a8863"
     },
+    "public/media/images/colpire-nervi-fig-01-en.png": {
+      "bytes": 50395,
+      "sha256": "8ad84e2efd17847e43ffd16b3c434f2ed6f45b66f5a10749cc2776e3318f9b1e"
+    },
     "public/media/images/colpire-nervi-fig-01.png": {
       "bytes": 57356,
       "sha256": "611cae55059342b5ba4f556bc8a649551d10e93198fd3b95759d6e7a00d7ce6c"
+    },
+    "public/media/images/colpire-nervi-fig-02-en.png": {
+      "bytes": 37016,
+      "sha256": "0157bdb7af1258f4139639425d0d5a7dd5953141a3a7ec1a9627bce20153045a"
     },
     "public/media/images/colpire-nervi-fig-02.png": {
       "bytes": 46968,
       "sha256": "5167bb9ff8f4199555f14bc198f6f5baf74bac59c8bdb880fcd95596d94ae170"
     },
+    "public/media/images/colpire-nervi-fig-03-en.png": {
+      "bytes": 42731,
+      "sha256": "093374d14ffbd456ae5fcf9b71d36fd13b711dfb662fef1afe6991f20e7d2659"
+    },
     "public/media/images/colpire-nervi-fig-03.png": {
       "bytes": 55691,
       "sha256": "f38b3091a45f9e3c795a71866ffb7307ee065e4091060ab2933d705f56a6a3ac"
+    },
+    "public/media/images/colpire-nervi-fig-04-en.png": {
+      "bytes": 47168,
+      "sha256": "cbcabbd496d7726cf3c03e4e53b6f26b614f6d65299f26475676937bba6cce67"
     },
     "public/media/images/colpire-nervi-fig-04.png": {
       "bytes": 53246,
       "sha256": "98dff65bc25690bb1eabfb45d645a0504210fceb2ac55801abb58152f82d4a75"
     },
+    "public/media/images/colpire-nervi-fig-05-en.png": {
+      "bytes": 44952,
+      "sha256": "5ce7b630615b1514878d821c954de2897016ce429fd00c456473ae008ea178a5"
+    },
     "public/media/images/colpire-nervi-fig-05.png": {
       "bytes": 47779,
       "sha256": "e3b10992a3283f9bad3482d17127ecb7e0429b73db11b3bb58619d3867acef62"
     },
+    "public/media/images/colpire-nervi-fig-06-en.png": {
+      "bytes": 28941,
+      "sha256": "c436f846e3dd7e4d85938bf4cf9dac527e24ebda42e959caff712453f162b525"
+    },
     "public/media/images/colpire-nervi-fig-06.png": {
       "bytes": 29493,
       "sha256": "902819ff4744c5d6fbede19804f8e6740f35e15ae250f997730acf7cbd05cb5a"
+    },
+    "public/media/images/colpire-nervi-fig-07-en.png": {
+      "bytes": 51923,
+      "sha256": "6fa64548f8be9c0c956fb93c981baec2ebf9796bb49bac5b3d9f3031e1d574e5"
     },
     "public/media/images/colpire-nervi-fig-07.png": {
       "bytes": 51131,
@@ -2121,6 +2141,46 @@
     "public/media/images/manifold-torus.webp": {
       "bytes": 36340,
       "sha256": "f36687bccd55e52ffb281759f5d0f7974fa66451d37e175ed294cc27e18c11ef"
+    },
+    "public/media/images/rendered/allineati.webp": {
+      "bytes": 27034,
+      "sha256": "22025ffedc1c2bf20d3158e50b29a29f75b9e7e2f10b118fccea6a113d1c787d"
+    },
+    "public/media/images/rendered/doppio-strato.webp": {
+      "bytes": 31378,
+      "sha256": "9f470947b3f5b28c07f2f10362875ff7945d3d03e48ba875f0224195f6065949"
+    },
+    "public/media/images/rendered/due-valli.webp": {
+      "bytes": 35522,
+      "sha256": "68d249f25be0255506ca3f561d71d9e59709081f12af091386c9005be9bded61"
+    },
+    "public/media/images/rendered/grafene.webp": {
+      "bytes": 24732,
+      "sha256": "ab1f77cee1192b41d6400c4676ffabac4124da17c8161f81867fefb1e0f6cac4"
+    },
+    "public/media/images/rendered/nanotubo.webp": {
+      "bytes": 22850,
+      "sha256": "12f6c1f757af34c5d8e1bb804aa33c29e7886099f0c0c87bfee53f21dfdf63f2"
+    },
+    "public/media/images/rendered/schwarzite-cella.webp": {
+      "bytes": 12226,
+      "sha256": "9ec7a70bf70c2a65c44acf98281da73bacf93b50eb8907151b906e1776da01a1"
+    },
+    "public/media/images/rendered/schwarzite-pori-480.webp": {
+      "bytes": 38544,
+      "sha256": "589877ab97450dc89f59c2fa7742803f1ba5fa30b39041a67de055e067ca725e"
+    },
+    "public/media/images/rendered/schwarzite-pori.webp": {
+      "bytes": 135542,
+      "sha256": "fe4cc18f93a874d3bc2c97c4f2391bbbc2e21c56515b894bfadb8db1bff50fa6"
+    },
+    "public/media/images/rendered/schwarzite-reticolo.webp": {
+      "bytes": 88920,
+      "sha256": "a6ec0df5d6382aae08d047c54d2417afa5bf85ac7fd13a4ce7bc9cb2a316fd3b"
+    },
+    "public/media/images/rendered/traslati.webp": {
+      "bytes": 26828,
+      "sha256": "235650a2a8bf94d0c3151e6a1c57dc8b3fb05e3f03630a6ee391760b23be9aac"
     },
     "public/media/images/share/home-en.png": {
       "bytes": 82232,
@@ -2211,8 +2271,8 @@
       "sha256": "308288b0d89c3616e1043b9ca77c3dba2f20d42d09fe5a20124521af4258c89a"
     },
     "scripts/check-output.mjs": {
-      "bytes": 4489,
-      "sha256": "3922c57615339c6fd9fd6e04aed8a71a304056d1052414feefc4719a5bda74a8"
+      "bytes": 5340,
+      "sha256": "38263e47721422bff5dfd8a4afe1a59a4624a8109de9d22e2a1c14297906e26a"
     },
     "scripts/equilibrium-vectors.py": {
       "bytes": 6262,
@@ -2231,8 +2291,8 @@
       "sha256": "05fe85c53dd420e71487e4dc969c880e6a75d7e934f35f572656b38738161a9c"
     },
     "scripts/import-equilibrium.py": {
-      "bytes": 9847,
-      "sha256": "bc29c6d125b486d6a5be0e865f78c4811a2abdb63f7cea2c36a4a83a932e3007"
+      "bytes": 13692,
+      "sha256": "db44b4240756e0aaf824135789a4217ace6b95e39754226d3c3d5f160c766c46"
     },
     "scripts/import-overleaf.py": {
       "bytes": 8098,
@@ -2427,8 +2487,8 @@
       "sha256": "9e4921ff905a2b337eda26a0b68cb61eebbce19f5aaca334d62c5ac78ee56061"
     },
     "src/app.js": {
-      "bytes": 4743,
-      "sha256": "de7f53d64990ab31a7f561a5b34255e937cd6eb2a5857e42b16d9cf634e3a957"
+      "bytes": 5175,
+      "sha256": "30d9f66f1fce0ef834117db0fbc30f6340ad1a714c82f4dd7973fd5527ee9382"
     },
     "src/article-diagrams.css": {
       "bytes": 5436,
@@ -2439,20 +2499,20 @@
       "sha256": "a4fc3713d47020027643866efd0f8350f4f1972a9507ef68c157d360fde2f9c5"
     },
     "src/cinema.css": {
-      "bytes": 6560,
-      "sha256": "01640c2c0c31ce0988a5abc4e704cba73f592e64d96f1924c48345cb205034ff"
+      "bytes": 7239,
+      "sha256": "2c64f26ca9ad2078a2e13b8e9e0444e03035c65883a2084dc6859acc7e2e1ad8"
     },
     "src/cinema.js": {
-      "bytes": 7390,
-      "sha256": "9f1add9e9c3945aa23359bd577ac70b181d713783883b1d77d77fa98cdd7c784"
+      "bytes": 7621,
+      "sha256": "fc60df7693170524d5603bd31e1d0bff76390d034415c0eaa3a094b43e8c8d47"
     },
     "src/cinema.mjs": {
       "bytes": 2487,
       "sha256": "bd63e143c258b2add7d6150d7fb15ef66184ce39c477789f055074b6f5e443a9"
     },
     "src/content.mjs": {
-      "bytes": 16387,
-      "sha256": "76497bf780d33b9b5bafecceb10f4bf9730bb50b6a240aa67250df24e6118a8b"
+      "bytes": 16877,
+      "sha256": "a95cba21d28450f51641340da003a197ced3700b791827a5e0031fb785fab132"
     },
     "src/cyber-network.css": {
       "bytes": 3465,
@@ -2465,6 +2525,10 @@
     "src/cyber-network.mjs": {
       "bytes": 6563,
       "sha256": "e165771406393508bb8ffadb1f4d911a0ddda1eb01bee85f265e64f710f3ab34"
+    },
+    "src/editorial-plates.mjs": {
+      "bytes": 3893,
+      "sha256": "75240f0e97b6497b55a5b39c9fafdab4cb46a6417151a556f9798c0b1f488091"
     },
     "src/effects-ui.mjs": {
       "bytes": 4907,
@@ -2479,8 +2543,8 @@
       "sha256": "c6952f14af9401614a74c4a17787c60a55548aac1074bb14beda56b3e2dbf06d"
     },
     "src/experience.mjs": {
-      "bytes": 6331,
-      "sha256": "c1da6af2e842ea94eb02b14880f736083626bc5aa1d3df4ba1556f0b7841ba9a"
+      "bytes": 6252,
+      "sha256": "f6abb307745549304a30df6b66bbd02f72cb8ee51e4aa7034fcd12029991ae82"
     },
     "src/experiments.css": {
       "bytes": 2149,
@@ -2495,24 +2559,24 @@
       "sha256": "8f360fa174a64c23e67639bc207d7bd32d3f11fc20ba7706f2e3cc2f53d6773b"
     },
     "src/galaxies.css": {
-      "bytes": 9940,
-      "sha256": "8b7ebe277efef99a68d2b4c3f93ef6ba931790aa0dc587ee7e1fa760562a1776"
+      "bytes": 9580,
+      "sha256": "0d900c8450dbef3db8196762790fca7bc049e296d3f28b5f6ec97cd7850f92b1"
     },
     "src/galaxies.mjs": {
-      "bytes": 6098,
-      "sha256": "d34db1724c846ecfd497ecd1070b12cbb05000ee692a3e027fd8846a750b5c6a"
+      "bytes": 6040,
+      "sha256": "fa764429e37e09f9f22bece0432e8213e82de9c8ea3148503275ffb07b8010d9"
     },
     "src/geometry-loader.js": {
       "bytes": 21393,
       "sha256": "c6b645619c91e1696390a6df327c390039278c4063cdffd5215ce96cb48d4761"
     },
     "src/geometry.css": {
-      "bytes": 10811,
-      "sha256": "c2a6caed458671f47c4e42be982585061024e66c5b8f69ab5718025810484321"
+      "bytes": 12181,
+      "sha256": "492e3571f4a1b4a455b896da9ccac45078d58945a8d0762623d355143ac6433f"
     },
     "src/geometry.mjs": {
-      "bytes": 10991,
-      "sha256": "3be8b93cc8aa081be7260b73c399c7133e48a38981adca006fb030101baf75d9"
+      "bytes": 11098,
+      "sha256": "48f5dae12a14c84ab7ac5b37ca3098b4970e65e4fb8a3c8d12ce1deb6de6e193"
     },
     "src/header.css": {
       "bytes": 3618,
@@ -2559,32 +2623,36 @@
       "sha256": "3435233572ee0638c3da88462ebe4640b85723a972ff115fb41cf31e6594cbb2"
     },
     "src/paths.mjs": {
-      "bytes": 5158,
-      "sha256": "5d32af0a17e063023f06c4a1057955df87c3ae09dbee597350fc4f2bcdf33545"
+      "bytes": 5464,
+      "sha256": "c3dae4599442ce93425c8595671b9a588f8f9e76af35fe9a4d3b30652b470411"
     },
     "src/profile.css": {
-      "bytes": 6846,
-      "sha256": "3b6fb8e63ffe6ae97b0eb13b2d6eb5b8ff8399ef70e43c0cab8075e671947884"
+      "bytes": 7569,
+      "sha256": "2be12badb44209e4617706670f741059a31c3dc69648baa5d05f7cbc05a498dc"
     },
     "src/profile.mjs": {
-      "bytes": 11879,
-      "sha256": "a6869ad2378edddca35a6c79614944a0f84d8ecd9da20f601bc724054c7a16e3"
+      "bytes": 14231,
+      "sha256": "688c69637a5fa3e4ab6e4656adcc3779d663166093177d467b492a74145d5541"
+    },
+    "src/publications.mjs": {
+      "bytes": 1070,
+      "sha256": "663f7d786d56f66669e365ebf8bedd47c70c9c3307f5e85f0db229431072fea0"
     },
     "src/reading.js": {
-      "bytes": 3343,
-      "sha256": "518fdc2282a1e2b24690270aaf606eaf1156e6485f9932349db673ab1a9096a9"
+      "bytes": 4198,
+      "sha256": "fd58504eb42236dbe5d0dfccabd606d633b1eb611cd0b9717c841cbe8edd3fd6"
     },
     "src/render.mjs": {
-      "bytes": 46333,
-      "sha256": "473864ec37225ed67448861b8a709d48bf8986ca77af46cf80b25f6909b389ab"
+      "bytes": 46869,
+      "sha256": "b47b161ce051e09a4389b21bdb0b2f1e2e227d00e3cf44abf7f4c2465a603cb3"
     },
     "src/safety.mjs": {
       "bytes": 3714,
       "sha256": "a82be0a1eb05be9852e5991203d4b6672da478cc8a1506eb467f188f51a1e4bb"
     },
     "src/scientific-articles.css": {
-      "bytes": 4267,
-      "sha256": "98e5fac017e56149fe1d7c2c83fe202c2e9bb805b7d304f6a72289d9faafea5d"
+      "bytes": 5051,
+      "sha256": "86a32311357f80531766d6f615001ba33798c56d7ac474532399bf18a4921ab5"
     },
     "src/scientific-articles.mjs": {
       "bytes": 563,
@@ -2592,23 +2660,23 @@
     },
     "src/scientific-articles/lequilibrio-sul-tappetino.build.json": {
       "bytes": 5934,
-      "sha256": "8ce61e8756814e4fe95979883148a8dd05cafe670f6bf4a71de62b822bae3ea1"
+      "sha256": "60e53a6fa37adae1ac147b045af379ec65664b7a3f23d17c8b9f123a18602ed6"
     },
     "src/scientific-articles/lequilibrio-sul-tappetino.en.build.json": {
       "bytes": 6177,
-      "sha256": "1d7cbca16e7b0893626264a8a3ab0ed0f088da22dd01f8b71e932bbda161d623"
+      "sha256": "1ec69c5d4a46639872cb4f03f8ff941f398b7e3502fc478d261357600437bc3a"
     },
     "src/scientific-articles/lequilibrio-sul-tappetino.en.html": {
-      "bytes": 1949934,
-      "sha256": "1e4599c758f533c53934f6773c192fd6da1a7977db5ebe234b9f7dde4e9e2504"
+      "bytes": 1974396,
+      "sha256": "3adff63529ecb231cc15ce6238dcb1d59f3e9fe754b22c6fb1692108012d4eb1"
     },
     "src/scientific-articles/lequilibrio-sul-tappetino.en.json": {
       "bytes": 20196,
       "sha256": "8ee2ff88c485066e699d4387f6d7fdac5cf0318f898838c3920c6b09c79ba5f0"
     },
     "src/scientific-articles/lequilibrio-sul-tappetino.html": {
-      "bytes": 1953882,
-      "sha256": "62b130ee0372fe4e6d2baed45367f49c41a7dc11f8ca9bf64a23aef38143b312"
+      "bytes": 1979173,
+      "sha256": "a143340027f83e5db2d8cc376553d8513c3b87652567556ef42b8a0f9d2fcbd8"
     },
     "src/scientific-articles/lequilibrio-sul-tappetino.json": {
       "bytes": 21126,
@@ -2619,20 +2687,20 @@
       "sha256": "2c588aadef41ada3710e7f70d0cb5645db7f6bebfd79617bce8f230fd563d385"
     },
     "src/search.mjs": {
-      "bytes": 5891,
-      "sha256": "3f112e677c9fae23fb1f578b04ff8d33e55e12d6cb62dff5b9bfce36df7d3cfe"
+      "bytes": 6134,
+      "sha256": "f760ea62cff4ea102e58f7e1a107ed4504ae7f753fa6bfa6304bb25f62676a18"
     },
     "src/security.mjs": {
-      "bytes": 4031,
-      "sha256": "b09733adbf4f64466e8f3ca385d0ae01e4c66301ce438db1e5aac15c4367e5c1"
+      "bytes": 4056,
+      "sha256": "05f1a8eda248014d7dde639b48fdded365dbd034a2bc258b220585e819d7b750"
     },
     "src/seo.mjs": {
-      "bytes": 1882,
-      "sha256": "b1cf2746c4df356acc5d4db5a3a021ae3ced3da799548b6b94d02a268f8ce122"
+      "bytes": 1975,
+      "sha256": "e4be7adaf40040e575eb91259f1ddcde8d9b00593981a761c6003e01e4d040e2"
     },
     "src/site.css": {
-      "bytes": 30812,
-      "sha256": "d28269cd7386112631527cc7841071b4451bc072b6c10801afb8eab70c347c21"
+      "bytes": 32241,
+      "sha256": "2b0fe23e7a99db382089a38555edf24d852933b7d32f2ac48ba08445ec86c598"
     },
     "src/sound.js": {
       "bytes": 7487,
@@ -2644,23 +2712,23 @@
     },
     "src/teaching-apps.css": {
       "bytes": 7021,
-      "sha256": "1c6812bb7931623e7a2b02bce673a8d170988227d37f701ab032aa69033f986e"
+      "sha256": "2019eb3dbbef0c0a26b80b04f6f513c9f6edf95a876820974979dca36e29b198"
     },
     "src/teaching-apps.mjs": {
       "bytes": 9812,
       "sha256": "e81c9b50b97835633bfa77bb595c7f4f715b61a873794927e320909341ba0048"
     },
     "src/travel-gallery.js": {
-      "bytes": 3668,
-      "sha256": "ec3433b70eca4b08ebc4f06e07e1f506845dfdf7fde9425d1ec5275113103fcd"
+      "bytes": 3709,
+      "sha256": "b33e73bb39b7aaaeeb4ef83ccc98acb5be82f049574564cc05d84f170f27a765"
     },
     "src/travel.mjs": {
       "bytes": 6359,
       "sha256": "d7b715d31be20ed626e602900dd10419e51d1737fcee8a8961dea1f99657c19d"
     },
     "src/visual.css": {
-      "bytes": 16800,
-      "sha256": "19fb6dc6dd82481606761f04462a5e77b58f87df24ad0480d6bbe6ab4583d588"
+      "bytes": 16853,
+      "sha256": "c7f13a06633053bf9296e1da18d805dbb13fa1f7aaeea5920c2f7eec31a9d0a8"
     },
     "tests/ambient-effects.test.mjs": {
       "bytes": 4550,
@@ -2671,8 +2739,8 @@
       "sha256": "331c4c493bb2f7a41fb6bbe2e3a73d6fda435746fb6fde24ffb105a79332a726"
     },
     "tests/article-diagrams.test.mjs": {
-      "bytes": 4547,
-      "sha256": "b69d8316d5d17bcde8a448a63aa2be8f44094a437d3708814c4ac340caa0e7cd"
+      "bytes": 4570,
+      "sha256": "18714b281d2177bff49482c6142bbd79e409e7d915f2debce1ca9a26c00c93d1"
     },
     "tests/article-release.test.mjs": {
       "bytes": 1759,
@@ -2699,8 +2767,8 @@
       "sha256": "f1b3685cbf4d4b55535fef574678b657abe7ca656a74ed19eebbbadeb5f54f33"
     },
     "tests/browser-explorer.py": {
-      "bytes": 14461,
-      "sha256": "159b77b08532f16f4f05c5470f1f8e6291106922f75ade06d6b1489fc2d3f9c4"
+      "bytes": 14488,
+      "sha256": "405e3220512764be54d35e24d0e6c96d164a1e6bfaefb41f764c1fb871540152"
     },
     "tests/browser-hardening.py": {
       "bytes": 6298,
@@ -2715,8 +2783,8 @@
       "sha256": "3b18b5149bda8e06e8114d4a38b39ac75c5107dc94e03ddf50391f345d8c1d97"
     },
     "tests/browser-revision.py": {
-      "bytes": 24302,
-      "sha256": "f716f54618ae345ddbbc6e3d0e0df9629b34fef532db7085b5ed2b12fcbec1fb"
+      "bytes": 24394,
+      "sha256": "fffee85a82c9217f2bee05135ff678fb66f219bfc5186c3e7108de33434b2c67"
     },
     "tests/browser-travels.py": {
       "bytes": 7258,
@@ -2751,12 +2819,12 @@
       "sha256": "4a30d600b48f08a59b3b875d9a0d309eb654a66792e2109c42dfabd706e17da4"
     },
     "tests/experience-v35.test.mjs": {
-      "bytes": 3926,
-      "sha256": "95f0d429500ccb261398e641ed1cf0e801b391a055570511d720b2e802d7821e"
+      "bytes": 4016,
+      "sha256": "9d83e4554497bc2f08aee8399ee6c0b9d6439d3bb52253e3c5867bb686608f95"
     },
     "tests/galaxies.test.mjs": {
-      "bytes": 5186,
-      "sha256": "f27e63e5012e79bafac354905f4261fcccdf6989849c9885ac52413d69f186dc"
+      "bytes": 5741,
+      "sha256": "40ee28ce6b81361a240fcf8afd6b6296ba45b34e2847c035d48f892cc1d1fcc5"
     },
     "tests/geometry-explorer.test.mjs": {
       "bytes": 5640,
@@ -2775,8 +2843,8 @@
       "sha256": "d1da500025d6b18fe42dab3ea1fed9cc796670489659c5739f2a5948481c5907"
     },
     "tests/i18n.test.mjs": {
-      "bytes": 7142,
-      "sha256": "042edef6d4442d2c9b608e388d39b73e12c0eabe353de621b89cfd7d6c7e76db"
+      "bytes": 8899,
+      "sha256": "bc0089c91d20f2077027f8188c65530953bc55d81dc114dddbb0ba6b207bfb10"
     },
     "tests/identity-v33.test.mjs": {
       "bytes": 2849,
@@ -2803,12 +2871,12 @@
       "sha256": "d2d2fbb59bb8fb29e69dde117baafca68b82cb1a9c3dcbe3deb3adca2edc3a4d"
     },
     "tests/personal-photos.test.mjs": {
-      "bytes": 2326,
-      "sha256": "8072d7b27ab3cba35150463edeb076764076c3304edeb675d5989ff73d1c484a"
+      "bytes": 2513,
+      "sha256": "fd581399e7a25cd9cc6190c0f2fa984317dce449b1f7f1466879d5f33920dc04"
     },
     "tests/profile-cards.test.mjs": {
-      "bytes": 2428,
-      "sha256": "ff18cca3205c72508ab5cf6ae72148b1da5bfc9f9e9b959e9e5b805e3f18c097"
+      "bytes": 2526,
+      "sha256": "84ca08d12e5d80f62d36fecbbd8981849798d56f74eccf315fefd9c2786cd2b0"
     },
     "tests/publications-and-teaching.test.mjs": {
       "bytes": 6011,
@@ -2819,8 +2887,8 @@
       "sha256": "1479602798a760342aa796be2735afe7f4e242f23b243e005d09b32f255f2c65"
     },
     "tests/research.test.mjs": {
-      "bytes": 3571,
-      "sha256": "cba842eaae5fb49d39a4aa9ba787fed601f043744f2a80ec00d028072db18666"
+      "bytes": 4517,
+      "sha256": "3d9a7ae9a069bdacd5c36bc5777f9008826e534e179af3915c2cd41b82842035"
     },
     "tests/revision-v38.test.mjs": {
       "bytes": 4938,
@@ -2831,8 +2899,8 @@
       "sha256": "6b6db596641c039f8d2a6173ff02031fb3d4b4e909e84766799a8db984d7f80a"
     },
     "tests/scientific-articles.test.mjs": {
-      "bytes": 4063,
-      "sha256": "b24645b61ceaba475e8254efdd237d568e94a498577f6d8b769bb22573297015"
+      "bytes": 4306,
+      "sha256": "43b411371c3279b87c661acab9cee95487a8ad0139e75b40ef81d0f656c1cc0e"
     },
     "tests/security-models.test.mjs": {
       "bytes": 3502,
@@ -2851,8 +2919,8 @@
       "sha256": "5cae2e1e35b2afb315f4a5e3d4d98151fdaaef20ef57ba1979dc57c72333c89e"
     },
     "tests/teaching-apps.test.mjs": {
-      "bytes": 7977,
-      "sha256": "e591d6965de191c270dfe81636318c528e9ca8a210c1f582e9cc720a5806b853"
+      "bytes": 8069,
+      "sha256": "b79c7e447d5b3ac26866206a43b8e53ff704d7c69ccbaf596fb2732f93e15527"
     },
     "tests/teaching-launch-runtime.test.mjs": {
       "bytes": 8131,
@@ -2871,8 +2939,8 @@
       "sha256": "919c72edfbd6a20436db28bbdd3949991022183c1c023a00f55addeae62dd9d4"
     },
     "tools/build-laboratory-galaxies.py": {
-      "bytes": 3321,
-      "sha256": "b12fb1c7c971b44e069427dac99d812d4221630e75bd4a821173a3b8e2b60192"
+      "bytes": 3397,
+      "sha256": "035ae88c04dc113abac6e8bd5142cb3efeae493633c9f3c8e14f79d373d84509"
     },
     "tools/carbon_mesh.py": {
       "bytes": 1738,
@@ -2910,9 +2978,17 @@
       "bytes": 2593,
       "sha256": "454358a85e2e8d407a0d4e161f1e5495c1e091832c1de7452877884c3ca82ce4"
     },
+    "tools/render-editorial-geometry.py": {
+      "bytes": 11259,
+      "sha256": "b9d715463fbebc3cb1c1be0524b06c776cdbfbf49b8786faf554da5de599e353"
+    },
     "tools/render-geometry-previews.py": {
       "bytes": 2427,
       "sha256": "09e8a13633f51961f49c045e6a5a8f3a8e0b2cefab0d3ade632fef453c06aa79"
+    },
+    "tools/render-nervi-en.py": {
+      "bytes": 2110,
+      "sha256": "06337cc2a5906082ee1e2868a27daa84de22e185a9f396a09e33d59cc25119c1"
     },
     "tools/requirements-audio.txt": {
       "bytes": 94,

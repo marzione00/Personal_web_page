@@ -29,7 +29,8 @@ test('each card has a unique anchor and an accessible title in both languages',(
   assert.equal((html.match(/class="profile-card /g)||[]).length,13);
   assert.doesNotMatch(html,/\{#[a-z-]+\}/);
   assert.match(html,/<p lang="grc">ποταμῷ/);
-  assert.doesNotMatch(html,/profile-card-links|ricerca\.html#pub-/);
+  const narrative=html.split('id="percorso-scientifico"')[1].split('id="pubblicazioni"')[0];
+  assert.doesNotMatch(narrative,/profile-card-links|ricerca\.html#pub-/);
   assert.doesNotMatch(data.profile.biography,/https?:|ANNPR|Nano Letters|Applied Stochastic|\]\(/);
  }
 });

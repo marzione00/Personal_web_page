@@ -4,6 +4,7 @@ export function structuredData(data,page,url){
  const person={'@type':'Person',name:'Marzio De Corato',url:new URL('cv.html',url).href,sameAs:[data.profile.orcid,data.profile.air,data.profile.github].filter(Boolean)};
  const common={'@context':'https://schema.org',name:page.title,url,inLanguage:data.language,description:page.description};
  let record={...common,'@type':'WebPage',about:person};
+ if(['cv.html','ricerca.html'].includes(page.file))person.sameAs.push(data.profile.scholar);
  if(page.file==='cv.html')record={...common,'@type':'ProfilePage',mainEntity:person};
  if(page.file.startsWith('articolo-')){const post=data.posts.find(p=>'articolo-'+p.id+'.html'===page.file);record={...common,'@type':'Article',headline:post.title,author:person,datePublished:post.date,mainEntityOfPage:url};}
  if(page.file.startsWith('corso-')){const course=data.courses.find(c=>'corso-'+c.id+'.html'===page.file);record={...common,'@type':'Course',name:course.title,provider:{'@type':'Organization',name:course.university},url};}

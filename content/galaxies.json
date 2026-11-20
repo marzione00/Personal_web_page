@@ -24,6 +24,64 @@
         {"fragment": "#modulo-M12", "title": {"it": "Raster e paesaggi", "en": "Rasters and landscapes"}, "note": {"it": "Telerilevamento e morfometria", "en": "Remote sensing and morphometry"}},
         {"fragment": "#modulo-M13", "title": {"it": "Archivi sedimentari", "en": "Sedimentary archives"}, "note": {"it": "Cronologie e serie ambientali", "en": "Chronologies and environmental series"}}
       ]
+    },
+    {
+      "app": "sistemi-lab",
+      "theme": "systems",
+      "subtitle": {
+        "it": "Architettura dei sistemi",
+        "en": "Computer systems architecture"
+      },
+      "intro": {
+        "it": "Segui il percorso di un’istruzione, confronta le scelte del sistema operativo e osserva come i dati passano fra registri, cache e memoria. Ogni unità offre un esperimento da seguire passo dopo passo.",
+        "en": "Follow an instruction through the processor, compare operating system choices, and see how data moves between registers, cache and memory. Each unit includes a step-by-step experiment."
+      },
+      "routes": [
+        {
+          "fragment": "#/m/0",
+          "title": {
+            "it": "Introduzione",
+            "en": "Introduction"
+          },
+          "note": {
+            "it": "Struttura del calcolatore, programmi e dati",
+            "en": "Computer structure, programs and data"
+          }
+        },
+        {
+          "fragment": "#/m/3",
+          "title": {
+            "it": "Organizzazione del processore",
+            "en": "Processor organisation"
+          },
+          "note": {
+            "it": "Istruzioni, unità di controllo e pipeline",
+            "en": "Instructions, control unit and pipeline"
+          }
+        },
+        {
+          "fragment": "#/m/5",
+          "title": {
+            "it": "Processi e concorrenza",
+            "en": "Processes and concurrency"
+          },
+          "note": {
+            "it": "Thread, pianificazione e sincronizzazione",
+            "en": "Threads, scheduling and synchronisation"
+          }
+        },
+        {
+          "fragment": "#/m/6",
+          "title": {
+            "it": "Memoria, file e protezione",
+            "en": "Memory, files and protection"
+          },
+          "note": {
+            "it": "Cache, memoria virtuale e file system",
+            "en": "Cache, virtual memory and file systems"
+          }
+        }
+      ]
     }
   ]
 }

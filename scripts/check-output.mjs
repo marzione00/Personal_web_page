@@ -41,6 +41,19 @@ for(const file of files){const name=path.relative(folder,file),html=fs.readFileS
   if(!/\balt="[^"]*"/.test(m[0]))throw Error('Alt mancante: '+name);images++;
  }
  const switcher=html.match(/<nav class="language-switch"[\s\S]*?<\/nav>/)?.[0]||'';
- for(const lang of ['it','en'])if(!switcher.includes(`hreflang="${lang}"`))throw Error('Selettore lingua incompleto: '+name);
+ for(const lang of ['it','en']){
+  const tag=[...switcher.matchAll(/<a [^>]+>/g)].map(m=>m[0]).find(a=>a.includes(`data-language="${lang}"`));
+  const expected=lang===language?path.basename(file):lang==='en'?'en/'+path.basename(file):'../'+path.basename(file);
+  if(!tag||!tag.includes(`href="${expected}"`)||!tag.includes(`hreflang="${lang}"`)||tag.includes('aria-current="true"')!==(lang===language))throw Error('Selettore lingua incoerente: '+name);
+ }
+ const canonical=html.match(/<link rel="canonical" href="([^"]+)"/)?.[1];
+ if(canonical){
+  const ownPath=/^en[\/]/.test(name)?'en/':'',base=new URL(ownPath?'../':'./',canonical);
+  for(const lang of ['it','en','x-default']){
+   const suffix=(lang==='en'?'en/':'')+(path.basename(file)==='index.html'?'':path.basename(file));
+   const expected=new URL(suffix,base).href;
+   if(!html.includes(`<link rel="alternate" hreflang="${lang}" href="${expected}">`))throw Error('Alternativa linguistica incoerente: '+name);
+  }
+ }
 }
 console.log(`Verificati ${files.length} HTML IT/EN, ${links} collegamenti locali e ${images} riferimenti a immagini, H1, lingue e hash CSP.`);

@@ -46,3 +46,17 @@ test('unsafe research IDs stop build',()=>fixture(dir=>{
 test('oversized research Markdown stops build',()=>fixture(dir=>{
  const file=path.join(dir,'content/markdown/aree-ricerca/',loadContent(dir).research.areas[0].id+'.md');let md=fs.readFileSync(file,'utf8');md=md.replace(/(## overview\n)[\s\S]*?(?=\n## |$)/,'$1'+'x'.repeat(6001)+'\n');fs.writeFileSync(file,md);assert.throws(()=>loadContent(dir),/overview/);
 }));
+test('the bibliography and profile link to the supplied Scholar profile in both languages',()=>{
+ for(const language of ['it','en']){
+  const data=loadContent(root,{language});
+  const pages=new Map(renderPages(data).map(page=>[page.file,page.body]));
+  const research=pages.get('ricerca.html'),profile=pages.get('cv.html');
+  const url='https://scholar.google.com/citations?user=nXczACsAAAAJ&amp;hl='+language;
+  for(const html of [research,profile])assert.ok(html.includes(url));
+  const selected=html=>[...html.matchAll(/data-publication-jump="([^"]+)"/g)].map(m=>m[1]);
+  assert.deepEqual(selected(research),['pub-06','pub-13','pub-11','pub-10','pub-03','pub-09']);
+  assert.deepEqual(selected(profile),['pub-06','pub-11','pub-03']);
+  assert.ok(selected(research).every(id=>research.includes('id="'+id+'"')));
+  assert.ok(searchEntries(data).some(row=>row.url==='ricerca.html#bibliografia'&&row.keywords.includes('Google Scholar')));
+ }
+});

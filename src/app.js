@@ -15,9 +15,9 @@
   nav?.addEventListener('click',e=>{if(e.target.closest('a[href]')){nav.classList.remove('is-open');toggle?.setAttribute('aria-expanded','false');}});
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav?.classList.contains('is-open')){nav.classList.remove('is-open');toggle?.setAttribute('aria-expanded','false');toggle?.focus();}});
   // Progressive filters: all content is present and readable without JavaScript.
-  const prepared=new WeakSet();
+  const prepared=new WeakMap();
   function filters(){$$('[data-filter-panel]').forEach(panel=>{
-    if(prepared.has(panel))return;prepared.add(panel);
+    if(prepared.has(panel))return;
     const list=document.getElementById(panel.dataset.target);
     if(!list)return;
     const inputs=$$('input,select',panel),items=$$('[data-item]',list),count=$('[data-count]',panel),empty=$('[data-empty]',list);
@@ -32,10 +32,18 @@
       if(empty)empty.hidden=visible!==0;
     }
     inputs.forEach(input=>input.addEventListener(input.type==='search'?'input':'change',update));
-    $('[data-reset]',panel)?.addEventListener('click',()=>{inputs.forEach(x=>x.value='');update();inputs[0]?.focus();});update();
+    const reset=()=>{inputs.forEach(input=>input.value='');update();};
+    prepared.set(panel,reset);
+    $('[data-reset]',panel)?.addEventListener('click',()=>{reset();inputs[0]?.focus();});update();
   });
   }
   filters();window.addEventListener('mdc:content-change',filters);
+  document.addEventListener('click',event=>{
+    const link=event.target.closest('[data-publication-jump]');
+    if(!link||event.defaultPrevented||event.button!==0||event.ctrlKey||event.metaKey||event.shiftKey||event.altKey)return;
+    const item=document.getElementById(link.dataset.publicationJump);
+    if(item?.hidden)prepared.get($('[data-target="publications"]'))?.();
+  });
   const dialog=$('#search-dialog'),searchButton=$('[data-open-search]');
   let searchOpener=null;const openSearch=()=>{if(dialog&&typeof dialog.showModal==='function'&&!document.querySelector('dialog[open]')){searchOpener=document.activeElement;dialog.showModal();$('#dialog-search',dialog)?.focus();}};
   searchButton?.addEventListener('click',e=>{if(dialog&&typeof dialog.showModal==='function'){e.preventDefault();openSearch();}});

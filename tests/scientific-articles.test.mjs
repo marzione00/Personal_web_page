@@ -17,7 +17,11 @@ test('Equilibrium essay retains all 44 figures, 12 chapters, equations and gloss
  assert.ok((body.match(/<math /g)||[]).length>80);
  assert.equal((body.match(/<dt id="glossario-\d+" tabindex="-1">/g)||[]).length,17);
  assert.equal((body.match(/class="science-svg"/g)||[]).length,44);
- assert.doesNotMatch(body,/<img|<span class="math (?:display|inline)"|Per chi ama le formule|Il percorso parte|Nel confronto proposto qui|ricalcolati nella revisione/);
+ assert.equal((body.match(/<img /g)||[]).length,1);
+ assert.match(body,/media\/images\/rendered\/due-valli.webp/);
+ assert.equal((body.match(/class="science-narrow"/g)||[]).length,2);
+ assert.equal((body.match(/data-copy-figure/g)||[]).length,44);
+ assert.doesNotMatch(body,/<span class="math (?:display|inline)"|Per chi ama le formule|Il percorso parte|Nel confronto proposto qui|ricalcolati nella revisione/);
  assert.match(body,/Controllo con retroazione/);assert.match(body,/Piccolo glossario/);assert.match(body,/Horak/);
  const ids=[...body.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);
  assert.equal(ids.length,new Set(ids).size);

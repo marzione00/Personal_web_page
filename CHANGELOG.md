@@ -1,5 +1,29 @@
 # Aggiornamenti
 
+## 3.26.2 — 20 novembre 2026
+
+- Collegato Google Scholar in Ricerca e Profilo & CV, in italiano e inglese.
+- Organizzate sei schede della bibliografia per ambito scientifico, con una selezione più breve nel profilo.
+
+## 3.26.1 — 20 novembre 2026
+
+- Completata la localizzazione dell’indice delle dispense quantistiche, con 91 titoli in inglese e pagine PDF stabili. La ricerca accetta anche il titolo nell’altra lingua.
+- Tradotte le etichette delle sette figure di «Colpire i nervi del sistema», riprodotte dal TikZ originale. I collegamenti al PDF riportano la lingua dell’edizione.
+- Allineati titoli e descrizioni di pagina, anteprime social e dati strutturati. La verifica del rilascio controlla i collegamenti reciproci dei selettori IT/EN e i riferimenti `hreflang`.
+
+## 3.26.0 — 20 novembre 2026
+
+- Aggiunto SistemiLab alla Didattica, alla mappa delle galassie, alla Home e alla ricerca IT/EN. La scheda collega il laboratorio di architettura dei sistemi e quattro moduli del corso.
+- Indicata come Bharadvājāsana la torsione seduta in mezzo loto nella fotografia di apertura della biografia.
+
+## 3.25.1 — 20 novembre 2026
+
+- Integrati i render 3D della schwarzite, del grafene e del nanotubo. Il confronto nell’Atlante accosta le tre strutture e mostra la ripetizione della cella P688.
+- Aggiunti il confronto fra reticoli allineati e traslati in Ricerca e la superficie di energia delle due valli nel saggio sull’equilibrio.
+- Riorganizzata la home attorno a un materiale didattico, all’Atlante e a un saggio. La comparsa delle anteprime segue l’animazione Matrix.
+- Aggiornate le didascalie della biografia. Due fotografie mostrano su richiesta le linee degli appoggi o delle gambe.
+- Adattati al telefono l’anello di retroazione e la sequenza del dropback. Aggiunta la copia del link ai diagrammi e la ripresa del capitolo.
+
 ## 3.24.0 — 20 novembre 2026
 
 - Aggiunte due fotografie originali alla sezione «Geometria e corpo», con didascalie IT/EN e visualizzatore condiviso.

@@ -18,7 +18,7 @@ Understanding how a digital alteration can result in lost goods requires conside
 
 Parameter alteration is only one possible point of intervention, since effective process management also requires reliable measurements. When an abnormal temperature is reported, staff can determine its cause and correct the operation; a manipulated representation of actual conditions, however, may induce a false diagnosis, delaying intervention precisely when it is needed. It is therefore useful to distinguish changes to operating parameters from manipulation of the information displayed to the operator, two techniques that MITRE describes separately for industrial systems. [11; 12] The former affects the instructions executed by the equipment, the latter the operator’s knowledge of its behaviour. Combined, they can cause an installation to depart from prescribed conditions while those monitoring it continue to receive reassuring data. In both cases, the effect depends on the device’s position in a chain of decisions already organised to manage the material world. This makes it necessary to understand the access routes through which an outsider might reach the controller or the information it produces.
 
-![Diagram 1 — Measurements return to the controller, which determines the intervention](/media/images/colpire-nervi-fig-01.png)
+![Diagram 1 — Measurements return to the controller, which determines the intervention](/media/images/colpire-nervi-fig-01-en.png)
 
 *Figure 1. Measurements return to the controller, which determines the intervention. Unauthorised access to parameters and manipulation of the information intended for the operator affect two distinct points in the control loop. [9; 11; 12]*
 
@@ -32,7 +32,7 @@ A vulnerability exists in a program even before anyone has identified it, and it
 
 The availability of a *patch*, the update that corrects the defect, does not mean that risk immediately disappears. In industrial installations, the fix often has to be checked for compatibility, tested and installed on devices that cannot be stopped indiscriminately. NIST therefore treats patch management as an ongoing activity in which technical preparation intersects with operational needs. [18] Once a patch is released, a device that has not yet received it remains vulnerable to a now-known flaw, although it is no longer in the period preceding the remedy’s availability. Discovery, possible disclosure, correction and installation are thus distinct moments during which the defender’s position can change without the running software changing immediately. The refrigeration advisories establish compromises and exposure conditions, while the techniques actually used in individual intrusions require specific investigations. Indiscriminately calling the whole wave *zero-day* would therefore attribute a characteristic not established by the cited documents. [7; 8]
 
-![Diagram 2 — Private discovery, exploitation, disclosure, patch availability and installation are different stages](/media/images/colpire-nervi-fig-02.png)
+![Diagram 2 — Private discovery, exploitation, disclosure, patch availability and installation are different stages](/media/images/colpire-nervi-fig-02-en.png)
 
 *Figure 2. Private discovery, exploitation, possible disclosure, patch availability and installation belong to different stages. The intervals show how an already-public fix can still take time to reach every installation. [16; 17; 18]*
 
@@ -44,7 +44,7 @@ Responsibility for flight safety requires a received threat to be assessed even 
 
 The comparison with refrigeration controllers becomes relevant once the transformation of information into action is traced in each case. The controller executes an instruction because its author has been recognised as holding certain permissions; the bomb warning is assessed by people who must determine its credibility before resuming normal operations. The obligations therefore differ — restoring or verifying control over a material process in one case, establishing danger and deciding how to ensure safety in the other — but both absorb staff, equipment and time that would otherwise provide the service. The more resources an organisation must use to verify what comes from outside, the fewer it can freely allocate to planned activities. If further warnings arrive before earlier operations have ended, the difficulty increases: the same staff cannot handle every demand simultaneously, and priorities must be reconsidered. The effect of interest to strategic analysis thus arises from the relationship between the initiator of the disturbance and the obligations of those managing its consequences.
 
-![Diagram 3 — An unauthorised instruction enters the control loop; an unfounded threat enters danger assessment](/media/images/colpire-nervi-fig-03.png)
+![Diagram 3 — An unauthorised instruction enters the control loop; an unfounded threat enters danger assessment](/media/images/colpire-nervi-fig-03-en.png)
 
 *Figure 3. An unauthorised instruction enters the control loop; an unfounded threat enters the process of assessing danger. Their consequences converge in the verification and restoration work required of the affected service. [8; 5]*
 
@@ -58,7 +58,7 @@ This need underlay Hart’s polemic against the military tradition he associated
 
 The *indirect approach* translated this criterion into a precise relationship between movement and expectation. By bypassing a strongly defended sector to threaten its supplies, connections or rear, the attacker could force the opposing command to change front and commit resources to protecting what it had previously regarded as secure. If the manoeuvre was unforeseen, the time needed to understand and adapt to it would amplify the threat’s effect. Hart therefore paired the “line of least resistance”, concerning the physical possibility of reaching an objective, with the “line of least expectation”, concerning the defender’s predictions: an easy route would have little value if the opponent had anticipated it and prepared to block it. [2, p. 327] Surprise thus worked in two directions, facilitating the initiator’s movement while compelling the other side to expend energy correcting an arrangement that had become inadequate. This consequence, more than geographical outflanking alone, determined strategic dislocation.
 
-![Diagram 4 — An indirect threat to command and supply can force an opponent to redistribute effort](/media/images/colpire-nervi-fig-04.png)
+![Diagram 4 — An indirect threat to command and supply can force an opponent to redistribute effort](/media/images/colpire-nervi-fig-04-en.png)
 
 *Figure 4. An indirect threat to command and supply can force an opponent to redistribute effort; the diagram summarises the relationship between movement, surprise and loss of freedom of action described by Hart. [2, pp. 326–328]*
 
@@ -72,7 +72,7 @@ John Boyd approached the problem through his experience of aerial combat, where 
 
 To explain how individuals and organisations interpret and adjust their relationship with the environment, Boyd developed the process known as OODA: *Observe, Orient, Decide, Act*. Observing means detecting signals and changes; orienting means assigning them meaning in light of experience and knowledge; deciding means selecting a course of action; acting then makes it possible to test the effects, from which further observations begin. Osinga’s account emphasises the central place of orientation, because it influences what is noticed and how a possible action is judged. Culture, previous experience, learned capabilities and new information contribute to a representation that must continually be tested. [4, ch. 6, “The Essence of Winning and Losing”, fig. 6.1] Boyd captures this centrality by calling orientation the *Schwerpunkt*, the focal point of an organisation’s intellectual activity: even abundant, timely data lose value if they are not interpreted appropriately to the circumstances. [4, ch. 6, “The big O: orientation”, note 13]
 
-![Diagram 5 — OODA in Osinga’s account: experience, culture and new information shape orientation; action feeds back into observation](/media/images/colpire-nervi-fig-05.png)
+![Diagram 5 — OODA in Osinga’s account: experience, culture and new information shape orientation; action feeds back into observation](/media/images/colpire-nervi-fig-05-en.png)
 
 *Figure 5. OODA in Osinga’s account: experience, culture and new information contribute to orientation; action produces consequences that in turn modify observations and subsequent assessment. [4, ch. 6, fig. 6.1]*
 
@@ -84,13 +84,13 @@ Speed is useful in this theory insofar as it accompanies interpretation capable 
 
 In the chapter on manoeuvre conflict, Osinga reports that Boyd regarded surprise and shock as forms of overload produced by a succession of threatening events exceeding the mental or physical capacity to respond, adapt or resist. [4, ch. 5, “Maneuver conflict”, note 103] The severity of this overload depends on the relationship between the rate at which new demands arrive and the time required to understand them. When a team is still checking an installation and another anomaly appears, or an inspection remains unfinished when a new report requires a decision, unresolved tasks compete for the same people and information. Since each assessment must be coordinated with other functions, accumulation can make it harder to establish which checks are urgent and in what order they should be performed. The increased burden therefore also depends on overlap: every new episode must be addressed while the previous one continues to absorb resources.
 
-![Diagram 6 — Successive requests create simultaneous work when earlier investigations remain open](/media/images/colpire-nervi-fig-06.png)
+![Diagram 6 — Successive requests create simultaneous work when earlier investigations remain open](/media/images/colpire-nervi-fig-06-en.png)
 
 *Figure 6. A succession of requests can create simultaneous work while earlier investigations remain open. The diagram illustrates the relationship between the interval separating events and the time available to respond, following Boyd’s discussion of overload. [4, ch. 5, “Maneuver conflict”]*
 
 If signals concern risks that cannot be ruled out without investigation, uncertainty itself demands further checks, reducing the time available to understand subsequent events. If messages are also contradictory, decision-makers may have to revisit judgements already reached while new activities have begun on their basis. In *Patterns of Conflict*, according to the passage reported by Osinga, Boyd associated disrupting the connections supporting communications, command and support with producing surprise and shock repeatedly, “again and again and again”: the intended effect was loss of the cohesion that allows an opponent to react as an organised whole. [4, ch. 5, “The nucleus of victory”, note 92: *Patterns of Conflict*, slide 98] Understanding the significance requires a broad conception of connections. Osinga shows that in *The Strategic Game of ? and ?*, Boyd distinguishes the *physical* relationship, enabling exchange of resources and information, from the *mental* relationship, supporting adequate understanding of events, and the *moral* relationship, sustaining cooperation through norms and trust. Strategy thus becomes a contest between capacities for *interaction* and conditions of *isolation*. [4, ch. 6, “The Strategic Game of ? and ?”]
 
-![Diagram 7 — Acting together requires resource exchange, understanding of events and trust to support one another](/media/images/colpire-nervi-fig-07.png)
+![Diagram 7 — Acting together requires resource exchange, understanding of events and trust to support one another](/media/images/colpire-nervi-fig-07-en.png)
 
 *Figure 7. The capacity to act together requires the exchange of resources, the understanding of events and trust in people to remain mutually supportive. [4, ch. 6, “The Strategic Game of ? and ?”]*
 

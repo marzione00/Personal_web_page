@@ -46,7 +46,7 @@ test('Complete printing exposes all explanations and restores the reader’s cho
 test('Diagram entrance uses finite animations, cancels for print, and respects reduced motion',()=>{
  const events={},animations=[];let observed,disconnected=0;
  const animated=()=>({animate(){const a={cancelled:false,cancel(){this.cancelled=true;},finished:new Promise(()=>{})};animations.push(a);return a;}});
- const steps=Array.from({length:5},animated),figure={...animated(),querySelectorAll:q=>q==='.ad-step'?steps:[]};
+ const steps=Array.from({length:5},animated),figure={...animated(),querySelector:()=>null,querySelectorAll:q=>q==='.ad-step'?steps:[]};
  const main={querySelector:()=>null,querySelectorAll:q=>q.includes('[data-article-diagram]')?[figure]:[]};
  const noop={textContent:'',addEventListener(){}},dialog={open:false,classList:{remove(){}},querySelector:()=>noop,querySelectorAll:()=>[],addEventListener(){}};
  const fx={transitions:true,reduced:false,intro:false,ambient:'off',subscribe(){}};

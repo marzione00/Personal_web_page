@@ -1,6 +1,7 @@
 import {escapeHtml as e,safeMedia} from './safety.mjs';
 import {geometryMarkup} from './geometry.mjs';
 import {printButton} from './paths.mjs';
+import {publicationHighlights,scholarLink} from './publications.mjs';
 
 // Narrative lives in the two Markdown fields. Explicit chapter anchors are
 // shared by translations, so editing or reordering a title keeps links intact.
@@ -25,21 +26,41 @@ const prose=paragraphs=>`<div class="bio-prose">${paragraphs.map(p=>{
 }).join('')}</div>`;
 const tags=items=>`<div class="skills">${items.map(x=>`<span class="tag">${e(x)}</span>`).join('')}</div>`;
 const timeline=entries=>entries.map(x=>`<div class="timeline-row"><div class="date">${e(x.date||x.year)}</div><div><h3>${e(x.degree||x.title)}</h3><div class="institution">${e(x.institution||'')}</div>${x.detail?`<p>${e(x.detail)}</p>`:''}</div></div>`).join('');
-const photoFigure=(photo,expand=false)=>{
- const url=e(safeMedia(photo.file));
+const photoAnnotations={
+ 'yoga-equilibrio-laterale':{
+  path:'M 210,1162 L 343,784 M 392,725 L 650,829 L 1121,1152 M 652,826 L 846,223',
+  points:'<circle cx="210" cy="1162" r="12"/><circle cx="1121" cy="1152" r="12"/>',
+  label:['Mostra gli appoggi','Show contact points'],
+  note:['La mano e il piede toccano il pavimento. Una diagonale unisce il tronco alla gamba d’appoggio.',
+   'The hand and foot touch the floor. A diagonal runs from the trunk along the supporting leg.'],
+  figure:'figura-17'
+ },
+ 'yoga-pratica-studio':{
+  path:'M 795,1094 L 905,412 M 795,1094 L 111,812',
+  points:'',
+  label:['Mostra le direzioni','Show leg directions'],
+  note:['Una gamba sale quasi verticale, mentre l’altra si distende in avanti sopra il tappetino.',
+   'One leg rises almost vertically while the other extends forwards above the mat.'],
+  figure:'capitolo-3'
+ }
+};
+const photoFigure=(photo,language,expand=false)=>{
+ const en=language==='en',url=e(safeMedia(photo.file)),annotation=photoAnnotations[photo.id];
  const image=`<img src="${url}" alt="${e(photo.alt)}" width="${photo.width}" height="${photo.height}" loading="lazy" decoding="async">`;
- return `<figure class="personal-gallery-item">${expand?`<a href="${url}" data-travel-photo aria-haspopup="dialog">${image}</a>`:image}<figcaption>${e(photo.caption)}</figcaption></figure>`;
+ const overlay=annotation?`<svg class="photo-guides" aria-hidden="true" viewBox="0 0 ${photo.width} ${photo.height}"><path d="${annotation.path}"/>${annotation.points}</svg>`:'';
+ const controls=annotation?`<details class="photo-annotation"><summary><span>${annotation.label[en?1:0]}</span><span>${en?'Hide guides':'Nascondi le linee'}</span></summary><p>${annotation.note[en?1:0]}</p><p><a class="text-link" href="articolo-lequilibrio-sul-tappetino.html#${annotation.figure}">${en?'Geometry and balance in the essay':'Geometria ed equilibrio nel saggio'} ↗</a></p></details>`:'';
+ return `<figure class="personal-gallery-item"><div class="photo-image">${expand?`<a href="${url}" data-travel-photo aria-haspopup="dialog">${image}</a>`:image}${overlay}</div><figcaption><span class="photo-caption">${e(photo.caption)}</span>${controls}</figcaption></figure>`;
 };
 
 export function profilePage(data){
  const p=data.profile,en=data.language==='en',tr=(it,eng)=>en?eng:it;
- const nav=[['biografia',tr('Presentazione','Introduction')],['percorso-scientifico',tr('Formazione e ricerca','Education and research')],['didattica',tr('Insegnamento','Teaching')],['interessi-personali',tr('Geometria e corpo','Geometry and the body')],['percorso-accademico',tr('Percorso accademico','Academic record')]];
+ const nav=[['biografia',tr('Presentazione','Introduction')],['percorso-scientifico',tr('Formazione e ricerca','Education and research')],['pubblicazioni',tr('Pubblicazioni','Publications')],['didattica',tr('Insegnamento','Teaching')],['interessi-personali',tr('Geometria e corpo','Geometry and the body')],['percorso-accademico',tr('Percorso accademico','Academic record')]];
  const chapters=profileChapters(p.biography,'scienza');
  const personal=profileChapters(p.personalInterests,'personale');
  const available=p.availablePersonalPhotos||[];
  const practiceIds=['yoga-equilibrio-laterale','yoga-estensione-studio'];
  const practicePhotos=practiceIds.map(id=>available.find(photo=>photo.id===id)).filter(Boolean);
- const practiceGallery=practicePhotos.length?`<div class="personal-gallery profile-practice-photos" data-travel-gallery>${practicePhotos.map(photo=>photoFigure(photo,true)).join('')}</div>`:'';
+ const practiceGallery=practicePhotos.length?`<div class="personal-gallery profile-practice-photos" data-travel-gallery>${practicePhotos.map(photo=>photoFigure(photo,data.language,true)).join('')}</div>`:'';
  const presentation={
   'fisica-geometria':{label:tr('Laurea triennale e magistrale','Bachelor’s and master’s degrees'),short:tr('Fisica','Physics'),model:'schwarzite-neck'},
   'dottorato':{label:tr('Dottorato · Modena','PhD · Modena'),short:tr('Dottorato','Doctorate')},
@@ -60,7 +81,7 @@ export function profilePage(data){
   const config=presentation[c.id]||{};
   const photo=available.find(x=>x.id===config.photo);
   const art=config.model?geometryMarkup(data,config.model,'profile-model'):'';
-  const visual=photo?photoFigure(photo):art?`<aside class="profile-model-aside">${art}<p>${tr('Schwarzite · legami e curvatura nelle strutture di carbonio.','Schwarzite · bonds and curvature in carbon structures.')}</p></aside>`:'';
+  const visual=photo?photoFigure(photo,data.language):art?`<aside class="profile-model-aside">${art}<p>${tr('Schwarzite · legami e curvatura nelle strutture di carbonio.','Schwarzite · bonds and curvature in carbon structures.')}</p></aside>`:'';
   return `<section class="profile-card ${kind==='personal'?'profile-personal-row':'profile-chapter'}${config.compact?' profile-card-compact':''}${visual?' profile-card-visual':''}" id="${e(c.id)}"${c.title?` aria-labelledby="titolo-${e(c.id)}"`:''}><div class="profile-card-copy"><p class="profile-card-label"><span aria-hidden="true">${String(i+1).padStart(2,'0')}</span>${e(config.label||tr('Percorso','Journey'))}</p>${c.title?`<h3 id="titolo-${e(c.id)}">${e(c.title)}</h3>`:''}${prose(c.paragraphs)}${c.id==='geometria-vissuta'?`<p><a class="text-link" href="articolo-lequilibrio-sul-tappetino.html">${tr('L’equilibrio sul tappetino','Balance on the Mat')} ↗</a></p>`:''}</div>${visual}</section>`;
  };
  const scienceChapters=chapters.filter(c=>c.id!=='didattica');
@@ -72,11 +93,14 @@ export function profilePage(data){
  const usedPhotos=new Set([...personal.map(c=>presentation[c.id]?.photo),...practiceIds]);
  const sparePhotos=available.filter(photo=>!usedPhotos.has(photo.id));
  const hero=p.homepagePhoto;
- return `<section class="page-head profile-hero" id="biografia"><div class="shell"><div class="breadcrumb"><a href="index.html">Topological Manifolds</a><span aria-hidden="true">/</span><span>${tr('Profilo & CV','Profile & CV')}</span></div><div class="profile-hero-grid"><div><span class="eyebrow">04 / ${tr('Biografia','Biography')}</span><h1>Marzio<br> De Corato<span class="dot">.</span></h1><p class="profile-headline">${e(p.headline)}</p>${prose([p.intro])}<p class="profile-roles">${tr('Docenze a contratto','Adjunct teaching')}<br>Università degli Studi di Milano<br>Università Cattolica del Sacro Cuore</p><div class="actions"><a class="button primary" href="cv.html#interessi-personali">${tr('Geometria e corpo','Geometry and the body')} <span aria-hidden="true">↓</span></a><a class="text-link" href="${e(safeMedia(p.cvPdf))}">${tr('Apri CV in PDF','Open PDF CV')} ↗</a></div></div><figure class="profile-portrait"><img src="${e(safeMedia(hero.file))}" alt="${e(hero.alt)}" width="${hero.width}" height="${hero.height}" srcset="media/images/derived/homepage-480.webp 480w, media/images/derived/homepage-768.webp 768w, media/images/derived/homepage-1274.webp 1274w" sizes="(max-width: 700px) 80vw, 360px" fetchpriority="high" decoding="async"><figcaption>${tr('Geometria, equilibrio, esperienza.','Geometry, balance, experience.')}</figcaption></figure></div></div></section>
+ return `<section class="page-head profile-hero" id="biografia"><div class="shell"><div class="breadcrumb"><a href="index.html">Topological Manifolds</a><span aria-hidden="true">/</span><span>${tr('Profilo & CV','Profile & CV')}</span></div><div class="profile-hero-grid"><div><span class="eyebrow">04 / ${tr('Biografia','Biography')}</span><h1>Marzio<br> De Corato<span class="dot">.</span></h1><p class="profile-headline">${e(p.headline)}</p>${prose([p.intro])}<p class="profile-roles">${tr('Docenze a contratto','Adjunct teaching')}<br>Università degli Studi di Milano<br>Università Cattolica del Sacro Cuore</p><div class="actions"><a class="button primary" href="cv.html#interessi-personali">${tr('Geometria e corpo','Geometry and the body')} <span aria-hidden="true">↓</span></a><a class="text-link" href="${e(safeMedia(p.cvPdf))}">${tr('Apri CV in PDF','Open PDF CV')} ↗</a></div></div><figure class="profile-portrait"><img src="${e(safeMedia(hero.file))}" alt="${e(hero.alt)}" width="${hero.width}" height="${hero.height}" srcset="media/images/derived/homepage-480.webp 480w, media/images/derived/homepage-768.webp 768w, media/images/derived/homepage-1274.webp 1274w" sizes="(max-width: 700px) 80vw, 360px" fetchpriority="high" decoding="async"><figcaption>${tr('Bharadvājāsana · Torsione seduta in mezzo loto, con presa sul piede.','Bharadvājāsana · Seated half-lotus twist with a foot bind.')}</figcaption></figure></div></div></section>
  <div class="shell page-body profile-body"><div class="cv-layout"><nav class="cv-toc" aria-label="${tr('Indice del profilo','Profile contents')}"><span class="label">${tr('In questa pagina','On this page')}</span>${nav.map(([id,label],i)=>`<a href="cv.html#${id}"><span aria-hidden="true">0${i+1}</span> ${e(label)}</a>`).join('')}</nav><div class="profile-content">
  <section class="cv-section" id="percorso-scientifico"><header class="profile-section-head"><span class="label">01 / ${tr('Ricerca','Research')}</span><h2>${tr('Dalle strutture ai modelli','From structures to models')}</h2><p>${tr('Gli studi e gli incontri che hanno orientato le mie domande scientifiche.','The studies and encounters that have shaped my scientific questions.')}</p></header>${scienceIndex}<div class="profile-card-grid">${science}</div></section>
+ <section class="cv-section" id="pubblicazioni" aria-labelledby="titolo-pubblicazioni"><header class="profile-section-head"><h2 id="titolo-pubblicazioni">${tr('Pubblicazioni selezionate','Selected publications')}</h2></header>
+ ${publicationHighlights(data,true)}
+ <div class="publication-profile-links"><a class="text-link" href="ricerca.html#bibliografia">${tr('Bibliografia e schede dei lavori','Bibliography and publication notes')} <span aria-hidden="true">↗</span></a>${scholarLink(data)}</div></section>
  ${teaching?`<section class="cv-section" aria-labelledby="titolo-insegnamento"><header class="profile-section-head"><span class="label">02 / ${tr('Insegnamento','Teaching')}</span><h2 id="titolo-insegnamento">${tr('Domande da condividere','Questions to share')}</h2></header><div class="profile-card-grid">${teaching}</div></section>`:''}
- <section class="cv-section personal-section" id="interessi-personali"><header class="profile-section-head" id="percorso-personale"><span class="label">03 / ${tr('Geometria e corpo','Geometry and the body')}</span><h2>${tr('La forma nell’esperienza','Form in experience')}</h2><p>${tr('Yoga, arrampicata e montagna: configurazioni da abitare, equilibri da cercare, traiettorie da percorrere.','Yoga, climbing and mountains: configurations to inhabit, balances to find, paths to follow.')}</p></header><div class="profile-card-grid">${personalRows}</div>${sparePhotos.length?`<div class="personal-gallery">${sparePhotos.map(photo=>photoFigure(photo)).join('')}</div>`:''}<a class="text-link" href="viaggi.html">${tr('Viaggi ed escursioni','Journeys and hikes')} ↗</a></section>
+ <section class="cv-section personal-section" id="interessi-personali"><header class="profile-section-head" id="percorso-personale"><span class="label">03 / ${tr('Geometria e corpo','Geometry and the body')}</span><h2>${tr('La forma nell’esperienza','Form in experience')}</h2><p>${tr('Yoga, arrampicata e montagna: configurazioni da abitare, equilibri da cercare, traiettorie da percorrere.','Yoga, climbing and mountains: configurations to inhabit, balances to find, paths to follow.')}</p></header><div class="profile-card-grid">${personalRows}</div>${sparePhotos.length?`<div class="personal-gallery">${sparePhotos.map(photo=>photoFigure(photo,data.language)).join('')}</div>`:''}<a class="text-link" href="viaggi.html">${tr('Viaggi ed escursioni','Journeys and hikes')} ↗</a></section>
  <section class="cv-section" id="percorso-accademico"><header class="profile-section-head"><span class="label">04 / ${tr('Percorso accademico','Academic record')}</span><h2>${tr('Formazione e attività','Education and activities')}</h2></header>
  ${records('formazione',tr('Formazione · studi e titoli','Education · degrees'),timeline(p.education),true)}
  ${records('esperienza',tr('Esperienza · ricerca e professione','Experience · research and professional work'),timeline(p.experience))}

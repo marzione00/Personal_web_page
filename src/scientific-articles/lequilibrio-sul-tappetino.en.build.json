@@ -1,5 +1,5 @@
 {
-  "scripts/import-equilibrium.py": "bc29c6d125b486d6a5be0e865f78c4811a2abdb63f7cea2c36a4a83a932e3007",
+  "scripts/import-equilibrium.py": "db44b4240756e0aaf824135789a4217ace6b95e39754226d3c3d5f160c766c46",
   "docs/sources/equilibrio/equilibrio-en.tex": "b58335aa392b2e5b01a36cb0d0ad84001ab0defd1e559e207bb7b2c92a81094e",
   "docs/sources/equilibrio/etichette-en.tsv": "0b2c6440c58bf1f87b3bffd313502f5f8ca6eb983df843387c423d25e7610154",
   "src/scientific-articles/lequilibrio-sul-tappetino.json": "0e0679fee355f936c0be8bd32c2a32dd1af7f06b11234c374bc117398886daab",
@@ -47,7 +47,7 @@
   "public/assets/articles/equilibrio/figure-42.svg": "8037047243ea04b6e209b971cf01bd7f26b93ebd3adfeb57bd4928d674eeb5d5",
   "public/assets/articles/equilibrio/figure-43.svg": "876541a583526ebc08309ad1fad36f32221f58873ce854efaeb44064d5e378d4",
   "public/assets/articles/equilibrio/figure-44.svg": "3cfa54ec3395c89a4b7bddaf76a97d8762f3b1614fb420d63fa80d573a3e61dc",
-  "src/scientific-articles/lequilibrio-sul-tappetino.en.html": "1e4599c758f533c53934f6773c192fd6da1a7977db5ebe234b9f7dde4e9e2504",
+  "src/scientific-articles/lequilibrio-sul-tappetino.en.html": "3adff63529ecb231cc15ce6238dcb1d59f3e9fe754b22c6fb1692108012d4eb1",
   "src/scientific-articles/lequilibrio-sul-tappetino.en.json": "8ee2ff88c485066e699d4387f6d7fdac5cf0318f898838c3920c6b09c79ba5f0",
   "content/markdown/en/posts/lequilibrio-sul-tappetino.md": "e5cbf1a4f22a3d4fea9e9d328c653ce87b578f8ddf37c63c4817b6786835b33b"
 }

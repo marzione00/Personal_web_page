@@ -20,6 +20,15 @@
       "launch": "terminal"
     },
     {
+      "id": "sistemi-lab",
+      "title": "SistemiLab",
+      "url": "https://marzione00.github.io/Archittetura_PUB_/",
+      "repository": "https://github.com/marzione00/Archittetura_PUB_",
+      "interfaceLanguage": "it",
+      "enabled": true,
+      "launch": "terminal"
+    },
+    {
       "id": "nuovo-laboratorio",
       "title": "Nuovo laboratorio",
       "url": "",
