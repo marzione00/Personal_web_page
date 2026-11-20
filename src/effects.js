@@ -20,20 +20,36 @@
  reduced.addEventListener('change',notify);notify();
  const open=document.querySelector('[data-effects-open]'),dialog=document.querySelector('#effects-dialog'),catalog=document.querySelector('#formulas-dialog');
  if(!open||!dialog||typeof dialog.showModal!=='function'){if(open)open.hidden=true;return;}
- const intro=dialog.querySelector('[data-effects-intro]');intro.checked=state.intro;intro.addEventListener('change',()=>{state.intro=intro.checked;put('mdc-intro',state.intro?'on':'off');notify();});
- const level=dialog.querySelector('[data-effects-intensity]'),reading=dialog.querySelector('[data-effects-reading]');
- level.value=state.intensity;reading.checked=state.reading;
- level.addEventListener('change',()=>{state.intensity=level.value;put('mdc-intensity',state.intensity);notify();});
- reading.addEventListener('change',()=>{state.reading=reading.checked;put('mdc-reading-focus',state.reading?'on':'off');notify();});
- const select=dialog.querySelector('[data-effects-ambient]'),formulas=dialog.querySelector('[data-effects-formulas]'),transitions=dialog.querySelector('[data-effects-transitions]');
- select.value=state.ambient;formulas.checked=state.formulas;transitions.checked=state.transitions;
- select.addEventListener('change',()=>{state.ambient=select.value;put('mdc-ambient',state.ambient);notify();});
- formulas.addEventListener('change',()=>{state.formulas=formulas.checked;put('mdc-formulas',state.formulas?'on':'off');notify();});
- transitions.addEventListener('change',()=>{state.transitions=transitions.checked;put('mdc-transitions',state.transitions?'on':'off');notify();});
+ const presets={study:['off','low',true,true,false,false],explore:['on','normal',true,true,true,true],cinema:['on','cinema',false,true,true,true]};
+ const preset=dialog.querySelector('[data-effects-preset]');
+ const fields=Object.entries({
+  ambient:'ambient',intensity:'intensity',reading:'reading-focus',formulas:'formulas',intro:'intro',transitions:'transitions'
+ }).map(([key,pref])=>{
+  const field=dialog.querySelector('[data-effects-'+key+']');
+  const prop=field.type==='checkbox'?'checked':'value';
+  const save=value=>{
+   field[prop]=state[key]=value;
+   put('mdc-'+pref,typeof value==='boolean'?(value?'on':'off'):value);
+  };
+  field[prop]=state[key];
+  field.addEventListener('change',()=>{save(field[prop]);matchPreset();notify();});
+  return {key,save};
+ });
+ function matchPreset(){
+  preset.value=state.paused?'':Object.keys(presets).find(name=>fields.every(({key},i)=>state[key]===presets[name][i]))||'';
+ }
+ preset.addEventListener('change',()=>{
+  const values=presets[preset.value];
+  if(!values)return;
+  state.paused=false;put('mdc-effects-paused','off');
+  fields.forEach(({save},i)=>save(values[i]));
+  notify();
+ });
+ matchPreset();
  let preferenceOpener=null;const showPreferences=source=>{if(document.querySelector('dialog[open]'))return;preferenceOpener=source;dialog.showModal();};
  open.addEventListener('click',()=>showPreferences(open));
  const quality=dialog.querySelector('[data-effects-quality]');quality.value=state.quality;quality.addEventListener('change',()=>{state.quality=quality.value;put('mdc-quality',state.quality);notify();});
- document.querySelectorAll('[data-effects-pause]').forEach(b=>b.addEventListener('click',()=>{state.paused=!state.paused;put('mdc-effects-paused',state.paused?'on':'off');notify();}));
+ document.querySelectorAll('[data-effects-pause]').forEach(b=>b.addEventListener('click',()=>{state.paused=!state.paused;put('mdc-effects-paused',state.paused?'on':'off');matchPreset();notify();}));
  notify();
  document.addEventListener('click',ev=>{const b=ev.target.closest?.('[data-music-open]');if(!b)return;if(!dialog.open)showPreferences(b);dialog.querySelector('[data-music-play]')?.focus();});
  dialog.querySelector('[data-effects-close]').addEventListener('click',()=>dialog.close());

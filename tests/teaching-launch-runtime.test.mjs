@@ -8,7 +8,7 @@ const source=fs.readFileSync(new URL('../src/teaching-app-launch.js',import.meta
 const url='https://marzione00.github.io/QuantumLab_Public/';
 
 // Run the actual browser module with a controllable clock and minimal DOM events.
-function launchFixture({reduced=false,transitions=true,hidden=false,lang='it'}={}) {
+function launchFixture({reduced=false,transitions=true,hidden=false,lang='it',seen=false,intensity='normal'}={}) {
  let now=0,serial=0;
  const frames=new Map(),timers=new Map(),navigations=[];
  const element=()=>({
@@ -21,7 +21,7 @@ function launchFixture({reduced=false,transitions=true,hidden=false,lang='it'}={
  document.documentElement={lang};document.hidden=hidden;
  media.matches=reduced;window.matchMedia=()=>media;
  let preferenceChange;
- window.MDCEffects={transitions,subscribe(fn){preferenceChange=fn;}};
+ window.MDCEffects={transitions,intensity,subscribe(fn){preferenceChange=fn;}};
  const nodes=Object.fromEntries(['title','status','destination','direct','cancel','progress','percent'].map(key=>[key,element()]));
  const rows=[element(),element(),element()],classes=new Set();
  dialog.classList={add(...names){names.forEach(n=>classes.add(n));},remove(...names){names.forEach(n=>classes.delete(n));}};
@@ -31,7 +31,7 @@ function launchFixture({reduced=false,transitions=true,hidden=false,lang='it'}={
  document.querySelector=()=>dialog;
  const trigger=Object.assign(element(),{href:url,target:'',dataset:{launchId:'quantum-lab',launchName:'Quantum Lab'},hasAttribute:()=>false});
  trigger.closest=()=>trigger;
- vm.runInNewContext(source,{document,window,URL,location:{assign:u=>navigations.push(u)},performance:{now:()=>now},
+ vm.runInNewContext(source,{document,window,URL,sessionStorage:{getItem:()=>seen?'1':null,setItem(){}},location:{assign:u=>navigations.push(u)},performance:{now:()=>now},
   requestAnimationFrame(fn){frames.set(++serial,fn);return serial;},cancelAnimationFrame:id=>frames.delete(id),
   setTimeout(fn,delay){timers.set(++serial,{fn,at:now+delay});return serial;},clearTimeout:id=>timers.delete(id)
  });
@@ -122,4 +122,12 @@ test('progress has an accessible localized name, numeric value and one persisten
   assert.equal((html.match(/<progress /g)||[]).length,1);
  }
  const f=launchFixture({lang:'en'});f.open();assert.equal(f.nodes.status.textContent,'Opening Quantum Lab…');
+});
+
+test('later launches are brief unless Cinema is selected',()=>{
+ for(const [intensity,duration] of [['normal',850],['cinema',5000]]){
+  const f=launchFixture({seen:true,intensity});
+  f.open();f.frame(duration/2);assert.equal(f.nodes.progress.value,50);
+  f.frame(duration+350);assert.deepEqual(f.navigations,[url]);
+ }
 });

@@ -38,5 +38,21 @@
     "bytes": 326150,
     "sha256": "2ad52b8d557d2f0555cdd102e9340f174030db194827483d9ec38e87f48a8863",
     "transformation": "none"
+  },
+  {
+    "id": "yoga-equilibrio-laterale",
+    "originalName": "IMG_6736(1).jpeg",
+    "path": "media/images/yoga-equilibrio-laterale.jpg",
+    "bytes": 453327,
+    "sha256": "dc0b18344a03cc3207c85135878502a3a98e6e7b2a8e93401882af0a90a3dac6",
+    "transformation": "none"
+  },
+  {
+    "id": "yoga-estensione-studio",
+    "originalName": "IMG_6729.jpeg",
+    "path": "media/images/yoga-estensione-studio.jpg",
+    "bytes": 235972,
+    "sha256": "9554ed8eee40a21c0dae23cd447bccc270f1d18b338543caa9bdac04045e266d",
+    "transformation": "none"
   }
 ]

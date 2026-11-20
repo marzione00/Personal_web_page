@@ -51,7 +51,7 @@
  dialog.querySelectorAll('[data-entry-audio]').forEach(b=>b.addEventListener('click',()=>enter(b.dataset.entryAudio==='on')));
  dialog.querySelector('[data-entry-skip]').addEventListener('click',()=>close());
  dialog.addEventListener('cancel',ev=>{ev.preventDefault();close();});
- dialog.addEventListener('close',()=>{stopEntry();const focus=previous?.isConnected?previous:document.querySelector('#main h1');focus?.setAttribute('tabindex','-1');focus?.focus({preventScroll:true});previous=null;});
+ dialog.addEventListener('close',()=>{stopEntry();const focus=previous?.isConnected?previous:document.querySelector('#main h1');if(!previous?.isConnected)focus?.setAttribute('tabindex','-1');focus?.focus({preventScroll:true});previous=null;});
  document.addEventListener('click',ev=>{if(ev.target.closest?.('[data-entry-replay]'))show(true);});
  function sync(){if(!entryEnabled())close();if(!enabled())clearAssembly();document.querySelectorAll('[data-entry-replay]').forEach(b=>b.disabled=!entryEnabled());}
  fx.subscribe(sync);window.addEventListener('mdc:content-change',sync);window.addEventListener('mdc:before-content-change',clearAssembly);

@@ -1,6 +1,7 @@
 """CI browser smoke tests. Run against the built dist directory, never against production."""
 from pathlib import Path
 import json
+import re
 import traceback
 from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 from functools import partial
@@ -182,6 +183,36 @@ try:
                     page.goto(url+prefix+'corso-quantum-post-quantum-computing-2026-2027.html#argomento-quantum-2026-2027-modulo-01-96')
                     expect(page.locator('#argomento-quantum-2026-2027-modulo-01-96')).to_be_visible()
                     assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
+                    page.goto(url+prefix+'cv.html')
+                    if width == 390:
+                        menu=page.locator('[data-menu]')
+                        menu.press('Enter')
+                        expect(page.locator('#primary-nav a').first).to_be_focused()
+                        page.keyboard.press('Tab')
+                        expect(page.locator('#primary-nav a').nth(1)).to_be_focused()
+                        page.keyboard.press('Escape')
+                        expect(menu).to_be_focused()
+                    gallery=page.locator('.profile-practice-photos [data-travel-photo]')
+                    expect(gallery).to_have_count(2)
+                    gallery.first.click()
+                    lightbox=page.locator('#travel-lightbox')
+                    expect(lightbox.locator('[data-travel-count]')).to_have_text('1 / 2')
+                    lightbox.locator('[data-travel-next]').click()
+                    expect(lightbox.locator('[data-travel-large]')).to_have_attribute('src',re.compile('yoga-estensione-studio.jpg$'))
+                    page.keyboard.press('Escape')
+                    expect(gallery.first).to_be_focused()
+                    page.locator('[data-open-search]').click()
+                    page.locator('#dialog-search').fill('LaSalle')
+                    result=page.locator('#dialog-results a[href*="tappetino.html#capitolo-"]').first
+                    expect(result).to_be_visible()
+                    result.click()
+                    expect(page.locator('.science-figure')).to_have_count(44)
+                    expect(page.locator('body > [role="status"]')).to_have_text('Balance on the Mat' if prefix else 'L’equilibrio sul tappetino')
+                    page.locator('#figura-27 [data-science-figure]').click()
+                    lightbox.locator('[data-travel-zoom]').click()
+                    expect(lightbox.locator('figure')).to_be_focused()
+                    page.keyboard.press('Escape')
+                    expect(lightbox).to_be_hidden()
                     page.goto(url+prefix+'cv.html')
                     page.evaluate("window.dispatchEvent(new Event('beforeprint'))")
                     expect(page.locator('main details:not([open])')).to_have_count(0)

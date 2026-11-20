@@ -281,3 +281,21 @@ Indoor climbing training
 
 ## personalPhotos_3_alt
 A person climbs an artificial wall with numbered holds, supported by their hands and feet.
+
+## personalPhotos_4_category
+Yoga
+
+## personalPhotos_4_caption
+Side balance on one hand and one foot
+
+## personalPhotos_4_alt
+Marzio balances on one hand and one foot with the other leg raised in front of a bookcase.
+
+## personalPhotos_5_category
+Yoga
+
+## personalPhotos_5_caption
+Extension and support on the mat
+
+## personalPhotos_5_alt
+Marzio on the mat with one leg extended forward and the other bent behind him, holding his foot with one hand.

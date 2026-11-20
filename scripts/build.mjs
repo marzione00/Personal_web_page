@@ -22,7 +22,7 @@ const media=validateMedia(root),data=datasets.it;
 const css=['site.css','visual.css','ambient.css','identity.css','teaching-apps.css','galaxies.css','header.css','experience.css','geometry.css','cyber-network.css','cinema.css','paths.css','article-diagrams.css','scientific-articles.css','experiments.css','profile.css'].map(f=>fs.readFileSync(path.join(root,'src',f),'utf8')).join('\n');
 const formulaData=loadAmbientFormulas(root);
 const formulaScript='window.MDCFormulaCatalog='+JSON.stringify(formulaData).replace(/</g,'\\u003c').replace(/>/g,'\\u003e')+';';
-const js=formulaScript+'\n'+['i18n-client.js','app.js','search.js','reading.js','math-models.js','experiments.js','effects.js','sound.js','music.js','travel-gallery.js','geometry-loader.js','cyber-network.js','matrix-rain.js','teaching-app-launch.js','navigation.js','cinema.js'].map(f=>fs.readFileSync(path.join(root,'src',f),'utf8')).join('\n');
+const js=formulaScript+'\n'+['i18n-client.js','app.js','search.js','reading.js','math-models.js','experiments.js','effects.js','sound.js','music.js','travel-gallery.js','geometry-loader.js','cyber-network.js','matrix-rain.js','teaching-app-launch.js','navigation.js','cinema.js'].map(f=>fs.readFileSync(path.join(root,'src',f),'utf8').replace(/^\/\*[\s\S]*?\*\/\s*/, '')).join('\n');
 const viewer=fs.readFileSync(path.join(root,'public/assets/geometry-viewer.js'),'utf8');
 const hash=x=>createHash('sha256').update(x).digest('base64');
 const runtime={src:'assets/geometry-viewer-'+createHash('sha256').update(viewer).digest('hex').slice(0,12)+'.js',integrity:'sha256-'+hash(viewer)};

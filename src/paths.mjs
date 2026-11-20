@@ -23,7 +23,7 @@ export function articleReading(post,data){
  const body=(scientific||markdown(post.body)).replace(/<h([23])(?:\s[^>]*)?>([\s\S]*?)<\/h\1>/g,(_,level,label)=>{const id='capitolo-'+(++index);if(level==='2')items.push({id,label});return `<h${level} id="${id}" tabindex="-1">${label}</h${level}>`;});
  const toc=items.length?`<nav class="article-toc" data-section-nav aria-label="${e(t(data,'article.index'))}"><span class="label">${e(t(data,'article.index'))}</span>${items.map(x=>`<a href="articolo-${e(post.id)}.html#${x.id}">${x.label}</a>`).join('')}</nav>`:'';
  const words=scientific?scientific.replace(/<svg\b[\s\S]*?<\/svg>/g,'').replace(/<annotation\b[\s\S]*?<\/annotation>/g,'').replace(/<[^>]*>/g,' '):post.body;
- return {body:withArticleDiagrams(post.id,body,data.language||'it'),toc,minutes:Math.max(1,Math.ceil(words.trim().split(/\s+/).length/200))};
+ return {sections:items,body:withArticleDiagrams(post.id,body,data.language||'it'),toc,minutes:Math.max(1,Math.ceil(words.trim().split(/\s+/).length/200))};
 }
 export function studyMap(lecture,data){
  const m=data.studyGuide.modules.find(x=>x.id===lecture.id);if(!m)return '';

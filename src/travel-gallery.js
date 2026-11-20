@@ -13,13 +13,25 @@
  const prev=dialog.querySelector('[data-travel-prev]');
  const next=dialog.querySelector('[data-travel-next]');
  const zoom=dialog.querySelector('[data-travel-zoom]');
+ const board=diagrams.parentElement;
+ function setZoom(on){
+  dialog.toggleAttribute('data-zoom',on);
+  zoom?.setAttribute('aria-pressed',String(on));
+  if(on){
+   board.tabIndex=0;
+   board.focus();
+  }else{
+   board.removeAttribute('tabindex');
+   board.scrollTo(0,0);
+  }
+ }
  let links=[],active=0,lastFocused=null;
  function display(index){
   if(!links.length)return;
   active=(index+links.length)%links.length;
   const link=links[active],thumb=link.querySelector('img'),science=link.hasAttribute('data-science-figure');
   dialog.toggleAttribute('data-science',science);
-  dialog.removeAttribute('data-zoom');zoom?.setAttribute('aria-pressed','false');
+  setZoom(false);
   diagrams.replaceChildren();full.removeAttribute('src');
   if(science){
    const figure=link.closest('figure'),svg=figure.querySelector('svg').cloneNode(true);
@@ -31,7 +43,7 @@
    diagrams.append(svg);caption.textContent=figure.querySelector('figcaption').textContent;
   }else{
    full.src=document.body.dataset.portable==='true'?(thumb?.src||link.href):link.href;
-   full.alt=thumb?.alt||link.textContent.trim();caption.textContent=full.alt;
+   full.alt=thumb?.alt||link.textContent.trim();caption.textContent=link.closest('figure')?.querySelector('figcaption')?.textContent||full.alt;
   }
   count.textContent=`${active+1} / ${links.length}`;
   prev.disabled=next.disabled=links.length<=1;
@@ -49,7 +61,7 @@
  close?.addEventListener('click',()=>dialog.close());
  prev?.addEventListener('click',()=>display(active-1));
  next?.addEventListener('click',()=>display(active+1));
- zoom?.addEventListener('click',()=>zoom.setAttribute('aria-pressed',String(dialog.toggleAttribute('data-zoom'))));
+ zoom?.addEventListener('click',()=>setZoom(!dialog.hasAttribute('data-zoom')));
  dialog.addEventListener('click',event=>{if(event.target===dialog)dialog.close();});
  dialog.addEventListener('keydown',event=>{
   if(dialog.hasAttribute('data-zoom'))return;
@@ -57,7 +69,7 @@
   if(event.key==='ArrowRight'){event.preventDefault();display(active+1);}
  });
  dialog.addEventListener('close',()=>{
-  full.removeAttribute('src');diagrams.replaceChildren();links=[];
+  setZoom(false);full.removeAttribute('src');diagrams.replaceChildren();links=[];
   if(!document.activeElement?.closest?.('#main'))lastFocused?.focus();lastFocused=null;
  });
 })();

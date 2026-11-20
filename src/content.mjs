@@ -117,7 +117,7 @@ export function loadContent(root,{preview=false,language='it'}={}){
     for(const key of ['id','file','alt','caption','category','sourceName'])requireText(photo,key,600);
     safeId(photo.id);
     if(!/^\/?media\/images\/[a-z0-9_-]+\.jpg$/i.test(photo.file)||!safeMedia(photo.file))throw new Error('Percorso foto non valido: '+photo.file);
-    if(!/^IMG_\d{4}\.jpeg$/i.test(photo.sourceName))throw new Error('Nome origine foto non valido');
+    if(!/^IMG_\d{4}(?:\(\d{1,3}\))?\.jpeg$/i.test(photo.sourceName))throw new Error('Nome origine foto non valido');
   }
  }
 

@@ -95,4 +95,4 @@ Testi editoriali e fotografie originali sono distribuiti secondo i termini indic
 
 ## Saggi illustrati
 
-Il blog comprende **L’equilibrio sul tappetino**, un percorso sulla stabilità di Lyapunov con 44 diagrammi SVG integrati nel tema del sito, formule accessibili, glossario e PDF. Le istruzioni di manutenzione sono in [docs/EQUILIBRIO_v3.22.0.md](docs/EQUILIBRIO_v3.22.0.md). Gli strumenti TeX sono necessari solo per riesportare i diagrammi, non per costruire o pubblicare il sito.
+Il blog comprende **L’equilibrio sul tappetino** (in inglese **Balance on the Mat**), un percorso sulla stabilità di Lyapunov con 44 diagrammi SVG integrati nel tema del sito, formule accessibili, glossario e PDF. Le istruzioni di manutenzione sono in [docs/EQUILIBRIO_v3.22.0.md](docs/EQUILIBRIO_v3.22.0.md). Per rigenerare l’edizione inglese, usa `python scripts/import-equilibrium.py --language en` dopo aver aggiornato `equilibrio-en.tex` o `etichette-en.tsv` in `docs/sources/equilibrio/`. La build usa i file già generati.

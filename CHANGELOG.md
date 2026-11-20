@@ -1,5 +1,20 @@
 # Aggiornamenti
 
+## 3.24.0 — 20 novembre 2026
+
+- Aggiunte due fotografie originali alla sezione «Geometria e corpo», con didascalie IT/EN e visualizzatore condiviso.
+- Alleggeriti gli SVG integrati di «L’equilibrio sul tappetino» per mantenere la navigazione continua. La ricerca raggiunge capitoli e voci di glossario in entrambe le lingue.
+- Compattata l’intestazione su mobile e corretti il focus nel menu, la riapertura dell’introduzione e lo zoom da tastiera.
+- Aggiunti i profili visivi Studio, Esplorazione e Cinema. Dopo il primo avvio del laboratorio, la transizione si accorcia nella stessa sessione salvo in Cinema.
+- Collegati biografia, saggi, ricerca, atlante e simulazioni. Aggiornato il dato sulle evacuazioni del saggio su Boyd e collegati i riferimenti alla cronologia.
+- Esteso il controllo editoriale alla rigenerazione del saggio scientifico.
+
+## 3.23.0 — 20 novembre 2026
+
+- Pubblicata l’edizione inglese di «L’equilibrio sul tappetino», «Balance on the Mat», con 12 sezioni, formule, note e glossario.
+- Tradotte le didascalie, la legenda e le etichette dei 44 diagrammi SVG. I rimandi restano allineati fra italiano e inglese.
+- L’edizione inglese compare nel blog, nella ricerca e nel feed. Il PDF scaricabile è identificato come edizione italiana.
+
 ## 3.22.0 — 17 novembre 2026
 
 - Integrati i 44 diagrammi di «L’equilibrio sul tappetino» nell’HTML e nei temi del sito, con testo selezionabile, ingrandimento SVG e palette coerente.

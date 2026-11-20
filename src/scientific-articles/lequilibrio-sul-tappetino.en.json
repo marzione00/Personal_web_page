@@ -1,0 +1,310 @@
+[
+  {
+    "number": 1,
+    "label": "fig:apertura",
+    "caption": "Responses to a perturbation. Without corrections, the tilt in Śīrṣāsana tends to grow. In Śavāsana the relaxed arm falls back towards the floor.",
+    "alt": "Responses to a perturbation. Without corrections, the tilt in Śīrṣāsana tends to grow. In Śavāsana the relaxed arm falls back towards the floor.",
+    "file": "figure-01.svg"
+  },
+  {
+    "number": 2,
+    "label": "fig:tornare",
+    "caption": "A ball and an arm at four moments. The grey ball in the third drawing marks the initial height. The bounce of the arm is schematic.",
+    "alt": "A ball and an arm at four moments. The grey ball in the third drawing marks the initial height. The bounce of the arm is schematic.",
+    "file": "figure-02.svg"
+  },
+  {
+    "number": 3,
+    "label": "fig:onda",
+    "caption": "Displacement from the point of rest in a damped oscillator. The plot describes the ball’s return. For the arm, it illustrates the dying away of the motion, which is bounded by the floor.",
+    "alt": "Displacement from the point of rest in a damped oscillator. The plot describes the ball’s return. For the arm, it illustrates the dying away of the motion, which is bounded by the floor.",
+    "file": "figure-03.svg"
+  },
+  {
+    "number": 4,
+    "label": "fig:paesaggio",
+    "caption": "Three potential energy profiles. The arrows on the slopes show the initial direction of motion after displacement from rest. On the flat section there is no restoring force towards any particular point.",
+    "alt": "Three potential energy profiles. The arrows on the slopes show the initial direction of motion after displacement from rest. On the flat section there is no restoring force towards any particular point.",
+    "file": "figure-04.svg"
+  },
+  {
+    "number": 5,
+    "label": "fig:basi",
+    "caption": "Centre of mass and base of support in four asanas. The ochre strip shows the base in cross-section. For static equilibrium with support from the floor alone, the vertical line through the centre of mass must fall within the base. Whether an already moving body can recover also depends on its motion and control.",
+    "alt": "Centre of mass and base of support in four asanas. The ochre strip shows the base in cross-section. For static equilibrium with support from the floor alone, the vertical line through the centre of mass must fall within the base. Whether an already moving body can recover also depends on its motion and control.",
+    "file": "figure-05.svg"
+  },
+  {
+    "number": 6,
+    "label": "fig:sugiu",
+    "caption": "A displacement raises the centre of mass of a suspended object and lowers that of an object pivoted below its centre of mass. The open circle marks the starting position.",
+    "alt": "A displacement raises the centre of mass of a suspended object and lowers that of an object pivoted below its centre of mass. The open circle marks the starting position.",
+    "file": "figure-06.svg"
+  },
+  {
+    "number": 7,
+    "label": "fig:paesaggiocorpo",
+    "caption": "Schematic landscapes for the return of the arm in Śavāsana and the tilt of the uncorrected inverted pendulum associated with Śīrṣāsana.",
+    "alt": "Schematic landscapes for the return of the arm in Śavāsana and the tilt of the uncorrected inverted pendulum associated with Śīrṣāsana.",
+    "file": "figure-07.svg"
+  },
+  {
+    "number": 8,
+    "label": "fig:concacupola",
+    "caption": "With two directions of displacement the landscape becomes a surface. Red marks the equilibrium, grey the displaced ball and blue its path.",
+    "alt": "With two directions of displacement the landscape becomes a surface. Red marks the equilibrium, grey the displaced ball and blue its path.",
+    "file": "figure-08.svg"
+  },
+  {
+    "number": 9,
+    "label": "fig:quote",
+    "caption": "Five successive climbs of a ball in a bowl with friction, alternating from side to side. Each climb ends lower than the last.",
+    "alt": "Five successive climbs of a ball in a bowl with friction, alternating from side to side. Each climb ends lower than the last.",
+    "file": "figure-09.svg"
+  },
+  {
+    "number": 10,
+    "label": "fig:bilancio",
+    "caption": "The ball’s energy balance at four moments. Potential energy is associated with height and kinetic energy with motion.",
+    "alt": "The ball’s energy balance at four moments. Potential energy is associated with height and kinetic energy with motion.",
+    "file": "figure-10.svg"
+  },
+  {
+    "number": 11,
+    "label": "fig:gradini",
+    "caption": "Position and total energy of the damped oscillator. Energy never increases, and the slope vanishes at each turning point.",
+    "alt": "Position and total energy of the damped oscillator. Energy never increases, and the slope vanishes at each turning point.",
+    "file": "figure-11.svg"
+  },
+  {
+    "number": 12,
+    "label": "fig:escursionista",
+    "caption": "A downhill path and its elevation. Green contours connect points at the same height. The path approaches the valley floor at 1,000 metres.",
+    "alt": "A downhill path and its elevation. Green contours connect points at the same height. The path approaches the valley floor at 1,000 metres.",
+    "file": "figure-12.svg"
+  },
+  {
+    "number": 13,
+    "label": "fig:braccio",
+    "caption": "The arm falls back in Śavāsana, with its energy balance shown at each stage. The sum of the first two bars gives the altimeter, which never increases.",
+    "alt": "The arm falls back in Śavāsana, with its energy balance shown at each stage. The sum of the first two bars gives the altimeter, which never increases.",
+    "file": "figure-13.svg"
+  },
+  {
+    "number": 14,
+    "label": "fig:duegrafici",
+    "caption": "Displacement of the ball from the bottom. With friction, oscillations die out. Without friction, their amplitude stays constant.",
+    "alt": "Displacement of the ball from the bottom. With friction, oscillations die out. Without friction, their amplitude stays constant.",
+    "file": "figure-14.svg"
+  },
+  {
+    "number": 15,
+    "label": "fig:patto",
+    "caption": "Tolerance and initial displacement for a ball released from rest. For each tolerance <math display=\"inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mi>ε</mi><annotation encoding=\"application/x-tex\">\\varepsilon</annotation></semantics></math>, we seek a bound <math display=\"inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mi>δ</mi><annotation encoding=\"application/x-tex\">\\delta</annotation></semantics></math> on the initial displacement. Distances are measured from the bottom.",
+    "alt": "Tolerance and initial displacement for a ball released from rest. For each tolerance ε, we seek a bound δ on the initial displacement. Distances are measured from the bottom.",
+    "file": "figure-15.svg"
+  },
+  {
+    "number": 16,
+    "label": "fig:cratere",
+    "caption": "A bowl with a rim. The surface at left shows the dashed rim and the path of a ball that stays inside. At right is a cross-section of the same bowl.",
+    "alt": "A bowl with a rim. The surface at left shows the dashed rim and the path of a ball that stays inside. At right is a cross-section of the same bowl.",
+    "file": "figure-16.svg"
+  },
+  {
+    "number": 17,
+    "label": "fig:uhp",
+    "caption": "Utthita Hasta Pādāṅguṣṭhāsana and a synthetic centre-of-pressure trace seen from above. The circles and path are illustrative. A finite recording of this quantity alone cannot establish stability of the full state.",
+    "alt": "Utthita Hasta Pādāṅguṣṭhāsana and a synthetic centre-of-pressure trace seen from above. The circles and path are illustrative. A finite recording of this quantity alone cannot establish stability of the full state.",
+    "file": "figure-17.svg"
+  },
+  {
+    "number": 18,
+    "label": "fig:collepalline",
+    "caption": "The exponentially growing mode near the summit. The displacement doubles at equal time intervals. The drawing exaggerates the motion so it is visible.",
+    "alt": "The exponentially growing mode near the summit. The displacement doubles at equal time intervals. The drawing exaggerates the motion so it is visible.",
+    "file": "figure-18.svg"
+  },
+  {
+    "number": 19,
+    "label": "fig:pendolonudo",
+    "caption": "Śīrṣāsana and its simplest model, the inverted pendulum, with a rod pivoted at the base and a mass at the top.",
+    "alt": "Śīrṣāsana and its simplest model, the inverted pendulum, with a rod pivoted at the base and a mass at the top.",
+    "file": "figure-19.svg"
+  },
+  {
+    "number": 20,
+    "label": "fig:ventaglio",
+    "caption": "A simple inverted pendulum 0.8 metres long, initially at rest one degree from vertical. The rounded angles are calculated from the linear model at intervals of 0.2 seconds.",
+    "alt": "A simple inverted pendulum 0.8 metres long, initially at rest one degree from vertical. The rounded angles are calculated from the linear model at intervals of 0.2 seconds.",
+    "file": "figure-20.svg"
+  },
+  {
+    "number": 21,
+    "label": "fig:raddoppio",
+    "caption": "Growth of the tilt in the linear model, starting from rest. The doubling rate approaches that of the growing exponential mode.",
+    "alt": "Growth of the tilt in the linear model, starting from rest. The doubling rate approaches that of the growing exponential mode.",
+    "file": "figure-21.svg"
+  },
+  {
+    "number": 22,
+    "label": "fig:bastone",
+    "caption": "A stick balanced on the palm at three moments. The dashed line drops vertically from the top of the stick. The ochre arrow shows how the hand moves.",
+    "alt": "A stick balanced on the palm at three moments. The dashed line drops vertically from the top of the stick. The ochre arrow shows how the hand moves.",
+    "file": "figure-22.svg"
+  },
+  {
+    "number": 23,
+    "label": "fig:lungocorto",
+    "caption": "A longer rod tilts more slowly in this model, leaving more time to correct it.",
+    "alt": "A longer rod tilts more slowly in this model, leaving more time to correct it.",
+    "file": "figure-23.svg"
+  },
+  {
+    "number": 24,
+    "label": "fig:pendolo",
+    "caption": "Śīrṣāsana with correction. Weight tends to increase the tilt, denoted by the Greek letter <math display=\"inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mi>θ</mi><annotation encoding=\"application/x-tex\">\\theta</annotation></semantics></math> (theta). The correction at the base tends to reduce it.",
+    "alt": "Śīrṣāsana with correction. Weight tends to increase the tilt, denoted by the Greek letter θ (theta). The correction at the base tends to reduce it.",
+    "file": "figure-24.svg"
+  },
+  {
+    "number": 25,
+    "label": "fig:somma",
+    "caption": "Adding the gravitational potential and the correction term. Sufficient restoring action produces a minimum. With a weaker correction the maximum remains. The diagram assumes there is no delay.",
+    "alt": "Adding the gravitational potential and the correction term. Sufficient restoring action produces a minimum. With a weaker correction the maximum remains. The diagram assumes there is no delay.",
+    "file": "figure-25.svg"
+  },
+  {
+    "number": 26,
+    "label": "fig:corretto",
+    "caption": "The effective potential with correction is green, and the original unstable potential is grey. The blue path shows a damped return in two position coordinates. Height represents potential energy alone, which can increase during the oscillations.",
+    "alt": "The effective potential with correction is green, and the original unstable potential is grey. The blue path shows a damped return in two position coordinates. Height represents potential energy alone, which can increase during the oscillations.",
+    "file": "figure-26.svg"
+  },
+  {
+    "number": 27,
+    "label": "fig:anello",
+    "caption": "The feedback loop that sustains Śīrṣāsana.",
+    "alt": "The feedback loop that sustains Śīrṣāsana.",
+    "file": "figure-27.svg"
+  },
+  {
+    "number": 28,
+    "label": "fig:ritardo",
+    "caption": "Four responses of the inverted pendulum with delayed control. The red line shows an illustrative amplitude threshold. The cross marks the first crossing. The equation, parameters and initial history are given in the model notes.",
+    "alt": "Four responses of the inverted pendulum with delayed control. The red line shows an illustrative amplitude threshold. The cross marks the first crossing. The equation, parameters and initial history are given in the model notes.",
+    "file": "figure-28.svg"
+  },
+  {
+    "number": 29,
+    "label": "fig:dueconche",
+    "caption": "Two wells and a rise. The ochre arrow marks the push. The dashed path follows a weak push and the solid path a stronger one.",
+    "alt": "Two wells and a rise. The ochre arrow marks the push. The dashed path follows a weak push and the solid path a stronger one.",
+    "file": "figure-29.svg"
+  },
+  {
+    "number": 30,
+    "label": "fig:sequenza",
+    "caption": "Four stages of the dropback and their schematic representation on a double-well landscape. The rise marks the transition between asanas.",
+    "alt": "Four stages of the dropback and their schematic representation on a double-well landscape. The rise marks the transition between asanas.",
+    "file": "figure-30.svg"
+  },
+  {
+    "number": 31,
+    "label": "fig:dropback",
+    "caption": "The effective potential landscape used for the dropback. The arrows show both directions of travel. The outcome depends on motion and corrections as well as configuration.",
+    "alt": "The effective potential landscape used for the dropback. The arrows show both directions of travel. The outcome depends on motion and corrections as well as configuration.",
+    "file": "figure-31.svg"
+  },
+  {
+    "number": 32,
+    "label": "fig:dropbacktre",
+    "caption": "A double-well potential associated with the two asanas. The open circle marks the pass and the dashed line the ridge. The blue trajectory crosses the rise and settles in the right-hand well. Height represents potential energy, which can rise even as total energy falls.",
+    "alt": "A double-well potential associated with the two asanas. The open circle marks the pass and the dashed line the ridge. The blue trajectory crosses the rise and settles in the right-hand well. Height represents potential energy, which can rise even as total energy falls.",
+    "file": "figure-32.svg"
+  },
+  {
+    "number": 33,
+    "label": "fig:risalita",
+    "caption": "The passage from the right-hand well to the left-hand one. The height difference in green is the potential barrier. The energy supplied must also cover losses along the way.",
+    "alt": "The passage from the right-hand well to the left-hand one. The height difference in green is the potential barrier. The energy supplied must also cover losses along the way.",
+    "file": "figure-33.svg"
+  },
+  {
+    "number": 34,
+    "label": "fig:velocita",
+    "caption": "Two pendulums at the same position with different subsequent motions.",
+    "alt": "Two pendulums at the same position with different subsequent motions.",
+    "file": "figure-34.svg"
+  },
+  {
+    "number": 35,
+    "label": "fig:leggere",
+    "caption": "How to read the phase plane. In each quadrant an icon shows position as a dot relative to the red equilibrium mark, and velocity as a blue arrow.",
+    "alt": "How to read the phase plane. In each quadrant an icon shows position as a dot relative to the red equilibrium mark, and velocity as a blue arrow.",
+    "file": "figure-35.svg"
+  },
+  {
+    "number": 36,
+    "label": "fig:fotogrammi",
+    "caption": "A frictionless pendulum frame by frame, with velocity in blue above and the corresponding states on the phase plane below. The numbered points trace a clockwise loop.",
+    "alt": "A frictionless pendulum frame by frame, with velocity in blue above and the corresponding states on the phase plane below. The numbered points trace a clockwise loop.",
+    "file": "figure-36.svg"
+  },
+  {
+    "number": 37,
+    "label": "fig:spiralefot",
+    "caption": "A pendulum with friction. Position against time is on the left and the phase plane is on the right. Matching numbers mark the same moments.",
+    "alt": "A pendulum with friction. Position against time is on the left and the phase plane is on the right. Matching numbers mark the same moments.",
+    "file": "figure-37.svg"
+  },
+  {
+    "number": 38,
+    "label": "fig:livelli",
+    "caption": "Levels of total energy and the trajectory of a damped oscillator. Height never increases along the blue path.",
+    "alt": "Levels of total energy and the trajectory of a damped oscillator. Height never increases along the blue path.",
+    "file": "figure-38.svg"
+  },
+  {
+    "number": 39,
+    "label": "fig:lyatre",
+    "caption": "The spiral in three dimensions. The light-blue curve below is the trajectory in the phase plane. Above it, the raised altimeter surface shows the trajectory descending towards the bottom. Dashed lines connect selected points to their projections on the plane.",
+    "alt": "The spiral in three dimensions. The light-blue curve below is the trajectory in the phase plane. Above it, the raised altimeter surface shows the trajectory descending towards the bottom. Dashed lines connect selected points to their projections on the plane.",
+    "file": "figure-39.svg"
+  },
+  {
+    "number": 40,
+    "label": "fig:savasanatre",
+    "caption": "The damped oscillator used to illustrate a return to rest. At left, a trajectory lifted to the height given by its total energy. At right, four trajectories in the position–velocity plane. The lifted trajectory starts on the right with zero velocity.",
+    "alt": "The damped oscillator used to illustrate a return to rest. At left, a trajectory lifted to the height given by its total energy. At right, four trajectories in the position–velocity plane. The lifted trajectory starts on the right with zero velocity.",
+    "file": "figure-40.svg"
+  },
+  {
+    "number": 41,
+    "label": "fig:uhpfase",
+    "caption": "A bowl with a rim in the conservative model associated with balancing on one leg. The origin is stable without being attracting. The restoring action is idealised. Holding the asana requires muscular control.",
+    "alt": "A bowl with a rim in the conservative model associated with balancing on one leg. The origin is stable without being attracting. The restoring action is idealised. Holding the asana requires muscular control.",
+    "file": "figure-41.svg"
+  },
+  {
+    "number": 42,
+    "label": "fig:selleafuochi",
+    "caption": "Śīrṣāsana in the phase plane, without correction at left and with correction at right.",
+    "alt": "Śīrṣāsana in the phase plane, without correction at left and with correction at right.",
+    "file": "figure-42.svg"
+  },
+  {
+    "number": 43,
+    "label": "fig:bacini",
+    "caption": "Basins of the double-well model. Blue marks the left equilibrium and ochre the right one. The asanas illustrate the association qualitatively. The open circle marks the saddle. States on the boundary converge to the saddle, while the two minima attract states in their respective basins. The colours approximate the basins on a finite grid.",
+    "alt": "Basins of the double-well model. Blue marks the left equilibrium and ochre the right one. The asanas illustrate the association qualitatively. The open circle marks the saddle. States on the boundary converge to the saddle, while the two minima attract states in their respective basins. The colours approximate the basins on a finite grid.",
+    "file": "figure-43.svg"
+  },
+  {
+    "number": 44,
+    "label": "fig:riepilogo",
+    "caption": "Models associated with the asanas, showing their potentials, phase portraits and types of equilibrium. Each classification applies under the conditions of the specified model.",
+    "alt": "Models associated with the asanas, showing their potentials, phase portraits and types of equilibrium. Each classification applies under the conditions of the specified model.",
+    "file": "figure-44.svg"
+  }
+]

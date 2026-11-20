@@ -1,6 +1,31 @@
 import {escapeHtml as e} from './safety.mjs';
 import {teachingAppSearchEntries} from './teaching-apps.mjs';
 import {textFor} from './i18n.mjs';
+import {articleReading} from './paths.mjs';
+import {equilibriumId} from './scientific-articles.mjs';
+
+function searchText(html){
+ return html.replace(/<[^>]+>/g,'').replace(/&(?:amp|lt|gt|quot|#39);/g,entity=>({
+  '&amp;':'&','&lt;':'<','&gt;':'>','&quot;':'"','&#39;':"'"
+ })[entity]).replace(/\s+/g,' ').trim();
+}
+function postRows(post,data){
+ const url=`articolo-${post.id}.html`,en=data.language==='en';
+ const {sections,body}=articleReading(post,data);
+ const rows=[{url,title:post.title,kind:'Blog',context:post.excerpt,keywords:[post.subtitle,...(post.tags||[])].filter(Boolean).join(' ')}];
+ const text=body.replace(/<svg\b[\s\S]*?<\/svg>/g,'').replace(/<annotation\b[\s\S]*?<\/annotation>/g,'');
+ const terms=/\b(?:LaSalle|Lyapunov|Krasovskii|centro di pressione|cent(?:re|er) of pressure)\b/gi;
+ for(const [i,{id,label}] of sections.entries()){
+  const start=text.indexOf(`id="${id}"`);
+  const end=sections[i+1]?text.indexOf(`id="${sections[i+1].id}"`):text.length;
+  const keywords=post.id===equilibriumId?[...new Set(searchText(text.slice(start,end)).match(terms)||[])].join(' '):'';
+  rows.push({url:url+'#'+id,title:searchText(label),kind:en?'Article section':'Sezione di un articolo',context:post.title,keywords});
+ }
+ for(const [,id,term,definition] of text.matchAll(/<dt id="(glossario-\d+)"[^>]*>(.*?)<\/dt>\s*<dd>([\s\S]*?)<\/dd>/g)){
+  rows.push({url:url+'#'+id,title:searchText(term).replace(/\.$/,''),kind:en?'Glossary':'Glossario',context:searchText(definition)});
+ }
+ return rows;
+}
 export function searchEntries(data){
  const en=data.language==='en';
  const base=[['index.html','Home'],['didattica.html','Didattica'],['laboratori.html',en?'Laboratories · galaxy map':'Laboratori · mappa galattica'],['ricerca.html','Ricerca'],['blog.html','Blog'],['cv.html','Profilo & CV'],['geometrie.html','Atlante delle forme'],['esperimenti.html',en?'Variations and measurements':'Variazioni e misure'],['viaggi.html','Viaggi'],['contatti.html','Contatti'],['risorse.html','Risorse'],['manifold.html',data.identity.manifold.titolo],['musica.html',data.identity.musica.titolo],['licenza.html',data.identity.licenza.titolo]].map(([url,title])=>({url,title,kind:en?'Section':'Sezione'}));
@@ -11,7 +36,7 @@ export function searchEntries(data){
  ...data.lectures.map(x=>({url:`corso-${x.course}.html#lezione-${x.id}`,title:x.title,kind:en?'Module':'Modulo',context:x.summary,keywords:x.topics.join(' ')})),
  ...data.studyGuide.modules.flatMap(m=>m.chapters.map(c=>({url:`corso-quantum-post-quantum-computing-2026-2027.html#argomento-${m.id}-${c.page}`,title:c.title,kind:en?'Slide topic · Italian':'Argomento della dispensa',context:`${en?'Module':'Modulo'} ${Number(m.id.slice(-2))} · PDF p. ${c.page}`}))),
  ...data.geometry.items.map(g=>({url:`geometrie.html#${g.id}`,title:g.titolo,kind:en?'Geometry':'Geometria',context:g.spiegazione,keywords:g.id+' '+g.tema+' '+g.osservazione})),
- ...data.posts.map(x=>({url:`articolo-${x.id}.html`,title:x.title,kind:'Blog',context:x.excerpt})),
+ ...data.posts.flatMap(post=>postRows(post,data)),
  ...data.publications.map(x=>({url:`ricerca.html#${x.id}`,title:x.title+(x.plainTitle?' · '+x.plainTitle:''),kind:x.category+' / '+x.year,context:x.plainSummary||x.where})),
  ...data.research.areas.map(x=>({url:`tema-${x.id}.html`,title:x.title,kind:en?'Research topic':'Tema di ricerca',context:x.question,keywords:x.methods.join(' ')})),
  ...data.travels.map(x=>({url:`viaggio-${x.id}.html`,title:x.title+' · '+x.place,kind:en?'Travels':'Viaggi',context:x.excerpt})),

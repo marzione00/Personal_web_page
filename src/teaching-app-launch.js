@@ -12,11 +12,17 @@
   const rows = Array.from(dialog.querySelectorAll('[data-launch-line]'));
   const progress = dialog.querySelector('[data-launch-progress]'),percent = dialog.querySelector('[data-launch-percent]');
   if (!title || !status || !destination || !direct || !cancel || !progress || !percent || rows.length !== 3) return;
-  const duration = 5000, departure = duration + 350;
+  const launched = new Set();
+  const storageKey = id => 'mdc-lab-seen-'+id;
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
   const en = document.documentElement.lang === 'en';
   let active = null;
   function setProgress(value) { progress.value=value; progress.textContent=percent.textContent=value+'%'; }
+
+  function rememberLaunch(id) {
+    launched.add(id);
+    try { sessionStorage.setItem(storageKey(id),'1'); } catch {}
+  }
 
   function cleanup(restoreFocus = true) {
     const previous = active;
@@ -33,6 +39,7 @@
   function navigate() {
     if (!active) return;
     const url = active.url;
+    rememberLaunch(active.id);
     cleanup(false);
     location.assign(url);
   }
@@ -41,10 +48,12 @@
     const state = active;
     if (!state) return;
     const elapsed = Math.max(0, now - state.started);
+    const duration = state.duration, departure = duration + 350;
+    const typingTime = elapsed * 5000 / duration;
     const value = Math.min(100, Math.floor(elapsed / duration * 100));
     if (progress.value !== value) setProgress(value);
     state.commands.forEach((command, i) => {
-      const typed = Math.max(0, Math.min(1, (elapsed - 250 - i * 1550) / 950));
+      const typed = Math.max(0, Math.min(1, (typingTime - 250 - i * 1550) / 950));
       rows[i].textContent = command.slice(0, Math.ceil(command.length * typed));
     });
     if (elapsed >= duration) dialog.classList.add('is-opening');
@@ -67,6 +76,9 @@
     const id = link.dataset.launchId;
     if (!id || id.length > 60 || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(id)) return;
     if (active) { event.preventDefault(); return; }
+    let seen = launched.has(id);
+    try { seen ||= sessionStorage.getItem(storageKey(id))==='1'; } catch {}
+    const duration = seen && window.MDCEffects?.intensity!=='cinema' ? 850 : 5000;
     const name = (link.dataset.launchName || 'Quantum Lab').slice(0,90);
     title.textContent = name;
     status.textContent = (en ? 'Opening ' : 'Apertura di ') + name + '…';
@@ -76,12 +88,12 @@
     setProgress(0);
     try { dialog.showModal(); } catch { return; } // If enhancement fails, keep native navigation.
     event.preventDefault();
-    active = {url:url.href, trigger:link, started:performance.now(), frame:0, timeout:0,
+    active = {id,duration,url:url.href, trigger:link, started:performance.now(), frame:0, timeout:0,
       commands:['cd didattica', 'open ' + id, 'navigate --same-tab']};
     dialog.classList.add('is-running');
     direct.focus({preventScroll:true});
     // Hard upper bound independent of animation frames; cancellation always clears it.
-    active.timeout = setTimeout(navigate, departure + 300);
+    active.timeout = setTimeout(navigate, duration + 650);
     active.frame = requestAnimationFrame(animate);
   });
 
@@ -97,6 +109,7 @@
     if (event.button !== 0) return;
     // Preserve modifiers too: opening a new tab must not also redirect the original tab.
     // Preserve the real anchor's native navigation; stop its pending automatic counterpart.
+    if(active && !event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey) rememberLaunch(active.id);
     cleanup(false);
   });
   direct.addEventListener('auxclick', event => { if (event.button === 1) cleanup(false); });

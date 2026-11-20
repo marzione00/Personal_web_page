@@ -7,7 +7,7 @@ excerpt: Alerts in European schools show how an unfounded threat can consume res
 
 # A Europe on alert
 
-On 11 November 2026, as messages announcing the presence of explosive devices began arriving at Italian schools, thousands of headteachers were called upon to assess a threat whose reliability remained unknown but which, given the gravity of the consequences it described, required the involvement of the relevant authorities. According to ministerial figures reported by news agencies, the messages reached around 6,300 schools and more than three hundred were evacuated; on the same day, similar emails arrived in Northern Ireland, Scotland and the Republic of Ireland, affecting hundreds of other school buildings. Subsequent checks led the authorities to classify the threats as unfounded, by which time precautionary measures had already disrupted lessons, occupied law enforcement agencies and involved pupils’ families.
+On 11 November 2026, as messages announcing the presence of explosive devices began arriving at Italian schools, thousands of headteachers were called upon to assess a threat whose reliability remained unknown but which, given the gravity of the consequences it described, required the involvement of the relevant authorities. Figures presented to the Senate on 19 November put the number of schools affected at more than 6,000 and the number of reported evacuations at 2,455. On the same day as the Italian alerts, similar emails arrived in Northern Ireland, Scotland and the Republic of Ireland, affecting hundreds of other school buildings. Subsequent checks led the authorities to classify the threats as unfounded, by which time precautionary measures had already disrupted lessons, occupied law enforcement agencies and involved pupils’ families.
 
 The wave of 11 November followed a series of incidents that had affected other European institutions and services in the preceding weeks. On 19 October, the Police Service of Northern Ireland had launched an investigation into threatening messages received by around three hundred schools, while on 2 November a further series of communications had reached approximately 280 Italian schools. Over the following days, the alerts had spread to air transport, with 35 flights affected on 3, 5 and 6 November according to EUROCONTROL, and to television broadcasters including RTÉ, Sky and NOVA, which were required to arrange checks and, in some cases, temporarily suspend their activities. For schools, airports and newsrooms alike, the need to establish the substance of the threats had triggered exceptional procedures whose duration depended on the investigations and on the possibility of resuming services safely.
 
@@ -77,4 +77,15 @@ Ian T. Brown, A New Conception of War: John Boyd, the U.S. Marines, and Maneuver
 
 Frans P. B. Osinga, Science, Strategy and War: The Strategic Theory of John Boyd, Routledge, chapters 5–7.
 
-For the reconstruction of events: statements from the Police Service of Northern Ireland, Police Scotland and Highland Council; communications from the municipalities of Fiano Romano, Riano and Marino; reports by Reuters, Associated Press and ANSA of 11–12 November 2026; EUROCONTROL figures on the alerts of 3, 5 and 6 November.
+Sources for the chronology and figures.
+
+- [Senate briefing on 19 November](https://www.senato.it/show-doc?id=0&idoggetto=0&leg=0&part=doc_dc-ressten_rs-gentit_idmdisredabnisesah&tipodoc=hotresaula)
+- [Highland Council and Police Scotland](https://www.highland.gov.uk/news/article/17553/statement-after-threatening-messages-sent-to-a-number-of-schools-in-scotland)
+- [PSNI, 19 October](https://www.psni.police.uk/latest-news/police-investigating-threatening-e-mails-schools-treating-matter-hoax)
+- [PSNI, 11 November](https://www.psni.police.uk/latest-news/threatening-emails-over-300-schools-being-treated-hoax)
+- [City of Edinburgh](https://www.edinburgh.gov.uk/news/article/14529/response-to-bomb-hoax-threat-to-schools)
+- [Fiano Romano](https://www.comune.fianoromano.rm.it/Novita/Notizie/Emergenza-bomba.-Comunicato-del-Sindaco)
+- [Riano](https://comune.riano.rm.it/notizie/3680605/falso-allarme-bomba-presso-istituto-comprensivo)
+- [Marino](https://www.comune.marino.rm.it/novita/comunicati_stampa/novita_3135.html)
+- [ANSA on the school alerts](https://www.ansa.it/sito/notizie/cronaca/2026/11/11/vi-annienteremo-lallarme-bomba-in-6.000-scuole-italiane.-meloni-strategia-per-il-caos_870b0024-72d2-4b15-bab5-0c74dcc1d653.html)
+- [EUROCONTROL figures reported by ANSA](https://www.ansa.it/europa/notizie/rubriche/altrenews/2026/11/07/eurocontrol-allarmi-bomba-su-35-voli-europei-in-tre-giornate_124f1bad-dde5-4dd2-b0e5-634153c85bab.html)

@@ -11,7 +11,7 @@ sourceStatus: approved
 
 # Un’Europa in stato d’allerta
 
-L’11 novembre 2026, mentre nelle scuole italiane cominciavano ad arrivare messaggi che annunciavano la presenza di ordigni esplosivi, migliaia di dirigenti scolastici furono chiamati a valutare una minaccia la cui attendibilità rimaneva sconosciuta, ma che, per la gravità delle conseguenze prospettate, richiedeva l’intervento delle autorità competenti. Secondo i dati ministeriali riportati dalle agenzie di stampa, le comunicazioni raggiunsero circa 6.300 istituti e oltre trecento scuole vennero evacuate; nello stesso giorno, email analoghe arrivarono in Irlanda del Nord, Scozia e Repubblica d’Irlanda, interessando centinaia di altri edifici scolastici. Le verifiche successive portarono le autorità a classificare le minacce come infondate, quando tuttavia le misure precauzionali avevano già modificato lo svolgimento delle lezioni, impegnato le forze dell’ordine e coinvolto le famiglie degli studenti.
+L’11 novembre 2026, mentre nelle scuole italiane cominciavano ad arrivare messaggi che annunciavano la presenza di ordigni esplosivi, migliaia di dirigenti scolastici furono chiamati a valutare una minaccia la cui attendibilità rimaneva sconosciuta, ma che, per la gravità delle conseguenze prospettate, richiedeva l’intervento delle autorità competenti. Nell’informativa al Senato del 19 novembre il ministro dell’Interno ha riferito che quel giorno furono interessati più di 6.000 istituti e vennero segnalate 2.455 evacuazioni. Email analoghe arrivarono l’11 novembre anche in Irlanda del Nord, Scozia e Repubblica d’Irlanda, interessando centinaia di altri edifici scolastici. Le verifiche successive portarono le autorità a classificare le minacce come infondate, quando tuttavia le misure precauzionali avevano già modificato lo svolgimento delle lezioni, impegnato le forze dell’ordine e coinvolto le famiglie degli studenti.
 
 L’ondata dell’11 novembre seguiva una successione di episodi che, nelle settimane precedenti, aveva interessato altri istituti e servizi europei. Il 19 ottobre la Police Service of Northern Ireland aveva avviato un’indagine su messaggi minatori ricevuti da circa trecento scuole, mentre il 2 novembre una nuova serie di comunicazioni aveva raggiunto circa 280 istituti italiani. Nei giorni successivi le segnalazioni si erano estese al trasporto aereo, con 35 voli interessati nelle giornate del 3, 5 e 6 novembre secondo EUROCONTROL, e ad alcune emittenti televisive, fra cui RTÉ, Sky e NOVA, costrette a predisporre controlli e, in determinati casi, a interrompere temporaneamente le proprie attività. Per le scuole, come per gli aeroporti e le redazioni, la necessità di accertare il contenuto delle minacce aveva comportato l’attivazione di procedure straordinarie, la cui durata dipendeva dagli accertamenti e dalla possibilità di riprendere il servizio in condizioni di sicurezza.
 
@@ -81,4 +81,15 @@ Ian T. Brown, A New Conception of War: John Boyd, the U.S. Marines, and Maneuver
 
 Frans P. B. Osinga, Science, Strategy and War: The Strategic Theory of John Boyd, Routledge, capitoli 5–7.
 
-Per la ricostruzione degli episodi: comunicati della Police Service of Northern Ireland, di Police Scotland e di Highland Council; comunicazioni dei Comuni di Fiano Romano, Riano e Marino; ricostruzioni Reuters, Associated Press e ANSA dell’11–12 novembre 2026; dati EUROCONTROL relativi agli allarmi del 3, 5 e 6 novembre.
+Fonti della cronologia e dei dati.
+
+- [Informativa al Senato del 19 novembre](https://www.senato.it/show-doc?id=0&idoggetto=0&leg=0&part=doc_dc-ressten_rs-gentit_idmdisredabnisesah&tipodoc=hotresaula)
+- [Highland Council e Police Scotland](https://www.highland.gov.uk/news/article/17553/statement-after-threatening-messages-sent-to-a-number-of-schools-in-scotland)
+- [PSNI, 19 ottobre](https://www.psni.police.uk/latest-news/police-investigating-threatening-e-mails-schools-treating-matter-hoax)
+- [PSNI, 11 novembre](https://www.psni.police.uk/latest-news/threatening-emails-over-300-schools-being-treated-hoax)
+- [Comune di Edimburgo](https://www.edinburgh.gov.uk/news/article/14529/response-to-bomb-hoax-threat-to-schools)
+- [Comune di Fiano Romano](https://www.comune.fianoromano.rm.it/Novita/Notizie/Emergenza-bomba.-Comunicato-del-Sindaco)
+- [Comune di Riano](https://comune.riano.rm.it/notizie/3680605/falso-allarme-bomba-presso-istituto-comprensivo)
+- [Comune di Marino](https://www.comune.marino.rm.it/novita/comunicati_stampa/novita_3135.html)
+- [ANSA sugli allarmi nelle scuole](https://www.ansa.it/sito/notizie/cronaca/2026/11/11/vi-annienteremo-lallarme-bomba-in-6.000-scuole-italiane.-meloni-strategia-per-il-caos_870b0024-72d2-4b15-bab5-0c74dcc1d653.html)
+- [Dati EUROCONTROL riportati da ANSA](https://www.ansa.it/europa/notizie/rubriche/altrenews/2026/11/07/eurocontrol-allarmi-bomba-su-35-voli-europei-in-tre-giornate_124f1bad-dde5-4dd2-b0e5-634153c85bab.html)

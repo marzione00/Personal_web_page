@@ -11,7 +11,7 @@
   setReading(readPref('mdc-reading')==='on');
   reading?.addEventListener('click',()=>{const on=!document.body.classList.contains('reading-mode');setReading(on);writePref('mdc-reading',on?'on':'off');});
   const toggle=$('[data-menu]'),nav=$('#primary-nav');
-  toggle?.addEventListener('click',()=>{const open=toggle.getAttribute('aria-expanded')!=='true';toggle.setAttribute('aria-expanded',String(open));nav?.classList.toggle('is-open',open);});
+  toggle?.addEventListener('click',event=>{const open=toggle.getAttribute('aria-expanded')!=='true';toggle.setAttribute('aria-expanded',String(open));nav?.classList.toggle('is-open',open);if(open&&event.detail===0)nav?.querySelector('a')?.focus();});
   nav?.addEventListener('click',e=>{if(e.target.closest('a[href]')){nav.classList.remove('is-open');toggle?.setAttribute('aria-expanded','false');}});
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav?.classList.contains('is-open')){nav.classList.remove('is-open');toggle?.setAttribute('aria-expanded','false');toggle?.focus();}});
   // Progressive filters: all content is present and readable without JavaScript.

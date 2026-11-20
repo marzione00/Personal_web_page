@@ -17,7 +17,7 @@ test('homepage uses approved photograph rather than a silent fallback',()=>{
 });
 test('all original photographs match approved file hashes',()=>{
  const manifest=JSON.parse(fs.readFileSync(path.join(root,'content/photo-manifest.json')));
- assert.equal(manifest.length,5);
+ assert.equal(manifest.length,7);
  for(const m of manifest){const b=fs.readFileSync(path.join(root,'public',m.path));assert.equal(digest(b),m.sha256);assert.equal(b.length,m.bytes);assert.equal(m.transformation,'none');}
  assert.equal(manifest[0].sha256,'c848f8613827ad1a38443e61ccfe4ca9ef78ea9a93111055c239ac389a763e55');
 });

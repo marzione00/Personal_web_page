@@ -1,17 +1,13 @@
-# Topological Manifolds v3.7 — aggiornare i contenuti
+# Topological Manifolds — aggiornare i contenuti
 
 ## Curriculum PDF
 Il PDF approvato, aggiornato nella v3.17.2 negli interessi di teoria dell’informazione, è incluso come `CV.pdf` nella radice del repository. L'importatore incluso lo copia senza ricodificarlo e aggiorna il collegamento IT/EN. In futuro sostituisci quel PDF e conferma il commit.
-
-## Testi modificati nella v3.7
-
-Home, profilo, ricerca, aree scientifiche, sintesi di pubblicazioni, corsi, Quantum Lab, estratto del blog, viaggi e musica sono aggiornati nei rispettivi Markdown italiani e inglesi. Le 24 geometrie hanno un nuovo campo `## osservazione`; le epigrafi conservano il testo integrale e aggiungono una riga `Nota:`.
 
 ## Registro editoriale
 
 Per i testi italiani usa periodi ampi, nei quali le subordinate chiariscano circostanze, cause, conseguenze e relazioni fra le idee. Separa i nuclei del discorso in paragrafi. La prima persona appartiene al racconto autobiografico e alle riflessioni personali; la descrizione scientifica richiede precisione sui risultati e sui limiti. Evita le formule stereotipate indicate dall’autore, comprese «non… ma…», «non solo/non soltanto», «il punto della questione» e «prologo». Mantieni brevi i titoli e i comandi. Le citazioni sono trascrizioni integrali; le negazioni necessarie a esprimere un limite tecnico vanno conservate.
 
-**La fonte dei testi è `content/markdown/`.** Non modificare `src/`, `dist/`, `preview/`, i file JavaScript o le copie `docs/BIOGRAFIA.md` per correggere un testo pubblico.
+**I testi ordinari si modificano in `content/markdown/`.** Per «L’equilibrio sul tappetino» usa i sorgenti LaTeX indicati qui sotto. Le copie in `dist/`, `preview/` e `docs/BIOGRAFIA.md` sono generate.
 
 ## Cambiare un testo già presente
 
@@ -28,10 +24,22 @@ Apri su GitHub il file Markdown desiderato, clicca sulla matita, modifica il tes
 | Spiegazione di una pubblicazione | `content/markdown/publications/<id>.md` |
 | Descrizione di un insegnamento | `content/markdown/courses/<id>.md` |
 | Descrizione di una lezione | `content/markdown/lectures/<id>.md` |
-| Testo integrale di un articolo già esistente | `content/markdown/posts/<id>.md` |
+| Testo integrale di un articolo in Markdown | `content/markdown/posts/<id>.md` |
 | Titolo, sottotitolo ed estratto di un articolo | `content/markdown/post-details/<id>.md` |
 
 Conserva i titoli tecnici `## campo` dei file sezionati: servono a sapere dove collocare il testo, **non vengono mostrati ai visitatori**. Puoi modificare liberamente le righe sottostanti. I paragrafi sono separati da una riga vuota. Se incontri una sezione con un elenco (`- argomento`), mantieni i trattini.
+
+## Aggiornare «L’equilibrio sul tappetino»
+
+Modifica `docs/sources/equilibrio/equilibrio-editoriale.tex` (italiano) e `docs/sources/equilibrio/equilibrio-en.tex` (inglese). Le traduzioni delle etichette SVG si trovano in `docs/sources/equilibrio/etichette-en.tsv`. Con Python 3 e Pandoc installati, rigenera entrambe le edizioni nell’ordine indicato.
+
+```sh
+python3 scripts/import-equilibrium.py --language it
+python3 scripts/import-equilibrium.py --language en
+npm run check:editorial
+```
+
+Includi nel commit i sorgenti e i file generati. Il controllo editoriale segnala cambiamenti nelle fonti, nelle figure o nelle copie generate quando occorre ripetere l’importazione.
 
 ## Scrivere un articolo completamente nuovo con un solo Markdown
 

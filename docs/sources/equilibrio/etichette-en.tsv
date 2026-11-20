@@ -1,0 +1,166 @@
+l’inclinazione cresce	tilt increases
+il braccio sollevato ricade	the raised arm falls back
+spostata e lasciata	displaced and released
+attraversa il fondo	crosses the bottom
+risale, meno di prima	climbs to a lower height
+di nuovo ferma	at rest again
+sollevato e lasciato	lifted and released
+ricade	falls back
+piccolo rimbalzo	small bounce
+di nuovo fermo	at rest again
+pallina	ball
+corpo	body
+tempo	time
+scostamento dal punto di riposo	displacement from rest
+da una parte	on one side
+dall’altra	on the other
+la spinta iniziale	initial push
+l’equilibrio	equilibrium
+valle	valley
+richiamo al fondo	pulled to the bottom
+pianoro	flat ground
+si resta dove si è	stays in place
+cima	summit
+ci si allontana	moves away
+energia	energy
+posizione	position
+sale	rises
+appeso	suspended
+scende	falls
+in appoggio	supported below
+valle: Śavāsana	valley: Śavāsana
+cima: Śīrṣāsana	summit: Śīrṣāsana
+conca: richiamo al fondo	bowl: drawn to the bottom
+cupola: allontanamento	dome: moves away
+altezza raggiunta	height reached
+a ogni risalita	on each climb
+ferma in alto	at rest, high up
+veloce sul fondo	fast at the bottom
+ferma, più in basso	at rest, lower down
+ferma sul fondo	at rest at the bottom
+energia potenziale	potential energy
+energia cinetica	kinetic energy
+calore	heat
+un gradino	a step
+partenza	start
+fondo valle	valley floor
+strada percorsa	distance travelled
+quota (m)	elevation (m)
+sollevato	raised
+in caduta	falling
+quiete	at rest
+con attrito: torna	with friction: returns
+senza attrito: resta vicina	without friction: stays close
+scostamento dal fondo	displacement from the bottom
+tolleranza ε dal fondo	tolerance ε from the bottom
+spostamento iniziale δ	initial displacement δ
+bordo	rim
+dentro: resta	inside: stays
+fuori: esce	outside: escapes
+regione di	reference
+riferimento	region
+zona iniziale	starting area
+limite illustrativo	illustrative limit
+posizioni della pallina	ball positions
+a intervalli di tempo uguali	at equal time intervals
+inclinazione	tilt
+peso	weight
+soglia	threshold
+0,0 s	0.0 s
+0,2 s	0.2 s
+0,4 s	0.4 s
+0,6 s	0.6 s
+0,8 s	0.8 s
+1,0 s	1.0 s
+1.0◦	1.0°
+1.3◦	1.3°
+2.2◦	2.2°
+4.1◦	4.1°
+8.3◦	8.3°
+16.6◦	16.6°
+tempo (s)	time (s)
+inclinazione (gradi)	tilt (degrees)
+mano	hand
+bastone	stick
+la cima pende	the top leans
+a destra	to the right
+la mano la insegue	the hand follows
+e la supera	and goes past it
+il bastone	the stick
+si raddrizza	straightens
+bastone di un metro:	one-metre stick:
+l’inclinazione raddoppia	tilt doubles
+in circa 0,18 secondi	in about 0.18 seconds
+matita di 15 centimetri:	15-centimetre pencil:
+in circa 0,07 secondi	in about 0.07 seconds
+correzione	correction
+conca efficace	effective well
+resta un colle	the hill remains
+colle	hill
+correzione energica	strong correction
+somma	sum
+correzione debole	weak correction
+Corpo capovolto	Inverted body
+inclinazione e velocità	tilt and velocity
+Sensi	Senses
+orecchio interno, vista,	inner ear, vision,
+pressione sugli avambracci	pressure on the forearms
+Sistema nervoso	Nervous system
+stima e decisione	estimation and decision
+Muscoli	Muscles
+spalle, addome, avambracci	shoulders, abdomen, forearms
+stato	state
+ritardo	delay
+comando	command
+spinte esterne: respiro, distrazioni	disturbances: breathing, distractions
+ritardo breve	short delay
+ritardo medio	medium delay
+ritardo lungo	long delay
+ritardo medio, correzione forte	medium delay, strong correction
+spinta debole: torna indietro spinta forte: passa oltre	weak push: returns     strong push: crosses
+prima conca	first well
+seconda conca	second well
+dosso	rise
+inarcamento	arching back
+sommità del dosso	top of the rise
+sommità	summit
+spinta insufficiente	insufficient push
+spinta adeguata	sufficient push
+barriera del	potential
+potenziale	barrier
+velocità nulla:	zero velocity:
+resta ferma	stays still
+velocità	velocity
+velocità grande:	high speed:
+risalirà	climbs again
+a sinistra	to the left
+verso destra	moving right
+verso sinistra	moving left
+fermo nell’equilibrio	at rest at equilibrium
+spostato a destra,	displaced right,
+va verso destra	moving right
+spostato a sinistra,	displaced left,
+va verso sinistra	moving left
+stessa quota	same energy
+superficie dell’altimetro	altimeter surface
+mappa degli stati	phase plane
+orbite chiuse:	closed orbits:
+oscillazioni che si ripetono	repeating oscillations
+separatrice: frontiera	separatrix: boundary
+delle oscillazioni interne	of confined oscillations
+traiettorie che si allontanano:	escaping trajectories:
+la posizione si perde	balance is lost
+equilibrio instabile	unstable equilibrium
+sul bordo della conca	on the rim of the bowl
+paesaggio	landscape
+equilibrio	equilibrium
+asintoticamente stabile:	asymptotically stable:
+si torna all’equilibrio	returns to equilibrium
+stabile senza attrito:	stable without friction:
+si resta vicini	stays close
+senza correzione	without correction
+instabile:	unstable:
+con correzione	with correction
+con controllo senza ritardo	with control and no delay
+due equilibri stabili	two stable equilibria
+divisi da una separatrice	divided by a separatrix
