@@ -286,10 +286,10 @@ A person climbs an artificial wall with numbered holds, supported by their hands
 Yoga
 
 ## personalPhotos_4_caption
-Vasiṣṭhāsana variation · Side balance on one hand and one foot, with the other leg lifted.
+Viśvāmitrāsana · The thigh rests on the arm that supports the torso. The leg extends almost parallel to the mat as the gaze follows the raised hand.
 
 ## personalPhotos_4_alt
-Marzio balances on one hand and one foot with the other leg raised in front of a bookcase.
+In front of a bookcase, Marzio balances on one hand and the opposite foot. His other leg extends to the right above the mat, and his free arm reaches straight up.
 
 ## personalPhotos_5_category
 Yoga

@@ -38,7 +38,7 @@ test('the biography opens the two practice photos in one bilingual gallery',()=>
    assert.equal((page.match(new RegExp('src="media/images/'+id+'.jpg"','g'))||[]).length,1);
    assert.ok(gallery.includes(photo.caption));
   }
-  assert.match(gallery,/Vasiṣṭhāsana/);
+  assert.match(gallery,/Viśvāmitrāsana/);
   assert.match(page,/<figcaption>Bharadvājāsana · /);
   assert.match(page,/Parivṛtta Sūrya Yantrāsana/);
   assert.equal((page.match(/class="photo-guides"/g)||[]).length,2);

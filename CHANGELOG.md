@@ -1,5 +1,9 @@
 # Aggiornamenti
 
+## 3.27.1 — 22 novembre 2026
+
+- Sostituita nella biografia la fotografia di Vasiṣṭhāsana con Viśvāmitrāsana. La nuova fotografia originale ha didascalia, testo alternativo e guide agli appoggi in italiano e inglese.
+
 ## 3.27.0 — 22 novembre 2026
 
 - Pubblicato il saggio «Il pessimo rapporto fra l’IA e il pensiero umano» in italiano e in inglese.

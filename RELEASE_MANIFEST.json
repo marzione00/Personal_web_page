@@ -1,42 +1,25 @@
 {
   "brand": "Topological Manifolds",
   "date": "2026-11-22",
-  "version": "3.27.0",
-  "packageVersion": "3.27.0",
+  "version": "3.27.1",
+  "packageVersion": "3.27.1",
   "baseRepository": "https://github.com/marzione00/Personal_web_page",
-  "basedOnPackage": "Topological_Manifolds_v3.26.2_GitHub_COMPLETO.zip",
-  "basePackageSha256": "13ec4fe4f1e759d1ab5dbd10993097422e864a8b1516f13010e95fa994985c17",
+  "basedOnPackage": "Topological_Manifolds_v3.27.0_GitHub_COMPLETO.zip",
+  "basePackageSha256": "e883bee59d0988c9f20cd70d5562d4a72aaf4a0d3bdbaefc32ea0aa1aeeed39d",
   "remoteDeployment": false,
   "sourceFiles": 736,
-  "addedSourceFiles": [
-    "content/markdown/en/posts/il-pessimo-rapporto-fra-l-ia-e-il-pensiero-umano.md",
-    "content/markdown/posts/il-pessimo-rapporto-fra-l-ia-e-il-pensiero-umano.md",
-    "docs/sources/il-pessimo-rapporto-fra-l-ia-e-il-pensiero-umano/articolo-en.html",
-    "docs/sources/il-pessimo-rapporto-fra-l-ia-e-il-pensiero-umano/experiment-en.tsv",
-    "docs/sources/il-pessimo-rapporto-fra-l-ia-e-il-pensiero-umano/figure-en.tsv",
-    "docs/sources/il-pessimo-rapporto-fra-l-ia-e-il-pensiero-umano/labels-en.tsv",
-    "docs/sources/il-pessimo-rapporto-fra-l-ia-e-il-pensiero-umano/references-en.txt",
-    "public/media/docs/il-pessimo-rapporto-fra-l-ia-e-il-pensiero-umano-tavole.pdf",
-    "public/media/docs/il-pessimo-rapporto-fra-l-ia-e-il-pensiero-umano.pdf",
-    "source-materials/il-pessimo-rapporto-fra-l-ia-e-il-pensiero-umano.zip",
-    "src/essay-experiments.js",
-    "src/scientific-articles/il-pessimo-rapporto-fra-l-ia-e-il-pensiero-umano.en.html",
-    "src/scientific-articles/il-pessimo-rapporto-fra-l-ia-e-il-pensiero-umano.html"
-  ],
+  "addedSourceFiles": [],
   "modifiedSourceFiles": [
     "CHANGELOG.md",
-    "COME_MODIFICARE_I_TESTI.md",
     "LEGGIMI_PRIMA_DI_CARICARE.md",
+    "content/markdown/en/profilo-dati.md",
+    "content/photo-manifest.json",
+    "content/profile.json",
     "content/site.json",
     "package.json",
-    "scripts/audit-release.mjs",
-    "scripts/build.mjs",
-    "src/render.mjs",
-    "src/scientific-articles.css",
-    "src/scientific-articles.mjs",
-    "src/teaching-app-launch.js",
-    "src/travel-gallery.js",
-    "tests/i18n.test.mjs"
+    "public/media/images/yoga-equilibrio-laterale.jpg",
+    "src/profile.mjs",
+    "tests/personal-photos.test.mjs"
   ],
   "removedSourceFiles": [],
   "article": {
@@ -64,12 +47,12 @@
       "https://marzione00.github.io/Personal_web_page/",
       "https://www.mdctopologicalmanifolds.it/"
     ],
-    "htmlPages": 66,
+    "htmlPages": 68,
     "localLinks": 7210,
     "imageReferences": 154,
     "editorialSync": "passed",
     "resourceAndComponentAudit": {
-      "version": "3.27.0",
+      "version": "3.27.1",
       "budgets": [
         {
           "file": "index.html",
@@ -125,8 +108,8 @@
         "28 catalog entries and 32 versioned scene URLs"
       ]
     },
-    "browser": "Chromium: blog entry and language switch preserving diagram 09, five working controls, return plot in both languages, and modal glyph references isolated from the page.",
-    "originalAssets": "All 3.26.2 public assets and the supplied CV are byte-identical. The new essay and atlas PDFs are byte-identical to the author-supplied files.",
+    "browser": "Chromium: checked the Italian contact-point disclosure, full-resolution image dimensions, language switch, English caption and gallery viewer.",
+    "originalAssets": "Viśvāmitrāsana matches the supplied IMG_6857(1).jpeg byte for byte. The other six original photographs are unchanged.",
     "zipIntegrity": "CRC and contained file hashes verified after packaging"
   },
   "files": {
@@ -159,8 +142,8 @@
       "sha256": "7a4b2b912cb020d268a40917f3d38d427d131f6f2beb9c00721de924a286da9f"
     },
     "CHANGELOG.md": {
-      "bytes": 32337,
-      "sha256": "fb6508f3e6e8c386a4cf33fff02127929857b0ca0afa86ad2e3c0da4cbec6f0b"
+      "bytes": 32564,
+      "sha256": "c4792eee05f762f39e868746676558b98411c967b5eb7c603f3e333b58fb05d8"
     },
     "COME_MODIFICARE_I_TESTI.md": {
       "bytes": 13527,
@@ -176,7 +159,7 @@
     },
     "LEGGIMI_PRIMA_DI_CARICARE.md": {
       "bytes": 3179,
-      "sha256": "8318234265907511795dbbe881d1659cc729bbf12fdb11b9d460791faa7fb90a"
+      "sha256": "414d22f7006c14507663a5a9b8e451f2aecb1ff2518e473ab14cfe0299792319"
     },
     "LICENSE.md": {
       "bytes": 1613,
@@ -579,8 +562,8 @@
       "sha256": "3164d4a5425affb17559d18def720b70e8ebf3a3195fc15426a837724dfe9b85"
     },
     "content/markdown/en/profilo-dati.md": {
-      "bytes": 8067,
-      "sha256": "11656910b848ab56e683782f4574caf00656d2feb195e9c15743cdf4530d93d8"
+      "bytes": 8195,
+      "sha256": "04553ad3ca95bec000741797d0e4acaa0adc9021490698e48ee8719dcc627403"
     },
     "content/markdown/en/profilo.md": {
       "bytes": 9879,
@@ -964,15 +947,15 @@
     },
     "content/photo-manifest.json": {
       "bytes": 1834,
-      "sha256": "ed64bb1458007350ed393b2533fa0138f9caf07bba452711663e41fdb0dd6fd4"
+      "sha256": "723ff068d4531f1b4d4632f9006b268c04a8e69117635f1b42f06ddb7134d8d2"
     },
     "content/posts/colpire-i-nervi-del-sistema.json": {
       "bytes": 40958,
       "sha256": "4738c7a4728c0e9971f6a6402100760b38753d99347b5200a81dcac06e947caf"
     },
     "content/profile.json": {
-      "bytes": 22241,
-      "sha256": "6173d2388e98c0f43bf106d0c491670e7dc7cd0641770cf29fdf5af64b796e2d"
+      "bytes": 22348,
+      "sha256": "325ccaca0c3e4f9caaef06276c2ea164377dca2f8b4a37a7884badf88e269180"
     },
     "content/publications/pub-01.json": {
       "bytes": 1547,
@@ -1052,7 +1035,7 @@
     },
     "content/site.json": {
       "bytes": 161,
-      "sha256": "d62f6c96a97001dc8bc9714085b4052158323ec563ef2a3c31881870ea9d5821"
+      "sha256": "027e3e80f34f97b9cb5240249e23be5a0eb8937ab85a3478c1485fa029814288"
     },
     "content/study-guide.json": {
       "bytes": 30968,
@@ -1596,7 +1579,7 @@
     },
     "package.json": {
       "bytes": 1567,
-      "sha256": "48dd3c453077c2892529932281ef3cc44409ecf398a392d9bd956c4eae8a3694"
+      "sha256": "63a201dafbf04b7bddfbd60b74913d1209d2bec80dc93d7cc1cc606ce5b64941"
     },
     "public/assets/articles/equilibrio/figure-01.svg": {
       "bytes": 4542,
@@ -2291,8 +2274,8 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     "public/media/images/yoga-equilibrio-laterale.jpg": {
-      "bytes": 453327,
-      "sha256": "dc0b18344a03cc3207c85135878502a3a98e6e7b2a8e93401882af0a90a3dac6"
+      "bytes": 343724,
+      "sha256": "c0bc50dfe43df83a1dffdfc19b2afdcafb0a59abdd9144d45a71837146c103b4"
     },
     "public/media/images/yoga-estensione-studio.jpg": {
       "bytes": 235972,
@@ -2695,8 +2678,8 @@
       "sha256": "2be12badb44209e4617706670f741059a31c3dc69648baa5d05f7cbc05a498dc"
     },
     "src/profile.mjs": {
-      "bytes": 14231,
-      "sha256": "688c69637a5fa3e4ab6e4656adcc3779d663166093177d467b492a74145d5541"
+      "bytes": 14266,
+      "sha256": "0df5c79ff540eaaf8562c2c274b385ec31c1abad650947ee13a1a538463bac1e"
     },
     "src/publications.mjs": {
       "bytes": 1070,
@@ -2944,7 +2927,7 @@
     },
     "tests/personal-photos.test.mjs": {
       "bytes": 2513,
-      "sha256": "fd581399e7a25cd9cc6190c0f2fa984317dce449b1f7f1466879d5f33920dc04"
+      "sha256": "187691ec957fee8da98d29857d5612c1a2e10c90277ba79ec5aa9435f29f4257"
     },
     "tests/profile-cards.test.mjs": {
       "bytes": 2526,

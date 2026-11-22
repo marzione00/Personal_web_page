@@ -28,11 +28,11 @@ const tags=items=>`<div class="skills">${items.map(x=>`<span class="tag">${e(x)}
 const timeline=entries=>entries.map(x=>`<div class="timeline-row"><div class="date">${e(x.date||x.year)}</div><div><h3>${e(x.degree||x.title)}</h3><div class="institution">${e(x.institution||'')}</div>${x.detail?`<p>${e(x.detail)}</p>`:''}</div></div>`).join('');
 const photoAnnotations={
  'yoga-equilibrio-laterale':{
-  path:'M 210,1162 L 343,784 M 392,725 L 650,829 L 1121,1152 M 652,826 L 846,223',
-  points:'<circle cx="210" cy="1162" r="12"/><circle cx="1121" cy="1152" r="12"/>',
+  path:'M 53,1136 L 868,1120 M 815,868 L 1194,910',
+  points:'<circle cx="53" cy="1136" r="12"/><circle cx="868" cy="1120" r="12"/>',
   label:['Mostra gli appoggi','Show contact points'],
-  note:['La mano e il piede toccano il pavimento. Una diagonale unisce il tronco alla gamba d’appoggio.',
-   'The hand and foot touch the floor. A diagonal runs from the trunk along the supporting leg.'],
+  note:['I due punti segnano gli appoggi sul tappetino. Il tratto più corto segue la gamba sospesa dal braccio fino alla caviglia.',
+   'The two dots mark where the hand and foot meet the mat. The shorter line follows the lifted leg from the supporting arm to the ankle.'],
   figure:'figura-17'
  },
  'yoga-pratica-studio':{
