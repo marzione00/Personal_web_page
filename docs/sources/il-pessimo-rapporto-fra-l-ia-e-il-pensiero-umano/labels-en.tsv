@@ -1,0 +1,65 @@
+01-primi	Una salita per ciascun primo	One step for each prime
+01-primi	Il conteggio fino a cento	Counting up to a hundred
+01-primi	conteggio esatto	exact count
+01-primi	stima del numero dei primi	estimated prime count
+01-primi	4{,}08	4.08
+02-zeri	Dove la zeta vale zero	Where zeta is zero
+02-zeri	Il primo punto, da vicino	A close-up of the first zero
+02-zeri	La verticale tratteggiata passa a metà della striscia.	The dashed line runs halfway across the strip.
+02-zeri	{,}	.
+03-densita	I dispari da 101 a 149	Odd numbers from 101 to 149
+03-densita	Tentativi medi fra i dispari	Odd candidates needed on average
+03-densita	$\p$ zeri	$\p$ zeros
+03-densita	In blu i primi contati uno per uno.	The primes are shown in blue.
+03-densita	Numero vicino a un 1 seguito dagli zeri indicati.	Near 1 followed by the stated number of zeros.
+04-cifra	Dal messaggio al numero trasmesso	From the message to the number sent
+04-cifra	numero trasmesso	number sent
+04-cifra	Dopo ogni moltiplicazione si conserva il resto	Keep the remainder after each multiplication
+05-ciclo	Moltiplicare per otto	Multiplying by eight
+05-ciclo	resto per 33	remainder mod 33
+05-ciclo	Gli stessi resti, passo per passo	The same remainders, step by step
+05-ciclo	10 passi	10 steps
+06-eulero	Le potenze che lasciano resto uno	Powers that leave a remainder of one
+06-eulero	Venti copie danno resto 1.	Twenty factors give remainder 1.
+07-chiave	Le copie del messaggio, tre per gruppo	Message factors in groups of three
+07-chiave	venti fattori	twenty factors
+07-chiave	dà resto	leaves remainder
+08-irregolare	Le altezze dei resti dal passo 40 al passo 100	Remainders from step 40 to step 100
+08-irregolare	passo 40	step 40
+08-irregolare	passo 41	step 41
+09-ritorno	Spostamento di $\Delta$ passi	Shift by $\Delta$ steps
+09-ritorno	primo resto	first remainder
+09-ritorno	secondo resto	second remainder
+09-ritorno	Nessuna delle 61 coppie sulla diagonale.	None of the 61 pairs on the diagonal.
+09-ritorno	Tutte le 61 coppie sulla diagonale.	All 61 pairs on the diagonal.
+10-simmetria	Due punti separati	Two separate points
+10-simmetria	Due punti coincidenti	Two coincident points
+10-simmetria	distanza fra i punti	distance between points
+10-simmetria	punto della coppia	point in the pair
+10-simmetria	punto medio della coppia	midpoint of the pair
+11-annuncio	20 novembre\quad I documenti	20 November\quad Release
+11-annuncio	21 novembre\quad I controlli	21 November\quad Checks
+11-annuncio	La nota di Alpöge	Alpöge's note
+11-annuncio	Racconto delle scelte compiute con Claude.	An account of the choices made with Claude.
+11-annuncio	La prova scritta in Lean	The proof in Lean
+11-annuncio	Contiene la conclusione e i passi che vi conducono.	The statement and the steps that establish it.
+11-annuncio	Conclusione	Statement
+11-annuncio	Passi della prova	Proof steps
+11-annuncio	La conclusione dice proprio quanto afferma Riemann?	Does it say exactly what Riemann claimed?
+11-annuncio	La conclusione	The statement
+11-annuncio	I passaggi	The proof steps
+11-annuncio	Programmi indipendenti confermano la validità di ciascun passo?	Do independent programs confirm each step is valid?
+12-vortice	Velocità locale	Local velocity
+12-vortice	Velocità moltiplicata per sé stessa	Velocity squared
+12-vortice	picco doppio	twice the peak
+12-vortice	stessa area	equal area
+12-vortice	profilo esteso	wide profile
+12-vortice	profilo concentrato	narrow profile
+12-vortice	La larghezza misura il volume.	Width represents volume.
+01-primi	{primi}	{primes}
+05-ciclo	{resto}	{remainder}
+05-ciclo	{passo}	{step}
+06-eulero	{passo}	{step}
+08-irregolare	{resto}	{remainder}
+08-irregolare	{passo}	{step}
+09-ritorno	{passo 40}	{step 40}

@@ -1,0 +1,5 @@
+1	Move the counting threshold	The staircase counts the primes and the dashed curve estimates how many there are.	Threshold	25	50	100
+5	Step through the cycle of remainders	The circle marks the current remainder. The plot shows the same value.	Exponent	Start	Step 7	One cycle	Two cycles
+7	Try a decryption exponent	The dashed line marks the message 2. The height of each point gives the remainder after division by 33.	Exponent d	Try 6	Try 7	Try 8
+9	Shift the second sequence of remainders	The first remainder is on the horizontal axis and the shifted one on the vertical axis. The ring tracks step 40.	Shift in steps	One step	1333	1334	2668
+10	Move the points away from the line	Move the blue dots the same distance to either side. The diamond marks their midpoint.	Distance from the line in hundredths	Coincident	One tenth	One quarter

@@ -1,32 +1,42 @@
 {
   "brand": "Topological Manifolds",
-  "date": "2026-11-20",
-  "version": "3.26.2",
-  "packageVersion": "3.26.2",
+  "date": "2026-11-22",
+  "version": "3.27.0",
+  "packageVersion": "3.27.0",
   "baseRepository": "https://github.com/marzione00/Personal_web_page",
-  "basedOnPackage": "Topological_Manifolds_v3.26.1_GitHub_COMPLETO.zip",
-  "basePackageSha256": "60c2a1ac051b6650c7e23c99e16e0ba349fb14497f666e094cc59eb88908c212",
+  "basedOnPackage": "Topological_Manifolds_v3.26.2_GitHub_COMPLETO.zip",
+  "basePackageSha256": "13ec4fe4f1e759d1ab5dbd10993097422e864a8b1516f13010e95fa994985c17",
   "remoteDeployment": false,
-  "sourceFiles": 723,
+  "sourceFiles": 736,
   "addedSourceFiles": [
-    "src/publications.mjs"
+    "content/markdown/en/posts/il-pessimo-rapporto-fra-l-ia-e-il-pensiero-umano.md",
+    "content/markdown/posts/il-pessimo-rapporto-fra-l-ia-e-il-pensiero-umano.md",
+    "docs/sources/il-pessimo-rapporto-fra-l-ia-e-il-pensiero-umano/articolo-en.html",
+    "docs/sources/il-pessimo-rapporto-fra-l-ia-e-il-pensiero-umano/experiment-en.tsv",
+    "docs/sources/il-pessimo-rapporto-fra-l-ia-e-il-pensiero-umano/figure-en.tsv",
+    "docs/sources/il-pessimo-rapporto-fra-l-ia-e-il-pensiero-umano/labels-en.tsv",
+    "docs/sources/il-pessimo-rapporto-fra-l-ia-e-il-pensiero-umano/references-en.txt",
+    "public/media/docs/il-pessimo-rapporto-fra-l-ia-e-il-pensiero-umano-tavole.pdf",
+    "public/media/docs/il-pessimo-rapporto-fra-l-ia-e-il-pensiero-umano.pdf",
+    "source-materials/il-pessimo-rapporto-fra-l-ia-e-il-pensiero-umano.zip",
+    "src/essay-experiments.js",
+    "src/scientific-articles/il-pessimo-rapporto-fra-l-ia-e-il-pensiero-umano.en.html",
+    "src/scientific-articles/il-pessimo-rapporto-fra-l-ia-e-il-pensiero-umano.html"
   ],
   "modifiedSourceFiles": [
     "CHANGELOG.md",
+    "COME_MODIFICARE_I_TESTI.md",
     "LEGGIMI_PRIMA_DI_CARICARE.md",
-    "content/profile.json",
-    "content/research.json",
     "content/site.json",
     "package.json",
-    "src/app.js",
-    "src/content.mjs",
-    "src/profile.mjs",
+    "scripts/audit-release.mjs",
+    "scripts/build.mjs",
     "src/render.mjs",
-    "src/search.mjs",
-    "src/seo.mjs",
-    "src/site.css",
-    "tests/profile-cards.test.mjs",
-    "tests/research.test.mjs"
+    "src/scientific-articles.css",
+    "src/scientific-articles.mjs",
+    "src/teaching-app-launch.js",
+    "src/travel-gallery.js",
+    "tests/i18n.test.mjs"
   ],
   "removedSourceFiles": [],
   "article": {
@@ -47,7 +57,7 @@
   },
   "verification": {
     "unitTests": {
-      "passed": 337,
+      "passed": 338,
       "failed": 0
     },
     "builds": [
@@ -55,44 +65,54 @@
       "https://www.mdctopologicalmanifolds.it/"
     ],
     "htmlPages": 66,
-    "localLinks": 3406,
+    "localLinks": 7210,
     "imageReferences": 154,
     "editorialSync": "passed",
     "resourceAndComponentAudit": {
-      "version": "3.26.2",
+      "version": "3.27.0",
       "budgets": [
         {
           "file": "index.html",
-          "bytes": 42806,
-          "gzip": 11990,
+          "bytes": 42680,
+          "gzip": 11991,
           "limit": 12000
         },
         {
           "file": "en/index.html",
-          "bytes": 41014,
-          "gzip": 11260,
+          "bytes": 40924,
+          "gzip": 11262,
           "limit": 12000
         },
         {
-          "file": "assets/site-01f159d991d8.css",
-          "bytes": 123197,
-          "gzip": 25705,
-          "limit": 26000
-        },
-        {
-          "file": "assets/site-4de889227cdb.js",
-          "bytes": 144380,
-          "gzip": 41814,
+          "file": "assets/site-3f7c2d4fccd2.js",
+          "bytes": 144682,
+          "gzip": 41962,
           "limit": 42000
         },
         {
+          "file": "assets/site-db82fef8d3e1.css",
+          "bytes": 124203,
+          "gzip": 25917,
+          "limit": 26000
+        },
+        {
           "file": "articolo-lequilibrio-sul-tappetino.html",
-          "bytes": 2008611,
+          "bytes": 2008673,
           "limit": 2050000
         },
         {
           "file": "en/articolo-lequilibrio-sul-tappetino.html",
-          "bytes": 2002903,
+          "bytes": 2002965,
+          "limit": 2050000
+        },
+        {
+          "file": "articolo-il-pessimo-rapporto-fra-l-ia-e-il-pensiero-umano.html",
+          "bytes": 1089088,
+          "limit": 2050000
+        },
+        {
+          "file": "en/articolo-il-pessimo-rapporto-fra-l-ia-e-il-pensiero-umano.html",
+          "bytes": 1152847,
           "limit": 2050000
         }
       ],
@@ -101,12 +121,12 @@
         "one header owner",
         "bounded layers with native modal top layer",
         "obsolete home selectors removed",
-        "single geometry, cyber and search dialog in all 66 pages",
+        "single geometry, cyber and search dialog in all 68 pages",
         "28 catalog entries and 32 versioned scene URLs"
       ]
     },
-    "browser": "Targeted Chromium checks: profile and research publication sections in IT and EN, the supplied Scholar URL, DOI on the Raman paper, and visibility of a selected work after applying an incompatible category filter. Scholar itself returned an access error during retrieval.",
-    "originalAssets": "All 3.26.1 public assets and the supplied PDF CV are byte-identical.",
+    "browser": "Chromium: blog entry and language switch preserving diagram 09, five working controls, return plot in both languages, and modal glyph references isolated from the page.",
+    "originalAssets": "All 3.26.2 public assets and the supplied CV are byte-identical. The new essay and atlas PDFs are byte-identical to the author-supplied files.",
     "zipIntegrity": "CRC and contained file hashes verified after packaging"
   },
   "files": {
@@ -139,12 +159,12 @@
       "sha256": "7a4b2b912cb020d268a40917f3d38d427d131f6f2beb9c00721de924a286da9f"
     },
     "CHANGELOG.md": {
-      "bytes": 32075,
-      "sha256": "dcd996aff5b8dcbc763ade42881eaedebefc0911a4e7987f5b833eeadaaccc8d"
+      "bytes": 32337,
+      "sha256": "fb6508f3e6e8c386a4cf33fff02127929857b0ca0afa86ad2e3c0da4cbec6f0b"
     },
     "COME_MODIFICARE_I_TESTI.md": {
-      "bytes": 13011,
-      "sha256": "c220d7575a9628c7e2b10e2af2130c687ece3569118b13276233f36e8bc26a84"
+      "bytes": 13527,
+      "sha256": "d568df6a7b737a38592144a523d67b617cfc646bc1e3b04a9136e0c4c8ff2397"
     },
     "CV.pdf": {
       "bytes": 739603,
@@ -156,7 +176,7 @@
     },
     "LEGGIMI_PRIMA_DI_CARICARE.md": {
       "bytes": 3179,
-      "sha256": "f0d3677ea4bb1de43031f03a05cda36e19d2151423f1c3491f8372b5ff016497"
+      "sha256": "8318234265907511795dbbe881d1659cc729bbf12fdb11b9d460791faa7fb90a"
     },
     "LICENSE.md": {
       "bytes": 1613,
@@ -542,6 +562,10 @@
       "bytes": 35122,
       "sha256": "0ef24595ed90e48b30ea9362eab2e0779719397964b2cfc9dffcc557d7732ccb"
     },
+    "content/markdown/en/posts/il-pessimo-rapporto-fra-l-ia-e-il-pensiero-umano.md": {
+      "bytes": 280,
+      "sha256": "daed9010d6c0908da53fb2a72e6be8713bd9e8ff97f39f991702093f47524626"
+    },
     "content/markdown/en/posts/la-guerra-delle-false-percezioni.md": {
       "bytes": 20466,
       "sha256": "30dc8f6790d1ff03a6648a5b90e1653c3256d55e15661525a445d7acce6ee775"
@@ -830,6 +854,10 @@
       "bytes": 40005,
       "sha256": "ee7200da5ac25c4bb4f44702b4b783050bded2f20699347e6e5bbe282f6cbac2"
     },
+    "content/markdown/posts/il-pessimo-rapporto-fra-l-ia-e-il-pensiero-umano.md": {
+      "bytes": 479,
+      "sha256": "67e025e90076af924907e2dfbc6807ee775d7ae0d3b096b81af57efdcf580a06"
+    },
     "content/markdown/posts/la-guerra-delle-false-percezioni.md": {
       "bytes": 23035,
       "sha256": "42abfcbc8d19e8505d3643f1d95ff57d2577c0fcd0bd7869d0ce681453eed57c"
@@ -1024,7 +1052,7 @@
     },
     "content/site.json": {
       "bytes": 161,
-      "sha256": "51496b94af2a616c2348260c95c682218aceec2160ad63752e2343757ce0a114"
+      "sha256": "d62f6c96a97001dc8bc9714085b4052158323ec563ef2a3c31881870ea9d5821"
     },
     "content/study-guide.json": {
       "bytes": 30968,
@@ -1354,6 +1382,26 @@
       "bytes": 5022,
       "sha256": "0b2c6440c58bf1f87b3bffd313502f5f8ca6eb983df843387c423d25e7610154"
     },
+    "docs/sources/il-pessimo-rapporto-fra-l-ia-e-il-pensiero-umano/articolo-en.html": {
+      "bytes": 15549,
+      "sha256": "109e67afa46b41c5714ac17f84b02387c67378ba3006cd02cdac581e73e53488"
+    },
+    "docs/sources/il-pessimo-rapporto-fra-l-ia-e-il-pensiero-umano/experiment-en.tsv": {
+      "bytes": 836,
+      "sha256": "f323e420c95e58eaa52e89fe36d9335dbabc39ef7cab20c13c691b01b03781e7"
+    },
+    "docs/sources/il-pessimo-rapporto-fra-l-ia-e-il-pensiero-umano/figure-en.tsv": {
+      "bytes": 3861,
+      "sha256": "c3e6bbe12417c055686d83a77bdc821e524a006ce8ec7186daab19e74221559d"
+    },
+    "docs/sources/il-pessimo-rapporto-fra-l-ia-e-il-pensiero-umano/labels-en.tsv": {
+      "bytes": 3667,
+      "sha256": "e2d33613ef616a2c76e61126ebe53c7df0809524560dd127ee4a60078c7d3816"
+    },
+    "docs/sources/il-pessimo-rapporto-fra-l-ia-e-il-pensiero-umano/references-en.txt": {
+      "bytes": 670,
+      "sha256": "d521cde45243582d615ca08eafe5f6f2dae950bf2c713f2ae42559074ad8c7a2"
+    },
     "docs/storico/AMBIENTE_MATRIX_v2.8.md": {
       "bytes": 6010,
       "sha256": "299f01d9b8114d27750612ad1d926e233a6ccd5f611dc36199ff271dd36cbeb5"
@@ -1548,7 +1596,7 @@
     },
     "package.json": {
       "bytes": 1567,
-      "sha256": "c2431a749ccd9f964520ab3ace1d2b274772c4b88711fb1314acb04bfc57ebdc"
+      "sha256": "48dd3c453077c2892529932281ef3cc44409ecf398a392d9bd956c4eae8a3694"
     },
     "public/assets/articles/equilibrio/figure-01.svg": {
       "bytes": 4542,
@@ -2022,6 +2070,14 @@
       "bytes": 3901581,
       "sha256": "e798012263029620b6b09388ef4a5b8c6986d081a90205a33c4fce2c2df6cf80"
     },
+    "public/media/docs/il-pessimo-rapporto-fra-l-ia-e-il-pensiero-umano-tavole.pdf": {
+      "bytes": 184346,
+      "sha256": "83b75952bda81028d8f01010e6f83d58b314c590e116b9e4073eb7c40a6b32db"
+    },
+    "public/media/docs/il-pessimo-rapporto-fra-l-ia-e-il-pensiero-umano.pdf": {
+      "bytes": 177303,
+      "sha256": "aa9d339ecc97c377f92ba7790be9f4d5f1ef23723d161a3bb6f0afa9ad01f4a2"
+    },
     "public/media/docs/quantum-2026-2027/UniMI_Quantum_PostQuantum_2026-2027_M01_fondamenti-fisici-e-simulazione.pdf": {
       "bytes": 3225552,
       "sha256": "6e8195ac7d3489792b72cb64f7ed2aab12e58d10438f185367958e3a574a4dac"
@@ -2255,16 +2311,16 @@
       "sha256": "b614edef5ffd3f36f526db5330a31e9661d453601bbfe4d519afe5acde810336"
     },
     "scripts/audit-release.mjs": {
-      "bytes": 3334,
-      "sha256": "852c4a73fd1cbded3d68014e5d8e4e580af343add1afa0dec83d1afbc6f01625"
+      "bytes": 3467,
+      "sha256": "57507bc51be4945b891d60d40fd53e0ded7bfaee708313eba1a956f322da0206"
     },
     "scripts/audit-teaching-apps.mjs": {
       "bytes": 2079,
       "sha256": "136a9c0a4dba23bb1e0b458077335c4b8ffc841ac2761bf3ac40f84cd6fa7156"
     },
     "scripts/build.mjs": {
-      "bytes": 15146,
-      "sha256": "3672cf9d9c2725d5d5717df38577b0c4a5702ce9c1f8026e72b8faa3c5deae13"
+      "bytes": 16259,
+      "sha256": "2d8d64827ad461313eb7dc0c16870e95c4223724ad71d638794100e9cec38fbd"
     },
     "scripts/check-external-links.mjs": {
       "bytes": 1387,
@@ -2442,6 +2498,10 @@
       "bytes": 132723,
       "sha256": "1048dfb705ebdb6d62937815c805cd3495fa4336dd730d793070ba4b173f7589"
     },
+    "source-materials/il-pessimo-rapporto-fra-l-ia-e-il-pensiero-umano.zip": {
+      "bytes": 1739868,
+      "sha256": "55eccc7071303cd6d573e058226a8d0a71b35348ce7abfd81a9570c8485ee6cb"
+    },
     "source-materials/music/score.json": {
       "bytes": 11024,
       "sha256": "0106bc0036e3b1441562a958784b6a49a22b00b06466a948a811ca01927d58ac"
@@ -2537,6 +2597,10 @@
     "src/effects.js": {
       "bytes": 6980,
       "sha256": "aed8d3b8193ea47db855fdac98e5d802c09c35acfd30e3cd80d11f01574d7231"
+    },
+    "src/essay-experiments.js": {
+      "bytes": 8940,
+      "sha256": "2e6df6c4820af0871b9f6dc43aa23049929672622b142313349167a5f1dc3299"
     },
     "src/experience.css": {
       "bytes": 1077,
@@ -2643,20 +2707,28 @@
       "sha256": "fd58504eb42236dbe5d0dfccabd606d633b1eb611cd0b9717c841cbe8edd3fd6"
     },
     "src/render.mjs": {
-      "bytes": 46869,
-      "sha256": "b47b161ce051e09a4389b21bdb0b2f1e2e227d00e3cf44abf7f4c2465a603cb3"
+      "bytes": 47200,
+      "sha256": "67c5993eb1718b974fe57d9aba06935cc71538572755b41434057f1b2db661e7"
     },
     "src/safety.mjs": {
       "bytes": 3714,
       "sha256": "a82be0a1eb05be9852e5991203d4b6672da478cc8a1506eb467f188f51a1e4bb"
     },
     "src/scientific-articles.css": {
-      "bytes": 5051,
-      "sha256": "86a32311357f80531766d6f615001ba33798c56d7ac474532399bf18a4921ab5"
+      "bytes": 6057,
+      "sha256": "d2f5a0b0d6cd212bad4800283fcc479649197037ed900c99936432ea64881264"
     },
     "src/scientific-articles.mjs": {
-      "bytes": 563,
-      "sha256": "bc2fecbb9605b14c7f37ea08eefe2c89663b793859cad79d1511de987f40695d"
+      "bytes": 665,
+      "sha256": "4d06676f0b2942cadb2b648a218958535638c8d3592e3f04b2cbda931562f7dd"
+    },
+    "src/scientific-articles/il-pessimo-rapporto-fra-l-ia-e-il-pensiero-umano.en.html": {
+      "bytes": 1123967,
+      "sha256": "856ffd8b22c5815e9471c4fa0440aa8f27b523638d75a737cbeda3f338bddc6f"
+    },
+    "src/scientific-articles/il-pessimo-rapporto-fra-l-ia-e-il-pensiero-umano.html": {
+      "bytes": 1059524,
+      "sha256": "8b003cbe682c1df90d9bc4a45c1076acc584c6bbbd856ec785769f1ef2d4a09f"
     },
     "src/scientific-articles/lequilibrio-sul-tappetino.build.json": {
       "bytes": 5934,
@@ -2707,8 +2779,8 @@
       "sha256": "c70b0a8583bb71865c4c9439609f5905a323b90a6f1f74433d8951834cb55af3"
     },
     "src/teaching-app-launch.js": {
-      "bytes": 6141,
-      "sha256": "0a2f3f20a9f7a5531a85005274ad14f010ef751c753facfbf9b852d89a50ff8d"
+      "bytes": 5941,
+      "sha256": "24543e03f1a70b203fbff77e11bf59252a032fae369915b96c0d6a2607150df7"
     },
     "src/teaching-apps.css": {
       "bytes": 7021,
@@ -2719,8 +2791,8 @@
       "sha256": "e81c9b50b97835633bfa77bb595c7f4f715b61a873794927e320909341ba0048"
     },
     "src/travel-gallery.js": {
-      "bytes": 3709,
-      "sha256": "b33e73bb39b7aaaeeb4ef83ccc98acb5be82f049574564cc05d84f170f27a765"
+      "bytes": 3824,
+      "sha256": "d41304b59c677872178da6c138ccadc7bca522fedd922ae60e2e3af3c51b6fdf"
     },
     "src/travel.mjs": {
       "bytes": 6359,
@@ -2843,8 +2915,8 @@
       "sha256": "d1da500025d6b18fe42dab3ea1fed9cc796670489659c5739f2a5948481c5907"
     },
     "tests/i18n.test.mjs": {
-      "bytes": 8899,
-      "sha256": "bc0089c91d20f2077027f8188c65530953bc55d81dc114dddbb0ba6b207bfb10"
+      "bytes": 9890,
+      "sha256": "bd829d22e9eeecf14db712e1e16a0d1b135ba7a582a4ddef19733ee217f2a209"
     },
     "tests/identity-v33.test.mjs": {
       "bytes": 2849,

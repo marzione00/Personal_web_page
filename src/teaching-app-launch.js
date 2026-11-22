@@ -1,5 +1,7 @@
 /* A five-second decorative terminal transition. No commands are executed and no remote checks
- * or preload claims are made. Real links remain usable without this enhancement. */
+ * or preload claims are made. Real links remain usable without this enhancement.
+ * Preferences are read at click time. The timeout is independent of animation frames.
+ * Modified clicks retain native link behaviour and cancel any pending launch. */
 (() => {
   'use strict';
   const dialog = document.querySelector('[data-app-launch-dialog]');
@@ -62,7 +64,6 @@
   }
 
   function allowedToAnimate() {
-    // Site preferences are read at click time, after all existing runtime modules initialise.
     return !reduced.matches && !document.hidden && window.MDCEffects?.transitions !== false;
   }
 
@@ -92,7 +93,6 @@
       commands:['cd didattica', 'open ' + id, 'navigate --same-tab']};
     dialog.classList.add('is-running');
     direct.focus({preventScroll:true});
-    // Hard upper bound independent of animation frames; cancellation always clears it.
     active.timeout = setTimeout(navigate, duration + 650);
     active.frame = requestAnimationFrame(animate);
   });
@@ -107,8 +107,6 @@
   dialog.addEventListener('close', () => { if (!dialog.open && active) cleanup(); });
   direct.addEventListener('click', event => {
     if (event.button !== 0) return;
-    // Preserve modifiers too: opening a new tab must not also redirect the original tab.
-    // Preserve the real anchor's native navigation; stop its pending automatic counterpart.
     if(active && !event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey) rememberLaunch(active.id);
     cleanup(false);
   });

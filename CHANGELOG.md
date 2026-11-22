@@ -1,5 +1,10 @@
 # Aggiornamenti
 
+## 3.27.0 — 22 novembre 2026
+
+- Pubblicato il saggio «Il pessimo rapporto fra l’IA e il pensiero umano» in italiano e in inglese.
+- Integrate dodici tavole vettoriali, cinque esperimenti con comandi bilingui e i PDF originali del saggio e dell’atlante.
+
 ## 3.26.2 — 20 novembre 2026
 
 - Collegato Google Scholar in Ricerca e Profilo & CV, in italiano e inglese.

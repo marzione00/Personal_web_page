@@ -8,7 +8,8 @@ test('IT/EN contain corresponding paths with stable anchors and original assets'
  assert.deepEqual(pi.map(p=>p.file),pe.map(p=>p.file));
  assert.ok(en.posts.every(post=>post.draft||!post.translationMissing));
  assert.ok(en.travels.every(trip=>trip.draft||!trip.translationMissing));assert.equal(it.language,'it');assert.equal(en.language,'en');
- for(const p of pi){const q=pe.find(q=>q.file===p.file);assert.deepEqual([...p.body.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]),[...q.body.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]));}
+ const publicAnchors=body=>[...body.replace(/<svg\b[\s\S]*?<\/svg>/g,'').matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);
+ for(const p of pi){const q=pe.find(q=>q.file===p.file);assert.deepEqual(publicAnchors(p.body),publicAnchors(q.body),p.file);}
  assert.equal(it.profile.homepagePhoto.sha256,en.profile.homepagePhoto.sha256);
  assert.deepEqual(it.lectures.map(l=>l.files),en.lectures.map(l=>l.files));
 });
@@ -91,4 +92,18 @@ test('page metadata is localised before it enters the structured data and share 
  const teaching=pe.find(p=>p.file==='didattica.html');
  assert.equal(teaching.title,'Teaching');
  assert.match(teaching.description,/Public courses/);
+});
+
+test('the bilingual essay exposes all twelve plates and five experiments in the normal blog routes',()=>{
+ const slug='il-pessimo-rapporto-fra-l-ia-e-il-pensiero-umano',url='articolo-'+slug+'.html';
+ for(const [data,pages,opening,first] of [[it,pi,'nove mattonelle','Come sale la scala dei primi'],[en,pe,'Nine tiles','How the prime-counting staircase rises']]){
+  const entry=data.posts.find(post=>post.id===slug),body=pages.find(p=>p.file===url).body;
+  assert.ok(entry&&!entry.draft&&!entry.translationMissing);
+  assert.ok(body.includes(opening)&&body.includes(first));
+  assert.equal((body.match(/id="pensiero-fig-\d+"/g)||[]).length,12);
+  assert.equal((body.match(/data-essay-experiment="/g)||[]).length,5);
+  assert.ok(body.includes('media/docs/'+slug+'-tavole.pdf'));
+  assert.ok(pages.find(p=>p.file==='blog.html').body.includes('href="'+url+'"'));
+  assert.ok(searchEntries(data).some(entry=>entry.url===url));
+ }
 });

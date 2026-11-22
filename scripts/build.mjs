@@ -1,3 +1,4 @@
+import {thinkingEssayId} from '../src/scientific-articles.mjs';
 import {structuredData,rss} from '../src/seo.mjs';
 import {searchEntries} from '../src/search.mjs';
 import {ambientContext} from '../src/experience.mjs';
@@ -22,7 +23,25 @@ const media=validateMedia(root),data=datasets.it;
 const css=['site.css','visual.css','ambient.css','identity.css','teaching-apps.css','galaxies.css','header.css','experience.css','geometry.css','cyber-network.css','cinema.css','paths.css','article-diagrams.css','scientific-articles.css','experiments.css','profile.css'].map(f=>fs.readFileSync(path.join(root,'src',f),'utf8')).join('\n');
 const formulaData=loadAmbientFormulas(root);
 const formulaScript='window.MDCFormulaCatalog='+JSON.stringify(formulaData).replace(/</g,'\\u003c').replace(/>/g,'\\u003e')+';';
-const js=formulaScript+'\n'+['i18n-client.js','app.js','search.js','reading.js','math-models.js','experiments.js','effects.js','sound.js','music.js','travel-gallery.js','geometry-loader.js','cyber-network.js','matrix-rain.js','teaching-app-launch.js','navigation.js','cinema.js'].map(f=>fs.readFileSync(path.join(root,'src',f),'utf8').replace(/^\/\*[\s\S]*?\*\/\s*/, '')).join('\n');
+const essayRuntime=fs.readFileSync(path.join(root,'src/essay-experiments.js'),'utf8');
+const essayIntegrity='sha256-'+createHash('sha256').update(essayRuntime).digest('base64');
+const essayAsset='assets/essay-experiments-'+createHash('sha256').update(essayRuntime).digest('hex').slice(0,12)+'.js';
+const essayLoader=`
+(() => {
+ let script;
+ function load(){
+  if(script||document.body.dataset.portable==='true'||!document.querySelector('[data-essay-experiment]'))return;
+  script=document.createElement('script');
+  script.src=document.body.dataset.resourceBase+${JSON.stringify(essayAsset)};
+  script.integrity=${JSON.stringify(essayIntegrity)};
+  script.crossOrigin='anonymous';
+  script.onerror=()=>{script.remove();script=null;};
+  document.head.append(script);
+ }
+ load();
+ window.addEventListener('mdc:content-change',load);
+})();`;
+const js=essayLoader+'\n'+formulaScript+'\n'+['i18n-client.js','app.js','search.js','reading.js','math-models.js','experiments.js','effects.js','sound.js','music.js','travel-gallery.js','geometry-loader.js','cyber-network.js','matrix-rain.js','teaching-app-launch.js','navigation.js','cinema.js'].map(f=>fs.readFileSync(path.join(root,'src',f),'utf8').replace(/^\/\*[\s\S]*?\*\/\s*/, '')).join('\n');
 const viewer=fs.readFileSync(path.join(root,'public/assets/geometry-viewer.js'),'utf8');
 const hash=x=>createHash('sha256').update(x).digest('base64');
 const runtime={src:'assets/geometry-viewer-'+createHash('sha256').update(viewer).digest('hex').slice(0,12)+'.js',integrity:'sha256-'+hash(viewer)};
@@ -36,7 +55,7 @@ for(const g of geometryScenes){
  if(scene.subarray(0,4).toString()!=='MDC3'||scene.length>300000||createHash('sha256').update(scene).digest('hex')!==g.sceneSha256)throw Error('Scena non valida: '+g.id);
  if(g.file?.endsWith('.svg')&&/<(?:script|text|foreignObject|image|use)\b|\son\w+\s*=|(?:href|style)\s*=/i.test(bytes.toString('utf8')))throw Error('SVG non decorativo o non sicuro: '+g.file);
 }
-export const policy=(script,embedded=false)=>`default-src 'none'; script-src 'sha256-${hash(script)}' 'sha256-${hash(viewer)}'; script-src-attr 'none'; style-src ${embedded?'':"'self' "}'sha256-${hash(css)}'; img-src 'self'${embedded?' data:':''}; style-src-attr 'none'; font-src 'none'; worker-src 'none'; manifest-src 'none'; connect-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'; media-src 'self'${embedded?' data: blob:':''}`;
+export const policy=(script,embedded=false)=>`default-src 'none'; script-src 'sha256-${hash(script)}' 'sha256-${hash(viewer)}' '${essayIntegrity}'; script-src-attr 'none'; style-src ${embedded?'':"'self' "}'sha256-${hash(css)}'; img-src 'self'${embedded?' data:':''}; style-src-attr 'none'; font-src 'none'; worker-src 'none'; manifest-src 'none'; connect-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'; media-src 'self'${embedded?' data: blob:':''}`;
 const music=JSON.parse(fs.readFileSync(path.join(root,'content/music-manifest.json'),'utf8'));
 if(music.file!=='audio/descending-fields.mp3')throw Error('Percorso musica non autorizzato');
 const musicBytes=fs.readFileSync(path.join(root,'public',music.file));
@@ -54,7 +73,8 @@ const pagePath=(language,file)=>(language==='en'?'en/':'')+(file==='index.html'?
 fs.rmSync(out,{recursive:true,force:true});fs.mkdirSync(out,{recursive:true});
 fs.cpSync(path.join(root,'public'),out,{recursive:true,filter:f=>!f.endsWith('.gitkeep')});
 for(const g of geometryScenes)fs.copyFileSync(path.join(root,'public/geometry',g.scene),path.join(out,'geometry',`scenes/${g.id}-${g.sceneSha256.slice(0,12)}.bin`));
-fs.writeFileSync(path.join(out,runtime.src),viewer);fs.rmSync(path.join(out,'assets/geometry-viewer.js'),{force:true});
+fs.writeFileSync(path.join(out,runtime.src),viewer);
+fs.writeFileSync(path.join(out,essayAsset),essayRuntime);fs.rmSync(path.join(out,'assets/geometry-viewer.js'),{force:true});
 for(const asset of Object.values(searchAssets))fs.writeFileSync(path.join(out,asset.src),asset.text);
 fs.writeFileSync(path.join(out,assets.css.src),css);fs.writeFileSync(path.join(out,assets.js.src),js);
 const structuredHashes=new Set();
@@ -80,7 +100,7 @@ if(indexable){
 }
 fs.writeFileSync(path.join(out,'build-info.json'),JSON.stringify({version:data.site.version,languages,preview,editorial,indexable,pages:pageSets.it.length+pageSets.en.length,pagesPerLanguage:pageSets.it.length,media,geometry:geometryManifest.map(g=>g.id),generatedAt:new Date().toISOString(),dependencies:0},null,2));
 if(preview){
- const pdfPaths=new Set([data.profile.cvPdf,...data.lectures.flatMap(l=>l.files),...data.posts.map(p=>p.pdf).filter(Boolean)].map(s=>s.replace(/^\//,'')));
+ const pdfPaths=new Set([data.profile.cvPdf,...data.lectures.flatMap(l=>l.files),...data.posts.map(p=>p.pdf).filter(Boolean),...(data.posts.some(p=>p.id===thinkingEssayId)?['media/docs/'+thinkingEssayId+'-tavole.pdf']:[])].map(s=>s.replace(/^\//,'')));
  const embedded=Object.fromEntries([...pdfPaths].map(ref=>[ref,{name:path.basename(ref),base64:fs.readFileSync(path.join(root,'public',ref)).toString('base64')}]));
  const sceneTable=Object.fromEntries(geometryScenes.map(g=>[g.id,fs.readFileSync(path.join(root,'public/geometry',g.scene)).toString('base64')]));
  const extra=`\n(() => {
@@ -109,7 +129,7 @@ if(preview){
 })();`;
  const portable=`\n(() => {const files=${JSON.stringify(embedded)},urls=new Map();for(const a of document.querySelectorAll('a[href]')){const [ref,fragment]=a.getAttribute('href').replace(/^\\.\\.\\//,'').split('#'),file=files[ref];if(!file)continue;if(!urls.has(ref)){const raw=atob(file.base64),bytes=new Uint8Array(raw.length);for(let i=0;i<raw.length;i++)bytes[i]=raw.charCodeAt(i);urls.set(ref,URL.createObjectURL(new Blob([bytes],{type:'application/pdf'})));}a.href=urls.get(ref)+(fragment?'#'+fragment:'');a.dataset.embeddedPdf=file.name;if(a.hasAttribute('download'))a.download=file.name;}})();`;
  const soundtrack=fs.readFileSync(path.join(root,'public/audio/descending-fields.mp3')).toString('base64');
- const combined='window.MDCSearchIndexes='+JSON.stringify(Object.fromEntries(languages.map(l=>[l,searchEntries(datasets[l])]))).replace(/</g,'\\u003c')+';\nwindow.ManifoldEmbeddedMusic='+JSON.stringify(soundtrack)+';\n'+viewer+'\nwindow.MDCEmbeddedScenes='+JSON.stringify(sceneTable)+';\n'+js+extra+portable;
+ const combined='window.MDCSearchIndexes='+JSON.stringify(Object.fromEntries(languages.map(l=>[l,searchEntries(datasets[l])]))).replace(/</g,'\\u003c')+';\nwindow.ManifoldEmbeddedMusic='+JSON.stringify(soundtrack)+';\n'+viewer+'\nwindow.MDCEmbeddedScenes='+JSON.stringify(sceneTable)+';\n'+js+'\n'+essayRuntime+extra+portable;
  for(const language of languages){
   const pages=pageSets[language],d=datasets[language];
   const one={...pages[0],body:pages.map((p,i)=>`<section data-view="${p.file}" data-ambient-context="${ambientContext(p.file)}" data-title="${escapeHtml(p.title)}"${i?' hidden':''}>${p.body}</section>`).join('')};

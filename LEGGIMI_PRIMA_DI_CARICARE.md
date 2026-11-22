@@ -1,4 +1,4 @@
-# Pacchetto GitHub completo — Topological Manifolds v3.26.2
+# Pacchetto GitHub completo — Topological Manifolds v3.27.0
 
 La versione include le tavole 3D del carbonio e del potenziale a due valli, le didascalie degli asana con due viste annotate e i nuovi comandi di lettura. Le immagini WebP sono pronte per la pubblicazione. Per rigenerarle dagli stessi modelli, usa `python3 tools/render-editorial-geometry.py` con Blender e Pillow.
 

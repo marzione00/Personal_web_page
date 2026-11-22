@@ -38,6 +38,7 @@
    // Scope cloned references so the page and its modal never share IDs.
    for(const node of [svg,...svg.querySelectorAll('*')])for(const attr of Array.from(node.attributes)){
     if(attr.name==='id'||attr.name==='aria-labelledby')node.setAttribute(attr.name,attr.value+'-viewer');
+    else if(attr.localName==='href'&&attr.value.startsWith('#'))node.setAttribute(attr.name,attr.value+'-viewer');
     else if(attr.value.includes('url(#'))node.setAttribute(attr.name,attr.value.replace(/url\(#([^)]*)\)/g,'url(#$1-viewer)'));
    }
    diagrams.append(svg);caption.textContent=figure.querySelector('figcaption').textContent;

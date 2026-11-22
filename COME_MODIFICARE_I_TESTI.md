@@ -144,3 +144,7 @@ Le etichette e le brevi introduzioni dell’interfaccia sono definite in `src/re
 - Le sette schede di ricerca sono generate dagli stessi Markdown delle aree: evitare copie del testo in altre cartelle.
 
 Le traduzioni dei campi presenti nel corrispondente Markdown italiano sono richieste dal generatore; un articolo nuovo senza versione inglese conserva l’avviso esplicito già previsto. Eseguire `npm run sync:editorial` quando si cambiano biografia o ricerca.
+
+## Il pessimo rapporto fra l’IA e il pensiero umano
+
+La scheda del blog è in `content/markdown/posts/il-pessimo-rapporto-fra-l-ia-e-il-pensiero-umano.md` e nella corrispondente cartella inglese. Per il testo e le tavole consulta le due edizioni in `src/scientific-articles/`. L’archivio originale in `source-materials/` contiene i disegni TikZ e i PDF italiani. Le traduzioni delle etichette, delle didascalie e dei comandi sono documentate in `docs/sources/il-pessimo-rapporto-fra-l-ia-e-il-pensiero-umano/`.

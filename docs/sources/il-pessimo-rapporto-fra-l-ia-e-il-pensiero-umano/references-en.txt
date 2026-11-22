@@ -1,0 +1,17 @@
+Clay Mathematics Institute, the 1859 manuscript
+NIST, Euler product
+NIST, zeros of the zeta function
+NIST, prime number theorem
+NIST, frequency of primes among odd integers (Appendix L)
+Levent Alpöge, note on the proof
+Lean and Mathlib, statement of 21 November
+Andrew Sutherland, verification notes
+OpenAI, announcement of 8 September
+OpenAI, Finite Time Blowup for Navier–Stokes
+Alessio Figalli, interview with ETH Zurich
+Diffie and Hellman (1976)
+Rivest, Shamir and Adleman, MIT report (1977)
+Rivest, Shamir and Adleman, original paper
+N. D. Mermin, Quantum Computer Science, Chapter 3
+Android, application package signing
+IETF, TLS 1.3 and signature verification

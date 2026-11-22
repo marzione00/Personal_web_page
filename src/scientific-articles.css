@@ -58,3 +58,18 @@
  .science-figure-head button,.figure-link-status,.reading-resume,.science-board-responsive>.science-narrow{display:none!important}
  .science-board-responsive>.science-svg{display:block!important}
 }
+
+/* The essay uses the same plate, caption and zoom viewer as the other scientific essay. */
+.essay-figure{scroll-margin-top:var(--header-offset)}
+.essay-experiment,.essay-data{padding:12px 20px;border-top:1px solid var(--line-soft);font-size:14px}
+.essay-experiment summary,.essay-data summary{cursor:pointer;color:var(--green)}
+.essay-experiment input{width:100%;accent-color:var(--green)}
+.essay-presets{display:flex;flex-wrap:wrap;gap:6px}
+.essay-presets button{min-height:44px;padding:7px 12px}
+.essay-presets button[aria-pressed=true]{border-color:var(--green);color:var(--green)}
+.essay-plot{overflow:auto;margin-block:12px}
+.essay-plot svg{width:100%;min-width:400px;display:block;height:auto}
+.essay-plot table{border-collapse:collapse;min-width:100%;font-size:13px}
+.essay-plot :is(td,th){text-align:right;padding:5px 12px;border-bottom:1px solid var(--line-soft)}
+.essay-experiment output{display:block;margin-top:10px;color:var(--green)}
+@media print{.essay-experiment{display:none!important}}
