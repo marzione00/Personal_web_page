@@ -1,6 +1,8 @@
-# Pacchetto GitHub completo — Topological Manifolds v3.27.1
+# Pacchetto GitHub completo — Topological Manifolds v3.29.0
 
-La versione include le tavole 3D del carbonio e del potenziale a due valli, le didascalie degli asana con due viste annotate e i nuovi comandi di lettura. Le immagini WebP sono pronte per la pubblicazione. Per rigenerarle dagli stessi modelli, usa `python3 tools/render-editorial-geometry.py` con Blender e Pillow.
+Nel blog, «La libertà dei rami» e l’edizione inglese «The Freedom of Branches» si aprono con un’epigrafe di Goethe. Un compasso interattivo accompagna la discussione di Mandelbrot sulla misura di una costa. Le sedici tavole illustrano la costruzione di Koch e le leggi di crescita di alberi, bronchi, coralli e cristalli.
+
+Il sito include le tavole 3D del carbonio e del potenziale a due valli, le didascalie degli asana con due viste annotate e i nuovi comandi di lettura. Le immagini WebP sono pronte per la pubblicazione. Per rigenerarle dagli stessi modelli, usa `python3 tools/render-editorial-geometry.py` con Blender e Pillow.
 
 SistemiLab compare nella mappa delle galassie e in Didattica. I percorsi di architettura dei sistemi si aprono sul laboratorio pubblicato su GitHub Pages.
 

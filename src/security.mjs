@@ -2,6 +2,7 @@ import fs from 'node:fs';import path from 'node:path';import {safeMedia} from '.
 const MiB=1024*1024;
 const labArt=/^assets\/labs\/(?:galaxy-(?:quantum|geostat|systems)|star-field)\.svg$/;
 const articleArt=/^assets\/articles\/equilibrio\/figure-(?:0[1-9]|[1-3][0-9]|4[0-4])\.svg$/;
+export const isReviewedArtwork=ref=>labArt.test(ref)||articleArt.test(ref);
 export function inspectTree(folder,{maxFile=25*MiB,maxTotal=768*MiB,maxFiles=12000,accept=()=>true}={}){
  const root=path.resolve(folder);let files=0,bytes=0;
  function walk(dir,depth=0){if(depth>18)throw Error('Albero troppo profondo');if(fs.lstatSync(dir).isSymbolicLink())throw Error('Link simbolico non consentito');
@@ -10,7 +11,7 @@ export function inspectTree(folder,{maxFile=25*MiB,maxTotal=768*MiB,maxFiles=120
 }
 export function validateSourceBoundary(root){return inspectTree(path.join(root,'content'),{maxFile:2*MiB,maxTotal:32*MiB,maxFiles:2500,accept:r=>r==='.gitkeep'||/^(?!.*(?:^|\/)\.)[a-zA-Z0-9_/-]+\.(?:json|md)$/.test(r)||/\/\.gitkeep$/.test(r)});}
 export function validatePublicBoundary(root){
- const result=inspectTree(path.join(root,'public'),{accept:r=>r.endsWith('/.gitkeep')||labArt.test(r)||articleArt.test(r)||safeMedia(r)!==null||/^geometry\/(?:manifest\.json|[a-z-]+\.(?:webp|svg)|scenes\/[a-z-]+\.bin)$/.test(r)||r==='assets/geometry-viewer.js'||['audio/local-coordinates.mp3','audio/descending-fields.mp3'].includes(r)});
+ const result=inspectTree(path.join(root,'public'),{accept:r=>r.endsWith('/.gitkeep')||isReviewedArtwork(r)||safeMedia(r)!==null||/^geometry\/(?:manifest\.json|[a-z-]+\.(?:webp|svg)|scenes\/[a-z-]+\.bin)$/.test(r)||r==='assets/geometry-viewer.js'||['audio/local-coordinates.mp3','audio/descending-fields.mp3'].includes(r)});
  const vectorTags=new Set(['svg','defs','g','path','use','clippath','rect','pattern','text','tspan','title','desc']);
  for(let i=1;i<=44;i++){
   const file=`assets/articles/equilibrio/figure-${String(i).padStart(2,'0')}.svg`;

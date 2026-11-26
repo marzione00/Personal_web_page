@@ -1,8 +1,8 @@
-import {thinkingEssayId} from '../src/scientific-articles.mjs';
+import {branchesEssayId,thinkingEssayId} from '../src/scientific-articles.mjs';
 import {structuredData,rss} from '../src/seo.mjs';
 import {searchEntries} from '../src/search.mjs';
 import {ambientContext} from '../src/experience.mjs';
-import {validateSourceBoundary,validatePublicBoundary} from '../src/security.mjs';
+import {isReviewedArtwork,validateSourceBoundary,validatePublicBoundary} from '../src/security.mjs';
 import {loadAmbientFormulas} from '../src/ambient-content.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -23,14 +23,20 @@ const media=validateMedia(root),data=datasets.it;
 const css=['site.css','visual.css','ambient.css','identity.css','teaching-apps.css','galaxies.css','header.css','experience.css','geometry.css','cyber-network.css','cinema.css','paths.css','article-diagrams.css','scientific-articles.css','experiments.css','profile.css'].map(f=>fs.readFileSync(path.join(root,'src',f),'utf8')).join('\n');
 const formulaData=loadAmbientFormulas(root);
 const formulaScript='window.MDCFormulaCatalog='+JSON.stringify(formulaData).replace(/</g,'\\u003c').replace(/>/g,'\\u003e')+';';
-const essayRuntime=fs.readFileSync(path.join(root,'src/essay-experiments.js'),'utf8');
+const branchesFile='articolo-'+branchesEssayId+'.html';
+const branchesCss=fs.readFileSync(path.join(root,'src/branches-article.css'),'utf8');
+const branchesStyle={
+ src:'assets/branches-'+createHash('sha256').update(branchesCss).digest('hex').slice(0,12)+'.css',
+ integrity:'sha256-'+createHash('sha256').update(branchesCss).digest('base64')
+};
+const essayRuntime=['essay-experiments.js','branches-article.js'].map(file=>fs.readFileSync(path.join(root,'src',file),'utf8')).join('\n');
 const essayIntegrity='sha256-'+createHash('sha256').update(essayRuntime).digest('base64');
 const essayAsset='assets/essay-experiments-'+createHash('sha256').update(essayRuntime).digest('hex').slice(0,12)+'.js';
 const essayLoader=`
 (() => {
  let script;
  function load(){
-  if(script||document.body.dataset.portable==='true'||!document.querySelector('[data-essay-experiment]'))return;
+  if(script||document.body.dataset.portable==='true'||!document.querySelector('[data-essay-experiment],[data-branches-article]'))return;
   script=document.createElement('script');
   script.src=document.body.dataset.resourceBase+${JSON.stringify(essayAsset)};
   script.integrity=${JSON.stringify(essayIntegrity)};
@@ -55,7 +61,7 @@ for(const g of geometryScenes){
  if(scene.subarray(0,4).toString()!=='MDC3'||scene.length>300000||createHash('sha256').update(scene).digest('hex')!==g.sceneSha256)throw Error('Scena non valida: '+g.id);
  if(g.file?.endsWith('.svg')&&/<(?:script|text|foreignObject|image|use)\b|\son\w+\s*=|(?:href|style)\s*=/i.test(bytes.toString('utf8')))throw Error('SVG non decorativo o non sicuro: '+g.file);
 }
-export const policy=(script,embedded=false)=>`default-src 'none'; script-src 'sha256-${hash(script)}' 'sha256-${hash(viewer)}' '${essayIntegrity}'; script-src-attr 'none'; style-src ${embedded?'':"'self' "}'sha256-${hash(css)}'; img-src 'self'${embedded?' data:':''}; style-src-attr 'none'; font-src 'none'; worker-src 'none'; manifest-src 'none'; connect-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'; media-src 'self'${embedded?' data: blob:':''}`;
+export const policy=(script,embedded=false,stylesheet=css)=>`default-src 'none'; script-src 'sha256-${hash(script)}' 'sha256-${hash(viewer)}' '${essayIntegrity}'; script-src-attr 'none'; style-src ${embedded?'':"'self' "}'sha256-${hash(stylesheet)}'; img-src 'self'${embedded?' data:':''}; style-src-attr 'none'; font-src 'none'; worker-src 'none'; manifest-src 'none'; connect-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'; media-src 'self'${embedded?' data: blob:':''}`;
 const music=JSON.parse(fs.readFileSync(path.join(root,'content/music-manifest.json'),'utf8'));
 if(music.file!=='audio/descending-fields.mp3')throw Error('Percorso musica non autorizzato');
 const musicBytes=fs.readFileSync(path.join(root,'public',music.file));
@@ -74,6 +80,7 @@ fs.rmSync(out,{recursive:true,force:true});fs.mkdirSync(out,{recursive:true});
 fs.cpSync(path.join(root,'public'),out,{recursive:true,filter:f=>!f.endsWith('.gitkeep')});
 for(const g of geometryScenes)fs.copyFileSync(path.join(root,'public/geometry',g.scene),path.join(out,'geometry',`scenes/${g.id}-${g.sceneSha256.slice(0,12)}.bin`));
 fs.writeFileSync(path.join(out,runtime.src),viewer);
+fs.writeFileSync(path.join(out,branchesStyle.src),branchesCss);
 fs.writeFileSync(path.join(out,essayAsset),essayRuntime);fs.rmSync(path.join(out,'assets/geometry-viewer.js'),{force:true});
 for(const asset of Object.values(searchAssets))fs.writeFileSync(path.join(out,asset.src),asset.text);
 fs.writeFileSync(path.join(out,assets.css.src),css);fs.writeFileSync(path.join(out,assets.js.src),js);
@@ -85,7 +92,9 @@ for(const language of languages){
   const alternates=canonical?languages.map(l=>`<link rel="alternate" hreflang="${l}" href="${escapeHtml(new URL(pagePath(l,page.file),siteUrl).href)}">`).join('')+`<link rel="alternate" hreflang="x-default" href="${escapeHtml(new URL(pagePath('it',page.file),siteUrl).href)}">`:'';
   const structured=structuredData(datasets[language],page,canonical),structuredHash=structured?hash(structured):'';if(structuredHash)structuredHashes.add(structuredHash);
   const pageCsp=structured?csp.replace('script-src ',`script-src 'sha256-${structuredHash}' `):csp;
-  fs.writeFileSync(path.join(target,page.file),shellHtml({data:datasets[language],page,css,js,csp:pageCsp,canonical,alternates,assets,structured}));
+  // Body-local stylesheet follows the article through progressive navigation, including back/forward.
+  const outputPage=page.file===branchesFile?{...page,body:`<link rel="stylesheet" href="${branchesStyle.src}" integrity="${branchesStyle.integrity}" crossorigin="anonymous">${page.body}`}:page;
+  fs.writeFileSync(path.join(target,page.file),shellHtml({data:datasets[language],page:outputPage,css,js,csp:pageCsp,canonical,alternates,assets,structured}));
  }
 }
 for(const l of languages)fs.writeFileSync(path.join(out,l==='en'?'en/feed.xml':'feed.xml'),rss(datasets[l],siteUrl||'https://marzione00.github.io/Personal_web_page/'));
@@ -133,12 +142,13 @@ if(preview){
  for(const language of languages){
   const pages=pageSets[language],d=datasets[language];
   const one={...pages[0],body:pages.map((p,i)=>`<section data-view="${p.file}" data-ambient-context="${ambientContext(p.file)}" data-title="${escapeHtml(p.title)}"${i?' hidden':''}>${p.body}</section>`).join('')};
-  let standalone=shellHtml({data:{...d,preview:false},page:one,css,js:combined,csp:policy(combined,true)});
+  const portableCss=css+'\n'+branchesCss;
+  let standalone=shellHtml({data:{...d,preview:false},page:one,css:portableCss,js:combined,csp:policy(combined,true,portableCss)});
   standalone=standalone.replace(/<body ([^>]*?)data-resource-base="[^"]*">/,'<body $1data-resource-base="" data-portable="true">');
   standalone=standalone.replace(/\s(?:srcset|sizes)="[^"]*"/g,'');
   standalone=standalone.replace(/<img\b([^>]*?)\bsrc="([^"<>]+)"([^>]*?)>/g,(match,before,ref,after)=>{
    ref=ref.replace(/^\.\.\//,'');
-   if(!/^(?:media\/images\/[a-z0-9_/-]+\.(?:jpe?g|png|webp)|geometry\/[a-z-]+\.(?:svg|webp)|assets\/articles\/equilibrio\/figure-[0-9]{2}\.svg)$/i.test(ref))throw Error('Immagine non incorporabile: '+ref);
+   if(!/^(?:media\/images\/[a-z0-9_/-]+\.(?:jpe?g|png|webp)|geometry\/[a-z-]+\.(?:svg|webp))$/i.test(ref)&&!isReviewedArtwork(ref))throw Error('Immagine non incorporabile: '+ref);
    const mime={'.jpg':'image/jpeg','.jpeg':'image/jpeg','.png':'image/png','.webp':'image/webp','.svg':'image/svg+xml'}[path.extname(ref).toLowerCase()];
    return `<img${before}src="data:${mime};base64,${fs.readFileSync(path.join(root,'public',ref)).toString('base64')}" data-original-src="${ref}"${after}>`;
   });

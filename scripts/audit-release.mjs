@@ -5,7 +5,7 @@ const assets=fs.readdirSync(path.join(dist,'assets'));
 const bundles=assets.filter(f=>/^site-.*\.(js|css)$/.test(f));
 const report={version:JSON.parse(fs.readFileSync(path.join(root,'content/site.json'))).version,budgets:[],checks:[]};
 for(const file of ['index.html','en/index.html',...bundles.map(f=>'assets/'+f)]){const b=fs.readFileSync(path.join(dist,file)),gzip=gzipSync(b).length,limit=file.endsWith('.html')?12000:file.endsWith('.css')?26000:42000;assert.ok(gzip<=limit,`${file}: ${gzip} > ${limit}`);report.budgets.push({file,bytes:b.length,gzip,limit});}
-for(const file of ['articolo-lequilibrio-sul-tappetino.html','en/articolo-lequilibrio-sul-tappetino.html','articolo-il-pessimo-rapporto-fra-l-ia-e-il-pensiero-umano.html','en/articolo-il-pessimo-rapporto-fra-l-ia-e-il-pensiero-umano.html']){
+for(const file of ['articolo-lequilibrio-sul-tappetino.html','en/articolo-lequilibrio-sul-tappetino.html','articolo-il-pessimo-rapporto-fra-l-ia-e-il-pensiero-umano.html','en/articolo-il-pessimo-rapporto-fra-l-ia-e-il-pensiero-umano.html','articolo-la-liberta-dei-rami.html','en/articolo-la-liberta-dei-rami.html']){
  const bytes=fs.statSync(path.join(dist,file)).size, limit=2050000;
  assert.ok(bytes<=limit,`${file}: ${bytes} > ${limit} (margine per la navigazione entro 2 MiB)`);
  report.budgets.push({file,bytes,limit});

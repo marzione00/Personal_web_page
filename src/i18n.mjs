@@ -57,7 +57,9 @@ export function localiseData(root,data,language='it'){
   let body=fs.readFileSync(f,'utf8').replace(/\r\n/g,'\n');
   const front=body.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
   if(front){
-   for(const line of front[1].split('\n')){if(!line.trim()||line.trim().startsWith('#'))continue;const m=line.match(/^([A-Za-z][A-Za-z0-9_-]*):\s*(.*)$/);if(!m)throw Error('Invalid English post header');if(['title','subtitle','excerpt','category'].includes(m[1]))post[m[1]]=m[2].replace(/^(?:"(.*)"|'(.*)')$/,'$1$2');}
+   for(const line of front[1].split('\n')){if(!line.trim()||line.trim().startsWith('#'))continue;const m=line.match(/^([A-Za-z][A-Za-z0-9_-]*):\s*(.*)$/);if(!m)throw Error('Invalid English post header');const value=m[2].replace(/^(?:"(.*)"|'(.*)')$/,'$1$2');
+    if(m[1]==='tags')post.tags=value.split(',').map(tag=>tag.trim()).filter(Boolean);
+    else if(['title','subtitle','excerpt','category'].includes(m[1]))post[m[1]]=value;}
    body=front[2];
   }
   if(fs.existsSync(details))apply(details,post,['title','subtitle','excerpt','category','geometria']);

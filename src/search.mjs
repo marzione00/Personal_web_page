@@ -2,7 +2,7 @@ import {escapeHtml as e} from './safety.mjs';
 import {teachingAppSearchEntries} from './teaching-apps.mjs';
 import {textFor} from './i18n.mjs';
 import {articleReading} from './paths.mjs';
-import {equilibriumId} from './scientific-articles.mjs';
+import {branchesEssayId,equilibriumId} from './scientific-articles.mjs';
 
 function searchText(html){
  return html.replace(/<[^>]+>/g,'').replace(/&(?:amp|lt|gt|quot|#39);/g,entity=>({
@@ -20,6 +20,18 @@ function postRows(post,data){
   const end=sections[i+1]?text.indexOf(`id="${sections[i+1].id}"`):text.length;
   const keywords=post.id===equilibriumId?[...new Set(searchText(text.slice(start,end)).match(terms)||[])].join(' '):'';
   rows.push({url:url+'#'+id,title:searchText(label),kind:en?'Article section':'Sezione di un articolo',context:post.title,keywords});
+ }
+ if(post.id===branchesEssayId){
+  for(const figure of text.matchAll(/<figure\b[^>]*\bid="(figura-\d+|misura-costa)"[^>]*>([\s\S]*?)<\/figure>/g)){
+   const caption=figure[2].match(/<figcaption>\s*<strong>([\s\S]*?)<\/strong>([\s\S]*?)<\/figcaption>/);
+   if(!caption)continue;
+   const kind=figure[1]==='misura-costa'
+    ? (en?'Interactive experiment':'Esperimento interattivo')
+    : (en?'Article figure':'Figura di un articolo');
+   const rulerLabel=figure[2].match(/<label\b[^>]*\bdata-ruler-control[^>]*>([^<]*)/);
+   const keywords=searchText([caption[2],rulerLabel?.[1]].filter(Boolean).join(' '));
+   rows.push({url:url+'#'+figure[1],title:searchText(caption[1]).replace(/\.$/,''),kind,context:post.title,keywords});
+  }
  }
  for(const [,id,term,definition] of text.matchAll(/<dt id="(glossario-\d+)"[^>]*>(.*?)<\/dt>\s*<dd>([\s\S]*?)<\/dd>/g)){
   rows.push({url:url+'#'+id,title:searchText(term).replace(/\.$/,''),kind:en?'Glossary':'Glossario',context:searchText(definition)});

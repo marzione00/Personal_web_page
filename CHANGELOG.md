@@ -1,5 +1,14 @@
 # Aggiornamenti
 
+## 3.29.0 — 26 novembre 2026
+
+- Rivisto «La libertà dei rami» in italiano e inglese. L’epigrafe di Goethe apre il saggio. La misura di una costa introduce il lavoro di Mandelbrot e la costruzione di Koch, da cui si ricavano le relazioni fra scala, lunghezza e dimensione.
+- Aggiunto un compasso interattivo con un collegamento diretto dalla ricerca. Le sedici tavole seguono l’ordine dei capitoli.
+
+## 3.28.0 — 26 novembre 2026
+
+- Aggiunto al blog «La libertà dei rami» con l’edizione inglese «The Freedom of Branches». Il saggio comprende sei capitoli, sedici tavole e otto riferimenti scientifici.
+
 ## 3.27.1 — 22 novembre 2026
 
 - Sostituita nella biografia la fotografia di Vasiṣṭhāsana con Viśvāmitrāsana. La nuova fotografia originale ha didascalia, testo alternativo e guide agli appoggi in italiano e inglese.

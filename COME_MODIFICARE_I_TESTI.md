@@ -148,3 +148,7 @@ Le traduzioni dei campi presenti nel corrispondente Markdown italiano sono richi
 ## Il pessimo rapporto fra l’IA e il pensiero umano
 
 La scheda del blog è in `content/markdown/posts/il-pessimo-rapporto-fra-l-ia-e-il-pensiero-umano.md` e nella corrispondente cartella inglese. Per il testo e le tavole consulta le due edizioni in `src/scientific-articles/`. L’archivio originale in `source-materials/` contiene i disegni TikZ e i PDF italiani. Le traduzioni delle etichette, delle didascalie e dei comandi sono documentate in `docs/sources/il-pessimo-rapporto-fra-l-ia-e-il-pensiero-umano/`.
+
+## La libertà dei rami
+
+Le schede del blog si trovano in `content/markdown/posts/la-liberta-dei-rami.md` e `content/markdown/en/posts/la-liberta-dei-rami.md`. Il testo, i riferimenti e le sedici tavole sono in `src/scientific-articles/la-liberta-dei-rami.html` e nel file inglese `la-liberta-dei-rami.en.html` della stessa cartella. L’esperimento sulla misura della costa ha l’ancora `#misura-costa`; le sedici tavole hanno le ancore da `#figura-1` a `#figura-16`. La ricerca del sito ne ricava i titoli dalle didascalie. Per modificare una figura, aggiorna anche il testo alternativo e i controlli in entrambe le lingue. Le interazioni sono in `src/branches-article.js`.

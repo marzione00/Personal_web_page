@@ -107,3 +107,30 @@ test('the bilingual essay exposes all twelve plates and five experiments in the 
   assert.ok(searchEntries(data).some(entry=>entry.url===url));
  }
 });
+
+test('the branch essay links both language editions to every chapter, plate and coastline experiment',()=>{
+ const slug='la-liberta-dei-rami',url='articolo-'+slug+'.html';
+ for(const [data,pages,title,tag] of [[it,pi,'La libertà dei rami','Frattali'],[en,pe,'The Freedom of Branches','Fractals']]){
+  const post=data.posts.find(p=>p.id===slug);
+  assert.ok(post && !post.draft && !post.translationMissing);
+  assert.equal(post.title,title);
+  assert.ok(post.tags.includes(tag));
+  const article=pages.find(p=>p.file===url), search=searchEntries(data);
+  assert.equal(article.title,title);
+  for(const page of ['index.html','blog.html'])assert.ok(pages.find(p=>p.file===page).body.includes('href="'+url+'"'));
+  const headings=search.filter(entry=>entry.url.startsWith(url+'#capitolo-'));
+  const figures=search.filter(entry=>entry.url.startsWith(url+'#figura-'));
+  assert.equal(headings.length,7);
+  assert.deepEqual(figures.map(entry=>entry.url),Array.from({length:16},(_,n)=>url+'#figura-'+(n+1)));
+  assert.match(headings[0].title,/Mandelbrot/);
+  assert.match(figures[0].title,/Koch/);
+  const coast=search.filter(entry=>entry.url===url+'#misura-costa');
+  assert.equal(coast.length,1);
+  assert.equal(coast[0].kind,data.language==='en'?'Interactive experiment':'Esperimento interattivo');
+  assert.ok(coast[0].keywords.includes(data.language==='en'?'Divider opening':'Apertura del compasso'));
+  assert.match(article.body,/data-ruler-input/);
+  for(const {url:target} of [...headings,...figures,...coast])assert.ok(article.body.includes('id="'+target.split('#')[1]+'"'));
+  assert.equal((article.body.match(/data-copy-figure/g)||[]).length,17);
+  assert.doesNotMatch(article.body,/<(?:iframe|object|script)\b|\s(?:style|onclick)=/i);
+ }
+});

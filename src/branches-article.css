@@ -1,0 +1,109 @@
+/* Scientific plate captions and copy actions inherit the site's figure component.
+   The drawing surface keeps its engraved palette in both reading modes. */
+.branches-article .goethe-epigraph {
+  margin:0 0 clamp(2.25rem,5vw,4rem); padding-inline-start:clamp(1rem,3vw,1.65rem);
+  border-inline-start:2px solid var(--sd-correction); break-inside:avoid;
+}
+.branches-article .goethe-epigraph blockquote,
+.branches-article .goethe-epigraph p {margin:0; padding:0; border:0}
+.branches-article .goethe-epigraph p {
+  font:italic clamp(1.3rem,2.6vw,1.7rem)/1.36 var(--serif); color:var(--ink);
+}
+.branches-article .goethe-epigraph figcaption {margin-top:.85rem; font:.87rem/1.6 var(--sans); color:var(--muted)}
+.branches-article .goethe-epigraph a {color:inherit; text-underline-offset:.2em}
+.branches-article .equation {
+  margin:1.1rem 0 1.65rem; padding:.7rem 0 .7rem 1.05rem;
+  border-inline-start:2px solid var(--sd-correction); color:var(--ink);
+  font:clamp(1.03rem,2.1vw,1.3rem)/1.85 var(--serif); font-variant-numeric:lining-nums;
+}
+.branches-article .equation span {display:inline-block; margin-inline-end:1.15em}
+.branches-article .branches-chapter + .branches-chapter,
+.branches-article .branches-sources {border-top:1px solid var(--line); margin-top:3rem}
+.branches-article .refnum {font:.72em var(--mono); margin-inline-start:.13em}
+.branches-article .branches-sources ol {padding-inline-start:1.65rem}
+.branches-article .branches-sources li {margin-bottom:1rem}
+.branches-article .endlink {display:inline-block; margin-top:1rem}
+.branches-article .branches-board {
+  --ink:#e9eee6; --green:#a2d9aa; --line:#34463b; --muted:#adc1b4;
+  --gold:#edc487; --bp-paper:#0d1d1c; --bp-line:#2a4540; --bp-mint:#9bd9ba;
+  --bp-light:#e4eddb; --bp-gold:#ebbd7a; --bp-blue:#93c9dd;
+  --ice:#acdfef; --ice-hi:#e0f4f3; --ice-mid:#70a9b9; --ice-warm:#f0cc92;
+  --ice-bg:#0c1d1d; --ice-rule:#2b4444;
+  padding:clamp(.55rem,1.75vw,1.1rem); background:#101d18; color:var(--ink);
+  color-scheme:dark; font:1rem/1.55 var(--sans); overflow-wrap:normal;
+}
+.branches-article .branches-board [hidden] {display:none!important}
+.branches-article .branches-board :is(button,select) {
+  color:var(--ink); background:#16271d; border:1px solid #536658;
+  border-radius:3px; padding:.46rem .75rem; min-height:44px; font:inherit; cursor:pointer;
+}
+.branches-article .branches-board :is(button,select):hover {border-color:var(--green)}
+.branches-article .branches-board :focus-visible {outline:2px solid var(--gold); outline-offset:2px}
+.branches-article .branches-board input {accent-color:var(--green)}
+.branches-article .branches-board button:disabled {opacity:.55; cursor:default}
+.branches-article .branches-board svg {max-width:100%}
+.branches-article .branches-wide {overflow-x:auto; scrollbar-color:#8eb89a #142a20}
+.branches-article .branches-full-board,
+.branches-article .rami-miniatures svg,
+.branches-article .rami-board {display:block; width:100%; height:auto}
+.branches-article .branches-envelope-toggle {
+  display:inline-flex; align-items:center; gap:.6rem; min-height:44px; cursor:pointer;
+}
+.branches-article .p7env {opacity:0}
+.branches-article .branches-board:has(.branches-envelope-toggle input:checked) .p7env {opacity:1}
+.branches-article .rami-miniatures {
+  display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.55rem; margin:.5rem 0;
+}
+.branches-article .rami-miniature {
+  min-width:0; text-align:center; padding:0 .25rem .55rem; border-bottom:1px solid var(--line);
+}
+.branches-article .rami-miniature + div {border-left:1px solid var(--line)}
+.branches-article :is(.rami-miniature,.rami-pairs) b {color:var(--ink); font:500 .86rem/1.25 var(--sans)}
+.branches-article .rami-pairs {display:flex; align-items:center; justify-content:space-around; gap:1rem}
+.branches-article .rami-controls {display:flex; align-items:center; flex-wrap:wrap; gap:.7rem 1rem; padding:.6rem 0; font-size:.91rem}
+.branches-article .rami-controls label {display:inline-flex; align-items:center; flex-wrap:wrap; gap:.6rem}
+.branches-article .rami-controls input[type=range] {width:6.8rem; min-height:36px}
+.branches-article .rami-controls button[aria-pressed=true] {border-color:var(--gold); box-shadow:inset 0 -2px var(--gold)}
+.branches-article :is(.rami-aside,.rami-controls output,.rami-controls [role=status]) {font-size:.88rem; color:var(--muted)}
+.branches-article .ice-final {
+  display:grid; align-items:center; grid-template-columns:6rem 1fr; gap:1rem; padding:.7rem;
+  border-top:1px solid var(--line); color:var(--muted); font:.9rem/1.5 var(--sans);
+}
+.branches-article .ice-final svg {width:6rem; height:6rem}
+.branches-article .bp-grid {
+  display:grid; gap:1px; grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr)); background:var(--bp-line);
+}
+.branches-article .bp-grid.bp-duo {grid-template-columns:repeat(auto-fit,minmax(min(100%,245px),1fr))}
+.branches-article .bp-panel {min-width:0; background:var(--bp-paper); padding:clamp(8px,2vw,20px)}
+.branches-article .bp-panel > p {margin:.2rem 0 .3rem; color:var(--bp-light); font:600 .88rem/1.45 var(--sans)}
+.branches-article .bp-panel svg,
+.branches-article .bp-single {display:block; width:100%; height:auto; background:var(--bp-paper); overflow:visible}
+.branches-article .bp-label {font:500 13px var(--sans); fill:var(--bp-light); paint-order:stroke; stroke:var(--bp-paper); stroke-width:3px; stroke-linejoin:round}
+.branches-article .bp-callout {stroke:#708d83; stroke-width:1.1; fill:none; stroke-dasharray:3 3}
+.branches-article .bp-knob,
+.branches-article .ice-controls {display:flex; align-items:center; flex-wrap:wrap; gap:.6rem; padding:.7rem 1rem; color:var(--bp-light); font:.9rem/1.4 var(--sans)}
+.branches-article .bp-knob {background:var(--bp-paper); border-top:1px solid var(--bp-line)}
+.branches-article .bp-knob input {min-height:36px; width:clamp(120px,35%,235px)}
+.branches-article .ice-controls {background:var(--ice-bg); border-top:1px solid var(--ice-rule)}
+.branches-article .ice-grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,227px),1fr)); background:var(--ice-rule); gap:1px}
+.branches-article .ice-panel {min-width:0; background:var(--ice-bg); padding:clamp(10px,2.3vw,22px)}
+.branches-article .ice-panel > strong {display:block; margin:0; font:500 .93rem/1.4 var(--sans); color:var(--ice-hi)}
+.branches-article .ice-panel > svg {display:block; width:100%; height:auto; max-height:290px; overflow:visible}
+.branches-article .ice-plate svg text {font:13px var(--sans); fill:var(--ice-hi)}
+.branches-article [id] {scroll-margin-top:var(--header-offset,6rem)}
+@media(max-width:550px) {
+  .branches-article .rami-miniatures {gap:.12rem}
+  .branches-article .rami-miniature {padding:0 .08rem .35rem}
+  .branches-article .rami-miniature b {font-size:.8rem}
+  .branches-article .rami-controls {gap:.5rem}
+  .branches-article .ice-final {grid-template-columns:4rem 1fr}
+  .branches-article .ice-final svg {width:4rem; height:4rem}
+  .branches-article .branches-wide svg {min-width:460px}
+}
+@media print {
+  .branches-article :is(.plate-controls,.bp-knob,.ice-controls,.endlink) {display:none!important}
+  .branches-article .p7env {opacity:1}
+  .branches-article .branches-board {print-color-adjust:exact; -webkit-print-color-adjust:exact}
+  .branches-article .branches-wide {overflow:visible}
+  .branches-article .branches-wide svg {min-width:0}
+}
